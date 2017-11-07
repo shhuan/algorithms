@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3468&rd=8072",
+	"statement":" The spirit of Christmas is most apparent in the exchanging of presents! Santa Claus would like software to make this unnecessary. He has already decided which present should be given to each person, but he is wondering if he could make adjustments. <p> Specifically he has estimated the intrinsic value of each present to each person. He wants software to determine if there is a group of people whose total value would be increased by redistributing the gifts within the group. Some people might end up with a worse present, but the total value is what Santa must consider. If such a group exists, Santa would like to know the size of the smallest such group, and how much the total value of their presents can be increased by. </p><p> The intrinsic value of the presents to each person is given in a String[] <b>value</b>. Each character in each element of <b>value</b> is an uppercase letter, with 'A' signifying a value of 1, 'B' a value of 2, etc. The j-th character in the i-th element of <b>value</b> is the value of the j-th present to the i-th person. </p><p> The original intent of Santa was to give the first present to the first person, the second present to the second person, etc. Create a class SantaClaus that contains a method exchange that is given the String[] <b>value</b> and returns a int[] containing two elements: the first element is the size of the smallest improvable group, and the second is the amount by which their total value can be increased. Report the largest possible increase in value for a group of that size. If there is no improvable group, return 0 in both elements. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SantaClaus",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"exchange",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] exchange(String[] value)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {0, 0 }",
+			"id":0,
+			"input":"{\"ABCDE\",\"ABCDE\",\"ABCDE\",\"ABCDE\",\"ABCDE\"}",
+			"note":" Each present has the same value to everybody, so there is no way to increase the total value by reassigning the presents. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: {2, 26 }",
+			"id":0,
+			"input":"{\"ABC\",\"BCD\",\"ZAB\"}",
+			"note":" The third person would really like the first present. So we could exchange presents between the first person and the third person. Previously, the values were 1 (first person) + 2 (third person) = 3. After the exchange the values become 3 (first person) + 26 (third person) = 29. So the net gain is 29-3 = 26. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: {3, 1 }",
+			"id":0,
+			"input":"{\"BCAAA\",\"ADEAA\",\"AAXYA\",\"AAAKL\",\"EAAAD\"}",
+			"note":" The first, fourth, and fifth persons can exchange presents, giving up values of 'B', 'K', and 'D' and acquiring values of 'A', 'L', and 'E'. The first person loses net value of 1, but each of the others gains 1. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: {5, 5 }",
+			"id":0,
+			"input":"{\"VWAAA\",\"ADEAA\",\"AAXYA\",\"AAAKL\",\"EAAAD\"} ",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"value will contain n elements, where n is between 2 and 50 inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of value will contain n characters, each being an uppercase letter 'A'-'Z'."
+		}
+	]
+}

@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3923&rd=6521",
+	"statement":"<p>Your friend has recently been looking through a catalog, and has selected several items she wishes to buy. Because of a sales promotion, she has earned credit towards free or discounted products. Each item has a cost, and a point value. For her referrals, your friend has earned a certain number of points which may be redeemed for items, and a certain number of &quot;half price&quot; items. Additionally, she receives a fixed percentage discount on all other items (this is not cumulative with half-price items). All prices are rounded up after applying discounts.</p> <p>Your friend's order is subject to the following restrictions:</p> \n <ul> \n  <li>Each item must be purchased with points, purchased at half price, or purchased at the fixed discount rate.</li> \n  <li>Purchasing an item with points is all or nothing; you cannot, for instance, pay for an item partially with points and pay the remainder in cash.</li> \n  <li>All points must be used.</li> \n  <li>All half-price items must be used.</li> \n  <li>All items on the wishlist must be purchased.</li> \n </ul> <p>Your friend is very excited to place her order, but is very frustrated with what she has found to be a confusing incentive system. Being frugal-minded, she wants to get everything on her wishlist at the least possible out-of-pocket expense. Knowing your enjoyment of these type of problems, she has come to you for assistance.</p> <p>You are given an int, <b>points</b>, indicating the number of points your friend must spend; an int, <b>halfPrice</b>, indicating the number of items which are to be purchased at half price; and an int, <b>discount</b>, indicating the fixed discount percentage on all remaining items. Finally, you are given a String[], <b>items</b>, indicating the list of items on your friend's wishlist. Each element of <b>items</b> will be in the form <i>&quot;pointValue price&quot;</i> (quotes added for clarity), where <i>pointValue</i> and <i>price</i> are both positive integers with no leading zeros. <i>pointValue</i> and will be between 1 and 9999, inclusive. <i>price</i> will be between 1 and 99999, inclusive. You are to return an int indicating the minimum out of pocket expense your friend must pay to get the items on her wishlist.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"The cost of an individual item purchased at half price or the fixed discount rate should always round up when necessary."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SalesPromotion",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestPrice",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int bestPrice(int points, int halfPrice, int discount, String[] items)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"500",
+			"note":"Here, we're better to use our 500 points on the first two items, rather than the third item. Then, we use our half price discount on the item priced 800 (since it's more expensive than the item priced 600), which costs 400. Finally the item priced 600 we buy for 540 (10% discount), totalling 940.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"500",
+			"note":"The best solution is to buy items 0 and 1 with points, item 2 at half price, and pay full price (less the discount) for item 3.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1000",
+			"note":"There's more than one way to use our points, so we have to find the most cost effective.",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"With no points or discounts of any kind, we just need to add up the total cost.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"points will be between 0 and 15000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"halfPrice will be between 0 and n, inclusive, where n is the number of elements of items."
+		},
+		{
+			"order":3,
+			"val":"discount will be between 0 and 49, inclusive."
+		},
+		{
+			"order":4,
+			"val":"items will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of items will be in the form described in the problem statement."
+		},
+		{
+			"order":6,
+			"val":"There will be at least one way to place the order that uses all of the points and half price items."
+		}
+	]
+}

@@ -1,0 +1,69 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6190&rd=9825",
+	"statement":"You are given the vertices of a convex polygon in clockwise order. As you traverse the boundary in the given order, your heading adjusts toward your right at each vertex by more than 0 but less than 180 degrees. As you complete the circuit by going from the last vertex to the first vertex and then heading toward the second vertex, your total heading adjustment has been 360 degrees. <p> We want to increase the size of the given convex polygon by picking some of its vertices and moving them. We are not allowed to choose vertices that are adjacent to each other, and we are not allowed to move a chosen vertex a distance of more than 1. Of course the boundary segments between a moved vertex and its fixed adjacent vertices also move -- we require that moving boundary segments never intersect any other boundary segments. This guarantees that we will end up with a polygon (possibly not convex) that has a well-defined interior and exterior. </p><p> Create a class PolyMove that contains a method addedArea that is given the sequence of vertices of a convex polygon in int[]s <b>x</b> and <b>y</b>. It returns the greatest increase in area that can be achieved by choosing and moving vertices. The coordinates of the i-th vertex are given by the i-th elements of <b>x</b> and <b>y</b>. There is a boundary segment between the last vertex and first vertex. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"A return value with either an absolute or relative error of less than 1.0E-9 is considered correct."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PolyMove",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"addedArea",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double addedArea(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,1,0}",
+			"id":0,
+			"input":"{0,1,2}",
+			"note":" This is an isosceles triangle that has an area of 1. We can increase its area most by moving the middle point from (1,1) to the point (1,2). Now the triangle will have an area of 2, so the increase in area is 1. ",
+			"order":1
+		},
+		{
+			"expect":"{1,1,0,0}",
+			"id":0,
+			"input":"{0,1,1,0}",
+			"note":" This polygon is a unit square. We can move (0,0) and (1,1), moving them each one unit along the 45 degree diagonal to (-1/sqrt(2),-1/sqrt(2)) and (1+sqrt(2),1+sqrt(2)) respectively. The new polygon is diamond shaped and has an area of 1 + sqrt(2), so its area has increased by sqrt(2).",
+			"order":2
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x and y will contain the same number of elements, a number between 3 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of x and of y will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The points corresponding to x and y will be distinct."
+		},
+		{
+			"order":4,
+			"val":"The described polygon will be clockwise convex as specified above."
+		}
+	]
+}

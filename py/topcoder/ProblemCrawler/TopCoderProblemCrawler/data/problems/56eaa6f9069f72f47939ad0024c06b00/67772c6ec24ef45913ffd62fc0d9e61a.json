@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8818&rd=12017",
+	"statement":"You have written a complicated multi-threaded program, and you would like to analyze its expected runtime. <br /><br /><br /><br /> The program consists of <i>n</i> threads in a specific order, indexed from 0 to <i>n</i>-1. Each thread has a task to execute which is divided into up to 10 subtasks. Each subtask requires one time slice to process, and they must be processed in order. In every thread (except the first), one of the subtasks will be a special &quot;synchronization&quot; subtask; the thread may not process this subtask until all the threads with lower indices have finished. The thread's task is described as a String with a character for each subtask. A normal subtask is denoted by a '.'; the &quot;synchronization&quot; subtask is denoted by 'S'. <br /><br /><br /><br /> The processor executes your program in a simple way. For each time slice it picks a thread uniformly at random and allows it to process one subtask. If the chosen thread has already finished, the unfinished thread with the lowest index is picked instead. However, if the chosen thread is blocked on a &quot;synchronization&quot; subtask, that time slice is wasted. (Yes, this is a silly way to implement multithreading!) <br /><br /><br /><br /> Return the expected (average) number of time slices the entire program will take to execute.",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to within a relative or absolute value of 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SequentialT",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expectedExecutionTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expectedExecutionTime(String[] threads)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 5.0",
+			"id":0,
+			"input":"{\".....\"}",
+			"note":"No multithreading; just 5 subtasks to perform.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2.9999999999999996",
+			"id":0,
+			"input":"{\".\",\"S\"}",
+			"note":"There's a 1/2 chance of 0 wasted time slices, a 1/4 chance of 1, a 1/8 of 2, and so on. An average of 1 time slice is wasted.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4.999999999999999",
+			"id":0,
+			"input":"{\"..\",\"S\"}",
+			"note":"Now there is a (+1)/2 chance of wasting  time slices.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 16.144458312987712",
+			"id":0,
+			"input":"{\".\",\"...S.\",\".........S\"}",
+			"note":"These threads will most likely not have to wait.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 65.45700302526924",
+			"id":0,
+			"input":"{\".....\",\"...S...\",\"S......\",\"......S..\",\"...S.\",\"..S\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"threads will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of threads will contain between 1 and 10 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of threads will contain only the characters '.' and 'S'."
+		},
+		{
+			"order":4,
+			"val":"Each element of threads, except the first, will have exactly one 'S'."
+		},
+		{
+			"order":5,
+			"val":"The first element of threads will not contain an uppercase 'S'."
+		}
+	]
+}

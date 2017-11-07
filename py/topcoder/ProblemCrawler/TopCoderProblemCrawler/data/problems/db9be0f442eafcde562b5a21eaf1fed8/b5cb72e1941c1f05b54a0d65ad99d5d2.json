@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13746&rd=16434",
+	"statement":"<p> This problem is about paths on a tree. A path is any sequence of one or more vertices such that all the vertices are distinct and each pair of consecutive vertices is connected by an edge of the tree. </p> <p></p> <p> Our tree is a rooted tree with N+1 vertices, labeled 0 through N. The label of the root is 0. For each i, the parent of vertex i has a number smaller than i. You are given the description of the tree: a int[] <b>parent</b> with N elements. For each i, the vertex <b>parent</b>[i] is the parent of the vertex i+1. </p> <p></p> <p> The vertex u is an ancestor of the vertex v if u lies on the (only) path that connects v to the root. Note that each vertex is its own ancestor. Also note that the root is an ancestor of all other vertices. </p> <p></p> <p> Two paths A and B in our tree are said to be related if path A contains a vertex u and path B contains a vertex v such that one of u, v is an ancestor of the other. </p> <p></p> <p> We want to choose many paths in such a way that no two of them will be related. Find and return the largest possible number of pairwise unrelated paths in the given tree. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"UnrelatedPaths",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxUnrelatedPaths",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxUnrelatedPaths(int[] parent)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{0, 1, 1, 2, 3}",
+			"note":"The int[]  tells us the following information:  In this tree it is possible to select two unrelated paths. One possible way of doing so is to select the paths 4-2 and 3-5.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{0, 0, 1, 1, 2, 2}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{0, 1, 2, 3}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 17",
+			"id":0,
+			"input":"{0,1,1,2,2,2,4,6,5,0,10,5,12,12,10,4,16,12,5,3,20,12,11,21,9,5,1,20,15,24,6,8,15} ",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 19",
+			"id":0,
+			"input":"{0,1,1,1,1,0,2,5,1,6,7,10,5,10,8,5,16,14,8,14,4,14,15,21,0,24,11,1,9,18,13,20,6,28,19,28,14,11,38,26,25,10,23,43} ",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 0 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"parent will contain exactly N elements."
+		},
+		{
+			"order":3,
+			"val":"For each i, parent[i] will be between 0 and i, inclusive."
+		}
+	]
+}

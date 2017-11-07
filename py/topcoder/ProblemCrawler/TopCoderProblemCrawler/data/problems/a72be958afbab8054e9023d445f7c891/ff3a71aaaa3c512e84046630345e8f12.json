@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1657&rd=4491",
+	"statement":"You will be given a list of line segments in an infinite x-y plane. Your method should return how many separate regions there are in the plane once the segments are added. Two points are in the same region if there exists a path from one point to the other that doesn't cross a line segment. The line segments will be given in a String[] <b>lines</b>. Each element of <b>lines</b> will be a single space delimited list of 4 integers. The elements will be formatted as (quotes for clarity) &quot;x0 y0 x1 y1&quot; denoting a line segment from (x0,y0) to (x1,y1). Note that there will always be exactly 1 infinite region that is not completely enclosed by the given line segments. In addition, to make things easier, the line segments will only be horizontal, vertical or diagonal (a diagonal line segment is one whose slope is 1 or -1).",
+	"notes":[{
+		"order":1,
+		"val":"Although the line segment endpoints are bounded by input constraints, when calculating regions, consider the plane to be infinite."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FaceFinder",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(String[] lines)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"0 0 100 100\",\"0 100 100 0\"}",
+			"note":"A large X.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"10 10 20 10\",\"10 10 10 20\",\"20 20 10 20\",\"20 20 20 10\"}",
+			"note":"A single box.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 101",
+			"id":0,
+			"input":"{\"0 0 0 10\",\"1 0 1 10\",\"2 0 2 10\",\"3 0 3 10\",\"4 0 4 10\", \"5 0 5 10\",\"6 0 6 10\",\"7 0 7 10\",\"8 0 8 10\",\"9 0 9 10\", \"10 0 10 10\",\"0 0 10 0\",\"0 1 10 1\",\"0 2 10 2\",\"0 3 10 3\", \"0 4 10 4\",\"0 5 10 5\",\"0 6 10 6\",\"0 7 10 7\",\"0 8 10 8\", \"0 9 10 9\",\"0 10 10 10\"}",
+			"note":"A 10x10 checkerboard.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"0 0 0 1\",\"0 0 0 2\",\"0 0 0 3\",\"0 0 0 4\",\"0 0 0 5\", \"0 0 1 0\",\"0 0 2 0\",\"0 0 3 0\",\"0 0 4 0\",\"0 0 5 0\", \"5 0 0 5\",\"4 0 0 4\",\"3 0 0 3\",\"2 0 0 2\",\"1 0 0 1\"}",
+			"note":"A weird drawing.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"0 0 0 1\", \"0 0 1 0\", \"0 0 1 1\", \"1 0 1 1\", \"0 1 1 1\", \"1 0 0 1\"}",
+			"note":"This is a 1x1 box with both diagonals filled in.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"lines will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of lines will contain between 7 and 15 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of lines will be formatted as &quot;N N N N&quot; where each N represents an integer between 0 and 100 inclusive with no extra leading zeros, and each N is separated by a single space."
+		},
+		{
+			"order":4,
+			"val":"No line segment will have 0 length."
+		},
+		{
+			"order":5,
+			"val":"Each line segment will be horizontal, vertical, or diagonal."
+		},
+		{
+			"order":6,
+			"val":"No two elements of lines will represent the same line segment. This includes cases where one segment goes from point A to point B, and another goes from B to A."
+		}
+	]
+}

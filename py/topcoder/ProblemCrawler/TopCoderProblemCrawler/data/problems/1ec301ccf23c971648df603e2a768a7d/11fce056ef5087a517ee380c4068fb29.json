@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10336&rd=13698",
+	"statement":"You have two lists of numbers, X and Y, each containing exactly <b>N</b> elements. You can optionally apply any number of circular shifts to each list. A circular shift means removing the last element from a list and re-inserting it before the first element. For example, {1, 2, 3} would become {3, 1, 2}, and {3, 1, 2} would become {2, 3, 1}. After you apply any circular shifts, the final score is calculated as:<br /><br /> X[0]*Y[0] + X[1]*Y[1] + ... + X[<b>N</b>-1]*Y[<b>N</b>-1]<br /><br /> You are given ints <b>Z0</b>, <b>A</b>, <b>B</b> and <b>M</b>. Generate a list Z of length 2*<b>N</b>, using the following recursive definition:<br /><br /> Z[0] = <b>Z0</b> MOD <b>M</b> <br /><br /> Z[i] = (Z[i-1]*<b>A</b>+<b>B</b>) MOD <b>M</b> (note that Z[i-1]*<b>A</b>+<b>B</b> may overflow a 32-bit integer) <br /><br /> Then, generate lists X and Y, each of length <b>N</b>, using the following definitions:<br /><br /> X[i] = Z[i] MOD 100 <br /><br /> Y[i] = Z[i+<b>N</b>] MOD 100 <br /><br /> Return the maximal final score you can achieve. ",
+	"notes":[
+		{
+			"order":1,
+			"val":"In the statement, \"A MOD B\" represents the remainder of integer division of A by B. For example, 14 MOD 5 = 4 and 20 MOD 4 = 0."
+		},
+		{
+			"order":2,
+			"val":"The author's solution does not depend on any properties of the pseudorandom generator. It would solve any input of allowed size within the given limits."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CircularShifts",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxScore",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxScore(int N, int Z0, int A, int B, int M)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"5",
+			"note":"Both lists contain only ones, so no matter how many shifts you perform, the score will always be 5.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"4",
+			"note":"The lists are {1, 2, 3, 4} and {5, 6, 7, 8}. The maximal score is achieved by not making any shifts.",
+			"order":2
+		},
+		{
+			"expect":"23",
+			"id":0,
+			"input":"10",
+			"note":"The lists are (23, 4, 95, 20, 17, 94, 63, 44, 13, 96) and (87, 54, 13, 18, 61, 24, 17, 94, 53, 2).",
+			"order":3
+		},
+		{
+			"expect":"3252",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"96478",
+			"id":0,
+			"input":"141",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 60,000, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Z0, A and B will each be between 0 and 1,000,000,000, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"M will be between 1 and 1,000,000,000, inclusive. "
+		}
+	]
+}

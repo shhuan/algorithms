@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1905&rd=4708",
+	"statement":"Given a sequence of uppercase letters, we want to remove all but one occurrence of each letter, doing it in such a way that the remaining letters are in alphabetical order. Of course, there may be no way to do this, but if there is, we want to know which letters to remove. <p> Create a class MakeUnique that contains a method eliminated that is given a String <b>original</b>, and returns <b>original</b> with the eliminated letters replaced with periods ('.'). The remaining letters must be in alphabetical order. </p><p> If there is no way to do this, return a String with length 0. </p><p> If there are several ways to do this, choose the one with the shortest length between the first and last remaining letters. If there are still several ways, return the String among these that comes earliest lexicographically ('.' comes earlier than any letter in the ASCII sequence). </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MakeUnique",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"eliminated",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String eliminated(String original)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \".......ABCX\"",
+			"id":0,
+			"input":"\"ABBBXCXABCX\"",
+			"note":" The 4 letters ABCX must remain, and in that order.  would also leave these letters in the appropriate order, but the length between the first and last remaining letters would be longer than in the given answer. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"A..B.CX....\"",
+			"id":0,
+			"input":"\"ABBBXCXABCB\"",
+			"note":"  and  are also possible and have the same length between first and last remaining letters, but they come later lexicographically than the given answer. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"\"ABBBXCABCB\"",
+			"note":" There is no way to eliminate letters and end up with C before X.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \".AB.C.X...\"",
+			"id":0,
+			"input":"\"AABACBXABX\"",
+			"note":" ",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"............ABCDE..FGS.....\"",
+			"id":0,
+			"input":"\"CABDEAFDEGSDABCDEADFGSEFBGS\"",
+			"order":5
+		},
+		{
+			"expect":"Returns: \".....A\"",
+			"id":0,
+			"input":"\"AAAAAA\"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"original will contain between 1 and 50 characters inclusive"
+		},
+		{
+			"order":2,
+			"val":"each character in original will be an uppercase letter 'A'-'Z'"
+		}
+	]
+}

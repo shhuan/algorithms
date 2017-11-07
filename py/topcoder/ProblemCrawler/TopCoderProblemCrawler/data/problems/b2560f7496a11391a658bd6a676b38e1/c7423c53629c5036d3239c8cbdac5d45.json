@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10589&rd=14147",
+	"statement":"<i>NOTE: This problem statement contains superscripts that may not display properly if viewed outside of the applet.</i> <br /><br /><br /><br /> Your friend's birthday is approaching, and he wants his age to be written in candles on his cake. In fact, he has already placed several candles on the cake. The candles are arranged in a single row, and there are two different colors of candles. One color represents the digit '0' and the other color represents the digit '1'. You don't want to relayout the candles from scratch, so you have to determine if there's a base for which the existing candles spell out your friend's age. To simplify the task, you can choose any strictly positive base, not necessarily an integer one. <br /><br /><br /><br /> For example, if the candles are &quot;00010&quot; and your friend's age is 10, then the candles spell out 10 in base 10 (decimal). If the candles are &quot;10101&quot; and your friend's age is 21, then you can say that &quot;10101&quot; is 21 in base 2 (binary). If the candles are &quot;10100&quot; and your friend's age is 6, then the candles spell out 6 in base sqrt(2)=1.41421356237.... Note that you are not allowed to rotate the cake, so &quot;10&quot; cannot be read as &quot;01&quot;. <br /><br /><br /><br /> You are given a String <b>candlesLine</b>, where the i-th character is the digit ('0' or '1') represented by the i-th candle in the row of candles on the cake. You are also given an int <b>age</b>, which is your friend's age. Return the positive base for which the candles represent your friend's age. If there is no such base, return -1, and if there are multiple such bases, return -2.",
+	"notes":[
+		{
+			"order":1,
+			"val":"The number aa...aa in base B is equal to a*B + a*B + ... + a*B + a."
+		},
+		{
+			"order":2,
+			"val":"The returned value must have an absolute or relative error less than 1e-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AgeEncoding",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getRadix",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getRadix(int age, String candlesLine)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"00010\"",
+			"id":0,
+			"input":"10",
+			"note":"This is the first example from the statement: simply a decimal notation of the given age. Note that notation can have leading zeroes.",
+			"order":1
+		},
+		{
+			"expect":"\"10101\"",
+			"id":0,
+			"input":"21",
+			"note":"This is the second example from the statement: \"10101\" is a binary notation of the given age.",
+			"order":2
+		},
+		{
+			"expect":"\"10100\"",
+			"id":0,
+			"input":"6",
+			"note":"This is the third example from the statement.",
+			"order":3
+		},
+		{
+			"expect":"\"10111111110111101111111100111111110111111111111100\"",
+			"id":0,
+			"input":"21",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"1\"",
+			"id":0,
+			"input":"16",
+			"note":"In any base, \"1\" represents the age of 1, so it's impossible to get the age of 16.",
+			"order":5
+		},
+		{
+			"expect":"\"1\"",
+			"id":0,
+			"input":"1",
+			"note":"In any base, \"1\" represents the age of 1.",
+			"order":6
+		},
+		{
+			"expect":"\"001000\"",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"age will be between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"candlesLine will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in candlesLine will be '0' (zero) or '1' (one)."
+		}
+	]
+}

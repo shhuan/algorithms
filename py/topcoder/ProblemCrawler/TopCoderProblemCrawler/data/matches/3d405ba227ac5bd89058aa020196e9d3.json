@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":148.16,
+			"constraints":[],
+			"correctRatio":83.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7296&rd=10906",
+			"name":"DifDif",
+			"notes":[],
+			"submission":12
+		},
+		{
+			"avgPts":300.2,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7312&rd=10906",
+			"name":"Prefixes",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4432&rd=10906",
+			"name":"CircleCount",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge Sponsor Track > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10906"
+}

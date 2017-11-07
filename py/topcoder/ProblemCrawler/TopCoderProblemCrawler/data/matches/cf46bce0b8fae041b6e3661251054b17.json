@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":166.98,
+			"constraints":[],
+			"correctRatio":88.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7735&rd=10775",
+			"name":"MaximizeSquares",
+			"notes":[],
+			"submission":446
+		},
+		{
+			"avgPts":246.13,
+			"constraints":[],
+			"correctRatio":18.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8048&rd=10775",
+			"name":"PartialSeries",
+			"notes":[],
+			"submission":128
+		},
+		{
+			"avgPts":500.39,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8015&rd=10775",
+			"name":"CoolRectangles",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"Single Round Match 362 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10775"
+}

@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8527&rd=11121",
+	"statement":"<p> John is a marble collector. He keeps his marbles in boxes. He also likes to keep things in order. </p> <p> One day, his younger brother was playing with the marbles. After he was done, he put all the marbles back in boxes, but he did it randomly, so certain boxes might now contain marbles of different colors. John wants him to regroup the marbles so that the grouping satisfies the following restrictions: </p> \n <ul> \n  <li>At most one box, called the joker box, may contain marbles of different colors. We can choose any box as a joker box.</li> \n  <li>Every box except the joker box must either be empty or only contain marbles of the same color.</li> \n  <li>All marbles of the same color, except those in the joker box, must be in the same box. It's possible that all marbles of the same color are in the joker box.</li> \n </ul> <p> You are given a String[] <b>boxes</b>, where the j-th digit of the i-th element is the number of marbles of color j in the i-th box. Return the minimal number of moves necessary to regroup the marbles, where each move consists of taking any number of marbles from one box (not necessarily of the same color) and putting them into another. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MarblesRegroupingEasy",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minMoves(String[] boxes)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"20\", \"11\"}",
+			"note":"Let box 1 be the joker box. All marbles of color 0, except those in the joker box, are in box 0. Box 0 contain only marbles of the color 0. So, all restrictions are already satisfied. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"11\", \"11\", \"10\"}",
+			"note":"There are several possible solutions:  ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"10\", \"10\", \"01\", \"01\"}",
+			"note":"Let box 0 be the joker box. Now we only need to group all marbles of color 1 into one box.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"11\", \"11\", \"11\", \"10\", \"10\", \"01\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"020008000070\", \"000004000000\", \"060000600000\", \"006000000362\", \"000720000000\", \"000040000000\", \"004009003000\", \"000800000000\", \"020030003000\", \"000500200000\", \"000000300000\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"boxes will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of boxes will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of boxes will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each element of boxes will contain only digits ('0'-'9')."
+		}
+	]
+}

@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7659&rd=10808",
+	"statement":"Mr. Agent has entered a government library where secret documents are stored. Documents are stored in different rooms, and each document has a list of user groups that can access it. In order to access a document, a person must have access to the room in which the document is stored and also be a member of at least one user group with access to the document. Your task is to determine the number of documents Mr. Agent can access. <br /><br /><br /><br /> You are given a String[] <b>userGroups</b>, each element of which is the name of a user group in which Mr. Agent is a member. You are also given a String[] <b>roomRights</b>, each element of which is the name of a room to which Mr. Agent has access. The documents are given in the String[] <b>records</b>. Each element of records is formatted &quot;document_name room user_group&quot; (quotes for clarity), where document_name is the name of a document, room is the name of the room where the document is located, and user_group is the name of a user group that has access to the document. If multiple user groups have access to a document, there will be an entry in <b>records</b> for each group. All documents have distinct names, all rooms have distinct names, and all user groups have distinct names. Return the number of documents Mr. Agent can access. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Library",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"documentAccess",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int documentAccess(String[] records, String[] userGroups, String[] roomRights)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"employee\",\"editor\",\"author\"}",
+			"id":0,
+			"input":"{\"diary computers editor\",\"fairytale gardening editor\",\"comix cars author\",\"comix cars librarian\"}",
+			"note":"Mr. Agent only has access to the documents \"diary\" and \"comix\".",
+			"order":1
+		},
+		{
+			"expect":"{\"employee\",\"editor\",\"author\",\"librarian\"}",
+			"id":0,
+			"input":"{\"diary computers editor\",\"fairytale gardening editor\",\"comix cars author\",\"comix cars librarian\"}",
+			"note":"Three elements of  satisfy the conditions, but two of them are for the same document (comix).",
+			"order":2
+		},
+		{
+			"expect":"{\"employee\",\"editor\",\"author\",\"librarian\"}",
+			"id":0,
+			"input":"{\"diary computers editor\",\"fairytale gardening editor\",\"comix cars author\",\"comix cars librarian\"}",
+			"note":"Mr. Agent can not access any rooms.",
+			"order":3
+		},
+		{
+			"expect":"{\"c\",\"d\",\"x\"}",
+			"id":0,
+			"input":"{\"a b c\",\"a b d\",\"b b c\",\"b b d\",\"e c d\",\"e c b\",\"e c c\",\"t d e\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"records, userGroups and roomRights will each contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of userGroups and roomRights will contain between 1 and 15 lowercase letters ('a'-'z')."
+		},
+		{
+			"order":3,
+			"val":"Each element of records will be formatted as &quot;document_name room user_group&quot; (quotes for clarity), where document_name, room and user_group each contain between 1 and 15 lowercase letters ('a'-'z')."
+		},
+		{
+			"order":4,
+			"val":"All elements of records with the same document_name will contain the same room."
+		},
+		{
+			"order":5,
+			"val":"All elements of records will be distinct."
+		},
+		{
+			"order":6,
+			"val":"All elements of userGroups will be distinct."
+		},
+		{
+			"order":7,
+			"val":"All elements of roomRights will be distinct."
+		}
+	]
+}

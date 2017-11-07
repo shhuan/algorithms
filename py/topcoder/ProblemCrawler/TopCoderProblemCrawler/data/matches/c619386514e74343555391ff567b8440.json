@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":194.06,
+			"constraints":[],
+			"correctRatio":71.66,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11219&rd=14427",
+			"name":"FoxSequence",
+			"notes":[],
+			"submission":755
+		},
+		{
+			"avgPts":311.3,
+			"constraints":[],
+			"correctRatio":80.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11316&rd=14427",
+			"name":"FoxStones",
+			"notes":[],
+			"submission":568
+		},
+		{
+			"avgPts":528.48,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11223&rd=14427",
+			"name":"FoxJumping",
+			"notes":[],
+			"submission":28
+		}
+	],
+	"name":"Single Round Match 498 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14427"
+}

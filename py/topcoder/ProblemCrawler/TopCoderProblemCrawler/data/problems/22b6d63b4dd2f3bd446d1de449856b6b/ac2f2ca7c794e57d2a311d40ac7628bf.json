@@ -1,0 +1,104 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3102&rd=5864",
+	"statement":"<p>When files are stored on disk, typically they are stored in &quot;clusters&quot;. Each cluster has a fixed size, and the amount of space consumed by a file is always a multiple of the cluster size. Thus, if the cluster size is 100 bytes, a 165 byte file will actually use 200 bytes of storage, resulting in 35 bytes of wasted space.</p> <p>We want to determine which areas of our disk storage are wasting the most space. You will be given a String[] <b>files</b>, each element of which contains a folder number followed by a space, followed by a file size. You will also be given an int <b>folderCount</b> indicating the total number of folders on our disk. The folders are numbered 0 through <b>folderCount</b> - 1. Finally, you will be given an int <b>clusterSize</b>, indicating how large each disk cluster is.</p> <p>You are to return a int[], containing exactly <b>folderCount</b> elements, each element of which is the total amount of wasted space for that folder. Each element of the return value corresponds to the folder with the same index.</p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"While many systems use a cluster size that is a power of two, no such restriction exists here."
+		},
+		{
+			"order":2,
+			"val":"There may be folders that have no files in them. (Wasted space for such a folder is 0.)"
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FolderSize",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calculateWaste",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] calculateWaste(String[] files, int folderCount, int clusterSize)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\"0 55\", \"0 47\", \"1 86\"}",
+			"note":"Here, in folder 0, we have two files. The first requires 2 clusters, and wastes 45 bytes, the second uses 1 cluster and only wastes 3 bytes. The waste for folder 0 is 48 bytes. Folder 1 only has a single file, which wastes 14 bytes. Folder 2 has no files in it, and thus wastes 0 bytes.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{\"0 123\", \"2 456\", \"4 789\", \"6 012\", \"8 345\"}",
+			"note":"Note here that we can use a leading zero in the file size, and that only every other folder even has a file in it.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{}",
+			"note":"The cluster size really doesn't matter since our disk is empty.",
+			"order":3
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{\"0 93842\", \"1 493784\", \"2 43212\", \"3 99327\", \"4 456209\", \"5 947243\", \"6 59348\", \"7 58237\", \"8 5834\", \"9 492384\", \"0 58342\", \"3 538432\", \"6 1432\", \"9 453983\", \"2 4321\", \"4 583729\", \"6 6974\", \"8 9864\", \"4 43211\", \"8 38437\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"clusterSize will be between 1 and 1000000, inclusive"
+		},
+		{
+			"order":2,
+			"val":"folderCount will be between 1 and 50, inclusive"
+		},
+		{
+			"order":3,
+			"val":"files will contain between 0 and 50 elements, inclusive"
+		},
+		{
+			"order":4,
+			"val":"Each element of files will contain between 3 and 50 characters, inclusive"
+		},
+		{
+			"order":5,
+			"val":"Each element of files will be in the form &quot;&lt;folder&gt; &lt;size&gt;&quot; (quotes added for clarity)"
+		},
+		{
+			"order":6,
+			"val":"Each value of &lt;folder&gt; will be between 0 and folderCount - 1, inclusive"
+		},
+		{
+			"order":7,
+			"val":"Each value of &lt;size&gt; will be between 0 and 1000000, inclusive"
+		},
+		{
+			"order":8,
+			"val":"&lt;folder&gt; and &lt;size&gt; may contain leading zeros"
+		}
+	]
+}

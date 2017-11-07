@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1225&rd=4540",
+	"statement":"<p> There are <b>numMales</b> males and <b>numFemales</b> females arranged in a circle. Starting from a given point, you count clockwise and remove the <b>K</b>'th person from the circle (where K=1 is the person at the current point, K=2 is the next person in the clockwise direction, etc...). After removing that person, the next person in the clockwise direction becomes the new starting point. After repeating this procedure <b>numFemales</b> times, there are no females left in the circle. </p> <p>Given <b>numMales</b>, <b>numFemales</b> and <b>K</b>, your task is to return what the initial arrangement of people in the circle must have been, starting from the starting point and in clockwise order. </p> <p>For example, if there are 5 males and 3 females and you remove every second person, your return String will be &quot;MFMFMFMM&quot;. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PeopleCircle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"order",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String order(int numMales, int numFemales, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"Return \"MFMFMFMM\". On the first round you remove the second person - \"M_MFMFMM\". Your new circle looks like \"MFMFMMM\" from your new starting point. Then you remove the second person again etc.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"7",
+			"note":"Starting from the starting point you remove the first person, then you continue and remove the next first person etc. Clearly, all the females are located at the beginning. Hence return \"FFFMMMMMMM\"",
+			"order":2
+		},
+		{
+			"expect":"25",
+			"id":0,
+			"input":"25",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"Here we mark the removed people with '_', and the starting position with lower-case:  ",
+			"order":4
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"numMales is between 0 and 25 inclusive"
+		},
+		{
+			"order":2,
+			"val":"numFemales is between 0 and 25 inclusive"
+		},
+		{
+			"order":3,
+			"val":"K is between 1 and 1000 inclusive"
+		}
+	]
+}

@@ -1,0 +1,104 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8254&rd=10979",
+	"statement":"<p> You are given a polygon (possibly non-convex) with edges parallel to the coordinate axes. The polygon is non-self-intersecting, meaning that no two of its edges share any common points, with the exception of vertices, each of which is shared between exactly two adjacent edges. </p> <p> Consider all points with integer coordinates inside the polygon (including the points on its border). Sort all of them lexicographically (first, by x-coordinate, then by y-coordinate). You will be asked to return the coordinates of some points in this list. </p> <p> You are given int[]s <b>x</b> and <b>y</b>, the i-th elements of which are the x and y coordinates, respectively, of the i-th vertex of the polygon in a counterclockwise traversal. You are also given a String[] <b>k</b>, each element of which is the index of a point in the sorted list. Return a String[], the i-th element of which is the <b>k</b>[i]-th point with integer coordinates inside the polygon (1-based). Format each returned element as &quot;x-coordinate y-coordinate&quot; (quotes for clarity only, separate x and y coordinates with one space). For each i, if there are less than <b>k</b>[i] points, the corresponding element in the return value must be an empty String. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Polygon",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getKthPoint",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getKthPoint(int[] x, int[] y, String[] k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 0, 2, 2}",
+			"id":0,
+			"input":"{0, 2, 2, 0}",
+			"note":"These are all points that belong to a 2x2 square.",
+			"order":1
+		},
+		{
+			"expect":"{0,0,0,1,1}",
+			"id":0,
+			"input":"{0,1,2,2,0}",
+			"note":"Note that there can be two consecutive parallel edges. Also note that  need not be sorted.",
+			"order":2
+		},
+		{
+			"expect":"{0, 0, 1, 1, 2, 2, 5, 5, 4, 4, 3, 3, 1, 1}",
+			"id":0,
+			"input":"{0, 5, 5, 3, 3, 4, 4, 3, 3, 0, 0, 1, 1, 0}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{1,0,0,1}",
+			"id":0,
+			"input":"{0,0,1,1}",
+			"note":"Note that the first edge can be vertical.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 4 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"y will contain the same number of elements as x."
+		},
+		{
+			"order":3,
+			"val":"Each element of x will be between 0 and 10^9, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of y will be between 0 and 10^9, inclusive."
+		},
+		{
+			"order":5,
+			"val":"x and y will describe a counterclockwise traversal of vertices in a polygon. "
+		},
+		{
+			"order":6,
+			"val":"The polygon described by x and y will have edges parallel to coordinate axes."
+		},
+		{
+			"order":7,
+			"val":"The polygon described by x and y will be non-self-intersecting."
+		},
+		{
+			"order":8,
+			"val":"All vertices of the polygon will be distinct."
+		},
+		{
+			"order":9,
+			"val":"k will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":10,
+			"val":"Each element of k will be an integer between 1 and 10^18, inclusive, with no leading zeroes."
+		}
+	]
+}

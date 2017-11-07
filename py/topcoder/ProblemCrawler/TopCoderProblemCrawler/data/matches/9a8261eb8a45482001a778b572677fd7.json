@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":181.3,
+			"constraints":[],
+			"correctRatio":67.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12591&rd=15686",
+			"name":"YetAnotherANDProblem",
+			"notes":[],
+			"submission":126
+		},
+		{
+			"avgPts":237.7,
+			"constraints":[],
+			"correctRatio":19.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12554&rd=15686",
+			"name":"Block3Checkers",
+			"notes":[],
+			"submission":36
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12547&rd=15686",
+			"name":"TrickyInequality",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2013 TCO Algorithm > Round 3A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15686"
+}

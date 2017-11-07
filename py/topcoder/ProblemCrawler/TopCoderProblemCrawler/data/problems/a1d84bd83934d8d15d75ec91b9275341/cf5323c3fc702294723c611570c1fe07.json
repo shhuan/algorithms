@@ -1,0 +1,109 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12201&rd=15181",
+	"statement":"Fernando loves to play chess. One day he decided to play chess on an unusually large rectangular board. To compensate for the board's size he also decided to change the distance a knight can move in a single jump. <br /><br /><br /><br /> To describe the moves easily, we will now introduce a coordinate system. Each cell of the chessboard can be described using two integers (r,c): its row number and its column number. Now, if we have a piece at (r,c), the move (x,y) takes the piece to the cell (r+x,c+y). <br /><br /><br /><br /> The new chess piece will be called an (<b>a</b>,<b>b</b>)-hyperknight. The hyperknight always has 8 possible moves: (+<b>a</b>,+<b>b</b>), (+<b>a</b>,-<b>b</b>), (-<b>a</b>,+<b>b</b>), (-<b>a</b>,-<b>b</b>), (+<b>b</b>,+<b>a</b>), (+<b>b</b>,-<b>a</b>), (-<b>b</b>,+<b>a</b>), and (-<b>b</b>,-<b>a</b>). Note that the original chess knight is a (2,1)-hyperknight. <br /><br /><br /><br /> Of course, as the chessboard is finite, it is not always possible to make each of the 8 moves. Some of them may cause our hyperknight to leave the chessboard. A move is called <i>valid</i> if the destination cell is on the chessboard. Fernando would like to know the number of cells on his board such that his hyperknight will have exactly <b>k</b> valid moves from that cell. <br /><br /><br /><br /> You are given the ints <b>a</b>, <b>b</b>, <b>numRows</b>, <b>numColumns</b> and <b>k</b>. The values <b>numRows</b> and <b>numColumns</b> define the number of rows and number of columns on the chessboard, respectively. The other three values were already explained above. Compute and return the number of cells on the chessboard that have exactly <b>k</b> valid (<b>a</b>,<b>b</b>)-hyperknight moves.",
+	"notes":[{
+		"order":1,
+		"val":"If you wish, you may assume that the rows are numbered 0 through -1 and columns 0 through -1. However, note that the actual row/column numbers do not matter, as long as they are consecutive."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HyperKnight",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countCells",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countCells(int a, int b, int numRows, int numColumns, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"note":"This is a standard chessboard. We have a traditional chess knight and we are looking for cells such that the knight has exactly 4 valid moves.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a will be between 1 and 1,000,000,000 (10^9), inclusive."
+		},
+		{
+			"order":2,
+			"val":"b will be between 1 and 1,000,000,000 (10^9), inclusive."
+		},
+		{
+			"order":3,
+			"val":"a will not be equal to b."
+		},
+		{
+			"order":4,
+			"val":"numRows will be between 1 and 1,000,000,000 (10^9), inclusive."
+		},
+		{
+			"order":5,
+			"val":"numColumns will be between 1 and 1,000,000,000 (10^9), inclusive."
+		},
+		{
+			"order":6,
+			"val":"2*max(a,b) will be strictly less than min(numRows,numColumns)."
+		},
+		{
+			"order":7,
+			"val":"k will be between 0 and 8, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":226.34,
+			"constraints":[],
+			"correctRatio":95.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=479&rd=4105",
+			"name":"DeAnagram",
+			"notes":[],
+			"submission":246
+		},
+		{
+			"avgPts":289.22,
+			"constraints":[],
+			"correctRatio":47.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=480&rd=4105",
+			"name":"NumberRings",
+			"notes":[],
+			"submission":150
+		},
+		{
+			"avgPts":758.94,
+			"constraints":[],
+			"correctRatio":79.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=514&rd=4105",
+			"name":"Ones",
+			"notes":[],
+			"submission":99
+		}
+	],
+	"name":"Single Round Match 76 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4105"
+}

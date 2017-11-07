@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.8,
+			"constraints":[],
+			"correctRatio":64.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11023&rd=14236",
+			"name":"BestApproximationDiv1",
+			"notes":[],
+			"submission":671
+		},
+		{
+			"avgPts":256.79,
+			"constraints":[],
+			"correctRatio":30.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11037&rd=14236",
+			"name":"Bribes",
+			"notes":[],
+			"submission":150
+		},
+		{
+			"avgPts":503.92,
+			"constraints":[],
+			"correctRatio":2.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10920&rd=14236",
+			"name":"Sheep",
+			"notes":[],
+			"submission":325
+		}
+	],
+	"name":"Single Round Match 483 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14236"
+}

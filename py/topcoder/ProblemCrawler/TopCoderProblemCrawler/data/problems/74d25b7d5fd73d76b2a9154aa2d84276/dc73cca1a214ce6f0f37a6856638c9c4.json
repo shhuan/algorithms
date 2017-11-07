@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13485&rd=16078",
+	"statement":"<p><i> Recently, I realized that a rating graph can have two different intervals that look quite similar. Write a program that would detect such intervals. </i></p> <br /><br /> <p> You're given a user's rating graph in two int[]s: <tt><b>date</b></tt> and <tt><b>rating</b></tt>. Suppose that a user has participated in <tt>N</tt> contests; for <tt>0 &lt;= i &lt; N</tt>, the <tt>i</tt>-th contest has timestamp <tt><b>date</b>[i]</tt> and the user's rating after this contest was <tt><b>rating</b>[i]</tt>. </p> <br /><br /> <p> Formally, the rating graph is a sequence of points <tt>(<b>date</b>[i],<b>rating</b>[i])</tt>; an interval of the rating graph is a contiguous subsequence of those points - i.e., a subsequence corresponding to a contiguous range of indices. Two intervals are similar if one can be obtained from the other only by translation and scaling by a positive real factor (zooming). Note that both dimensions must be scaled by the same factor. </p> <br /><br /> <p> Consider the polyline obtained by visiting the points of an interval of the rating graph in order. The total length of this polyline is called the length of that interval. </p> <br /><br /> <p> Find the longest interval <tt>I</tt> of the given rating graph that's similar to some other (possibly partially overlapping) interval of that same rating graph and return the length of <tt>I</tt>. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SimilarRatingGraph",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxLength",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double maxLength(int[] date, int[] rating)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2,4,8,16,32}",
+			"id":0,
+			"input":"{1,2,4,8,16,32}",
+			"note":"The longest interval that's similar to another interval has length  and is formed by points (2,2), (4,4), ..., (32,32). It's similar to the interval formed by points (1,1), (2,2), ..., (16,16).",
+			"order":1
+		},
+		{
+			"expect":"{1866,2332,2510,2678,2876,3002}",
+			"id":0,
+			"input":"{81,104,120,124,134,137}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{10,14,15,23,25}",
+			"id":0,
+			"input":"{10,11,13,15,19}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{1700,1800,1750,1850}",
+			"id":0,
+			"input":"{1,2,3,4}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{1,4,9,16}",
+			"id":0,
+			"input":"{1,2,3,4}",
+			"note":"Here, only an interval consisting of a single point can be similar to another interval. The length of such an interval is obviously 0.",
+			"order":5
+		},
+		{
+			"expect":"{1505,1462,1436,1416,1463,1421,1411,1450,1497,1465,1423,1394,1391,1367,1358,1323,1310,1279,1268,1279,1311,1342,1359,1387,1414,1376,1424,1382,1373,1335,1359,1318,1275,1266,1227,1203,1168,1163,1184,1144,1169,1207,1250,1235,1209,1162,1124,1148,1168,1202,1190,1155,1179,1194,1195,1195,1203,1240,1218,1245,1220,1190,1208,1180,1182,1148,1139,1126,1152,1159,1147,1158,1112,1091,1101,1116,1123,1086,1126,1110,1128,1085,1132,1145,1135,1140,1117,1081,1120,1131,1081,1032,1071,1102,1071,1065,1068,1027,980,947,987,968,959,980,990,974,1003,996,999,958,911,878,918,899,890,911,921,905,934,927,930,889,844}",
+			"id":0,
+			"input":"{5,11,25,58,92,162,255,350,458,566,677,792,919,1051,1189,1331,1489,1673,1882,2093,2315,2541,2771,3012,3254,3524,3797,4087,4379,4675,4973,5278,5588,5904,6225,6550,6888,7249,7612,8018,8428,8847,9267,9688,10109,10530,10964,11407,11870,12340,12811,13288,13768,14249,14734,15242,15774,16306,16847,17400,17966,18533,19108,19692,20278,20871,21471,22074,22679,23297,23916,24553,25190,25829,26472,27135,27814,28497,29181,29865,30555,31272,31994,32729,33487,34246,35005,35764,36537,37326,38119,38913,39725,40538,41360,42185,43010,43840,44671,45509,46350,47205,48063,48932,49807,50691,51577,52464,53289,54119,54950,55788,56629,57484,58342,59211,60086,60970,61856,62743,63568,64398,65388}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"date and rating will contain the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"date will contain between 2 and 400 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of date will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The elements of date will be in strictly increasing order."
+		},
+		{
+			"order":5,
+			"val":"Each element of rating will be between 1 and 5,000, inclusive. "
+		}
+	]
+}

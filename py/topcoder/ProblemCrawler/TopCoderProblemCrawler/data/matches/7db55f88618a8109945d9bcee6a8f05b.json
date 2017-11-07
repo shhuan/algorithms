@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":194.81,
+			"constraints":[],
+			"correctRatio":95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12971&rd=15942",
+			"name":"EllysSortingTrimmer",
+			"notes":[],
+			"submission":2019
+		},
+		{
+			"avgPts":338.73,
+			"constraints":[],
+			"correctRatio":87.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12974&rd=15942",
+			"name":"EllysScrabble",
+			"notes":[],
+			"submission":1195
+		},
+		{
+			"avgPts":566.05,
+			"constraints":[],
+			"correctRatio":55.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11906&rd=15942",
+			"name":"EllysLamps",
+			"notes":[],
+			"submission":196
+		}
+	],
+	"name":"2014 TCO Algorithm > Round 1A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15942"
+}

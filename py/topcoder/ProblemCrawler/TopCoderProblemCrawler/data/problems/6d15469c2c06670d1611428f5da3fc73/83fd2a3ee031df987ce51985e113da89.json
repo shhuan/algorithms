@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2450&rd=4780",
+	"statement":"<p> You are given two strings of digits, <b>single</b> and <b>multiple</b>. Your job is to find the length of the longest substring (which may be the whole string) of digits in <b>single</b> such that there is a corresponding substring (of the same length) in <b>multiple</b> which satisfies the following constraint. Each digit in the substring of <b>multiple</b> is the same exact integer multiple of the corresponding digit in the substring of <b>single</b>. So &quot;48&quot; is a multiple (4) of &quot;12&quot;, but &quot;72&quot; is not a multiple of &quot;36&quot;. Multiplication factors from 0 to 9 are possible. Leading zeros are *allowed* in <b>single</b> and <b>multiple</b> and all substrings. </p> <p> For example: in &quot;3211113321571&quot; and &quot;5555266420&quot;, here are a few (but not all) of the multiples:</p> <pre>\n&quot;3211113321571&quot;        &quot;5555266420&quot;\n&quot;-----------7-&quot;  x 0 = &quot;---------0&quot;\n&quot;--------2----&quot;  x 1 = &quot;----2-----&quot;\n&quot;--11---------&quot;  x 6 = &quot;-----66---&quot;\n&quot;321----------&quot;  x 2 = &quot;------642-&quot;\n&quot;--1111-------&quot;  x 5 = &quot;5555------&quot;\n&quot;-----13321---&quot;  x 2 = &quot;----26642-&quot;\n</pre> <p> The answer is 5, the length of the longest string with a multiple, &quot;13321&quot;. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Each digit multiple must be exactly a single digit. For example: '3' x 4 never matches."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DigitMultiples",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getLongest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getLongest(String single, String multiple)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"5555266420\"",
+			"id":0,
+			"input":"\"3211113321571\"",
+			"note":"The example from above. Longest multiple = \"13321\" x 2 = \"26642\"",
+			"order":1
+		},
+		{
+			"expect":"\"100400600\"",
+			"id":0,
+			"input":"\"100200300\"",
+			"note":"\"00200300\" x 2 = \"00400600\"",
+			"order":2
+		},
+		{
+			"expect":"\"122333444455555666666777777788888888999999999\"",
+			"id":0,
+			"input":"\"111111111100000000000000000000000000000000000\"",
+			"order":3
+		},
+		{
+			"expect":"\"000000000000\"",
+			"id":0,
+			"input":"\"000000000000\"",
+			"note":"Any integer multiple works here.",
+			"order":4
+		},
+		{
+			"expect":"\"11111111111\"",
+			"id":0,
+			"input":"\"11111111111\"",
+			"note":"The factor is one.",
+			"order":5
+		},
+		{
+			"expect":"\"00000000000000000000000\"",
+			"id":0,
+			"input":"\"89248987092734709478099\"",
+			"note":"The factor is zero.",
+			"order":6
+		},
+		{
+			"expect":"\"00000000000000000000000001111111111111111111111111\"",
+			"id":0,
+			"input":"\"11111111111111111111111111111111111111111111111111\"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"single will have between 1 and 50 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"multiple will have between 1 and 50 characters inclusive."
+		},
+		{
+			"order":3,
+			"val":"each character of single will be between '0' and '9' inclusive."
+		},
+		{
+			"order":4,
+			"val":"each character of multiple will be between '0' and '9' inclusive."
+		}
+	]
+}

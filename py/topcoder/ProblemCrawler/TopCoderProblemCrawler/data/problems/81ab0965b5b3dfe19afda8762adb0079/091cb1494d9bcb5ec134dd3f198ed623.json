@@ -1,0 +1,119 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=927&rd=4700",
+	"statement":"<p> A common task in text editing is inserting one sequence of characters before another one. For example, in the String &quot;10 10 bills&quot;, we might want to insert a dollar sign ('$') before the second occurrence of the number &quot;10&quot;. Thus, the original string would become &quot;10 $10 bills&quot;. You are to write a method which takes an original String and a series of insert instructions and performs the instructions, in the order they are given. You should return the modified String. </p><p> Instructions will be of the form <tt>&quot;#&lt;insert&gt;# #&lt;before&gt;# &lt;index&gt;&quot;</tt>, where &lt;insert&gt; is the sequence of characters to be inserted, &lt;before&gt; is the sequence of characters before which to insert &lt;insert&gt;, and &lt;index&gt; is the index of the occurrence of &lt;before&gt; (starting from 1), before which to insert &lt;insert&gt;. In order to facilitate spaces in &lt;insert&gt; and &lt;before&gt;, both sequences will be surrounded by '#'. Thus the command &quot;#insert this# #before this# 3&quot; would insert &quot;insert this&quot; before the third occurrence of &quot;before this&quot;. </p><p> If, for some command, there are less than &lt;index&gt; occurrences of &lt;before&gt;, then do nothing. For example, in the String &quot;$100 $100&quot;, there is no third occurrence of &quot;$&quot;, so a command that inserts before the third occurrence of &quot;$&quot; should be ignored. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"All of the instructions are performed on the String as it changes."
+		},
+		{
+			"order":2,
+			"val":"Searching for occurrences of <before> should be case sensitive."
+		},
+		{
+			"order":3,
+			"val":"Note that the i occurrence of <before> may overlap with the (i+1) occurrence of <before>. See example 5."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Inserter",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"insert",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String insert(String[] commands, String original)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"$100 before this $300\"",
+			"id":0,
+			"input":"{\"#<B># #$# 2\",\"#comes # #before this# 1\"}",
+			"note":"The first command tells us to insert the sequence \"<B>\" before the second occurrence of \"$\". Doing this gives us: \"$100 before this <B>$300\" The second command tells us to insert \"comes \" before \"before this\". Doing this gives us \"$100 comes before this <B>$300\" ",
+			"order":1
+		},
+		{
+			"expect":"\"lions and tigers and bears\"",
+			"id":0,
+			"input":"{\"#,# # and# 1\",\"#,# # and# 2\",\"#,# # and# 3\"}",
+			"note":"Each command says to insert \",\" before \" and\". The first command says to insert before the 1st occurrence, the 2nd command says to insert before the 2nd occurrence, and the 3rd command says to insert before the 3rd occurrence (which does not exist).",
+			"order":2
+		},
+		{
+			"expect":"\"public class Inserter\"",
+			"id":0,
+			"input":"{\"#import java.util.*; # #public class # 1\"}",
+			"order":3
+		},
+		{
+			"expect":"\"add lots of spaces\"",
+			"id":0,
+			"input":"{\"# # # # 1\",\"# # # # 2\",\"# # # # 3\",\"# # # # 4\",\"# # # # 5\",\"# # # # 6\"}",
+			"order":4
+		},
+		{
+			"expect":"\"order matters quite a bit\"",
+			"id":0,
+			"input":"{\"# # # # 6\",\"# # # # 5\",\"# # # # 4\",\"# # # # 3\",\"# # # # 2\",\"# # # # 1\"}",
+			"order":5
+		},
+		{
+			"expect":"\"....\"",
+			"id":0,
+			"input":"{\"#A# #..# 2\",\"#A# #..# 5\",\"#A# #..# 123456789\"}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"original and each element of commands will have between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"commands will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in the input will have ASCII value between 32 and 126, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of commands will be formatted as described in the problem statement as &quot;#&lt;insert&gt;# #&lt;before&gt;# &lt;index&gt;&quot;."
+		},
+		{
+			"order":5,
+			"val":"The character '#' will not exist within either &lt;before&gt; or &lt;insert&gt;."
+		},
+		{
+			"order":6,
+			"val":"Both &lt;before&gt; and &lt;insert&gt; will contain at least one character."
+		},
+		{
+			"order":7,
+			"val":"Each &lt;index&gt; in command will be between 1 and 2^31-1, inclusive, with no extra leading zeros."
+		},
+		{
+			"order":8,
+			"val":"The return will have at most 999 characters."
+		}
+	]
+}

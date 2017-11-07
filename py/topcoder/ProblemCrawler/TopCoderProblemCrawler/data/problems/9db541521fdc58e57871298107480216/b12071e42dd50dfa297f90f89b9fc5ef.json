@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6381&rd=10881",
+	"statement":"<p> You are given a compressed word that is in one of the following three forms: </p> \n <ol> \n  <li>A single character 'A' or 'B'. In this case, the uncompressed word is equal to the compressed one.</li> \n  <li>A string formatted as &quot;ST&quot; (quotes for clarity), where S and T are each compressed words. To uncompress a word of this form, uncompress S and T and return their concatenation.</li> \n  <li>A string formatted as &quot;(X,S)&quot; (quotes for clarity), where X is a digit between 1 and 9, inclusive, and S is a compressed word. To uncompress a word of this form, uncompress S and return the concatenation of X copies of that uncompressed word.</li> \n </ol> <p> For example, &quot;(2,A(3,AB))&quot; uncompresses to &quot;AABABABAABABAB&quot;, and &quot;A(2,B)&quot; uncompresses to &quot;ABB&quot;. The latter example is uncompressed as follows: </p> \n <ol> \n  <li>&quot;A(2,B)&quot; is in form 2, where S = &quot;A&quot; and T= &quot;(2,B)&quot;. S is in form 1 so it's already uncompressed. Next, we uncompress T.</li> \n  <li>&quot;(2,B)&quot; is in form 3, where X = 2 and S = &quot;B&quot;. S is in form 1 so it's already uncompressed. We concatenate 2 copies of it to get &quot;BB&quot;.</li> \n  <li>We concatenate S and T from step 1 to get &quot;ABB&quot;.</li> \n </ol> <p> A maximal continuous sequence of the same letter in a word is called a block. For example, &quot;AABAAABBBAA&quot; contains 5 blocks: AA, B, AAA, BBB, and AA. </p> <p> You are given a compressed <b>word</b>. Return the number of blocks in the uncompressed form of the <b>word</b>. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BlockCounter",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countBlocks",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countBlocks(String word)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"\"(2,A(3,AB))\"",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"\"A(1,A)A(5,AAA)\"",
+			"note":"In this case the word uncompresses to a string of 18 'A'-s.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 13",
+			"id":0,
+			"input":"\"ABA(2,ABA)(3,ABA)\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"\"(3,(2,(1,AB)))B\"",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"word will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"word will contain only parenthesis '(', ')', digits '1'-'9', letters 'A' and 'B' and commas ','."
+		},
+		{
+			"order":3,
+			"val":"word will be formatted as described in the problems statement."
+		}
+	]
+}

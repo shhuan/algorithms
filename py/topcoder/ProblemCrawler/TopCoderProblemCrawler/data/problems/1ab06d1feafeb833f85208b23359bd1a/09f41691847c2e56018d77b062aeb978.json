@@ -1,0 +1,140 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1008&rd=4375",
+	"statement":"<p> A hall of mirrors is a large room with many mirrors throughout it. When you look at one of these mirrors, often you end up seeing an object that is far away and has been reflected off many mirrors. To aid in the design of halls of mirrors, you are to write a class Mirrors with a method seen, which will tell you what object is seen, given a particular configuration of mirrors and objects, and the location and direction being looked. </p><p> Your method will take a String[], mirrors, another String[], objects, and a int[], start. Each element of mirrors will be formatted as &quot;&lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;&quot;, representing a mirror that starts at point (x1,y1) and ends at point (x2,y2). All mirrors are double sided. objects, will repesent all of the objects that are in the hall of mirrors and might be seen. Each element of objects will be formatted as &quot;&lt;name&gt; &lt;x&gt; &lt;y&gt;&quot;, representing a circular object named &lt;name&gt;, centered at point (x,y) and with radius 1. </p><p> Finally, start will represent the location and direction that a person is looking from. The first element will be the x coordinate, the second element will be the y coordinate, and the third element will be the heading that they are looking in. The heading will be in the range 0 to 359, representing the number of degrees in a counter-clockwise direction, starting from straight right (positive x), that the person is looking. Thus a heading of 0 means the person is looking in the positive x direction, a heading of 90 indicates the positive y direction, and a heading of 45 indicates that the person is looking half way between the positive x and positive y directions. </p><p> Your method must determine what is seen when a person stands at the given coordinates and looks in the given direction. If the person sees himself, return &quot;me&quot;. If the person doesn't see any object or himself, return &quot;space&quot;. Otherwise return the name of the object the person sees. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"All mirrors are double sided, and should be treated as line segments."
+		},
+		{
+			"order":2,
+			"val":"All objects, and the person, are perfect circles and have a radius of 1."
+		},
+		{
+			"order":3,
+			"val":"A mirror reflects light such that the angle formed between the mirror and the incoming light is the same as the angle formed between the mirror and the outgoing light. Thus the angle between the incoming and outgoing light is 180-2*(angle between mirror and light)."
+		},
+		{
+			"order":4,
+			"val":"If you look along a mirror, the mirror has no effect. (see examples)."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Mirrors",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"seen",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String seen(String[] mirrors, String[] objects, int[] start)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"a 15 10\"}",
+			"id":0,
+			"input":"{\"0 0 100 100\"}",
+			"note":"The one mirror is at a 45 degree angle",
+			"order":1
+		},
+		{
+			"expect":"{\"a 15 10\"}",
+			"id":0,
+			"input":"{\"0 0 100 100\"}",
+			"order":2
+		},
+		{
+			"expect":"{\"a 15 10\"}",
+			"id":0,
+			"input":"{\"0 0 100 100\"}",
+			"order":3
+		},
+		{
+			"expect":"{\"a 500 152\"}",
+			"id":0,
+			"input":"{\"0 0 0 1000\",\"1000 0 999 1000\"}",
+			"order":4
+		},
+		{
+			"expect":"{\"a 30 0\"}",
+			"id":0,
+			"input":"{\"10 0 20 0\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Each element of mirrors will be formatted exactly as &quot;&lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;&quot;, with no extra spaces."
+		},
+		{
+			"order":2,
+			"val":"Each element of objects will be formatted exactly as &quot;&lt;name&gt; &lt;x&gt; &lt;y&gt;&quot;, with no extra spaces or leading 0's."
+		},
+		{
+			"order":3,
+			"val":"mirrors will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"objects will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"start will contain exactly three elements, the first two representing x and y, respectively, and the third representing the heading the person is looking in."
+		},
+		{
+			"order":6,
+			"val":"All coordinates will be integers in the range 0 to 1000, inclusive."
+		},
+		{
+			"order":7,
+			"val":"The heading (3rd element of start) will be in the range 0 to 359, inclusive."
+		},
+		{
+			"order":8,
+			"val":"No objects or mirrors will overlap other objects, mirrors, or the person (this includes touching at one point)."
+		},
+		{
+			"order":9,
+			"val":"No element of mirrors will represent a point. (x1==x2 and y1==y2)"
+		},
+		{
+			"order":10,
+			"val":"Each object will have a unique &lt;name&gt; other than &quot;me&quot; or &quot;space&quot;."
+		},
+		{
+			"order":11,
+			"val":"Each &lt;name&gt; will contain only lowercase characters."
+		},
+		{
+			"order":12,
+			"val":"To avoid cumulative rounding errors, the object (or &quot;me&quot; or &quot;space&quot;) seen will be seen in 50 mirrors or less."
+		},
+		{
+			"order":13,
+			"val":"To avoid rounding errors, the object seen will be seen definatively. This means that no objects will be barely seen, or almost seen, and there will never be any question about which mirror is seen. This is ensured by checking that the path to the object seen does not pass within 0.001 of any other object, mirror, or the person."
+		},
+		{
+			"order":14,
+			"val":"Each element of mirrors, and objects will contain between 1 and 50 characters, inclusive."
+		}
+	]
+}

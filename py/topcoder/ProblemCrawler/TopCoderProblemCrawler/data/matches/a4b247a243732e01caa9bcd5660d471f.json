@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":232.03,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1934&rd=4656",
+			"name":"AustrianLotto",
+			"notes":[],
+			"submission":75
+		},
+		{
+			"avgPts":307.75,
+			"constraints":[],
+			"correctRatio":47.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1935&rd=4656",
+			"name":"RoomSummary",
+			"notes":[],
+			"submission":65
+		},
+		{
+			"avgPts":839.9,
+			"constraints":[],
+			"correctRatio":56.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1936&rd=4656",
+			"name":"CongruenceLock",
+			"notes":[],
+			"submission":44
+		}
+	],
+	"name":"CRPF Charity Challenge > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4656"
+}

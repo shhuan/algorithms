@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8202&rd=11125",
+	"statement":"<p>There are <b>N</b> boxes numbered from 1 to <b>N</b> and <b>N</b> keys numbered from 1 to <b>N</b>. The i-th key can only be used to open the i-th box. Now, we randomly put exactly one key into each of the boxes. We assume that all configurations of keys in boxes occur with the same probability. Then we lock all the boxes. You have <b>M</b> bombs, each of which can be used to open one locked box. Once you open a locked box, you can get the key in it and perhaps open another locked box with that key. Your strategy is to select a box, open it with a bomb, take the key and open all the boxes you can and then repeat with another bomb.</p> <p> Return the probability that you can get all the keys. The return value must be a string formatted as &quot;A/B&quot; (quotes for clarity), representing the probability as a fraction. A and B must both be positive integers with no leading zeroes, and the greatest common divisor of A and B must be 1.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"KeysInBoxes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getAllKeys",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getAllKeys(int N, int M)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"note":"When box 1 contains key 2, you can get all the keys.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"When =, you can always get all the keys.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"3",
+			"note":"There are 6 possible configurations of keys in boxes. Using 1 bomb, you can open all the boxes in 2 of them: ",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"Now, when you have 2 bombs, you are only unable to get all the keys in the following configuration: box 1 - key 1, box 2 - key 2, box 3 - key 3.",
+			"order":4
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 20, inclusive."
+		},
+		{
+			"order":2,
+			"val":"M will be between 1 and N, inclusive."
+		}
+	]
+}

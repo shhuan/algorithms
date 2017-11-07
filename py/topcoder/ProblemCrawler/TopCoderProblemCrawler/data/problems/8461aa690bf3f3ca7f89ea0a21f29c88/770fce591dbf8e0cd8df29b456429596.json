@@ -1,0 +1,101 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12080&rd=15179",
+	"statement":"You are the Incubator. You have the ability to turn normal girls into magical girls. <br /><br /> <br /><br /> <br /><br /> There are n girls in the city. The girls are conveniently numbered 0 through n-1. Some girls love some other girls. Love is not necessarily symmetric. It is also possible for a girl to love herself. <br /><br /> <br /><br /> <br /><br /> You are given a String[] <b>love</b>. Character j of element i of <b>love</b> is 'Y' if girl i loves girl j. Otherwise, that character is 'N'. In the rest of the problem statement, we will use love[i][j] to denote the truth value of the statement &quot;girl i loves girl j&quot;. <br /><br /> <br /><br /> <br /><br /> Each girl has two boolean properties: isMagical (is she a magical girl?) and isProtected (is she protected by some girl?). Initially, for each girl i we have isMagical[i] = False and isProtected[i] = False. <br /><br /> <br /><br /> <br /><br /> At any moment, you can choose an ordinary girl and turn her into a magical girl. That is, you can take a girl i such that isMagical[i] = False, and change isMagical[i] to True. <br /><br /> <br /><br /> <br /><br /> Each such change will trigger a series of events: \n <ul> \n  <li>Each magical girl will protect all girls she loves: if isMagical[i] and love[i][j], then isProtected[j] is set to True.</li> \n  <li>Each protected girl will also protect all girls she loves: if isProtected[i] and love[i][j], then isProtected[j] is set to True.</li> \n </ul> Note that some of these changes may in turn trigger other changes, as more and more girls become protected. <br /><br /> <br /><br /> <br /><br /> Once there are no more changes, you can again change another ordinary girl into a magical one, and so on. Your goal is to reach a situation with many girls that are magical, but not protected. That is, you are interested in girls such that isMagical[i] = True and isProtected[i] = False. Return the maximum number of such girls in a situation that can be reached using the above process.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Incubator",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxMagicalGirls",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxMagicalGirls(String[] love)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"NY\",\"NN\"}",
+			"note":"One optimal solution is to change girl 0 to a magical girl. Girl 0 will be magical and she will not be protected. It is not possible to have two girls that are both magical and not protected: if you change both girls to magical girls (in any order), you will get a situation in which girl 1 is protected.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"NYN\", \"NNY\", \"NNN\"}",
+			"note":"Again, there is no way to create more than one unprotected magical girl. For example, if we start by making girl 2 magical, and then make girl 0 magical, magical girl 0 will protect girl 1, and protected girl 1 will protect girl 2. Thus, in this case girl 0 will be magical and unprotected, girl 1 will be ordinary and protected, and girl 2 will be magical and protected.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NNYNN\",\"NNYNN\",\"NNNYY\",\"NNNNN\",\"NNNNN\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NNNNN\",\"NYNNN\",\"NYNYN\",\"YNYNN\",\"NNNNN\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"NNNNN\",\"NNNNN\",\"NNNNN\",\"NNNNN\",\"NNNNN\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NNYNNNNN\",\"NNNYNNNN\",\"NNNNYNNN\",\"NNYNNNNN\",\"NNNNNYYN\",\"NNNYNNNY\",\"NNNNNNNN\",\"NNNNNNNN\"}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"Y\"}",
+			"note":"Note that a girl may love herself.",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"love will contain exactly n elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of love will contain exactly n characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in each element of love will be either 'Y' or 'N'."
+		}
+	]
+}

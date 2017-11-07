@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11023&rd=14236",
+	"statement":"Elly is not a big fan of mathematical constants. Most of them are infinite, and therefore hard to memorize. Fractions, on the other hand, are often easier to remember and can provide good approximations. For example, 22/7 = 3.1428... is one way to approximate Pi. Unfortunately, it's only accurate to 2 places after the decimal point, so it doesn't help at all. A slightly better example is 355/113 = 3.14159292... which is correct up to 6 digits after the decimal point.<br /><br /><br /><br /> Elly understands that working with infinite decimal fractions is going to be very difficult, so she first wants to find a good way to approximate floating point numbers with decimal representations that are finite. Your task is to help her in this mission. You will be given a String <b>number</b> containing the decimal representation of a non-negative fraction strictly less than 1. There will be exactly 6 digits after the decimal point in <b>number</b> (trailing zeros are possible and significant). More precisely, <b>number</b> will be formatted &quot;0.<i>dddddd</i>&quot; (quotes for clarity) where each <i>d</i> is a decimal digit ('0'-'9').<br /><br /><br /><br /> Given a fraction F = A/B, where 0 &lt;= A &lt; B, its quality of approximation with respect to <b>number</b> is calculated as follows: \n <ul> \n  <li>Let S be the decimal fraction (infinite or finite) representation of F.</li> \n  <li>If S is infinite or the number of digits after the decimal point in S is greater than 6, only consider the first 6 decimals after the decimal point in S. Truncate the rest of the digits without performing any kind of rounding.</li> \n  <li>If the number of digits after the decimal point in S is less than 6, append trailing zeroes to the right side until there are exactly 6 digits after the decimal point.</li> \n  <li>The quality of approximation is the number of digits in the longest common prefix of S and <b>number</b>. The longest common prefix of two numbers is the longest string which is a prefix of the decimal representations of both numbers with no extra leading zeroes. For example, &quot;3.14&quot; is the longest common prefix of 3.1428 and 3.1415.</li> \n </ul> Elly doesn't like long approximations either, so you are only allowed to use fractions where the denominator is less than or equal to <b>maxDen</b>. Find an approximation F = A/B of <b>number</b> such that 1 &lt;= B &lt;= <b>maxDen</b>, 0 &lt;= A &lt; B, and the quality of approximation is maximized. Return a String formatted &quot;A/B has X exact digits&quot; (quotes for clarity) where A/B is the approximation you have found and X is its quality. If there are several such approximations, choose the one with the smallest denominator among all of them. If there is still a tie, choose the one among those with the smallest numerator. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BestApproximationDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findFraction",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String findFraction(int maxDen, String number)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"0.141592\"",
+			"id":0,
+			"input":"42",
+			"note":"3 plus the current approximation yields an approximation of Pi.",
+			"order":1
+		},
+		{
+			"expect":"\"0.133700\"",
+			"id":0,
+			"input":"3",
+			"note":"Not a lot of options here.",
+			"order":2
+		},
+		{
+			"expect":"\"0.123456\"",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"0.420000\"",
+			"id":0,
+			"input":"1000",
+			"note":"This one can be represented in more than one way. Be sure to choose the one with the lowest denominator.",
+			"order":4
+		},
+		{
+			"expect":"\"0.909999\"",
+			"id":0,
+			"input":"100",
+			"note":"Even though 91/100 is a much closer approximation, 10/11 matches up to 3 digits, and 91/100 only to one.",
+			"order":5
+		},
+		{
+			"expect":"\"0.141592\"",
+			"id":0,
+			"input":"115",
+			"note":"A better approximation for the decimal part of Pi.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maxDen will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"number will contain exactly 8 characters."
+		},
+		{
+			"order":3,
+			"val":"number will consist of a digit '0', followed by a period ('.'), followed by exactly six digits ('0'-'9')."
+		}
+	]
+}

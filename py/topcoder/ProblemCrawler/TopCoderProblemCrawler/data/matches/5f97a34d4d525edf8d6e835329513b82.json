@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":192.67,
+			"constraints":[],
+			"correctRatio":26.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4822&rd=9980",
+			"name":"ThirstyGroup",
+			"notes":[],
+			"submission":15
+		},
+		{
+			"avgPts":241.22,
+			"constraints":[],
+			"correctRatio":30,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4565&rd=9980",
+			"name":"Postman",
+			"notes":[],
+			"submission":10
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6185&rd=9980",
+			"name":"SymmetricalTree",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"TCO 06 > Semifinal Room 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9980"
+}

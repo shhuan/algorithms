@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13754&rd=16416",
+	"statement":"<p> Bob has a very interesting job: he is a forklift truck operator. Today he is facing the following problem at work. </p> <p> </p> <p> There are initially N pallets placed in a row from the left to the right and numbered starting from 0. Each pallet contains exactly one box on top of it. There are two types of boxes: red boxes and blue boxes. Each red box has height 1 and each blue box has height exactly sqrt(2). </p> <p> </p> <p> In a single move, Bob can choose some consecutive set of pallets and, using a forklift truck, lift up all boxes from the set and put them down on top of some other consecutive set of pallets. (Note that when one box is placed on top of another box, the height of the resulting stack is precisely equal to the sum of heights of both boxes.) More formally, in a single move Bob can do the following four steps (in the given order): </p> \n <ol> \n  <li>Choose any non-empty consecutive set of pallets. (I.e., pallets with indices from A to B, inclusive, for some A and B.) Bob is going to lift up the stacks of boxes that are currently placed on these pallets.</li> \n  <li>Choose any non-empty consecutive set of pallets disjoint with the first set. The number of pallets must be the same as in the first set. Additionally, the stacks of boxes on the pallets that were selected in this step must all have exactly the same height. Bob is going to place the stacks he lifted in step 1 onto these stacks.</li> \n  <li>Bob moves the stacks of boxes from the first set of pallets onto the stacks of boxes on the second set of pallets. Note that the order of stacks must be preserved. E.g., if he lifted up stacks of boxes from pallets 2-4 and now he wants to place them onto pallets 6-8, stack from pallet 2 goes onto pallet 6, and so on.</li> \n  <li>After the move, all empty pallets are removed. The remaining pallets are pushed together and then renumbered starting from 0.</li> \n </ol> <p> </p> <p> The height of a pallet is defined as the sum of heights of boxes placed on it. To avoid unnecessary chaos, Bob decided that after each move there should be at most two different pallet heights. In other words, there must never be any three pallets with three different heights. </p> <p> </p> <p> You are given a String <b>pallets</b> which contains N characters. For each valid i, the i-th character of <b>pallets</b> is 'R' if initially the box on the i-th pallet is a red box, and 'B' if it is a blue one. Bob's task is to find some sequence of moves such that after executing all moves from this sequence there would be exactly one pallet left with all the initial boxes placed on top of it (in any order). Return the minimum possible size of such sequence. If such sequence doesn't exist, return -1 instead. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ForkliftTruckOperator",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getNumber(String pallets)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"\"RRBRBR\"",
+			"note":"The following picture shows the optimal sequence of 4 moves:    Note that in the third move Bob placed the rightmost two stacks onto the leftmost two stacks. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"\"RB\"",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"\"RRRRRR\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"\"RRRRBBBBBBBBB\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"\"RBRBRBRBRBRBRB\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"\"B\"",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"\"BBBBBBBBBBBBBBBBRRRRRRRRBRBBRRRR\"",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pallets will contain between 1 and 300 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of pallets will be either 'R' or 'B'."
+		}
+	]
+}

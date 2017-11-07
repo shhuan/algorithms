@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10748&rd=14159",
+	"statement":"TopCoder Security Agency (TSA) has successfully obtained the string encryption scheme used by the enemy to encrypt strings of digits. This encryption scheme can be described as follows: <br /><br /> <br /><br /> Each non-empty maximum set of identical consecutive digits in the original string is replaced by an integer followed by a digit. The integer is the number of consecutive digits that are going to be replaced (without leading zeroes) while the digit is the same digit as those which are going to be replaced. For example, &quot;122&quot; will be replaced by &quot;1122&quot;. <br /><br /> <br /><br /> The procedure above is applied twice, first to the original string, and then to the result of the first application. For example, &quot;122&quot; becomes &quot;1122&quot; after one application, and becomes &quot;2122&quot; after the next application. <br /><br /> <br /><br /> Although encryption is easily implemented with this procedure, retrieving the original data is not since there may be multiple original strings encrypted into the same resulting string. For example, &quot;2122&quot; may be the result of the encryption of the following strings: &quot;122&quot;, a string consisting of 112 copies of digit '2' and a string consisting of 22222....22222 (211 '2's) copies of digit '2'. <br /><br /> <br /><br /> It is conjectured that the enemy transmits some additional data that allows the encrypted string to be uniquely decrypted. However, TSA has no access to this data, so their only chance to decrypt the messages is to check all possible decryptions. <br /><br /> <br /><br /> You are given a String[] <b>code</b>. Concatenate all elements of <b>code</b> in the order in which they are given to obtain a single string S. Compute the number of different strings that will be encrypted to S according to the scheme described above. Return this number modulo 1,000,000,009. If there are no such strings, return 0.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StringDecryption",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"decrypt",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int decrypt(String[] code)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"2122\"}",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"012345\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1555366",
+			"id":0,
+			"input":"{\"123\",\"4056\",\"789\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"1\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"10000000101\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 882582353",
+			"id":0,
+			"input":"{\"36029876684872327223276091861774662608610223162723\", \"03488815136338720301059585173865765204966825388127\", \"28905156607840356770675251838346615448480878517234\", \"48346801533058114299540857443030369316232988018148\", \"10266938012137248616925283167856138261491565599857\", \"63098906296356837907112034583226442670798371015701\", \"04431120878401385924047425666758653777487585276695\", \"60451685064284613241730873806124686837402534256835\", \"74510620643600499901411494702324867762597665590427\", \"82564618006706585886295436740966342057330943523869\"}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"Returns: 371459312",
+			"id":0,
+			"input":"{\"11111111111111111111111111111111111111111111111111\", \"12222222222222211122222222222221112222222222222111\", \"12000000000000211120000000000021112000000000002111\", \"12222220222222211120222222222221112022222222202111\", \"11111120211111111120222222222221112022222222202111\", \"11111120211111111120000000000021112000000000002111\", \"11111120211111111122222222222021112022222222202111\", \"11111120211111111122222222222021112021111111202111\", \"11111120211111111120000000000021112021111111202111\", \"11111122211111111122222222222221112221111111222111\"}",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"Returns: 95",
+			"id":0,
+			"input":"{\"89210\"}",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"code will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of code will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in code will be a digit ('0'-'9')."
+		}
+	]
+}

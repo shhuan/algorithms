@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":198.47,
+			"constraints":[],
+			"correctRatio":95.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2293&rd=5002",
+			"name":"Commission",
+			"notes":[],
+			"submission":126
+		},
+		{
+			"avgPts":357.65,
+			"constraints":[],
+			"correctRatio":64.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2294&rd=5002",
+			"name":"Scale",
+			"notes":[],
+			"submission":68
+		}
+	],
+	"name":"2004 TCCC > Qualification Problem Set 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5002"
+}

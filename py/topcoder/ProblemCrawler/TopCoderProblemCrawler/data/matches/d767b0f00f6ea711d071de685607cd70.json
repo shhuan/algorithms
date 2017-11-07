@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.67,
+			"constraints":[],
+			"correctRatio":43.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=162&rd=50",
+			"name":"HowEasy",
+			"notes":[],
+			"submission":138
+		},
+		{
+			"avgPts":373.57,
+			"constraints":[],
+			"correctRatio":89.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=163&rd=50",
+			"name":"SquareDigits",
+			"notes":[],
+			"submission":130
+		},
+		{
+			"avgPts":536.19,
+			"constraints":[],
+			"correctRatio":82.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=164&rd=50",
+			"name":"Prerequisites",
+			"notes":[],
+			"submission":57
+		}
+	],
+	"name":"2001 Invitational > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=50"
+}

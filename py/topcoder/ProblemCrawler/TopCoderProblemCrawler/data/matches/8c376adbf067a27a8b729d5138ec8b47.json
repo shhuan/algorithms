@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":195.39,
+			"constraints":[],
+			"correctRatio":93.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4723&rd=8021",
+			"name":"VariableAddition",
+			"notes":[],
+			"submission":321
+		},
+		{
+			"avgPts":437.07,
+			"constraints":[],
+			"correctRatio":64.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4753&rd=8021",
+			"name":"CheapestFlights",
+			"notes":[],
+			"submission":211
+		}
+	],
+	"name":"2005 TCO > Qualification Set 2/9",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8021"
+}

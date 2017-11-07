@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12619&rd=15703",
+	"statement":"A <i>pyramid sequence</i> of height X &gt; 1 is an infinite sequence of positive integers with period 2X-2. Its first 2X-2 terms are 1, 2, ..., X-1, X, X-1, ..., 2. <br /><br /><br /><br /> You are given ints <b>N</b> and <b>M</b>. Consider two pyramid sequences A and B, A of height <b>N</b> and B of height <b>M</b>. Return the number of distinct pairs of integers (x,y) such that for some i &gt; 0 we have x=A[i] and y=B[i].",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PyramidSequences",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"distinctPairs",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long distinctPairs(int N, int M)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"3",
+			"note":"These are the first several terms of pyramid sequences of height 3 and 4:  {1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1}  {1, 2, 3, 4, 3, 2, 1, 2, 3, 4, 3, 2, 1}  We can see the following pairs: (1, 1), (2, 2), (3, 3), (2, 4), (1, 3), (3, 1). No other pairs will appear later in the sequences.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"3",
+			"note":"The sequences begin with:  {1, 2, 3, 2, 1, 2, 3, 2, 1}  {1, 2, 3, 4, 5, 4, 3, 2, 1} ",
+			"order":2
+		},
+		{
+			"expect":"76",
+			"id":0,
+			"input":"43",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1000000000",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"95555",
+			"id":0,
+			"input":"100000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"M will be between 2 and 1,000,000,000, inclusive."
+		}
+	]
+}

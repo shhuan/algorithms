@@ -1,0 +1,124 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12194&rd=15378",
+	"statement":"Fox Ciel is the owner of a hotel. In her hotel, there are <b>N</b> rooms numbered from 0 to <b>N</b>-1. The distance between room i and room j is |i-j|. <br /><br /> <br /><br /> M cats, conveniently numbered from 0 to M-1, want to stay in this hotel. You are given a String[] <b>friendship</b> with M elements, containing M characters each. These describe the friendship between those M cats. In particular, character j of element i of <b>friendship</b> is 'Y' if cats i and j are friends, and 'N' if they are not. Additionally, <b>friendship</b> has the following properties: \n <ul> \n  <li>It is symmetric. Cats i and j are friends if and only if cats j and i are friends.</li> \n  <li>It is anti-reflexive. No cat is friends with itself.</li> \n  <li>The graph of friendships is connected. In other words, for any two cats i and j we can form a sequence of cats starting with cat i and ending with cat j, such that all pairs of adjacent cats are friends.</li> \n </ul> <br /><br /> Ciel wants to assign rooms to the cats. The cats made the following requests: \n <ul> \n  <li>Each cat must be assigned a single room.</li> \n  <li>No two cats can be assigned the same room.</li> \n  <li>For each distinct i and j, if cat i and cat j are friends, the distance between their rooms must be less than or equal to <b>D</b>.</li> \n  <li>For each distinct i and j, if cat i and cat j are not friends, the distance between their rooms room must be strictly more than <b>D</b>.</li> \n </ul> <br /><br /> You are given the ints <b>N</b> and <b>D</b> and the String[] <b>friendship</b>. Let X be the number of ways in which Ciel can assign rooms to the cats, while satisfying all their requests. Compute and return the value (X modulo 1,000,000,007).",
+	"notes":[{
+		"order":1,
+		"val":"In the statement, |x| denotes the absolute value of x."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DistanceGraph",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countArrangements",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countArrangements(int N, int D, String[] friendship)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"5",
+			"note":"There are two cats. As they are friends, their rooms must be at most 2 apart. There are 14 possible assignments (cat 0's room, cat 1's room): (0,1), (0,2), (1,0), (1,2), (1,3), (2,0), (2,1), (2,3), (2,4), (3,1), (3,2), (3,4), (4,2), and (4,3).",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"58",
+			"note":"Cat 0 is friends with each of the other three cats. As =1, each of the three cats should receive a room that is next to cat 0's room. This is impossible.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"20",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"D will be between 1 and 8, inclusive."
+		},
+		{
+			"order":3,
+			"val":"friendship will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"friendship will contain at most N elements."
+		},
+		{
+			"order":5,
+			"val":"Each element of friendship will contain exactly M characters, where M is the number of elements of friendship."
+		},
+		{
+			"order":6,
+			"val":"Each character in friendship will be either 'Y' or 'N'."
+		},
+		{
+			"order":7,
+			"val":"For each i and j, the j-th character of the i-th element of friendship and the i-th character of the j-th element of friendship will be the same."
+		},
+		{
+			"order":8,
+			"val":"For each i, the i-th character of the i-th element of friendship will be 'N'."
+		},
+		{
+			"order":9,
+			"val":"For each i and j, you can reach cat j from cat i by a sequence of friends, as explained in the problem statement."
+		}
+	]
+}

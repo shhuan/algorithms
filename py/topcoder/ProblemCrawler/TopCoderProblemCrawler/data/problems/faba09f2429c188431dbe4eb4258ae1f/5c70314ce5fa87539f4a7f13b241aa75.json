@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12049&rd=14738",
+	"statement":"<p> Let X be a nonnegative integer. The <i>Kleofas tail</i> of X is an infinite sequence of nonnegative integers, defined as follows: </p> \n <ul> \n  <li>The first element is X.</li> \n  <li>After an even element Y, the next element of the sequence is Y/2.</li> \n  <li>After an odd element Z, the next element of the sequence is Z-1.</li> \n </ul> <p> For example, the Kleofas tail of 60 starts as follows: 60, 30, 15, 14, 7, 6, ... </p> <p> You are given longs <b>K</b>, <b>A</b>, and <b>B</b>. Return the number of integers X between <b>A</b> and <b>B</b>, inclusive, such that the Kleofas tail of X contains at least one occurrence of <b>K</b>. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Zero is an even number."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"KleofasTail",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countGoodSequences",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countGoodSequences(long K, long A, long B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"3",
+			"note":"The value 3 occurs in the Kleofas tail of 6 and also in the Kleofas tail of 7.",
+			"order":1
+		},
+		{
+			"expect":"23457",
+			"id":0,
+			"input":"1",
+			"note":"For each X between 23457 and 123456, inclusive, the Kleofas tail of X contains the value 1.",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1234567890123456",
+			"note":"Each Kleofas tail is a nonincreasing sequence.",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"The Kleofas tail of 3 is 3, 2, 1, 0, 0, 0, ...",
+			"order":5
+		},
+		{
+			"expect":"12345",
+			"id":0,
+			"input":"13",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"K will be between 0 and 10^18, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A will be between 0 and 10^18, inclusive."
+		},
+		{
+			"order":3,
+			"val":"B will be between 0 and 10^18, inclusive."
+		},
+		{
+			"order":4,
+			"val":"A will be less than or equal to B."
+		}
+	]
+}

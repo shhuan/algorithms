@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":227.11,
+			"constraints":[],
+			"correctRatio":94.68,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13003&rd=15842",
+			"name":"MagicalStringDiv1",
+			"notes":[],
+			"submission":771
+		},
+		{
+			"avgPts":298.39,
+			"constraints":[],
+			"correctRatio":75.66,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12994&rd=15842",
+			"name":"PackingBallsDiv1",
+			"notes":[],
+			"submission":530
+		},
+		{
+			"avgPts":440.07,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12985&rd=15842",
+			"name":"LotteryTree",
+			"notes":[],
+			"submission":15
+		}
+	],
+	"name":"Single Round Match 609 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15842"
+}

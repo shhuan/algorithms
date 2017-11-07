@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174,
+			"constraints":[],
+			"correctRatio":82.37,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7613&rd=10674",
+			"name":"SumsOfPerfectPowers",
+			"notes":[],
+			"submission":380
+		},
+		{
+			"avgPts":307.53,
+			"constraints":[],
+			"correctRatio":44.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7593&rd=10674",
+			"name":"StarsInGraphs",
+			"notes":[],
+			"submission":288
+		},
+		{
+			"avgPts":593.55,
+			"constraints":[],
+			"correctRatio":62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7788&rd=10674",
+			"name":"PlaneDivision",
+			"notes":[],
+			"submission":50
+		}
+	],
+	"name":"Single Round Match 350 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10674"
+}

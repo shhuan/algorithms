@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.16,
+			"constraints":[],
+			"correctRatio":76.08,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8590&rd=12174",
+			"name":"RandomSort",
+			"notes":[],
+			"submission":439
+		},
+		{
+			"avgPts":246.88,
+			"constraints":[],
+			"correctRatio":38.99,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8508&rd=12174",
+			"name":"LargestGap",
+			"notes":[],
+			"submission":318
+		},
+		{
+			"avgPts":409.36,
+			"constraints":[],
+			"correctRatio":5.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8504&rd=12174",
+			"name":"IncreasingSequence",
+			"notes":[],
+			"submission":38
+		}
+	],
+	"name":"Single Round Match 402 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12174"
+}

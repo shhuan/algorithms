@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.03,
+			"constraints":[],
+			"correctRatio":85.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8480&rd=13503",
+			"name":"ForbiddenStrings",
+			"notes":[],
+			"submission":554
+		},
+		{
+			"avgPts":265.05,
+			"constraints":[],
+			"correctRatio":82.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8478&rd=13503",
+			"name":"StringsAndTabs",
+			"notes":[],
+			"submission":314
+		},
+		{
+			"avgPts":531.36,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8479&rd=13503",
+			"name":"ErrantKnight",
+			"notes":[],
+			"submission":54
+		}
+	],
+	"name":"Single Round Match 412 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13503"
+}

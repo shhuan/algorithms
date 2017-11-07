@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1669&rd=4580",
+	"statement":"<p> DNA testing is one of the most popular methods of establishing paternity. In such a test, you compare samples of DNA from the man, the child, and the child's mother. For the purposes of this problem, assume that each sample is represented as a String of uppercase letters ('A'-'Z'). If half of the characters in the child's sample match the characters in the corresponding positions in the man's sample, and the remaining characters in the child's sample match the characters in the corresponding positions in the mother's sample, then the man is most likely the father. On the other hand, if it is impossible to partition the child's sample such that half of the characters match the man's and the other half match the mother's, then the man is definitely ruled out as the father. </p> <p> For example, suppose the child's sample is &quot;ABCD&quot; and the mother's sample is &quot;AXCY&quot; (all quotes for clarity only). The 'A' and 'C' in the child's sample must have come from the mother, so the 'B' and 'D' must have come from the father. If the man's sample is &quot;SBTD&quot;, then he is most likely the father, but if the man's sample is &quot;QRCD&quot;, then he is definitely not the father. Note in the latter case that the man was definitely ruled out even though half of his sample (the 'C' and 'D') did in fact match the child's. </p> <p> Your method will take samples from the child and the mother, as well as samples from several men, and return the indices of the men who cannot be ruled out as the father, in increasing order. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"You may assume that the identity of the mother is not in question."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PaternityTest",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"possibleFathers",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] possibleFathers(String child, String mother, String[] men)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"AXCY\"",
+			"id":0,
+			"input":"\"ABCD\"",
+			"note":"The example above.",
+			"order":1
+		},
+		{
+			"expect":"\"ABCX\"",
+			"id":0,
+			"input":"\"ABCD\"",
+			"note":"\"ABCY\" could not be the father. \"ASTD\" could be the father, with the 'A' and 'D' coming from the father and the 'B' and 'C' coming from the mother. \"QBCD\" could also be the father, with either the 'B' and 'D' or the 'C' and 'D' coming from the father.",
+			"order":2
+		},
+		{
+			"expect":"\"ABABAB\"",
+			"id":0,
+			"input":"\"ABABAB\"",
+			"order":3
+		},
+		{
+			"expect":"\"YUQRWYQT\"",
+			"id":0,
+			"input":"\"YZGLSYQT\"",
+			"order":4
+		},
+		{
+			"expect":"\"AXQTUQVAUOSQEEKCYNVP\"",
+			"id":0,
+			"input":"\"WXETPYCHUWSQEMKKYNVP\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"men contains between 1 and 5 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"child, mother, and all elements of men contain the same number of characters, which is even and between 2 and 20, inclusive."
+		},
+		{
+			"order":3,
+			"val":"child, mother, and all elements of men contain only uppercase letters ('A'-'Z')."
+		},
+		{
+			"order":4,
+			"val":"At least half of the characters in mother match the characters in the corresponding positions in child."
+		}
+	]
+}

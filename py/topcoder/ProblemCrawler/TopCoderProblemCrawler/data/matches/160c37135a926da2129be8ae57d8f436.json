@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.43,
+			"constraints":[],
+			"correctRatio":70.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7554&rd=10891",
+			"name":"PowerOfInteger",
+			"notes":[],
+			"submission":764
+		},
+		{
+			"avgPts":238.2,
+			"constraints":[],
+			"correctRatio":38.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8111&rd=10891",
+			"name":"RLESum",
+			"notes":[],
+			"submission":435
+		},
+		{
+			"avgPts":630.6,
+			"constraints":[],
+			"correctRatio":31.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6177&rd=10891",
+			"name":"JobPlanner",
+			"notes":[],
+			"submission":116
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Online Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10891"
+}

@@ -1,0 +1,110 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10107&rd=13512",
+	"statement":"<p>You are the manager of a newly formed football club and want to buy some players for your club. You identified that there are <b>N</b> potentially interesting players on the market and numbered them 0 to <b>N</b>-1. You don't have enough money to buy all these players, so you want to buy only <b>K</b> of them.</p> <p>It appears however that buying players is not always easy. Some of the players are <i>loyal</i> to your club. To buy such a player you can just pay money for him. Other players are not loyal, and you can buy such a player A only if you have previously bought some player B, who is a friend of player A.</p> <p>You are given a String <b>loyalty</b>, where the i-th character is 'Y' if the i-th player is loyal to your club, and is 'N' otherwise. You are also given a String[] <b>friends</b>, which describes which pairs of players are friends of each other. Each element has the format &quot;A B&quot;, where A and B are the numbers of two players who are the friends of each other.</p> <p>Friendship is symmetrical (if A is a friend of B, then B is a friend of A) and not necessarily transitive (if A is a friend of B and B is a friend of C, then C is not necessarily a friend of A). It is known that <b>friends</b> contains exactly <b>N</b>-1 elements and that for any two players A and B there exists a chain of players with numbers I<sub>0</sub>=A, I<sub>1</sub>, ..., I<sub>k-1</sub>, I<sub>k</sub>=B (k &gt;= 1), where every two players consecutive in the chain are friends of each other (we'll call this property a <i>connectedness</i> of friendship relation). It is guaranteed that each player has at most 3 friends and that at least one player is loyal to your club.</p> <p>A subset of <b>K</b> players is called <i>possible</i> if you can buy all players from this subset and only these players, in some order. You decided to choose some possible subset and to buy all players from it. If there are many such subsets, you choose one at random (all subsets have the same probability of being chosen).</p> <p>You are now interested in the probability of buying each of the players. Return a double[] containing <b>N</b> elements, where the i-th element is the probability of buying the i-th player.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Each element of your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TeamManagement",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getDistribution",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double[] getDistribution(int N, int K, String[] friends, String loyalty)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"There are three possible subsets: {0, 1, 2}, {1, 2, 3} and {2, 3, 4}.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"4",
+			"note":"All subsets that include player 2 are possible.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"6",
+			"note":"The following 7 subsets are possible in this case: {1, 3, 4, 5}, {0, 3, 4, 5}, {0, 2, 4, 5}, {0, 2, 3, 5}, {0, 2, 3, 4}, {0, 1, 3, 5}, {0, 1, 3, 4}.",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"6",
+			"note":"When you wish to buy only one player, it must be a loyal player.",
+			"order":4
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"7",
+			"note":"Here you wish to buy all available players.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and N, inclusive."
+		},
+		{
+			"order":3,
+			"val":"loyalty will contain exactly N characters."
+		},
+		{
+			"order":4,
+			"val":"Each character of loyalty will be 'Y' or 'N'."
+		},
+		{
+			"order":5,
+			"val":"At least one character of loyalty will be 'Y'."
+		},
+		{
+			"order":6,
+			"val":"friends will contain exactly N-1 elements."
+		},
+		{
+			"order":7,
+			"val":"Each element of friends will be formatted &quot;A B&quot; (quotes for clarity), where A and B are distinct integers between 0 and N-1, inclusive, with no extra leading zeros."
+		},
+		{
+			"order":8,
+			"val":"The friendship relation will be connected (see the statement for precise definition)."
+		},
+		{
+			"order":9,
+			"val":"Each player will have at most 3 friends."
+		}
+	]
+}

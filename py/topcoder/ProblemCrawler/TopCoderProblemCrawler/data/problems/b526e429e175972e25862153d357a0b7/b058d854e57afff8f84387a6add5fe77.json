@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7746&rd=13676",
+	"statement":"<p>You are a guitar player, and you have a lot of sheet music that you want to play. Unfortunately, you are not a very good singer, so you can only sing music that is played in a certain key. Therefore, you want to transpose your sheet music, so you can play it in a key that you can sing in.</p> <br /><br /> <p>In this problem, we will consider 24 different chords. The following 12 are the base ones:<br /><br /> <tt>A, A#, B, C, C#, D, D#, E, F, F#, G, G#</tt></p> <br /><br /> <p>The other 12 chords are the same ones, but then with an 'm' concatenated to the end. They are called minor. So Am, A#m, Bm, etc.</p> <br /><br /> <p>As you can see, certain chords have a '#', called &quot;sharp&quot;. Every &quot;sharp&quot;-chord, can be replaced by its corresponding &quot;flat&quot;-chord (written by adding a 'b' to the end of the next higher chord). So for example C# and Db are the same chords. Let's write the chords again, this time using the &quot;flat&quot;-notation:<br /><br /> <tt>A, Bb, B, C, Db, D, Eb, E, F, Gb, G, Ab</tt></p> <br /><br /> <p>As you can see the chords wrap around, so after Ab comes A, Bb, etc. The minor chords in &quot;flat&quot;-notation are Am, Bbm, Bm, etc.</p> <br /><br /> <p>Sheet music consists of a row of chords optionally separated by vertical bars. A certain piece of sheet music may look like this:<br /><br /> <tt>G D Am | G D C | G D Am | G D C</tt></p> <br /><br /> <p>Here you see 4 groups of 3 chords, separated by vertical bars. The key of a song is always the first chord (so &quot;G&quot; in this case). The key of the song determines if we use the &quot;sharp&quot;-notation, or the &quot;flat&quot;-notation. Keys where you use the &quot;flat&quot;-notation are:<br /><br /> <tt>Bb, Bbm, Db, Dbm, Eb, Ebm, F, Fm, Gb, Gbm, Ab, Abm</tt></p> <br /><br /> <p>With all other keys, you should use the &quot;sharp&quot;-notation.</p> <br /><br /> <p>The difference between 2 chords is defined as the number of positions between the first and the second one. For example, the difference between B and E is 5, while the difference between Db and A# is -3 (or 9, because the chords wrap around).</p> <br /><br /> <p>You will be given a String[] <b>sheetMusic</b>. Concatenate all elements of <b>sheetMusic</b> to get the whole music piece. You will also be given a String <b>newKey</b>, the key to which you have to transpose the sheet music. To transpose the music, first take the difference between the key of the original song and <b>newKey</b>. Let's call this value <i>diff</i>. Then, replace each chord in the original sheet music with the chord <i>diff</i> positions after it. If <b>newKey</b> is one of the chords that use &quot;flat&quot;-notation, then all tranposed chords should use the &quot;flat&quot;-notation. Otherwise, all chords in the output should use the &quot;sharp&quot;-notation. All minor chords must remain minor and non-minor chords must remain non-minor. The first chord of the original song and newKey will either both be minor or both be non-minor. The first chord of the original song and <b>newKey</b> will be either both in minor or both not in minor.</p> <br /><br /> <p>Return a String containing the <b>sheetMusic</b> transposed to <b>newKey</b>. The output should use the exact same notation as the input (same number of bars between chords and 1 space between 2 adjacent chords or bars). Please note that <b>sheetMusic</b> may not necessarily obey the rules for &quot;flat&quot; and &quot;sharp&quot; notations, but your return value must use the proper notation. See examples for clarification.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TransposeMyMusic",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"transposeMusic",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String transposeMusic(String[] sheetMusic, String newKey)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"F\"",
+			"id":0,
+			"input":"{\"G D Am | G D C | G D Am | G D C\"}",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"\"A\"",
+			"id":0,
+			"input":"{\"A Bb B C Db D Eb E F Gb G Ab\"}",
+			"note":"The original sheet music is in the key of A, but it does not use the \"sharp\"-notation like it should. The return value must be in the right notation.",
+			"order":2
+		},
+		{
+			"expect":"\"F#\"",
+			"id":0,
+			"input":"{\"C G Am F | C G F C Dm C | C G A\", \"m F | G F C Dm C | Am F G \", \"F C Dm C\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"G#\"",
+			"id":0,
+			"input":"{\"A# | | | Bb\"}",
+			"note":"Note that there might be multiple vertical bars in a row (but they have to be separated by spaces) and we can have \"flat\"-notation as well as \"sharp\"-notation in 1 piece of sheet music.",
+			"order":4
+		},
+		{
+			"expect":"\"Dbm\"",
+			"id":0,
+			"input":"{\"Gm C Gm | Eb D C Gm | Gm C Gm\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sheetMusic will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of sheetMusic will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The valid chords are the chords described in the statement, and each of those in minor (so Am, A#m, Bbm, Bm, etc.)."
+		},
+		{
+			"order":4,
+			"val":"newKey will be a valid chord."
+		},
+		{
+			"order":5,
+			"val":"The concatenation of sheetMusic will be a space-separated list of valid chords and vertical bars ('|') , and there will be exactly one space (' ') between 2 elements (quotes for clarity only)."
+		},
+		{
+			"order":6,
+			"val":"The concatenation of sheetMusic will not contain leading or trailing spaces or vertical bars."
+		},
+		{
+			"order":7,
+			"val":"sheetMusic will contain at least 1 chord."
+		},
+		{
+			"order":8,
+			"val":"The first chord of the original song and newKey will either both be minor or both be non-minor."
+		}
+	]
+}

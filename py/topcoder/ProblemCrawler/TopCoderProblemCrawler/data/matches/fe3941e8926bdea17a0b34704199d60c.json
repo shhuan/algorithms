@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.38,
+			"constraints":[],
+			"correctRatio":90.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13211&rd=15857",
+			"name":"BuildingHeights",
+			"notes":[],
+			"submission":769
+		},
+		{
+			"avgPts":276.05,
+			"constraints":[],
+			"correctRatio":39.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13197&rd=15857",
+			"name":"DrivingPlans",
+			"notes":[],
+			"submission":544
+		},
+		{
+			"avgPts":476.56,
+			"constraints":[],
+			"correctRatio":30.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13206&rd=15857",
+			"name":"TreeColoring",
+			"notes":[],
+			"submission":23
+		}
+	],
+	"name":"Single Round Match 624 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15857"
+}

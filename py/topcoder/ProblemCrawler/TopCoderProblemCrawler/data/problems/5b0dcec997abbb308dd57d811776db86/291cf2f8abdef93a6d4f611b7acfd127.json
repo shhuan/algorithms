@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13444&rd=16189",
+	"statement":"<p>Little Petya likes rectangular tables filled with integers a lot. He is especially fond of special tables. He calls table special if and only if the following conditions are satisfied:</p> \n <ul> \n  <li>The table has exactly <b>N</b> rows and <b>M</b> columns.</li> \n  <li>Each cell of the table contains an integer between 1 and <b>C</b>, inclusive.</li> \n  <li>For any pair of row indices r1 and r2 (r1 != r2) there exist a column index c such that the numbers at cells (r1, c) and (r2, c) are different.</li> \n  <li>For any pair of column indices c1 and c2 (c1 != c2) there exist a row index r such that the numbers at cells (r, c1) and (r, c2) are different.</li> \n </ul> <p> You are given the ints <b>N</b>, <b>M</b>, and <b>C</b>. Count all special tables and return their count modulo 1,000,000,007. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CountTables",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int N, int M, int C)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"These are the 10 special tables in this case: ",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"4000",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"4000",
+			"id":0,
+			"input":"4000",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N, M and C will be between 1 and 4000, inclusive."
+	}]
+}

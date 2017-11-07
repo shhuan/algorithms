@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":181.49,
+			"constraints":[],
+			"correctRatio":63.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2971&rd=5878",
+			"name":"BadMazeStrategy",
+			"notes":[],
+			"submission":417
+		},
+		{
+			"avgPts":430.68,
+			"constraints":[],
+			"correctRatio":78.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1995&rd=5878",
+			"name":"BadParser",
+			"notes":[],
+			"submission":258
+		},
+		{
+			"avgPts":569.33,
+			"constraints":[],
+			"correctRatio":67.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1998&rd=5878",
+			"name":"Find3Cheaters",
+			"notes":[],
+			"submission":170
+		}
+	],
+	"name":"2004 TCO > Online Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5878"
+}

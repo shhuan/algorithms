@@ -1,0 +1,110 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12172&rd=15152",
+	"statement":"You are a knight of the Integerland. You are located at (0, 0) and you want to go to (<b>x</b>, <b>y</b>). You move in a way that is similar to a chess knight. You can be described by a int <b>d</b>. In each step, you may move to any point such that both its coordinates are integers, and its Euclidean distance from your current point is precisely sqrt(<b>d</b>). <br /><br /> You are given the ints <b>d</b>, <b>x</b>, and <b>y</b>. Return &quot;YES&quot; if you can arrive at (<b>x</b>, <b>y</b>) in a finite number of moves, and &quot;NO&quot; otherwise.",
+	"notes":[
+		{
+			"order":1,
+			"val":"In the problem statement, sqrt() denotes the square root of ."
+		},
+		{
+			"order":2,
+			"val":"The Euclidean distance between two points (x1, y1) and (x2, y2) is equal to sqrt((x1-x2)^2 + (y1-y2)^2)."
+		},
+		{
+			"order":3,
+			"val":"There is no limit on the coordinates of points visited during your journey. In particular, they are allowed to be outside of the rectangle with corners (0, 0) and (, )."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"KnightOfIntegerland",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"able",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String able(int d, int x, int y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"25",
+			"note":"The distance covered by each of your steps must be sqrt(25)=5. You can reach (1, 0) in this way: (0, 0) -> (3, 4) -> (6, 0) -> (1, 0). ",
+			"order":1
+		},
+		{
+			"expect":"2276",
+			"id":0,
+			"input":"25",
+			"note":"From any point (x, y) we can reach (x+1, y) as shown in Example 0. Also, from any point (x, y) we can reach (x, y-1) using a similar sequence of moves. Hence, it is possible to get from (0, 0) to (2276,-9059) by repeating the first sequence of moves 2276 times and then the second sequence of moves 9059 times.",
+			"order":2
+		},
+		{
+			"expect":"58585858",
+			"id":0,
+			"input":"5",
+			"note":"For =5 you move like a chess knight. It is well known that the chess knight can reach any cell on an infinite chessboard.",
+			"order":3
+		},
+		{
+			"expect":"47474747",
+			"id":0,
+			"input":"4",
+			"note":"It's easy to see that for any point (x, y) you can reach, x and y must be both even.",
+			"order":4
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"169",
+			"note":"One of the solutions is: (0, 0) -> (13, 0) -> (1, 5) -> (14, 5) -> (2, 0). ",
+			"order":5
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"3",
+			"note":"In this case you can't achieve any integer point other than (0, 0).",
+			"order":6
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"d will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"y will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		}
+	]
+}

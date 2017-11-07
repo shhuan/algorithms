@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4753&rd=8031",
+	"statement":"Character j in element i (both 0-based) of <b>prices</b> gives the cost of a flight from location i to location j. Fortunately, the airline is having a special. Each time you arrive at a location k, all future flights to location k (from anywhere) become half price (no rounding). These savings build on each other. For example, if you arrive at location 2 twice, the next flight to location 2 is one quarter of the original price. Given <b>startLocation</b> and <b>endLocation</b>, the locations where you must start and end respectively, and <b>num</b>, the exact number of flights you must take, return the smallest possible total cost. You cannot take a flight from a location back to itself. ",
+	"notes":[
+		{
+			"order":1,
+			"val":"You may revisit a location numerous times."
+		},
+		{
+			"order":2,
+			"val":"The returned value must be accurate to 1e-9 relative or absolute."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CheapestFlights",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getLowest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getLowest(String[] prices, int startLocation, int endLocation, int num)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"019\", \"909\", \"990\" }",
+			"note":"You must take 2 flights, so you go from location 0 to location 2, and then location 2 to location 1.",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"099\", \"909\", \"990\" }",
+			"note":"Your path is: The respective costs are 9, 9, and 4.5.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"099\", \"909\", \"990\" }",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"111\", \"111\", \"111\" }",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"prices will contain between 3 and 8 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of prices will contain N characters, where N is the number of elements in prices."
+		},
+		{
+			"order":3,
+			"val":"Each character in prices will be a digit ('0'-'9')."
+		},
+		{
+			"order":4,
+			"val":"startLocation will be between 0 and N-1 inclusive, where N is the number of elements in prices."
+		},
+		{
+			"order":5,
+			"val":"endLocation will be between 0 and N-1 inclusive, where N is the number of elements in prices."
+		},
+		{
+			"order":6,
+			"val":"num will be between 2 and 8 inclusive."
+		}
+	]
+}

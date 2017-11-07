@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.8,
+			"constraints":[],
+			"correctRatio":84.94,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8584&rd=12168",
+			"name":"DNAString",
+			"notes":[],
+			"submission":518
+		},
+		{
+			"avgPts":282.49,
+			"constraints":[],
+			"correctRatio":73.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8615&rd=12168",
+			"name":"FixImage",
+			"notes":[],
+			"submission":344
+		},
+		{
+			"avgPts":603.09,
+			"constraints":[],
+			"correctRatio":62.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8587&rd=12168",
+			"name":"MoreNim",
+			"notes":[],
+			"submission":62
+		}
+	],
+	"name":"Single Round Match 396 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12168"
+}

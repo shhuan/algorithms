@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12520&rd=15633",
+	"statement":"There is an infinitely long straight road. Fox Ciel is going to plant trees of three kinds: apple trees, kiwi trees, and grape trees. There will be infinitely many trees of each kind. Trees of each kind will be placed along the entire road in regular intervals. <br /><br /> <br /><br /> More precisely, you are given ints <b>apple</b>, <b>kiwi</b>, and <b>grape</b> with the following meaning: The distance between any two consecutive apple trees must be <b>apple</b>, the distance between any two consecutive kiwi trees must be <b>kiwi</b>, and the distance between any two consecutive grape trees must be <b>grape</b>. <br /><br /> <br /><br /> Ciel can only plant the trees at integer coordinates, but she gets to choose those coordinates as long as the above conditions are satisfied. In other words, Ciel gets to choose three integers x, y, and z such that: \n <ul> \n  <li>She plants apple trees at coordinates ..., x - 2 * <b>apple</b>, x - <b>apple</b>, x, x + <b>apple</b>, x + 2 * <b>apple</b>, ...</li> \n  <li>She plants kiwi trees at coordinates ..., y - 2 * <b>kiwi</b>, y - <b>kiwi</b>, y, y + <b>kiwi</b>, y + 2 * <b>kiwi</b>, ...</li> \n  <li>She plants grape trees at coordinates ..., z - 2 * <b>grape</b>, z - <b>grape</b>, z, z + <b>grape</b>, z + 2 * <b>grape</b>, ...</li> \n </ul> Ciel wants to maximize the distance between two closest trees (of any kind). Return this distance.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FruitTrees",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxDist",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxDist(int apple, int kiwi, int grape)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1",
+			"note":"Apple trees will be planted at all integer coordinates, so at least two trees will be planted where a kiwi tree is planted.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"One of the optimal solutions is as follows:  ",
+			"order":2
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"40",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1073",
+			"id":0,
+			"input":"899",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"2000",
+			"id":0,
+			"input":"2000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"apple will be between 1 and 2,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"kiwi will be between 1 and 2,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"grape will be between 1 and 2,000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":172.29,
+			"constraints":[],
+			"correctRatio":83.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2945&rd=5884",
+			"name":"Unblur",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":300.49,
+			"constraints":[],
+			"correctRatio":85.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3099&rd=5884",
+			"name":"Spanning",
+			"notes":[],
+			"submission":7
+		},
+		{
+			"avgPts":516.95,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3001&rd=5884",
+			"name":"SureThing",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"2004 TCO > Semifinal Room 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5884"
+}

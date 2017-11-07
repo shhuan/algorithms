@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":163.37,
+			"constraints":[],
+			"correctRatio":91.3,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2250&rd=4740",
+			"name":"RaceCalculator",
+			"notes":[],
+			"submission":184
+		},
+		{
+			"avgPts":330.07,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2299&rd=4740",
+			"name":"BagOfDevouring",
+			"notes":[],
+			"submission":84
+		},
+		{
+			"avgPts":322.07,
+			"constraints":[],
+			"correctRatio":2.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2327&rd=4740",
+			"name":"TeamBuilding",
+			"notes":[],
+			"submission":40
+		}
+	],
+	"name":"Single Round Match 184 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4740"
+}

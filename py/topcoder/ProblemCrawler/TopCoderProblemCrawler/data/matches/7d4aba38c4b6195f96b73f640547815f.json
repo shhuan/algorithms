@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":183.28,
+			"constraints":[],
+			"correctRatio":79.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10361&rd=13761",
+			"name":"SaveTheTrees",
+			"notes":[],
+			"submission":274
+		},
+		{
+			"avgPts":343.27,
+			"constraints":[],
+			"correctRatio":86.61,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10188&rd=13761",
+			"name":"CampaignTrail",
+			"notes":[],
+			"submission":224
+		},
+		{
+			"avgPts":528.71,
+			"constraints":[],
+			"correctRatio":21.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10256&rd=13761",
+			"name":"YetAnotherStonesGame",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"2009 TCO Algorithm > Elimination Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13761"
+}

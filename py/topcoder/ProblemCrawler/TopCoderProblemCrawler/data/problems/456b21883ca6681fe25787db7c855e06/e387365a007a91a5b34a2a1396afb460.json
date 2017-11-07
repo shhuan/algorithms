@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8738&rd=12018",
+	"statement":"<p> Let p[0], p[1], ..., p[<b>N</b>-1] be a permutation of integers between 0 and <b>N</b>-1, inclusive. A <i>binary search tree</i> is a rooted binary tree with an integer value stored at each node. We use the following pseudocode to construct a binary search tree from the permutation p: </p> <pre>\nCreate the root and put p[0] there\nFor each i in (1, 2, ..., <b>N</b>-1)\n\tCall insert(root, p[i])\n\nProcedure insert(vertex V, integer X)\n\tIf X &lt; number at V\n\t\tIf V has left child\n\t\t\tCall insert(left child of V, X)\n\t\tElse\n\t\t\tCreate new left child of V with value X\n\tElse\n\t\tIf V has right child\n\t\t\tCall insert(right child of V, X)\n\t\tElse\n\t\t\tCreate new right child of V with value X\n\tEnd\nEnd\n</pre> <p> You are given three ints: <b>N</b>, <b>seed</b> and <b>limit</b>. Use the following pseudocode to generate the permutation p (be sure to use 64-bit integers in computations where needed; note that '/' represents integer division and % represents remainder): </p> <pre>\nX := <b>seed</b>\nFor each i in (0, 1, ..., <b>N</b>-1)\n\tp[i] := i\n\tX := (X * 295397169) % 1073741789;\n\tIf (X * 1000000) / 1073741789 &lt; <b>limit</b>\n\t\tX := (X * 295397169) % 1073741789\n\t\t// generate j within [0, i]\n\t\tj := (X * (i + 1)) / 1073741789\n\t\t// j &lt;= i, so p[j] is already initialized\n\t\tswap(p[i], p[j])\n\tEnd\nEnd\n</pre> <p> John constructed a binary search tree from the generated permutation using the pseudocode described above. Return the sum of the heights of all nodes in the constructed tree. The height of a node V is the number of nodes in the path from the root to V. </p>",
+	"notes":[{
+		"order":1,
+		"val":"The input is encoded purely for convenience. The intended solution does not rely on any properties of the way it is generated, and will work for any permutation p."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BSTConstruction",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sumHeights",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long sumHeights(int N, int seed, int limit)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"12345678",
+			"id":0,
+			"input":"10",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"87654321",
+			"id":0,
+			"input":"10",
+			"note":"Now p is (6, 3, 2, 7, 9, 4, 8, 1, 0, 5).",
+			"order":2
+		},
+		{
+			"expect":"45454545",
+			"id":0,
+			"input":"10",
+			"note":"Here p = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).",
+			"order":3
+		},
+		{
+			"expect":"99988877",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 250,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"seed will be between 1 and 1,073,741,788, inclusive."
+		},
+		{
+			"order":3,
+			"val":"limit will be between 0 and 1,000,000, inclusive."
+		}
+	]
+}

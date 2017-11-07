@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4567&rd=6539",
+	"statement":"<i>NOTE: This problem statement contains an image that may not display properly if viewed outside of the applet.</i> <br /><br /><br /><br /> In a one dimensional mountainous landscape you want to build a watchtower. This watchtower must fulfill one condition: it must be possible to oversee the whole landscape from it. The landscape is described by two int[]s <b>positions</b> and <b>heights</b>. The elements of <b>positions</b> are sorted in strictly ascending order. The height at the i-th element of <b>positions</b> is the i-th element of <b>heights</b>; the intermediate heights are obtained by interpolation. <br /><br /><br /><br /> You are allowed to build the watchtower on the landscape wherever you like. To save expenses, you want to build it at a position such that the necessary height of the watchtower needed to oversee the whole landscape is minimized. Return this minimal height. ",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WatchTower",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minHeight",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double minHeight(int[] positions, int[] heights)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ 1,2,2,4,2,1 }",
+			"id":0,
+			"input":"{ 1,2,4,5,6,7 }",
+			"note":"Just build the watchtower at the highest point.   ",
+			"order":1
+		},
+		{
+			"expect":"{ 0,10,10,0 }",
+			"id":0,
+			"input":"{ 10,20,49,59 }",
+			"note":"Build the watchtower right in the middle.   ",
+			"order":2
+		},
+		{
+			"expect":"{ 0,1,3,6,10,11 }",
+			"id":0,
+			"input":"{ 0,2,4,6,8,10 }",
+			"note":"A zero height watchtower at position 8 can oversee the whole landscape.   ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"positions and heights each contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"positions and heights each contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of positions and heights is between 0 and 1,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The elements of positions are all distinct and sorted in strictly ascending order."
+		}
+	]
+}

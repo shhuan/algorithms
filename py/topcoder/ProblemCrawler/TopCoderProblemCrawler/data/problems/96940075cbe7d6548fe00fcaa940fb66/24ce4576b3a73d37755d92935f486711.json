@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11935&rd=14734",
+	"statement":"<p>A standard way of ordering words in a dictionary involves comparison of two words character by character, from left to right, until some two characters disagree. Jim thinks it's pretty boring, so he introduced a more complicated and less predictable scheme.</p> <p></p> <p>Given is a String[] <b>words</b> that contains N distinct words and each element is a single word. The length of each word is the same -- exactly L characters. To order words according to his scheme, Jim first generates a random permutation p[0], p[1], ..., p[L-1] of integers between 0 and L-1, inclusive. This permutation is generated only once and then considered to be fixed for the rest of the procedure. Using the permutation p, Jim can compare any two words as follows:</p> <p></p> <pre>\n// returns -1, if A&lt;B, 0, if A=B, and 1, if A&gt;B\nfunction Compare(Word A, Word B):\n\tfor i = 0, 1, ..., L-1:\n\t\ta := character at position p[i] (0-based) in A\n\t\tb := character at position p[i] (0-based) in B\n\t\tif (a &lt; b), return -1\n\t\tif (b &lt; a), return 1\n\n\treturn 0\n</pre> <p></p> <p>Let <i>Sorted</i> be the list of the given <b>words</b> ordered according to Compare operator defined above. In other words, Compare(<i>Sorted</i>[i], <i>Sorted</i>[j]) = -1, for any i, j, 0 &lt;= i &lt; j &lt; N.</p> <p></p> <p>Return a double[] that contains N elements and i-th element of the return is the probability that <i>Sorted</i>[0] is the same word as <b>words</b>[i]. Assume that permutation p is chosen uniformly at random.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Each element of the return value must have an absolute or relative error of less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StrangeDictionary2",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getProbabilities",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double[] getProbabilities(String[] words)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {1.0 }",
+			"id":0,
+			"input":"{\"hardesttestever\"}",
+			"note":"One word will always be at position 0 regardless of the permutation p.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {0.5, 0.5 }",
+			"id":0,
+			"input":"{\"ab\", \"ba\"}",
+			"note":"If p = {0, 1}, then \"ab\" < \"ba\". If p = {1, 0}, then \"ba\" < \"ab\".",
+			"order":2
+		},
+		{
+			"expect":"Returns: {0.3333333333333333, 0.5, 0.16666666666666666 }",
+			"id":0,
+			"input":"{\"aza\", \"aab\", \"bba\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: {0.5, 0.5, 0.0, 0.0, 0.0, 0.0 }",
+			"id":0,
+			"input":"{\"abababab\", \"babababa\", \"acacacac\", \"cacacaca\", \"bcbcbcbc\", \"cbcbcbcb\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"words will contain between 1 and 16 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of words will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of words will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in each element of words will be a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":5,
+			"val":"All elements of words will be distinct."
+		}
+	]
+}

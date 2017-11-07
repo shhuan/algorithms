@@ -1,0 +1,134 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2894&rd=5853",
+	"statement":"You wish to earn money selling cute socks from the TC store. You live in Glastonbury, but its citizens are all long-time TopCoders, so you can't sell any socks there. Thus you are going to visit several other cities, find new TopCoders there, and sell them some socks. Unfortunately, several other TC members are also sock salesmen. If one or more sock salesmen visits a city before you, or at the same time as you, your profit in that city will be halved once for each of the other salesmen (because some people will buy his socks). Hence, if two people visit the city before you, you will only get one fourth of the potential profit. Also, travelling between cities is not free, so you may lose money if you visit too many cities. However, you have your competitors' plans, so you know which cities they will visit, and in what order they will visit them. Now you are planning your route, and want to maximize your profit. <br /><br /><br /><br /> You will be given a int[], <b>money</b>, which gives maximal possible earnings for each city. You will also be given a String[], <b>costs</b>, which contains the costs of getting from one city to another. A String[], <b>times</b>, gives you the number of days it takes to get from one city to another (you may assume that it takes no time to sell socks once you get to a city). Both <b>costs</b> and <b>times</b> will be formatted in the same way. If they both have K elements, then each element of <b>costs</b> and <b>times</b> will contain K integers, each separated by a single space. The j<sup>th</sup> integer in the i<sup>th</sup> element of <b>times</b> will represent the number of days it takes to get from city i to city j. Similarly, the j<sup>th</sup> integer in the i<sup>th</sup> element of <b>costs</b> will represent the cost of travelling from city i to city j. Also, a String[], <b>competitors</b>, gives you the routes of your competitors. Each element of <b>competitors</b> will be formatted as &quot;N<sub>1</sub> N<sub>2</sub> ... N<sub>k</sub>&quot;, where N<sub>1</sub> N<sub>2</sub> ... N<sub>k</sub> are the numbers of the cities a competitor will visit (so first he will go to the city N<sub>1</sub>, then to the city N<sub>2</sub> and so on). <br /><br /><br /><br /> Your method must plan the route that maximizes your profit. You will start in Glastonbury (city 0) and then visit any number of the cities (not visiting a particular city more than once), before finally returning to Glastonbury. All your competitors start their routes in Glastonbury at the same time as you, and they sell socks along the routes specified in <b>competitors</b>. It takes them the same amount of time to travel between cities as it takes you. Your method should return your maximum possible profit.",
+	"notes":[
+		{
+			"order":1,
+			"val":"You must finish your route in city 0."
+		},
+		{
+			"order":2,
+			"val":"You may not visit a city more than once."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TCSocks",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"earnMoney",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int earnMoney(int[] money, String[] cost, String[] time, String[] competitors)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"0 50 50 200\", \"0 0 50 200\", \"0 10 0 200\", \"0 0 0 0\"}",
+			"id":0,
+			"input":"{0, 100, 100, 100}",
+			"note":"You have no competitors. Your best path is 0 -> 2 -> 1 -> 0. You spend 50 + 10 + 0 units, and earn 200 units. So the total income is 140.",
+			"order":1
+		},
+		{
+			"expect":"{\"0 50 50 200\", \"0 0 50 200\", \"0 10 0 200\", \"0 0 0 0\"}",
+			"id":0,
+			"input":"{0, 100, 100, 100}",
+			"note":"The same data, but now you have three competitors. These competitors decrease your earnings in city 2, so you just visit city 1, and return back to Glastonbury.",
+			"order":2
+		},
+		{
+			"expect":"{\"0 20 10\", \"10 0 20\", \"20 10 0\"}",
+			"id":0,
+			"input":"{0, 100, 200}",
+			"note":"Both your competitors want to visit city 2 first. Nevertheless, you can leave them behind, visiting city 1, then city 2, and returing back home.",
+			"order":3
+		},
+		{
+			"expect":"{\"0 25 25 25 25 25\", \"25 0 25 25 25 25\", \"25 25 0 25 25 25\", \"25 25 25 0 25 25\", \"25 25 25 25 0 25\", \"25 25 25 25 25 0\"}",
+			"id":0,
+			"input":"{0, 40, 40, 40, 40, 40}",
+			"note":"Here, staying at home is your best choice, because any trip is unprofitable.",
+			"order":4
+		},
+		{
+			"expect":"{\"0 25 25 25 25 25\", \"25 0 25 25 25 25\", \"25 25 0 25 25 25\", \"25 25 25 0 25 25\", \"25 25 25 25 0 25\", \"25 25 25 25 25 0\"}",
+			"id":0,
+			"input":"{0, 70, 70, 70, 70, 70}",
+			"note":"The same case, except cities give you bigger income. Visiting just one city is still unprofitable, and visiting any two cities still isn't good idea, but you will profit 25 units for visiting all of them in any order.",
+			"order":5
+		},
+		{
+			"expect":"{\"0 204 600 800 885 542 439 823 913\", \"32 0 813 687 242 129 34 447 862\", \"56 462 0 727 71 309 461 867 200\", \"656 96 334 0 178 650 108 477 547\", \"89 856 922 495 0 821 374 100 651\", \"634 810 319 947 322 0 283 227 286\", \"446 416 272 551 243 880 0 47 878\", \"390 315 221 765 938 732 747 0 435\", \"902 616 166 830 223 406 736 712 0\"}",
+			"id":0,
+			"input":"{0,457,434,382,818,403,265,449,214}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"money will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"times, money and costs will each have the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of money will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The first element of money will be 0."
+		},
+		{
+			"order":5,
+			"val":"Each element of times and costs will contain K single-space delimited integers, where K is the number of elements in times and costs."
+		},
+		{
+			"order":6,
+			"val":"Each integer in costs will be between 0 and 1000, inclusive, and will contain no extra leading zeros."
+		},
+		{
+			"order":7,
+			"val":"Each integer in times will be between 1 and 10, inclusive, and will contain no extra leading zeros."
+		},
+		{
+			"order":8,
+			"val":"The ith integers of the ith elements of times and costs will be 0."
+		},
+		{
+			"order":9,
+			"val":"competitors will contain between 0 and 10 elements, inclusive."
+		},
+		{
+			"order":10,
+			"val":"Each element of competitors will be formatted as a single-space delimited list of 1 or more integers."
+		},
+		{
+			"order":11,
+			"val":"Each integer in each element of competitors will be between 1 and the number of elements in money-1, inclusive."
+		},
+		{
+			"order":12,
+			"val":"None of your competitors will visit any city more than once."
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5887&rd=8071",
+	"statement":"<p>A Dyck word is a string consisting of n X's and n Y's (for some positive integer n) such that no initial segment of the string has more Y's than X's.</p> <p>If we have a Dyck word we can swap any two consecutive substrings when both of them are Dyck words. It is easy to show that the result of this <i>swap</i> operation is a Dyck word too. For example, in &quot;XXYXXYYY&quot; (quotes for clarity) we can swap the substrings &quot;XY&quot; and &quot;XXYY&quot; to get &quot;XXXYYXYY&quot;.</p> <p>If a Dyck word A can be obtained from a Dyck word B using some number of the described <i>swap</i> operations they are called <i>equivalent</i>.</p> <p>You will be given a String <b>dyckword</b>. Return the lexicographically smallest (i.e., the one that occurs first in alphabetical order) Dyck word that is <i>equivalent</i> with the given <b>dyckword</b>. Return &quot;&quot; (the empty string) if the given string is not a Dyck word.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DyckwordUniformer",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"uniform",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String uniform(String dyckword)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"XXXYYXYY\"",
+			"id":0,
+			"input":"\"XXYXXYYY\"",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"XXXYYYXXYYXYXY\"",
+			"id":0,
+			"input":"\"XYXYXXXYYYXXYY\"",
+			"note":"The result can be obtained by four swaps \"XYXYXXXYYYXXYY\" -> \"XYXXXYYYXYXXYY\" -> \"XXXYYYXYXYXXYY\" -> \"XXXYYYXYXXYYXY\" -> \"XXXYYYXXYYXYXY\".",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"XXXXYYYXYYXXXYYY\"",
+			"id":0,
+			"input":"\"XXXYYYXXYXXXYYYY\"",
+			"note":"The result can be obtained by two swaps \"XXXYYYXXYXXXYYYY\" -> \"XXXYYYXXXXYYYXYY\" -> \"XXXXYYYXYYXXXYYY\".",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"\"XXYYYX\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"dyckword will contain between 2 and 50 characters, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each character in dyckword will be either 'X' or 'Y'."
+		}
+	]
+}

@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11131&rd=14237",
+	"statement":"When cat Taro and rabbit Hanako were practicing hard for SRM 484, they noticed an interesting property of 484. They called it <i>Rabbit Number</i>. <br /><br /> <br /><br /> Let S(n) be the sum of the digits of n. For example, S(484) = 4+8+4 = 16 and S(22) = 2+2 = 4. A positive integer x is called a Rabbit Number if S(x*x) = S(x)*S(x). For example, 22 is a <i>Rabbit Number</i> because S(484) = S(22)*S(22). <br /><br /> <br /><br /> Return the number of <i>Rabbit Numbers</i> between <b>low</b> and <b>high</b>, inclusive.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RabbitNumber",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int theCount(int low, int high)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"22",
+			"id":0,
+			"input":"22",
+			"note":"22 is a  because  S(22*22) = S(484) = 16  S(22) * S(22) = 4 * 4 = 16",
+			"order":1
+		},
+		{
+			"expect":"484",
+			"id":0,
+			"input":"484",
+			"note":"484 is not a  because  S(484*484) = S(234256) = 22  S(484) * S(484) = 16 * 16 = 256",
+			"order":2
+		},
+		{
+			"expect":"58",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"484",
+			"id":0,
+			"input":"58",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1000000000",
+			"id":0,
+			"input":"1000000000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"low will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"high will be between low and 1,000,000,000, inclusive."
+		}
+	]
+}

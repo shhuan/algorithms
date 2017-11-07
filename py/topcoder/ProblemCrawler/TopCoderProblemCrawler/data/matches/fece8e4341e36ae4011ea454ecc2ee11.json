@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":207.13,
+			"constraints":[],
+			"correctRatio":91.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7868&rd=10777",
+			"name":"HandsShaking",
+			"notes":[],
+			"submission":531
+		},
+		{
+			"avgPts":272.54,
+			"constraints":[],
+			"correctRatio":46.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7869&rd=10777",
+			"name":"MirrorNumber",
+			"notes":[],
+			"submission":262
+		},
+		{
+			"avgPts":466.68,
+			"constraints":[],
+			"correctRatio":45.83,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7927&rd=10777",
+			"name":"PackageDelivery",
+			"notes":[],
+			"submission":24
+		}
+	],
+	"name":"Single Round Match 363 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10777"
+}

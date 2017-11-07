@@ -1,0 +1,135 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2887&rd=5872",
+	"statement":"<p> <i>This problem uses subscripts and superscripts which may not display properly for plugin users.</i><br /><br /><br /><br /> We've all heard the riddle &quot;How far can a dog run into the woods?&quot;, where the expected answer is &quot;halfway&quot;. However, this is only correct if worded as &quot;How far can a dog run directly into the woods?&quot;. We're here today to solve the actual problem, where &quot;running into&quot; is defined as moving in a way such that for any two times t<sub>1</sub>&gt;0 and t<sub>2</sub>&gt;0, t<sub>1</sub>&lt;t<sub>2</sub> if and only if distance(position(t<sub>1</sub>))&gt;distance(position(t<sub>2</sub>)), where distance(p) is the distance (in a straight line) from the center of the woods to a position, and position(t) is the dog's position at time t. Complicating (and making more realistic) our problem are the trees in the woods. Each tree is defined by <b>x</b> and <b>y</b> coordinates, and a <b>diameter</b>. As any dog owner can attest, it is in a dog's nature to run in circles. Our dog is slightly demented, so his nature is to run in clockwise circles centered at the center of the woods until he hits a tree. If he hits a tree, he runs counterclock-wise around the tree until he is able to travel clockwise tangent to the center of the woods. </p> <p> You are to create a class DogWoods, with a method howFar, which takes int[]s containing the <b>x</b> and <b>y</b> coordinates, and the <b>diameter</b>s of each tree. The method will also take parameters <b>startx</b> and <b>starty</b>, which are the starting x and y coordinates for the dog. The <i>i</i>th element of <b>x</b> corresponds to the <i>i</i>th element of <b>y</b>, which corresponds to the <i>i</i>th element of <b>diameter</b>. The dog is determined to have reached the center of the woods when the dog's distance to the center is &lt;= 10 units. Your method must return the distance that would be travelled by the dog, while obeying his nature, before he reaches the center of the woods. Your return value must be within 1e-9 relative or absolute error of the correct value. </p> <p> The location (0,0) is the center of the woods, with the positive x axis extending to the right, and the positive y axis extending up (a standard Cartesian plane). </p> <p> If the dog would run an infinitely long distance while obeying his nature, then your method should return -1. </p> <p> Given two circles with the following equations, </p> (x - x<sub>0</sub>)<sup>2</sup> + (y - y<sub>0</sub>)<sup>2</sup> = r<sub>0</sub><sup>2</sup> (A circle centered at (x<sub>0</sub>,y<sub>0</sub>) with radius r<sub>0</sub>) <br /><br /> x<sup>2</sup> + y<sup>2</sup> = r<sub>1</sub><sup>2</sup> (A circle centered at (0,0) with radius r<sub>1</sub>) <p> their points of intersection are given by: </p> <p> x = x<sub>0</sub> / 2 - x<sub>0</sub>(r<sub>0</sub><sup>2</sup> - r<sub>1</sub><sup>2</sup>) / 2d + y<sub>0</sub>p / 2d <br /><br /> y = y<sub>0</sub> / 2 - y<sub>0</sub>(r<sub>0</sub><sup>2</sup> - r<sub>1</sub><sup>2</sup>) / 2d - x<sub>0</sub>p / 2d <br /><br /> and <br /><br /> x = x<sub>0</sub> / 2 - x<sub>0</sub>(r<sub>0</sub><sup>2</sup> - r<sub>1</sub><sup>2</sup>) / 2d - y<sub>0</sub>p / 2d <br /><br /> y = y<sub>0</sub> / 2 - y<sub>0</sub>(r<sub>0</sub><sup>2</sup> - r<sub>1</sub><sup>2</sup>) / 2d + x<sub>0</sub>p / 2d <br /><br /> where <br /><br /> d = x<sub>0</sub><sup>2</sup> + y<sub>0</sub><sup>2</sup> <br /><br /> p = sqrt(((r<sub>0</sub> + r<sub>1</sub>)<sup>2</sup> - d)(d - (r<sub>1</sub> - r<sub>0</sub>)<sup>2</sup>)) <br /><br /> </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"The dog will always obey his nature as described."
+		},
+		{
+			"order":2,
+			"val":"The dog may not run through any part of a tree."
+		},
+		{
+			"order":3,
+			"val":"Trees are to be considered exactly round."
+		},
+		{
+			"order":4,
+			"val":"The dog should be treated as a mathematical point. I.e., it has no diameter."
+		},
+		{
+			"order":5,
+			"val":"The distance around a circle is pi * diameter."
+		},
+		{
+			"order":6,
+			"val":"pi ~ 3.14159265358979."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DogWoods",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howFar",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double howFar(int[] x, int[] y, int[] diameter, int startx, int starty)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{10}",
+			"id":0,
+			"input":"{0}",
+			"note":"The dog travels until it meets the tree, covering 18.431923291703267 units, and then travels around the tree until it is within 10 units of the center, for another 5.2108923224412536 units. In the image, the red lines represents the dog's path, the black circle the tree, and the blue circle the center of the forest. ",
+			"order":1
+		},
+		{
+			"expect":"{7,25,11}",
+			"id":0,
+			"input":"{40,15,-5} ",
+			"note":"In this image, the red lines represents the dog's path, the black circles the trees, and the blue circle the center of the forest. ",
+			"order":2
+		},
+		{
+			"expect":"{3}",
+			"id":0,
+			"input":"{3}",
+			"note":"The dog can continue spiraling around the center never meeting a tree.",
+			"order":3
+		},
+		{
+			"expect":"{15}",
+			"id":0,
+			"input":"{15}",
+			"note":"The dog started within 10 units of the center, and therefore cannot travel any further.",
+			"order":4
+		},
+		{
+			"expect":"{232,-162,60,-125,-22,-266,-120,-242,87,-148,50,-218,161,-232,249,215,11,-79}",
+			"id":0,
+			"input":"{-220,-204,-187,-11,16,211,-180,87,272,-118,-1,16,187,113,71,217,-12,78} ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x, y, and diameter will all have the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"x will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Every element of x and y will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Every element of diameter will be between 1 and 100, inclusive."
+		},
+		{
+			"order":5,
+			"val":"startx and starty and will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The closest that the perimeter of any two trees will be to each other is 1e-6."
+		},
+		{
+			"order":7,
+			"val":"For any two trees a and b, the distance of the closest point to the center of a will not be within 1e-6 of the distance of the furthest point to the center of b."
+		},
+		{
+			"order":8,
+			"val":"No tree will completely cover the circle of diameter 20 at the center of the woods."
+		},
+		{
+			"order":9,
+			"val":"For every tree, the circle of diameter 20 will either not intersect that tree, or it will intersect by at least 1e-6 units at the greatest width of intersection."
+		},
+		{
+			"order":10,
+			"val":"The dog will not start in the midst of a tree."
+		}
+	]
+}

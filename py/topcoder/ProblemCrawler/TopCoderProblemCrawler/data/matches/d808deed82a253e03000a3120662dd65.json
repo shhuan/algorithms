@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":186.15,
+			"constraints":[],
+			"correctRatio":89.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11381&rd=14545",
+			"name":"SRMCodingPhase",
+			"notes":[],
+			"submission":783
+		},
+		{
+			"avgPts":264.64,
+			"constraints":[],
+			"correctRatio":77.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11496&rd=14545",
+			"name":"SRMIntermissionPhase",
+			"notes":[],
+			"submission":143
+		},
+		{
+			"avgPts":522.74,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11495&rd=14545",
+			"name":"SRMChallengePhase",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"Single Round Match 520 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14545"
+}

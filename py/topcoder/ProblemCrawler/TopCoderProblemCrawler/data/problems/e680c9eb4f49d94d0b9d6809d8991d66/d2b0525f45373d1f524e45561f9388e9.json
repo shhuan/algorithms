@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8736&rd=11129",
+	"statement":"<p> You and your friends have gotten together for a Trivia night at the local pub. There are <b>N</b> questions asked during the night. Each question is worth a number of points; the i-th element of the points array corresponds to the score received if you correctly answer the i-th question, but you lose that many points if you answer it incorrectly. The questions are given in the order specified, and you must answer each question before the next is asked. </p><p> In addition, after each correct answer you will receive a token. If you then have <b>tokensNeeded</b> tokens, the pub will immediately take all of your tokens and award you additional bonus points. However, if you get the question wrong, the pub will take away all of your tokens without giving you any bonuses. The bonuses change after each question; element i of the bonuses array corresponds to the bonus you receive if you win the bonus on question i. Note that it is possible to receive multiple bonuses during the game. </p><p> To generate the arrays points and bonuses described above, you should use the following pseudo-code on the arrays <b>p</b> and <b>b</b>, respectively. </p> <pre>\nInput array:  X\nOutput array:  P (size N)\nk := 0\nM := size of X\nFor i=0 to N-1\n\tP[i] := X[k]\n\ts := (k+1)%M\n\tX[k] := ( ( X[k] ^ X[s] ) + 13 ) % G\n\tk := s\n</pre> <p> In the above code, use the value 1001 for G when generating points, and 10001 when generating bonus; this guarantees that all questions will be worth between 0 and 1000 points, inclusive, and that all bonuses will be worth between 0 and 10,000 points, inclusive. In the above code, % represents the modulo operator, and ^ is the binary XOR operator (see the Notes section for the implementation in your language). </p><p> You know the answer to all the questions and want to maximize the number of points that you receive. Return the maximum points that you can receive if you correctly choose which questions to answer. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"The input is only coded for convenience. The intended solution does not rely on any property of the number generation; it just generates both arrays and works on them."
+		},
+		{
+			"order":2,
+			"val":"If x and y are ints, (x^y) represents the bitwise XOR operation on them in C++, Java, and C#. In VB.net, (x BitXor y) does it."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PubTrivia",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maximumScore",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long maximumScore(int N, int tokensNeeded, int[] p, int[] b)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"The best strategy here is to answer all five questions correctly. You score 15 points for the questions, and a 5 point bonus for answering five questions in a row.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"This time, it is best to answer all of the questions correctly except for the second question. You then receive the bonus on the final question for answering three in a row.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"Here the question values are {1, 2, 3, 16, 14}, and the bonuses are {7, 0, 20, 33, 66}.",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 500,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"tokensNeeded will be between 1 and 500,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"p and b will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of p will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of b will be between 0 and 10000, inclusive."
+		}
+	]
+}

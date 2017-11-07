@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.3,
+			"constraints":[],
+			"correctRatio":75.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7343&rd=12013",
+			"name":"ZenoDivision",
+			"notes":[],
+			"submission":273
+		},
+		{
+			"avgPts":247.26,
+			"constraints":[],
+			"correctRatio":70,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7992&rd=12013",
+			"name":"BattleDice",
+			"notes":[],
+			"submission":100
+		},
+		{
+			"avgPts":641.12,
+			"constraints":[],
+			"correctRatio":76.6,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8525&rd=12013",
+			"name":"SuperWatch",
+			"notes":[],
+			"submission":94
+		}
+	],
+	"name":"2008 TopCoder Open > Online Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12013"
+}

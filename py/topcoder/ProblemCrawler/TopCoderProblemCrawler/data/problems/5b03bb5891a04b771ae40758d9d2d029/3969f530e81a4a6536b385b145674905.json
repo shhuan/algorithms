@@ -1,0 +1,118 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3040&rd=5883",
+	"statement":"<p><i>Plugin users: There is a picture in the problem statement.</i></p> <p>A <i>coding tree</i> is a proper binary tree (in which every node has either zero or two children) where each leaf has a distinct character assigned to it. This allows us to encode a string made up of the characters in the leaves as follows: For every character in the string, find the path from the root of the coding tree to the matching leaf. If following the left child of a node, append a 0 to the encoding, otherwise a 1. For instance, the string &quot;helloworld&quot; would, using the tree below, be encoded as &quot;011001111111100001000111010&quot; (zeros are the left branches). To decode a string of 0's and 1's, one just reverses this procedure: start at the root of the tree and follow the edges downwards: 0 for left, 1 for right. When a leaf is reached, append the leaf's character to the output string, and continue from the root. </p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/DamagedTree/tree.jpg\" /> <p> One way (albeit not a very good one) to represent the coding tree is to describe for each character the path to the leaf. For instance, the tree in the picture above would be described as </p> <pre>\n{&quot;h 0110&quot;,\n &quot;e 0111&quot;,\n &quot;l 11&quot;,\n &quot;o 10&quot;,\n &quot;w 000&quot;,\n &quot;r 001&quot;,\n &quot;d 010&quot;}\n</pre> <p> In this problem, however, some characters in the binary codes in this representation have been damaged (and replaced by a question mark, '?'). Given a damaged representation and an encoded message, determine if it's possible to uniquely decode the encoded message, using the properties above about a well formed coding tree (see example 0). You may also use the fact that the encoded message must be fully decodable (see example 3). You are guaranteed that there will be at least one way to decode the message. </p> <p> Create a class DamagedTree containing the method decode which takes a String[], <b>tree</b>, representing a damaged representation of a coding tree in the format above, and a String[], <b>encodedMessage</b>, the encoded message (concatenate the elements in <b>encodedMessage</b> to get the full encoded message). If there is a way to uniquely decode this message, return this decoded message. Otherwise return the empty string (see example 1). </p>",
+	"notes":[{
+		"order":1,
+		"val":"A '?' in  must be replaced with either '0' or '1'."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DamagedTree",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"decode",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String decode(String[] tree, String[] encodedMessage)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"011001111111100001000111010\"}",
+			"id":0,
+			"input":"{\"h 01??\", \"e 0111\", \"l ??\", \"o 10\", \"w 000\", \"r 001\", \"d 010\"}",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"{\"011001111111100001000111010\"}",
+			"id":0,
+			"input":"{\"h 01??\", \"e 011?\", \"l ??\", \"o 10\", \"w 000\", \"r 001\", \"d 010\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{\"000100\",\"0111010\"}",
+			"id":0,
+			"input":"{\"h 01??\", \"e 011?\", \"l ??\", \"o 10\", \"w 000\", \"r 001\", \"d 010\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"0000\"}",
+			"id":0,
+			"input":"{\"A ??\", \"B ???\", \"C ???\", \"D 1\"} ",
+			"note":" ",
+			"order":4
+		},
+		{
+			"expect":"{\"1111111111111111111111111\", \"1111111111111111111111111\"}",
+			"id":0,
+			"input":"{\"a 0????\", \"b 0????\", \"c 0???\", \"d 0??\", \"e 0?\", \" ?\"}",
+			"note":"The return value is a string containing 50 spaces. ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"At most 15 characters in tree will be a '?'."
+		},
+		{
+			"order":2,
+			"val":"tree will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element in tree will contain between 3 and 50 characters inclusive."
+		},
+		{
+			"order":4,
+			"val":"The first character in the elements of tree will be 'A'-'Z', 'a'-'z' or a space."
+		},
+		{
+			"order":5,
+			"val":"The second character in the elements of tree will be a space."
+		},
+		{
+			"order":6,
+			"val":"The remaining characters in the elements of tree will be either '0', '1' or '?'."
+		},
+		{
+			"order":7,
+			"val":"The first characters in the elements of tree will be distinct."
+		},
+		{
+			"order":8,
+			"val":"There will be at least one way to replace the '?' in tree so that tree describes a valid coding tree that can fully decode encodedMessage."
+		},
+		{
+			"order":9,
+			"val":"encodedMessage will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":10,
+			"val":"Each element in encodedMessage will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":11,
+			"val":"encodedMessage will only contain the characters '0' and '1'."
+		}
+	]
+}

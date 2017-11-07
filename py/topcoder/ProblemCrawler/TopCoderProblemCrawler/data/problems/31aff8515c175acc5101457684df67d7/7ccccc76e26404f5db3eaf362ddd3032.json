@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11665&rd=14550",
+	"statement":"There is a rectangle divided into 1x1 cells. Each cell is either empty or it contains a single coin. <p></p> You can apply the following operation repeatedly. \n <ul> \n  <li>First, choose one of the directions: up, down, left, or right. </li> \n  <li>Then, move all coins in the chosen direction by exactly 1 cell. If this would cause a coin to move out of the rectangle, the coin drops out from the rectangle and disappears. </li> \n </ul> Your objective in this problem is to apply the operations so that the number of coins remaining on the rectangle becomes exactly <b>K</b>. <p></p> You are given the int <b>K</b> and a String[] <b>board</b> that describes the initial state of the rectangle. More precisely, character j of element i of <b>board</b> is 'o' if i-th row of j-th column of the rectangle contains a coin, and it is '.' otherwise. <p></p> Return the minimum number of operations you have to perform. If the objective is impossible, return -1.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DropCoins",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(String[] board, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\".o..\" ,\"oooo\" ,\"..o.\"} ",
+			"note":"One of the optimal solutions is to move coins to the right twice.",
+			"order":1
+		},
+		{
+			"expect":"12",
+			"id":0,
+			"input":"{\".....o\" ,\"......\" ,\"oooooo\" ,\"oooooo\" ,\"......\" ,\"o.....\"} ",
+			"note":"One of the optimal solutions: ",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\"....\" ,\".oo.\" ,\".oo.\" ,\"....\"} ",
+			"note":"It is impossible to make the number of remaining coins exactly 3.",
+			"order":3
+		},
+		{
+			"expect":"12",
+			"id":0,
+			"input":"{\".......\" ,\"..ooo..\" ,\"ooooooo\" ,\".oo.oo.\" ,\"oo...oo\"} ",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"58",
+			"id":0,
+			"input":"{\".................\" ,\".ooooooo...oooo..\" ,\".ooooooo..oooooo.\" ,\".oo.......oo..oo.\" ,\".oo.......oo..oo.\" ,\".ooooo.....oooo..\" ,\".ooooooo...oooo..\" ,\".....ooo..oo..oo.\" ,\"......oo..oo..oo.\" ,\".ooooooo..oooooo.\" ,\".oooooo....oooo..\" ,\".................\"} ",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain between 1 and 30 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of board will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in each element of board will be either '.' or 'o'."
+		},
+		{
+			"order":5,
+			"val":"K will be between 1 and 900, inclusive."
+		}
+	]
+}

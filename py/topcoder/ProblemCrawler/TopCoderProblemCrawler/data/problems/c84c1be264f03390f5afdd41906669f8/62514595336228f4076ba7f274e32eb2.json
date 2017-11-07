@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2253&rd=4725",
+	"statement":"<p>Throughout the term in computer science class, Professor Smith's exams consisted entirely of true or false questions. The reason? He was too lazy to grade things by hand, so after a test was over, he would input each student's answers into his computer, and the grades would be automatically calculated. Easy!</p> <p>It is the end of the term now, and grades are due tomorrow. As luck would have it, Smith's computer has crashed, and he has no time to try and fix it. All he can do now is to try and dig up old test papers and regrade them by hand.</p> <p>The problem is, the answer keys for all the tests were on the computer. So now, he must try and reconstruct the answer keys so that he can grade things. All is not lost, however. He has all of the papers stored, and he can remember the number of correct answers for certain students. In addition, he is sure each question was answered correctly by at least one student. However, he still hasn't been able to figure out the answer keys for some of them, and he's asked you for help.</p> <p>For some given test, the papers for which he can remember grades are given as a String[] <b>graded</b>. Each String represents a single student's graded test paper for this specific test, and will start off with a non-negative integer without extra leading zeros indicating the number of questions that student got correct. Then that number is followed by a single space, and then a sequence of uppercase 'T's and 'F's, where the first represents that student's answer to the first question ('T' = true, 'F' = false), and so on. Your method should return the lexicographically earliest answer key that is consistent with the grades he remembers as a String, with the first character being the correct answer to the first question, the second character being the correct answer to the second, and so on. If there is no answer key that works, your method should return the String &quot;inconsistent&quot; (without the double quotes).</p>",
+	"notes":[{
+		"order":1,
+		"val":"Each question has been answered correctly by at least one student. (See example 0.)"
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TrueFalse",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"answerKey",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String answerKey(String[] graded)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"TTT\"",
+			"id":0,
+			"input":"{\"2 TTF\", \"1 FTF\", \"2 FTT\"}",
+			"note":"Since the second question was answered 'T' by all of them, it must be right, since every question was answered correctly by at least one student. Then the second person's test paper tells us that the only possible correct answer key is \"TTT\", which is consistent with the other two students' papers.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"TTFFTFT\"",
+			"id":0,
+			"input":"{\"7 TTFFTFT\"}",
+			"note":"Only one person, and he had a perfect score.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"inconsistent\"",
+			"id":0,
+			"input":"{\"9 TTTFFFFTTFFTTFT\", \"7 FFFFFFFFFFFFFFF\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"FFFFFFFTTTTTTTT\"",
+			"id":0,
+			"input":"{\"9 TTTFFFFTTFFTTFT\", \"7 FFFFFFFFFFFFFFF\", \"8 TTTTTTTTTTTTTTT\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"graded will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"each element of graded will be between 3 and 18 characters in length, inclusive."
+		},
+		{
+			"order":3,
+			"val":"each element of graded will contain a number N without extra leading zeros, followed by one space and then a sequence of 'T's and 'F's."
+		},
+		{
+			"order":4,
+			"val":"each element of graded will have the same number of letters following the number."
+		},
+		{
+			"order":5,
+			"val":"for each element of graded, N will be between 0 and the number of letters in each element, inclusive."
+		}
+	]
+}

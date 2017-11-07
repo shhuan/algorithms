@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=407&rd=60",
+	"statement":"<pre>PROBLEM STATEMENT\nWhen putting together a problem set, a writer must keep in mind the difficulty\nand length of a problem.  A good problem set is one with an easy, a middle, and\na hard problem, but doesn't take too much or too little time to complete.\n\nYou will be given an input of three int[].  The first int[] consists of easy\nproblem times, the second consists of middle problem times, and the third\nconsists of hard problem times.  Return the number of legal problem set\ncombinations, where a legal set contains exactly 1 easy, 1 middle and 1 hard\nproblem, and the total time is between 60 and 75 inclusive.\n\nDEFINITION\nClass name: Chooser\nMethod name: numSets\nParameters: int[], int[], int[]\nReturns: int\nThe method signature is:\nint numSets(int[] easy, int[] middle, int[] hard)\nBe sure your method is public.\n\nTopCoder will ensure the following:\n*Each int[] will contain between 0 and 10 elements, inclusive.\n*Each element of easy will be an int between 5 and 15, inclusive.\n*Each element of middle will be an int between 15 and 45, inclusive.\n*Each element of hard will be an int between 30 and 55, inclusive.\n\nEXAMPLES\n{5,10,15}\n{15,25}\n{45}\nThere are 3*2*1=6 possible sets.  However, since 10+25+45=80 and 15+25+45=85,\ntwo of the sets are illegal, so the method returns 4.\n\n{5,5,5}\n{15,15,15}\n{45,45,45}\nThere are 3*3*3=27 possible sets, all legal.  The return value is 27.\n\n{5,5,5}\n{15,15,15}\n{45,45,35}\nThere are 27 possible sets again, but for this input any set with the 35 minute\nhard problem is too short.  Therefore there are only 3*3*2=18 legal sets, and\nthe return value is 18.\n\n{}\n{15,25}\n{30,35,40}\nSince there are no easy problems, there are no legal problem sets.  The return\nvalue is 0.\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Chooser",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numSets",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numSets(int[] param0, int[] param1, int[] param2)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

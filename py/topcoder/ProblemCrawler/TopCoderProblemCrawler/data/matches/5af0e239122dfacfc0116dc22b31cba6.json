@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":177.66,
+			"constraints":[],
+			"correctRatio":86.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6114&rd=9815",
+			"name":"Shuffling",
+			"notes":[],
+			"submission":389
+		},
+		{
+			"avgPts":336.2,
+			"constraints":[],
+			"correctRatio":53.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6115&rd=9815",
+			"name":"Palindromist",
+			"notes":[],
+			"submission":311
+		},
+		{
+			"avgPts":577.74,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6022&rd=9815",
+			"name":"DigitByDigit",
+			"notes":[],
+			"submission":57
+		}
+	],
+	"name":"Single Round Match 294 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9815"
+}

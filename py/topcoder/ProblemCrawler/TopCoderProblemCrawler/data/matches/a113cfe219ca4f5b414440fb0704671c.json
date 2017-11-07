@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":154.74,
+			"constraints":[],
+			"correctRatio":70.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10310&rd=13748",
+			"name":"IncredibleMachine",
+			"notes":[],
+			"submission":536
+		},
+		{
+			"avgPts":265.37,
+			"constraints":[],
+			"correctRatio":42.02,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10005&rd=13748",
+			"name":"MazeWandering",
+			"notes":[],
+			"submission":188
+		},
+		{
+			"avgPts":532.87,
+			"constraints":[],
+			"correctRatio":43.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10386&rd=13748",
+			"name":"SquareFreeSets",
+			"notes":[],
+			"submission":16
+		}
+	],
+	"name":"Single Round Match 440 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13748"
+}

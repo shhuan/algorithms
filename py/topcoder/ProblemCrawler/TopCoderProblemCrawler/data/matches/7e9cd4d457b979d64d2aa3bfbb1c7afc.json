@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":172.63,
+			"constraints":[],
+			"correctRatio":76.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10377&rd=13935",
+			"name":"ErdosNumber",
+			"notes":[],
+			"submission":436
+		},
+		{
+			"avgPts":270.21,
+			"constraints":[],
+			"correctRatio":32.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10418&rd=13935",
+			"name":"CantorDust",
+			"notes":[],
+			"submission":43
+		},
+		{
+			"avgPts":491.12,
+			"constraints":[],
+			"correctRatio":26.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7832&rd=13935",
+			"name":"WallClimbing",
+			"notes":[],
+			"submission":19
+		}
+	],
+	"name":"Pilot Round - Beta > Member Round - Beta",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13935"
+}

@@ -1,0 +1,77 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6071&rd=9812",
+	"statement":"<p>You are in a house where the light in each room is controlled by a switch that might be located in a different room. Initially, the light in the first room is on, and the lights in all the other rooms are off.</p> <p>You are currently in the first room and your goal is to end up in the last room, with all the lights in the house off except the light in the last room. You can move directly from any room to any other room, and you can turn any of the switches that are located in your current room. However, you may never enter a dark room or turn off the light in your current room.</p> <p>You are given a int[] <b>switches</b> describing the locations of the light switches. The light switch for room i is located in room <b>switches[i]</b>. Rooms have 0-based indices. Return the minimal number of moves required to complete your task, or -1 if it is impossible. Only moving from one room to another counts as a move (turning a switch is not counted).</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CrazySwitches",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumActions",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimumActions(int[] switches)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{1, 0}",
+			"note":"You can switch on the light in the last room, move into the last room and switch off the light in the first room.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{0, 1}",
+			"note":"You can't do anything.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{1, 2, 0}",
+			"note":"You can switch on the light in the last room, move into the last room, switch on the light in the second room, move into the second room, switch off the light in the first room, move into the last room and switch off the light in the second room.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{4, 4, 3, 0, 5, 2}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{7, 11, 1, 12, 6, 3, 0, 2, 6, 0, 0, 5, 9}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"switches will contain between 2 and 16 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in switches will be between 0 and the number of elements in switches - 1, inclusive."
+		}
+	]
+}

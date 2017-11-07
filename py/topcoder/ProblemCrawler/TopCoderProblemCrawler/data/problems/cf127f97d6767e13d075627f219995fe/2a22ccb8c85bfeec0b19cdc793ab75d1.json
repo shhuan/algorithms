@@ -1,0 +1,57 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4698&rd=7992",
+	"statement":"We've all seen magic squares before. They are square grids full of numbers arranged so that the rows, columns and diagonals all have the same sum: <pre>\n 8 1 6\n 3 5 7\n 4 9 2\n</pre> In the above figure, each row, column and diagonal sums to 15.<br /><br /><br /><br /> We'd like to extend the magic square to the magic cube. In a magic cube, we'll ignore the diagonals, but would like the rows, columns and pillars (pillars are analogous to rows and columns, but in the third dimension) to all have the same sum. You will be given 27 numbers that form the 27 values in a 3x3x3 cube. The number at (i,j,k) in the cube will be represented by element i*9 + j*3 + k of the input. <br /><br /><br /><br /> We can define the 'magic score' of a cube as the difference between the largest sum and the smallest sum (where the sums come from rows, columns, and pillars). Your task is to try to make the cube slightly more magical by trying to decrease its magic score. You should try to find two numbers in the cube that can be swapped to lower the cube's magic score. You should return the minimum possible magic score of the cube after you perform one swap. If there is no swap that would lower the magic score, return the magic score without any swaps.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MagicCube",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getScore",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getScore(int[] nums)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}",
+			"order":1
+		},
+		{
+			"expect":"Returns: 18",
+			"id":0,
+			"input":"{23,4,10,1,27,21,25,7,17,9,15,13,20,3,11,2,22,18,12,24,14,26,8,6,5,19,16}",
+			"note":"In the original cube, the magic score is 51-31=20. By swapping the numbers at (0,0,1) and (1,2,0), we can improve the magic score to 51-33=18",
+			"order":2
+		},
+		{
+			"expect":"Returns: 17",
+			"id":0,
+			"input":"{23,2,10,1,27,21,25,7,17,9,15,13,20,3,11,4,22,18,12,24,14,26,8,6,5,19,16}",
+			"order":3
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"nums will contain exactly 27 elements, each between 1 and 100, inclusive."
+	}]
+}

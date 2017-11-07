@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8404&rd=14147",
+	"statement":"<p> A country is at war, and one of its messenger soldiers must transport something of great importance from city 1 to city 2 using the highway system, which consists entirely of one-way highways. As soon as the soldier sets out on his mission, he is informed by an agent that the enemy has destroyed exactly one of the highways in the country. Unfortunately, it is unknown which highway was destroyed. He won't know which highway was destroyed until he arrives at the starting city of the destroyed highway. The soldier wants to use a strategy that will make the worst-case distance he has to travel as short as possible. </p> <p> You are given an int <b>n</b>, the number of cities in the country. The cities are numbered 1 to <b>n</b>. The highways between cities are given in the String[] <b>highways</b>. Concatenate the elements of highways to get a comma separated list of integer triplets. Each triplet is formatted &quot;a b c&quot; (quotes for clarity), which means that there's a one-way highway of length c from city a to city b. Return the distance the messenger soldier will have to travel in the worst case. If there is a chance that he will never reach his destination, return -1 instead. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Note that there may be multiple parallel highways from one city to another."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WarTransportation",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"messenger",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int messenger(int n, String[] highways)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"1 2 1,1 3 2,3 2 3\"}",
+			"id":0,
+			"input":"3",
+			"note":"The best strategy is to take the path 1->2 if the first highway is not destroyed. Otherwise, take the path 1->3->2.",
+			"order":1
+		},
+		{
+			"expect":"{\"1 3 1,1 4 1,3 5 1,4 5 1,5 6 1,6 7 1,6 8 1,7 2 1,\", \"8 2 1\"}",
+			"id":0,
+			"input":"8",
+			"note":"If the highway from city 5 to city 6 is destroyed, the messenger can't finish the transportation. ",
+			"order":2
+		},
+		{
+			"expect":"{\"1 3 1,1 3 2,3 2 1,1 4 1,4 2 1\"}",
+			"id":0,
+			"input":"4",
+			"note":"No matter what strategy the messenger adopts, there is a chance that the transportation can't be finished.",
+			"order":3
+		},
+		{
+			"expect":"{\"1 3 1,3 2 1,1 4 1,4 2 1,3 4 1\"}",
+			"id":0,
+			"input":"4",
+			"note":"The best strategy is to move to city 3 at first.",
+			"order":4
+		},
+		{
+			"expect":"{\"1 13 3,13 4 7,4 3 4,3 10 8,10 18 9,18 12 6,12 2 3,\", \"1 17 6,17 13 6,13 9 4,9 10 8,10 7 2,7 5 5,5 19 9,1\", \"9 14 6,14 16 9,16 18 7,18 15 5,15 20 3,20 12 9,12 \", \"8 4,8 11 3,11 4 1,4 3 7,3 2 3,20 10 2,1 18 2,16 19\", \" 9,4 15 9,13 15 6\"}",
+			"id":0,
+			"input":"20",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"highways will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of highways will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"When concatenated, highways will contain a comma separated list of triplets of integers."
+		},
+		{
+			"order":5,
+			"val":"Each integer triplet will be formatted &quot;a b c&quot; (quotes for clarity), where a and b are distinct integers between 1 and n, inclusive, and c is an integer between 1 and 1000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each integer in integer triplets will have no leading zeros and will contain only digits ('0'-'9')."
+		}
+	]
+}

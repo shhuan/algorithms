@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12607&rd=15503",
+	"statement":"<p>You are given a board with N row and M columns. We will use (i,j) to denote the j-th cell in the i-th row (0-based indices). Each cell is initially white. You goal is to have a board that has at least one black cell in each row, and at the same time at least one black cell in each column.</p> <p>You will paint the cells black in turns. In each turn, you select one cell (in a specific way that is given below) and color it black. You stop as soon as your goal is achieved.</p> <p>You are given a String[] <b>prob</b> consisting of N elements, each M characters long. All characters in <b>prob</b> are digits ('0'-'9'). The digit represented by the j-th character in the i-th row (0-based indices) will be denoted p[i][j]. This digit is the relative probability of cell (i,j) being chosen in each turn.</p> <p>Formally, let s be the sum of all p[i][j]. Then in each turn the cell (i,j) is chosen with probability p[i][j]/s. Note that the same cell may be chosen multiple times: we may sometimes choose a cell that is already black.</p> <p>The constraints guarantee that achieving your goal is possible. Return the expected number of turns until your goal is achieved.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have a relative or an absolute error of less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RandomPaintingOnABoard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expectedSteps",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expectedSteps(String[] prob)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3.0",
+			"id":0,
+			"input":"{\"10\", \"01\"}",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 3.6666666666666665",
+			"id":0,
+			"input":"{\"11\", \"11\"}",
+			"note":"    ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3.9166666666666665",
+			"id":0,
+			"input":"{\"11\", \"12\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 11.214334077031307",
+			"id":0,
+			"input":"{\"0976\", \"1701\", \"7119\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1028.7662876159634",
+			"id":0,
+			"input":"{\"000000000000001000000\", \"888999988889890999988\", \"988889988899980889999\", \"889898998889980999898\", \"988889999989880899999\", \"998888998988990989998\", \"998988999898990889899\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"prob will contain between 1 and 21 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of prob will be between 1 and 21 characters long, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The elements of prob will be of the same length."
+		},
+		{
+			"order":4,
+			"val":"Each element of prob will consist of digits only ('0'-'9')."
+		},
+		{
+			"order":5,
+			"val":"The total number of cells (i.e., the total number of digits in prob) will be between 1 and 150, inclusive."
+		},
+		{
+			"order":6,
+			"val":"In each row there will be at least one non-zero digit."
+		},
+		{
+			"order":7,
+			"val":"In each column there will be at least one non-zero digit."
+		}
+	]
+}

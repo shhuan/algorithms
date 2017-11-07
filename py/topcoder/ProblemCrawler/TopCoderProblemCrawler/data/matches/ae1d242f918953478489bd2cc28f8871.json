@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":144.02,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6107&rd=9916",
+			"name":"PScores",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6077&rd=9916",
+			"name":"BigFibonacci",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"TCO 06 > Sponsor Track Set 5",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9916"
+}

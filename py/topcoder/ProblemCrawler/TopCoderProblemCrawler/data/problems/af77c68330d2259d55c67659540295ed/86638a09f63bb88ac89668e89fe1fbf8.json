@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11077&rd=14284",
+	"statement":"There is a square on a plane with (0,0) as its lower left and (2^<b>N</b>+2, 2^<b>N</b>+2) as its upper right corner. It is known that <b>K</b> distinct points have to be painted. Each of them should be strictly inside the square and should have integral coordinates. The first point to be painted is always (1,1). For each of the next points, the one from which the Euclidean distance to the closest already painted point is maximum should be chosen. In case of ties, the leftmost point should be painted. If there are still several possibilities, the lowermost point is chosen. Return int[] with exactly two elements, the X and Y coordinates of the <b>K</b>-th point to be painted.",
+	"notes":[{
+		"order":1,
+		"val":"The Euclidean distance between two points (x1,y1) and (x2,y2) is equal to the square root of (x1-x2)^2+(y1-y2)^2."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DistantPoints",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getKth",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getKth(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"4",
+			"note":"The square stretches from (0,0) to (18,18). After you paint (1,1), the farthest point within the square is (17,17).",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"4",
+			"note":"Now there are two candidates. Both upper-left and bottom-right points within the square are equally distant from the already painted two, so we choose the leftmost one.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"4",
+			"note":"After you paint all the corners, the best choice is the center of the square.",
+			"order":3
+		},
+		{
+			"expect":"14",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1089",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and the amount of points inside the square with side length 2^N+2, inclusive."
+		}
+	]
+}

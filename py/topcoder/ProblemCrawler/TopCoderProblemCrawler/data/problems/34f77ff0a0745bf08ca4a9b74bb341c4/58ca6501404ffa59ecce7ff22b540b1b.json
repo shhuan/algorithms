@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7703&rd=10787",
+	"statement":"You are trying to predict the outcome of a race between <b>n</b> runners, numbered from 0 to <b>n</b> - 1.You are given two int[]s, <b>first</b> and <b>second</b>. It is guaranteed that for all i, the runner numbered <b>first</b>[i] will always beat the runner numbered <b>second</b>[i]. Determine how many final orderings are possible, modulo 1,000,003. If the information is contradictionary, return 0. Runners are never tied.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RaceOrdering",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countOrders",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countOrders(int n, int[] first, int[] second)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"3",
+			"note":"Contestant 1 beat contestant 2, so the valid orders are 012, 102 and 120.",
+			"order":1
+		},
+		{
+			"expect":"{0, 0}",
+			"id":0,
+			"input":"4",
+			"note":"Contestant 0 beat contestants 1 and 2, but there is no information on contestant 3. The valid orderings are 3012, 3021, 0312, 0321, 0132, 0231, 0123 and 0213.",
+			"order":2
+		},
+		{
+			"expect":"{1, 2, 3}",
+			"id":0,
+			"input":"10",
+			"note":"There is no way to satisfy this cycle.",
+			"order":3
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"30",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 30, inclusive."
+		},
+		{
+			"order":2,
+			"val":"first and second will each contain between 0 and 15 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"first and second will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of first and second will be between 0 and n - 1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"first[i] does not equal second[i] for all i between 0 and m - 1, inclusive, where m is the number of elements in first and second."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":210.31,
+			"constraints":[],
+			"correctRatio":70.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=634&rd=4185",
+			"name":"Super3",
+			"notes":[],
+			"submission":252
+		},
+		{
+			"avgPts":289.29,
+			"constraints":[],
+			"correctRatio":63.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=624&rd=4185",
+			"name":"Big2",
+			"notes":[],
+			"submission":168
+		},
+		{
+			"avgPts":464.19,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=501&rd=4185",
+			"name":"Shared",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Citrix Single Round Match 93 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4185"
+}

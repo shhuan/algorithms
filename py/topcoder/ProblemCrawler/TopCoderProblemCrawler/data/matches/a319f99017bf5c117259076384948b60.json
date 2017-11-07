@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":208.8,
+			"constraints":[],
+			"correctRatio":91.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11418&rd=14530",
+			"name":"BlackWhiteMagic",
+			"notes":[],
+			"submission":1258
+		},
+		{
+			"avgPts":327.6,
+			"constraints":[],
+			"correctRatio":44.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11424&rd=14530",
+			"name":"KindAndCruel",
+			"notes":[],
+			"submission":829
+		},
+		{
+			"avgPts":502.25,
+			"constraints":[],
+			"correctRatio":71.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11372&rd=14530",
+			"name":"FoxIntegerLevelThree",
+			"notes":[],
+			"submission":77
+		}
+	],
+	"name":"2011 TCO Algorithm > Qualification Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14530"
+}

@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13641&rd=16312",
+	"statement":"<p>You are given two ints: <b>N</b> and <b>K</b>. Lun the dog is interested in the undirected graphs that satisfy the following conditions:</p> \n <ul> \n  <li>The graph has exactly <b>N</b> vertices, labeled from 0 to <b>N</b>-1. Each vertex has a unique label.</li> \n  <li>The graph has no loops (edges connected at both ends to the same vertex) and no more than one edge between any two different vertices.</li> \n  <li>The graph has exactly <b>K</b> bridges (edges whose deletion increases its number of connected components).</li> \n </ul> <p>Find and return the number of these graphs modulo 1,000,000,007.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Two graphs are considered different if and only if there exists a pair of vertices such that one of the graphs contains an edge between them, and the other does not."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Fragile",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countGraphs",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countGraphs(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"4",
+			"note":"  ",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"5",
+			"note":"    ",
+			"order":3
+		},
+		{
+			"expect":"25",
+			"id":0,
+			"input":"50",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 0 and N-1, inclusive."
+		}
+	]
+}

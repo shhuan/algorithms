@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11415&rd=14531",
+	"statement":"You are given a int[] <b>divisors</b> containing K elements. Find a positive integer n such that exactly K-1 elements of <b>divisors</b> are exact divisors of n. If there are several such numbers n, return the smallest possible one. If no such number n exists, return -1 instead.",
+	"notes":[
+		{
+			"order":1,
+			"val":"A number x is an exact divisor of y if y divided by x yields an integer result."
+		},
+		{
+			"order":2,
+			"val":"If x is an exact divisor of y then we call y a multiple of x."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AllButOneDivisor",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(int[] divisors)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{2,3,5}",
+			"note":"There are many possible values for n in this case. For example: 6, 15, 75 and 12. 6 is the smallest of them. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{2,4,3,9}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{3,2,6}",
+			"note":"Every multiple of 3 and 2 is also a multiple of 6. Every multiple of 6 is also a multiple of 2 and 3.  Therefore, a number that is a multiple of exactly 2 out of the three elements in this array cannot exist.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 360",
+			"id":0,
+			"input":"{6,7,8,9,10}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{10,6,15}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"divisors will contain between 2 and 6 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of divisors will be distinct."
+		},
+		{
+			"order":3,
+			"val":"Each element of divisors will be between 1 and 15, inclusive."
+		}
+	]
+}

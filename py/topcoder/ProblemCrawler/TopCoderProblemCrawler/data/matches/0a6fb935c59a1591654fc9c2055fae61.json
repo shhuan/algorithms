@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":151.83,
+			"constraints":[],
+			"correctRatio":94.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13174&rd=15978",
+			"name":"SixteenBricks",
+			"notes":[],
+			"submission":816
+		},
+		{
+			"avgPts":259.6,
+			"constraints":[],
+			"correctRatio":70.07,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13184&rd=15978",
+			"name":"NarrowPassage",
+			"notes":[],
+			"submission":147
+		},
+		{
+			"avgPts":574.9,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13185&rd=15978",
+			"name":"TreePuzzle",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"2014 TCO Algorithm > Round 2A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15978"
+}

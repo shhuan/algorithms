@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11868&rd=15092",
+	"statement":"Ms. Ciel loves rabbits. She has a large special cage for her rabbits. The special cage is protected by a secret password consisting of exactly X characters. Each character of her password is one of 'a'-'z'. Due to the security policy of the cage, each of the letters 'a'-'z' only occurs at most twice in the password. <br /><br /><br /><br /> Bored with her current password, Ms. Ciel wants to change her password into a palindrome. (A string is called palindrome if it reads the same forwards and backwards.) To change the password, Ms. Ciel may perform this operation (that consists of two steps) zero or more times: <br /><br /><br /><br /> \n <ol> \n  <li>Choose two different integers A and B such that 0 &lt;= A &lt; B &lt; X.</li> \n  <li>Swap the characters at (0-based) positions A and B of the current password.</li> \n </ol> <br /><br /> You are given a String <b>password</b> consisting of X characters which represents Ms. Ciel's initial password. Return the minimum number of operations Ms. Ciel needs to change <b>password</b> into a palindrome. If this is not possible, return -1 instead.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PasswordXPalindrome",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minSwaps",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minSwaps(String password)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"\"levle\"",
+			"note":"One possible solution is to swap the last two characters to change the password into \"level\".",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"\"racecar\"",
+			"note":"The password is already a palindrome.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"\"abcdadcb\"",
+			"note":"One possible solution: ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"\"msmscielciel\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"\"hicanyouguesstodaywriter\"",
+			"note":"It is not possible to change this password into a palindrome.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"password will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of password will be one of 'a'-'z'."
+		},
+		{
+			"order":3,
+			"val":"Each of the letters 'a'-'z' will occur at most twice in password."
+		}
+	]
+}

@@ -1,0 +1,125 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=511&rd=4335",
+	"statement":"<p>Let an R by C (also notated as RxC) matrix mean a matrix with R rows and C columns. Also, for x between 1 and R, inclusive, and y between 1 and C inclusive, let element (x,y) represent the element at the xth row and yth column (both 1-indexed) of a given R by C matrix.</p> <p>Matrix multiplication works as follows:</p> <p>For an L by M matrix A and an M by N matrix B, define an L by N matrix P such that A * B = P, and each element (x,y) of matrix P is equal to the sum of the product of each element of the xth row of A with the equivalently indexed element of the yth column of B.</p> <p>For example, say we have a 4x2 matrix A and a 2x3 matrix B:</p> <pre>\nA={{ a1, a2 },\n   { a3, a4 },\n   { a5, a6 },\n   { a7, a8 }}\n\nB={{ b1, b2, b3 },\n   { b4, b5, b6 }}\n\nThen 4x3 matrix P = A * B =\n{{ b1*a1+b4*a2, b2*a1+b5*a2, b3*a1+b6*a2 },\n { b1*a3+b4*a4, b2*a3+b5*a4, b3*a3+b6*a4 },\n { b1*a5+b4*a6, b2*a5+b5*a6, b3*a5+b6*a6 },\n { b1*a7+b4*a8, b2*a7+b5*a8, b3*a7+b6*a8 }}\n</pre> <p>Matrix addition works as follows:</p> <p>For an L by M matrix A and an L by M matrix B, define an L by M matrix S such that A + B = S, and each element (x,y) of matrix C is equal to the sum of the two elements (x,y) in A and B.</p> <p>For example, say we have a 2x3 matrix A and a 2x3 matrix B:</p> <pre>\nA={{ a1, a2, a3 },\n   { a4, a5, a6 }}\n\nB={{ b1, b2, b3 },\n   { b4, b5, b6 }}\n\nThen 2x3 matrix S = A + B =\n{{ a1+b1, a2+b2, a3+b3 }\n { a4+b4, a5+b5, a6+b6 }}\n</pre> <p>Write a method multiply which takes three String[] inputs representing matrix A, matrix B, and matrix C. Each element will be a String representing a row of that matrix as follows:</p> <p>&quot;I1 I2 I3 I4 I5 ... IN&quot; (quotes added for clarity)</p> <p>where each I is an integer.</p> <p>The fourth argument is a String representing an equation between A, B, and C.</p> <p>Return the String[] represention of the solution matrix to the equation, in the same form as the inputs.</p> <p>The equation follows the standard order of operations. That is, first do any multiplications, going left to right. Then do any additions, going left to right. After each multiplication or addition, put an intermediate matrix in place of the two argument matrices. For example (quotes added for clarity):</p> <p>&quot;A*B+C*A&quot;</p> <p>You would first multiply A*B, and replace those two matrices with an intermediate matrix M:</p> <p>&quot;M+C*A&quot;</p> <p>You would then multiply C*A, and replace those two matrices with an intermediate matrix N:</p> <p>&quot;M+N&quot;</p> <p>You would finally add M+N, returning the final result.</p> <p>If the equation is not valid for the given matrices, return an empty String[]. The equation is not valid if:</p> <p>*at any point, two matrices (A, B, C, or any intermediates) must be multiplied, in which the number of rows in the second matrix is not equal to the number of columns in the first matrix.</p> <p>*at any point, two matrices (A, B, C, or any intermediates) must be added, but do not have the same dimensions.</p> <p>*at any point, one of the intermediate matrices contains a value that is greater than 2147483647 or less than -2147483648.</p> <p>In summary, given the 3 matrices and an equation involving those three matrices, return the resulting matrix in the described String[] format, or an empty String[] if the equation is not valid for the given matrices.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"The return must be formatted exactly as the inputs. That means no leading/trailing or extra spaces."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MatArith",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calculate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] calculate(String[] A, String[] B, String[] C, String equation)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"1 2\",\"3 4\",\"5 6\"}",
+			"id":0,
+			"input":"{\"1 2 3\",\"2 3 4\"}",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"{\"1 2\",\"3 4\",\"5 6\"}",
+			"id":0,
+			"input":"{\"1 2 3\",\"2 3 4\"}",
+			"note":"A+B is calculated first, but the two matrices do not have the same dimensions. ",
+			"order":2
+		},
+		{
+			"expect":"{\"3\"}",
+			"id":0,
+			"input":"{\"3 5 7\",\"5 4 3\",\"-2 3 2\"}",
+			"note":" ",
+			"order":3
+		},
+		{
+			"expect":"{\"0\"}",
+			"id":0,
+			"input":"{\"10 0\",\"0 0\"}",
+			"order":4
+		},
+		{
+			"expect":"{\"0\"}",
+			"id":0,
+			"input":"{\"10 0\",\"0 0\"}",
+			"note":"An intermediate value (10,000,000,000) is greater than 2,147,483,647. ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Each String[] will contain 1 to 10 element, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of A, B and C will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of A, B and C will be a space-delimited list of integers, with one space between integers, and no leading or trailing spaces."
+		},
+		{
+			"order":4,
+			"val":"All elements of A, B and C will contain only the numbers [0-9] inclusive, the negative sign ('-') and spaces."
+		},
+		{
+			"order":5,
+			"val":"The number of integers represented by each element of A, B and C will be between 1 and 10, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The number of integers represented by each element of A will be the same as the number of integers represented by every other element of A."
+		},
+		{
+			"order":7,
+			"val":"The number of integers represented by each element of B will be the same as the number of integers represented by every other element of B."
+		},
+		{
+			"order":8,
+			"val":"The number of integers represented by each element of C will be the same as the number of integers represented by every other element of C."
+		},
+		{
+			"order":9,
+			"val":"Each integer represented in A, B or C will be between -10 and 10, inclusive."
+		},
+		{
+			"order":10,
+			"val":"Each integer represented in A, B or C will be a correctly formatted integer, without leading zeros."
+		},
+		{
+			"order":11,
+			"val":"equation will contain between 1 and 49 characters, inclusive."
+		},
+		{
+			"order":12,
+			"val":"equation can only contain the capital letters 'A', 'B', and 'C', and the two operands '+' and '*'."
+		},
+		{
+			"order":13,
+			"val":"The first and last characters of equation will be letters, and each pair of consecutive letters in equations will have exactly one operand between them."
+		}
+	]
+}

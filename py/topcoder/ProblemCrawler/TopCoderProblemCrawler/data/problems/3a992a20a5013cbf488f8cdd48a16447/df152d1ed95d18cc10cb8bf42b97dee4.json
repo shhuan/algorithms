@@ -1,0 +1,74 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1520&rd=4540",
+	"statement":"<p> There is a small cube planet somewhere. On each side of the cube there lives a four-armed dragon. It is time for dinner now. Each dragon sits in front of his bowl with food. </p><p> During each round, the following happens: Each dragon is trying to steal food from his neighbors (living on four neighboring sides of the cube). He spreads his four arms there (each arm goes to each separate neighbor). As other dragons do the same, four hands meet in each bowl of food. Four hands fight for a while and each takes one quarter of the food in this bowl to its own bowl. Hence, each round the food distribution changes. </p><p> Given the initial amount of food in each bowl and the number of rounds, return the amount of food the dragons' boss Snaug will have after these rounds. </p><p> In more detail: </p><p> The initial amount of food will be given in the following order: front, back, up, down, left, right. The dragons' boss Snaug lives on the &quot;up&quot; side of the cube. If the answer is an integer, return this integer. If the answer is a fraction, return the answer in the format X/Y, where X and Y are integers without common factors. Extra leading zeroes shouldn't be present in your answer. </p><p> Example. </p><p> Suppose that the initial distribution of food is the following: 0, 0, 4, 0, 0, 0. That is Snaug has 4 and everybody else has 0 amount of food in their bowls. After the first round the distribution of food will be the following: 1, 1, 0, 0, 1, 1, that is every neighbor of Snaug steals from him one quarter of his food. After the second round the distribution of food will be the following: 1/2, 1/2, 1, 1, 1/2, 1/2. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Dragons",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"snaug",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String snaug(int[] initialFood, int rounds)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{0, 0, 4, 0, 0, 0}",
+			"note":"See the explanation above",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{0, 0, 4, 0, 0, 0}",
+			"order":2
+		},
+		{
+			"expect":"45",
+			"id":0,
+			"input":"{1000, 1000, 1000, 1000, 1000, 1000}",
+			"note":"When everybody has the same amount of food, they continue to have the same amount of food after each round",
+			"order":3
+		},
+		{
+			"expect":"45",
+			"id":0,
+			"input":"{1, 2, 3, 4, 5, 6}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"initialFood has exactly 6 elements"
+		},
+		{
+			"order":2,
+			"val":"each element of initialFood is between 0 and 1,000 inclusive"
+		},
+		{
+			"order":3,
+			"val":"rounds is between 0 and 45 inclusive"
+		}
+	]
+}

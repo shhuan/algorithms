@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7768&rd=10839",
+	"statement":"<p> Quicksort is one of the most well-known sorting algorithms. On average it makes O(N log(N)) element comparisons, although in the worst case the number of comparisons is O(n<sup>2</sup>). The critical part in Quicksort is the selection of the <i>pivot element</i>. If one knows the details of a specific Quicksort implementation, it is generally possible to exploit this and create an input sequence which will cause that implementation to perform badly. This can for instance be used by malicious users to cause time-outs in critical system components that rely too much on the efficiency of Quicksort.</p> <p> Given the details of a specific Quicksort algorithm (pseudocode below), your task is to generate a sequence of <b>n</b> distinct integers between 1 and <b>n</b>, inclusive, that causes this Quicksort to reach the largest nesting depth (see examples for further clarifications). </p> <pre>\n <b>function</b> quicksort(<i>list</i> q)\n     <b>var</b> <i>list</i> less, greater\n     if length(q) &lt;= 1  \n         <b>return</b> q  \n     select a pivot value <i>pivot</i> from q\n     <b>for each</b> x <b>in</b> q\n         <b>if</b> x &lt; <i>pivot</i> <b>then</b> add x to less\n         <b>if</b> x &gt; <i>pivot</i> <b>then</b> add x to greater\n     <b>return</b> concatenate(quicksort(less), [<i>pivot</i>], quicksort(greater))\n</pre> <p> The pivot element selected in the pseudocode will be the median of three elements in q. The relative position of these three elements will be given by the input parameter <b>positions</b>, containing three integers between 0 and 999, inclusive. If the number of elements in q is <i>k</i>, the position (0-indexed) for the three elements that will be considered as pivot elements will thus be (<i>k</i> * <b>positions</b>[<i>x</i>]) / 1000 (rounded down) for each <i>x</i> between 0 and 2, inclusive. The most common pivot selection method is to take the median of the first, the middle and the last element, which would correspond to <b>positions</b> = {0, 500, 999}. </p> <p> Create a class WorstCaseQuicksort containing the method worstInput which takes as input an int <b>n</b> and a int[] <b>positions</b> and returns a int[] with <b>n</b> distinct integers between 1 and <b>n</b>, inclusive, so that the largest nesting depth is reached. Since there are many such int[]s, return the one that comes first lexicographically (see notes). </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"The relative order of the elements in the lists  and  in the pseudocode are the same as that in ."
+		},
+		{
+			"order":2,
+			"val":"A int[] A is lexicographically before a int[] B if there exists an integer  such that A[] < B[] and A[] = B[] for all  < ."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WorstCaseQuicksort",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"worstInput",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] worstInput(int n, int[] positions)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,500,999}",
+			"id":0,
+			"input":"5",
+			"note":"Any array with 5 elements where the median of the first, middle and last element is used to pick the pivot element will cause a maximum nesting depth of 3 levels, so we return the lexicographically first sequence.",
+			"order":1
+		},
+		{
+			"expect":"{500, 500, 500}",
+			"id":0,
+			"input":"8",
+			"note":"With these values, the middle element (rounded up when there is an odd number of elements) will always be the pivot element. Knowing this, we can create a sequence requiring 8 nesting levels.",
+			"order":2
+		},
+		{
+			"expect":"{800, 100, 400}",
+			"id":0,
+			"input":"10",
+			"note":"  ",
+			"order":3
+		},
+		{
+			"expect":"{800,150,800}",
+			"id":0,
+			"input":"30",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"positions will contain exactly 3 elements."
+		},
+		{
+			"order":3,
+			"val":"Each element in positions will be between 0 and 999, inclusive."
+		}
+	]
+}

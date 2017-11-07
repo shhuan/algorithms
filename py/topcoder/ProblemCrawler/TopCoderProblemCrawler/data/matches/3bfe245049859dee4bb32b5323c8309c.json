@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.86,
+			"constraints":[],
+			"correctRatio":81.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6719&rd=10103",
+			"name":"UsingStats",
+			"notes":[],
+			"submission":16
+		},
+		{
+			"avgPts":386.1,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6682&rd=10103",
+			"name":"CheckersBoard",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6163&rd=10103",
+			"name":"MixedUpPrimes",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"TCCC06 > Sponsor Track Qualification Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10103"
+}

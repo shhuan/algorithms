@@ -1,0 +1,89 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1814&rd=4665",
+	"statement":"<p> Your boss, the absent-minded biologist, has gone too far. It's one thing if he chills his lemonade in the lab refrigerator, but this morning he inadvertently rearranged the petri dishes. Now the old bird is calling for Culture X. You've found a dish of amoebae that looks like it might be Culture X, and you even have a photograph of Culture X taken yesterday, but these critters move around freely. They spin and glide through the dish and even flip over, making it hard to tell whether you're still looking at the same culture. </p> <p> You are given a String[] describing a known state of Culture X. Consider it as a rectangular grid of squares, each of which is marked either '.' or 'X'. An amoeba is a component formed of directly adjacent 'X' squares. If an amoeba is composed of more than one 'X' square, then each of its 'X' squares shares an edge with at least one other 'X' square in the same amoeba. No two 'X' squares belonging to different amoebae may share an edge, but they are permitted to neighbor each other diagonally. An amoeba may contain holes. For example, the dish below contains five amoebae. Observe that one of them comprises exactly two squares, while another consists of a single square. </p> <pre>\n\n          ...XXXXXXX.......\n          ....X.X.X........\n          ...XXXXXX........\n          ...............XX\n          ......X.....XX..X\n          .XXXXX........X.X\n          .X.XXX.......XXXX\n</pre> <p> Given a second String[] with the same dimensions, decide whether it depicts the same collection of amoebae. Amoebae are considered identical under rotation (at right angles), reflection (in the horizontal or vertical axis), and translation (to any extent, as long as the amoeba remains wholly within the petri dish). Return 0 if both dishes contain the same amoebae. Otherwise, return the sum of these two figures: (a) the number of amoebae in Culture X that are not present in the candidate dish and (b) the number of amoebae in the candidate dish that are not present in Culture X. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Amoebae",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"cultureX",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int cultureX(String[] known, String[] candidate)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"X.X..........XXXX\", \"XXX...XX......X.X\", \"X.X...XX........X\", \"XXX...XX.......XX\", \"X.X....X.X.......\", \"XXX...XX.X.......\", \"X.......X........\"} ",
+			"id":0,
+			"input":"{\"...XXXXXXX.......\", \"....X.X.X........\", \"...XXXXXX........\", \"...............XX\", \"......X.....XX..X\", \".XXXXX........X.X\", \".X.XXX.......XXXX\"}",
+			"note":"You've found Culture X! All the amoebae have been translated since yesterday. The one that was in the lower right corner has also been reflected in the horizontal axis. The one at lower left has been reflected and rotated, as has the big ugly one with two holes. The amoeba formed of two squares has been rotated.",
+			"order":1
+		},
+		{
+			"expect":"{\"X.X..........XXXX\", \"XXX...XX......X.X\", \"X.X...XX........X\", \"......XX.......XX\", \"X.X....X.X.......\", \"XXX...XX.X.......\", \"X.......X........\"}",
+			"id":0,
+			"input":"{\"...XXXXXXX.......\", \"....X.X.X........\", \"...XXXXXX........\", \"...............XX\", \"......X.....XX..X\", \".XXXXX........X.X\", \".X.XXX.......XXXX\"} ",
+			"note":"Four amoebae from Culture X are present in the candidate petri dish, but the big ugly one with two holes is missing. Furthermore, the candidate dish has two amoebae that were not present in Culture X. In total, this makes a difference of 1+2=3.",
+			"order":2
+		},
+		{
+			"expect":"{\"....X......XX.XX.XX...\", \"....XXX....XX.XX.XX...\", \".........XX...........\", \".........XX...........\", \"......................\", \"..X....XXXX....X......\", \"..X...XX..XX...X......\", \".XXX..X....X..XXX.....\", \".X.X..X....X..X.X.....\", \"XX.XX.XX..XX.XX.XX....\", \"X...X..XXXX..X...X....\"}",
+			"id":0,
+			"input":"{\"......................\", \"....XXX...............\", \"..X...X......XX.XX....\", \"..XX.........XX.XX....\", \"...XX.................\", \"..........X...X..XXXX.\", \"..XXX.....XX.XX.XX..XX\", \"..X........X.X..X....X\", \".....XX....XXX..X....X\", \".....XX.....X...XX..XX\", \"............X....XXXX.\"}",
+			"note":"Compared to Culture X, the candidate dish has an extra Y-shaped amoeba and an extra two-by-two amoeba, but it's missing a small L-shaped amoeba, and it doesn't have the squiggly one at all. That makes a symmetric difference of 4.",
+			"order":3
+		},
+		{
+			"expect":"{\".X.....X.X......XX.X\", \"X.X.X..X..XX........\", \"X..XXX......X....XX.\", \"XXXXX.............X.\", \"XX.XXX...X.XX.XX..X.\", \".XX.XX..XX.....X....\", \"XXXX.X.X........XXX.\", \".X....X..X..X.......\", \".X.X..X......X.X...X\", \".X..XXX..X.........X\", \"X....X....X..X....X.\", \".XX.....X......X....\", \"......XXXX....X.....\", \"...X...........X..XX\", \"X.X...X....X.XX.....\", \"X.X.XX..X......X....\", \"X.X.XX.XX....X..X.X.\", \"XX..XX..XX...XX...X.\", \".X..X.XX....X...X...\", \"..X..XX.XX..X.XX....\"}",
+			"id":0,
+			"input":"{\".XXXX.X...X...XXXX..\", \"X..XXXXXXX.X.....XX.\", \".X.X.XX....X..XXX..X\", \"..XXX.X.X....X......\", \".XXXXX...X.....XXXX.\", \"..X.XXX..XX....XXX.X\", \".......XXX..X.X...XX\", \"XX....X.....X...X.X.\", \".....X.....XX..XXX.X\", \"X...XX.X.X..X....X.X\", \".X........X.........\", \".X..X.........X.....\", \"..X.X..X..........XX\", \"........X.X...X.XX..\", \"....X.......X.X..X.X\", \"....XX..X..X.X.X...X\", \"X.....X.........X.X.\", \"X.X...X.............\", \"..XXX.X...X..X..XX..\", \"X.......XX...X......\"}",
+			"order":4
+		},
+		{
+			"expect":"{\"..XX......X..XX.X....X..X.XX..X....\", \"...X.X.X.......X..X....X...........\", \".XXX.X.XXX.....X.X.X..XX.XX.X.XX.XX\", \"X...X......X.X........X...X.X.....X\", \"X.....X....X...XX....X.X........XX.\", \"..XXX...XXX............X.XX..XX..XX\", \"....X.X..X..X.X...X.X....X.XX...X..\", \".XX..X........XX..X......XX..X....X\", \"...X......X...X..X...XX...XXX..X.X.\", \"..XX...X..X...X...X.XX.....X.....X.\", \".XX.X........X..X..X......XX.X.XX..\", \".X.X..XX..X.XX......X....X.........\", \"X..X.X..X........X.....X..X..XX...X\", \"X.X.........X.XXX..XX..X.........X.\", \".........X......XX.....X.....X..X.X\", \"X..X.X.XXX.X.....X...X...X...X..X.X\", \"X......X..X.XX.X......X....XX.....X\", \"X.X...................X...X..X..XX.\", \".........X........X..XX..X......X.X\", \".X....X.X.X.......X..XX..XX.XXX...X\", \".................XXX...XX...X..X...\", \"..X...X...XX.....X.....X..XX....XX.\", \".......XXX.XX....X...XX..XXX.X....X\", \"........X...XXXX..X..........X.....\", \"..........XX.X.XX.X.........XX....X\", \"...X.....X.X.................X....X\", \"...XX.X.....X.....XXXX...X...X.X...\", \".............X.....X..X..X.X.X..X..\", \"...............X....X....X..X.X.X.X\", \".XX..XX........X.....X.XX....X....X\", \"...X....X..X...XXX..X........X.....\", \"X.XXX.XX..X......XX.X......X.X.X...\", \".XX.X....X..X..X.X.................\", \"....XXX.X.X......XX.....XX...X.XX..\", \"......X....XX..X.....X...XX.X.....X\"}",
+			"id":0,
+			"input":"{\".....XXX...X.....XX.....XX.XX..XX..\", \"..X.XX.XX.X....XXX....X......X.....\", \".....XX...X....X.X....X.X.X........\", \"X.....X.......XXX.X....X..XX.X.....\", \".X.X....X.X........X..........XX...\", \"........XX........X.....X..X.X.....\", \".X..X...X...XX.X..X.....X..........\", \"..............X......X...X....X..X.\", \"XX..X.....XX..X...X...X.X..X....X..\", \".X....XX..X...............X.X.XXXX.\", \"...XXXXX.....X...X....X.XX..XXX..X.\", \".........X..XX....X.X......XXXX....\", \"..XXXX.X..XXX.X...........X..X.XX..\", \"X...X...........X..X.X..X.XX..X.X..\", \"..X....X.....X..X.X....X..X.X..XXXX\", \"X..XXX..X..XX.XX.X..X...X...X..X.XX\", \"....X....X.X...X..X..X..XXX...XXXX.\", \".X..XX.XX.....X..XX..............XX\", \"X..........X..X......XXXX.....X..X.\", \".X.XXX...X..X..XX.X.X.X.X..X.......\", \"X....X.........X....XXXX..X....X..X\", \"..X.XX...X......X.X.......XX....X..\", \"X.XXXX....X.XXX..XX..XXXX.X.XX.....\", \"XXX.X........X.X..X..X....X..X.....\", \"......X..X..XX..X.....XX........X..\", \"...X.....XX..X..X..X.X......XX..X.X\", \"..X..X.......XX......X......X...XX.\", \"..X.XX......XX.X..X.....X...X.X..X.\", \".X.X.XX.XXX.X..X.X.................\", \".......X.XX..X..X..X.....X.X..XX..X\", \"X...XX.......X...X...X.X....X......\", \"X.......X.X......X.X.X......X.....X\", \"....X.X.X.X....XXX..XX.....XX.X..X.\", \"...X..X.X.XX......X.....XX.XXXX....\", \"..X......X...X.X...X...X.X.XXXX...X\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"known and candidate have the same number of elements"
+		},
+		{
+			"order":2,
+			"val":"known and candidate each have between 1 and 50 elements, inclusive"
+		},
+		{
+			"order":3,
+			"val":"all elements of known and candidate are equally long"
+		},
+		{
+			"order":4,
+			"val":"elements of known and candidate are each between 1 and 50 characters long, inclusive"
+		},
+		{
+			"order":5,
+			"val":"all characters in known and candidate must be either '.' or 'X'"
+		}
+	]
+}

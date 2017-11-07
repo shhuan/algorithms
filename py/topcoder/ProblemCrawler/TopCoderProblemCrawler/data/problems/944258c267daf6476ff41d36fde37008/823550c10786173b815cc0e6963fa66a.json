@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=665&rd=4335",
+	"statement":"<p>Each gun leaves a unique set of scratches, sort of like a fingerprint, on every bullet that fires through its chamber. These scratch marks are used widely in forensic investigations of crime scenes.</p> <p>Given a list of guns and the scratch marks that they leave, and the scratch marks on a bullet, return the element number (0-based) of the gun which fired the bullet.</p> <p>In order for a bullet to match the gun, the gun must leave just as many scratches as are on the bullet, with the same intervals between scratches. For example, the scratch marks:</p> <pre>\n&quot;| |||  |   |&quot;\n&quot;| |||  |   |&quot;\nmatch, but\n&quot;| |||  |   |&quot;\n&quot;||| |  |   |&quot;\ndo not.\n</pre> <p>Note that since bullets are round, the scratch marks wrap around. Therefore:</p> <pre>&quot;|| ||| | &quot;\n&quot; | || |||&quot;</pre> <p>match (since it's the same scratch marks, only starting at a different location).</p> <p>If no gun matches the bullet, return -1.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"Gun markings cannot be flipped. That is,  doesn't match ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Bullets",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"match",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int match(String[] guns, String bullet)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"|| || |\"",
+			"id":0,
+			"input":"{\"| | | |\",\"|| || |\",\" |||| \"}",
+			"order":1
+		},
+		{
+			"expect":"\"|||| \"",
+			"id":0,
+			"input":"{\"||| |\",\"| | || \"}",
+			"note":"Notice that index 0 is the same scratch pattern, just shifted. ",
+			"order":2
+		},
+		{
+			"expect":"\"||| ||| \"",
+			"id":0,
+			"input":"{\"|| || ||\",\"| | | | \",\"||||||||\"}",
+			"note":"No gun matches the scratches. ",
+			"order":3
+		},
+		{
+			"expect":"\"| | | |\"",
+			"id":0,
+			"input":"{}",
+			"order":4
+		},
+		{
+			"expect":"\"|| ||| |\"",
+			"id":0,
+			"input":"{\"|| || ||\",\"| | | | \",\"||| ||| \",\"||||||||\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"guns will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"each element of guns will have the same length as bullet."
+		},
+		{
+			"order":3,
+			"val":"bullet will have length between 5 and 50, inclusive."
+		},
+		{
+			"order":4,
+			"val":"bullet and each element of guns can contain only the pipe character '|' and spaces."
+		},
+		{
+			"order":5,
+			"val":"at most one gun will match the bullet."
+		}
+	]
+}

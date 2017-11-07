@@ -1,0 +1,111 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12606&rd=15503",
+	"statement":"<p><i>This problem statement contains superscripts and/or subscripts. These may not display properly outside the applet.</i></p> <p>Gobble City has a tree topology: There are N intersections, numbered 0 through N-1. The intersections are connected by N-1 bidirectional roads in such a way that it is possible to travel between any two intersections. More precisely, for each pair of intersections there is a unique path (a sequence of roads; see Notes for a formal definition) that connects them. You are given a int[] <b>roads</b> that describes the roads: for each i (0 &lt;= i &lt;= N-2), we have 0 &lt;= <b>roads</b>[i] &lt;= i and there is a road between intersections numbered <b>roads</b>[i] and i+1.</p> <p>On each road there is a single lamp. The lamps are numbered 0 through N-2. For each i, lamp i is on the road that connects <b>roads</b>[i] and i+1. You are given a String <b>initState</b> that describes the initial states of all lamps: <b>initState</b>[i]='1' means that lamp i is initially on, and <b>initState</b>[i]='0' means that it is off.</p> <p>Now you are at the Control Center for these lamps. The only way in which you can operate the lamps looks as follows: You enter the numbers of two intersections (X and Y) into the Control Center computer, and the computer toggles the state of all lamps on the path between X and Y. (Toggling the state of a lamp means that if the lamp was off it is now on, and vice versa.) You can perform arbitrarily many such operations, one after another.</p> <p>Some of the lamps are important to you. You are given this information in the String <b>isImportant</b>: <b>isImportant</b>[i]='1' means that lamp i is important, and <b>isImportant</b>[i]='0' means that it is not.</p> <p>Your goal is to turn on all important lamps at the same time. (We do not care about the state of the remaining lamps.) Return the minimum number of operations needed to achieve the goal.</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"In your solution some lamps may be toggled multiple times."
+		},
+		{
+			"order":2,
+			"val":"A path between two intersection a and b is a sequence of intersections (v=a, v, v, ..., v=b) such that all v, v, ..., v are pairwise distinct and for each i=0..k-1, there exists a road between v and v."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TurnOnLamps",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimize",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimize(int[] roads, String initState, String isImportant)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"0001\"",
+			"id":0,
+			"input":"{0,0,1,1}",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"\"0000\"",
+			"id":0,
+			"input":"{0,0,1,1}",
+			"note":" ",
+			"order":2
+		},
+		{
+			"expect":"\"000100\"",
+			"id":0,
+			"input":"{0,0,1,1,4,4}",
+			"note":" ",
+			"order":3
+		},
+		{
+			"expect":"\"100100\"",
+			"id":0,
+			"input":"{0,0,1,1,4,4}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"010001110\"",
+			"id":0,
+			"input":"{0,0,2,2,3,1,6,3,1}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\"0000000000010000000000000010000010100000000000000\"",
+			"id":0,
+			"input":"{0,0,1,2,4,4,6,1,2,5,2,8,8,3,6,4,14,7,18,14,11,7,1,12,7,5,18,23,0,14,11,10,2,2,6,1,30,11,9,12,5,35,25,11,23,17,14,45,15}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"roads will contain N-1 elements, where N is between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"For each i, the i-th (0-based index) element of roads will be between 0 and i, inclusive."
+		},
+		{
+			"order":3,
+			"val":"initState will be N-1 characters long."
+		},
+		{
+			"order":4,
+			"val":"initState will only contain the characters '0' and '1'."
+		},
+		{
+			"order":5,
+			"val":"isImportant will be N-1 characters long."
+		},
+		{
+			"order":6,
+			"val":"isImportant will only contain the characters '0' and '1'."
+		}
+	]
+}

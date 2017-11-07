@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2929&rd=5863",
+	"statement":"You are watching a car race. Each car starts at a different point on the x-axis, travels at the same speed, and starts at the same time. However, each car is travelling along a different road (which extends to infinity in one direction, and is stopped by the x-axis in the other direction), and each road has its own direction specified by an angle between 1 and 179, inclusive. An angle of 90 indicates that the road heads directly in the positive y direction, while an angle of 1 indicates that the road heads just a little bit north of the positive x direction. <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/Crossings/cars.png\" /> <br /><br /><br /><br /> Sometimes, two or more roads intersect at some point. When this happens, the car that reaches the intersection first is able to block the intersection so that no other cars can pass through it. If two cars arrive at an intersection at the same time, the car that appears earlier in the input (lower index) will be the only car to pass through. <br /><br /><br /><br /> <img src=\"http://www.topcoder.com/contest/problem/Crossings/cross1.png\" /><br /><br /> In this picture, the cars following the red paths at 0, 10 and 50 pass all intersections, while the cars following the gray paths are stopped (see example 0).<br /><br /> You will be given two int[]s, <b>positions</b>, and <b>angles</b>, where the i<sup>th</sup> car corresponds to the i<sup>th</sup> element of <b>positions</b> and the i<sup>th</sup> element of <b>angles</b>. The i<sup>th</sup> element of <b>positions</b> is the x coordinate of the i<sup>th</sup> car. The i<sup>th</sup> element of <b>angles</b> is the angle in degrees between the x-axis and the road that the i<sup>th</sup> car travels on. Your method should return a int[] containing the 0-based indices of all the cars that will pass all the intersections along their roads. Your return should be sorted in ascending order.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Crossings",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getOut",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getOut(int[] positions, int[] angles)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{105, 40, 30, 75, 135, 75}",
+			"id":0,
+			"input":"{0, 40, 20, 10, 30, 50}",
+			"note":"The example from the problem statement. ",
+			"order":1
+		},
+		{
+			"expect":"{40, 40, 140}",
+			"id":0,
+			"input":"{0, 40, 20}",
+			"order":2
+		},
+		{
+			"expect":"{89, 91}",
+			"id":0,
+			"input":"{10, 20}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"positions and angles will contain the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of positions will be between 0 and 1000000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of angles will be between 1 and 179, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of positions will be unique."
+		}
+	]
+}

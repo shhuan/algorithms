@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":161.16,
+			"constraints":[],
+			"correctRatio":35.96,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11896&rd=15097",
+			"name":"CrossingTheRiver",
+			"notes":[],
+			"submission":89
+		},
+		{
+			"avgPts":265.33,
+			"constraints":[],
+			"correctRatio":70.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12109&rd=15097",
+			"name":"ElevenMultiples",
+			"notes":[],
+			"submission":34
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12110&rd=15097",
+			"name":"PQHulls",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2012 TCO Algorithm > Round 3B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15097"
+}

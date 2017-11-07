@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4705&rd=7993",
+	"statement":"<p>You are working for a defense agency that is testing the accuracy of a new missile guidance system. As part of this effort, several missiles have been fired off. Each missile fired was programmed with the same target coordinates, although the actual points of impact vary.</p> <p>Your task is to determine the &quot;best fit&quot; point to describe the location where the missiles actually landed. To determine how well a point describes the location, calculate the cartesian distance from the point to each of the landing points. Then, total the sum of the squares of these distances. The best fit point is the point that minimizes this sum.</p> <p>You are given int[]s <b>x</b> and <b>y</b>, both containing the same number of elements, where the i-th element of <b>x</b> and the i-th element of <b>y</b> describe the coordinates of the i-th missile landing point. You are to return a int[] with exactly two elements, describing the coordinates of the lattice point (point with integral coordinates) that is closest to the &quot;best fit&quot; point. The first element should be the x-coordinate, and the second element should be the y-coordinate.</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"The cartesian distance between two points (x1, y1) and (x2, y2) is defined as Sqrt((x2-x1)^2 + (y2-y1)^2)."
+		},
+		{
+			"order":2,
+			"val":"The return value must be within 1e-9 absolute or relative error of the actual result."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MissileTarget",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestFit",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] bestFit(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{-1000, 500, 500}",
+			"id":0,
+			"input":"{750, -500, -250}",
+			"note":"These three impacts are all pretty close to the origin, and sure enough, the origin is the best fit point.",
+			"order":1
+		},
+		{
+			"expect":"{834}",
+			"id":0,
+			"input":"{765}",
+			"note":"With only one point, it is its own best fit.",
+			"order":2
+		},
+		{
+			"expect":"{200, 400}",
+			"id":0,
+			"input":"{100, 200}",
+			"note":"With only two points, the best fit is the midpoint between the two.",
+			"order":3
+		},
+		{
+			"expect":"{14703, 25814, 36924, -47036}",
+			"id":0,
+			"input":"{123456, -987654, 97531, -86420}",
+			"order":4
+		},
+		{
+			"expect":"{0, 0, 0, 0, 0, 0}",
+			"id":0,
+			"input":"{0, 5, 5, 6, 8, 8}",
+			"note":"In this case, notice that the actual best fit point possible is (5.333, 0). If we look at lattice points only, then our best fit is (6, 0), however, we are interested in the lattice point that is closest to the actual best fit point, so we return (5, 0).",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of x will be between -1000000 and 1000000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of y will be between -1000000 and 1000000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"The actual (possibly non-lattice) best fit point will be at least 1e-2 closer to the correct return value than to any other lattice point."
+		}
+	]
+}

@@ -1,0 +1,74 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6047&rd=9923",
+	"statement":"Given a positive integer j greater than 1, the corresponding Collatz sequence is produced by repeatedly applying f to j (and continues even after we reach 1). The function f behaves as follows: <pre>\n             { x/2    if x is even\n   f(x)  =   {\n             { 3x+1   if x is odd\n</pre> Suppose someone began with the value y and has started (but not necessarily finished) generating the Collatz sequence. Each time they apply f they write down 'E' or 'O' to denote whether the argument was even or odd, respectively. Given the String <b>s</b> they have written down, you must return a String of the form (quotes for clarity) &quot;ak+b&quot;. Here a and b are integers with no extra leading zeros. The returned string must make the following set the collection of all possible numbers that could have begun the sequence: <pre>\n\tP = { ak + b | k &gt;= 0 and ak + b &gt; 1}\n</pre> If there are multiple possible return values, choose the one with b minimal.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"InverseCollatz",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getForm",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getForm(String s)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"8k+0\"",
+			"id":0,
+			"input":"\"EEE\"",
+			"note":"The argument was even 3 times in a row, so the original value was a positive multiple of 8.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"2k+1\"",
+			"id":0,
+			"input":"\"OE\"",
+			"note":"The initial number had to be odd. After multiplying by 3 and adding 1, the next value will definitely be even.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"4k+3\"",
+			"id":0,
+			"input":"\"OEO\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"2199023255552k+1014933810256\"",
+			"id":0,
+			"input":"\"EEEEOEEEEOEEEEOEEEEOEEEEOEEEEOEEEEOEEEEOEEEEOEEEEO\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in s will be 'E' or 'O'."
+		},
+		{
+			"order":3,
+			"val":"An 'O' will never be immediately followed by another 'O' in s."
+		}
+	]
+}

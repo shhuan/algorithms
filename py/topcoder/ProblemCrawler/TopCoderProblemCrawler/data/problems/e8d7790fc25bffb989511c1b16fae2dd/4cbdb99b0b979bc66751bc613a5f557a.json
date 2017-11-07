@@ -1,0 +1,118 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6406&rd=10766",
+	"statement":"The job of a search engine is to provide relevant results to search queries. However, most real search queries match thousands, if not millions, of websites. Since some of them have to be shown, it is important for the search engine to figure out which websites are worth displaying. This is done with several heuristics, one of which considers the count of external websites linking to the website in question, as well as their importance. <br /><br /><br /><br /> An easy way to do this is to assign all websites an initial vote of 1. If website A links to website B, website A adds all its votes to website B. As an example, consider websites A, B and C. They each have an initial vote of 1. However, after careful evaluation you discover that both A and B link to C. Therefore, A and B each have 1 vote, and C has 3 votes. Should a search query ever match all three websites, website C will be displayed first. The task is made more complex by websites often exchanging links. This means that if website A links to B, B may also link to A. To prevent artificial inflation of website importance, all votes from website A to website B must not count toward B's votes if website B directly or indirectly links to A. <br /><br /><br /><br /> You are given a String[] <b>votes</b> and String <b>website</b>. Each element of <b>votes</b> consists of a website name, followed by a single space, followed by a single space separated list of all the websites that link to it. All website names contain only uppercase letters. Count and return the votes that <b>website</b> has, following the strategy outlined above.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WebsiteRank",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countVotes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countVotes(String[] votes, String website)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"C\"",
+			"id":0,
+			"input":"{\"C A B\"}",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"\"A\"",
+			"id":0,
+			"input":"{\"A B C D\", \"B C D\", \"C D\"}",
+			"note":"B has 4 votes, C has 2 votes, and D has 1 vote. Initially A has 1 vote, which changes to 8 after the strategy is applied.",
+			"order":2
+		},
+		{
+			"expect":"\"A\"",
+			"id":0,
+			"input":"{\"A\"}",
+			"note":"Unfortunately, no websites currently link to A.",
+			"order":3
+		},
+		{
+			"expect":"\"A\"",
+			"id":0,
+			"input":"{\"A B\", \"B A\"}",
+			"note":"B's votes to A and A's votes to B are ignored, leaving just one vote for each.",
+			"order":4
+		},
+		{
+			"expect":"\"A\"",
+			"id":0,
+			"input":"{\"A B C D E F\", \"B A\", \"C B\", \"D B\"}",
+			"note":"Not only does A directly link to B, but also indirectly to C and D. This leaves just 3 votes for A.",
+			"order":5
+		},
+		{
+			"expect":"\"MYSITE\"",
+			"id":0,
+			"input":"{\"MYSITE OTHERSITE ANOTHERSITE THIRDSITE\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"votes will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of votes will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of votes will contain only uppercase letters ('A'-'Z') and spaces (' ')."
+		},
+		{
+			"order":4,
+			"val":"Each element of votes will contain no leading or trailing spaces, and no consecutive spaces."
+		},
+		{
+			"order":5,
+			"val":"website will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":6,
+			"val":"website will contain only uppercase letters ('A'-'Z')."
+		},
+		{
+			"order":7,
+			"val":"website will be contained in votes either as a linking website or a website that is linked to."
+		},
+		{
+			"order":8,
+			"val":"A website will never directly link back to itself."
+		},
+		{
+			"order":9,
+			"val":"All elements of votes will start with different website names."
+		},
+		{
+			"order":10,
+			"val":"Each element of votes will have a distinct first website name. Within a single element of votes no website name will be repeated."
+		}
+	]
+}

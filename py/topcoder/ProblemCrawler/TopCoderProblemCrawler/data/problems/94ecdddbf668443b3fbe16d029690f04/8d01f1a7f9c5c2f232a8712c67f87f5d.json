@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12834&rd=15828",
+	"statement":"The king of Byteland wants to introduce a coin system for the country. He would like to introduce coins of exactly N different values and each value should be a positive integer. <br /><br /><br /><br /> You are given a int[] <b>maxSum</b> containing N constraints. The king considers a coin system to be bad if there is at least one K such that 1 &lt;= K &lt;= N and the sum of some K different coin values is strictly greater than <b>maxSum</b>[K-1]. For example when N = 5 and <b>maxSum</b> = {7, 11, 16, 17, 30} then the coin system {1, 2, 3, 5, 7} is a bad choice as 5+7=12 (&gt; <b>maxSum</b>[1]). The coin system {1, 3, 4, 5, 6} is also bad as 3+4+5+6=18 (&gt; <b>maxSum</b>[3]). But the coin system {1, 2, 4, 5, 6} is not a bad choice. <br /><br /><br /><br /> Given the int[] <b>maxSum</b> containing N elements, find the number of different ways in which the king can choose a system of N different coin values that is not bad. Return the answer modulo 1,000,000,007. Two choices are considered different if there is at least one coin value which appears in one choice but doesn?t appear in the other.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CoinsOfByteland",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countCoinSystems",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countCoinSystems(int[] maxSum)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{7, 11, 15, 18, 20}",
+			"note":"The choices of coin systems which are not bad for these constraints are: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 45",
+			"id":0,
+			"input":"{10, 19}",
+			"note":"All possible pairs of values between 1 and 10 are valid coin system here.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 10000",
+			"id":0,
+			"input":"{10000}",
+			"note":"All values between 1 and 10000 are valid.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 546494632",
+			"id":0,
+			"input":"{1326549, 3212423, 6546565, 8785456}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maxSum will contain between 1 and 5 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"For each i between 1 and N-1, inclusive (where N is the number of elements in maxSum), maxSum[i] will be greater than maxSum[i-1]."
+		},
+		{
+			"order":3,
+			"val":"Each element of maxSum will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

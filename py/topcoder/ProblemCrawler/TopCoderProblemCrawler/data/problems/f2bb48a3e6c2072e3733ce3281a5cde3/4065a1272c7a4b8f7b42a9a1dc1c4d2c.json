@@ -1,0 +1,110 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13776&rd=16475",
+	"statement":"<p> Foxland is a country with n cities. The cities are numbered 1 through n. The road network in Foxland is a tree. You are given the description of the roads: three int[]s <b>A</b>, <b>B</b> and <b>L</b> with n-1 elements each. For each valid i, there is a bidirectional road connecting the cities <b>A</b>[i] and <b>B</b>[i], and the length of the road is <b>L</b>[i]. </p> <p></p> <p> There are some foxes in Foxland. Each fox lives in a different city. You are given a int[] <b>foxes</b>. The elements of <b>foxes</b> are the numbers of cities inhabited by foxes. </p> <p></p> <p> The foxes are running a secret candy-smuggling network. Recently they have been harrassed by a new strict police officer: cat Taro. In order to avoid him, the foxes have now learned to communicate by waving their tails at each other. However, two foxes can only communicate in this way if they see each other. More precisely, they must either both be in the same city, or they have to be in two adjacent cities. (Adjacent cities are cities directly connected by a road, regardless of the road's length.) </p> <p></p> <p> Foxes can forward messages to other foxes, which makes communication transitive: If fox x can talk to fox y and fox y can talk to fox z, fox x will be able to communicate with fox z as well. </p> <p></p> <p> In order to avoid Taro, each fox must be able to talk to all other foxes (either directly or indirectly). If it isn't possible in their current configuration, some foxes may be forced to move into different cities. The foxes think that it is also suspicious if a fox moves too far from its current home. Therefore, they want to minimize the maximum distance traveled by any fox. </p> <p></p> <p> Formally, find and return the smallest integer D with the following property: It is possible to relocate some (possibly zero, possibly all) of the foxes into new cities in such a way that: </p>\n <ul> \n  <li>For each fox, the total total distance traveled by that fox is at most D.</li> \n  <li>After the relocation, all foxes can communicate (either directly or indirectly).</li> \n </ul> <p></p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxMeeting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxDistance",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxDistance(int[] A, int[] B, int[] L, int[] foxes)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"{1}",
+			"note":"There are two cities connected by a single road of length 5. There are two foxes: one in each city. As they are in adjacent cities, they can already communicate so no relocation is necessary.",
+			"order":1
+		},
+		{
+			"expect":"{2, 3}",
+			"id":0,
+			"input":"{1, 2}",
+			"note":"This country has three cities and two roads: 1-2 (length 1) and 2-3 (length 1). Initially, there is one fox in city 1 and another fox in city 3. In one optimal solution, the first fox will move from city 1 to city 2. In another optimal solution, both foxes will move from their respective cities to city 2. In each of the solutions described above we have D = 1.",
+			"order":2
+		},
+		{
+			"expect":"{2, 3}",
+			"id":0,
+			"input":"{1, 2}",
+			"note":" No relocation is necessary, all foxes can already talk to each other.",
+			"order":3
+		},
+		{
+			"expect":"{5,5,8,10,5,5,6,10,3}",
+			"id":0,
+			"input":"{10,8,3,7,2,6,9,1,4}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{28,28,8,8,28,28,25,2,13,24,24,22,22,29,4,22,8,4,1,24,21,14,18,16,13,21,14,1,25}",
+			"id":0,
+			"input":"{8,15,22,24,2,25,13,26,18,4,9,29,1,12,3,16,14,21,19,27,17,7,20,10,30,11,6,5,23}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{18,18,18,14,9,34,9,24,34,11,18,14,21,21,43,1,22,7,1,30,14,33,13,18,9,5,1,1,26,19,50,33,50,40,29,48,50,37,16,40,48,14,30,22,47,37,7,50,6}",
+			"id":0,
+			"input":"{34,14,22,9,24,19,11,37,33,21,5,30,1,43,7,31,45,27,6,12,13,35,23,47,49,50,26,40,16,10,48,25,29,15,28,46,4,20,44,17,39,32,38,2,42,8,36,3,41}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A, B, and L will contain exactly n-1 elements each."
+		},
+		{
+			"order":3,
+			"val":"Each element in A and B will be between 1 and n, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element in L will be between 1 and 100,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"A, B, and L will define a tree."
+		},
+		{
+			"order":6,
+			"val":"Number of elements in foxes will be between 1 and n, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element in foxes will be between 1 and n, inclusive."
+		},
+		{
+			"order":8,
+			"val":"All the elements of foxes are distinct."
+		}
+	]
+}

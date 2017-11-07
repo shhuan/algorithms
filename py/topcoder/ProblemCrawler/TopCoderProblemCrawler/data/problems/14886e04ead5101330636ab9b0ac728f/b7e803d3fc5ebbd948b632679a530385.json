@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2289&rd=5008",
+	"statement":"<i>Note to plugin users: This problem statement contains images.</i> <p> Farmer John has several pastures, each of which can be described as several overlapping and/or touching rectangles. For instance, the pasture in the picture below can be considered as the union of the rectangles (2,2)-(10,5) and (7,1)-(9,7). Two rectangles that only touch each other in a corner aren't counted as touching or overlapping rectangles, see example 4. </p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/Fences/fences.jpg\" /> <p> Farmer John wants to enclose all his pastures with fences (one fence for each pasture). Help him find out the total length of all fences if all the borderlines must be fenced (see example 2). </p> <p> Create a class Fences containing the method fenceLength that takes a int[] <b>x1</b>, a int[] <b>y1</b>, a int[] <b>x2</b> and a int[] <b>y2</b>, describing the rectangles that make up the pastures by overlapping and/or touching, and returns an int, the total length of all fences. Element <i>i</i> in <b>x1</b>, <b>y1</b>, <b>x2</b> and <b>y2</b> describe one rectangle with the opposite corners <b>x1</b>,<b>y1</b> and <b>x2</b>,<b>y2</b>.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Fences",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fenceLength",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int fenceLength(int[] x1, int[] y1, int[] x2, int[] y2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,3,7,4}",
+			"id":0,
+			"input":"{0,3,5,15}",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"{200,230}",
+			"id":0,
+			"input":"{100,80}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{10,10,10,40}",
+			"id":0,
+			"input":"{10,30,20,10}",
+			"note":" ",
+			"order":3
+		},
+		{
+			"expect":"{314,759, 67,232,815,882,211,839, 48, 531,567,803,439,418,968, 74, 88,834, 806,920,920,194,602,436,624,331,314, 68,421,659,653, 99,921,339,865,408}",
+			"id":0,
+			"input":"{976,823,228,463,702,515,690,252,153, 525,260,356,435,369,942, 59,605,173, 178, 70,420, 40,705, 38,841,430,965, 312,680,188,982,160,395,219,340,225}",
+			"order":4
+		},
+		{
+			"expect":"{1,5}",
+			"id":0,
+			"input":"{1,5}",
+			"note":"The two rectangles only touch each other at one corner, and are thus considered as different pastures. ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x1, y1, x2 and y2 will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x1, y1, x2 and y2 will all contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element in x1, y1, x2 and y2 will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Element i in x1 will differ from element i in x2."
+		},
+		{
+			"order":5,
+			"val":"Element i in y1 will differ from element i in y2."
+		}
+	]
+}

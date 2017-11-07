@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174.44,
+			"constraints":[],
+			"correctRatio":80.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9943&rd=13508",
+			"name":"TemplateMatching",
+			"notes":[],
+			"submission":584
+		},
+		{
+			"avgPts":278.39,
+			"constraints":[],
+			"correctRatio":54.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9942&rd=13508",
+			"name":"CubeNets",
+			"notes":[],
+			"submission":240
+		},
+		{
+			"avgPts":553.99,
+			"constraints":[],
+			"correctRatio":11.01,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9924&rd=13508",
+			"name":"WalkingDistance",
+			"notes":[],
+			"submission":109
+		}
+	],
+	"name":"Single Round Match 417 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13508"
+}

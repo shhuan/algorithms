@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7424&rd=10662",
+	"statement":"<p> Julianne invited her two friends Michael and Jane to a cake party. When Michael and Jane arrived, they saw that their host had prepared several tables. On each table there was a plate with one of the cakes. Each cake was cut into several pieces. </p> <p> Not knowing where to start, Michael and Jane decided to play the following game: Players take alternating turns. In each turn the player selects one cake, and takes and eats several pieces of the cake. The player must take and eat at least one piece. The player who eats the last piece of the last cake wins. </p> <p> However, the host would be really offended if she had the impression that the guests didn't like some of her cakes. Therefore Michael and Jane agreed on one additional rule: Each time a player selects a cake, he or she may only select one of those cakes that have the most pieces remaining. </p> <p> Michael starts the game and plays optimally. In other words, if there is a strategy that will ensure his win (no matter how Jane plays), he will follow one such strategy. If he finds himself in a position where no strategy can guarantee him winning the game he just makes a valid move. In addition, whenever Michael has more than one move to choose from, he picks the lexicographically smallest one (explained below). </p> <p> You are given a int[] <b>pieces</b>. The i-th element of <b>pieces</b> is the initial number of pieces of the i-th cake. Return Michael's first move as a String formatted as follows: &quot;<tt>CAKE C PIECES P</tt>&quot;, where <tt>C</tt> is the zero-based index of the cake he should select and <tt>P</tt> is the number of pieces he should eat. The numbers <tt>C</tt> and <tt>P</tt> must not contain unnecessary leading zeroes. In case there are multiple valid answers return the one where the resulting String is lexicographically smallest. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Ignore the appetite and eating speed of both players. In other words, assume that each of them is able to eat all the cakes in a short amount of time."
+		},
+		{
+			"order":2,
+			"val":"When selecting the correct output, standard string comparison rules apply: The string A is lexicograpically smaller than the string B if and only if (A is a proper prefix of B) or (there is an integer X such that first X-1 characters of A and B are equal, and the X-th character of A has a smaller ASCII value than the X-th character of B)."
+		},
+		{
+			"order":3,
+			"val":"Valid characters ordered by their ASCII values (smallest to largest): space, digits '0'-'9' in this order, letters 'A'-'Z' in this order."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CakeParty",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"makeMove",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String makeMove(int[] pieces)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"CAKE 0 PIECES 47\"",
+			"id":0,
+			"input":"{47}",
+			"note":"With one cake the game is simple: just take everything.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"CAKE 0 PIECES 1\"",
+			"id":0,
+			"input":"{3,3}",
+			"note":"Two equally big cakes. This is clearly a losing position for the player to move. Thus we return the lexicographically smallest possible move.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"CAKE 1 PIECES 2\"",
+			"id":0,
+			"input":"{3,5}",
+			"note":"The winning move is to create the position from the previous example.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"CAKE 0 PIECES 1\"",
+			"id":0,
+			"input":"{1,1,1,1,1,1,1,1,1,1,1,1,1,1}",
+			"note":"This is an almost deterministic game. The players can not influence the result at all.",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"CAKE 2 PIECES 110\"",
+			"id":0,
+			"input":"{3,3,112}",
+			"note":"This is a winning position, as we can eat the entire last cake and thus create the position from Example 1. However, this is not the only winning move, and there is a lexicographically smaller winning move than the one we described.",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"CAKE 0 PIECES 1\"",
+			"id":0,
+			"input":"{3,3,1}",
+			"note":"Note that we can not eat the last cake now, as it is not one of the largest ones.",
+			"order":6
+		},
+		{
+			"expect":"Returns: \"CAKE 10 PIECES 1\"",
+			"id":0,
+			"input":"{4,7,4,7,4,7,4,7,47,47,47,47}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pieces will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of pieces will be between 1 and 2,000,000,000, inclusive."
+		}
+	]
+}

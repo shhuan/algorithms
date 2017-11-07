@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13060&rd=15997",
+	"statement":"Given is a positive integer <b>W</b>. We will use <b>W</b> to define a function f. The value f(x) is computed as follows: \n <ul> \n  <li>If x is not a positive integer, f(x) is undefined.</li> \n  <li>Let y = x modulo <b>W</b>. If y is zero, f(x) is undefined.</li> \n  <li>Otherwise, f(x) = x/y (where &quot;/&quot; denotes exact real division).</li> \n </ul> For any positive integer x, consider the following infinite sequence: x, f(x), f(f(x)), f(f(f(x))), and so on. We say that f is always defined for x if all the terms of the above sequence are defined. (In other words, there is no positive integer k such that f^k(x) is undefined. Here, f^k denotes f applied k times.) <br /><br /><br /><br /> You are given longs <b>L</b> and <b>R</b>, and the int <b>W</b> used in our function f. Count all x between <b>L</b> and <b>R</b>, inclusive, such that f is always defined for x. Return that count. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AlwaysDefined",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countIntegers",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countIntegers(long L, long R, int W)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"For  = 4, we have f(10) = 5, f(f(10)) = 5, f(f(f(10))) = 5 and so on, thus f is always defined for x = 10.",
+			"order":1
+		},
+		{
+			"expect":"99",
+			"id":0,
+			"input":"1",
+			"note":"For  = 2, f is always defined for odd integers but not for even integers. There are 50 odd integers between 1 and 99, inclusive.",
+			"order":2
+		},
+		{
+			"expect":"1410",
+			"id":0,
+			"input":"1282",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"273209804877",
+			"id":0,
+			"input":"29195807",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"L will be between 1 and 10^18, inclusive."
+		},
+		{
+			"order":2,
+			"val":"R will be between L and 10^18, inclusive."
+		},
+		{
+			"order":3,
+			"val":"W will be between 2 and 3000, inclusive."
+		}
+	]
+}

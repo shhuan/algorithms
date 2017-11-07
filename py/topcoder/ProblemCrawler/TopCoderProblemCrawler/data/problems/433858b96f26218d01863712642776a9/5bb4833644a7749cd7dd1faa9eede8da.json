@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7847&rd=10710",
+	"statement":"<p>In an old school arcade video game, you have reached the following bonus level. There are a number of platforms containing coins, and you must jump from platform to platform collecting the coins. You may only jump to lower platforms, so your entire journey will be downward. You can select any platform as your starting platform.</p> <p>Your jumping behavior is defined as follows. On each jump, your horizontal speed is constant and does not exceed <b>v</b>. Your fall down follows the standard laws of physics: your free fall acceleration is <b>g</b> and initially your speed is 0.</p> <p>For simplicity, we will represent each platform as a single point. Each element of <b>platforms</b> represents a single platform and is formatted &quot;X Y C&quot; (quotes for clarity), where X and Y are the x and y coordinates of the platform and C is the number of coins on the platform. Greater values of y represent higher locations. Return the greatest number of coins you can collect.</p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"A dropped object without starting velocity will fall down */2 units in time ."
+		},
+		{
+			"order":2,
+			"val":"Note, that you always can drop to the platform right below you."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PlatformJumper",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxCoins",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxCoins(String[] platforms, int v, int g)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"3 10 7\", \"5 15 7\", \"8 9 12\" }",
+			"note":"It is possible to jump from platform 1 to platform 0, thus we can earn 7+7=14 coins. It is impossible to jump from platform 1 to platform 2.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"0 0 1\", \"2 4 1\", \"4 0 1\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"{\"0 0 1\", \"5000 5000 10\"}",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"platforms will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of platforms will be formatted as &quot;X Y C&quot;, where X, Y and C are integers with no extra leading zeroes."
+		},
+		{
+			"order":3,
+			"val":"In each element of platforms, X and Y will be between 0 and 5000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"In each element of platforms, C will be between 0 and 10000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"All platforms will have distinct locations."
+		},
+		{
+			"order":6,
+			"val":"v and g will each be between 1 and 100, inclusive."
+		}
+	]
+}

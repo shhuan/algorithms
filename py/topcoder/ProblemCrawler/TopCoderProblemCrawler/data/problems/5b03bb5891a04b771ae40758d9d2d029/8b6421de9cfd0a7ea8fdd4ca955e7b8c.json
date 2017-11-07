@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3041&rd=5883",
+	"statement":"<p> XML documents are widely used today to describe many different kinds of data. The primary purpose of XML is to allow people to share textual and numerical data in a structured format across the Internet. Note that the XML document format described in this problem is a simplified version of the actual XML format. </p> <p> An XML document contains tags and plain text. Tags are used to define <i>blocks</i> within the XML document. A block always begins with a start-tag and ends with a corresponding end-tag. The format of these tags are &lt;<i>tag-name</i>&gt; and &lt;/<i>tag-name</i>&gt;, respectively. The <i>tag-name</i> for an end-tag is the same (including case) as the start-tag for the block it closes. All plain text data must be inside at least one block. The plain text will not contain the characters '&lt;', '&gt;' and '/'. </p> <p>Blocks may be nested, but cannot overlap. So for instance, <tt>&quot;&lt;root&gt;&lt;data&gt;Hello world&lt;/data&gt;&lt;/root&gt;&quot;</tt> and <tt>&quot;&lt;root&gt;Hello&lt;/root&gt;&lt;root&gt;world&lt;/root&gt;&quot;</tt> are valid XML documents, while <tt>&quot;&lt;root&gt;&lt;data&gt;Hello world&lt;/root&gt;&lt;/data&gt;&quot;</tt> and <tt>&quot;&lt;root&gt;Hello&lt;/root&gt; &lt;root&gt;world&lt;/root&gt;&quot;</tt> are not; the first one has overlapping blocks (the tag &lt;data&gt; must end before the outer tag &lt;root&gt; ends), the second has text - a space - outside all blocks (in this problem, spaces are treated just like any other character, see example 2). </p> <p>Your task is to write a program which formats an XML document, according to the following rules: If a block contains other blocks, the start- and end-tags for that block should be on lines by themselves, and all tags and text inside this block should be indented by 3 spaces per open tag. Otherwise the start- and end-tags should be on the same line, with the textual content of the block (if any) between the tags (and nothing else, except indentation, may appear on this line). See example 0 for clarifications. </p> <p> Create a class BadXML containing the method format which takes a String[] <b>doc</b>, the XML document, and returns a String[] containing the properly indented XML document. Concatenate the elements in <b>doc</b> to get the full XML document. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"Spaces are treated like any other character, see example 2."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BadXML",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"format",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] format(String[] doc)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"<article>\", \" <author>writer</author>\", \" <headline>TopCoder Open 2004</headline>\", \" <ingress></ingress>\", \" <paragraph>\", \" TopCoder Open is being held at \", \" <st:hotel>Santa Clara Marriott</st:hotel>\", \" which lies in the northern part of \", \" <st:state>California</st:state>\", \" .\", \" </paragraph>\", \" <paragraph>&lbr;Image&rbr;</paragraph>\", \"</article>\" }",
+			"id":0,
+			"input":"{\"<article>\", \"<author>writer</author>\", \"<headline>TopCoder\", \" \", \"Open 2004</headline>\", \"<ingress>\", \"</ingress>\", \"<paragraph>\", \"TopCoder Open is being held at <st:hotel>\", \"Santa Clara Marriott</st:hotel>\", \"which lies in the northern part of \", \"<st:state>California</st:state>.\", \"</paragraph>\", \"<paragraph>\", \"&lbr;Image&rbr;\", \"</paragraph>\", \"</article>\"} ",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \"<root>A root node</root>\", \"<root>Another root node</root>\" }",
+			"id":0,
+			"input":"{\"<ro\",\"ot>A roo\",\"\",\"t node</r\",\"oot><\",\"root>Anot\",\"her root node</ro\",\"ot>\",\"\"}",
+			"note":"An XML document may contain several blocks at the top level.",
+			"order":2
+		},
+		{
+			"expect":"Returns: { \"<outer_tag>\", \" \", \" <inner_tag> Some text </inner_tag>\", \"</outer_tag>\" }",
+			"id":0,
+			"input":"{\"<outer_tag>\", \" <inner_tag>\", \" Some text\", \" </inner_tag>\", \"</outer_tag>\"} ",
+			"note":"The indentation in the input is treated as space characters and is not removed. ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"doc will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in doc will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The characters in the elements of doc will have ASCII values between 32 and 126, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The characters '&lt;', '&gt;' and '/' will only be used in tags."
+		},
+		{
+			"order":5,
+			"val":"A tag-name will not contain any of the characters '&lt;', '&gt;', '/' or space."
+		},
+		{
+			"order":6,
+			"val":"A tag-name will contain at least one character."
+		},
+		{
+			"order":7,
+			"val":"doc will describe a valid XML document according to the description above, and will contain at least one block."
+		},
+		{
+			"order":8,
+			"val":"The return value will contain at most 100 elements, and no element will contain more than 80 characters."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":153.28,
+			"constraints":[],
+			"correctRatio":57.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4809&rd=7999",
+			"name":"ExploringEuropa",
+			"notes":[],
+			"submission":142
+		},
+		{
+			"avgPts":374.18,
+			"constraints":[],
+			"correctRatio":89.37,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4808&rd=7999",
+			"name":"ZCurve",
+			"notes":[],
+			"submission":254
+		},
+		{
+			"avgPts":520.18,
+			"constraints":[],
+			"correctRatio":21.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4440&rd=7999",
+			"name":"AntiChess",
+			"notes":[],
+			"submission":28
+		}
+	],
+	"name":"Single Round Match 266 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=7999"
+}

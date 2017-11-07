@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7343&rd=12013",
+	"statement":"<p> You and a friend are sharing a piece of cake. First you eat half of the piece, and then your friend eats half of what remains. You continue in this fashion until the two of you have finished the cake (after an infinite number of iterations). If you write the sum of the fractions each of you eat like this: </p> <pre>\n    you     him\n    -----   -----\n    1/2   + 1/4   +\n    1/8   + 1/16  +\n    1/32  + 1/64  +\n    1/128 + 1/256 +\n    ...\n</pre> <p> with each fraction you eat in the first column and each fraction your friend eats in the second column, you can clearly see that you eat twice as much cake as your friend does, because in each row the fraction you eat is twice the fraction your friend eats. Since the total amount of cake is 1, you therefore have eaten 2/3 of the cake and your friend has eaten 1/3. </p> <p> If, instead of simply taking turns eating half of the remaining cake, you and your friend repeat a different pattern, you can each get a different total amount. For example, if you repeat the pattern &quot;you, him, you&quot;, you will end up eating 5/7 and your friend will end up eating 2/7. This can be seen by writing the fractions as such: </p> <pre>\n\n    you     him     you\n    -----   -----   -----\n    1/2   + 1/4   + 1/8   +\n    1/16  + 1/32  + 1/64  +\n    1/128 + 1/256 + 1/512 +\n    ...\n</pre> <p> The first and third fraction in each row sum to 5/2 of the middle fraction, so you each eat cake in the ratio of 5 to 2. Therefore, you end up eating 5/7 of the whole. </p> <p> Given a fraction <b>a</b>/<b>b</b>, determine the shortest pattern of taking half of the remaining cake that can be repeated infinitely such that you will get a/b of the piece of cake. Return the pattern as a String, made up of the characters '*' (indicating that you take the next half) or '-' (indicating that your friend takes the next half). If it is impossible to achieve with a pattern of length 60 or smaller, return &quot;impossible&quot; (quotes for clarity only). </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ZenoDivision",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"cycle",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String cycle(String a, String b)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"3\"",
+			"id":0,
+			"input":"\"2\"",
+			"note":"This is the first example in the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"\"7\"",
+			"id":0,
+			"input":"\"5\"",
+			"note":"This is the second example in the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"\"1\"",
+			"id":0,
+			"input":"\"0\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"9\"",
+			"id":0,
+			"input":"\"5\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"2\"",
+			"id":0,
+			"input":"\"1\"",
+			"note":"There is no way for you to each have half of the piece of cake.",
+			"order":5
+		},
+		{
+			"expect":"\"76861433640456465\"",
+			"id":0,
+			"input":"\"76861433640456464\"",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"b will contain only digits, and will represent a number between 1 and 2^63-1, inclusive, with no unnecessary leading zeros."
+		},
+		{
+			"order":2,
+			"val":"a will contain only digits, and will represent a number between 0 and b, inclusive, with no unnecessary leading zeros."
+		},
+		{
+			"order":3,
+			"val":"The integers represented by a and b will not have any common factors (the fraction a/b will be in reduced form)."
+		}
+	]
+}

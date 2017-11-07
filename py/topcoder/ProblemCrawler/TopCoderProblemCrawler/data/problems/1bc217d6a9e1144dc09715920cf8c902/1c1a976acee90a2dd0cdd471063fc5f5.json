@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2445&rd=5080",
+	"statement":"Clustering algorithms are becoming increasingly important in many applications and there are dozens of different ways to cluster, each of which has its own pros and cons. In this problem, your task is to implement one of the simpler algorithms on a set of points in two-dimensional space (corresponding elements of int[]s <b>x</b> and <b>y</b> represent a single point). The algorithm starts by initializing each point as its own cluster (a cluster is just a group of points). Then, the algorithm repeatedly merges the two closest clusters, where the distance between two clusters is defined as the average distance between each pair of points, p and q, where p is a point in one cluster and q is a point in the other cluster. Hence, the distance between a cluster of 4 points and a cluster of 2 points would be the average of 8 distances. The algorithm terminates when there is only one cluster left. In most applications, we wouldn't have to worry about ties, so in this problem there will be no cases where the comparison of average distances with a relative difference of 1E-3 or less has an effect on the clustering. <br /><br /><br /><br /> Once you have successfully clustered the points, you need to return the final cluster as a String. The format of this String can be defined recursively. If you have a cluster A, with more than one element, which was formed from clusters which have String forms B and C, then the String form of A should be &quot;[BC]&quot; (quotes for clarity), where B represents the cluster with the lowest indexed point out of all the points in B and C (indexed in the input). If you have a cluster A that contains only one point, (x<sub>i</sub>,y<sub>i</sub>), then it should be formatted as &quot;[(x<sub>i</sub>,y<sub>i</sub>)]&quot;, where (x<sub>i</sub>,y<sub>i</sub>) are the coordinates of the points..<br /><br /><br /><br /> For example, if <b>x</b> = {5,17,5} and <b>y</b> = {4,4,9}, we get the following distances:<br /><br /> p<sub>0</sub> - p<sub>1</sub> = 12<br /><br /> p<sub>0</sub> - p<sub>2</sub> = 5<br /><br /> p<sub>1</sub> - p<sub>2</sub> = 13<br /><br /> Thus, we would first merge p<sub>0</sub> and p<sub>2</sub>. This gives us 2 clusters, and so we would merge them, as there is no other choice. This gives us a return value of &quot;[[[(5,4)][(5,9)]][(17,4)]]&quot;.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PointClustering",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"cluster",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String cluster(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{4,4,9}",
+			"id":0,
+			"input":"{5,17,5}",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"{9,1,2,4,6,8,2,3,4}",
+			"id":0,
+			"input":"{9,3,6,3,1,7,3,2,6}",
+			"note":"This image shows all of the clusters that the algorithm creates, where each cluster is represented by an oval. ",
+			"order":2
+		},
+		{
+			"expect":"{-10,0,-10,0}",
+			"id":0,
+			"input":"{-10,10,-10,100}",
+			"order":3
+		},
+		{
+			"expect":"{1000,-1000,1}",
+			"id":0,
+			"input":"{1000,-1000,0}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"x and y will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of x and y will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"There will be no cases where the comparison of average distances with a relative difference of 1E-3 or less has an effect on the clustering. "
+		}
+	]
+}

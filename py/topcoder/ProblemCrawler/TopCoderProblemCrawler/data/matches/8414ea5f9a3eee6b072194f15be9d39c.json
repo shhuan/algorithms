@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.61,
+			"constraints":[],
+			"correctRatio":92.7,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1233&rd=4480",
+			"name":"RunLengthEncode",
+			"notes":[],
+			"submission":137
+		},
+		{
+			"avgPts":196.94,
+			"constraints":[],
+			"correctRatio":5.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1141&rd=4480",
+			"name":"LongLine",
+			"notes":[],
+			"submission":54
+		},
+		{
+			"avgPts":533.92,
+			"constraints":[],
+			"correctRatio":84.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1133&rd=4480",
+			"name":"Layoff",
+			"notes":[],
+			"submission":13
+		}
+	],
+	"name":"Single Round Match 138 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4480"
+}

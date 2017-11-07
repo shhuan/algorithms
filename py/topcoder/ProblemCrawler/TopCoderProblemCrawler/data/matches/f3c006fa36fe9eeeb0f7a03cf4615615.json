@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.23,
+			"constraints":[],
+			"correctRatio":73.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10155&rd=13518",
+			"name":"DesignCalendar",
+			"notes":[],
+			"submission":438
+		},
+		{
+			"avgPts":321.74,
+			"constraints":[],
+			"correctRatio":46.01,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9984&rd=13518",
+			"name":"LocateTreasure",
+			"notes":[],
+			"submission":276
+		},
+		{
+			"avgPts":516.3,
+			"constraints":[],
+			"correctRatio":57.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8785&rd=13518",
+			"name":"PSequence",
+			"notes":[],
+			"submission":56
+		}
+	],
+	"name":"Single Round Match 427 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13518"
+}

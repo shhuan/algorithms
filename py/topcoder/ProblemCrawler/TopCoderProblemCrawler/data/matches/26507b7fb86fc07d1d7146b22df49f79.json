@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":199.56,
+			"constraints":[],
+			"correctRatio":43.97,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11754&rd=14725",
+			"name":"DengklekMakingChains",
+			"notes":[],
+			"submission":721
+		},
+		{
+			"avgPts":240.59,
+			"constraints":[],
+			"correctRatio":78.01,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11767&rd=14725",
+			"name":"DengklekBuildingRoads",
+			"notes":[],
+			"submission":191
+		},
+		{
+			"avgPts":508.04,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11766&rd=14725",
+			"name":"DengklekCountingFormations",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"Single Round Match 532 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14725"
+}

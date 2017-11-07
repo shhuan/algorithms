@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=156&rd=3027",
+	"statement":"<pre>Class name: Numbers\nMethod name: biggestPower\nParameters: int, int\nReturns: String\n\n\nMethod signature: String biggestPower(int n, int p)  (be sure your method is\ndeclared public)\n\n\nImplement a class Numbers, which contains a method biggestPower.\n\n\nbiggestPower returns a String representing the largest positive power of p that\ndivides\nn factorial with a remainder of zero.  Where factorial is the product of all\nthe positive integers\nless than or equal the given number.\n\n\n\n* n is between 1 and 15, inclusive\n* p is between 2 and 100000, inclusive\n\n\nExample:\n\n\nn = 5, p = 2\n\n\n5! = 120\n\n\n2 ^ 0 = 1 divides 120 (120 / 1 = 120)\n2 ^ 1 = 2 divides 120 (120 / 2 = 60)\n2 ^ 2 = 4 divides 120 (120 / 4 = 30)\n2 ^ 3 = 8 divides 120 (120 / 8 = 15)\n2 ^ 4 = 16 does not divide 120, so return &quot;3&quot; (2 ^ 3 = 8)\n\n\n\n\nExamples:\n\n\nn = 1, p = 2   returns  &quot;0&quot;\nn = 3, p = 6   returns  &quot;1&quot;\nn = 10, p = 7  returns  &quot;1&quot;\nn = 9, p = 3   returns  &quot;4&quot;</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Numbers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"biggestPower",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String biggestPower(int param0, int param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

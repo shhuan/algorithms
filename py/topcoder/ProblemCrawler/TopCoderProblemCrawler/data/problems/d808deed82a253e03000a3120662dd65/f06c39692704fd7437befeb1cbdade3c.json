@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11495&rd=14545",
+	"statement":"Mr. Dengklek introduced you to an online programming contest called SRM (Special Round Match)! <br /><br /><br /><br /> You are now in the challenge phase of the contest. There are N coders in the contest, conveniently numbered 0 through N-1. In this phase, each coder is given an opportunity to make challenge attempts against another coders. Each challenge attempt can be successful or unsuccessful. In case a challenge attempt against some coder X is successful, it is said that coder X is successfully challenged. A coder may not attempt a challenge against him/herself. <br /><br /><br /><br /> After the challenge phase is over, you remember this information: \n <ul> \n  <li>The information about challenge attempts is given in String[] <b>codersAttempted</b>. Concatenate all its elements to obtain a single string. This string will contain N characters. If the i-th (0-indexed) character is 'Y', the i-th coder attempted exactly one challenge (which could be successful or unsuccessful). Otherwise, the i-th coder didn't attempt any challenges. No coders attempted two or more challenges.</li> \n  <li>The information about successful challenges is given in String[] <b>codersChallenged</b>. Concatenate all its elements to obtain a single string. This string will contain N characters. If the i-th (0-indexed) character is 'Y', the i-th coder was successfully challenged exactly once. Otherwise, the i-th coder was never successfully challenged. No coder was successfully challenged two or more times.</li> \n  <li>As soon as a coder had been succesfully challenged, the coder became upset and stopped making any challenge attempts.</li> \n  <li>Each coder could be unsuccessfully challenged arbitrary many times. Some of the unsuccessful challenges against a coder could be made after the coder had been successfully challenged.</li> \n </ul> <br /><br /> There were no two simultaneous challenge attempts during the challenge phase, so it can be represented as a chronologically ordered sequence of challenge attempts. Unfortunately, you forgot how exactly the challenge phase happened. Return the number of different possible sequences of challenge attempts that are consistent with the information that you remember, modulo 1,000,000,007. The information that you remember may be inaccurate, so if there are no such sequences, return 0. See examples for additional clarification.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SRMChallengePhase",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countWays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countWays(String[] codersAttempted, String[] codersChallenged)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"NY\"}",
+			"id":0,
+			"input":"{\"YY\"}",
+			"note":"The only valid sequence of challenge attempts is: ",
+			"order":1
+		},
+		{
+			"expect":"{\"N\", \"NYY\"}",
+			"id":0,
+			"input":"{\"YY\", \"NN\"}",
+			"note":"Here are the four possible sequences: ",
+			"order":2
+		},
+		{
+			"expect":"{\"NYY\", \"Y\"}",
+			"id":0,
+			"input":"{\"YNNN\"}",
+			"note":"The number of coders that were successfully challenged is greater than the number of attempts. It is impossible.",
+			"order":3
+		},
+		{
+			"expect":"{\"N\"}",
+			"id":0,
+			"input":"{\"N\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{\"NNY\"}",
+			"id":0,
+			"input":"{\"YYY\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{\"N\", \"YYYYY\", \"N\", \"Y\", \"N\", \"YYYY\", \"N\"}",
+			"id":0,
+			"input":"{\"YY\", \"N\", \"YYYY\", \"NN\", \"YYYYY\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"codersAttempted and codersChallenged will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of codersAttempted and codersChallenged will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The total number of characters in codersAttempted and codersChallenged will be the same."
+		},
+		{
+			"order":4,
+			"val":"Each character in both codersAttempted and codersChallenged will be 'Y' or 'N'."
+		}
+	]
+}

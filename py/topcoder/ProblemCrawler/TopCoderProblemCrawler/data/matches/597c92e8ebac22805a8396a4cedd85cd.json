@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.58,
+			"constraints":[],
+			"correctRatio":86.99,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6241&rd=9989",
+			"name":"ScoreRecomposition",
+			"notes":[],
+			"submission":292
+		},
+		{
+			"avgPts":284.76,
+			"constraints":[],
+			"correctRatio":23.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6516&rd=9989",
+			"name":"KMonotonic",
+			"notes":[],
+			"submission":17
+		},
+		{
+			"avgPts":681.05,
+			"constraints":[],
+			"correctRatio":30.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6239&rd=9989",
+			"name":"StoneGameStrategist",
+			"notes":[],
+			"submission":13
+		}
+	],
+	"name":"Single Round Match 309 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9989"
+}

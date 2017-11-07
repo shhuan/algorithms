@@ -1,0 +1,108 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13064&rd=15851",
+	"statement":"<i>In this problem, some test cases have more than one correct output. We are using a special checker to verify that the output of your program is correct. </i> <br /><br /><br /><br /> This problem is about chessboards with rooks. A rook is a chess piece that moves arbitrarily far, either horizontally or vertically. Both rows and columns of chessboards in our problem are numbered starting from 0. <br /><br /><br /><br /> An n times n chessboard is called peaceful if it contains exactly n rooks and no two rooks attack each other. In other words, there cannot be two rooks in the same row or in the same column of the chessboard. A peaceful chessboard can be described by a int[] Y with n elements: for each row r, the rook in row r is in column Y[r]. <br /><br /><br /><br /> You are given two int[]s <b>Y1</b> and <b>Y2</b> with n elements each. Each of them represents one peaceful chessboard. <br /><br /><br /><br /> You want to change the first chessboard into the second one. There is only one type of moves you are allowed to make: On the first chessboard, you can choose two rooks in positions (r1,c1) and (r2,c2) such that r1 &lt; r2 and c1 &gt; c2, and move them to (r1,c2) and (r2,c1). Note that the new chessboard is peaceful again. <br /><br /><br /><br /> If changing the first chessboard into the second one is impossible, return a int[] with only one element, and that element should be -1. <br /><br /><br /><br /> Otherwise, find any valid sequence of moves that changes the first board into the second board. Each move is uniquely defined by two integers: the rows with the rooks you want to move. If we write down the two rows for each move, we get a sequence of integers that encodes the solution. If that sequence has at most 2500 integers (i.e., encodes at most 1250 moves), return a int[] with the entire sequence. Otherwise, return a int[] with just the first 2500 integers of your sequence.",
+	"notes":[
+		{
+			"order":1,
+			"val":"You are not required to find the solution that uses the smallest possible number of moves."
+		},
+		{
+			"order":2,
+			"val":"If your return value has 2500 integers, it will be accepted if and only if it is a valid solution or a proper prefix of some valid solution."
+		},
+		{
+			"order":3,
+			"val":"If your return value has fewer than 2500 integers, it will be accepted if and only if it's a valid solution (not a proper prefix)."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MovingRooksDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"move",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] move(int[] Y1, int[] Y2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{0}",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"{0,1}",
+			"id":0,
+			"input":"{1,0}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{2,0,1}",
+			"id":0,
+			"input":"{1,2,0}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{0,1,2,3,4,5}",
+			"id":0,
+			"input":"{2,1,0,3,5,4}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{0,1,2,3,4,5,6,7,8,9,10}",
+			"id":0,
+			"input":"{10,9,8,7,6,5,4,3,2,1,0}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Y1 will contain between 1 and 2500 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Y2 will contain the same number of elements as Y1."
+		},
+		{
+			"order":3,
+			"val":"Each element of Y1 will be between 0 and n-1, inclusive, where n is the number of elements of Y1."
+		},
+		{
+			"order":4,
+			"val":"Each element of Y2 will be between 0 and n-1, inclusive, where n is the number of elements of Y2."
+		},
+		{
+			"order":5,
+			"val":"All elements of Y1 will be distinct."
+		},
+		{
+			"order":6,
+			"val":"All elements of Y2 will be distinct."
+		}
+	]
+}

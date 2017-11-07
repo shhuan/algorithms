@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4661&rd=7995",
+	"statement":"<p> It is a known fact that prime numbers are not evenly distributed. For example, almost all primes give the remainder 1 or 5 when divided by 6 (the only two exceptions are the primes 2 and 3). Your task is to write a program that will help explore this phenomenon. </p> <p> You will be given three integers: <b>lowerBound</b>, <b>upperBound</b> and <b>modulo</b>. Return the remainder that occurs most often when we take all primes in the set { <b>lowerBound</b>, <b>lowerBound</b>+1, ... <b>upperBound</b> } and divide each of them by <b>modulo</b>. If there are multiple remainders that occur most often, return the smallest of them. </p>",
+	"notes":[{
+		"order":1,
+		"val":"A prime number is a positive integer that has exactly two divisors. The first few primes are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ..."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PrimeStatistics",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"mostCommonRemainder",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int mostCommonRemainder(int lowerBound, int upperBound, int modulo)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"14",
+			"id":0,
+			"input":"3",
+			"note":"The primes in this interval are: 3, 5, 7, 11 and 13. Their remainders when divided by 5 are 3, 0, 2, 1 and 3, respectively. Thus the most common remainder is 3.",
+			"order":1
+		},
+		{
+			"expect":"33",
+			"id":0,
+			"input":"3",
+			"note":"In this case each of the primes gives a different remainder. According to the tie-breaking rule the smallest of them is returned.",
+			"order":2
+		},
+		{
+			"expect":"27",
+			"id":0,
+			"input":"25",
+			"note":"There are no primes in this interval. Each remainder occurs zero times, thus each of them is the most common remainder. Zero is the smallest possible remainder. Thus, according to the tie-breaking rule, zero is returned.",
+			"order":3
+		},
+		{
+			"expect":"200000",
+			"id":0,
+			"input":"1",
+			"note":"Almost all primes are odd; the only even prime is 2.",
+			"order":4
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"1",
+			"note":"As mentioned in the introduction, almost all primes give the remainder 1 or 5 modulo 6. In this interval there are more primes of the second kind.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"lowerBound and upperBound are between 1 and 200,000 inclusive."
+		},
+		{
+			"order":2,
+			"val":"lowerBound is less than or equal to upperBound."
+		},
+		{
+			"order":3,
+			"val":"modulo is between 2 and 1000 inclusive."
+		}
+	]
+}

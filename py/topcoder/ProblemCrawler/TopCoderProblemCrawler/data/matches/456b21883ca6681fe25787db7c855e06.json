@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":164.35,
+			"constraints":[],
+			"correctRatio":90.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8820&rd=12018",
+			"name":"OptimalPlay",
+			"notes":[],
+			"submission":11
+		},
+		{
+			"avgPts":382.98,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8738&rd=12018",
+			"name":"BSTConstruction",
+			"notes":[],
+			"submission":11
+		},
+		{
+			"avgPts":490.11,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8768&rd=12018",
+			"name":"AlmostConvexPolygons",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2008 TopCoder Open > Wildcard Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12018"
+}

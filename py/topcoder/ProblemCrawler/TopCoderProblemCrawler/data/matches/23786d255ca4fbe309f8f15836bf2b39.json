@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":234.8,
+			"constraints":[],
+			"correctRatio":91.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1821&rd=4702",
+			"name":"PowSum",
+			"notes":[],
+			"submission":454
+		},
+		{
+			"avgPts":359.64,
+			"constraints":[],
+			"correctRatio":85.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1816&rd=4702",
+			"name":"Logger",
+			"notes":[],
+			"submission":435
+		},
+		{
+			"avgPts":496.58,
+			"constraints":[],
+			"correctRatio":52.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1522&rd=4702",
+			"name":"Planets",
+			"notes":[],
+			"submission":109
+		}
+	],
+	"name":"2003 TCO > Online Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4702"
+}

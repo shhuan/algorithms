@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12390&rd=15571",
+	"statement":"A direction board is a matrix filled with arrows. Each arrow occupies one cell and points in one of the four directions: left, right, down, up. Each cell has two coordinates (row, column), starting with (0, 0) in the top left corner. Given a starting cell (r, c), you can move through the board in the following way. First, check the arrow in cell (r, c). If it points left, move left of the current cell, i.e. into cell(r, c - 1). For the right arrow, move to (r, c + 1). Up goes to (r - 1, c) and down to (r + 1, c). Each row and column of the board is cyclic, so whenever the new cell is outside the board, you appear on the other side. For example, moving left from (3, 0) on a board of size 5 by 5 results in appearing in cell (3, 4). <br /><br /><br /><br /> You need a board such that for every starting cell you always return to it during the movement process. If the given board does not satisfy this condition, you can change the direction of the arrow in any cell. For example, look at the following boards. In the left one, one only returns to the initial cell when he begins in cells (1, 1), (1, 2), (2, 0), (2, 3). After redirecting two arrows, you obtain a board with the given property. <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/DirectionBoard/board1.png\" /> <br /><br /> Find the minimum number of arrow redirections which transforms the given board into a valid one.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DirectionBoard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"RRRD\", \"URDD\", \"UULD\", \"ULLL\"}",
+			"note":"This board is already good. No matter which cell you start in, you always you return to it.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"RRRD\", \"URLL\", \"LRRR\"}",
+			"note":"The example from the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"RRD\", \"URD\", \"ULL\"}",
+			"note":"This board is not valid, because if one starts from (1, 1), he never returns to this cell. A possible solution with only two changes:  ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"ULRLRD\", \"UDDLRR\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"UDLRLDLD\", \"DLDLLDLR\", \"LLLLLDLD\", \"UUURRRDD\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 73",
+			"id":0,
+			"input":"{\"UDUDUUDUDUDUDUR\", \"LLLLDUUDRDLUDRU\", \"DLLDLDURDURUDDL\", \"UDUDUUDUDUDUDUR\", \"LLLLDUUDRDLUDRU\", \"DLLDLDURDURUDDL\", \"UDUDUUDUDUDUDUR\", \"LLLLDUUUDDLUDRU\", \"DLLDLDURDURUDDL\", \"UDUDUUDUDUDUDUR\", \"LLLLDUUDRDLUDRU\", \"DLLDLDURDURUDDL\", \"UDUDUUDUDUDUDUR\", \"LLLLDUUDRDLUDRU\", \"RRRDLDURDURUDDR\"} ",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 15 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain between 1 and 15 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of board will be of the same length."
+		},
+		{
+			"order":4,
+			"val":"Each element of board will consist of characters from the set {'L', 'R', 'U', 'D'} only."
+		}
+	]
+}

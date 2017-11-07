@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8181&rd=10783",
+	"statement":"<p> Return the smallest non-negative integer that can be added to <b>originalNumber</b> such that the resulting integer contains at least one digit <b>k</b>. All numbers should have no extra leading zeroes. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ObtainingDigitK",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minNumberToAdd",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minNumberToAdd(String originalNumber, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"7",
+			"id":0,
+			"input":"\"153\"",
+			"note":"153 + 4 = 157",
+			"order":1
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"\"158\"",
+			"note":"158 + 9 = 167",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"\"7853192\"",
+			"note":"Digit '2' is already present in the number.",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"\"99999999999999999999999999999999999999999999999\"",
+			"note":"Add 1 to get a lot of zeroes.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"originalNumber will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"originalNumber will contain only digits ('0'-'9')."
+		},
+		{
+			"order":3,
+			"val":"originalNumber will represent a non-negative integer with no extra leading zeroes."
+		},
+		{
+			"order":4,
+			"val":"k will be between 0 and 9, inclusive."
+		}
+	]
+}

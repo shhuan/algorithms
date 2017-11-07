@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11849&rd=15091",
+	"statement":"Fox Ciel is attending a party. During the party, people decided to take a commemorative photograph. Ciel picked up a camera to take a photograph. In the party, there are 2*N people (not including Ciel). <p></p> For taking the photograph, people formed two rows, each containing N people. In each row, Ciel numbered the people from 0 to N-1 from left to right. The people were aligned so that for each i, person i in the back row was standing exactly behind person i in the front row. <p></p> Initially, the people lined up arbitrarily. Therefore it is possible that some of the people in the back row are obscured by people in the front row. You are given two int[]s: <b>heightsFront</b> and <b>heightsBack</b>. For each i, <b>heightsFront</b>[i] is the height of person i in the front row and <b>heightsBack</b>[i] is the height of person i in the back row. The person in the back row is obscured by the person in the front row if and only if <b>heightsFront</b>[i] &gt;= <b>heightsBack</b>[i]. <p></p> If there are some obscured people, Ciel wants to fix it. The only operation she may do is to select two adjacent people in the same row and swap them. Compute and return the smallest number of such operations necessary to rearrange the people so that nobody in the back row is obscured. If no such sequence of operations exists, return -1. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxAndPhotography",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimumSwaps",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimumSwaps(int[] heightsFront, int[] heightsBack)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{160, 150}",
+			"id":0,
+			"input":"{140, 150}",
+			"note":"Initially, person 1 (0-based index) in the back row is obscured. One optimal solution is to swap people 0 and 1 in the front row. Another optimal solution is to swap people 0 and 1 in the back row.",
+			"order":1
+		},
+		{
+			"expect":"{190, 190, 190, 190}",
+			"id":0,
+			"input":"{140, 140, 140, 140}",
+			"note":"Nobody is obscured, so no swaps are needed.",
+			"order":2
+		},
+		{
+			"expect":"{160, 170, 180}",
+			"id":0,
+			"input":"{170, 170, 170}",
+			"note":"Person 0 in the back row is too short. Regardless of how we swap the people, this person will always be obscured.",
+			"order":3
+		},
+		{
+			"expect":"{144, 143, 142, 141}",
+			"id":0,
+			"input":"{140, 141, 142, 143}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{180, 180, 180, 180, 180, 150, 150, 150, 150, 150}",
+			"id":0,
+			"input":"{140, 170, 140, 170, 140, 170, 140, 170, 140, 170} ",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"heightsFront will contain between 2 and 16 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"heightsBack will contain the same number of elements with heightForward."
+		},
+		{
+			"order":3,
+			"val":"Each element of heightsFront and heightsBack will be between 140 and 190, inclusive."
+		}
+	]
+}

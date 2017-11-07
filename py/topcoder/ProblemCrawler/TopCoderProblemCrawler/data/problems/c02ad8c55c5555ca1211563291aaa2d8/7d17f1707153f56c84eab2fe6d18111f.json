@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2937&rd=5856",
+	"statement":"<p>A computer connected to the internet is identified by an IP address. The most common way of displaying an IP address is the dotted quad method: four eight-bit (0-255 in base ten) numbers separated by periods.</p> <p>Someone has given you a possible IP address, but the periods have been removed, leaving only a string of digits. Write a class IPConverter with a method possibleAddresses that takes a String <b>ambiguousIP</b> containing the digits and returns a String[] containing all the possible IP addresses that can be formed from those digits by inserting three periods to form a dotted quad. Sort the elements of the return value lexicographically, using their string ordering (the period character precedes all digit characters).</p> <p>The numbers in each of the four positions can have any integer value between zero and 255, inclusive. However, a number may not have leading zeroes. For example, the digits 1902426 can form 1.90.24.26, 19.0.24.26, 190.2.4.26, and other IP addresses (see Example 0). However, it <i>cannot</i> form 19.02.4.26.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"IPConverter",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"possibleAddresses",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] possibleAddresses(String ambiguousIP)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"1.90.24.26\", \"1.90.242.6\", \"19.0.24.26\", \"19.0.242.6\", \"190.2.4.26\", \"190.2.42.6\", \"190.24.2.6\" }",
+			"id":0,
+			"input":"\"1902426\"",
+			"note":"This is the example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"\"000\"",
+			"order":2
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"\"\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: { \"0.18.62.90\", \"0.186.2.90\", \"0.186.29.0\" }",
+			"id":0,
+			"input":"\"0186290\"",
+			"order":4
+		},
+		{
+			"expect":"Returns: { \"1.1.111.111\", \"1.11.11.111\", \"1.11.111.11\", \"1.111.1.111\", \"1.111.11.11\", \"1.111.111.1\", \"11.1.11.111\", \"11.1.111.11\", \"11.11.1.111\", \"11.11.11.11\", \"11.11.111.1\", \"11.111.1.11\", \"11.111.11.1\", \"111.1.1.111\", \"111.1.11.11\", \"111.1.111.1\", \"111.11.1.11\", \"111.11.11.1\", \"111.111.1.1\" }",
+			"id":0,
+			"input":"\"11111111\"",
+			"order":5
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"\"3082390871771742784899852251737850570843857369760\"",
+			"order":6
+		},
+		{
+			"expect":"Returns: { \"2.56.255.255\", \"25.6.255.255\", \"25.62.55.255\" }",
+			"id":0,
+			"input":"\"256255255\"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"ambiguousIP will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of ambiguousIP will be between '0' and '9', inclusive."
+		}
+	]
+}

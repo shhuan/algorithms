@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":193.81,
+			"constraints":[],
+			"correctRatio":83.6,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8607&rd=11127",
+			"name":"InstantRunoffVoting",
+			"notes":[],
+			"submission":561
+		},
+		{
+			"avgPts":267.34,
+			"constraints":[],
+			"correctRatio":73.21,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8496&rd=11127",
+			"name":"NSegmentDisplay",
+			"notes":[],
+			"submission":265
+		},
+		{
+			"avgPts":476.86,
+			"constraints":[],
+			"correctRatio":37.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8495&rd=11127",
+			"name":"AirlineInternet",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 393 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=11127"
+}

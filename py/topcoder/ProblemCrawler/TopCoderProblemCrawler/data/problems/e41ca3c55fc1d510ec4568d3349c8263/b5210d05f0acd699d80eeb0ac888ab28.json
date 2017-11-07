@@ -1,0 +1,123 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11064&rd=14159",
+	"statement":"TopCoder Security Agency (TSA, established today) is going to search for dangerous content in the internet. <br /><br /> <br /><br /> There are N candidate websites numbered 0 through N-1. Each website has an address given as <b>address</b>[i]. It also has one or more keywords associated with it. The i-th element of <b>keyword</b> is a String describing all keywords associated with the i-th website. It is formatted as a single space separated list of keywords without leading or trailing spaces, where each keyword consists only of lowercase letters. <br /><br /> <br /><br /> It is known to TSA that some keywords are dangerous. These keywords are given in String[] <b>dangerous</b>, where each element is a single dangerous keyword. For all other keywords it is not initially known whether they are dangerous or not. <br /><br /> <br /><br /> TSA uses the following algorithm to identify all dangerous websites: <br /><br /> <pre>\n  Initially, all websites are considered to be safe.\n\n  While there exists a website W such that it's considered safe and\n        at least <b>threshold</b> of its keywords are known to be dangerous\n\n    Website W becomes dangerous\n    All keywords associated with W become dangerous   \n\n  End While\n</pre> <br /><br /> Return a String[] containing the addresses of all dangerous websites found by the algorithm described above sorted in increasing order of website numbers. Return an empty String[] if no dangerous website is found.",
+	"notes":[{
+		"order":1,
+		"val":"The address of a website is just a String used to uniquely identify it. It doesn't necessarily adhere to any common format of naming websites."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"InternetSecurity",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"determineWebsite",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] determineWebsite(String[] address, String[] keyword, String[] dangerous, int threshold)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"hack encryption decryption internet algorithm\", \"signal interference evil snake poison algorithm\", \"flower baloon topcoder blue sky sea\"}",
+			"id":0,
+			"input":"{\"www.topcoder.com\", \"www.sindicate_of_evil.com\", \"www.happy_citizens.com\"}",
+			"note":"\"www.topcoder.com\" is detected as dangerous since it contains four dangerous keywords: \"hack\", \"encryption\", \"decryption\", and \"internet\". Hence, \"algorithm\" becomes a dangerous keyword. As a result, \"www.sindicate_of_evil.com\" is detected as dangerous since it contains three dangerous keywords: \"interference\", \"signal\", and \"algorithm\". Hence, the correct return value is {\"www.topcoder.com\",\"www.sindicate_of_evil.com\"} since the answer must be sorted in increasing order of website numbers.",
+			"order":1
+		},
+		{
+			"expect":"{\"broken\",\"rose tulips\",\"cheap free domain biggest greatest\"}",
+			"id":0,
+			"input":"{\"brokenlink\",\"flowerpower.net\",\"purchasedomain.com\"}",
+			"note":"No website is dangerous and an empty String[] should be returned.",
+			"order":2
+		},
+		{
+			"expect":"{\"a bc def\",\"def ghij klmno\"}",
+			"id":0,
+			"input":"{\"a..a.ab.\",\"...aa.b\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"information assurance signal intelligence research\"}",
+			"id":0,
+			"input":"{\"www.tsa.gov\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"address will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of address will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in address will be a '.', '_' or a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":4,
+			"val":"All elements of address will be distinct."
+		},
+		{
+			"order":5,
+			"val":"keyword will contain the same number of elements as address."
+		},
+		{
+			"order":6,
+			"val":"Each element of keyword will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each character in keyword will be a ' ' or a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":8,
+			"val":"Each element in keyword will be formatted as described in the statement above."
+		},
+		{
+			"order":9,
+			"val":"For each website, the keywords associated with it will be distinct."
+		},
+		{
+			"order":10,
+			"val":"dangerous will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":11,
+			"val":"Each element of dangerous will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":12,
+			"val":"Each character in dangerous will be a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":13,
+			"val":"All elements of dangerous will be distinct."
+		},
+		{
+			"order":14,
+			"val":"threshold will be between 1 and 25, inclusive."
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1744&rd=4545",
+	"statement":"<p> 9 numbers need to be arranged in a magic number square. A magic number square is a square of numbers that is arranged such that every row and column has the same sum. For example: </p> <pre>\n1 2 3\n3 2 1\n2 2 2\n</pre> <p> Create a class MNS containing a method combos which takes as an argument a int[] <b>numbers</b> and returns the number of distinct ways those numbers can be arranged in a magic number square. Two magic number squares are distinct if they differ in value at one or more positions. For example, there is only one magic number square that can be made of 9 instances of the same number. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Unlike some versions of the magic number square, the numbers do not have to be unique."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MNS",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"combos",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int combos(int[] numbers)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 18",
+			"id":0,
+			"input":"{1,2,3,3,2,1,2,2,2}",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{4,4,4,4,4,4,4,4,4}",
+			"order":2
+		},
+		{
+			"expect":"Returns: 36",
+			"id":0,
+			"input":"{1,5,1,2,5,6,2,3,2}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{1,2,6,6,6,4,2,6,4}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"numbers will contain exactly 9 elements."
+		},
+		{
+			"order":2,
+			"val":"each element of numbers will be between 0 and 9, inclusive."
+		}
+	]
+}

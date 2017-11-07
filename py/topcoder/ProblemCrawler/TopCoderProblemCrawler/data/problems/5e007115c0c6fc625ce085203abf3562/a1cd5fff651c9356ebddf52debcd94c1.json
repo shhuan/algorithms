@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4495&rd=7222",
+	"statement":"<b>n</b> children walk around a circle with <b>n</b>-1 evenly-spaced chairs. When the music stops, each one tries to get to the nearest chair. One of them is bound to fail thus providing a lesson about life. We want to identify the loser. <p> The children start evenly spaced around the circle, with the first child, A, located right next to a chair. The child who follows A as they walk around the circle is B, the one who follows B is C, etc. The children all start walking when the music starts at a speed that will get them all the way around the circle in 10 seconds. When the music stops, they each try to get to the nearest chair. </p><p> Create a class Musical that contains a method loser that is given <b>n</b> (the number of children) and <b>time</b> (the number of seconds the music plays). The method should return the name of the loser as a String containing just one uppercase letter. </p><p> It may be helpful to note that the child who is farther from any chair than each other child is always the loser. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Musical",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"loser",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, double",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String loser(int n, double time)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1.2",
+			"id":0,
+			"input":"3",
+			"note":" Starting from their original positions they walk for 1.2 seconds. When the music stops the closest chair to A is the first chair, the one he started at. Meanwhile B has moved to the point where now that chair is also the closest chair for him. But A is closer than B so B is the loser. (C is closest to the second chair and has no competition for that one.) ",
+			"order":1
+		},
+		{
+			"expect":"12.0",
+			"id":0,
+			"input":"3",
+			"note":" The children walk all the way around the circle and a little farther before the music stops. The situation is almost the same now as in the previous case, with A and B racing for the first chair, but this time A is farther away than B.",
+			"order":2
+		},
+		{
+			"expect":"100.0",
+			"id":0,
+			"input":"26",
+			"order":3
+		},
+		{
+			"expect":"15.0",
+			"id":0,
+			"input":"2",
+			"note":"The 2 children start out with A next to the chair and B on the other side of the circle. After 15 seconds, they have gone around the circle one and a half times, so B is next to the chair and A is the loser.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 26 inclusive."
+		},
+		{
+			"order":2,
+			"val":"time will be between 1.0 and 100.0 inclusive."
+		},
+		{
+			"order":3,
+			"val":"For all values within 1.0 E-9 of time the same child would be the loser."
+		}
+	]
+}

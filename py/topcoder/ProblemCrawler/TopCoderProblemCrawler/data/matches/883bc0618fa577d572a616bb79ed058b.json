@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":172.91,
+			"constraints":[],
+			"correctRatio":91.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11302&rd=14424",
+			"name":"ColorfulCards",
+			"notes":[],
+			"submission":523
+		},
+		{
+			"avgPts":271.53,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11304&rd=14424",
+			"name":"CarrotBoxes",
+			"notes":[],
+			"submission":168
+		},
+		{
+			"avgPts":444.66,
+			"constraints":[],
+			"correctRatio":71.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11305&rd=14424",
+			"name":"StrangeElevator",
+			"notes":[],
+			"submission":7
+		}
+	],
+	"name":"Single Round Match 495 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14424"
+}

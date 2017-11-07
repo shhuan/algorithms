@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":240.47,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=174&rd=4003",
+			"name":"Arithmetic",
+			"notes":[],
+			"submission":36
+		},
+		{
+			"avgPts":364.34,
+			"constraints":[],
+			"correctRatio":80.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=175&rd=4003",
+			"name":"WhaleWatcher",
+			"notes":[],
+			"submission":36
+		},
+		{
+			"avgPts":632.72,
+			"constraints":[],
+			"correctRatio":68.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=176&rd=4003",
+			"name":"NeuralNet",
+			"notes":[],
+			"submission":32
+		}
+	],
+	"name":"Single Round Match 33 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4003"
+}

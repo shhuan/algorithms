@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12620&rd=15703",
+	"statement":"Manao has a rectangular board divided into <b>n</b> times <b>m</b> cells. The rows of the board are numbered from 1 to <b>n</b> and the columns are numbered from 1 to <b>m</b>. The cell in row i, column j is referred to as (i, j). Each cell contains an uppercase letter of the English alphabet. <br /><br /><br /><br /> Having such a board, Manao likes to traverse it. The traversal always starts in the cell (1, 1). In each step of the traversal Manao moves either one cell down or one cell to the right. That is, from any cell (x, y) Manao will move either to (x+1, y) or to (x, y+1). The traversal always ends in the cell (<b>n</b>, <b>m</b>). During the traversal Manao records the letters in the visited cells (including the first and the last cell). The obtained string is called a string path for the given board. <br /><br /><br /><br /> You are given the ints <b>n</b> and <b>m</b>, and two distinct Strings <b>A</b> and <b>B</b>. Manao claims that he performed two different traversals of his <b>n</b> x <b>m</b> board and obtained the string paths <b>A</b> and <b>B</b>. Compute the number of different boards for which this is possible. Return this number modulo 1,000,000,009. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StringPath",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countBoards",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countBoards(int n, int m, String A, String B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"The two possible boards are:  ",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"It is impossible for two string paths to have a different last letter.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"8",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 8, inclusive."
+		},
+		{
+			"order":2,
+			"val":"m will be between 1 and 8, inclusive."
+		},
+		{
+			"order":3,
+			"val":"A and B will be exactly n+m-1 characters long."
+		},
+		{
+			"order":4,
+			"val":"A and B will consist of uppercase letters ('A'-'Z') only."
+		},
+		{
+			"order":5,
+			"val":"A and B will be distinct."
+		}
+	]
+}

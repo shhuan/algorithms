@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":160.84,
+			"constraints":[],
+			"correctRatio":76.73,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=341&rd=4085",
+			"name":"Squarefree",
+			"notes":[],
+			"submission":202
+		},
+		{
+			"avgPts":241.6,
+			"constraints":[],
+			"correctRatio":56.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=503&rd=4085",
+			"name":"Employee",
+			"notes":[],
+			"submission":185
+		},
+		{
+			"avgPts":505.69,
+			"constraints":[],
+			"correctRatio":30.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=446&rd=4085",
+			"name":"Trilean",
+			"notes":[],
+			"submission":53
+		}
+	],
+	"name":"Motorola Single Round Match 71 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4085"
+}

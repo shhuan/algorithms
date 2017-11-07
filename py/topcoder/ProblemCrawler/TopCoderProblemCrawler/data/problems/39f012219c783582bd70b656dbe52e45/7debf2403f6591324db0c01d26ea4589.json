@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8576&rd=13507",
+	"statement":"<p>The binary weight of a positive integer is the number of 1's in its binary representation. For example, the decimal number 1 has a binary weight of 1, and the decimal number 1717 (which is 11010110101 in binary) has a binary weight of 7.</p> <p>Given a positive integer <b>N</b>, return the smallest integer greater than <b>N</b> that has the same binary weight as <b>N</b>.</p>",
+	"notes":[{
+		"order":1,
+		"val":"The result is guaranteed to fit in a signed 32-bit integer."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NextNumber",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNextNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getNextNumber(int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1718",
+			"id":0,
+			"input":"1717",
+			"note":"Example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"4",
+			"note":"4 is 100 in its binary representation and weighs 1. The next number is 1000(in binary) which represents 8.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 11",
+			"id":0,
+			"input":"7",
+			"note":"The decimal 7 is binary 111, so it has binary weight of 3. The next number with the same binary weight is 11, which is 1011 in binary.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 17",
+			"id":0,
+			"input":"12",
+			"note":"12 in decimal is 1100 in binary. The next number with the same binary weight is 10001 in binary, which is 17.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 555557",
+			"id":0,
+			"input":"555555",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N will be between 1 and 1,000,000,000, inclusive."
+	}]
+}

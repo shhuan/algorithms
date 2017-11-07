@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11604&rd=14547",
+	"statement":"Krolik found a sheet of paper with an equation containing three positive integers: &quot;<b>a</b> * <b>b</b> = <b>c</b>&quot;. This equation might be wrong, so Krolik is trying to make it correct by adjusting the numbers <b>a</b>, <b>b</b>, and <b>c</b>. <br /><br /><br /><br /> You are given three ints <b>a</b>, <b>b</b>, and <b>c</b>. Return a long containing the minimum value of |A - <b>a</b>| + |B - <b>b</b>| + |C - <b>c</b>|, where A, B, and C are <i>positive</i> integers satisfying A * B = C. ",
+	"notes":[{
+		"order":1,
+		"val":"|x| is the absolute value of x (which is x for non-negative x and (-x) for negative x). "
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CorrectMultiplication",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getMinimum(int a, int b, int c)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"28",
+			"id":0,
+			"input":"19",
+			"note":"By assigning A = 18, B = 29, and C = 522 the value of |A - | + |B - | + |C - | is minimized. ",
+			"order":1
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"10",
+			"order":2
+		},
+		{
+			"expect":"11111",
+			"id":0,
+			"input":"11111",
+			"order":3
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"1000",
+			"note":"Note that A, B, and C must be positive integers. ",
+			"order":4
+		},
+		{
+			"expect":"522",
+			"id":0,
+			"input":"399",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"a, b, and c will each be between 1 and 1,000,000,000, inclusive. "
+	}]
+}

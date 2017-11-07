@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":179.18,
+			"constraints":[],
+			"correctRatio":92.94,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10333&rd=13760",
+			"name":"PlaneFractal",
+			"notes":[],
+			"submission":623
+		},
+		{
+			"avgPts":290.83,
+			"constraints":[],
+			"correctRatio":32.79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10103&rd=13760",
+			"name":"ExtendableTriangles",
+			"notes":[],
+			"submission":61
+		},
+		{
+			"avgPts":527.99,
+			"constraints":[],
+			"correctRatio":26.95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10325&rd=13760",
+			"name":"ConnectingAirports",
+			"notes":[],
+			"submission":256
+		}
+	],
+	"name":"2009 TCO Algorithm > Elimination Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13760"
+}

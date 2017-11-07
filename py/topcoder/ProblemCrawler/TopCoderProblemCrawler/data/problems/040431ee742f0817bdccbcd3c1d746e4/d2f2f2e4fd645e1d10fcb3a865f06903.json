@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6048&rd=9912",
+	"statement":"The digit in element i character j of <b>mat</b> will correspond to the value in row i column j of an N x N matrix. Choosing <b>k</b> rows and <b>k</b> columns determines a <b>k</b> x <b>k</b> submatrix of <b>mat</b>. To compute the <i>trace</i> of such a submatrix S, first extract S from <b>mat</b> and reindex the rows and columns maintaining the original order. Add together all values along the main diagonal of the reindexed matrix (values with the same reindexed row and column). Return the largest trace considering all possible <b>k</b> x <b>k</b> submatrices. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MaxKTrace",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getLargest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getLargest(String[] mat, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{ \"123\", \"456\", \"789\" }",
+			"note":"There is only 1 possible 3 x 3 submatrix, so we simply return 1+5+9.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{ \"12\", \"93\" }",
+			"note":"Any entry can be used as the 1x1 submatrix, so we choose the 9.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{ \"12689\", \"55555\", \"55555\", \"55555\", \"55555\" }",
+			"note":"The best we can do here is 6+5+5 = 16.",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{ \"494599520389852\", \"303896953907791\", \"287493604901139\", \"149554299340006\", \"893640109028429\", \"564962730433253\", \"075854577852319\", \"453201529585621\", \"950489162577436\", \"630040569640126\", \"415141646262027\", \"837673828874883\", \"785041862021729\", \"850806584119109\", \"217671590991247\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"mat will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of mat will contain exactly N digits ('0'-'9'), where N is the number of elements in mat."
+		},
+		{
+			"order":3,
+			"val":"k will be between 1 and N, inclusive, where N is the number of elements in mat."
+		}
+	]
+}

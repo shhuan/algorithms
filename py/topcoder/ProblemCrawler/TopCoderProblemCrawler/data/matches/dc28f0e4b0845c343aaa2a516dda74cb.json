@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":214.22,
+			"constraints":[],
+			"correctRatio":60.98,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1950&rd=4660",
+			"name":"CrossCountry",
+			"notes":[],
+			"submission":205
+		},
+		{
+			"avgPts":310.83,
+			"constraints":[],
+			"correctRatio":51.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1941&rd=4660",
+			"name":"ResistorCombinations",
+			"notes":[],
+			"submission":99
+		},
+		{
+			"avgPts":624.81,
+			"constraints":[],
+			"correctRatio":63.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1939&rd=4660",
+			"name":"UndergroundVault",
+			"notes":[],
+			"submission":36
+		}
+	],
+	"name":"Single Round Match 171 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4660"
+}

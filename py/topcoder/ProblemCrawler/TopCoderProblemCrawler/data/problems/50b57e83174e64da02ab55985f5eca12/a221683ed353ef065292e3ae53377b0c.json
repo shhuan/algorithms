@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7593&rd=10674",
+	"statement":"You are given the adjacency matrix of a directed graph as a String[] <b>adjacencyMatrix</b>. The j-th character of the i-th element of <b>adjacencyMatrix</b> will be '1' if there is an edge going from the i-th vertex to the j-th, or '0' otherwise. A star in a directed graph is defined as follows: it is comprised of a central vertex and at least three distinct edges emanating from it, which we will call the rays of the star. The number of rays in a star is not bounded; the only restriction is that there must be at least 3 of them. The number of distinct stars for which a vertex V is central will be called the star number of V. For example, if V has 5 edges emanating from it then its star number is 16 = 10 + 5 + 1 since it is central for 10 stars with 3 rays, 5 stars with 4 rays, and 1 star with 5 rays. We will call a path in our graph starry if it satisfies two conditions: \n <ul>\n  <li>Each vertex belonging to the path has a non-zero star number not exceeding <b>C</b>.</li> \n  <li>Given two subsequent vertices V<sub>i</sub> and V<sub>i+1</sub> in the path the star number of V<sub>i+1</sub> is not less than the star number of V<sub>i</sub>.</li>\n </ul> Given the directed graph in the form of its adjacency matrix return the number of vertices in the longest starry path it contains. If there is a starry path of infinite length in the graph return -1. If there are no starry paths (all vertices have star numbers either 0 or greater than <b>C</b>) return 0.",
+	"notes":[{
+		"order":1,
+		"val":"Two stars are considered distinct if either their central vertices are distinct or the sets of rays are distinct."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StarsInGraphs",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"starryPaths",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int starryPaths(String[] adjacencyMatrix, int C)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"{\"01110\", \"10111\", \"00000\", \"00000\", \"00000\"}",
+			"note":"The starry path 0 -> 1 is the longest one. Vertex 0 has star number 1, vertex 1 has star number 5, and all other vertices have star numbers 0.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"01011\", \"00111\", \"10011\", \"00000\", \"00000\"}",
+			"note":"Vertices 0, 1, and 2 have star numbers 1 and form a cycle, thus we have an infinite starry path.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"0111\", \"0000\", \"0000\", \"0000\"}",
+			"note":"This time the longest starry path consists of a single vertex.",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\"01111\", \"00000\", \"00000\", \"00000\", \"00000\"}",
+			"note":"Vertex 0 has star number 5 and the rest of the vertices have a zero star number, and thus none of them can appear in a starry path.",
+			"order":4
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{\"010001100\", \"001001100\", \"000101110\", \"000010111\", \"000001111\", \"010000000\", \"000110000\", \"000100001\", \"100001000\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"adjacencyMatrix will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"The number of characters in each string of the adjacencyMatrix will be equal to the total number of elements in adjacencyMatrix."
+		},
+		{
+			"order":3,
+			"val":"Every character of each element of adjacencyMatrix will be either '0' (zero) or '1' (one)."
+		},
+		{
+			"order":4,
+			"val":"The i-th character of the i-th element of adjacencyMatrix will be '0'."
+		},
+		{
+			"order":5,
+			"val":"C will be between 1 and 109, inclusive."
+		}
+	]
+}

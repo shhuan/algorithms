@@ -1,0 +1,108 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7521&rd=10791",
+	"statement":"Some pedestrians are crossing a road. A car arrives at the crosswalk and wants to pass through, but can only get by if there's an empty gap of at least <b>carWidth</b> centimeters. The road is <b>roadWidth</b> centimeters wide. All the pedestrians are walking in the same direction. <br /><br /><br /><br /> You are given a String[] <b>pedestrians</b>, each element of which is formatted as &quot;T V&quot; (quotes for clarity), where T is the time that one pedestrian starts crossing the road (in seconds), and V is his walking speed (in centimeters per second). The car arrives at time <b>carArrival</b> seconds. The car can pass through at any time after its arrival (including the moment of arrival), when there is sufficient free space to pass through. Return a double indicating the earliest time (in seconds) the car can pass through.",
+	"notes":[
+		{
+			"order":1,
+			"val":"The returned value must have an absolute or relative error less than 1e-9."
+		},
+		{
+			"order":2,
+			"val":"The car passes through instantly, i.e., it takes no time for the car to pass through."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RoadCrossing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"passTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double passTime(String[] pedestrians, int roadWidth, int carWidth, int carArrival)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"8",
+			"id":0,
+			"input":"{\"0 1\", \"2 5\"}",
+			"note":"At time 3.5, the pedestrians are 3.5 and 7.5 centimeters from the side of the road. The car can pass through the 4 centimeter gap between the pedestrians. This is the earliest time it can pass through.",
+			"order":1
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"{\"40 1\"}",
+			"note":"The pedestrian starts crossing the road at time 40. At time 41, the car arrives, and the pedestrian is 1 cm from the side of the road. The car needs the entire width of the road to pass through, and therefore, it must wait until the pedestrian finishes crossing. The pedestrian reaches the other side of the road at time 140.",
+			"order":2
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"{\"0 1\", \"0 2\", \"0 4\", \"0 8\", \"0 16\", \"0 32\", \"0 64\", \"0 128\", \"0 256\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"{\"0 1\", \"0 2\", \"0 4\", \"0 8\", \"0 16\", \"0 32\", \"0 64\", \"0 128\", \"0 256\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"{\"1000 1\", \"100 1\"}",
+			"note":"Maximal possible answer.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pedestrians will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of pedestrians will be formatted as &quot;T V&quot; (quotes for clarity), where T and V are integers with no extra leading zeros."
+		},
+		{
+			"order":3,
+			"val":"Each T will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each V will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"roadWidth will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"carWidth will be between 1 and roadWidth, inclusive."
+		},
+		{
+			"order":7,
+			"val":"carArrival will be between 1 and 1000, inclusive."
+		}
+	]
+}

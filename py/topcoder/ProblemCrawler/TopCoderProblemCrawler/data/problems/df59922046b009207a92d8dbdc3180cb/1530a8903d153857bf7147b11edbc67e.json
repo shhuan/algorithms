@@ -1,0 +1,108 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1770&rd=4570",
+	"statement":"With today's high gas prices, drivers often go to great lengths to find the cheapest gas. In this problem, you are to write a method for a system that helps a person plan where to stop for gas on a long trip. You can assume that the person has already planned the route, and that it is fixed. With the route information, the system (which might be built into a car, for example) can retrieve price information about the gas at all of the gas stations along the way. With this information, your method must plan which gas stations to stop at, and how much gas to get at each station to minimize the cost of the trip. <br /><br /><br /><br /> More specifically, you will be given a int[] <b>dist</b>, a int[] <b>prices</b>, an int <b>mpg</b>, an int <b>tankSize</b>, and an int <b>tripLength</b> and are to return the lowest possible cost of the trip. Each element of <b>dist</b>, and the corresponding element of <b>prices</b>, represents the distance to the gas station from the start of the trip (in miles) and the price of the gas at that station (in thousandths of a dollar per gallon). <b>mpg</b> stands for miles per gallon, and represents the number of miles the car may travel on a single gallon of gas. Note that gallons need not be used in whole amounts. <b>tankSize</b> represents the maximum number of gallons that the tank of gas may hold. The trip starts at mile 0 and ends at mile <b>tripLength</b>, and you start the trip with a full tank of gas. You may purchase any quantity of gas (including fractional amounts of gallons) at any gas station. ",
+	"notes":[{
+		"order":1,
+		"val":"Your solution need not be exactly correct to be evaluated as correct. As long as the relative error between your result and the true result is less than 1e-9, your result will be evaluated as correct."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GasStations",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"tripCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double tripCost(int[] dist, int[] price, int mpg, int tankSize, int tripLength)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1000,1500}",
+			"id":0,
+			"input":"{100,100}",
+			"note":"The 10 gallon tank allows the car to go 200 miles on a full tank. So, in order to get from the station at 100 miles to the end of the trip at 300 miles, the tank has to be filled up at one of the gas stations after 100 miles. Clearly, we should fill it up at the cheaper one, and since we have gone 100 miles so far, we need to buy 5 gallons of gas, for 5,000 thousandths of a dollar.",
+			"order":1
+		},
+		{
+			"expect":"{1659,1529,1439}",
+			"id":0,
+			"input":"{300,450,525}",
+			"order":2
+		},
+		{
+			"expect":"{1659,1439,1529}",
+			"id":0,
+			"input":"{300,450,525}",
+			"order":3
+		},
+		{
+			"expect":"{1659,1729,1439,1529}",
+			"id":0,
+			"input":"{300,125,450,525}",
+			"order":4
+		},
+		{
+			"expect":"{1000}",
+			"id":0,
+			"input":"{200}",
+			"order":5
+		},
+		{
+			"expect":"{1549,1649}",
+			"id":0,
+			"input":"{100,400}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"distances and prices will contain the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"distances and prices will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"mpg will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"tankSize will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"tripLength will be between 2 and 10,000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of distances will be between 1 and tripLength-1, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of prices will be between 50 and 20,000, inclusive."
+		},
+		{
+			"order":8,
+			"val":"The trip will be possible."
+		}
+	]
+}

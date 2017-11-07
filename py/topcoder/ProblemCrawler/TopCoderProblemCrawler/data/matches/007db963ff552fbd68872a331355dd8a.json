@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":202.8,
+			"constraints":[],
+			"correctRatio":94.79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4638&rd=8026",
+			"name":"RecipeFraction",
+			"notes":[],
+			"submission":326
+		},
+		{
+			"avgPts":468.24,
+			"constraints":[],
+			"correctRatio":82.61,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4673&rd=8026",
+			"name":"CheatABit",
+			"notes":[],
+			"submission":253
+		}
+	],
+	"name":"2005 TCO > Qualification Set 7/8",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8026"
+}

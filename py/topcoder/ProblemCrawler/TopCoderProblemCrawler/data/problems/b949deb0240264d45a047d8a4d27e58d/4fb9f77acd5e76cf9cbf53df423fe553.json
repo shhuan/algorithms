@@ -1,0 +1,101 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11061&rd=14287",
+	"statement":"Some jewels are placed in a rectangular grid on an infinite plane. You are given String[] <b>jewels</b> describing the jewels. If the j-th character of the i-th element of <b>jewels</b> is 'R', 'G' or 'B', there is a red, green or blue jewel at the center of the j-th cell of the i-th row of the grid, respectively. Jewels of the same color cannot be distinguished. <br /><br /> <br /><br /> Alice draws two squares on this plane. Their sides must be parallel to the axis and have length <b>k</b>. She is allowed to draw squares so that some part of them are on the outside of the grid. Then she will get the jewels which lie in the <i>inside</i> of at least one of the two squares. Note that the <i>inside</i> of a square does not contain its boundary. She wants to make a chain of jewels, using some of the jewels she will get. She does not have to use all of the jewels she will get. A chain is a row of one or more jewels. Chains are non-directional. For example, chains R-G-B and B-G-R are considered equal. How many different chains are possible, considering all the chains from all possible square locations? Return the answer modulo 1,000,000,009. ",
+	"notes":[{
+		"order":1,
+		"val":"For the purposes of this problem, a jewel is considered to be a single point."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ColorfulJewelry",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getChains",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getChains(String[] jewels, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{ \"RGB\" } ",
+			"note":"Alice can get at most two jewels. The possible chains are: R, G, B, R-G, R-B, G-B. ",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{ \"RGB\" } ",
+			"note":"Alice can get all the three jewels. ",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{ \"RGB\" } ",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{ \"RRRRR\", \"RGGRR\", \"RGGGG\", \"RRRGG\" } ",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"{ \"RRRRRRRRRR\", \"RRRRRRRRRR\", \"RRRRRRRRRR\", \"RRRRRRRRRR\", \"RRRRRRRRRR\", \"RRRRRRRRRR\", \"RRRRRRRRRR\", \"RRRRRRRRRR\", \"RRRRRRRRRR\", \"RRRRRRRRRR\" } ",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{ \"RRRGGGGG\", \"RRRGGGGG\", \"RRRGGBBB\", \"GGGGGBBB\", \"GGGGGBBB\" } ",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"jewels will contain between 1 and 44 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each element of jewels will contain the same number of characters. "
+		},
+		{
+			"order":3,
+			"val":"Each element of jewels will contain between 1 and 44 characters, inclusive. "
+		},
+		{
+			"order":4,
+			"val":"Each character in jewels will be either 'R', 'G' or 'B'. "
+		},
+		{
+			"order":5,
+			"val":"k will be between 1 and 44, inclusive. "
+		}
+	]
+}

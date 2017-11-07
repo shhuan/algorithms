@@ -1,0 +1,109 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12613&rd=15696",
+	"statement":"A kingdom has <i>n</i> citizens. Each one has some amount of money, a number of dollars denoted by a non-negative integer. <br /><br /><br /><br /> Citizens are numbered from 0 to <i>n</i>-1. Some citizens have friends. Their friendship network is described by a String[] called <b>isFriend</b>, such that if <b>isFriend</b>[i][j] == 'Y', the citizens numbered <i>i</i> and <i>j</i> are friends, and if <b>isFriend</b>[i][j] == 'N', these citizens are not friends. <br /><br /><br /><br /> The king decrees the following: <br /><br /><br /><br /> Each citizen's amount of money must be within <b>d</b> dollars of the amount of money belonging to any of his friends. In other words, a citizen with <i>x</i> dollars must not have any friends with less than <i>x</i>-<b>d</b> dollars or more than <i>x</i>+<b>d</b> dollars. <br /><br /><br /><br /> Given the number of citizens and their friendship network, what is the greatest possible money difference between any two people (not necessarily friends) in this kingdom? If there is a finite answer, return it. Otherwise, return -1.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Egalitarianism",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxDifference",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxDifference(String[] isFriend, int d)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{\"NYN\", \"YNY\", \"NYN\"}",
+			"note":"The kingdom has three citizens. Citizens 0 and 1 are friends. Also, citizens 1 and 2 are friends. The greatest possible money difference between any two citizens is $20, as in the following configuration: citizen 0 has $100; citizen 1 has $110; citizen 2 has $120.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"NN\", \"NN\"}",
+			"note":"Since citizens 0 and 1 are not friends, there are no constraints between them.",
+			"order":2
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"{\"NNYNNN\", \"NNYNNN\", \"YYNYNN\", \"NNYNYY\", \"NNNYNN\", \"NNNYNN\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"584",
+			"id":0,
+			"input":"{\"NNYN\", \"NNNY\", \"YNNN\", \"NYNN\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{\"NYNYYYN\", \"YNNYYYN\", \"NNNNYNN\", \"YYNNYYN\", \"YYYYNNN\", \"YYNYNNY\", \"NNNNNYN\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"747",
+			"id":0,
+			"input":"{\"NYYNNNNYYYYNNNN\", \"YNNNYNNNNNNYYNN\", \"YNNYNYNNNNYNNNN\", \"NNYNNYNNNNNNNNN\", \"NYNNNNYNNYNNNNN\", \"NNYYNNYNNYNNNYN\", \"NNNNYYNNYNNNNNN\", \"YNNNNNNNNNYNNNN\", \"YNNNNNYNNNNNYNN\", \"YNNNYYNNNNNNNNY\", \"YNYNNNNYNNNNNNN\", \"NYNNNNNNNNNNNNY\", \"NYNNNNNNYNNNNYN\", \"NNNNNYNNNNNNYNN\", \"NNNNNNNNNYNYNNN\"} ",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"NY\", \"YN\"}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"d will be between 0 and 1,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"isFriend will contain exactly n elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of isFriend will contain exactly n characters, each of which is either 'Y' or 'N'."
+		},
+		{
+			"order":5,
+			"val":"For any i, isFriend[i][i] = 'N'."
+		},
+		{
+			"order":6,
+			"val":"For any i and j, isFriend[i][j] = isFriend[j][i]."
+		}
+	]
+}

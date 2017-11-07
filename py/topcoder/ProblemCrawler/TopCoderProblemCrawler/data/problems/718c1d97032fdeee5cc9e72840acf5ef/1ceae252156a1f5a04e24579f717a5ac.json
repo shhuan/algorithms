@@ -1,0 +1,89 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11937&rd=14737",
+	"statement":"The spaceport is a horizontal segment of length <b>L</b>. We are planning to launch a rocket from the spaceport. The rocket must fly in a straight line. The line does not have to be orthogonal to the spaceport, but it must lie in the vertical plane that contains the spaceport. The line is not allowed to be strictly horizontal. <br /><br /> <br /><br /> Each point in the vertical plane has two coordinates: the x-coordinate is the horizontal distance from the left end of the spaceport, and the y-coordinate is the altitude above the spaceport. Points for with both coordinates are integers are called grid points. <br /><br /> <br /><br /> The rocket has to be launched from a grid point on the spaceport. Moreover, after the launch the rocket must send exactly <b>K</b> signals. A signal can only be sent when the rocket is at a grid point above the spaceport, and its altitude does not exceed <b>H</b>. <br /><br /> <br /><br /> Formally: The rocket starts from one of the points (x,0), where 0 &lt;= x &lt;= <b>L</b> and x is an integer. The rocket may send a signal if it is at one of the points (x,y), where 0 &lt;= x &lt;= <b>L</b>, 0 &lt;= y &lt;= <b>H</b>, and x and y are both integers. The rocket may only send at most one signal at each grid point it passes through. <br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/Spacetsk/clean.jpg\" /> <br /><br /> <br /><br /> The picture above shows two different test cases. The grid on the left corresponds to <b>L</b>=9, <b>H</b>=7, and <b>K</b>=2. Each of the six colors shows one pair of signals you could observe during the launch. The small grids on the right show all four possibilities for <b>L</b>=1, <b>H</b>=1, and <b>K</b>=2. <br /><br /> <br /><br /> You are given the ints <b>L</b>, <b>H</b>, and <b>K</b>. Count how many different sets of signals are possible during the launch. Return the answer modulo 1,000,000,007.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Spacetsk",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countsets",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countsets(int L, int H, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"Example from the statement.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"394",
+			"id":0,
+			"input":"561",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"L will be between 1 and 2000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"H will be between 1 and 2000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"K will be between 1 and 2000, inclusive."
+		}
+	]
+}

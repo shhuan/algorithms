@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":141.37,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4680&rd=8030",
+			"name":"VideoEncode",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":347.4,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4712&rd=8030",
+			"name":"GridGame",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2005 TCO > Sponsor Track Set 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8030"
+}

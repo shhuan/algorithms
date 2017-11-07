@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6640&rd=10097",
+	"statement":"We have a number of 4-foot long pipes that have regular octagonal cross-sections of various sizes. We want to place them in a pickup truck which is 4 feet wide, with the length of each pipe extending across the width of the truck. Each pipe must rest with one of its 8 sides flat on the truck's bed. The front and back sides of the truck are higher than the pipes, so each pipe must fit entirely inside the truck. How long will the truck have to be to hold them all? <pre>\n\n  |                                    |\n  |                                    | \n  |                   x x x x          |             \n  |                 x         x        |         \n  |               x             x      |          \n  |     x x x   x                 x    |        \n  |   x       x x                 x    |   \n  | x           x                 x    | \n  | x           x                 x x  |\n  | x           x x             x     x| \n  |   x       x     x         x x     x|   \n  |     x x x         x x x x     x x  |     \n  |-------------------------------------\n        &lt;--- length of truck ---&gt;              \n</pre> <p> Create a class PickupBed that contains a method length that is given a int[] <b>ht</b> and returns the minimum length of truck that can hold all the pipes. The i-th element of <b>ht</b> gives the height of a pipe when it is resting on one of its sides. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"A return value with either an absolute or relative error of less than 1.0E-9 is considered correct."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PickupBed",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"length",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double length(int[] ht)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 15.0",
+			"id":0,
+			"input":"{5,5,5}",
+			"note":" The pipes will lie with their perpendicular sides against each other. Each one will require the full 5 units of the truck's length. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 17.0",
+			"id":0,
+			"input":" {17}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 10.0",
+			"id":0,
+			"input":"{10,1,1}",
+			"note":" We can put the big one between the 2 little ones. The little ones can fit entirely in the area under the slanted sides of the big one. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 10.97056274847714",
+			"id":0,
+			"input":"{10,2,2} ",
+			"note":" ",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"ht contains between 1 and 8 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of ht is between 1 and 1000, inclusive."
+		}
+	]
+}

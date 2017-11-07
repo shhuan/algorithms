@@ -1,0 +1,107 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12930&rd=15843",
+	"statement":"<p>You are a goblin miner. Your job is to mine gold.</p><br /><br /><br /><br /> <p>Picture yourself located in a mine. The mine can be seen as a rectangular grid of (<b>N</b>+1) times (<b>M</b>+1) cells. Rows are numbered 0 through <b>N</b>, columns 0 through <b>M</b>.</p><br /><br /><br /><br /> <p>You will work in the mine for several days. You can choose the cell where you will work today (on day 0). On each of the next days, you can either stay in the cell where you were on the previous day, or you can move to some other cell - within some limits that are explained below.</p><br /><br /><br /><br /> <p>Whenever somebody discovers gold in the mine, each goblin profits! Your profit is <b>N</b> + <b>M</b>, minus your Manhattan distance from the cell where the gold was discovered. Formally, if the gold is discovered at (a, b) and you are located at (c, d), your profit is <b>N</b> + <b>M</b> - |a-c| - |b-d|, where || denotes absolute value.</p><br /><br /><br /><br /> <p>You are given the ints <b>N</b> and <b>M</b>. You are also given two int[]s: <b>event_i</b> and <b>event_j</b>. Both will contain the same number of elements. Assume that for each valid k, there will be exactly one gold discovery on day k: in the cell (<b>event_i</b>[k], <b>event_j</b>[k]).</p><br /><br /><br /><br /> <p>Finally, you are given two more int[]s: <b>event_di</b> and <b>event_dj</b>. Both will contain the same number of elements, and this number of elements is one fewer than the number of elements in <b>event_i</b>. The elements of these int[]s are the restrictions on your movement between days.</p><br /><br /><br /><br /> <p>More precisely, for each k, between days k and k+1 your row coordinate can change by at most <b>event_di</b>[k], and your column coordinate can change by at most <b>event_dj</b>[k]. In other words, if you were in the cell (a, b) on day k, you can be in the cell (c, d) on day k+1 if and only if |a-c| &lt;= <b>event_di</b>[k] and |b-d| &lt;= <b>event_dj</b>[k].</p><br /><br /><br /><br /> <p>Compute and return the maximum total profit you can get by correctly choosing the cells where you work on each day.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MiningGoldHard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"GetMaximumGold",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int GetMaximumGold(int N, int M, int[] event_i, int[] event_j, int[] event_di, int[] event_dj)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"Gold will be discovered today in the cell (1, 1). Your optimal strategy is to work there today.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"Gold will be discovered in the cell (0, 0) today and in the cell (2, 2) tomorrow. Note that you cannot move directly from (0, 0) to (2, 2), because both the difference in rows and the difference in columns is too great. One optimal strategy is to work in the cell (0, 0) today and in the cell (1, 1) tomorrow. Your profit today will be 6, tomorrow it will be 4, thus the total profit is 6+4 = 10.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"90",
+			"id":0,
+			"input":"72",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N and M will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"event_i will contain between 1 and 1,000 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"event_j will contain the same number of elements as event_i."
+		},
+		{
+			"order":4,
+			"val":"The number of elements in event_di will be one fewer than the number of elements in event_i."
+		},
+		{
+			"order":5,
+			"val":"event_dj will contain the same number of elements as event_di."
+		},
+		{
+			"order":6,
+			"val":"The elements of event_i will be between 0 and N, inclusive."
+		},
+		{
+			"order":7,
+			"val":"The elements of event_j will be between 0 and M, inclusive."
+		},
+		{
+			"order":8,
+			"val":"The elements of event_di will be between 0 and N, inclusive."
+		},
+		{
+			"order":9,
+			"val":"The elements of event_dj will be between 0 and M, inclusive."
+		}
+	]
+}

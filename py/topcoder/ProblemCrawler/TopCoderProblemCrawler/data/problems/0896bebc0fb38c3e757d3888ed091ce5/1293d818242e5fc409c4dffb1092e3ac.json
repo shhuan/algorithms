@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7422&rd=10663",
+	"statement":"<p>You are thinking of using the following betting strategy: in the first round, you bet one dollar. If you win the bet, you win the dollar and bet another dollar in the next round. Otherwise you lose the dollar and bet two dollars in the second round (provided you still have at least two dollars in your account). If you win, you get the two dollars and bet one dollar in the third round, otherwise you lose the two dollars and bet four dollars in the third round (provided you have at least that amount in your account) and so on. In other words, whenever you lose a bet, you double the value of the bet for the next round. If you don't have enough money to cover your bet, you have to stop betting. Whenever you win, the bet for the next round will be one dollar.</p> <p>For example, if you start with 10 dollars, and you win the bet in the first round, lose the bet in the next two rounds and then win the bet in the fourth round, you will end up with 10+1-1-2+4 = 12 dollars.</p> <p>You will be given four ints <b>initSum</b>, the amount of money you initially have, <b>goalSum</b>, the sum you wish to achieve, <b>rounds</b>, the maximum number of rounds you wish to play, and <b>prob</b>, the percent probability of winning one round. Return the probability that you will reach your goal within the maximum number of rounds you wish to play. Note that if you manage to get to <b>goalSum</b> or more, you stop betting.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TestBettingStrategy",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double winProbability(int initSum, int goalSum, int rounds, int prob)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"11",
+			"id":0,
+			"input":"10",
+			"note":"You have a 50% chance of reaching 11 dollars in the first round. You could also win by losing the first round and winning the second, with a 25% chance, or losing the first two rounds and winning the third one, with a 12.5% chance. Note that the fourth round is never needed. If you lose the first three rounds, you can't cover your fourth bet. In any other case, you will have already reached 11 dollars and stopped.",
+			"order":1
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"10",
+			"order":2
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"10",
+			"note":"You have to win every round. Since the probability of winning a round is pretty high, you have a decent chance of doing this.",
+			"order":3
+		},
+		{
+			"expect":"38",
+			"id":0,
+			"input":"24",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"initSum will be between 1 and 1,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"goalSum will be between (initSum + 1) and 1,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"rounds will be between 1 and 50, inclusive."
+		},
+		{
+			"order":4,
+			"val":"prob will be between 0 and 100, inclusive."
+		}
+	]
+}

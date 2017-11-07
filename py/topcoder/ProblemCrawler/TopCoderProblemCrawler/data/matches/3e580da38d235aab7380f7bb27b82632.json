@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":228.91,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=122&rd=3017",
+			"name":"Rot13",
+			"notes":[],
+			"submission":32
+		},
+		{
+			"avgPts":268.32,
+			"constraints":[],
+			"correctRatio":25.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=123&rd=3017",
+			"name":"WordCalculator",
+			"notes":[],
+			"submission":27
+		},
+		{
+			"avgPts":553.98,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=124&rd=3017",
+			"name":"AlienInvasion",
+			"notes":[],
+			"submission":9
+		}
+	],
+	"name":"Single Round Match 18 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3017"
+}

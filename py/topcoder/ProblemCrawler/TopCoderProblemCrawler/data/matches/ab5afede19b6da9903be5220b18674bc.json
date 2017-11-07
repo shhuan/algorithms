@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":215.03,
+			"constraints":[],
+			"correctRatio":95.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12296&rd=15182",
+			"name":"TomekPhone",
+			"notes":[],
+			"submission":636
+		},
+		{
+			"avgPts":240.08,
+			"constraints":[],
+			"correctRatio":42.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12295&rd=15182",
+			"name":"DrawingPointsDivOne",
+			"notes":[],
+			"submission":96
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12294&rd=15182",
+			"name":"BoundedOptimization",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"Single Round Match 560 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15182"
+}

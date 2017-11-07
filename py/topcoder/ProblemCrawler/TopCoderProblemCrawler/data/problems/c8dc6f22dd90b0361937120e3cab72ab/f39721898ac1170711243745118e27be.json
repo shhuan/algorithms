@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5909&rd=8072",
+	"statement":"Recently, you went to a fair where one of the attractions was an oracle who would give you your horoscope for the next several days. She wasn't very precise though; all she would say is whether you would have a Good ('G') or Bad ('B') day on a particular day. Besides not being very precise, she was very inconsistent: she could be right AT MOST <b>R</b> times in a row, and she could be wrong AT MOST <b>W</b> times in a row. <br /><br /> <br /><br /> Create a class Horoscope, which contains a method maxGoodDays. The method takes a String[] <b>predictions</b>, an int <b>R</b> and an int <b>W</b> as input. The elements of <b>predictions</b> are strings containing only the characters 'G' or 'B', indicating whether your horoscope for that day was predicted to be good or bad. (Note that you should concatenate the elements of <b>predictions</b> and consider the entire string the predictions). The method should return the maximum number of Good days that you can experience given the <b>predictions</b>, and values for <b>R</b> and <b>W</b>.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Horoscope",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxGoodDays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxGoodDays(String[] predictions, int R, int W)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\"GGGG\"}",
+			"note":"Since R is 4, the oracle can be Right for all 4 predicted days. In this case, the maximum number of good days you would experience is 4.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"GGGG\"}",
+			"note":"Here, the oracle can't be Right for all 4 days. One way of achieving 3 Good days (which is the maximum possible in this case) is for the oracles predictions to be Right, Wrong, Right, Right for the 4 days respectively. Thus, the return value here is 3.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\"GBGBBB\"}",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\"GGGBBBGBGGGB\", \"GGBBBBBBBBBGBGBGBGBGBGBGBGBBBBBBBBBBBBBBGGGG\", \"G\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"predictions will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of predictions will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of predictions will contain only the characters 'G' or 'B'."
+		},
+		{
+			"order":4,
+			"val":"R will be between 1 and 50 inclusive."
+		},
+		{
+			"order":5,
+			"val":"W will be between 1 and 50 inclusive."
+		}
+	]
+}

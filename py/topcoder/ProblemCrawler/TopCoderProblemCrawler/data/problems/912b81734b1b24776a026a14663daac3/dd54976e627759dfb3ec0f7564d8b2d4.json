@@ -1,0 +1,108 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13059&rd=15849",
+	"statement":"<i>Please note that this problem has a non-standard time limit: 3 seconds.</i> <br /><br /><br /><br /> A yet unknown &quot;LLL Company&quot; wants to design a logo. After a long discussion, company designers decided that the logo should consist of three letters L drawn in some way. <br /><br /><br /><br /> To start with something, designers drew N rows of M points each, one under another, so that these points form a rectangular grid. They also painted each point either white or black. Here is an example of what they could get for N = 4 and M = 5: <br /><br /><br /><br /> <img src=\"http://www.topcoder.com/contest/problem/ThreeLLogo/1.png\" /> <br /><br /><br /><br /> Designers agreed to draw each letter L as a union of a horizontal and a vertical line segment intersecting at their left and bottom ends, respectively. The segments must have positive lengths, and their endpoints must be white grid points. All grid points that lie on the segments must be white as well. For example, here are two valid placements of a letter: <br /><br /><br /><br /> <img src=\"http://www.topcoder.com/contest/problem/ThreeLLogo/2.png\" />&nbsp; <img src=\"http://www.topcoder.com/contest/problem/ThreeLLogo/3.png\" /> <br /><br /><br /><br /> Note that neither the letters nor the grid can be rotated. <br /><br /><br /><br /> The final requirement is that the three letters should be disjoint. That is, no white point should lie on two segments belonging to different letters. <br /><br /><br /><br /> You are given the grid with N rows and M columns, encoded as a String[] <b>grid</b> with N elements, each containing M characters. Each character is either '.' or '#', meaning that the corresponding point is either white or black, respectively. <br /><br /><br /><br /> Return the number of different possible logos with three L's drawn on them according to the requirements. Two logos are considered different if there is a pair of points that is connected by a line segment in exactly one of the logos. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ThreeLLogo",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countWays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countWays(String[] grid)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"......\", \"......\"}",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\".##..\", \".....\", \".#.#.\", \"#...#\"}",
+			"note":"This is the example from the problem statement. The three possible logos look as follows:       ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"....\", \"#...\", \"....\", \"..#.\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"..\", \"..\"}",
+			"note":"Too small for a logo.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{\".#.#\", \"....\", \".#.#\", \"....\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 37800",
+			"id":0,
+			"input":"{\"######.#######\", \"######.#######\", \"#.####.#######\", \"#.####.#######\", \"#.####........\", \"#.############\", \"#.############\", \"#.############\", \"#.#####.######\", \"#.#####.######\", \"#.#####.######\", \"#....##.######\", \"#######.######\", \"#######.######\", \"#######.######\", \"#######.######\", \"#######.######\", \"#######.######\", \"#######......#\", \"##############\"}",
+			"note":"Corners of L's are identified uniquely in this case, but line segment lengths can vary.",
+			"order":6
+		},
+		{
+			"expect":"Returns: 27750",
+			"id":0,
+			"input":"{\"#......\", \".#....#\", \".#.#...\", \"#....#.\", \".##..#.\", \".#.....\", \".....#.\", \".#.#...\", \".#...#.\", \"..##...\"}",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"Returns: 2178497179123",
+			"id":0,
+			"input":"{\"...#..........................\", \"............#..#........#.....\", \".#............................\", \"...#..........#...#..##.......\", \".........#....#...#...#.....#.\", \"#...#......#...........#..#...\", \"#...##..#..#..#.....#.........\", \".............##...............\", \".....#..#..#..#...............\", \"......#................#......\", \"...#....#.........#.....#...#.\", \".........#....................\", \".........#.........##......#..\", \".#.#..#.....#.#....#.#........\", \"....#.........#...#...........\", \"..##.....#.............#......\", \".#............................\", \"......................#.......\", \"......#..............#.......#\", \"##..#.........#........#.....#\", \"......#.......#.....#.........\", \".....#...#...#.#............#.\", \"......#..##....#..............\", \"....#....................#....\", \".#..........................#.\", \".............#..........#.....\", \".#.........#..................\", \"................#.........##..\", \".......................#.....#\", \".............#...............#\"}",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain between 2 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"All elements of grid will contain the same number of characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of grid will contain between 2 and 30 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each character of grid will be either '.' or '#'."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":202.64,
+			"constraints":[],
+			"correctRatio":57.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12516&rd=16016",
+			"name":"SubstringReversal",
+			"notes":[],
+			"submission":834
+		},
+		{
+			"avgPts":314.91,
+			"constraints":[],
+			"correctRatio":43.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13251&rd=16016",
+			"name":"CliqueGraph",
+			"notes":[],
+			"submission":324
+		},
+		{
+			"avgPts":493.33,
+			"constraints":[],
+			"correctRatio":32.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13235&rd=16016",
+			"name":"InverseRMQ",
+			"notes":[],
+			"submission":105
+		}
+	],
+	"name":"2014 TCO Algorithm > Round 2C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16016"
+}

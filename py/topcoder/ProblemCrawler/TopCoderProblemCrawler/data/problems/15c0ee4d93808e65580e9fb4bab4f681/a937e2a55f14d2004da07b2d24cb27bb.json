@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11328&rd=14428",
+	"statement":"You want to type a document containing only spaces and new lines. Let SP and NL denote a space character and a new line character, respectively. You are given a int[] <b>lines</b> describing the desired document. The elements of <b>lines</b> represent the number of SP characters in each line, in order. Each line must end with a NL character. In other words, the document should look like this: <b>lines</b>[0] SP characters, followed by a NL, followed by <b>lines</b>[1] SP characters, followed by a NL, ..., <b>lines</b>[N-1] SP characters, followed by a NL (where N is the number of elements in <b>lines</b>). <br /><br /> <br /><br /> The editor has a cursor, which can be positioned between two adjacent characters or at the beginning or end of the document. You can move this cursor freely. <br /><br /> <br /><br /> The editor has three special keys: \n <ul> \n  <li> SPACE: inserts a SP at the position of the cursor. </li> \n  <li> DELETE: deletes a SP character immediately to the right of the cursor. This key cannot be used if the character to the right of the cursor is a NL. </li> \n  <li> RETURN: inserts a NL followed by some number of SP characters. This key can only be used when the character immediately to the right of the cursor is a NL. The number of SP characters that get inserted is equal to the number of SP characters in the line where the cursor is. For example, if the document is &quot;SP NL SP SP NL SP SP SP NL&quot;, and the cursor is immediately to the left of the second NL, it will become &quot;SP NL SP SP NL SP SP NL SP SP SP NL&quot; after pressing RETURN. </li> \n </ul> The document initially contains nothing but a single NL character. Return the minimum number of times you must press SPACE, DELETE or RETURN to complete the document. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WhiteSpaceEditing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(int[] lines)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{ 3, 2, 3 }",
+			"note":"You can edit the document as follows:  ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{ 0 }",
+			"note":"You have to do nothing. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{ 1, 2, 4 } ",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 499",
+			"id":0,
+			"input":"{ 250, 105, 155, 205, 350 } ",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"lines will contain between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each element of lines will be between 0 and 1,000,000, inclusive. "
+		}
+	]
+}

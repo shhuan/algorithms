@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":202.66,
+			"constraints":[],
+			"correctRatio":89.96,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1914&rd=4640",
+			"name":"Animation",
+			"notes":[],
+			"submission":229
+		},
+		{
+			"avgPts":457.06,
+			"constraints":[],
+			"correctRatio":27.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1614&rd=4640",
+			"name":"TeamPhoto",
+			"notes":[],
+			"submission":111
+		},
+		{
+			"avgPts":474.43,
+			"constraints":[],
+			"correctRatio":42.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1761&rd=4640",
+			"name":"AlphaDice",
+			"notes":[],
+			"submission":80
+		}
+	],
+	"name":"Single Round Match 167 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4640"
+}

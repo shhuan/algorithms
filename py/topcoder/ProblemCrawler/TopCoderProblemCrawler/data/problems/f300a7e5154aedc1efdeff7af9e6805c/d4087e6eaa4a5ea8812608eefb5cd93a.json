@@ -1,0 +1,107 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13008&rd=15844",
+	"statement":"There are N cities in the plane. For convenience, the cities are numbered 0 through N-1. For each i, the city number i is represented by the point at coordinates (<b>x</b>[i], <b>y</b>[i]).<br /><br /> <br /><br /> <br /><br /> The king wants to connect all cities by building exactly N-1 roads. Each road must connect two cities. All roads must be straight. Hence, the length of a road is equal to the Euclidean distance between the two points it connects. The roads are allowed to cross and even overlap arbitrarily. (You cannot change roads at a crossing. Hence, the N-1 roads connect all cities if and only if their topology is a tree.)<br /><br /> <br /><br /> <br /><br /> The king does not care about roads being short. However, people often complain if some roads are short and others are long. Therefore, the king would like to select a set of N-1 roads such that they connect all cities, and the standard deviation of the sequence of their lengths is as small as possible.<br /><br /> <br /><br /> <br /><br /> Formally, given a sequence of real numbers (a1,...,aS) we can compute their standard deviation as follows. First, let b = ((a1+...+aS) / S) be their mean - i.e., the average of our numbers. Next, let c = (sum_i (b-ai)^2) be the sum of squared distances of all values from the mean. Finally, the standard deviation of our sequence is computed as sqrt(c/S). Note that our sequence will contain exactly N-1 road lengths, hence in the above formulas S will be equal to N-1.<br /><br /> <br /><br /> <br /><br /> You are given the int[]s <b>x</b> and <b>y</b> with N elements each: the coordinates of the N points. Compute and return the smallest possible value of the standard deviation of lengths of selected roads.",
+	"notes":[
+		{
+			"order":1,
+			"val":"The Euclidean distance between points (a,b) and (c,d) equals sqrt( (a-c)^2 + (b-d)^2 )."
+		},
+		{
+			"order":2,
+			"val":"Your return value must have an absolute or a relative error of less than 1e-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Egalitarianism2",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minStdev",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double minStdev(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,1,0,1}",
+			"id":0,
+			"input":"{0,0,1,1}",
+			"note":"We can build these roads: 0-1, 1-3, 3-2.",
+			"order":1
+		},
+		{
+			"expect":"{0,9,10}",
+			"id":0,
+			"input":"{0,0,0}",
+			"note":"The optimal solution is to build the roads with lengths 9 and 10. (Note that these two roads overlap, but that is allowed.)",
+			"order":2
+		},
+		{
+			"expect":"{0,45,2,67}",
+			"id":0,
+			"input":"{12,46,81,56}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{0,2,3,9,10,15,16}",
+			"id":0,
+			"input":"{0,0,0,0,0,0,0}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{-12396, -66098, -56843, 20270, 81510, -23294, 10423, 24007, -24343, -21587, -6318, -7396, -68622, 56304, -85680, -14890, -38373, -25477, -38240, 11736}",
+			"id":0,
+			"input":"{167053, 536770, -590401, 507047, 350178, -274523, -584679, -766795, -664177, 267757, -291856, -765547, 604801, -682922, -404590, 468001, 607925, 503849, -499699, -798637}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{-77318, -632629, -344942, -361706, 191982, 349424, 676536, 166124, 291342, -268968, 188262, -537953, -70432, 156803, 166174, 345128, 58614, -671747, 508265, 92324}",
+			"id":0,
+			"input":"{-306880, 169480, -558404, -193925, 654444, -300247, -456420, -119436, -620920, -470018, -914272, -691256, -49418, -21054, 603373, -23656, 891691, 258986, -453793, -782940}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 3 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x and y will contain same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element in x will be between -1,000,000 and 1,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element in y will be between -1,000,000 and 1,000,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"No two cities will be located in the same place."
+		}
+	]
+}

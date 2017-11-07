@@ -1,0 +1,77 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7772&rd=10675",
+	"statement":"<p> Several boxes are placed in a row. Each box is one of three colors. We want to rearrange these boxes in a such way that no three consecutive boxes are of the same color. This process should affect the fewest boxes possible. More formally, we want to achieve the desired configuration by swapping pairs of boxes, and we want to maximize the number of boxes that are never moved.</p> <p>You will be given a String <b>boxes</b> which describes the colors of the boxes. Colors are given as characters 'A', 'B' and 'C' respectively. Rearrange the boxes as described above and return the maximum possible number of boxes that are never moved. Return -1 if it is not possible to achieve the desired configuration.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BoxesArrangement",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxUntouched",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxUntouched(String boxes)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"\"AAABBBCCC\"",
+			"note":"The boxes could be rearranged into \"ABABCBCAC\".",
+			"order":1
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"\"AAAAAAAACBB\"",
+			"note":"The best rearangement is \"AABAABAACAA\".",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"\"CCCCCB\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"\"BAACAABAACAAA\"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"\"CBBABA\"",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"boxes will contain between 1 and 50 characters, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"boxes will consist of characters 'A', 'B' and 'C' only. "
+		}
+	]
+}

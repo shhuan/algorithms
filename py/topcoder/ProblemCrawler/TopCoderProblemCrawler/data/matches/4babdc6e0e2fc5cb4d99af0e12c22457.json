@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174.88,
+			"constraints":[],
+			"correctRatio":55.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11400&rd=14434",
+			"name":"RectangleArea",
+			"notes":[],
+			"submission":471
+		},
+		{
+			"avgPts":263.94,
+			"constraints":[],
+			"correctRatio":37.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11395&rd=14434",
+			"name":"SetMultiples",
+			"notes":[],
+			"submission":107
+		},
+		{
+			"avgPts":534.43,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11405&rd=14434",
+			"name":"PerfectSequences2",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"Member Single Round Match 505 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14434"
+}

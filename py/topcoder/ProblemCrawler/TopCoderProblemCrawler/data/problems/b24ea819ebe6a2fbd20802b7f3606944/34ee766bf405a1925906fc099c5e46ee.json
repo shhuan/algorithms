@@ -1,0 +1,77 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12159&rd=15176",
+	"statement":"<p> John and Brus are building towers using toy bricks. They have two types of bricks: red and blue ones. The number of red bricks they have is <b>redCount</b> and each of them has a height of <b>redHeight</b>. The number of blue bricks they have is <b>blueCount</b> and each of them has a height of <b>blueHeight</b>. </p> <p> A tower is built by placing bricks one atop another. A brick can be placed either on the ground, or on a brick of a different color. (I.e., you are not allowed to put two bricks of the same color immediately on one another.) A tower has to consist of at least one brick. The height of a tower is the sum of all heights of bricks that form the tower. Two towers are considered to be different if they have different heights. (Two towers of the same height are considered the same, even if they differ in the number and colors of bricks that form them.) </p> <p> You are given the ints <b>redCount</b>, <b>redHeight</b>, <b>blueCount</b> and <b>blueHeight</b>. Return the number of different towers that John and Brus can build. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheBrickTowerEasyDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int find(int redCount, int redHeight, int blueCount, int blueHeight)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":"John and Brus have 1 red brick of height 2 and 3 blue bricks of height 4. Using these bricks, it's possible to build 4 towers: ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"7",
+			"order":3
+		},
+		{
+			"expect":"47",
+			"id":0,
+			"input":"47",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"redCount will be between 1 and 474,747,474, inclusive."
+		},
+		{
+			"order":2,
+			"val":"redHeight will be between 1 and 474,747,474, inclusive."
+		},
+		{
+			"order":3,
+			"val":"blueCount will be between 1 and 474,747,474, inclusive."
+		},
+		{
+			"order":4,
+			"val":"blueHeight will be between 1 and 474,747,474, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":192.69,
+			"constraints":[],
+			"correctRatio":64.51,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6619&rd=9996",
+			"name":"InboxCleanup",
+			"notes":[],
+			"submission":386
+		},
+		{
+			"avgPts":305.85,
+			"constraints":[],
+			"correctRatio":18.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6540&rd=9996",
+			"name":"PlacingPieces",
+			"notes":[],
+			"submission":125
+		},
+		{
+			"avgPts":531.66,
+			"constraints":[],
+			"correctRatio":59.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6621&rd=9996",
+			"name":"RoboRace",
+			"notes":[],
+			"submission":102
+		}
+	],
+	"name":"Single Round Match 316 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9996"
+}

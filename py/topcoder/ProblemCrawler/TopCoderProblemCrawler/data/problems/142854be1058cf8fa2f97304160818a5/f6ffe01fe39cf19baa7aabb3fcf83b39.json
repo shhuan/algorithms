@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3053&rd=8036",
+	"statement":"Given a String <b>s</b>, we will first collect all distinct positive length subsequences of <b>s</b>, and place them in a list L. A subsequence of <b>s</b> is obtained by deleting 0 or more characters. Next, sort L into ascending order by length. Where ties occur, break them lexicographically. Here uppercase letters occur before lowercase letters. Finally, return the String in position <b>pos</b> % k (0-based), where k is the number of elements in L, and % is the modulus operator.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GetSubsequence",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getAt",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getAt(String s, String pos)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"14\"",
+			"id":0,
+			"input":"\"ABCD\"",
+			"note":"\"ABCD\" is the last of the 15 subsequences in L.",
+			"order":1
+		},
+		{
+			"expect":"\"19203410239121\"",
+			"id":0,
+			"input":"\"ABCD\"",
+			"note":"19203410239121 % 15 = 11.",
+			"order":2
+		},
+		{
+			"expect":"\"10\"",
+			"id":0,
+			"input":"\"AAAAAAAAAAAA\"",
+			"order":3
+		},
+		{
+			"expect":"\"39283423984923\"",
+			"id":0,
+			"input":"\"AbcdAbcdAbcd\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s will contain between 2 and 50 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in s will be a letter ('A'-'Z','a'-'z')."
+		},
+		{
+			"order":3,
+			"val":"pos will be an integral value between 0 and 2^63 - 1 inclusive."
+		},
+		{
+			"order":4,
+			"val":"pos will not have extra leading zeros."
+		}
+	]
+}

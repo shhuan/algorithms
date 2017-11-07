@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13377&rd=16061",
+	"statement":"Suffix number i of a string S is the suffix that starts with the character S[i]. For example, for S=&quot;abcde&quot; suffix 0 is &quot;abcde&quot; and suffix 3 is &quot;de&quot;. <br /><br /> <br /><br /> The suffix array of a string S is defined as the permutation of suffix numbers that corresponds to their lexicographic order. For example, suppose that S=&quot;abca&quot;. If we order all suffixes of S lexicographically, we get the following: &quot;a&quot; &lt; &quot;abca&quot; &lt; &quot;bca&quot; &lt; &quot;ca&quot;. The corresponding suffix numbers are 3, 0, 1, and 2, in this order. Thus, for this string S the suffix array would be {3, 0, 1, 2}. Note that the length of a suffix array is the same as the length of the original string. <br /><br /> <br /><br /> You are given a int[] <b>SA</b>: the suffix array of an unknown string. Return the smallest possible number of <i>different</i> characters in that string.",
+	"notes":[
+		{
+			"order":1,
+			"val":"We do not consider any specific alphabet. In particular, it is possible to have more than 26 different letters."
+		},
+		{
+			"order":2,
+			"val":"For any suffix array, there is at least one string with such a suffix array, so the return value is always defined."
+		},
+		{
+			"order":3,
+			"val":"The string A is smaller than a different string B in lexicographic order either if A is a prefix of B, or if there are indices where A and B differ, and for the smallest such index i we have A[i] < B[i]."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SuffixArrayDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimalCharacters",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimalCharacters(int[] SA)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{3,0,1,2}",
+			"note":"As we saw in the problem statement, the suffix array {3,0,1,2} corresponds to the string \"abca\". However, there are also other string with the same suffix array. For example, the string \"xxyx\" also has this property, and contains only two different characters.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{3,2,1,0}",
+			"note":"One optimal string is \"aaaa\".",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{0,1,2,3}",
+			"note":"Here, one optimal string is \"aaaz\".",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{7,4,8,6,1,5,2,9,3,0}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{0}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"SA will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"SA will be a permutation of 0 to |SA|-1, inclusive."
+		}
+	]
+}

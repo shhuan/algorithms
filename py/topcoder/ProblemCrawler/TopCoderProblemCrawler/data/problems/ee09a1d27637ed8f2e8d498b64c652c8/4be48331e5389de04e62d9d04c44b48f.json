@@ -1,0 +1,117 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12868&rd=15711",
+	"statement":"Fox Ciel has a list of names on her computer. In this problem, a name is simply a non-empty string of lowercase letters. All names in her list are distinct. <br /><br /> <br /><br /> One day, when she left her seat, she forgot to lock her computer. Then, Lun the mischievous dog appeared, and randomly shuffled the order of the names in her list. <br /><br /> <br /><br /> Now, Ciel has to restore the original order of names using her memory. You are given a String[] <b>names</b>, along with two int[]s <b>info1</b> and <b>info2</b>. <b>names</b> contains all names in the shuffled list in the order they appear. <b>info1</b> and <b>info2</b> describes Ciel's memory of the original list. She remembers that, for each valid i, the <b>info1</b>[i]-th (0-indexed) name in the original list was a prefix of the <b>info2</b>[i]-th name. <br /><br /> <br /><br /> Let X be the number of possible orders of the names in the original list that are consistent with Ciel's memory. Calculate and return the value (X modulo 1,000,000,007). X can be 0, which means Ciel's memory is inconsistent with the names in the list.",
+	"notes":[{
+		"order":1,
+		"val":"A prefix of a string is the result of erasing zero or more characters from the right end of that string."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SimilarNames",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(String[] names, int[] info1, int[] info2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{\"kenta\", \"kentaro\", \"ken\"}",
+			"note":"Here, Ciel's list contains 3 names. She remembers that the 0-th name was a prefix of the 1-th name in the original list. Here are the all possible orders of names in the original list:  Note that it is possible that the order of the names in the original list coincides with that of the shuffled list.",
+			"order":1
+		},
+		{
+			"expect":"{0, 0}",
+			"id":0,
+			"input":"{\"hideo\", \"hideto\", \"hideki\", \"hide\"}",
+			"note":"She remembers that the 0-th name was a prefix of both the 1-th name and 2-th name in the original list. The only thing we can be sure is that the 0-th name was \"hide\".",
+			"order":2
+		},
+		{
+			"expect":"{0, 1, 3, 5}",
+			"id":0,
+			"input":"{\"aya\", \"saku\", \"emi\", \"ayane\", \"sakura\", \"emika\", \"sakurako\"}",
+			"note":"This time, she remembers many facts. The only possible original orders are: ",
+			"order":3
+		},
+		{
+			"expect":"{0, 1}",
+			"id":0,
+			"input":"{\"taro\", \"jiro\", \"hanako\"}",
+			"note":"According to her memory, the 0-th name and the 1-th name in the original list must be the same, but actually all names are distinct. Her memory is inconsistent.",
+			"order":4
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"{\"alice\", \"bob\", \"charlie\"}",
+			"note":"Unfortunately she remembers nothing in this case.",
+			"order":5
+		},
+		{
+			"expect":"{17, 5, 6, 13, 5}",
+			"id":0,
+			"input":"{\"ryota\", \"ryohei\", \"ryotaro\", \"ryo\", \"ryoga\", \"ryoma\", \"ryoko\", \"ryosuke\", \"ciel\", \"lun\", \"ryuta\", \"ryuji\", \"ryuma\", \"ryujiro\", \"ryusuke\", \"ryutaro\", \"ryu\", \"ryuhei\", \"ryuichi\", \"evima\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"names will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of names will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of names will be a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":4,
+			"val":"Elements of names will be distinct."
+		},
+		{
+			"order":5,
+			"val":"info1 and info2 will each contain between 0 and 8 elements, inclusive."
+		},
+		{
+			"order":6,
+			"val":"info1 and info2 will contain the same number of elements."
+		},
+		{
+			"order":7,
+			"val":"Each element of info1 and info2 will be between 0 and n-1, inclusive, where n is the number of elements in names."
+		},
+		{
+			"order":8,
+			"val":"For each valid i, info1[i] and info2[i] will be distinct."
+		},
+		{
+			"order":9,
+			"val":"All pairs (info1[i], info2[i]) will be distinct."
+		}
+	]
+}

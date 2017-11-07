@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7247&rd=10675",
+	"statement":"<p> You are to populate a 5x5 square with each of the numbers between 1 and 25, inclusive. The numbers in each row must be in increasing order from left to right. Some of the cells are already filled in, but no more than one number per row. You must fill in the remaining cells. </p> <p>You will be given a String[] <b>square</b>. Each row is given as a space-separated list of cells. Each cell is either a number written with two digits (numbers less than 10 have an additional leading zero) or two '?' characters which represent an empty cell. Your method should return a String[] in the same format, but with all the empty cells filled in. If there are no arrangements possible return an empty String[]. If there are several arrangements possible return the one with the smallest first number in the first row. If there are still several arrangements possible return the one with the smallest second number in the first row, and so on. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NewMagicSquare",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"completeTheSquare",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] completeTheSquare(String[] square)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"01 02 03 04 05\", \"06 07 08 09 10\", \"11 12 13 14 15\", \"16 17 18 19 20\", \"21 22 23 24 25\" }",
+			"id":0,
+			"input":"{\"?? ?? ?? ?? ??\", \"?? ?? ?? ?? ??\", \"?? ?? ?? ?? ??\", \"?? ?? ?? ?? ??\", \"?? ?? ?? ?? ??\"}",
+			"note":"You are not limited by prefilled cells. The answer is the lexicographically smallest square.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {\"01 06 20 21 22\", \"07 08 09 10 11\", \"02 03 04 05 12\", \"13 14 15 16 17\", \"18 19 23 24 25\" }",
+			"id":0,
+			"input":"{\"?? ?? 20 ?? ??\", \"?? ?? ?? ?? ??\", \"?? ?? ?? 05 ??\", \"?? ?? ?? ?? ??\", \"?? ?? ?? ?? ??\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"{\"?? ?? ?? ?? ??\", \"?? ?? ?? ?? 24\", \"?? ?? ?? ?? ??\", \"?? ?? ?? ?? ??\", \"21 ?? ?? ?? ??\"}",
+			"note":"You should place four numbers greater than 21 into the 5th row. There are four such numbers - 22, 23, 24 and 25, but 24 is already used in the second row.",
+			"order":3
+		},
+		{
+			"expect":"Returns: {\"01 03 15 17 18\", \"02 08 09 10 22\", \"04 05 06 07 23\", \"11 12 16 24 25\", \"13 14 19 20 21\" }",
+			"id":0,
+			"input":"{\"?? ?? 15 ?? ??\", \"02 ?? ?? ?? ??\", \"?? ?? ?? 07 ??\", \"?? ?? 16 ?? ??\", \"?? ?? ?? ?? 21\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"square will contain exactly 5 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of square will contain exactly 14 characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of square will be a space-separated list of cells."
+		},
+		{
+			"order":4,
+			"val":"Each cell will be either a number written with two digits or two '?' characters."
+		},
+		{
+			"order":5,
+			"val":"Each element of square will contain at most one filled cell."
+		},
+		{
+			"order":6,
+			"val":"All numbers in square will be between 1 and 25, inclusive."
+		},
+		{
+			"order":7,
+			"val":"All numbers in square will be distinct."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":216.39,
+			"constraints":[],
+			"correctRatio":93.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1563&rd=4470",
+			"name":"MemberCheck",
+			"notes":[],
+			"submission":145
+		},
+		{
+			"avgPts":246.14,
+			"constraints":[],
+			"correctRatio":50.98,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1308&rd=4470",
+			"name":"Cribbage",
+			"notes":[],
+			"submission":102
+		},
+		{
+			"avgPts":602.18,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1310&rd=4470",
+			"name":"PrefixSynchronization",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"Single Round Match 136 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4470"
+}

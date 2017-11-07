@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3118&rd=5865",
+	"statement":"<p>Your favorite local restaurant has caught onto the health food trend, and has begun publishing basic nutritional information for all of their most popular menu selections. This is excellent timing, since your doctor has recently recommended various diet plans for you and several of your friends.</p> <p>You are given int[] <b>protein</b>, int[] <b>carbs</b>, and int[] <b>fat</b>, representing the number of grams of protein, carbs, and fat in each of the available menu items. Elements from each int[] correspond to the elements of the other int[]s with the same index.</p> <p>You are also given a String[] <b>dietPlans</b>, indicating the doctor's recommendation for how each person should make their meal selection. Each element of <b>dietPlans</b> describes the diet plan for an individual. Each character of each element of <b>dietPlans</b> specifies, in order of importance, a selection criteria, defined in the following way: </p>\n <ul> \n  <li>'C' = high carbs</li> \n  <li>'c' = low carbs</li> \n  <li>'P' = high protein</li> \n  <li>'p' = low protein</li> \n  <li>'F' = high fat</li> \n  <li>'f' = low fat</li> \n  <li>'T' = high calorie</li> \n  <li>'t' = low calorie</li> \n </ul> <p></p> <p>As an example, the diet plan &quot;tf&quot; means the doctor recommends a meal with the lowest possible calories, and if more than one is tied, the one with less fat should be selected. Whenever more than one meal is tied according to the diet plan, then the one with a lower index should be selected.</p> <p>The restaurant sloppily neglected to list the total calorie count on the menu. Fortunately, you happen to remember from days gone by that one gram of fat contains 9 calories, and one gram of carbs or protein contains 5 calories.</p> <p>You are to return a int[] indicating the indexes of the menu selections that best suit each person's diet plan (indexed from 0). The return int[] should have the same number of elements as <b>dietPlans</b>, and each value of the return int[] should correspond to the element of <b>dietPlans</b> with the same index.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"When no diet plan is specified, the default should be the menu selection with the lowest index (0)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HealthFood",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"selectMeals",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] selectMeals(int[] protein, int[] carbs, int[] fat, String[] dietPlans)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2, 8}",
+			"id":0,
+			"input":"{3, 4}",
+			"note":"This is a simple menu, with only two selections. We see each of the simplest diet plans here.",
+			"order":1
+		},
+		{
+			"expect":"{2, 8, 5, 1}",
+			"id":0,
+			"input":"{3, 4, 1, 5}",
+			"note":"Note here that lowest total calories is tied between items 2 and 3. Note also that both of those items are tied for fat content. So, when we have lowest carbs as a tie-breaker, item 3 is selected. When there is no further tiebreaker, we select the one with lowest index. Note also that if highest fat is the first requirement, then the tiebreaker is irrelevant since item 0 has more fat than items 2 or 3.",
+			"order":2
+		},
+		{
+			"expect":"{26, 56, 3, 45, 88, 0, 10, 27, 53}",
+			"id":0,
+			"input":"{18, 86, 76, 0, 34, 30, 95, 12, 21}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"carbs will contain between 1 and 50 elements, inclusive"
+		},
+		{
+			"order":2,
+			"val":"protein will contain between 1 and 50 elements, inclusive"
+		},
+		{
+			"order":3,
+			"val":"fat will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"carbs, protein, and fat will each contain the same number of elements."
+		},
+		{
+			"order":5,
+			"val":"Each element of carbs, protein, and fat will be between 0 and 100, inclusive."
+		},
+		{
+			"order":6,
+			"val":"dietPlans will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of dietPlans will be between 0 and 4 characters in length, inclusive, and will contain only the characters &quot;CcPpFfTt&quot;."
+		}
+	]
+}

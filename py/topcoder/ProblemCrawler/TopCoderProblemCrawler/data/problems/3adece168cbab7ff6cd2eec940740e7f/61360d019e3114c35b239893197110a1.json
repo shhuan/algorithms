@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10581&rd=13901",
+	"statement":"You are given a square board of size <b>N</b>x<b>N</b>, where each 1x1 cell is either black or white. A rectangle on the board is called good if it contains only white cells. The score of each cell is equal to the number of distinct good rectangles that contain that cell. <br /><br /> Use the following instructions to determine the coloring of the board. You are given ints <b>M</b>, <b>K</b>, <b>X0</b>, <b>Y0</b>, <b>A</b>, <b>B</b>, <b>C</b> and <b>D</b>. Generate two lists, X and Y, each of length <b>M</b>+<b>K</b>, using the following recursive definitions:<br /><br /> X[0] = <b>X0</b> MOD <b>N</b><br /><br /> X[i] = (X[i-1]*<b>A</b>+<b>B</b>) MOD <b>N</b><br /><br /> Y[0] = <b>Y0</b> MOD <b>N</b><br /><br /> Y[i] = (Y[i-1]*<b>C</b>+<b>D</b>) MOD <b>N</b><br /><br /> For each i between 0 and <b>M</b>-1, inclusive, the cell at column X[i], row Y[i] is black. The remaining cells are white.<br /><br /> Let's denote the score for the cell at column i, row j as score(i, j). Return the sum of score(X[i], Y[i]) for all i between <b>M</b> and <b>M</b>+<b>K</b>-1, inclusive.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CellScores",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countScores",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countScores(int N, int M, int K, int X0, int A, int B, int Y0, int C, int D)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"10",
+			"note":"The whole board is white. You are interested in cell (0,0). The score for this cell is 100.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"10",
+			"note":"Only the cell (5,5) is black. You are interested in cell (0,0). The score for this cell is 75.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"7",
+			"note":"The first 4 cells on the diagonal are black, and you are interested in the other 3 cells on the diagonal.",
+			"order":3
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"23",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"211",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,500, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"M and K will each be between 0 and 1,000,000, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"X0,Y0,A,B,C,D will each be between 0 and 1,500, inclusive."
+		}
+	]
+}

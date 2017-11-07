@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":236.15,
+			"constraints":[],
+			"correctRatio":85.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=109&rd=3014",
+			"name":"Numerology",
+			"notes":[],
+			"submission":28
+		},
+		{
+			"avgPts":338.05,
+			"constraints":[],
+			"correctRatio":96.3,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=110&rd=3014",
+			"name":"MayanCalendar",
+			"notes":[],
+			"submission":27
+		},
+		{
+			"avgPts":502.7,
+			"constraints":[],
+			"correctRatio":35.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=111&rd=3014",
+			"name":"NucleotideShift",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"Single Round Match 15 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3014"
+}

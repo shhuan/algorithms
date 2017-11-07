@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6555&rd=10796",
+	"statement":"<p>You've been given the blueprint for a trainyard which was laid out on a grid. Some grid cells have East-West track segments (marked with '-'), some have North-South track segments (marked with '|'), and others are intersections (marked with '+'). Cells with no track are marked with a '.' character. A train may enter an intersection square from any direction and may leave in any direction. Trains may enter a North-South track segment from either the North or South, and must exit the square moving in the same direction. Thus if a train enters a North-South segment from the South, it must leave to the North. East-West tracks work the same way, except with directions East and West. Squares without track may not be entered, and the train may not leave the area covered by the grid. The train always occupies a single grid location, and each square moved requires one unit of fuel.</p> <p>&nbsp;</p> <p>The train's starting location is marked on the map with an 'S' character. Trains may exit this location going any direction. Given the trainyard map in <b>layout</b> and the fuel available in <b>fuel</b>, you want to determine how many grid squares may be reached. You do not need to construct one route that reaches all these squares; rather, you are determining which squares could be reached using any legal route beginning at the 'S' location. A legal route may use some, all, or none of the fuel. Return the number of distinct grid squares that can be reached, including the initial 'S' location.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Trainyard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"reachableSquares",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int reachableSquares(String[] layout, int fuel)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{ \".-....\", \"-S---.\", \"......\"}",
+			"note":"The train can reach the initial 'S', as well as one square to the West. It could also reach two squares to the East (but not the third, as there's only 2 units of fuel). It can't move North to start, as it can't enter an East-West segment from the South.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{ \"..+-+.\", \"..|.|.\", \"S-+-+.\"}",
+			"note":"All 9 of the track segments are reachable, plus 1 for the 'S' square. Be sure not to count squares twice!",
+			"order":2
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"{ \"-....-\", \"|....+\", \"+-S++|\", \"|.|..|\", \"..+-++\"}",
+			"note":"All of the track segments are reachable except for the two at the North end that seem to be oriented the wrong way.",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{ \".|...\", \"-+S+|\", \".|...\"}",
+			"note":"The track segment on the far East side is not reachable - as you can't enter a North-South segment from the West.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"layout will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of layout will contain between 1 and 10 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of layout will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each element of layout will contain only the characters '-','|','+','.', and 'S'."
+		},
+		{
+			"order":5,
+			"val":"layout will contain exactly one 'S' character."
+		},
+		{
+			"order":6,
+			"val":"fuel will be between 1 and 10, inclusive."
+		}
+	]
+}

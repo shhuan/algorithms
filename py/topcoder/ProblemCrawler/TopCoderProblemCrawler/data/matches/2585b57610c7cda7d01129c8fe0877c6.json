@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":175.29,
+			"constraints":[],
+			"correctRatio":67.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13455&rd=16077",
+			"name":"ShoppingSurveyDiv1",
+			"notes":[],
+			"submission":361
+		},
+		{
+			"avgPts":265.51,
+			"constraints":[],
+			"correctRatio":56.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13219&rd=16077",
+			"name":"SegmentDrawing",
+			"notes":[],
+			"submission":57
+		},
+		{
+			"avgPts":560.51,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13418&rd=16077",
+			"name":"SegmentCutting",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"Single Round Match 634 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16077"
+}

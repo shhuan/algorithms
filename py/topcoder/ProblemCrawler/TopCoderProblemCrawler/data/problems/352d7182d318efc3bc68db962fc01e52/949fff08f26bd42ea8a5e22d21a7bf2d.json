@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7622&rd=10751",
+	"statement":"In Computer Science we hold weird ceremonies -- at each ceremony we display all our candles but only n of them are lit (yeah, a binary code). Unfortunately we have 2 different types of candles: we have <b>n1</b> candles that each burn at the rate <b>r1</b>, and <b>n2</b> candles that each burn at the rate <b>r2</b>. (The rates are in mm/hr.) <p> Before each ceremony we can choose which <b>n</b> of our candles will be the ones that are lit during the ceremony -- we do this in an attempt to keep our candles approximately the same length. Given <b>n</b>, <b>n1</b>, <b>r1</b>, <b>n2</b>, and <b>r2</b> return the number of ceremonies required for us to return our candles to uniform length. If we can never achieve uniform length, return -1. </p><p> (You may assume that our candles are arbitrarily long or that our ceremonies are arbitrarily short so we won't completely burn up any candles.) </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Candles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"ceremonies",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int ceremonies(int n, int n1, int r1, int n2, int r2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"5",
+			"note":" We have 6 type 1 candles and 4 type 2's and we burn 5 candles at each ceremony. Here they burn at the same rate, so we can burn any 5 of them during the first ceremony and the other five at the next ceremony. ",
+			"order":1
+		},
+		{
+			"expect":"12",
+			"id":0,
+			"input":"3",
+			"note":" For the first 6 ceremonies we could burn fresh candles, 2 of type 1 and 1 of type 2. At that point the type 1 candles will be shorter than the type 2 candles. For the last 2 ceremonies burn 3 type 2 candles and then the other 3 type 2 candles -- all the candles will now be the same length. ",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"19",
+			"note":" We don't have much choice here. In each ceremony we must burn all our candles except for 1. We will never be able to burn enough of the slower burning candles to get them as short as the others. ",
+			"order":3
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"56",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n, n1, r1, n2, r2 will all be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"n1+n2 will be greater than n."
+		}
+	]
+}

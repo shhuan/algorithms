@@ -1,0 +1,120 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11965&rd=15171",
+	"statement":"The Order of All Things Pointy and Magical has commissioned the creation of some new wizard hats. A wizard hat is created by taking two cones: a decorative top cone, and a warm and fluffy bottom cone. To assemble the hat, both cones are first placed onto a table, so that their bases are horizontal and their apexes point upwards. The top cone is then lifted and placed onto the bottom cone. The base of the top cone has to remain horizontal, and the apex of the top cone must be strictly above the apex of the bottom cone. <br /><br /><br /><br /> Not every pair of cones can be used to create a wizard hat. A wizard hat is only produced if the following two criteria are both met: \n <ul> \n  <li>The apex of the top cone must be strictly above the apex of the bottom cone. I.e., when the top cone is placed on top of the bottom cone and released, their apexes must not touch.</li> \n  <li>Some part of the bottom cone must remain visible to form the brim of the hat. (Otherwise, the hat would look like a simple cone, not like a wizard hat!)</li> \n </ul> You have several top cones and several bottom cones of various sizes. Each cone can be described by its height (the distance between the apex and the base) and by the radius of its base. The top cones you have are described by <b>topHeight</b> and <b>topRadius</b>: for each valid i, you have one top cone with height <b>topHeight</b>[i] and radius <b>topRadius</b>[i]. The bottom cones you have are described by <b>bottomHeight</b> and <b>bottomRadius</b> in the same way. <br /><br /><br /><br /> Your task is to determine the maximum number of wizard hats you can make using each of the available top and bottom cones at most once.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PointyWizardHats",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumHats",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getNumHats(int[] topHeight, int[] topRadius, int[] bottomHeight, int[] bottomRadius)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{3}",
+			"id":0,
+			"input":"{30}",
+			"note":"The top and bottom cone can be used together to make a wizard hat.",
+			"order":1
+		},
+		{
+			"expect":"{4,3}",
+			"id":0,
+			"input":"{4,4}",
+			"note":"The only way to produce a wizard hat is to use the top cone 1 (height 4, radius 3) and the bottom cone 0 (height 5, radius 5).",
+			"order":2
+		},
+		{
+			"expect":"{3}",
+			"id":0,
+			"input":"{3}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{2,5}",
+			"id":0,
+			"input":"{10,10}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{5,4,3}",
+			"id":0,
+			"input":"{3,4,5}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{2,3,4,5,6}",
+			"id":0,
+			"input":"{1,2,3,4,5}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{123,123,232,123,323,434}",
+			"id":0,
+			"input":"{123,214,232,323,342,343}",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"{10000,10000,10000,1,2,3}",
+			"id":0,
+			"input":"{999,999,999,10000,10000,10000}",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"topHeight and topRadius will contain the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"bottomHeight and bottomRadius will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"topHeight will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"topRadius will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"bottomHeight will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":6,
+			"val":"bottomRadius will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of topHeight, topRadius, bottomHeight, and bottomRadius will be between 1 and 10,000, inclusive."
+		}
+	]
+}

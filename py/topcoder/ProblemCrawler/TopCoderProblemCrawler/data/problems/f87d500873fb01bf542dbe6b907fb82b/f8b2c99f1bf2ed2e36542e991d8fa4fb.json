@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4696&rd=8059",
+	"statement":"Character j in element i (both 0-based) of <b>messages</b> denotes how many messages employee i sent to employee j. You will return a int[] containing the hierarchy of the employees within the company. Element 0 is the highest ranked employee, and so forth. The returned ranking should minimize the number of messages sent from lower ranked employees to higher ranked employees. If multiple solutions are possible, return the one with element 0 minimal. If there are still ties, minimize element 1, etc.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CompanyMessages",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getRank",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getRank(String[] messages)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {0, 1, 2 }",
+			"id":0,
+			"input":"{\"000\", \"000\", \"000\"}",
+			"note":"Here no messages are sent.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {2, 1, 0 }",
+			"id":0,
+			"input":"{\"000\", \"100\", \"010\"}",
+			"note":"Person 2 sends a message to person 1 and person 1 sends one to person 0. The hierarchy is clear.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {4, 2, 1, 5, 0, 3 }",
+			"id":0,
+			"input":"{\"012105\",\"601745\",\"830479\",\"043086\",\"349904\",\"649810\"}",
+			"note":"A lot of messages sent around.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"messages will contain between 2 and 15 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of messages will contain exactly N characters, where N is the number of elements in messages."
+		},
+		{
+			"order":3,
+			"val":"Each character in messages will be a digit ('0'-'9')."
+		},
+		{
+			"order":4,
+			"val":"Character i in element i of messages will be '0'."
+		}
+	]
+}

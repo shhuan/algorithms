@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1957&rd=4650",
+	"statement":"Aurum Nugget, Inc. has just purchased some new gold mines. They have a number of miners available to work in the mines, and would like to allocate the miners in such a way as to maximize their profit. Each mine can support a maximum of 6 miners, and contains a maximum of 6 major ore deposits. After the miners have been allocated to mines, the company earns (or loses) money as follows:<br /><br /> \n <ol> \n  <li>If a mine has fewer miners than ore deposits, the company will earn $60 per miner allocated to that mine.</li> \n  <li>If a mine has the same number of miners as ore deposits, the company will earn $50 per miner allocated to that mine.</li> \n  <li>If a mine has more miners than ore deposits, the company will earn $50 for each miner up to the number of ore deposits, and will lose $20 for each extra miner allocated to that mine.</li> \n </ol><br /><br /> Even if it will lose money, the company must employ every available worker at one of its mines.<br /><br /> <br /><br /> Write a class GoldMine with a method getAllocation that takes in a String[] <b>mines</b> and a int <b>miners</b>. Each element of <b>mines</b> will be in the form &quot;&lt;p0&gt;, &lt;p1&gt;, &lt;p2&gt;, &lt;p3&gt;, &lt;p4&gt;, &lt;p5&gt;, &lt;p6&gt;&quot; (quotes for clarity) where each &lt;pn&gt; is a three digit number (with leading 0s if necessary.) Each &lt;pn&gt; represents the probability (as a percentage) that n deposits are present in the mine, and all &lt;pn&gt;'s within a mine will always add up to 100. <b>miners</b> is the number of employees the company must allocate. The method should return a int[] indicating the number of <b>miners</b> to place in each mine in order to maximize the expected profit (where element <i>i</i> in the returned int[] corresponds to element <i>i</i> of <b>mines</b>). If there are multiple allocations which maximize expected profit, return the allocation which places more miners in earlier mines. More specifically, when comparing two different allocations X<sub>0</sub>, X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>n</sub> and Y<sub>0</sub>, Y<sub>1</sub>, Y<sub>2</sub>, ..., Y<sub>n</sub> that yield the same expected profit, let <i>i</i> be the smallest index such that X<sub>i</sub> is not equal to Y<sub>i</sub>. Then if X<sub>i</sub> &gt; Y<sub>i</sub>, allocation X<sub>0</sub>, X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>n</sub> is preferred to allocation Y<sub>0</sub>, Y<sub>1</sub>, Y<sub>2</sub>, ..., Y<sub>n</sub>.<br /><br /> <br /><br /> For example, suppose the company has 4 miners available, and purchased the following two mines:<br /><br /> <pre>\n\t&quot;000, 030, 030, 040, 000, 000, 000&quot;\n        &quot;020, 020, 020, 010, 010, 010, 010&quot;\n</pre> <br /><br /> The first mine has a 30 percent chance of containing 1 ore deposit, a 30 percent chance of containing 2 ore deposits, and a 40 percent chance of containing 3 ore deposits. The second mine has a 20 percent chance of containing 0 ore deposits, a 20 percent chance of containing 1 ore deposit, a 20 percent chance of containing 2 ore deposits, a 10 percent chance of containing 3 ore deposits, a 10 percent chance of containing 4 ore deposits, a 10 percent chance of containing 5 ore deposits, and a 10 percent chance of containing 6 ore deposits.<br /><br /> <br /><br /> In this scenario, the company can make the most money by allocating two miners at each mine, yielding an expected profit of 153:<br /><br /> <pre>\n\tFirst Mine\n\t   0.3*30 + 0.3*100 + 0.4*120 =\n           9 + 30 + 48 = 87\n\n\tSecond Mine\n           0.2*(-40) + 0.2*30 + 0.2*100 + 0.1*120 + 0.1*120 + 0.1*120 + 0.1*120 = \n           -8 + 6 + 20 + 12 + 12 + 12 + 12 = 66\n\n\tTotal Profit\n\t   87 + 66 = 153\n</pre> <br /><br /> The method would have returned { 2, 2 }. Other allocations would have yielded:<br /><br /> <pre>\n\t{ 0, 4 } :  75\n\t{ 1, 3 } : 132\n\t{ 3, 1 } : 129\n\t{ 4, 0 } :  67\n</pre> <br /><br />",
+	"notes":[{
+		"order":1,
+		"val":"Each mine can support a maximum of 6 miners."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GoldMine",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getAllocation",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getAllocation(String[] mines, int miners)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{ \"000, 030, 030, 040, 000, 000, 000\", \"020, 020, 020, 010, 010, 010, 010\" }",
+			"note":"This is the example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"{ \"100, 000, 000, 000, 000, 000, 000\", \"100, 000, 000, 000, 000, 000, 000\", \"100, 000, 000, 000, 000, 000, 000\", \"100, 000, 000, 000, 000, 000, 000\", \"100, 000, 000, 000, 000, 000, 000\" }",
+			"note":"There are no deposits in any mines. However, since the company must employ every available worker, it loses $160 ($20 per worker). The proper allocation places 6 workers in the first mine and 2 workers in the second mine, since that is the allocation that places more workers in earlier mines and the maximum number of workers a mine can support is 6.",
+			"order":2
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"{ \"050, 000, 000, 000, 000, 050, 000\", \"050, 000, 000, 000, 000, 050, 000\", \"050, 000, 000, 000, 000, 050, 000\", \"050, 000, 000, 000, 000, 050, 000\", \"050, 000, 000, 000, 000, 050, 000\", \"050, 000, 000, 000, 000, 050, 000\", \"050, 000, 000, 000, 000, 050, 000\", \"050, 000, 000, 000, 000, 050, 000\", \"050, 000, 000, 000, 000, 050, 000\", \"050, 000, 000, 000, 000, 050, 000\" }",
+			"note":"Each mine has a 50 percent chance of containing no deposits and a 50 percent chance of containing 5 deposits. The expected value from a mine like this is maximized with 4 workers. Since we allocate workers to earlier mines first, the early mines are filled with 4 workers each, and the remaining 2 miners are placed in the next available mine.",
+			"order":3
+		},
+		{
+			"expect":"56",
+			"id":0,
+			"input":"{ \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\", \"026, 012, 005, 013, 038, 002, 004\" }",
+			"order":4
+		},
+		{
+			"expect":"150",
+			"id":0,
+			"input":"{ \"100, 000, 000, 000, 000, 000, 000\", \"090, 010, 000, 000, 000, 000, 000\", \"080, 020, 000, 000, 000, 000, 000\", \"075, 025, 000, 000, 000, 000, 000\", \"050, 050, 000, 000, 000, 000, 000\", \"025, 075, 000, 000, 000, 000, 000\", \"020, 080, 000, 000, 000, 000, 000\", \"010, 090, 000, 000, 000, 000, 000\", \"000, 100, 000, 000, 000, 000, 000\", \"000, 090, 010, 000, 000, 000, 000\", \"000, 080, 020, 000, 000, 000, 000\", \"000, 075, 025, 000, 000, 000, 000\", \"000, 050, 050, 000, 000, 000, 000\", \"000, 025, 075, 000, 000, 000, 000\", \"000, 020, 080, 000, 000, 000, 000\", \"000, 010, 090, 000, 000, 000, 000\", \"000, 000, 100, 000, 000, 000, 000\", \"000, 000, 090, 010, 000, 000, 000\", \"000, 000, 080, 020, 000, 000, 000\", \"000, 000, 075, 025, 000, 000, 000\", \"000, 000, 050, 050, 000, 000, 000\", \"000, 000, 025, 075, 000, 000, 000\", \"000, 000, 020, 080, 000, 000, 000\", \"000, 000, 010, 090, 000, 000, 000\", \"000, 000, 000, 100, 000, 000, 000\", \"000, 000, 000, 100, 000, 000, 000\", \"000, 000, 000, 090, 010, 000, 000\", \"000, 000, 000, 080, 020, 000, 000\", \"000, 000, 000, 075, 025, 000, 000\", \"000, 000, 000, 050, 050, 000, 000\", \"000, 000, 000, 025, 075, 000, 000\", \"000, 000, 000, 020, 080, 000, 000\", \"000, 000, 000, 010, 090, 000, 000\", \"000, 000, 000, 000, 100, 000, 000\", \"000, 000, 000, 000, 090, 010, 000\", \"000, 000, 000, 000, 080, 020, 000\", \"000, 000, 000, 000, 075, 025, 000\", \"000, 000, 000, 000, 050, 050, 000\", \"000, 000, 000, 000, 025, 075, 000\", \"000, 000, 000, 000, 020, 080, 000\", \"000, 000, 000, 000, 010, 090, 000\", \"000, 000, 000, 000, 000, 100, 000\", \"000, 000, 000, 000, 000, 090, 010\", \"000, 000, 000, 000, 000, 080, 020\", \"000, 000, 000, 000, 000, 075, 025\", \"000, 000, 000, 000, 000, 050, 050\", \"000, 000, 000, 000, 000, 025, 075\", \"000, 000, 000, 000, 000, 020, 080\", \"000, 000, 000, 000, 000, 010, 090\", \"000, 000, 000, 000, 000, 000, 100\" }",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"mines will contain between 1 and 50 elements, inclusive"
+		},
+		{
+			"order":2,
+			"val":"each element of mines will contain exactly 33 characters"
+		},
+		{
+			"order":3,
+			"val":"each element of mines will contain only digits ('0'-'9'), commas (',') and spaces (' ')"
+		},
+		{
+			"order":4,
+			"val":"each element of mines will be in the form &quot;&lt;p0&gt;, &lt;p1&gt;, &lt;p2&gt;, &lt;p3&gt;, &lt;p4&gt;, &lt;p5&gt;, &lt;p6&gt;&quot; (quotes for clarity) where each &lt;pn&gt; is a three digit number (with leading 0s if necessary.) Each &lt;pn&gt; represents the probability (as a percentage) that n deposits are present in the mine, and all &lt;pn&gt;'s within a mine will always add up to 100"
+		},
+		{
+			"order":5,
+			"val":"miners will be between 1 and (6 * the number of elements in mines), inclusive"
+		}
+	]
+}

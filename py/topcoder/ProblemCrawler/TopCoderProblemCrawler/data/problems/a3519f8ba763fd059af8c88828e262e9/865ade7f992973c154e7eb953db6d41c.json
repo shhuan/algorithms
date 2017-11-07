@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11742&rd=14722",
+	"statement":"<p> Consider the following problem: </p> <p><i> &quot;In the country of Absurdistan there are N airports. Each airport is either big or small. It is known that for each big airport there are at least B flights leaving it, and for each small airport there are at most S flights leaving it. Each flight is bidirectional and connects exactly two airports. No two flights connect the same pair of airports. It is possible to travel from any airport to any other airport using some sequence of flights. Determine the number of big airports. Find all solutions.&quot; </i></p> <p> Let A(N,B,S) be the number of solutions the above task has for a given triple N, B, S. You are given six ints: <b>Nlo</b>, <b>Nhi</b>, <b>Blo</b>, <b>Bhi</b>, <b>Slo</b> and <b>Shi</b>. Your method must compute and return the sum of A(N,B,S) over all N, B, S such that all following constraints hold: </p> \n <ul> \n  <li><b>Nlo</b> &lt;= N &lt;= <b>Nhi</b></li> \n  <li><b>Blo</b> &lt;= B &lt;= <b>Bhi</b></li> \n  <li><b>Slo</b> &lt;= S &lt;= <b>Shi</b></li> \n  <li>S &lt; B</li> \n </ul>",
+	"notes":[{
+		"order":1,
+		"val":"It is possible that all airports in the country are of the same kind (all big or all small)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BigAndSmallAirports",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long solve(int Nlo, int Nhi, int Blo, int Bhi, int Slo, int Shi)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"20",
+			"id":0,
+			"input":"20",
+			"note":"For N=20, B=3, S=2 each number of big airports (from 0 to N, inclusive) is possible. The image below shows one possible network of airports and flights with 3 big airports (squares) and 17 small airports (circles).    ",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"In the case N=1, B=10, S=2 there is a single airport. It cannot have 10+ outgoing flights, therefore it has to be small. If the airport is small, all conditions are satisfied. Therefore A(N,B,S)=1.",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"10",
+			"note":"There are no triples (N,B,S) such that N, B, S lie within the given ranges and B < S. Therefore the answer is the sum of zero values, which equals 0.",
+			"order":4
+		},
+		{
+			"expect":"32",
+			"id":0,
+			"input":"30",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Nhi will be between 1 and 10,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Nlo will be between 1 and Nhi, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Bhi will be between 1 and 200, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Blo will be between 1 and Bhi, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Shi will be between 1 and 200, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Slo will be between 1 and Shi, inclusive."
+		}
+	]
+}

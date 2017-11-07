@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6216&rd=9998",
+	"statement":"<p>You are playing a one-player game where several cells are arranged around a circle, and each cell contains a value. You have a bank that is initially empty, and you start on the 0-th cell. On each turn, you throw a typical six-sided die (each side has a distinct number between 1 and 6), and you move clockwise the number of cells indicated on the die. The value in the cell that you land on will be added to the bank. The goal is maximize the value of the bank.</p> <p>Unfortunately, the sum of all the values on the cells is negative, so the expected value of the bank after a long game is also negative. Therefore, you should stop the game at the proper time.</p> <p>You will be given a int[] <b>cells</b> that contains the values of the cells in clockwise order. The 0-th element of <b>cells</b> is the value of the 0-th cell. Return the expected value of the bank if you play optimally. See examples for further clarification.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CyclicGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"estimateBank",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double estimateBank(int[] cells)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1.3611111111111112",
+			"id":0,
+			"input":"{-10, 1, 1, 1, 1, 1, 1, 1, 1}",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0.30434782608695654",
+			"id":0,
+			"input":"{-10, 7, -5, 7}",
+			"note":"You should stop the game if you're on cell 2 or 3.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0.0",
+			"id":0,
+			"input":"{-1, -2, 2}",
+			"note":"The expected result of any move is 1/3*(-1)+1/3*(-2)+1/3*2 = -1/3, so the best choice is not play at all.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3.5653612433724144",
+			"id":0,
+			"input":"{-40, 9, 9, 9, 9, 9, -44, 9, 9, 9, 9, 9, -40, 15, 15}",
+			"note":"You should stop the game if you're on cells 9 through 11 (where two cells with value -40 are reachable in one turn).",
+			"order":4
+		},
+		{
+			"expect":"Returns: 12.395613307567126",
+			"id":0,
+			"input":"{-36, 95, -77, -95, 49, -52, 42, -34, -1, 98, -20, 96, -96, 23, -52}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cells will contain between 2 and 15 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of cells will be between -100 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The sum of all elements in cells will be negative. "
+		}
+	]
+}

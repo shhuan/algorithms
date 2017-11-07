@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":184.16,
+			"constraints":[],
+			"correctRatio":85.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11817&rd=14730",
+			"name":"KingXNewCurrency",
+			"notes":[],
+			"submission":785
+		},
+		{
+			"avgPts":323.08,
+			"constraints":[],
+			"correctRatio":80.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11822&rd=14730",
+			"name":"KingXMagicSpells",
+			"notes":[],
+			"submission":281
+		},
+		{
+			"avgPts":464.01,
+			"constraints":[],
+			"correctRatio":40.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11217&rd=14730",
+			"name":"PrinceXDominoes",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"Single Round Match 537 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14730"
+}

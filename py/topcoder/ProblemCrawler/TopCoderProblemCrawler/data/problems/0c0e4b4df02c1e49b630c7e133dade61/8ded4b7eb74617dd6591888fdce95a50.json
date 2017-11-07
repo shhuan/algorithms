@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13715&rd=16433",
+	"statement":"<p> You are given a int[] <b>A</b>. All elements of <b>A</b> are positive integers. </p> <br /><br /> <p> A pair (i,j) is called valid if i &lt;= j and both i and j are valid indices into <b>A</b>. The valid pair (i,j) determines the subarray A(i,j) = { <b>A</b>[i], <b>A</b>[i+1], ..., <b>A</b>[j] }. A valid pair (i,j) is called nice if there is an integer v &gt; 1 that divides at least half of the elements of A(i,j). </p> <br /><br /> <p> For example, if we have A(i,j) = { 3, 3, 47, 6, 1, 10 } then the pair (i,j) is nice because three of the six numbers in A(i,j) are divisible by v=3. </p> <br /><br /> <p> If there are no valid pairs for the given <b>A</b>, return -1. Otherwise, return the largest k such that there is a valid pair (i,j) with j-i = k. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheNicePair",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int solve(int[] A)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{5,5,5,5,5}",
+			"note":"All elements of  are divisible by 5. Hence, (0,4) is a valid pair and the correct return value is 4-0 = 4.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{1,1,1,1}",
+			"note":"There are no  pair, so the answer is -1. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{2,3,5,7}",
+			"note":"The following pairs are : (0,1), (1,2), (2,3), (0,0), (1,1), (2,2), (3,3).",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{8,8,5,5,5}",
+			"note":"There are multiple nice pairs here. Among them, the pair (i,j) = (0,4) has the maximal value of j-i.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{1,1000,1000,1,1000,1,999}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{1000,1,1,1000}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{1,1,953,1,1,1,1,1,1,1,1,1,1,1,1,953,1,953,953,1,1,1,1,1,1,1,953,953,953,1,1,1,1,1,953,953,1,1,1,953,953,953,1}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of A will be between 1 and 1000, inclusive."
+		}
+	]
+}

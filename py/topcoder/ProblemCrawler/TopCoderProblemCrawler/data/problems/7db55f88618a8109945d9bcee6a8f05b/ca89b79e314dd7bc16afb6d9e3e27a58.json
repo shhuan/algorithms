@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12974&rd=15942",
+	"statement":"Elly is playing Scrabble with her family. The exact rules of the game are not important for this problem. You only need to know that Elly has a holder that contains a row of N tiles, and that there is a single letter on each of those tiles. (Tiles are small square pieces of wood. A holder is a tiny wooden shelf with room for precisely N tiles placed in a row.)<br /><br /><br /><br /> While Elly waits for the other players, she entertains herself in the following way. She slightly taps the table, causing the tiles on her holder jump a little and some of them switch places. Formally, suppose that Elly has N tiles. There are N positions on the holder, we will label them 0 through N-1 from left to right. When Elly taps the table, the tiles on her holder will form some permutation of their original order. You are given an int <b>maxDistance</b> with the following meaning: in the permutation that Elly produces by tapping the table, no tile will be more than <b>maxDistance</b> positions away from its original position (in either direction).<br /><br /><br /><br /> For example, suppose that before a tap the letters in Elly's holder formed the string &quot;TOPCODER&quot; when read from left to right. If <b>maxDistance</b> is 3, one possible string after Elly taps the table is &quot;CODTEPOR&quot;. This can happen in the following way: \n <ol> \n  <li>The letter 'T' at position 0 moves three positions to the right (to position 3).</li> \n  <li>The letter 'O' at position 1 remains on its initial position (position 1).</li> \n  <li>The letter 'P' at position 2 moves three positions to the right (to position 5).</li> \n  <li>The letter 'C' at position 3 moves three positions to the left (to position 0).</li> \n  <li>The letter 'O' at position 4 moves two positions to the right (to position 6).</li> \n  <li>The letter 'D' at position 5 moves three positions to the left (to position 2).</li> \n  <li>The letter 'E' at position 6 moves two positions to the left (to position 4).</li> \n  <li>The letter 'R' at position 7 remains on its initial position (position 7).</li> \n </ol> Note that the letter 'D' (at position 5) cannot move to position 1, because this would require it to move more than the maximal distance 3.<br /><br /><br /><br /> It turns out that the string &quot;CODTEPOR&quot; is the lexicographically smallest one Elly can get from &quot;TOPCODER&quot; with a single tap and <b>maxDistance</b> = 3. Now you want to write a program that, given the String <b>letters</b> and the int <b>maxDistance</b>, returns the lexicographically smallest string the girl can get after a single tap.<br /><br /><br /><br />",
+	"notes":[{
+		"order":1,
+		"val":"Given two different strings A and B of equal length, the lexicographically smaller one is the one that contains a smaller character at the first position where they differ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EllysScrabble",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getMin(String letters, int maxDistance)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"TOPCODER\"",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"ESPRIT\"",
+			"note":"In this example the letters 'E', 'P', 'R', and 'T' stay on their initial places, and the letters 'S' and 'I' swap. Since the distance between them is exactly 3 (which also happens to be the maximal distance they can move), this is a valid final configuration.",
+			"order":2
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"\"BAZINGA\"",
+			"note":"Note that the maximal distance may be greater than the number of letters Elly has. In such cases, the lexicographically smallest result is, obviously, the sorted sequence of letters.",
+			"order":3
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"",
+			"note":"As the input letters are already sorted, we can assume they'll just fall back to their initial places.",
+			"order":4
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"\"GOODLUCKANDHAVEFUN\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"\"AAAWDIUAOIWDESBEAIWODJAWDBPOAWDUISAWDOOPAWD\"",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"\"ABRACADABRA\"",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"letters will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"letters will contain only uppercase letters from the English alphabet ('A'-'Z')."
+		},
+		{
+			"order":3,
+			"val":"maxDistance will be between 1 and 9, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":173.05,
+			"constraints":[],
+			"correctRatio":81.54,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12604&rd=15502",
+			"name":"SpaceWarDiv1",
+			"notes":[],
+			"submission":531
+		},
+		{
+			"avgPts":284.02,
+			"constraints":[],
+			"correctRatio":69.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12583&rd=15502",
+			"name":"ColorfulBuilding",
+			"notes":[],
+			"submission":23
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12584&rd=15502",
+			"name":"SemiPerfectPower",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"Single Round Match 582 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15502"
+}

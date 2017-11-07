@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":222.69,
+			"constraints":[],
+			"correctRatio":81.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=61&rd=3003",
+			"name":"ModEncoder",
+			"notes":[],
+			"submission":22
+		},
+		{
+			"avgPts":338.96,
+			"constraints":[],
+			"correctRatio":68.42,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=62&rd=3003",
+			"name":"Repeating",
+			"notes":[],
+			"submission":19
+		},
+		{
+			"avgPts":725.56,
+			"constraints":[],
+			"correctRatio":64.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=63&rd=3003",
+			"name":"PegJump",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"Single Round Match 4 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3003"
+}

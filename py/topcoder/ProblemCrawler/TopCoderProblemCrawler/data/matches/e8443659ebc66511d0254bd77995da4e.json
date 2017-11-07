@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":159.08,
+			"constraints":[],
+			"correctRatio":62.99,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11434&rd=14437",
+			"name":"DivideAndShift",
+			"notes":[],
+			"submission":770
+		},
+		{
+			"avgPts":302.63,
+			"constraints":[],
+			"correctRatio":84.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11379&rd=14437",
+			"name":"YetAnotherORProblem",
+			"notes":[],
+			"submission":235
+		},
+		{
+			"avgPts":482.91,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11174&rd=14437",
+			"name":"BarbarianInvasion2",
+			"notes":[],
+			"submission":20
+		}
+	],
+	"name":"Single Round Match 508 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14437"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":218.78,
+			"constraints":[],
+			"correctRatio":58.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=476&rd=4110",
+			"name":"AlphaSeq",
+			"notes":[],
+			"submission":232
+		},
+		{
+			"avgPts":248.25,
+			"constraints":[],
+			"correctRatio":72.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=540&rd=4110",
+			"name":"Paradox",
+			"notes":[],
+			"submission":182
+		},
+		{
+			"avgPts":537.02,
+			"constraints":[],
+			"correctRatio":19.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=531&rd=4110",
+			"name":"Powerball",
+			"notes":[],
+			"submission":21
+		}
+	],
+	"name":"Single Round Match 77 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4110"
+}

@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6185&rd=9980",
+	"statement":"<p>Consider the following code, which traverses a tree and prints a sequence of characters: </p> <pre>\n    bypass(Node v) {\n        for i=0..size(v.children)-1 {\n            write('1');\n            bypass(v.children[i]);\n            write('0');\n        }\n    }\n</pre> <p> Starting from the root this code will generate a string of 0's and 1's that fully describes a tree. For example, &quot;1101100110011000&quot; will represent the tree in the following picture (nodes are marked in the order of traversal). </p> <p> <img src=\"http://www.topcoder.com/contest/problem/SymmetricalTree/SymmetricalTree.gif\" /> </p> <p> A tree is called symmetrical if, after reversing the order of children for all nodes, the string representation of the tree is not changed. For example, the tree in the picture is not symmetrical because the string representation changes to &quot;1110011001100100&quot; after the order of children is reversed for all nodes. </p> <p> You will be given a String <b>tree</b>. You are to make it symmetrical by removing some nodes and changing the order of children for some nodes. You can remove a node only if all its children are removed too. You should return <b>tree</b> after making it symmetrical. If there are multiple ways to make <b>tree</b> symmetrical, you should minimize the number of removed nodes. If two or more solutions still remain, return the one that comes first lexicographically. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SymmetricalTree",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"makeSymmetrical",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String makeSymmetrical(String tree)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"11011001100100\"",
+			"id":0,
+			"input":"\"1101100110011000\"",
+			"note":"This is the example from the problem statement. We should remove the 9th node (see picture).",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"10110010\"",
+			"id":0,
+			"input":"\"10101100\"",
+			"note":"We can make the tree symmetrical by using only rearrangements.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"110100\"",
+			"id":0,
+			"input":"\"1011100100\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"11011010100100\"",
+			"id":0,
+			"input":"\"101101100110101000\"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"10110100110110010110010011010010\"",
+			"id":0,
+			"input":"\"11010010110110010101100010110100\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"tree will contain between 1 and 40 characters, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"tree will only contain the digits '0' and '1'."
+		},
+		{
+			"order":3,
+			"val":"tree will represent a valid tree."
+		}
+	]
+}

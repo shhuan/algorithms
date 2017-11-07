@@ -1,0 +1,112 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1640&rd=4491",
+	"statement":"When you are compiling code to a target architecture there are hardware specific optimizations that can be made. In this problem we will be taking a string of source text and compiling it to some variable architecture. The source text will be given as a String <b>expression</b>. <b>expression</b> should be a well-parenthesized mathematical formula that conforms to the following grammar: <pre>\n&lt;EXPR&gt; ::= '('&lt;EXPR&gt;&lt;OP&gt;&lt;EXPR&gt;')' | &lt;INT&gt;\n&lt;OP&gt; ::= '+' | '-' | '/' | '*'\n&lt;INT&gt; ::= a positive integer with no leading 0s between 1 and 100, inclusive \n</pre> For example, 9, (1+(2+((3+2)-2))), and ((1*2)/2) conform to the grammar while (1+2+3), (0+2), and ((1+2)) do not.<br /><br /> <br /><br /> If <b>expression</b> does not conform to the above grammar your method should return -2. If it does conform, you will then have to determine which instructions should be used to implement the expression. The machine capabilities will be given in a String[] <b>instructions</b>. Each element will conform to the following grammar:<pre>\n&lt;INST&gt; ::= &lt;COST&gt;':'&lt;VAREXPR&gt;\n&lt;VAREXPR&gt; ::= '('&lt;VAREXPR&gt;&lt;OP&gt;&lt;VAREXPR&gt;')' | 'X'\n&lt;OP&gt; ::= '+' | '-' | '/' | '*'\n&lt;COST&gt; ::= a positive integer with no leading 0s between 1 and 100, inclusive \n</pre> An example element could be 10:(X+X) meaning that there is an instruction that will add 2 operands together at a cost of 10. Another example could be 12:(X*(X-X)) meaning that it will cost 12 to multiply 1 operand by the difference of two others. Each element of <b>instruction</b> will thus represent the possible operations the underlying hardware can perform along with their cost. Since instructions of the form &quot;COST:X&quot; are meaningless they will not be allowed as input. If the given expression cannot be computed on the given hardware your method should return -1. Otherwise it should return the minimum cost required to compute all of the operations in the expression. For example: <pre>\n<b>expression</b> = &quot;((1+2)*(3+(4-2)))&quot;\n<b>instructions</b> = {&quot;5:(X+X)&quot;,\n                &quot;5:(X-X)&quot;,\n                &quot;6:(X*X)&quot;,\n                &quot;7:((X+X)*X)&quot;}\n</pre> Using instruction 0 on the (1+2) portion of the expression and instruction 1 on the (4-2) portion of the expression will produce the intermediate expression (3*(3+2)). Then applying expression 0 to the (3+2) portion we get the intermediate expression (3*5). Finally applying instruction 2 we get an expression that no longer contains any operations and is thus complete. The total cost of this method is 5+5+5+6 = 21. Alternatively we could have used instruction 1, then 0, and finally 3 for a smaller cost of 17. Your method should thus return 17, the minimum possible cost. The cost of applying no operations is 0. For example:<pre>\n<b>expression</b> = &quot;84&quot;\n<b>instructions</b> = {&quot;10:(X+X)&quot;}\n</pre> Since the expression only consists of a number, there are no operations to be processed, so the cost is simply 0.<br /><br /> <br /><br /> Note that you are not allowed to apply any simplifications to the expression (i.e. no associativity, commutativity, distributivity, or identity laws). This means (3+(4*5)) cannot be processed by an instruction like 4:((X*X)+X).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HardwareOptimize",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int bestCost(String expression, String[] instructions)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"5:(X+X)\", \"5:(X-X)\", \"6:(X*X)\", \"7:((X+X)*X)\"}",
+			"id":0,
+			"input":"\"((1+2)*(3+(4-2)))\"",
+			"order":1
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"\"(1+2+3)\"",
+			"order":2
+		},
+		{
+			"expect":"{\"10:(X+X)\"}",
+			"id":0,
+			"input":"\"((0+0)*(0+0))\"",
+			"order":3
+		},
+		{
+			"expect":"{\"10:(X+X)\",\"19:(X+(X+X))\"}",
+			"id":0,
+			"input":"\"(((1+1)+((1+1)+(1+1)))+(((1+1)+(1+1))+((1+1)+1)))\"",
+			"order":4
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"\"23\"",
+			"order":5
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"\"(1+2)\"",
+			"order":6
+		},
+		{
+			"expect":"{\"1:(X-X)\",\"1:(X/X)\"}",
+			"id":0,
+			"input":"\"(1/(1-1))\"",
+			"order":7
+		},
+		{
+			"expect":"{\"10:(X*X)\", \"10:(X+X)\", \"5:(X+(X*X))\"}",
+			"id":0,
+			"input":"\"((1*1)+1)\"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"expression will contain between 1 and 50 characters inclusive"
+		},
+		{
+			"order":2,
+			"val":"expression will only contain characters from the string (quotes for clarity) &quot;0123456789+*/-()&quot;"
+		},
+		{
+			"order":3,
+			"val":"instructions will contain between 0 and 50 elements inclusive"
+		},
+		{
+			"order":4,
+			"val":"Each element of instructions will contain between 7 and 50 characters inclusive"
+		},
+		{
+			"order":5,
+			"val":"Each element of instructions will only contain characters from the string (quotes for clarity) &quot;0123456789:()X+*/-&quot;"
+		},
+		{
+			"order":6,
+			"val":"Each element of instructions will adhere to the format stated above"
+		},
+		{
+			"order":7,
+			"val":"There will be no elements of instructions of the form &quot;COST:X&quot;"
+		}
+	]
+}

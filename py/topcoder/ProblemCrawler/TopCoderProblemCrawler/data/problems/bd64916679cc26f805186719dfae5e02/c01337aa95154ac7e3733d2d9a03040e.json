@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12055&rd=14739",
+	"statement":"On a horizontal line, there are two vertical pillars. The distance between their bottoms is <b>w</b>. The height of the first pillar is an integer, chosen uniformly at random in the range 1 through <b>x</b>, inclusive. The height of the second pillar is an integer, chosen uniformly at random in the range 1 through <b>y</b>, inclusive. The tops of both pillars will be connected by a straight piece of rope. <p></p> You are given the ints <b>w</b>, <b>x</b>, and <b>y</b>. Compute and return the expected length of the rope.",
+	"notes":[
+		{
+			"order":1,
+			"val":"Your return value must have a relative or an absolute error of less than 1e-9."
+		},
+		{
+			"order":2,
+			"val":"In this task, the expected rope length can be computed as the average rope length over all possible cases."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Pillars",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getExpectedLength",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getExpectedLength(int w, int x, int y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"The rope always has a length of 1.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1",
+			"note":"There are 5 possible (equiprobable) cases in which the length of the rope is 1, sqrt(2), sqrt(5), sqrt(10) and sqrt(17). The correct answer is the arithmetic average of these 5 numbers.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"15",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"w will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x will be between 1 and 100,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"y will be between 1 and 100,000, inclusive."
+		}
+	]
+}

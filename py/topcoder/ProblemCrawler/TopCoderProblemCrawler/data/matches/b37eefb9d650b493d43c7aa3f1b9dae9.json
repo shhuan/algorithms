@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":210.81,
+			"constraints":[],
+			"correctRatio":90.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10274&rd=13750",
+			"name":"Underprimes",
+			"notes":[],
+			"submission":638
+		},
+		{
+			"avgPts":268.32,
+			"constraints":[],
+			"correctRatio":26.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4810&rd=13750",
+			"name":"BedroomFloor",
+			"notes":[],
+			"submission":176
+		},
+		{
+			"avgPts":570.16,
+			"constraints":[],
+			"correctRatio":70.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7891&rd=13750",
+			"name":"NowhereLand",
+			"notes":[],
+			"submission":99
+		}
+	],
+	"name":"Single Round Match 442 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13750"
+}

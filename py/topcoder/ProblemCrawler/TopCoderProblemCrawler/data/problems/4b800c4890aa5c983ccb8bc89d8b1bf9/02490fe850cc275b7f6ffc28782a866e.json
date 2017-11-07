@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12588&rd=15501",
+	"statement":"There is a long narrow storehouse. The storehouse is divided into a sequence of N identical sectors, labeled 0 through N-1. Each sector is large enough to contain a single container. Currently, some sectors are empty and some sectors are filled by containers. The storehouse also contains a surveillance system that is described below. <br /><br /><br /><br /> We are going to break into the storehouse. As a part of preparation for the heist, we already found out some information about the warehouse. In particular, we know exactly how the containers are currently placed in the warehouse. You are given a String <b>containers</b> consisting of N characters. For each i, character i of <b>containers</b> is 'X' if sector i contains a container, and it is '-' if sector i is empty. <br /><br /><br /><br /> We also discovered some information about the surveillance system. The system consists of several hidden cameras. You are given a int <b>L</b> with the following meaning: Each of the cameras monitors exactly <b>L</b> consecutive sectors. The segments of sectors monitored by different cameras might overlap, but no two cameras watch exactly the same segment. (In other words, each sector may be monitored by multiple cameras, but each camera monitors a different set of consecutive sectors.) <br /><br /><br /><br /> Finally, we know something about what the cameras currently see. You are given a int[] <b>reports</b>. Each element of <b>reports</b> corresponds to one of the cameras (in no particular order). More precisely, <b>reports</b>[i] is the number of containers stored in the sectors monitored by the corresponding camera. <br /><br /><br /><br /> It is guaranteed that all our information is correct and consistent. <br /><br /><br /><br /> Your task is to use the provided information to deduce which sectors are monitored by at least one surveillance camera. Return a String containing N characters. For each i, character i of the return value should be one of '+', '?', and '-'. Character '+' represents that sector i is certainly monitored by at least one camera. Character '-' represents that sector i is certainly not monitored by any of the cameras. Character '?' represents the remaining case: given the information we have, it is possible that sector i is monitored, but it is also possible that it is not monitored.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SurveillanceSystem",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getContainerInfo",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getContainerInfo(String containers, int[] reports, int L)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1, 2}",
+			"id":0,
+			"input":"\"-X--XX\"",
+			"note":"This storehouse has 6 sectors. There are containers in sectors 1, 4, and 5. There are two cameras: camera #0 monitors 1 container, and camera #1 monitors 2 containers. Clearly, camera #1 must be watching sectors 3, 4, and 5. Camera #0 may be watching sectors (0, 1, 2), (1, 2, 3), or (2, 3, 4). Thus, camera #0 is surely monitoring sector 2. Sectors 0 and 1 may or may not be monitored.",
+			"order":1
+		},
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"\"-XXXXX-\"",
+			"note":"The camera is monitoring either the leftmost or the rightmost segment, thus the middle sector is surely not under surveillance.",
+			"order":2
+		},
+		{
+			"expect":"{3, 0, 2, 0}",
+			"id":0,
+			"input":"\"------X-XX-\"",
+			"note":"We can deduce that cameras #1 and #3 are watching segments (0, 1, 2, 3, 4) and (1, 2, 3, 4, 5). Camera #2 is monitoring the segment (4, 5, 6, 7, 8), since this is the only segment with two occupied sectors. Camera #0 is either watching (5, 6, 7, 8, 9) or (6, 7, 8, 9, 10), thus the rightmost sector might have slipped from the surveillance.",
+			"order":3
+		},
+		{
+			"expect":"{2, 1, 0, 1}",
+			"id":0,
+			"input":"\"-XXXXX---X--\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3}",
+			"id":0,
+			"input":"\"-XX--X-XX-X-X--X---XX-X---XXXX-----X\"",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"containers will contain N elements, where N is between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in containers will be either 'X' or '-'."
+		},
+		{
+			"order":3,
+			"val":"L will be between 1 and N, inclusive."
+		},
+		{
+			"order":4,
+			"val":"reports will contain between 1 and N-L+1 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of reports will be between 0 and L, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The given information will be consistent."
+		}
+	]
+}

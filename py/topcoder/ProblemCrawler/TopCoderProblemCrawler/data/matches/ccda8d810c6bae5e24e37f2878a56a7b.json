@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":228.76,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3101&rd=5886",
+			"name":"LakeDepth",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":271.53,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3074&rd=5886",
+			"name":"RectangleDivision",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":547.49,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3006&rd=5886",
+			"name":"StringOfPowers",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2004 TCO > Championship Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5886"
+}

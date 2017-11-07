@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":195.15,
+			"constraints":[],
+			"correctRatio":72.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11064&rd=14159",
+			"name":"InternetSecurity",
+			"notes":[],
+			"submission":520
+		},
+		{
+			"avgPts":270.99,
+			"constraints":[],
+			"correctRatio":49.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10736&rd=14159",
+			"name":"NetworkSecurity",
+			"notes":[],
+			"submission":359
+		},
+		{
+			"avgPts":552.71,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10748&rd=14159",
+			"name":"StringDecryption",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"Single Round Match 480 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14159"
+}

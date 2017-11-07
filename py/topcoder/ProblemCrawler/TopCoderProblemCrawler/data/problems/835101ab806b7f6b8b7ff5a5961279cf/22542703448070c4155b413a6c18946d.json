@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6041&rd=9820",
+	"statement":"<p> <i>This problem contains HTML superscripts and images which will not display correctly for plugin users</i> </p> <p> Consider a finite two-dimensional grid where each cell is either occupied or empty. You are given two Strings, <b>front</b> and <b>right</b>, the frontal and right projections of the grid, respectively. The i<sup>th</sup> character of <b>front</b> indicates whether the i<sup>th</sup> column of grid is completely empty or not (&quot;.&quot; for empty, lowercase &quot;x&quot; if the column contains at least one occupied cell). The i<sup>th</sup> character of <b>right</b> indicates whether the i<sup>th</sup> row of grid is completely empty or not. </p> <p> Return a int[] containing exactly two elements. The first element is the minimum possible number of occupied cells on the grid, and the second element is the maximum possible number of occupied cells. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Projections",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] count(String front, String right)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"x\"",
+			"id":0,
+			"input":"\"x\"",
+			"note":"There is only one cell on the grid and it is obviously occupied.",
+			"order":1
+		},
+		{
+			"expect":"\".x\"",
+			"id":0,
+			"input":"\"x.\"",
+			"note":" ",
+			"order":2
+		},
+		{
+			"expect":"\"x..x\"",
+			"id":0,
+			"input":"\"xxxx\"",
+			"note":"   ",
+			"order":3
+		},
+		{
+			"expect":"\"x.x.x.x\"",
+			"id":0,
+			"input":"\"x.x.x.x\"",
+			"order":4
+		},
+		{
+			"expect":"\".xx..xxx.xx.\"",
+			"id":0,
+			"input":"\"x...xx..x.xxx..x.xx.\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"front will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"right will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in front and right will be &quot;.&quot; or &quot;x&quot;."
+		},
+		{
+			"order":4,
+			"val":"Both front and right will contain at least one &quot;x&quot; character."
+		}
+	]
+}

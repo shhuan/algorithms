@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":226.34,
+			"constraints":[],
+			"correctRatio":99.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3994&rd=6532",
+			"name":"PipeCuts",
+			"notes":[],
+			"submission":144
+		},
+		{
+			"avgPts":288.19,
+			"constraints":[],
+			"correctRatio":77.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3935&rd=6532",
+			"name":"SmartWordToy",
+			"notes":[],
+			"submission":83
+		},
+		{
+			"avgPts":706.52,
+			"constraints":[],
+			"correctRatio":57.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3936&rd=6532",
+			"name":"DiskCut",
+			"notes":[],
+			"submission":47
+		}
+	],
+	"name":"Single Round Match 233 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6532"
+}

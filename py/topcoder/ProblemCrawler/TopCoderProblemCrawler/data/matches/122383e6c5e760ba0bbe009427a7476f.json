@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":195.17,
+			"constraints":[],
+			"correctRatio":69.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1915&rd=4655",
+			"name":"RecurrenceRelation",
+			"notes":[],
+			"submission":137
+		},
+		{
+			"avgPts":361.75,
+			"constraints":[],
+			"correctRatio":68.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1864&rd=4655",
+			"name":"CityLink",
+			"notes":[],
+			"submission":101
+		},
+		{
+			"avgPts":548.3,
+			"constraints":[],
+			"correctRatio":22.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1852&rd=4655",
+			"name":"Polynomials",
+			"notes":[],
+			"submission":40
+		}
+	],
+	"name":"Single Round Match 170 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4655"
+}

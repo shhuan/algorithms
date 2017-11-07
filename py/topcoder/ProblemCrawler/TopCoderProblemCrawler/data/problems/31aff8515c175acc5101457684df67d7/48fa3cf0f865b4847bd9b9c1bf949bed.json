@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11664&rd=14550",
+	"statement":"There are N rabbits who like to gossip. They are numbered from 0 to N-1. <p></p> There are two rumors. Let's call them A and B. At this moment, each rabbit either knows both rumors or no rumors at all. The rabbits want to spread the rumors to everyone as quickly as possible. <p></p> Rabbits are very picky when it comes to spreading rumors. Each rabbit only trusts some of the other rabbits. Moreover, the situation is not necessarily symmetric - there may be rabbits A and B such that A trusts B, but B does not trust A. <p></p> At the beginning of each day, each rabbit who knows at least one rumor chooses a rumor X it knows. The rabbit then spends the day spreading rumor X. A rabbit will learn a new rumor if it is spreaded by someone it trusts. Note that a rabbit may learn both rumors in the same day (from two different other rabbits). Also note that a rabbit may spread one rumor and learn the other rumor on the same day. <p></p> You are given a String <b>knowledge</b> and a String[] <b>graph</b>. The String <b>knowledge</b> has exactly N characters. Character i of <b>knowledge</b> is '<tt>Y</tt>' if rabbit i already knows both rumors, or '<tt>N</tt>' if it does not know the rumors yet. The String[] <b>graph</b> contains N strings with N characters each. Element i of <b>graph</b> describes rabbits who trust rabbit i: character j of element i of <b>graph</b> is '<tt>Y</tt>' if rabbit j trusts rabbit i, or '<tt>N</tt>' if rabbit j does not trust rabbit i. In other words, <b>graph</b>[i][j] is '<tt>Y</tt>' if and only if rabbit i will spread rumors to rabbit j. <p></p> Return the minimum number of days needed to spread both rumors so that each of the N rabbits will know both rumors. If it is impossible, return -1.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Rumor",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(String knowledge, String[] graph)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"NYN\" ,\"NNY\" ,\"NNN\"}",
+			"id":0,
+			"input":"\"YNN\"",
+			"note":"Initially, there are 3 rabbits. Rabbit 0 knows rumor A and B, and other rabbits know nothing.  One of the optimal ways is as follows.  As a result, it takes 3 days.",
+			"order":1
+		},
+		{
+			"expect":"{\"NYYN\" ,\"YNNY\" ,\"YNNY\" ,\"NYYN\"}",
+			"id":0,
+			"input":"\"YNNY\"",
+			"note":"One of the optimal ways is as follows. ",
+			"order":2
+		},
+		{
+			"expect":"{\"NYNN\" ,\"YNYN\" ,\"NYNY\" ,\"NNYN\"}",
+			"id":0,
+			"input":"\"YYYY\"",
+			"note":"All rabbits already know the rumors, so no day is required.",
+			"order":3
+		},
+		{
+			"expect":"{\"NYYYYN\" ,\"YNYYYN\" ,\"YYNYYN\" ,\"YYYNYN\" ,\"YYYYNN\" ,\"NNNNNN\"}",
+			"id":0,
+			"input":"\"YYYYYN\"",
+			"note":"It is impossible to make rabbit 5 know the rumors.",
+			"order":4
+		},
+		{
+			"expect":"{\"NNNN\" ,\"YNNN\" ,\"YNNN\" ,\"NYYN\"}",
+			"id":0,
+			"input":"\"NNNY\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{\"NYNNYNNYNN\" ,\"NNYNYNNNNY\" ,\"YYNNNYNNNN\" ,\"YNNNYNYNNN\" ,\"NNYNNYNNYN\" ,\"NNNNYNNNYY\" ,\"NYNYNYNNNN\" ,\"NNNNNNYNYY\" ,\"NNNYNNNYNY\" ,\"NYYNNNNYNN\"} ",
+			"id":0,
+			"input":" \"NNNNNNNYYY\"",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"knowledge will contain between 1 and 16 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of knowledge will be either 'Y' or 'N'."
+		},
+		{
+			"order":3,
+			"val":"knowledge will contain at least one 'Y' character."
+		},
+		{
+			"order":4,
+			"val":"graph will contain N elements, where N is the length of knowledge."
+		},
+		{
+			"order":5,
+			"val":"Each element of graph will contain N characters."
+		},
+		{
+			"order":6,
+			"val":"Each character of graph will be either 'Y' or 'N'."
+		},
+		{
+			"order":7,
+			"val":"i-th character of i-th element of graph will be 'N'."
+		}
+	]
+}

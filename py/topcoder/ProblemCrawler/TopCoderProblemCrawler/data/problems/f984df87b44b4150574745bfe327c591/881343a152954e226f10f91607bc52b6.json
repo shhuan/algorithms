@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1592&rd=4482",
+	"statement":"Suppose you had an <i>n</i> by <i>n</i> chess board and a super piece called a kingknight. Using only one move the kingknight denoted 'K' below can reach any of the spaces denoted 'X' or 'L' below:<pre>\n   .......\n   ..L.L..\n   .LXXXL.\n   ..XKX..\n   .LXXXL.\n   ..L.L..\n   .......\n</pre> In other words, the kingknight can move either one space in any direction (vertical, horizontal or diagonally) or can make an 'L' shaped move. An 'L' shaped move involves moving 2 spaces horizontally then 1 space vertically or 2 spaces vertically then 1 space horizontally. In the drawing above, the 'L' shaped moves are marked with 'L's whereas the one space moves are marked with 'X's. In addition, a kingknight may never jump off the board.<br /><br /> <br /><br /> Given the <b>size</b> of the board, the <b>start</b> position of the kingknight and the <b>end</b> position of the kingknight, your method will return how many possible ways there are of getting from <b>start</b> to <b>end</b> in exactly <b>numMoves</b> moves. <b>start</b> and <b>finish</b> are int[]s each containing 2 elements. The first element will be the (0-based) row position and the second will be the (0-based) column position. Rows and columns will increment down and to the right respectively. The board itself will have rows and columns ranging from 0 to <b>size</b>-1 inclusive. <br /><br /> <br /><br /> Note, two ways of getting from <b>start</b> to <b>end</b> are distinct if their respective move sequences differ in any way. In addition, you <i>are</i> allowed to use spaces on the board (including <b>start</b> and <b>finish</b>) repeatedly during a particular path from <b>start</b> to <b>finish</b>. We will ensure that the total number of paths is less than or equal to 2^63-1 (the upper bound for a long).",
+	"notes":[{
+		"order":1,
+		"val":"For C++ users: long long is a 64 bit datatype and is specific to the GCC compiler."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ChessMetric",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long howMany(int size, int[] start, int[] end, int numMoves)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,0}",
+			"id":0,
+			"input":"3",
+			"note":"Only 1 way to get to an adjacent square in 1 move",
+			"order":1
+		},
+		{
+			"expect":"{0,0}",
+			"id":0,
+			"input":"3",
+			"note":"A single L-shaped move is the only way",
+			"order":2
+		},
+		{
+			"expect":"{0,0}",
+			"id":0,
+			"input":"3",
+			"note":"Too far for a single move",
+			"order":3
+		},
+		{
+			"expect":"{0,0}",
+			"id":0,
+			"input":"3",
+			"note":"Must count all the ways of leaving and then returning to the corner",
+			"order":4
+		},
+		{
+			"expect":"{0,0}",
+			"id":0,
+			"input":"100",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"size will be between 3 and 100 inclusive"
+		},
+		{
+			"order":2,
+			"val":"start will contain exactly 2 elements"
+		},
+		{
+			"order":3,
+			"val":"finish will contain exactly 2 elements"
+		},
+		{
+			"order":4,
+			"val":"Each element of start and finish will be between 1 and size-1 inclusive"
+		},
+		{
+			"order":5,
+			"val":"numMoves will be between 1 and 50 inclusive"
+		},
+		{
+			"order":6,
+			"val":"The total number of paths will be at most 2^63-1."
+		}
+	]
+}

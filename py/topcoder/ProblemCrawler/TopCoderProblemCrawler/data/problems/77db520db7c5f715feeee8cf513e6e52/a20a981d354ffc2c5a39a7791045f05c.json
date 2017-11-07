@@ -1,0 +1,63 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3957&rd=6553",
+	"statement":"<p> Given a positive integer <b>n</b>, you are to find the largest subset S of {1,...,<b>n</b>} such that no member of S is divisible by another member of S. If there is more than one subset of the maximum size, choose the lexicographically earliest such subset. A subset S is lexicographically earlier than a subset T if the smallest element that is a member of one of the subsets, but not both, is a member of S. Return the subset S as a int[] in increasing order. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Indivisible",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"largestSubset",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] largestSubset(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {4, 5, 6, 7, 9}",
+			"id":0,
+			"input":"10",
+			"note":"There are several possible subsets of size 5, such as { 4,6,7,9,10 }, but { 4,5,6,7,9 } is the lexicographically earliest.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {1}",
+			"id":0,
+			"input":"1",
+			"order":2
+		},
+		{
+			"expect":"Returns: {2, 3, 5}",
+			"id":0,
+			"input":"5",
+			"order":3
+		},
+		{
+			"expect":"Returns: {4, 6, 9, 10, 11, 13, 14, 15, 17, 19, 21, 23}",
+			"id":0,
+			"input":"24",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n is between 1 and 1000, inclusive."
+	}]
+}

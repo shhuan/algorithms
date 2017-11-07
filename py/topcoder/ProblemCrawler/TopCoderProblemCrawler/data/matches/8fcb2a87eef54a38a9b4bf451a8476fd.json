@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":262.32,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1165&rd=4370",
+			"name":"RoadTrip",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":225.28,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1168&rd=4370",
+			"name":"GraphPaths",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":521.09,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1131&rd=4370",
+			"name":"HigherMaze",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2002 TopCoder Invitational Semifinal > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4370"
+}

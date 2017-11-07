@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":186.66,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2004&rd=4707",
+			"name":"RepeatedSubstrings",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":275.63,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1782&rd=4707",
+			"name":"MazeImprovement",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":541.76,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1318&rd=4707",
+			"name":"SkewHeaps",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2003 TCO > Semifinal Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4707"
+}

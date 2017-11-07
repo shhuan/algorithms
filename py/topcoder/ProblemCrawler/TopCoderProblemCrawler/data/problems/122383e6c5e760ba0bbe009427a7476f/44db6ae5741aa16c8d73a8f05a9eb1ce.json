@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1864&rd=4655",
+	"statement":"<p>There are various cities at points around the x-y plane that are separated by great geographical distances, and thus are hard to travel between. The mayors of the cities have decided that they will undertake a road-paving plan to connect all of the cities. However, they do not know how long this will take.</p> <p>At time zero, the roads are of zero length. Each time unit, the roads leading out of each city in the four cardinal directions (north, east, south, and west) will be extended by one unit. When roads from two different cities both contain at least one point in common, their two cities are connected, and all cities connected to those two cities are also considered connected. Your job is to figure out how long the construction job will take.</p> <p>You will be given a int[] <b>x</b> and a int[] <b>y</b>, where the location of the i-th city is at (<b>x</b>[i], <b>y</b>[i]). Given the locations of all the cities in the x-y plane, your method should return the first time unit at which all the cities are connected to each other.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Connectedness is transitive; i.e., if city A is connected to city B, and B is connected to C, then A is connected to C."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CityLink",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"timeTaken",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int timeTaken(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,5} ",
+			"id":0,
+			"input":"{0,5}",
+			"note":"The road north from (0,0) will intersect the road west from (5,5) at t = 5.",
+			"order":1
+		},
+		{
+			"expect":"{30,-59}",
+			"id":0,
+			"input":"{0,0}",
+			"order":2
+		},
+		{
+			"expect":"{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26, 27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49}",
+			"id":0,
+			"input":"{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26, 27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49} ",
+			"order":3
+		},
+		{
+			"expect":"{-1000000}",
+			"id":0,
+			"input":"{100000}",
+			"order":4
+		},
+		{
+			"expect":"{99531,-17742,-36499,1582,46,34001,-19234,1883,36001,0,233,485}",
+			"id":0,
+			"input":"{1593,-88517,14301,3200,6,-15099,3200,5881,-2593,11,57361,-92990}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"y will contain the same number of elements as x."
+		},
+		{
+			"order":3,
+			"val":"Each element of x will be between -1000000 and 1000000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of y will be between -1000000 and 1000000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"No two cities will be at the same coordinates."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.22,
+			"constraints":[],
+			"correctRatio":91.02,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13551&rd=16083",
+			"name":"ChristmasTreeDecoration",
+			"notes":[],
+			"submission":401
+		},
+		{
+			"avgPts":282,
+			"constraints":[],
+			"correctRatio":87.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13446&rd=16083",
+			"name":"MaximumBipartiteMatchingProblem",
+			"notes":[],
+			"submission":105
+		},
+		{
+			"avgPts":546.26,
+			"constraints":[],
+			"correctRatio":17.28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13525&rd=16083",
+			"name":"TwoNumberGroups",
+			"notes":[],
+			"submission":81
+		}
+	],
+	"name":"Single Round Match 640 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16083"
+}

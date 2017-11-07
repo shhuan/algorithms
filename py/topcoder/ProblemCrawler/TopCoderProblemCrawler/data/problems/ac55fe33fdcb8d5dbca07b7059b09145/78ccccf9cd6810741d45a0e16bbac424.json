@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2343&rd=4770",
+	"statement":"You are playing a game of Hangman with your brother. He begins by choosing a word, and he writes down one blank for each letter in the word. You then repeatedly guess letters that you think could be in the word. Every time you guess a letter, your brother indicates every occurrence of that letter in the word by replacing blanks with the corresponding letter. For example, suppose your brother chooses the word, &quot;NINJA&quot;. \n <ul> \n  <li>- He begins by writing down 5 blanks, indicated here by dashes: &quot;-----&quot;.</li> \n  <li>- Suppose you first guess the letter 'A'. Then, your brother would reveal the one instance of 'A' in the word: &quot;----A&quot;.</li> \n  <li>- Suppose you next guess the letter 'N'. Then, your brother would reveal both instances of 'N' in the word: &quot;N-N-A&quot;.</li> \n  <li>- Suppose you next guess the letter 'E'. Then, your brother would reveal nothing new since 'E' is not in the word: &quot;N-N-A&quot;.</li> \n </ul> Create a class Hangman that contains a method guessWord, which is given a String <b>feedback</b> and a String[] <b>words</b>. Since your brother is fairly predictable, you have determined that the word he is thinking of is an element of <b>words</b>. You also have the information he has given you after some number of guesses (possibly 0), given in <b>feedback</b>. As above, blanks are represented by dashes ('-'), and revealed letters are represented by capital letters ('A'-'Z'). You now wish to guess the word that your brother is thinking of. If there is exactly one element of <b>words</b> that is consistent with <b>feedback</b>, the method should return that element. Otherwise, it should return &quot;&quot;. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Hangman",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"guessWord",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String guessWord(String feedback, String[] words)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"NINJA\", \"NINJAS\", \"FLIPS\", \"OUT\", \"FRISBEE\"}",
+			"id":0,
+			"input":"\"N-N-A\"",
+			"note":"As described above, this feedback is consistent with \"NINJA\" after 'A' and 'N' have been guessed. It is not consistent with \"NINJAS\", since there are only 5 letters in .",
+			"order":1
+		},
+		{
+			"expect":"{\"BRINGS\", \"BARBED\", \"BUBBLE\"} ",
+			"id":0,
+			"input":"\"B--B--\"",
+			"note":"The only correct letter you have guessed is 'B'. If your brother had chosen the word, \"BRINGS\", then  would have been \"B-----\", and if your brother had chosen the word, \"BUBBLE\", then  would have been \"B-BB--\". This leaves only the possibility that your brother chose \"BARBED\", which is, in fact, consistent.",
+			"order":2
+		},
+		{
+			"expect":"{\"MONKEY\", \"FORCE\", \"IS\", \"GAINING\", \"STRENGTH\"}",
+			"id":0,
+			"input":"\"---------\"",
+			"note":" is consistent with all nine-letter words, but there are no nine-letter words.",
+			"order":3
+		},
+		{
+			"expect":"{\"CAAABB\", \"BAAACC\"} ",
+			"id":0,
+			"input":"\"-AAA--\"",
+			"note":" is consistent with both words.",
+			"order":4
+		},
+		{
+			"expect":"{\"ROSACEA\", \"GYROVAGUE\", \"SHACONIAN\", \"ALTITONANT\", \"BRACHIATION\", \"CERCOPITHECAN\", \"SCOLECOPHAGOUS\", \"RESISTENTIALISM\", \"SLUBBERDEGULLION\", \"AICHMORHABDOPHOBIA\", \"SPECTOCLOACAPHOBIA\", \"ULTRACREPIDARIANISM\", \"HIPPOPOTOMONSTROSESQUIPEDALIAN\", \"CHARGOGGAGOGGMANCHAUGGAGOGGCHAUBUNAGUNGAMAUGG\"}",
+			"id":0,
+			"input":"\"---H-O-H-B-OPHOB--\"",
+			"note":"Your brother has a big vocabulary.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"feedback will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in feedback will be either a capital letter ('A'-'Z') or a dash ('-')."
+		},
+		{
+			"order":3,
+			"val":"words will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element in words will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":5,
+			"val":"No two elements in words will be equal."
+		},
+		{
+			"order":6,
+			"val":"Each character in each element of words will be a capital letter ('A'-'Z')."
+		}
+	]
+}

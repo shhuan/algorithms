@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8704&rd=13677",
+	"statement":"<p>Johnny has recently constructed a cannon, and he wants to a hit a ground target that is <b>distance</b> units away. The cannon shoots bullets at <b>velocity</b> units per second. When a bullet is in the air, its flight follows the standard laws of physics. This means that if he shoots a bullet at angle <i>alpha</i> from the ground, it will travel a distance of <br /><br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( 2 * <b>velocity</b>^2 * sin(<i>alpha</i>) * cos(<i>alpha</i>) ) / <i>g</i> ,<br /><br /><br /><br />where <i>g</i> is the acceleration of gravity on Earth. In this problem, we will use 10 as the value of <i>g</i>.</p><br /><br /> <p>The cannon can only be set at the angles given in the int[] <b>angles</b> (all angles are given in degrees). Johnny must pick the angle that will land the bullet as close as possible to the target. Return this closest possible distance between the landing point and the target as a double.</p>",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to within a relative or absolute value of 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"JohnnysCannon",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getDistance",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getDistance(int velocity, int distance, int[] angles)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"40",
+			"id":0,
+			"input":"5",
+			"note":"Here we can choose 0, 45 or 90 degrees. The first and the last options are not very clever as we will shoot ourselves rather than hitting any target. So, the best possibility is 45 degrees.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"10",
+			"note":"Here are the distances the bullet will travel using the given angles:      23 degrees: 7.193...      76 degrees: 4.694...      33 degrees: 9.135...      12 degrees: 4.067...      45 degrees: 10.0 We will be closest to hitting the target if we choose 76 degrees.",
+			"order":2
+		},
+		{
+			"expect":"15",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"20367",
+			"id":0,
+			"input":"120",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"10000",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"velocity will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"distance will be between 0 and 100000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"angles will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of angles will be between 0 and 90, inclusive."
+		}
+	]
+}

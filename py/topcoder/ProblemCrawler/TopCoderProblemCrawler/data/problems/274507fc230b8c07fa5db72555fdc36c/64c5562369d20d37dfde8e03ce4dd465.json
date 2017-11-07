@@ -1,0 +1,107 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2250&rd=4740",
+	"statement":"If a runner races a distance D in time T, and later races a distance 2D, that runner will likely take more than 2T time to finish it. An examination of how times change with distances for a given runner can lead to the following approximation for the time it will take that runner to finish a given distance. Given two races with distances D<sub>1</sub> and D<sub>2</sub> (D<sub>1</sub>&lt;D<sub>2</sub>) which a runner ran in times T<sub>1</sub> and T<sub>2</sub> (T<sub>1</sub>&lt;T<sub>2</sub>) , respectively, the approximate time it will take a runner to run a distance D is given by: T<sub>1</sub>*e^(ln(T<sub>2</sub>/T<sub>1</sub>)*ln(D<sub>1</sub>/D)/ln(D<sub>1</sub>/D<sub>2</sub>)). <br /><br /><br /><br /> While it is clear which of a runner's races for a given distance is the best (the one that he or she ran the fastest), it isn't so clear what race is the best over all distances. This equation can help give an objective measure of that, however. If a runner has raced distances of D<sub>1</sub>...D<sub>n</sub>, with corresponding times of T<sub>1</sub>...T<sub>n</sub>, then any pair of two distances with their times will be able to approximate the rest of the times with the equation from above. Any other time will have a percent error from this approximation given by (actualTime-expectedTime)/expectedTime. Take the highest percent error for a time over all possible approximations, and this is that race's 'badness'. The race with the lowest badness is considered the best race. <br /><br /><br /><br /> Create a class RaceCalculator with a method bestRace that takes a int[] <b>distances</b> and a int[] <b>times</b> and returns an int that is the index of the best race specified by the input. Each value in <b>distances</b> will correspond to the value in <b>times</b> of the same index. All distances are in meters and all times are in seconds.",
+	"notes":[
+		{
+			"order":1,
+			"val":"In C++ e^x can be done with exp(x), and the natural log, ln(x), can be done with log(x), both functions are in math.h."
+		},
+		{
+			"order":2,
+			"val":"In C# e^x can be done with Math.Exp(x), and the natural log, ln(x), can be done with Math.Log(x). The Math class is in the System namespace."
+		},
+		{
+			"order":3,
+			"val":"In Java e^x can be done with Math.exp(x), and the natural log, ln(x), can be done with Math.log(x)."
+		},
+		{
+			"order":4,
+			"val":"In Visual Basic e^x can be done with Exp(x), and the natural log, ln(x), can be done with Log(x), both functions are in the System.Math namespace."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RaceCalculator",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestRace",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int bestRace(int[] distances, int[] times)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{299,655,4020}",
+			"id":0,
+			"input":"{1600,3200,16000}",
+			"note":"This person runs 1.6 km in 4:59, 3.2 km in 10:55, and 16 km in 1:07:00. The expected times for each distance (always using the approximation based on the results of the other two races) are about 4:59.8 for the 1.6 km, 10:53.7 for the 3.2 km, and 1:07:26.0 for the 16 km. This results in badnesses of roughly -0.002767 for the 1.6 km, 0.001939 for the 3.2 km, and -0.006414 for the 16 km.",
+			"order":1
+		},
+		{
+			"expect":"{234,306,499,462,802,1629}",
+			"id":0,
+			"input":"{1600,2000,3200,3000,5000,9600}",
+			"note":"Steve Prefontaine was probably the best American runner of all time. Here are his times for the 1.6 km, 2 km, 3 km, 3.2 km, 5 km, and 9.6 km. The badnesses of the respective races are about: {0.0727,0.0747,0.0115,0.003,0.033,0.081}",
+			"order":2
+		},
+		{
+			"expect":"{160,330,510,750}",
+			"id":0,
+			"input":"{1000,2000,3000,4000}",
+			"order":3
+		},
+		{
+			"expect":"{200,70010,2250,1080}",
+			"id":0,
+			"input":"{1000,50000,10000,5000}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"distances and times will both contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"distances and times will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Every element in distances and times will be between 1 and 100000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"No value in distances will occur more than once."
+		},
+		{
+			"order":5,
+			"val":"If the i-th value in distances is less than the j-th value in distances, then the i-th value of times will be less than the j-th value of times."
+		},
+		{
+			"order":6,
+			"val":"To avoid rounding issues, no two races' badnesses will be within 1e-9 of each other."
+		},
+		{
+			"order":7,
+			"val":"To make the approximation reliable, all speeds (distance/time), including those generated by the approximation, will be between 0.1 meter/second and 100 meters/second, inclusive."
+		}
+	]
+}

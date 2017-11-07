@@ -1,0 +1,117 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2434&rd=5077",
+	"statement":"<p> A table in a database consists of rows and columns. Rows correspond to elements in the table, and columns correspond to fields in the elements. In this problem we will only deal with elements that have integer fields in the range 0 to 100, inclusive. The columns will be named sequentially with lower case letters, starting with 'a', then 'b' and so on. So an element in a table with 4 columns may be described like this: &quot;a=3, b=10, c=15, d=0&quot;. Note that all fields in an element must contain an integer value in the valid range, i.e. no field may be omitted. </p> <p> A large table in a database can be a performance hog. One way to avoid this is to logically partition the table into several smaller tables. This is done by giving each partition a set of constraints on the columns, specifying which rows in the large table should go to which partition. </p> <p> Given the constraints for the partitions of a table, write a class that determines whether the partitions are <i>well formed</i> (see below). The constraints will be given as a String[] where each element corresponds to one partition. Each element contains a space separated list of constraints, where each constraint is in the form &quot;&lt;column&gt;&lt;operator&gt;&lt;value&gt;&quot; (quotes for clarity only) where &lt;column&gt; is a table column, &lt;operator&gt; is one of the relational operators '=', '&lt;', '&gt;', '&lt;=', '&gt;=', and &lt;value&gt; is an integer between 0 and 100, inclusive (without leading zeros). The constraints for each partition represents a conjunction, i.e. all constraints must hold (see example 1). </p> <p> For instance, if we have 3 partitions and a table with 2 columns, the constraints might look like this: {&quot;a&gt;3&quot;, &quot;a&lt;=3 b&gt;5&quot;, &quot;b&lt;6 a&lt;=3&quot;}. Element &quot;a=4, b=3&quot; would then go to the first partition, element &quot;a=3, b=9&quot; would go to the second partition and element &quot;a=0, b=5&quot; would go to the third partition. </p> <p> The partitioning is badly constructed if one or more of the criteria below holds: </p> \n <ul> \n  <li><i>Empty partition</i>: A partition is empty if the constraints are constructed so that no valid element can fulfill them (see example 1). If one or more partitions are empty, return the String <tt>&quot;EMPTY&quot;</tt>.</li> \n  <li><i>Overlapping partitions</i>: If there exists a valid element that satisfies the constraints for two or more partitions (see example 2), return the String <tt>&quot;OVERLAP&quot;</tt>.</li> \n  <li><i>Incomplete partitioning</i>: If there exists a valid element that satisfies none of the constraints (see example 4), return the String <tt>&quot;INCOMPLETE&quot;</tt>.</li> \n </ul> <p> If several of the criteria above holds for the partitions, return the first that holds (i.e. <tt>&quot;EMPTY&quot;</tt> has highest priority, followed by <tt>&quot;OVERLAP&quot;</tt> and finally <tt>&quot;INCOMPLETE&quot;</tt>). </p> <p> Otherwise the partitioning is well formed; that is, an arbitrary valid element can go into exactly one partition and no partition is empty. In this case you should return the String <tt>&quot;OK&quot;</tt>. </p> <p> Create a class TablePartitions containing the method validate which takes an int <b>n</b>, the number of columns in the table, and a String[] <b>partitions</b> containing the constraints for each partition in the format above. The method should <tt>&quot;EMPTY&quot;</tt>, <tt>&quot;OVERLAP&quot;</tt>, <tt>&quot;INCOMPLETE&quot;</tt> or <tt>&quot;OK&quot;</tt> (the meanings of these Strings are explained above). </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"A partition might have no constraints, meaning that all elements can go into this partition (see example 6)."
+		},
+		{
+			"order":2,
+			"val":"Remember that the integer fields in a valid element is always between 0 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"There can be multiple constraints on the same column in one partition, see example 0."
+		},
+		{
+			"order":4,
+			"val":"All quotes around the return Strings above are for clarity only."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TablePartitions",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"validate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String validate(int n, String[] partitions)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"a>3 a>2\", \"a<=3 b>5\", \"b<6 a<=3\"}",
+			"id":0,
+			"input":"2",
+			"note":"This is the example in the problem statement with the addition of a redundant constraint in the first partition. This doesn't affect the partitioning though, so the method returns  since all elements with  go into the first partition, while the other two partitions require that  is no more than 3 and that  is 6 or greater (second partition) or 5 or less (third partition). ",
+			"order":1
+		},
+		{
+			"expect":"{\"a=0 a=1\", \"a>=2\"}",
+			"id":0,
+			"input":"1",
+			"note":"The first partition requires that  is both 0 and 1 which obviously is a contradiction. Thus no element can go into this partition and therefore it's an empty partition. The method returns . ",
+			"order":2
+		},
+		{
+			"expect":"{\"a>=5\", \"b<=6\"}",
+			"id":0,
+			"input":"2",
+			"note":"The element \"a=10, b=0\" satisfies the constraints in both partitions, so there clearly is an overlap. ",
+			"order":3
+		},
+		{
+			"expect":"{\"d<17 b<40\", \"d>=17 d<65 b<39\", \"d>=65 b<39\", \"d>=17 d<22 b=39\", \"d>=22 d<47 b=39\", \"d>=47 b>=39 b<61\", \"d<9 b>=40 b<61 a<51\", \"d<9 b>=61 b<89 a<51\", \"d<28 d>=9 b>=40 b<75 a<=50\", \"d<28 d>=9 b>=75 b<89 a<=50\", \"d>=28 d<47 b>=40 b<97\", \"d<28 b>=89\", \"d>=28 d<65 b>=97\", \"d>=47 d<65 b>=61 b<97\", \"d>=65 d<=100 b>=61\", \"d>=0 d<28 b>=40 b<89 a>50\"}",
+			"id":0,
+			"input":"4",
+			"order":4
+		},
+		{
+			"expect":"{\"d<17 b<40\", \"d>=17 d<65 b<39\", \"d>=65 b<39\", \"d>=17 d<22 b=39\", \"d>=22 d<47 b=39\", \"d>=47 b>=39 b<61\", \"d<9 b>=40 b<61 a<51\", \"d<9 b>=61 b<88 a<51\", \"d<28 d>=9 b>=40 b<75 a<=50\", \"d<28 d>=9 b>=75 b<89 a<=50\", \"d>=28 d<47 b>=40 b<97\", \"d<28 b>=89\", \"d>=28 d<65 b>=97\", \"d>=47 d<65 b>=61 b<97\", \"d>=65 d<=100 b>=61\", \"d>=0 d<28 b>=40 b<89 a>50\"}",
+			"id":0,
+			"input":"4",
+			"note":"Element \"a=0, b=88, c=0, d=0\" doesn't satisfy any constraint, and there are no overlaps nor empty partitions, so the method returns . ",
+			"order":5
+		},
+		{
+			"expect":"{\"\"}",
+			"id":0,
+			"input":"6",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 8, inclusive."
+		},
+		{
+			"order":2,
+			"val":"partitions will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element in partitions will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element in partitions with more than 0 characters will contain a space separated list of constraints in the format specified above."
+		},
+		{
+			"order":5,
+			"val":"There will be no leading or trailing spaces in the elements in partitions."
+		},
+		{
+			"order":6,
+			"val":"Each constraint in the elements in partitions will be separated with exactly one space."
+		}
+	]
+}

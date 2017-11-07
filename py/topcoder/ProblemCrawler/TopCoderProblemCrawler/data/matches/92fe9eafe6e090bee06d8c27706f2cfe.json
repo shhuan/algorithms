@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":202.62,
+			"constraints":[],
+			"correctRatio":93.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6761&rd=10113",
+			"name":"ConstitutiveNumbers",
+			"notes":[],
+			"submission":117
+		},
+		{
+			"avgPts":367.83,
+			"constraints":[],
+			"correctRatio":73.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6760&rd=10113",
+			"name":"MatrixPainting",
+			"notes":[],
+			"submission":92
+		},
+		{
+			"avgPts":630.33,
+			"constraints":[],
+			"correctRatio":46.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6762&rd=10113",
+			"name":"DominoesFalling",
+			"notes":[],
+			"submission":15
+		}
+	],
+	"name":"TCCC06 > Online Round 2C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10113"
+}

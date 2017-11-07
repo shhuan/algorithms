@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":217.1,
+			"constraints":[],
+			"correctRatio":78.28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6169&rd=9818",
+			"name":"OptimalQueues",
+			"notes":[],
+			"submission":267
+		},
+		{
+			"avgPts":278.45,
+			"constraints":[],
+			"correctRatio":40.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6025&rd=9818",
+			"name":"CageTheMonster",
+			"notes":[],
+			"submission":156
+		},
+		{
+			"avgPts":474.8,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6168&rd=9818",
+			"name":"DynamiteBoxes",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 297 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9818"
+}

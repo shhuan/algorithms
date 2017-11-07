@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11486&rd=14536",
+	"statement":"Cat Taro and Rabbit Hanako invented a new variation of <i>&quot;Game Of Life&quot;</i>. <br /><br /> <br /><br /> N cells are arranged around a circle. The cells are numbered from 0 to N-1. For each i between 0 and N-2, inclusive, the i-th cell and the (i+1)-th cell are adjacent to each other. The (N-1)-th cell and the 0-th cell are adjacent to each other. Each cell has exactly two adjacent cells. Each cell has a state: &quot;live&quot; or &quot;die&quot;. <br /><br /> <br /><br /> Taro and Hanako can decide the states of the cells at time 0. For time t &gt; 0, the states are determined as follows: \n <ul> \n  <li>Consider three cells: the i-th cell and the two cells that are adjacent to the i-th cell.</li> \n  <li>If at least two of the three cells are &quot;live&quot; at time t-1, the state of the i-th cell at time t will be &quot;live&quot;.</li> \n  <li>If at least two of the three cells are &quot;die&quot; at time t-1, the state of the i-th cell at time t will be &quot;die&quot;.</li> \n </ul> You are given a String <b>init</b>. The number of cells in the game (N) is equal to the number of characters in <b>init</b>. The i-th character of <b>init</b> represents the state they assign to the i-th cell at time 0. '1' means &quot;live&quot;, '0' means &quot;die&quot;, and '?' means undecided. Return the number of ways they can assign states to the undecided cells such that at least <b>K</b> cells will be in the &quot;live&quot; state at time <b>T</b>. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GameOfLifeDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long theCount(String init, int T, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"\"0?1\"",
+			"note":"There are two ways to replace '?' with '0' and '1': \"001\" and \"011\".  Only the second one satisfies the condition, so the answer is 1. ",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"\"?????????\"",
+			"note":"There are 512 ways to replace '?' cells with '0' or '1'. All of them except \"000000000\" satisfy the condition.",
+			"order":2
+		},
+		{
+			"expect":"58",
+			"id":0,
+			"input":"\"??0???????\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"47",
+			"id":0,
+			"input":"\"?????????1\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"12",
+			"id":0,
+			"input":"\"?????????1???0???1??1??????0??????0??0????1???????\"",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"init will contain between 3 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in init will be '0' (zero), '1' (one) or '?'."
+		},
+		{
+			"order":3,
+			"val":"T will be between 0 and 1,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"K will be between 0 and the number of characters in init, inclusive."
+		}
+	]
+}

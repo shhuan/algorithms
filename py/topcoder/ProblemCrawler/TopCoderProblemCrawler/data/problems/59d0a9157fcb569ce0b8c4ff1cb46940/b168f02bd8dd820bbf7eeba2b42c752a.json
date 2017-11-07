@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6402&rd=10012",
+	"statement":"<p> A rectangular polygon is a polygon whose edges are all parallel to the coordinate axes. The polygon must have a single, non-intersecting boundary. </p> <p> You are given several horizontal line segments. You may remove some of the given segments and add any number of vertical segments to construct a rectangular polygon. Your goal is to maximize the number of edges in the final polygon. </p> <p> You will be given int[]s <b>x1</b>, <b>x2</b>, and <b>y</b>. (<b>x1[i]</b>, <b>y[i]</b>) and (<b>x2[i]</b>, <b>y[i]</b>) are the end points of the i-th line segment. The given segments will have no common points. Return the maximal number of edges in a polygon that can be constructed using the above method. If no polygon can be constructed, return 0. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RestoringPolygon",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"restore",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int restore(int[] x1, int[] x2, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2,3,5,5}",
+			"id":0,
+			"input":"{1,2,3,1}",
+			"note":"In this case all segments can be the edges of the polygon. The resulting polygon has 4 horizontal and 4 vertical edges for a total of 8.",
+			"order":1
+		},
+		{
+			"expect":"{3,3,4,4}",
+			"id":0,
+			"input":"{1,1,2,2}",
+			"note":"In this case either the first two segments or the last two segments can be used to construct a square.",
+			"order":2
+		},
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"{1}",
+			"note":"One segment is not enough.",
+			"order":3
+		},
+		{
+			"expect":"{1000,1000,1000}",
+			"id":0,
+			"input":"{0,0,0}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x1, x2 and y will all contain the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"x1, x2 and y will each contain between 1 and 16 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of x1, x2 and y will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Corresponding elements of x1 and x2[i] will not be equal."
+		},
+		{
+			"order":5,
+			"val":"The line segments described by x1, x2 and y will not have common points."
+		}
+	]
+}

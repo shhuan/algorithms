@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":224.96,
+			"constraints":[],
+			"correctRatio":92.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12300&rd=15699",
+			"name":"JumpFurther",
+			"notes":[],
+			"submission":487
+		},
+		{
+			"avgPts":256.66,
+			"constraints":[],
+			"correctRatio":75.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12528&rd=15699",
+			"name":"TriangleXor",
+			"notes":[],
+			"submission":126
+		},
+		{
+			"avgPts":428.85,
+			"constraints":[],
+			"correctRatio":14.58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12316&rd=15699",
+			"name":"ThreeColorability",
+			"notes":[],
+			"submission":48
+		}
+	],
+	"name":"Single Round Match 587 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15699"
+}

@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3506&rd=6526",
+	"statement":"Given an image as a String[], scale it up by <b>factor</b>. That is, if the original image is M x N, the scaled image should be M*<b>factor</b> x N*<b>factor</b>. Each character in the input String[] should be represented by <b>factor</b> x <b>factor</b> of the same character in the output (see examples).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ImageEnlarger",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"enlarge",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] enlarge(String[] image, int factor)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\"abc\", \"def\", \"ghi\"}",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"ab\", \"cd\"}",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{\"---------\", \"-TTT--CC-\", \"--T--C---\", \"--T--C---\", \"--T---CC-\", \"---------\"}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"image will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of image will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of image will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in image will have ASCII value between 32 and 126, inclusive."
+		},
+		{
+			"order":5,
+			"val":"factor will be between 0 and 50, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The return will contain at most 7500 characters."
+		}
+	]
+}

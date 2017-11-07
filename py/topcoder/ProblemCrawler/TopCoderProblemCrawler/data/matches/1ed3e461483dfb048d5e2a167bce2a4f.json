@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":212.47,
+			"constraints":[],
+			"correctRatio":90.87,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10948&rd=14278",
+			"name":"SumRectangle",
+			"notes":[],
+			"submission":997
+		},
+		{
+			"avgPts":294.02,
+			"constraints":[],
+			"correctRatio":84.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10927&rd=14278",
+			"name":"WhatsThisChord",
+			"notes":[],
+			"submission":640
+		},
+		{
+			"avgPts":594.01,
+			"constraints":[],
+			"correctRatio":53.07,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10929&rd=14278",
+			"name":"CuttingGlass",
+			"notes":[],
+			"submission":228
+		}
+	],
+	"name":"2010 TCO Algorithm > Qualification Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14278"
+}

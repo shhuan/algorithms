@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":177.98,
+			"constraints":[],
+			"correctRatio":44.87,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1609&rd=4690",
+			"name":"TickTick",
+			"notes":[],
+			"submission":78
+		},
+		{
+			"avgPts":260.4,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1973&rd=4690",
+			"name":"Removal",
+			"notes":[],
+			"submission":80
+		},
+		{
+			"avgPts":599.09,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1140&rd=4690",
+			"name":"Warehouse",
+			"notes":[],
+			"submission":15
+		}
+	],
+	"name":"Single Round Match 177 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4690"
+}

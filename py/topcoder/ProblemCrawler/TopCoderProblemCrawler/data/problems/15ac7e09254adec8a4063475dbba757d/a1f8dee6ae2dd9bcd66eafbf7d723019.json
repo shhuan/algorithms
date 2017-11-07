@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13145&rd=15853",
+	"statement":"<p> There is an n by n matrix of positive integers. You are given its elements in a int[] <b>x</b> with n*n elements. For each i and j (0-based indices), the number in row i, column j of the matrix is <b>x</b>[i*n+j]. </p> <br /><br /> <p> You want to select some elements of the matrix. Your selection must satisfy the following constraints: </p>\n <ul> \n  <li>Each row must contain an odd number of selected elements.</li> \n  <li>Each column must contain an odd number of selected elements.</li> \n  <li>The product of all selected elements must be a perfect square.</li> \n </ul> <p></p> <br /><br /> <p> Return the number of valid ways to select such subset of elements, modulo 1,000,000,007. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PerfectSquare",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"ways",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int ways(int[] x)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{1, 1, 1, 2} ",
+			"note":"The only valid solution is to select the elements in the cells (0,1) and (1,0). Their product is 1 = 1^2.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{620, 620, 620, 620} ",
+			"note":"Two solutions: {(0,0), (1,1)}, {(0,1), (1,0)}.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{1, 2, 3, 4, 5, 6, 7, 8, 9}",
+			"note":"The only valid solution is to select the elements with values 1, 2, 3, 6, and 9. Their product is 1*2*3*6*9 = 324 = 18^2.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}",
+			"note":"In this test case the total number of selected elements will always be odd. Thus, the product of all selected elements will always be equal to 2^(2k+1) for some k. A number of the form 2^(2k+1) can never be a perfect square.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13, 14,15,16,17}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 993282280",
+			"id":0,
+			"input":"{9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690, 9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690, 9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690, 9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690, 9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690, 9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690, 9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690, 9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690, 9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690, 9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690,9699690}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 20, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x will contain exactly n*n elements."
+		},
+		{
+			"order":3,
+			"val":"Each element in x will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

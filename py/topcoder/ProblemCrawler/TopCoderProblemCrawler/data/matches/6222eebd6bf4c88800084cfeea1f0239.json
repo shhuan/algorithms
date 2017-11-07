@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":222.79,
+			"constraints":[],
+			"correctRatio":95.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6160&rd=9819",
+			"name":"FibonacciPositioning",
+			"notes":[],
+			"submission":364
+		},
+		{
+			"avgPts":302.5,
+			"constraints":[],
+			"correctRatio":30.51,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6157&rd=9819",
+			"name":"OrderDoesMatter",
+			"notes":[],
+			"submission":236
+		},
+		{
+			"avgPts":634.45,
+			"constraints":[],
+			"correctRatio":83.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6158&rd=9819",
+			"name":"CountingCommonSubsequences",
+			"notes":[],
+			"submission":60
+		}
+	],
+	"name":"Single Round Match 298 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9819"
+}

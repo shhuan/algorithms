@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9728&rd=12182",
+	"statement":"<p>You are writing a program for a very simple processor. It is attached to a slow memory system that contains <b>n</b> bytes, numbered 0 to <b>n</b> - 1. The processor has a cache which holds a copy of <b>k</b> of these bytes at a time, for fast access. It has a <i>base address</i> (referred to as <i>base</i> below), and it holds a copy of the bytes numbered <i>base</i>, <i>base+1</i>, ..., <i>base</i>+<b>k</b>-1.</p> <p>In order to keep the processor as simple as possible, the programmer must directly control the cache. To access some byte in memory, the program must first set the cache base address. Any bytes that are in the new range that were not in the old range are read from the memory store, but bytes that were in both the old and new ranges are simply kept in the cache and do not require a read from the memory store.</p> <p>You wish to optimize a program to use as few memory reads as possible. The bytes that the program accesses, in the order it accesses them, are given in <b>addresses</b>. Determine the minimum number of bytes that must be read from the memory store. Note that when the program starts, the cache is in a special empty state, so the first cache update always requires <b>k</b> bytes to be read.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ContiguousCache",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumReads",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long minimumReads(int n, int k, int[] addresses)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"100",
+			"note":"The first access must read bytes 0 to 2, inclusive. For the second access, no reads are needed, since 2 is already cached. For the third access, the base address should be set to 14. Then for the final access, the base address is set to 13, and only one additional byte must be read.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"500000000",
+			"id":0,
+			"input":"1000000000",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"8",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"k will be between 1 and n, inclusive."
+		},
+		{
+			"order":3,
+			"val":"addresses will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of addresses will be between 0 and n-1, inclusive."
+		}
+	]
+}

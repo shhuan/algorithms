@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":208.16,
+			"constraints":[],
+			"correctRatio":98.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10874&rd=14157",
+			"name":"Islands",
+			"notes":[],
+			"submission":680
+		},
+		{
+			"avgPts":275.85,
+			"constraints":[],
+			"correctRatio":40.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10766&rd=14157",
+			"name":"PythTriplets",
+			"notes":[],
+			"submission":481
+		},
+		{
+			"avgPts":525.73,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11003&rd=14157",
+			"name":"KingdomTour",
+			"notes":[],
+			"submission":24
+		}
+	],
+	"name":"Single Round Match 477 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14157"
+}

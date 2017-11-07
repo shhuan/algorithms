@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6577&rd=9990",
+	"statement":"<p> Consider a N-level pyramid built of unit cubes. An example for N=3 can be seen in the image below. </p> <img src=\"http://www.topcoder.com/contest/problem/PyramidOfCubes/cubes.png\" /> <p> Formally, a pyramid of size N has N levels, where the i-th level (counting from the top) contains an i by i grid of unit cubes. </p> <p> You have <b>K</b> cubes. First, you select a suitable pyramid size as follows: If <b>K</b> is exactly the number of cubes necessary to build a pyramid of size N for some N, you pick that size. Otherwise, you pick the smallest pyramid size you <i>can not</i> build. </p> <p> Now you start building the pyramid in a systematic bottom-up way. First you build the complete bottom level, then you build the level above that, etc. When building a level, also proceed in a systematic way, starting the next row only when the previous one is full. </p> <p> For example, for 21 cubes you should get the following incomplete pyramid: </p> <img src=\"http://www.topcoder.com/contest/problem/PyramidOfCubes/cubes2.png\" /> <p> Given an int <b>K</b> specifying the number of cubes you have, return the surface area of the possibly incomplete pyramid you will build according to the instructions above. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"The returned value must be accurate to within a relative or absolute value of 1E-9."
+		},
+		{
+			"order":2,
+			"val":"The bottom sides of the cubes on the bottommost level are a part of the surface."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PyramidOfCubes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"surface",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double surface(int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 42.0",
+			"id":0,
+			"input":"14",
+			"note":"The first example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 58.0",
+			"id":0,
+			"input":"21",
+			"note":"The second example from the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 6.0",
+			"id":0,
+			"input":"1",
+			"note":"A single cube.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 10.0",
+			"id":0,
+			"input":"2",
+			"note":"Two cubes next to each other.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 47498.0",
+			"id":0,
+			"input":"451234",
+			"note":"Quite a lot of cubes.",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"K will be between 1 and 1,000,000,000, inclusive."
+	}]
+}

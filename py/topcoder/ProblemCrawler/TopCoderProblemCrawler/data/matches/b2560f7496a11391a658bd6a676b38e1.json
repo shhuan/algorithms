@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":159.14,
+			"constraints":[],
+			"correctRatio":9.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10589&rd=14147",
+			"name":"AgeEncoding",
+			"notes":[],
+			"submission":469
+		},
+		{
+			"avgPts":256.14,
+			"constraints":[],
+			"correctRatio":76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10744&rd=14147",
+			"name":"CandyBox",
+			"notes":[],
+			"submission":200
+		},
+		{
+			"avgPts":573.98,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8404&rd=14147",
+			"name":"WarTransportation",
+			"notes":[],
+			"submission":32
+		}
+	],
+	"name":"Single Round Match 462 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14147"
+}

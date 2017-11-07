@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=352&rd=62",
+	"statement":"<pre>PROBLEM STATEMENT:\n\nA rule engine is simply a warehouse of tests.  Based on the result of these\ntests, actions are taken.  When a set of rules causes an action to be taken,\nthe rule set is said to &quot;fire&quot;.\n\nEXAMPLE Rule Sets:\n\nExample 1:\nIf the monkey is hungry and the monkey has a banana in it's hand, then the\nmonkey eats the banana.  The rule set has two rules:\nIF:\n\t(RULE) monkey is hungry\n\t(RULE) monkey has banana\nTHEN:\n\t(ACTION) monkey eats banana.\n\nExample 2:\nIf X = 2, and Y is between 10 and 15, and Z = 5, then Z = 4.  The rule set has\nthree rules:\nIF:\n\t(RULE) X = 2\n\t(RULE) Y between 10 and 15\n\t(RULE) Z = 5\nTHEN:\n\t(ACTION) set Z = 4\n\nDEFINITION:\n\nIt is often very important to know when a given state will cause two different\nrule sets to fire.  You will be given two rule sets.  Determine whether there\nare any data sets that will cause both rule sets to fire. If so, return the\nnumber of such sets within a set of given bounds.  If not, return &quot;0&quot;.\nThe elements of the rule sets are of the form &quot;&lt;X&gt;&lt;comparison&gt;data1,data2&quot; or\n&quot;&lt;X&gt;&lt;comparison&gt;data1&quot; where &lt;comparison&gt; can be &quot;==&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;&quot;, &quot;&gt;=&quot;,\n&quot;!=&quot;, or &quot;B&quot;. &lt;X&gt; is a variable name, a single capital letter 'A'-'Z'. The\nelement would be TRUE if the comparison of the value in &lt;X&gt; to data1 (or data1\nand data2) was true. If all elements of the rule set are TRUE, then the rule\nset fires (Double-quotes and angle-brackets are for clarity only).\n\n&lt;comparison&gt; legend:\n==\tX == data1\n&lt;\tX &lt; data1\n&lt;=\tX &lt;= data1\n&gt;\tX &gt; data1\n&gt;=\tX &gt;= data1\n!=\tX != data1\nB\tX is between data1 and data2, inclusive\n\nX represents an integer variable whose range of possible values are specified\nby the below rules.\n\nMethod signature: String countSets(String[] ruleSet1, String[] ruleSet2)\nBe sure your method is public.\n\nTopCoder will enforce the validity of the inputs.  Inputs are considered valid\nif all of the following criteria are met:\n  *ruleSet1 and ruleSet2 each have between 1 and 7 elements, inclusive.\n*each element of ruleSet1 and ruleSet2 is either of the form\n&quot;&lt;X&gt;&lt;comparison&gt;&lt;data1&gt;&quot; where &lt;comparison&gt; is not the letter &quot;B&quot;, or of the\nform &quot;&lt;X&gt;B&lt;data1&gt;,&lt;data2&gt;&quot; (quotes and angle-brackets are shown for clarity,\nthey do not appear in the input).\n  *&lt;X&gt; is a letter between 'A' and 'Z', inclusive (upper-case only).\n*&lt;data1&gt; and &lt;data2&gt; are integers between -9 and 9, inclusive.  Leading zeros\nare possible.\n  *&lt;comparison&gt; is one of the following: &quot;==&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;&quot;, &quot;&gt;=&quot;, &quot;!=&quot;, &quot;B&quot;.\n*If the &lt;comparison&gt; code is 'B', then &lt;data1&gt; will be less than or equal to\n&lt;data2&gt;.\n\nReturn the number of distinct data sets made up of values between -10 and 10,\ninclusive that will cause both rules to fire.\nFormat the return value as a String.\n\nWORKED EXAMPLES:\n\nruleSet1 = { &quot;A&lt;1&quot;, &quot;B&gt;2&quot; }, ruleSet2 = { &quot;A&gt;1&quot;, &quot;BB1,2&quot; }.\nHere ruleSet1 will fire if the value in A is less than 1, and the value in B is\ngreater than 2.  ruleSet2 will fire if the value in A is greater than 1, and\nthe value in B is between 1 and 2.  The rule sets are mutually exclusive, for A\ncannot be both greater than and less than 1 so return &quot;0&quot;.\n\nruleSet1 = { &quot;A&lt;0&quot; }, ruleSet2 = { &quot;A&lt;0&quot; }.\nBoth rulesets will fire for any value of A between -10 and -1, inclusive.\nThere are 10 such values, so return &quot;10&quot;.\n\nruleSet1 = { &quot;A==1&quot;, &quot;X&gt;=4&quot;, &quot;F&lt;1&quot; }, ruleSet2 = { &quot;X&gt;=5&quot;, &quot;ZB2,9&quot; }.\nruleSet1 will fire when A is 1, X is greater or equal to 4, and F is less than\n1.  ruleSet2 will fire when X is greater than or equal to 5, and Z is between 2\nand 9, inclusive.  Both rule sets will fire when:\nA is 1.\nX is greater than or equal to 5.\nF is less than or equal to 0.\nZ is between 2 and 9, inclusive.\n\nHence, the rule sets are not mutually exclusive, so calculate the number of\ndistinct data sets that can cause the rule set to fire, in which the values are\nbetween -10 and 10, inclusive:\n\nA can only be 1 (1 possible element).\nX can be between 5, and 10 inclusive (6 possible elements).\nF can be between -10 and 0 inclusive (11 possible elements). \nZ can be between 2 and 9 inclusive (8 possible elements).\n\nThe number of distinct data sets that can cause both rule sets to fire within\nthe given bounds is: 1 * 6 * 11 * 8 = 528.  Return &quot;528&quot;.\n\nTEST CASES:\n\n{ &quot;A&lt;1&quot;, &quot;B==2&quot;, &quot;C&gt;4&quot;, &quot;D&gt;=6&quot;, &quot;E&lt;=9&quot;, &quot;FB1,2&quot;, &quot;J!=6&quot; }, { &quot;E&gt;9&quot; } returns &quot;0&quot;.\n{ &quot;A&lt;01&quot;, &quot;B==2&quot;, &quot;C&gt;4&quot;, &quot;D&gt;=2&quot;, &quot;E&lt;=9&quot;, &quot;FB1,2&quot;, &quot;J!=6&quot; }, { &quot;A&lt;9&quot;, &quot;B&gt;=2&quot; }\nreturns &quot;475200&quot;.\n{ &quot;A&lt;=9&quot;, &quot;B&lt;=9&quot;, &quot;C&lt;=9&quot;, &quot;D&lt;=9&quot;, &quot;E&lt;=9&quot;, &quot;F&lt;=9&quot;, &quot;G&lt;=9&quot; }, { &quot;H&lt;=9&quot;, &quot;I&lt;=9&quot;,\n&quot;J&lt;=9&quot;, &quot;K&lt;=9&quot;, &quot;L&lt;=9&quot;, &quot;M&lt;=9&quot;, &quot;N&lt;=9&quot; } returns &quot;1638400000000000000&quot;.\n{ &quot;KB-09,5&quot;, &quot;K&lt;3&quot; }, { &quot;Y&gt;4&quot; } returns &quot;72&quot;.</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RuleEngine",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countSets",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String countSets(String[] param0, String[] param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

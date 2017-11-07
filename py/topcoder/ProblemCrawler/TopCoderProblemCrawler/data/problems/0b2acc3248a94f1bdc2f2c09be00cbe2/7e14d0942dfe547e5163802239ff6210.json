@@ -1,0 +1,104 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10976&rd=14155",
+	"statement":"<p> Consider a circle in the plane. </p> <p> You are given an int <b>places</b>. This is the number of places that are equally spaced along the perimeter of the circle, i.e., the distance between any two consecutive places is equal. The places are numbered 0 to <b>places</b>-1 in clockwise order, starting at an arbitrary place. </p> <p> We will now draw red points in some of the places. The number of red points is given as an int <b>points</b>. As the number of points may be large, we will generate them using a simple process that is described below. </p> <p> Finally, once all points are generated, your task is to find and return the number of <i>right triangles</i> that have all three vertices in red points. </p> <p> To generate the points, you are given three ints <b>a</b>, <b>b</b>, and <b>c</b>. For n = 0, 1, 2, 3, ..., <b>points</b>-1, execute the following steps: </p> \n <ul> \n  <li>Compute P[n] = (<b>a</b>*n*n + <b>b</b>*n + <b>c</b>) modulo <b>places</b>.</li> \n  <li>Starting at P[n], find the first place in the clockwise direction that does not contain a red point.</li> \n  <li>Put a red point onto that place.</li> \n </ul>",
+	"notes":[
+		{
+			"order":1,
+			"val":"A right triangle is a triangle with non-zero area in which one of the angles is exactly 90 degrees."
+		},
+		{
+			"order":2,
+			"val":"For any valid input the answer fits into a long (i.e., a signed 64-bit integer variable)."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RightTriangle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"triangleCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long triangleCount(int places, int points, int a, int b, int c)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"9",
+			"note":"The points are placed on places 0, 3, and 6. The resulting triangle is not a right triangle (in fact, it is equilateral).",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"40",
+			"note":"This time the red points are on places 0, 5, and 20. The only triangle determined by these points is a right triangle.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"This time the formula for the next place always gives the output 1. Hence the points are placed on places 1, 2, 3, and 0, in this order. Each of the four triangles determined by these points is a right triangle.",
+			"order":3
+		},
+		{
+			"expect":"47000",
+			"id":0,
+			"input":"1000000",
+			"note":"An awful lot of obtuse triangles.",
+			"order":4
+		},
+		{
+			"expect":"700",
+			"id":0,
+			"input":"200000",
+			"note":"Watch out for integer overflow when computing P[n].",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"places will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"points will be between 0 and 100,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"points will not be greater than places."
+		},
+		{
+			"order":4,
+			"val":"a will be between 0 and 1,000,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"b will be between 0 and 1,000,000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"c will be between 0 and 1,000,000, inclusive."
+		}
+	]
+}

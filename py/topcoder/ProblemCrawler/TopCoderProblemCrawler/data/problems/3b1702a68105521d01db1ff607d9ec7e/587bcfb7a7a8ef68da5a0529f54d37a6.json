@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3117&rd=5865",
+	"statement":"<p>You are out for Chinese food with a bunch of friends. You are all sitting at a round table, and in the center of the table is a turntable onto which all of the entrees are placed. There is one entree immediately in front of each of you.</p> <p>Each of you likes certain items, given as a String[] <b>favorites</b>, each element of which is a space delimited list of integers. Each integer corresponds to an entree, where 0 is the entree initially in front of person 0, etc. Element i of <b>favorites</b> contains the indexes of all the entrees that person i likes. </p> <p>The turntable rotates in either direction. When someone is serving himself, he can only take from the entree that is directly in front of him. However, he is not required to take the entree presented to him, even if it is one of his favorites.</p> <p>It takes 2 seconds to rotate the turntable by one position. But, to rotate it by two positions takes 3 seconds, and in general it takes <i>n</i>+1 seconds to rotate the turntable by <i>n</i> positions. It takes 15 seconds for a person to serve himself the entree in front of him. If multiple people have favorite entrees in front of them, they can serve themselves simultaneously. The turntable cannot be rotated while anyone is serving himself.</p> <p>You are to return an int indicating the minimum number of seconds it takes for each person to have served himself one entree.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"You may assume that each of the entrees on the turntable is unique."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TurntableService",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calculateTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int calculateTime(String[] favorites)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 32",
+			"id":0,
+			"input":"{\"0 2\", \"1\", \"0 1\"}",
+			"note":"The first two people serve themselves immediately (15 seconds). Then, we have to turn the turntable one unit, in either direction (2 seconds), so the last person can serve himself (another 15 seconds). This takes 32 seconds.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 49",
+			"id":0,
+			"input":"{\"0\", \"0\", \"0\"}",
+			"note":"Here, each person only likes one entree, so they have to be served one at a time. Three servings (15 seconds each) and two single-unit rotations (2 seconds each) takes a total of 49 seconds.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 50",
+			"id":0,
+			"input":"{\"4\", \"1\", \"2\", \"3\", \"0\"}",
+			"note":"First, the middle three people take their entrees (15 seconds). Then, we rotate one unit--either way (2 seconds), serve the entree (15 seconds), and then rotate back two units (3 seconds) and serve the last person (15 seconds). All together this takes 50 seconds.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 35",
+			"id":0,
+			"input":"{\"0 004\", \"2 3\", \"0 01\", \"1 2 3 4\", \"1 1\"}",
+			"note":"Note here that leading zeros are permitted, and that elements may contain repeats.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"favorites will contain between 1 and 15 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of favorites will be a list of integers, separated by a single space, with no leading or trailing spaces."
+		},
+		{
+			"order":3,
+			"val":"Each element of favorites will contain only digits ('0'-'9') and spaces (' ')."
+		},
+		{
+			"order":4,
+			"val":"Each element of favorites will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each number in each element of favorites will be between 0 and n - 1, inclusive, where n is the number of elements in favorites. Leading zeros are permitted, and numbers may be repeated."
+		}
+	]
+}

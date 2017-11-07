@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13284&rd=16061",
+	"statement":"In Treeland there are <b>n</b> cities, numbered 1 through <b>n</b>. The cities are linked by <b>n</b>-1 bidirectional roads. Each road connects a pair of cities. The roads are built in such a way that each city is reachable from each other city by roads. (In other words, the topology of the road network is a tree.) <br /><br /> <br /><br /> You are given the int <b>n</b> and three int[]s that describe the road network: <b>a</b>, <b>b</b>, and <b>len</b>. For each i between 0 and <b>n</b>-2, inclusive, there is a road of length <b>len</b>[i] that connects the cities <b>a</b>[i] and <b>b</b>[i]. <br /><br /> <br /><br /> The distance between two cities is the sum of lengths of roads on the sequence of roads that connects them. (Note that this sequence of roads is always unique.) <br /><br /> <br /><br /> You want to select k cities in such a way that all pairwise distances between the selected cities are the same. In other words, there must be a distance d such that the distance between every two selected cities is d. Return the largest possible value of k for which this is possible. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Egalitarianism3",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxCities",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxCities(int n, int[] a, int[] b, int[] len)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,1,1}",
+			"id":0,
+			"input":"4",
+			"note":"There are 4 cities and 3 roads, each of length 1. The roads connect the following pairs of cities: (1,2), (1,3), and (1,4). The optimal answer is k=3. We can select three cities in the required way: we select the cities {2, 3, 4}. The distance between any two of these cities is 2.",
+			"order":1
+		},
+		{
+			"expect":"{1,2,3,2,3}",
+			"id":0,
+			"input":"6",
+			"note":"Again, the largest possible k is 3. There are two ways to select three equidistant cities: {1, 4, 6} and {4, 5, 6}. (In both cases the common distance is 6.)",
+			"order":2
+		},
+		{
+			"expect":"{1,1,1,1,1,1,1,1,1}",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"1",
+			"note":"Note that n can be 1.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"a will contain exactly n-1 elements."
+		},
+		{
+			"order":3,
+			"val":"b will contain exactly n-1 elements."
+		},
+		{
+			"order":4,
+			"val":"len will contain exactly n-1 elements."
+		},
+		{
+			"order":5,
+			"val":"Each element in a will be between 1 and n, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element in b will be between 1 and n, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element in len will be between 1 and 1,000, inclusive."
+		},
+		{
+			"order":8,
+			"val":"The graph described by a and b will be a tree."
+		}
+	]
+}

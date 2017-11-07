@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1996&rd=4710",
+	"statement":"You have been given a String[] <b>picture</b>. Each character in <b>picture</b> represents a space in the picture. A 'B' designates a space that needs to be painted black, and a 'W' denotes a space that must be painted white. The painting device you have been given only makes horizontal strokes, of any length, exactly one space high. In addition, it can only use 1 color at a time. Due to the nature of the paint, a space cannot be painted twice. For example, the following picture could be colored in 6 distinct strokes:<pre>\n<b>picture</b> = {&quot;BBBBBBBBBBBBBBB&quot;,\n           &quot;WWWWWWWWWWWWWWW&quot;,\n\t   &quot;WWWWWWWWWWWWWWW&quot;,\n           &quot;WWWWWBBBBBWWWWW&quot;}</pre> You would use 1 stroke for each of the first 3 lines, and then 3 strokes on the last line.<br /><br /> <br /><br /> This wouldn't be an issue if we had forever to paint the picture. Unfortunately, you only have enough time to make at most <b>maxStrokes</b> distinct strokes. Any more strokes would put you past your deadline. Since finishing on time is more important than getting it perfect, you are willing to mispaint some of the spaces. Return the fewest number of spaces that can be mispainted while still using no more than <b>maxStrokes</b> strokes. An unpainted space is considered mispainted.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MiniPaint",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"leastBad",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int leastBad(String[] picture, int maxStrokes)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"{ \"BBBBBBBBBBBBBBB\", \"WWWWWWWWWWWWWWW\", \"WWWWWWWWWWWWWWW\", \"WWWWWBBBBBWWWWW\"}",
+			"note":"Exactly enough strokes to finish the job.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{ \"BBBBBBBBBBBBBBB\", \"WWWWWWWWWWWWWWW\", \"WWWWWWWWWWWWWWW\", \"WWWWWBBBBBWWWWW\"}",
+			"note":"One stroke for each row produces the least problem.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{ \"BBBBBBBBBBBBBBB\", \"WWWWWWWWWWWWWWW\", \"WWWWWWWWWWWWWWW\", \"WWWWWBBBBBWWWWW\"}",
+			"note":"Now the entire  will be mispainted.",
+			"order":3
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"{ \"BWBWBWBWBWBWBWBWBWBWBWBWBWBWBW\", \"BWBWBWBWBWBWBWBWBWBWBWBWBWBWBW\", \"BWBWBWBWBWBWBWBWBWBWBWBWBWBWBW\", \"BWBWBWBWBWBWBWBWBWBWBWBWBWBWBW\", \"BWBWBWBWBWBWBWBWBWBWBWBWBWBWBW\", \"BWBWBWBWBWBWBWBWBWBWBWBWBWBWBW\"}",
+			"note":"This one needs a lot of strokes.",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"B\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"picture will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of picture will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of picture will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in each element of picture will be (quotes for clarity) 'B' or 'W'."
+		},
+		{
+			"order":5,
+			"val":"maxStrokes will be between 0 and 3000 inclusive."
+		}
+	]
+}

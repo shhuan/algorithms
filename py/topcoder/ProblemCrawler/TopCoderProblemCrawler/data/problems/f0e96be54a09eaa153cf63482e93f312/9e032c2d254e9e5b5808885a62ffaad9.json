@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11485&rd=14536",
+	"statement":"There are N animals numbered 0 to N-1 in a zoo. Each animal is a rabbit or a cat. Their heights are pairwise distinct. <br /><br /> <br /><br /> Fox Jiro can't distinguish between rabbits and cats, so he asked the following question to each animal: <i>&quot;How many animals of the same kind as you are taller than you?&quot;</i> Each rabbit tells the number of rabbits taller than him, and each cat tells the number of cats taller than her. The differences of heights are slight, so Fox Jiro can't tell which animals are taller than other animals. However, each animal is able to determine which animals are taller that him and which ones are shorter. <br /><br /> <br /><br /> The answer given by the i-th animal is <b>answers</b>[i]. Given these numbers, return the number of configurations resulting in exactly those numbers, assuming everyone tells the truth. Two configurations are different if there exists an i such that the i-th animal is a rabbit in one configuration and cat in the other configuration. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Zoo",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long theCount(int[] answers)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{0, 1, 2, 3, 4}",
+			"note":"There are two possible configurations: all animals are rabbits or all animals are cats.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{5, 8}",
+			"note":"There are only two animals. These animals are definitely lying.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{0, 0, 0, 0, 0, 0}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{1, 0, 2, 0, 1}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{1, 0, 1}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"answers will contain between 1 and 40 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of answers will be between 0 and 40, inclusive."
+		}
+	]
+}

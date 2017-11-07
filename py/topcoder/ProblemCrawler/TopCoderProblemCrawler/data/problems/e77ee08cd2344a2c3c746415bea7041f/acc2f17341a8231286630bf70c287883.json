@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12979&rd=15839",
+	"statement":"<p> A set of points in 3D is called a <i>sub-cube</i> if it is the subset of vertices of some cube in 3D. The cube may be rotated arbitrarily. Note that any non-empty sub-cube will contain between 1 and 8 points, inclusive. </p> <p> You are given int[]s <b>X</b>, <b>Y</b>, and <b>Z</b>, each containing N elements. These int[]s describe a set of N distinct points in 3D: for each valid i, there is a point at (<b>X</b>[i], <b>Y</b>[i], <b>Z</b>[i]). </p> <p> Return the number of non-empty subsets of the N points that are sub-cubes. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Subcube",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getCount(int[] X, int[] Y, int[] Z)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 0, 1, 1, 0, 0, 1, 1}",
+			"id":0,
+			"input":"{0, 0, 0, 0, 1, 1, 1, 1}",
+			"note":"The eight points in the input form a cube with edge length one. Thus every non-empty subset is a sub-cube. The answer is 2^8-1 = 255.  ",
+			"order":1
+		},
+		{
+			"expect":"{-2, -1, -0, 1, 2}",
+			"id":0,
+			"input":"{-2, -1, -0, 1, 2}",
+			"note":"There are five colinear points. Every subset containing at least three elements is not a sub-cube. ",
+			"order":2
+		},
+		{
+			"expect":"{4,8,3,6,0,0} ",
+			"id":0,
+			"input":"{3,6,-4,-8,0,0} ",
+			"note":"Note that the edges of a cube do not have to be parallel to each axis.  ",
+			"order":3
+		},
+		{
+			"expect":"{2, -3, -1, 2, 3, -3, -1, -2, 2, 1, 0, 2, 0}",
+			"id":0,
+			"input":"{1, 0, 2, -2, 1, 2, 2, 1, 2, 0, 3, 2, 0}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}",
+			"id":0,
+			"input":"{0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"X will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Y, Z will contain the same number of elements as X."
+		},
+		{
+			"order":3,
+			"val":"Each element of X, Y, Z will be between -1,000,000 and 1,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"All described points will be different."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":158.57,
+			"constraints":[],
+			"correctRatio":80.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11193&rd=14241",
+			"name":"TheBoredomDivOne",
+			"notes":[],
+			"submission":319
+		},
+		{
+			"avgPts":242.02,
+			"constraints":[],
+			"correctRatio":28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11196&rd=14241",
+			"name":"TheBoringStoreDivOne",
+			"notes":[],
+			"submission":75
+		},
+		{
+			"avgPts":454.26,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11205&rd=14241",
+			"name":"TheBoringGameDivOne",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 488 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14241"
+}

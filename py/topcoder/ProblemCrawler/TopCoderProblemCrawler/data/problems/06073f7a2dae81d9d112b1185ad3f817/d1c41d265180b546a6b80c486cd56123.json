@@ -1,0 +1,77 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1609&rd=4690",
+	"statement":"Our computer clock is not continuous. It &quot;ticks&quot; every millisecond and keeps track of how many ticks have occurred since the beginning of the &quot;epoch&quot; (Jan 1, 1970). The clocktime does not change between ticks. <p> Time is continuous, and events (such as interrupts from hardware devices and the starting of a program) can happen anytime. We have a program that experiences a sequence of events. At each event in our program, our logic gets the current clocktime and compares it with the clocktime stored from the previous event. It outputs either 'D' or 'S' indicating whether the current clocktime is Different or the Same as the previous event's clocktime. (The first event after the program starts generates the first 'S' or 'D' based on comparison with the clocktime at the start of the program.) </p><p> Because the first tick during our program can occur anytime within one millisecond after the start of the program, the string of 'D's and 'S's output from our program cannot be predicted, even given the exact timing of the program. Create a class TickTick that contains a method count that is given <b>event</b>, a String[] of the times of events relative to the start of the program, and returns the number of different output sequences that might be generated. The <b>event</b> times are given in milliseconds elapsed since the start of the program, formatted to contain digits and exactly one decimal point. </p><p> Time is continuous, so exact coincidences do not occur (or occur with probability 0). You should not consider the possibility that a tick occurs at exactly the same time as an event or at the exact start of the program. The constraints on <b>event</b> guarantee that two different events can never be exactly an integral number of milliseconds apart. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TickTick",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(String[] events)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\".222\",\"00.223\",\"1.221\",\"4.220\"}",
+			"note":" If the clock's first tick occurs approximately .100 milliseconds after the start of the program, then the clocktime at time .222 will be Different from the clocktime at the start. The clocktime at .223 will be the same as at .222, the clocktime at 1.221 will be different from the clocktime at .223 since a tick occurs at 1.100. The clocktime at 4.220 will always be different from the clocktime at 1.221. So in this case, the program generates DSDD. Similarly,  These are the only possible sequences that can be generated. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"4.220112\",\"4.221\",\"4.222\",\"4.223\"}",
+			"note":" DSSS, DSSD, DSDS, DDSS",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"123456.1\",\"123456.7\"}",
+			"note":"If the first tick occurs at .05 after the program starts, the output would be DS while if it occurs .5 after the program starts, then the output would be DD. These are the only possible results.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"events has between 1 and 50 elements inclusive"
+		},
+		{
+			"order":2,
+			"val":"each element of events has length between 2 and 8, and contains exactly one decimal point '.'. All the other characters are digits '0'-'9'"
+		},
+		{
+			"order":3,
+			"val":"no element of events has a value equal to an integer"
+		},
+		{
+			"order":4,
+			"val":"no two elements of events have values that differ by an integer"
+		},
+		{
+			"order":5,
+			"val":"the elements of events have values that are strictly increasing"
+		}
+	]
+}

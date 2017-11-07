@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":185.67,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6871&rd=10007",
+			"name":"NiceOrUgly",
+			"notes":[],
+			"submission":327
+		},
+		{
+			"avgPts":256.03,
+			"constraints":[],
+			"correctRatio":11.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6832&rd=10007",
+			"name":"QuadraticEquations",
+			"notes":[],
+			"submission":18
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6834&rd=10007",
+			"name":"PostfixRLE",
+			"notes":[],
+			"submission":9
+		}
+	],
+	"name":"Single Round Match 327 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10007"
+}

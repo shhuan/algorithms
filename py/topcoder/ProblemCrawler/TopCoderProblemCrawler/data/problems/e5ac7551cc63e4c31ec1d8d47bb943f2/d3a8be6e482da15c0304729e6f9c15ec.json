@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7886&rd=10712",
+	"statement":"<p>In Chemistry, there's a different meaning to the word 'solution' than in programming. When we mix x liters of some substance with (100-x) liters of water, we get 100 liters of <i>x</i>-% solution of that substance.</p> <p>You are given several bottles containing solutions of the same substance. The <i>i</i>-th bottle contains <b>amount</b>[<i>i</i>] liters of <b>percent</b>[<i>i</i>]-% solution. Return the maximal number of liters of <b>need</b>-% solution we can get by pouring together some of these bottles (possibly partially, see example 0).</p>",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MixingLiquids",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMuch",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double howMuch(int[] percent, int[] amount, int need)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{20, 30}",
+			"id":0,
+			"input":"{0, 100}",
+			"note":"We have 20 liters of water and 30 liters of pure substance. We need a 50% solution, so we combine all the water with 20 liters of substance.",
+			"order":1
+		},
+		{
+			"expect":"{20, 30}",
+			"id":0,
+			"input":"{0, 100}",
+			"note":"We can use everything we have.",
+			"order":2
+		},
+		{
+			"expect":"{10, 10, 10}",
+			"id":0,
+			"input":"{90, 70, 80}",
+			"note":"All our bottles contain too much substance.",
+			"order":3
+		},
+		{
+			"expect":"{40, 10, 15}",
+			"id":0,
+			"input":"{30, 80, 60}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{395,971,964}",
+			"id":0,
+			"input":"{50,50,50}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"percent will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of percent will be between 0 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"amount will contain the same number of elements as percent."
+		},
+		{
+			"order":4,
+			"val":"Each element of amount will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"need will be between 0 and 100, inclusive."
+		}
+	]
+}

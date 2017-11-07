@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":188.25,
+			"constraints":[],
+			"correctRatio":76.21,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12470&rd=15493",
+			"name":"TeamContest",
+			"notes":[],
+			"submission":559
+		},
+		{
+			"avgPts":263.43,
+			"constraints":[],
+			"correctRatio":39.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12468&rd=15493",
+			"name":"SkiResorts",
+			"notes":[],
+			"submission":344
+		},
+		{
+			"avgPts":451.15,
+			"constraints":[],
+			"correctRatio":36.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12464&rd=15493",
+			"name":"WolfPack",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"Single Round Match 573 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15493"
+}

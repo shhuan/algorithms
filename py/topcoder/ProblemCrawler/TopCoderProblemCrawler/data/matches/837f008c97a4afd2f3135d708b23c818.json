@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":202.13,
+			"constraints":[],
+			"correctRatio":91.73,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=750&rd=4225",
+			"name":"SRM",
+			"notes":[],
+			"submission":254
+		},
+		{
+			"avgPts":277.5,
+			"constraints":[],
+			"correctRatio":79.37,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=805&rd=4225",
+			"name":"Aliquot",
+			"notes":[],
+			"submission":223
+		},
+		{
+			"avgPts":552.17,
+			"constraints":[],
+			"correctRatio":43.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=883&rd=4225",
+			"name":"Quadrilateral",
+			"notes":[],
+			"submission":64
+		}
+	],
+	"name":"Single Round Match 101 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4225"
+}

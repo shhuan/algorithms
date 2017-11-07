@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10013&rd=13695",
+	"statement":"A kingdom is being threatened by a barbarian invasion from all sides. It was decided that the aggressors must not reach the capital. You are given a String[] <b>countryMap</b> containing a map of the kingdom. The kingdom is represented as a rectangular grid of equal squares. The j-th character of the i-th element of <b>countryMap</b> corresponds to the square at row i, column j. The capital square is marked with a '*', impassable squares are marked with '-', and all other squares are marked with uppercase letters representing different types of open terrain.<br /><br /><br /><br /> You must deploy detachments to open squares in such a way that the capital square is unreachable from the border. In other words, to ensure that no aggressors can reach the capital, each path from the border to the capital must be blocked by an impassable square or a detachment. The enemy can only move directly north, east, south and west between open squares that share common sides. Therefore, only consider paths where each pair of consecutive squares has a common side.<br /><br /><br /><br /> Each type of terrain requires a detachment of a certain size. You are given a int[] <b>detachmentSize</b>, where element 0 is the size of a detachment required for each square of terrain type 'A', element 1 is the required size for terrain type 'B', and so on. Each detachment contains a commander, and qualified commanders are hard to come by. Therefore, your primary goal is to minimize the total number of detachments required. If there are multiple ways to defend the capital using the minimum possible number of detachments, choose the one among them that minimizes the total size of all the detachments. Return the total size of all the detachments. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BarbarianInvasion",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimalDetachment",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimalDetachment(String[] countryMap, int[] detachmentSize)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}",
+			"id":0,
+			"input":"{\"ABA\", \"A*A\", \"AAA\"}",
+			"note":"We have no other way than blocking the squares adjacent to the capital, so the minimal total size of the detachments is 5.",
+			"order":1
+		},
+		{
+			"expect":"{5,20,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}",
+			"id":0,
+			"input":"{\"CCCC\", \"-BAC\", \"-*AC\", \"--AC\"}",
+			"note":"Having enough commanders, it could be possible to block the way with 7 detachments standing on the border with the total size of 7. But our primary goal is to minimize the number of detachments, so we have to block 'B' and 'A' squares adjacent to the capital.",
+			"order":2
+		},
+		{
+			"expect":"{9,8,2,5,3,2,1,2,6,10,4,6,7,1,7,8,8,8,2,9,7,6,5,1,5,10}",
+			"id":0,
+			"input":"{\"A----A\", \"-AAAA-\", \"-AA*A-\", \"-AAAA-\", \"A----A\"}",
+			"note":"There is already no way to reach the capital from the border.",
+			"order":3
+		},
+		{
+			"expect":"{1,5,10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}",
+			"id":0,
+			"input":"{\"-A-----\", \"-BCCC*-\", \"-A-----\"}",
+			"note":"Blocking 'B' is the optimal decision.",
+			"order":4
+		},
+		{
+			"expect":"{87,78,20,43,30,12,9,18,57,93,32,60,64,9,69,74,74,78,12,81,63,57,48,8,44,95}",
+			"id":0,
+			"input":"{\"WANNABRUTEFORCEMEHUH\", \"ASUDQWNHIOCASFIUQISA\", \"UWQD-ASFFC-AJSQOOWE-\", \"-----*Y--AVSSFIUQISA\", \"UWQD-ASFFC-AJSQOOWE-\", \"JUFDIFD-CHBVISBOOWE-\", \"WANNABRUTEFORCEMEHUH\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"countryMap will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of countryMap will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Elements of countryMap will be of the same length."
+		},
+		{
+			"order":4,
+			"val":"Each element of countryMap will contain only uppercase letters, minus signs and asterisks ('A'-'Z','-','*')."
+		},
+		{
+			"order":5,
+			"val":"countryMap will contain exactly one character '*'."
+		},
+		{
+			"order":6,
+			"val":"The '*' character will not be in the first or last row or column of countryMap."
+		},
+		{
+			"order":7,
+			"val":"detachmentSize will contain exactly 26 elements."
+		},
+		{
+			"order":8,
+			"val":"Each element of detachmentSize will be between 1 and 1000000, inclusive."
+		}
+	]
+}

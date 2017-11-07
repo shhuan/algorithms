@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12500&rd=15495",
+	"statement":"John and Brus have a rectangular chessboard with black and white tiles. Rows and columns of the chessboard are numbered starting from 0. The cell at row i, column j is black if i+j is even and it is white if i+j is odd. <br /><br /><br /><br /> Some of the cells of the chessboard are occupied by chess pieces. You are given a String[] <b>board</b>. For each i and j, the j-th character of the i-th element (0-based indices) of <b>board</b> is 'X' if the cell in row i, column j of the chessboard contains a chess piece. Otherwise, the j-th character of the i-th element of <b>board</b> is '.'. <br /><br /><br /><br /> John and Brus also have an infinite supply of L-shaped tiles. Each tile consists of three squares which are of the same size as the cells of the chessboard. I.e., each tile looks as follows: <pre>\nOO\nO\n</pre> John and Brus want to place some of the tiles onto their chessboard, according to the following rules: \n <ul> \n  <li>Each tile may be rotated by any multiple of 90 degrees.</li> \n  <li>Each tile must cover exactly three cells of the chessboard.</li> \n  <li>Tiles are not allowed to overlap.</li> \n  <li>Tiles are not allowed to cover the cells that are already occupied by the chess pieces.</li> \n  <li>The corner cell of each tile must cover a black cell of the chessboard.</li> \n </ul> <br /><br /><br /><br /> Return the maximum number of tiles John and Brus can place on the board according to the above rules. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheTilesDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int find(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"X.X\", \"...\", \"X.X\"}",
+			"note":"Since only one black cell is available, just one tile can be placed on the board.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"...\", \"...\", \"...\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"......X.X.XXX.X.XX.\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 13",
+			"id":0,
+			"input":"{\"X.....XXX.XX..XXXXXXXXX...X.XX.XX....X\", \".XXXX..X..XXXXXXXX....XX.X.X.X.....XXX\", \"....XX....X.XX..X.X...XX.X..XXXXXXX..X\", \"XX.XXXXX.X.X..X..XX.XXX..XX...XXX.X...\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 47 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain between 1 and 47 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of board will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each element of board will consist of only characters 'X' and '.'."
+		}
+	]
+}

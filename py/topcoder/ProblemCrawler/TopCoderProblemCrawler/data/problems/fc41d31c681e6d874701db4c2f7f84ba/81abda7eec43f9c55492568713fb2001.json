@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6682&rd=10095",
+	"statement":"<p> A position is an arrangement of pieces on the checkerboard at a particular time during the game. Given a position, you are to calculate the total number of possible moves that can be made on the next turn. </p> <p> The game of checkers is played by two players on an 8x8 grid with alternating black and white squares (any two squares that share an edge have different colors). The leftmost square of the top row is always black, and the playable surface consists of only the 32 black squares. Each player starts with 12 pieces. The first player's pieces are black, and the second player's pieces are white. Black pieces start from the top part of the board and can only move toward the bottom, while white pieces start from the bottom and only move toward the top. The two players alternate moves. </p> <p> There are two ways you can move a piece: slide it diagonally forward to an adjacent unoccupied black square, or &quot;jump&quot; an opponent's piece. You can jump an opponent's piece only if it is diagonally adjacent and there is a vacant square directly beyond it in the same direction. When you perform a jump, your piece will end up in that vacant square, and the opponent's piece will be removed from the board. Jumping is mandatory, so if there is an opportunity to make a jump, it must be taken. When multiple jumps are possible, any one of them can be chosen. As mentioned earlier, both slides and jumps can only be made in the &quot;forward&quot; direction, meaning that black pieces must move toward the bottom of the board and white pieces must move toward the top. </p> <p> You will be given a String[] <b>board</b> that contains the current position of a checkers game. The j-th character of the i-th element represents the contents of the square at row i, column j (where row 0 is the topmost row, and column 0 is the leftmost column). A space (' ') represents a vacant square, and 'W' and 'B' represent squares occupied by white and black pieces, respectively. You are to determine the total number of possible moves in this position. You don't know which player has the next turn, so return the sum of all possible moves for both players. </p>",
+	"notes":[{
+		"order":1,
+		"val":"In real checkers multiple jump moves are allowed. We ignore them for the purposes of this problem."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CheckersBoard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numMoves(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{ \"B \", \" \", \" \", \" \", \" \", \" \", \" \", \" W \" } ",
+			"note":"The black piece has 1 possible move, and the white piece has a choice of 2 moves.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{ \"B B \", \" W \", \" \", \" \", \" \", \" \", \" \", \" \" }",
+			"note":"Each of the black pieces can jump over the white piece. The right black piece has a free cell diagonally down and to the right, but can not move here because jumping is mandatory and can not be passed up to make a non-jumping move.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 14",
+			"id":0,
+			"input":"{ \"B B B B \", \" B B B B\", \"B B B B \", \" \", \" \", \" W W W W\", \"W W W W \", \" W W W W\" }",
+			"note":"The position at the beginning of the game. Black pieces in the first two rows can not move. The leftmost black piece in the third row has one possible move, and the other 3 pieces have 2 possible moves each. The white pieces have symmetrical moves.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{ \"B B B B \", \" W W W W\", \"W W W W \", \" \", \" \", \" \", \" \", \" \" }",
+			"note":"No possible moves here.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{ \" B B \", \" B B W\", \" B W \", \" W W\", \" W \", \" W\", \" \", \" \" }",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain exactly 8 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain exactly 8 characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of board will contain only 'W', 'B' and ' ' characters."
+		},
+		{
+			"order":4,
+			"val":"board will contain at least one non-space character."
+		},
+		{
+			"order":5,
+			"val":"board will contain at most 12 'W' characters and at most 12 'B' characters."
+		},
+		{
+			"order":6,
+			"val":"All 'W' and 'B' charactes in board will be located at 'black' cells only."
+		}
+	]
+}

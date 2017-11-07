@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1663&rd=4497",
+	"statement":"We have a list of airline flights (directed edges between two nodes in a graph), and want to determine how many distinct directed quadrilaterals (directed cycles of length 4, which contain 4 distinct nodes) there are in the flight graph such that the nodes on opposite corners of the quadrilateral are not connected in either direction. Thus, we would count the graph on the left, but not the one on the right (the diagonal edge can be directed either way, or both ways - it doesn't matter): <pre>\n      o---&gt;o      o---&gt;o\n      ^    ^      ^\\   ^\n      |    |      | \\  |\n      |    v      |  \\ v\n      o&lt;--&gt;o      o&lt;--&gt;o\n</pre> You will be given a String[] <b>flights</b> representing the flights. Element <i>i</i> of <b>flights</b> is a single space delimited list of integers (without extra leading 0's or leading/trailing spaces), where each integer <i>j</i> in the list indicates that there is an edge from <i>i</i> to <i>j</i>. An integer, <i>j</i> may appear more than once in element <i>i</i> meaning that there are multiple flights from <i>i</i> to <i>j</i>, each of which should be considered distinct. However, regardless of how many flights there are from one node to another, a quadrilateral must contain exactly 4 distinct nodes. Two quadrilaterals are considered distinct if and only if the sets of flights that they use are distinct. Thus, there may be many quadrilaterals that use the same four nodes, but different edges. Your task is to write a class DQuads, with a method count, which returns the total number of distinct quadrilaterals. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DQuads",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(String[] flights)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"{\"1 1 1 1 1 1 1 1 1 1\",\"2\",\"3\",\"0\"}",
+			"note":"This is just a single directed square. Since there are 10 edges from 0 to 1, there are 10 distinct, directed quadrilaterals.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"1 1 1 1 1 1 1 1 1 1\",\"2\",\"3\",\"0 1\"}",
+			"note":"This is the same as the last example, except with a cross edge from 3 to 1 included. The cross edge is in all the quadrilaterals from the previous example, and so none of them count any more.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"\",\"6 0 2\",\"\",\"6 6 4\",\"6 5 5 0\",\"\",\"\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"1\", \"0 2\", \"3 1\", \"0\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"3 4 8 3 7\",\"0\",\"4 0\",\"\",\"1 7 7 0\",\"0 0 2\",\"5 4 8 3 8\",\"5 4 5 5 6\",\"\"}",
+			"order":5
+		},
+		{
+			"expect":"Returns: 26",
+			"id":0,
+			"input":"{\"3 3 6\",\"0\",\"5 5 6 3\",\"2 4 1 4\",\"6 3 6 6\",\"3\",\"5 0 2\"}",
+			"order":6
+		},
+		{
+			"expect":"Returns: 140",
+			"id":0,
+			"input":"{\"8 1 2 4 8 12 4 5 11 10 6 2\",\"5 3 15 7 15 15 12 0 8 9 2 0 13 9 8 7 4 7 9 11 11\", \"6 7 11 9 10 1 12 9\",\"6 6 9 7 6 1 14 1 6 7 10 6 15 6 14 16 10 11 13 4 7\", \"14 15 16 0 13 2 5 16 6\",\"2 7 16 13 16 10 16 0 8 6 0 2 6\", \"8 8 4 11 3 14 9 14 14 0 5 10 13 3 11 9 5 7\",\"13 15 6 1 3 13 6 6 8 9 6 4 10\", \"4 0 1 4 12 1 2 0 14 9 6 4 16 10 7 6 9 7 13 14\",\"11 12 4 12\", \"6 4 4 9 3 1 8 0 14 14 9 14 16 5 8 16 5 12 4 5 1 12\", \"14 7 14 8 4 16 6 3 13 6 10 7 13 3\",\"15 4\",\"12 14 14 0 8 12 11 4 3 1 12 1\", \"13 4 4 6 12 0\",\"9 0 2 9 5 10\",\"6 15 6 13 4 5 1 6\"}",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"flights will contain between 4 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of flights will be a single space delimited list of integers, with no extra leading 0's and no leading or trailing spaces."
+		},
+		{
+			"order":3,
+			"val":"Each integer in each element of flights will be between 0 and the length of flights - 1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of flights will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Element i of flights will not contain the integer i as one of its terms."
+		}
+	]
+}

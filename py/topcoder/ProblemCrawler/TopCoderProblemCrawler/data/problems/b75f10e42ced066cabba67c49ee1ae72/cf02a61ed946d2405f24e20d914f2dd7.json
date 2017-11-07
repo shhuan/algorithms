@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2277&rd=4735",
+	"statement":"An ambigram is a (non-blank) symbol that looks unchanged when the paper on which it is written is rotated 180 degrees about the axis perpendicular to the surface of the paper. We are given a word and want to change it into an ambigram, by modifying or removing its letters. <p> We will restrict our word to uppercase letters. In the font we are using,</p>\n <ol>\n  <li> H I N O S X Z look unchanged after rotation</li>\n  <li> M W look like each other after rotation</li>\n </ol> <p> Some examples of ambigrams are &quot;MOW&quot;, &quot;XXXXXXXXXXX&quot;, &quot;XMIWX&quot;, &quot;HXHXHXHXHXH&quot;. </p><p> We want to make minimal changes to the given word to produce an ambigram. We will measure the cost of changing by distance within the alphabet, so changing an 'F' to an 'H' would incur a cost of 2, and changing an 'I' to an 'F' would cost 3. If we keep changing a letter until we run off either end of the alphabet, the letter disappears. (When a letter disappears, letters around it slide together.) So we can make a C disappear at a cost of 3, and can make a 'T' disappear at a cost of 7. </p><p> Create a class Ambigram that contains a method ambiword that is given a String <b>word</b> and that returns the ambigram that is the cheapest to construct from <b>word</b>. Among equally cheap ambigrams, return the longest. If a tie still exists, return the contender that comes earliest alphabetically. A String with no characters is NOT an ambigram. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Ambigram",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"ambiword",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String ambiword(String word)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"X\"",
+			"id":0,
+			"input":"\"BXC\"",
+			"note":" We can remove the 'B' at a cost of 2 and the 'C' at a cost of 3. Total cost = 5. Note that \"BXB\" is NOT an ambigram. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"XIXHMOOWHXIX\"",
+			"id":0,
+			"input":"\"XIXHZMOAOSHXIX\"",
+			"note":" This can be done at a cost of 6 (make the 'A' disappear, make the 'Z' disappear, change 'S' to 'W' at a cost of 4).",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"H\"",
+			"id":0,
+			"input":"\"C\"",
+			"note":" We could make the 'C' disappear at a cost of 3, but the result would be the empty String, which is not an ambigram. At a cost of 5 we can change the 'C' into an 'H'.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"MW\"",
+			"id":0,
+			"input":"\"AMWZ\"",
+			"note":"Note that we cannot change the 'A' to 'Z' cheaply by treating the alphabet as a circle. \"ZMWZ\" would be a longer ambigram than \"MW\" but it would cost 25.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"word will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in word will be an uppercase letter 'A'-'Z'."
+		}
+	]
+}

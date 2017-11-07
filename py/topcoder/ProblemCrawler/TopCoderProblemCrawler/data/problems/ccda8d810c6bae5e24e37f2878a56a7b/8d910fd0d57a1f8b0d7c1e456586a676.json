@@ -1,0 +1,64 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3006&rd=5886",
+	"statement":"<p> A friend of mine once told me that his phone number, 642-5616, is easy to remember because it is made up of only powers of 2: &quot;64&quot; + &quot;256&quot; + &quot;16&quot;. This made me wonder how many numbers of various lengths had this property. </p> <p> Given ints <b>b</b> and <b>digits</b>, write a method to compute how many integers of the given number of digits can be formed by concatenating various powers of the given base. Use only non-negative powers of the base (including <b>b</b><sup>0</sup>, which equals 1). </p> <p> For example, given <b>b</b> = 12, and <b>digits</b> = 4, there are 8 such numbers: </p> <pre>\n    1111: &quot;1&quot; + &quot;1&quot; + &quot;1&quot; + &quot;1&quot;\n    1112: &quot;1&quot; + &quot;1&quot; + &quot;12&quot;\n    1121: &quot;1&quot; + &quot;12&quot; + &quot;1&quot;\n    1144: &quot;1&quot; + &quot;144&quot;\n    1211: &quot;12&quot; + &quot;1&quot; + &quot;1&quot;\n    1212: &quot;12&quot; + &quot;12&quot;\n    1441: &quot;144&quot; + &quot;1&quot;\n    1728: &quot;1728&quot;\n</pre> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StringOfPowers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long count(int b, int digits)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"12",
+			"note":"This is the example in the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"10",
+			"note":"The first digit must be a 1, and the remaining 6 digits can each be zero or one. Therefore, there are 2 = 64 possibilities.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"11",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"b will be between 2 and 999999999, inclusive."
+		},
+		{
+			"order":2,
+			"val":"digits will be between 1 and 18, inclusive."
+		}
+	]
+}

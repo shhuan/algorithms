@@ -1,0 +1,66 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9904&rd=13507",
+	"statement":"<p> In a Las Vegas casino, a new type of six-sided die is being introduced. These dice may have any positive integers written its sides, but no two sides of the same die can contain the same number. For each die, the casino owner wants the mean value of the numbers written on its sides to not exceed <b>M</b>. </p> <p> Compute the total number of allowed dice. Two dice are considered different if one can't be obtained from the other using rotations. Since the resulting number may be quite large, return it modulo 1000000007. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CustomDice",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countDice",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countDice(int M)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"3",
+			"note":"The die with the smallest possible mean is {1,2,3,4,5,6}. Its mean is 3.5, which is greater than =3.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 210",
+			"id":0,
+			"input":"4",
+			"note":"There are 30 different dice with numbers {1,2,3,4,5,6} on their sides, they each have a mean of 3.5. There are 30 different dice with numbers {1,2,3,4,5,7} on their sides, they each have a mean of 22/6=3.(6). There are 60 different dice with {1,2,3,4,5,8} or {1,2,3,4,6,7} on their sides, they each have a mean of 23/6=3.8(3). There are 90 different dice with {1,2,3,4,5,9}, {1,2,3,4,6,8} or {1,2,3,5,6,7} on their sides, they each have a mean of 24/6=4.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 863010",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 375588112",
+			"id":0,
+			"input":"50",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"M will be between 1 and 1000000, inclusive."
+	}]
+}

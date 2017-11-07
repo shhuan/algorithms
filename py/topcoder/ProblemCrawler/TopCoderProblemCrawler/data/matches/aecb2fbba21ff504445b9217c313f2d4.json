@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":184.48,
+			"constraints":[],
+			"correctRatio":46.72,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12082&rd=15096",
+			"name":"ChromaticNumber",
+			"notes":[],
+			"submission":122
+		},
+		{
+			"avgPts":342.55,
+			"constraints":[],
+			"correctRatio":45.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12081&rd=15096",
+			"name":"FoxAndCake",
+			"notes":[],
+			"submission":82
+		},
+		{
+			"avgPts":483.12,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12083&rd=15096",
+			"name":"CowsMooing",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2012 TCO Algorithm > Round 3A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15096"
+}

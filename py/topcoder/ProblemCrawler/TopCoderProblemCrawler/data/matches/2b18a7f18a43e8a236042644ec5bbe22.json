@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":229.92,
+			"constraints":[],
+			"correctRatio":72.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=253&rd=4018",
+			"name":"Contest",
+			"notes":[],
+			"submission":54
+		},
+		{
+			"avgPts":373.94,
+			"constraints":[],
+			"correctRatio":91.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=254&rd=4018",
+			"name":"Dealer",
+			"notes":[],
+			"submission":47
+		},
+		{
+			"avgPts":514.71,
+			"constraints":[],
+			"correctRatio":18.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=255&rd=4018",
+			"name":"ScreenSaver",
+			"notes":[],
+			"submission":22
+		}
+	],
+	"name":"Single Round Match 47 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4018"
+}

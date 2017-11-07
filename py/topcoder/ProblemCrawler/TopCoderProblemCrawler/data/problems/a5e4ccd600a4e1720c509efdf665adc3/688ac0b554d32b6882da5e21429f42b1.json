@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2229&rd=5851",
+	"statement":"<p>You are writing part of a spam detection system. Your job is to analyze the subject lines of e-mail messages and return a count of known spam signalling keywords in the subject lines. Your task is made more difficult by the spammers who try to hide the keywords in several ways. Here we will consider just one obfuscation technique: duplicating characters. Duplicating characters means taking an existing character in a word and inserting more copies of that character into the same place in the word. This process can then be repeated on a different character in the word. The spam signalling keyword &quot;credit&quot; might be modified to &quot;creddiT&quot;, &quot;CredittT&quot; or &quot;ccrreeeddiitt&quot;, etc., but not &quot;credict&quot;. </p> <p> For the purposes of this problem we will consider subject lines which contain only letters and spaces. The &quot;words&quot; in the subject line are delimited by spaces. A word in the subject line is considered a &quot;match&quot; if the entire word is the same as at least one entire keyword, after possibly removing some duplicated characters from the subject word. A keyword that matches only part of a subject word or a subject word that matches only part of a keyword does not count. Note that if a keyword contains a double letter, the subject word must also contain (at least) a double letter in the same position to match (&quot;double letter&quot; means two consecutive letters in the word that are the same). For this application, all matches (and the use of the term &quot;same&quot;) are case insensitive.</p> <p> Given a subject line and a list of keywords, return the count of words in the subject line which &quot;match&quot; words in the keyword list. If multiple words in the subject line match the same keyword, they are each counted, but a word in the subject line that matches multiple keywords is only counted once. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SpamDetector",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countKeywords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countKeywords(String subjectLine, String[] keywords)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"interest\",\"rates\",\"loan\",\"available\",\"LOW\"}",
+			"id":0,
+			"input":"\"LoooW INTEREST RATES available dont BE slow\"",
+			"note":"\"INTEREST\" , \"RATES\" , \"available\", and \"LoooW\" match. Note that \"slow\" does not match, even though it contains the substring \"low\" which is a keyword.",
+			"order":1
+		},
+		{
+			"expect":"{\"rich\",\"risk\",\"Quicken\",\"wealth\",\"SAVE\"}",
+			"id":0,
+			"input":"\"Dear Richard Get Rich Quick no risk\"",
+			"note":"Don't match \"Richard\"",
+			"order":2
+		},
+		{
+			"expect":"{\"AGAIN\",\"again\",\"Again\",\"again\"}",
+			"id":0,
+			"input":"\"in debbtt againn and aAgain and AGAaiIN\"",
+			"order":3
+		},
+		{
+			"expect":"{\"play\",\"lotto\",\"lottery\",\"looser\"}",
+			"id":0,
+			"input":"\"PlAyy ThEE Lottto get Loottoo feever\"",
+			"order":4
+		},
+		{
+			"expect":"{\"empty\",\"space\",\"does\",\"not\",\"match\"}",
+			"id":0,
+			"input":"\" \"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"subjectLine will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"subjectLine will include only letter ('a' to 'z' and 'A' to 'Z') and space (' ') characters."
+		},
+		{
+			"order":3,
+			"val":"keywords will have between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"each element of keywords will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"each element of keywords will consist of only letters ('a' to 'z' and 'A' to 'Z')."
+		},
+		{
+			"order":6,
+			"val":"The same letter (ignoring case) never appears more than twice consecutively in any element of keywords. (ie. &quot;aabbAAbb&quot; is ok, but &quot;aaAbb&quot; is not allowed.)"
+		}
+	]
+}

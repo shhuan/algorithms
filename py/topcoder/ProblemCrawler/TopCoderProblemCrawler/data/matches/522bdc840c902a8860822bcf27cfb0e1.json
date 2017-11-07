@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":210.95,
+			"constraints":[],
+			"correctRatio":88.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11306&rd=14425",
+			"name":"ColoredStrokes",
+			"notes":[],
+			"submission":683
+		},
+		{
+			"avgPts":254.26,
+			"constraints":[],
+			"correctRatio":56.88,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11318&rd=14425",
+			"name":"OneDimensionalBalls",
+			"notes":[],
+			"submission":327
+		},
+		{
+			"avgPts":540.49,
+			"constraints":[],
+			"correctRatio":19.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11147&rd=14425",
+			"name":"YetAnotherHamiltonianPath",
+			"notes":[],
+			"submission":97
+		}
+	],
+	"name":"Single Round Match 496 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14425"
+}

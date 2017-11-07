@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9943&rd=13508",
+	"statement":"<p>In this problem you will be given a String <b>text</b> and you will need to find the substring of the <b>text</b> that matches a given template in the best way. The template will be represented by two Strings: <b>prefix</b> and <b>suffix</b>. Consider a string <i>S</i>. The prefix match score of <i>S</i> with respect to a given template is the maximal n &gt;= 0 such that the first n characters of <i>S</i> are equal to the last n characters of <b>prefix</b> and occur in the same exact order. Analogously, the suffix match score of <i>S</i> is the maximal m &gt;= 0 such that the last m characters of <i>S</i> are equal to the first m characters of <b>suffix</b> and occur in the same exact order.</p> <br /><br /> <p>For example, if <i>S</i> = &quot;something&quot;, <b>prefix</b> = &quot;awesome&quot;, and <b>suffix</b> = &quot;ingenious&quot;, than the prefix score of S is 4 (the matched characters are &quot;some&quot;) and the suffix score is 3 (the matched characters are &quot;ing&quot;).</p> <br /><br /> <p>The match score of a string <i>S</i> with respect to a given template is the sum of its prefix and suffix match scores. Find the non-empty substring of <b>text</b> with the maximal match score according to the template (<b>prefix</b>, <b>suffix</b>). In case of a tie, return the substring with the maximal prefix score. If there are still several candidates, return one that comes first lexicographically.</p>",
+	"notes":[{
+		"order":1,
+		"val":"String A comes before string B lexicographically if A is a proper prefix of B, or if A has a smaller character at the first position where the strings differ. When comparing the characters, refer to the following list of characters in ascending order: ' ', 'a', 'b', ..., 'z'."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TemplateMatching",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestMatch",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String bestMatch(String text, String prefix, String suffix)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"awesome\"",
+			"id":0,
+			"input":"\"something\"",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"\"eto\"",
+			"id":0,
+			"input":"\"havka\"",
+			"note":"The return value must be non-empty string, so the correct answer is \"a\".",
+			"order":2
+		},
+		{
+			"expect":"\"habrahabr\"",
+			"id":0,
+			"input":"\"abracadabra\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"promise\"",
+			"id":0,
+			"input":"\"mississippi\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"a a\"",
+			"id":0,
+			"input":"\"a a a a a a\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\"b\"",
+			"id":0,
+			"input":"\"ab\"",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"text will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"prefix will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"suffix will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"text, prefix and suffix will contain only lowercase letters ('a'-'z') and spaces (' ')."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.69,
+			"constraints":[],
+			"correctRatio":72.94,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7309&rd=10012",
+			"name":"CreatePairs",
+			"notes":[],
+			"submission":303
+		},
+		{
+			"avgPts":275.02,
+			"constraints":[],
+			"correctRatio":11.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6402&rd=10012",
+			"name":"RestoringPolygon",
+			"notes":[],
+			"submission":144
+		},
+		{
+			"avgPts":597.59,
+			"constraints":[],
+			"correctRatio":50.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6175&rd=10012",
+			"name":"LadderPermutation",
+			"notes":[],
+			"submission":61
+		}
+	],
+	"name":"Single Round Match 332 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10012"
+}

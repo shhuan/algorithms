@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":190.47,
+			"constraints":[],
+			"correctRatio":69.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13715&rd=16433",
+			"name":"TheNicePair",
+			"notes":[],
+			"submission":793
+		},
+		{
+			"avgPts":354.86,
+			"constraints":[],
+			"correctRatio":77.6,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13716&rd=16433",
+			"name":"TheTips",
+			"notes":[],
+			"submission":308
+		},
+		{
+			"avgPts":570.83,
+			"constraints":[],
+			"correctRatio":78.95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13717&rd=16433",
+			"name":"TheTreeAndMan",
+			"notes":[],
+			"submission":114
+		}
+	],
+	"name":"2015 TopCoder Open Algorithm > Round 1B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16433"
+}

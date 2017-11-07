@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4710&rd=7993",
+	"statement":"<p>A teacher has just finished grading the test papers for his class. To get an idea of how difficult the test was, he would now like to determine the most common score on the test. In statistics, this is called the &quot;mode&quot; of a set of data points. For instance, if the scores were {65, 70, 88, 70}, then the mode would be 70, since it appears twice while all others appear once.</p> <p>Sometimes, in the case of a tie, the mode will be more than one number. For instance, if the scores were {88, 70, 65, 70, 88}, then the mode would be {70, 88}, since they both appear most frequently.</p> <p>You are given a int[] <b>scores</b>. You are to return a int[] representing the mode of the set of scores. In the case of more than one number, they should be returned in increasing order.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ClassScores",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findMode",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] findMode(int[] scores)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {70 }",
+			"id":0,
+			"input":"{65, 70, 88, 70}",
+			"note":"The first example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {70, 88 }",
+			"id":0,
+			"input":"{88, 70, 65, 70, 88}",
+			"note":"The second example from the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {14, 22, 38, 45, 55, 56, 73, 92, 93 }",
+			"id":0,
+			"input":"{92, 56, 14, 73, 22, 38, 93, 45, 55}",
+			"note":"With no duplicates, all of the elements are the most frequent (appearing once each).",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"scores will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of scores will be between 0 and 100, inclusive."
+		}
+	]
+}

@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11306&rd=14425",
+	"statement":"Manao has a bitmap H pixels high and W pixels wide. Initially, each of the pixels is white. Manao draws several (possibly zero) horizontal and/or vertical strokes. A stroke is a line segment 1 pixel thick and 1 or more pixels long. Manao only draws horizontal strokes with red color and vertical strokes with blue. He can paint a one pixel long stroke with either red or blue color, and the stroke will be considered horizontal if red and vertical if blue. Manao never draws two horizontal or two vertical strokes that overlap. If a horizontal stroke and a vertical stroke cross, the pixel at their intersection becomes green. <br /><br /><br /><br /> You're given a String[] <b>picture</b> denoting the bitmap after Manao's drawing experiments. The x-th character of the y-th element of <b>picture</b> describes the color of the pixel at coordinates (x, y) of the bitmap, where (0, 0) is the pixel at the top left corner and (W-1, H-1) is the pixel at the bottom right corner. 'R' is red, 'G' is green, 'B' is blue and '.' is white. Return the least possible number of strokes needed to obtain the given picture.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ColoredStrokes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getLeast",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getLeast(String[] picture)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"...\", \"...\"}",
+			"note":"The picture is blank, Manao made no strokes.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"..B.\", \"..B.\"}",
+			"note":"A single vertical stroke is enough.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\".BB.\"}",
+			"note":"Since only vertical strokes are painted with blue color, this picture needs two strokes.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"...B..\", \".BRGRR\", \".B.B..\"}",
+			"note":"One horizontal and two vertical strokes are necessary for this masterpiece.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"...B..\", \".BRBRR\", \".B.B..\"}",
+			"note":"This is the same picture as in the previous case with pixel (3,1) colored blue instead of green. Therefore, a single horizontal stroke won't help.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"GR\", \"BG\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"picture will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of picture will be between 1 and 50 characters long, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of picture will have equal length."
+		},
+		{
+			"order":4,
+			"val":"Each character in picture will be 'R', 'G', 'B' or '.'."
+		}
+	]
+}

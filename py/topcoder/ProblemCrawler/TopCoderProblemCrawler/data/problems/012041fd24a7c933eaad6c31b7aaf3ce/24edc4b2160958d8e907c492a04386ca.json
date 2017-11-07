@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6212&rd=9983",
+	"statement":"<p>A bishop is a chess piece that can move any number of squares in any diagonal direction (see diagram below).</p> <p><img src=\"http://www.topcoder.com/contest/problem/BishopOnTheBoard/BishopOnTheBoard1.gif\" /></p> <p>The chess board has dimensions <b>xSize</b> * <b>ySize</b>, where the top-left corner of the board has coordinates (0, 0), and the bottom-right corner has coordinates (<b>xSize</b> - 1, <b>ySize</b> -1). The bishop is initially at coordinates (<b>x</b>, <b>y</b>). Find the total number of squares reachable by this bishop in <b>k</b> or less moves. Note, that initial square is always counted as reachable.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BishopOnTheBoard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countReachableCells",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countReachableCells(int xSize, int ySize, int x, int y, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"8",
+			"id":0,
+			"input":"8",
+			"note":"Reachable cells are marked by 'X' on the picture:  ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"8",
+			"note":"Reachable cells are marked by 'X' on the picture:  ",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"Reachable cells are marked by 'X' on the picture:  ",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"11",
+			"note":"Reachable cells are marked by 'X' on the picture:  ",
+			"order":4
+		},
+		{
+			"expect":"17",
+			"id":0,
+			"input":"278",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"xSize will be between 2 and 50000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"ySize will be between 2 and 50000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"x will be between 0 and xSize - 1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"y will be between 0 and ySize - 1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"k will be between 1 and 50000, inclusive."
+		}
+	]
+}

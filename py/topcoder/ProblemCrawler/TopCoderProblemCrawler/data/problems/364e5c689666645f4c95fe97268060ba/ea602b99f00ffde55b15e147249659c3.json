@@ -1,0 +1,70 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4519&rd=7221",
+	"statement":"<p>You are developing a new calculator with a square root function. To make things simple for your clients, you have decided to approximate square roots as simple fractions, rather than displaying a long sequence of digits.</p> <p>You will be given <b>N</b> and <b>D</b> and should return the fraction closest to sqrt(<b>N</b>) for which the denominator is not greater than <b>D</b>. The fraction should be returned in the form &quot;A/B&quot; where A and B are positive integers with no common factors greater than one.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CalcRoot",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"approximate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String approximate(int N, int D)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"4",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"sqrt(5) = 2.236",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"12",
+			"note":"sqrt(12) = 3.464",
+			"order":3
+		},
+		{
+			"expect":"763",
+			"id":0,
+			"input":"23743",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1000000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"D will be between 1 and 1000, inclusive."
+		}
+	]
+}

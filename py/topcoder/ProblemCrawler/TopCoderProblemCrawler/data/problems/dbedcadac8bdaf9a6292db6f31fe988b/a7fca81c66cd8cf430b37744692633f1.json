@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6879&rd=10709",
+	"statement":"<p>Alice and Bob often play the following car racing &quot;sim&quot;. To represent the track they take a sheet of paper, split it into square cells and make each cell either a &quot;road&quot; or &quot;obstacle&quot;. Two of the &quot;road&quot; cells are marked as &quot;Start&quot; and &quot;Finish&quot;, and the goal of the game is to move your car from the start to the finish as fast as possible. </p> <p> In this paper game, the car is represented by a point, which moves in turns. At the beginning of each turn the car is located at the center of some cell, and each turn moves the car to the center of some other cell. The speed of the car is represented by a vector with integer coordinates. Each turn consist of two parts: </p>\n <ul> \n  <li>Change the speed of your car, modifying the speed the car had before this turn. Each coordinate of the speed can be increased by 1, decreased by 1 or left unchanged.</li> \n  <li>Move the car. If the car has coodinates (row, col) and its speed is (vRow, vCol), then its new coordinates will be (row + vRow, col + vCol). The car moves along the straight line between the centers of the old and new cells.</li> \n </ul> <p></p> <p> When the path of the car touches the &quot;Finish&quot; cell, it immediately finishes and the time it spent for the race is the number of turns it took (counting the final one). If the path of the car intersects an obstacle before it is finished, then the car crashes and can not finish the race (the car can touch obstacles, see examples for clarification). The car can not leave the grid because it will lead to disqualification. Please note that the car finishes immediately when it touches the Finish cell, and the car successfully finishes even if continuing the turn would move it outside the track or into an obstacle. </p> <p> You will be given a String[] <b>track</b>, representing the track where the race occurs. Character j of element i of track represents the cell at (i, j). '.', 'S', 'F' and 'X' characters represent free road, start, finish and obstacle, respectively. You are also given two ints, <b>vRow</b> and <b>vCol</b>, representing the initial speed of the car. Return the minimal number of moves needed to finish the race. Positive direction of <b>vRow</b> means increasing the row number and positive direction of <b>vCol</b> means increasing the column number (see examples 1 and 2). If it is not possible to get to the finish cell from the start cell without crashing, return -1. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PaperRacing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minMoves(String[] track, int vRow, int vCol)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"S.................F\"}",
+			"note":"Accelerate to the right as much as you can.",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"S.................F\"}",
+			"note":"You are already fast, so you need only 2 turns to finish (and you don't care that continuing with this speed would get you away from the track).",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"FX\", \"X.\", \".X\", \"X.\", \"SX\"}",
+			"note":"First you need to brake, since you are moving in the wrong direction. Then, you'll need to stop every second turn.",
+			"order":3
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"{\"S..X\", \"X..X\", \"XX.X\", \"XXFX\"}",
+			"note":"If you didn't touch the finish cell, the crash would be unavoidable. Please note that the car reaches the finish if it just touches the 'F' cell, but the car's path has to go inside the obstacle for a crash.",
+			"order":4
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"S.......X.........F\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"track will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of track will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of track will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each element of track will contain only '.', 'X', 'S' and 'F' characters."
+		},
+		{
+			"order":5,
+			"val":"track will contain exactly one 'F' and one 'S'."
+		},
+		{
+			"order":6,
+			"val":"vRow and vCol each will be between -50 and 50, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":165.14,
+			"constraints":[],
+			"correctRatio":53.3,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13124&rd=15849",
+			"name":"WakingUp",
+			"notes":[],
+			"submission":681
+		},
+		{
+			"avgPts":275.83,
+			"constraints":[],
+			"correctRatio":34.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13061&rd=15849",
+			"name":"ColorfulCoins",
+			"notes":[],
+			"submission":213
+		},
+		{
+			"avgPts":427.84,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13059&rd=15849",
+			"name":"ThreeLLogo",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"Single Round Match 616 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15849"
+}

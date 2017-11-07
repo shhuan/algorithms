@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10238&rd=13898",
+	"statement":"It is a known fact that of all numbers, 4 is the one that brings the worst luck. It is for this reason that when generating number sequences, we need to avoid patterns related to the number 4 as much as possible.<br /><br /> <br /><br /> You are given a long <b>n</b>. Count the number of positive integers that satisfy all of the following conditions:<br /><br /> <br /><br /> \n <ul>\n  <li>The number contains at most <b>n</b> digits.</li> \n  <li>The number does not contain four consecutive '4' digits. For example, 43444124 is allowed, but 45444474 is not.</li> \n  <li>The number of digits in the number is not a multiple of any of the integers greater than 10 that contain only '4' in their decimal representations (44, 444, 4444, 44444, ...).</li>\n </ul> <br /><br /> Return the total count of these numbers modulo 1000000007.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AvoidFour",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(long n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 9998",
+			"id":0,
+			"input":"4",
+			"note":"Of all the 9999 positive integers containing 1, 2, 3 or 4 digits, 4444 is the only one that contains four consecutive '4' digits.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 99980",
+			"id":0,
+			"input":"5",
+			"note":"The numbers to ignore are: 4444, 44440, 44441, 44442, ..., 44449, 14444, 24444, 34444, 54444, ... , 94444.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 576334228",
+			"id":0,
+			"input":"87",
+			"order":3
+		},
+		{
+			"expect":"Returns: 576334228",
+			"id":0,
+			"input":"88",
+			"note":"88 is a multiple of 44, so all numbers with 88 digits are ignored.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 547731225",
+			"id":0,
+			"input":"4128",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 40000000000 (4e10), inclusive."
+	}]
+}

@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7332&rd=10668",
+	"statement":"<p>Consider a tournament with <b>n</b> participants, numbered 1 to <b>n</b> in decreasing order by strength. The outcome of the tournament is a ranking of all the participants: participant p<sub>1</sub> in first place (ranking 1), participant p<sub>2</sub> in second place (ranking 2), ..., participant p<sub><b>n</b></sub> in last place (ranking <b>n</b>). It can be easily seen that p is a permutation.</p> <p>An outcome of the tournament is called <b>k</b>-fair if every participant gets a ranking that differs from his number by at most <b>k</b>. In other words, p is a permutation where the following condition holds for all i: |i-p<sub>i</sub>|&lt;=<b>k</b>.</p> <p>Given an int <b>n</b> and an int <b>k</b>, return the number of different possible <b>k</b>-fair outcomes for a <b>n</b>-player tournament. The return value must be a String with no extra leading zeroes.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FairTournament",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countPermutations",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String countPermutations(int n, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"3",
+			"note":"Rankings \"1,2,3\", \"2,1,3\" and \"1,3,2\" are 1-fair, while \"2,3,1\", \"3,1,2\" and \"3,2,1\" are not.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"k will be between 1 and 6, inclusive."
+		}
+	]
+}

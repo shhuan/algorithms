@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7670&rd=10743",
+	"statement":"<p> A race track is represented as a line segment. You are given its <b>length</b>, and a int[] <b>pos</b> containing the positions where judges may be located. Each element of <b>pos</b> is the distance from the starting point of the race track. The elements of <b>pos</b> are given in strictly increasing order (<b>pos</b>[i] &lt; <b>pos</b>[i+1]). </p> <p> You are given an int <b>judges</b>, the number of judges in the next competition. You must assign the judges to positions such that the distance between the two closest judges is as large as possible. Return a String containing exactly n characters, where n is the number of elements in <b>pos</b>. The i-th character should be '1' (one) if there is a judge assigned to the i-th position, and '0' (zero) if there is not. The judges are lazy and don't want to go far from the starting point, so if there are multiple optimal solutions, return the one that comes latest lexicographically. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RaceTrack",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"judgePositions",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String judgePositions(int length, int judges, int[] pos)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"11",
+			"note":"Another solution that maximizes the distance between the two closest judges is \"1101\", but it is not the lexicographically latest.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"11",
+			"note":"The distance between the two judges should be as large as possible.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"11",
+			"note":"The judges do not have any choice.",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"length will be between 1 and 1000000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"pos will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of pos will be greater than the previous, if it exists."
+		},
+		{
+			"order":4,
+			"val":"Each element of pos will be between 0 and length, inclusive."
+		},
+		{
+			"order":5,
+			"val":"judges will be between 2 and number of elements in pos, inclusive."
+		}
+	]
+}

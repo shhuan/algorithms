@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":220.92,
+			"constraints":[],
+			"correctRatio":72.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1251&rd=4455",
+			"name":"RemoveDigits",
+			"notes":[],
+			"submission":129
+		},
+		{
+			"avgPts":326.85,
+			"constraints":[],
+			"correctRatio":80.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1248&rd=4455",
+			"name":"Internet",
+			"notes":[],
+			"submission":113
+		},
+		{
+			"avgPts":512.43,
+			"constraints":[],
+			"correctRatio":71.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1279&rd=4455",
+			"name":"SlidingGame",
+			"notes":[],
+			"submission":7
+		}
+	],
+	"name":"Single Round Match 133 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4455"
+}

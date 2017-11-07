@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":211.07,
+			"constraints":[],
+			"correctRatio":87.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3055&rd=6533",
+			"name":"FractionSplit",
+			"notes":[],
+			"submission":171
+		},
+		{
+			"avgPts":336.17,
+			"constraints":[],
+			"correctRatio":58.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3998&rd=6533",
+			"name":"WeirdRooks",
+			"notes":[],
+			"submission":55
+		},
+		{
+			"avgPts":603.02,
+			"constraints":[],
+			"correctRatio":40.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3968&rd=6533",
+			"name":"HowUnsorted",
+			"notes":[],
+			"submission":64
+		}
+	],
+	"name":"Single Round Match 234 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6533"
+}

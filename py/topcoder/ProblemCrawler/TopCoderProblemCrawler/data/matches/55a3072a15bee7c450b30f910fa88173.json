@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":177.72,
+			"constraints":[],
+			"correctRatio":93.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10896&rd=14277",
+			"name":"JingleRingle",
+			"notes":[],
+			"submission":1076
+		},
+		{
+			"avgPts":287.7,
+			"constraints":[],
+			"correctRatio":58.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10911&rd=14277",
+			"name":"FuzzyLife",
+			"notes":[],
+			"submission":595
+		},
+		{
+			"avgPts":576.93,
+			"constraints":[],
+			"correctRatio":39.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10864&rd=14277",
+			"name":"HandlesSpelling",
+			"notes":[],
+			"submission":111
+		}
+	],
+	"name":"2010 TCO Algorithm > Qualification Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14277"
+}

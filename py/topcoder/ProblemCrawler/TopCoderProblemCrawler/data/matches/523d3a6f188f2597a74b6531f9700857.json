@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":246.46,
+			"constraints":[],
+			"correctRatio":84.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=939&rd=4355",
+			"name":"GameOfLife",
+			"notes":[],
+			"submission":63
+		},
+		{
+			"avgPts":391.54,
+			"constraints":[],
+			"correctRatio":54,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1011&rd=4355",
+			"name":"Socialize",
+			"notes":[],
+			"submission":50
+		},
+		{
+			"avgPts":419.13,
+			"constraints":[],
+			"correctRatio":14.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=924&rd=4355",
+			"name":"Symmetry",
+			"notes":[],
+			"submission":21
+		}
+	],
+	"name":"2002 TopCoder Inv > Round 4",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4355"
+}

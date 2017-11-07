@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=99&rd=3011",
+	"statement":"<pre>Class Name: Barricades\nMethod Name: minBarricadeWidth\nParameters: int,String[]\nReturns: int\n\nPolice have been warned that three million dollars of illegal drugs are being\nmoved from drug dealer Ed's warehouse to drug dealer Joe's warehouse.  A\nnetwork of two way roads connect Ed's warehouse to Joe's warehouse and the\npolice are going to barricade some of the roads so the truck carrying the drugs\ncannot get to Joe's.  Each road has a fixed width and the police want the sum\nof the widths of the barricades across all roads to be as small as possible.\n\nImplement a class Barricades that contains a method minBarricadeWidth.  The\nmethod takes an int and a String[] describing the road network and returns an\nint that is the minimal total barricade width such that there is no\nbarricadeless series of roads from Ed's to Joe's.\n\nThe int input, N, is the number of nodes in the road network between Ed's and\nJoe's.  The nodes are numbered from 0 to N-1.  Node 0 is Ed's warehouse and\nnode N-1 is Joe's house.  Each String[] element describes a road connecting two\nnodes.  The String[] elements are of the form (quotes for clarity) &quot;N1 N2 W&quot;\nwhere N1 and N2 are the two nodes the road connects and W is the width of the\nroad (which equals the length of a barricade across the road, if a barricade is\nput across the road).  The roads are two way.\n\nHere is the method signature:\npublic int minBarricadeWidth(int N,String[] roads);\n\nN is between 2 and 10, inclusive.\nroads has at most 15 elements.\nEach element is of the form &quot;N1 N2 W&quot; where N1 and N2 are non-negative integers\nless than N and W is a positive integer less than 100.\nNo two elements refer to the same two nodes.  That is both &quot;3 1 2&quot; and &quot;1 3 4&quot;\ncannot be in the String[].\nThere are no roads from a node to itself.\nTopCoder will check the validity of the input.\n\nNote:\n*If there is no way to get from Ed's to Joe's, police do not have to barricade\nany road and the method returns 0.\n\nExample:\n*If there are N=5 nodes and the roads are given in the ArrayList are:\n roads={&quot;0 1 5&quot;,&quot;0 2 2&quot;,&quot;0 3 3&quot;,&quot;1 2 1&quot;,&quot;2 3 1&quot;,&quot;2 4 10&quot;,&quot;3 4 2&quot;}\n\nThen barricading the roads between 0 &amp; 2 (width 2), 1 &amp; 2 (width 1), 2 &amp; 3\n(width 1), and 3 &amp; 4 (width 2) results in the smallest possible width of\nbarricades such that there is no barricadeless route from node 0 to node 4 and\nthe method returns the minimal width = 2+1+1+2 = 6.\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Barricades",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minBarricadeWidth",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minBarricadeWidth(int param0, String[] param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

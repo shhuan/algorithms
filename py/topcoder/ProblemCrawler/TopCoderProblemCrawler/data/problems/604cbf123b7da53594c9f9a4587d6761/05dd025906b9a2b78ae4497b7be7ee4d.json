@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1869&rd=4645",
+	"statement":"<p> Select two numbers between 1 and 9998, inclusive, which have the same exact group of non-zero digits, but are not the same number. For example, you could use 1234 and 4321, or 91 and 901. Now, subtract the smaller of the two numbers from the larger. Finally, pick one of the non-zero digits in the result, and remove the digit from the number. If the resulting number is less than 100, prepend enough zeros so that it has 3 digits. It turns out, that given the remaining 3 digits, one can always determine the digit removed. (See examples for clarification) </p> <p> You will be given a String <b>leftOver</b>, which contains the three digits left over after the above algorithm is run. You must return the digit which was removed. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"Although it may not be obvious, there is only one answer for each input."
+		},
+		{
+			"order":2,
+			"val":"You can only remove a non-zero digit when running the algorithm."
+		},
+		{
+			"order":3,
+			"val":"HINT: work backwards from the input."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NumberGuesser",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"guess",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int guess(String leftOver)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"\"087\"",
+			"note":"Take the number 4321 and subtract 1234, you get 3087. Remove the 3, and the resulting digits are 087.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"\"099\"",
+			"note":"One possible way to achieve this is by using the numbers 1000 and 1.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"\"191\"",
+			"note":"4525 - 2554 = 1971 also, you could get this with: 1900 - 109 = 1791 or 7900 - 709 = 7191 ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"\"689\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"leftOver will consist of exactly 3 characters."
+		},
+		{
+			"order":2,
+			"val":"Each character of leftOver will be a digit '0'-'9'."
+		},
+		{
+			"order":3,
+			"val":"The input will be possible to acheive by performing the algorithm stated above."
+		}
+	]
+}

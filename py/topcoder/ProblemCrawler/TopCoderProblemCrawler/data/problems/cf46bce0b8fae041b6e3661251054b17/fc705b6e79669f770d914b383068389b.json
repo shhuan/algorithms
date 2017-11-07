@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8048&rd=10775",
+	"statement":"We say that a local maximum of a <b>series</b> of numbers is a number in the series such that the previous and next numbers in the series are both strictly smaller than it. Similarly, a local minimum is a number such that the previous and next numbers are both strictly greater than it. A local extremum of a series is either a local maximum or minimum. Note that the first and last elements of a series cannot be local extrema.<br /><br /><br /><br /> You've been given a partial series of numbers with some numbers in the series missing. You know that the missing numbers are all from the set of <b>available</b> numbers (each one may be used at most once). Your task is to fill in the missing numbers of the series such that the number of local extrema is as small as possible. If there are many such series that satisfy this contraint, you should return the one with the smallest first entry. If there is still more than one solution, you should return the one with the smallest second entry, and so on if there are still several solutions.<br /><br /><br /><br /> The input will be described by a int[] <b>series</b>. Each element of <b>series</b> will be either -1, representing a missing number, or non-negative otherwise.",
+	"notes":[{
+		"order":1,
+		"val":"Each  number may be used at most one time."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PartialSeries",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getFirst",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getFirst(int[] series, int[] available)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2,3,4,5}",
+			"id":0,
+			"input":"{-1,-1,-1,-1,-1}",
+			"note":"We just fill in the numbers in increasing order to avoid any local extrema.",
+			"order":1
+		},
+		{
+			"expect":"{10}",
+			"id":0,
+			"input":"{1,2,-1,4,5}",
+			"note":"Since we only have one choice, 10 must be a local maximum while 4 is a local minimum.",
+			"order":2
+		},
+		{
+			"expect":"{1,2,4,7,8,8}",
+			"id":0,
+			"input":"{1,-1,6,2,4,-1,2,7,-1,-1}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{2,3,6}",
+			"id":0,
+			"input":"{8,-1,6,4,-1,-1,6}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{1, 1, 9}",
+			"id":0,
+			"input":"{-1, 5, -1}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"series will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"available will contain between 0 and 15 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of series will be between -1 and 10, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of available will be between 0 and 10, inclusive."
+		},
+		{
+			"order":5,
+			"val":"There will be at least as many available numbers as missing ones."
+		}
+	]
+}

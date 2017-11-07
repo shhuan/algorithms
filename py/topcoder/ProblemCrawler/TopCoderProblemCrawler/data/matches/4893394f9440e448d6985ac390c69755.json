@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.9,
+			"constraints":[],
+			"correctRatio":75.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8704&rd=13677",
+			"name":"JohnnysCannon",
+			"notes":[],
+			"submission":259
+		},
+		{
+			"avgPts":385.45,
+			"constraints":[],
+			"correctRatio":74.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8448&rd=13677",
+			"name":"GoodHours",
+			"notes":[],
+			"submission":192
+		},
+		{
+			"avgPts":666.77,
+			"constraints":[],
+			"correctRatio":68.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7995&rd=13677",
+			"name":"GameOfEight",
+			"notes":[],
+			"submission":101
+		}
+	],
+	"name":"2008 TopCoder China Tournament > Round 1E",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13677"
+}

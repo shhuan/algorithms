@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6482&rd=9992",
+	"statement":"<p>You are given a rectangular grid, each cell containing an integer (not necessarily positive) number, denoting its cost. Find the cheapest connected set of cells (possibly empty), and return its cost. The cost of the set of cells is defined as the sum of the costs of its cells. A set is <i>connected</i> if you can get from any cell of the set to any other cell of the set by moving between adjacent cells of the set. Two cells are <i>adjacent</i> if they share a side (so each non-border cell has four adjacent cells).</p> <p>The grid is given as a String[] <b>cells</b>, where each element contains a list of single-space separated integers. Each element of <b>cells</b> represents a row of the grid from left to right, and the rows are ordered from top to bottom.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CheapestIsland",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCost(String[] cells)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: -19",
+			"id":0,
+			"input":"{\"-10 1\", \"2 -10\"}",
+			"note":"To connect both -10's, we need to choose between 1 and 2, and 1 is obviously better.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"1 2 3\", \"4 5 6\", \"7 8 9\"}",
+			"note":"No need to take any cell here, as they are all positive.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -10",
+			"id":0,
+			"input":"{\"-5 100 -5\", \"-5 100 -5\"}",
+			"note":"Sometimes it's not good to take all the negative numbers.",
+			"order":3
+		},
+		{
+			"expect":"Returns: -11",
+			"id":0,
+			"input":"{\"-1 -1 1 -1 -1\", \"-1 -1 1 -1 -1\", \"-1 -1 1 -1 -1\", \"99 99 99 99 99\", \"-1 -1 -1 -1 -1\", \"-1 -1 -1 -1 -1\"} ",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cells will contain between 1 and 9 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of cells will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of cells will contain between 1 and 9 integers, inclusive, separated by single spaces."
+		},
+		{
+			"order":4,
+			"val":"All elements of cells will contain the same number of integers."
+		},
+		{
+			"order":5,
+			"val":"Each integer in cells will be between -1000 and 1000, inclusive, and contain no extra leading zeroes."
+		}
+	]
+}

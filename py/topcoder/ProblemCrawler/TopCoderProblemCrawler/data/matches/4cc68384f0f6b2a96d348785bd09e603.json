@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.7,
+			"constraints":[],
+			"correctRatio":58.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7249&rd=10658",
+			"name":"EncodedSum",
+			"notes":[],
+			"submission":399
+		},
+		{
+			"avgPts":289.89,
+			"constraints":[],
+			"correctRatio":78.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7244&rd=10658",
+			"name":"ExtendedHappyNumbers",
+			"notes":[],
+			"submission":175
+		},
+		{
+			"avgPts":673.86,
+			"constraints":[],
+			"correctRatio":68.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7246&rd=10658",
+			"name":"Terrorists",
+			"notes":[],
+			"submission":149
+		}
+	],
+	"name":"Single Round Match 334 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10658"
+}

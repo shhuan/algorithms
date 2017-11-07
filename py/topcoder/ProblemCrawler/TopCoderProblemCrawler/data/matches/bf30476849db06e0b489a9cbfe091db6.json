@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":195.88,
+			"constraints":[],
+			"correctRatio":90.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4516&rd=10897",
+			"name":"Popularity",
+			"notes":[],
+			"submission":465
+		},
+		{
+			"avgPts":277.53,
+			"constraints":[],
+			"correctRatio":66.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7811&rd=10897",
+			"name":"MutateTree",
+			"notes":[],
+			"submission":266
+		},
+		{
+			"avgPts":644.16,
+			"constraints":[],
+			"correctRatio":20.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7846&rd=10897",
+			"name":"MarbleTop",
+			"notes":[],
+			"submission":102
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Online Round 1B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10897"
+}

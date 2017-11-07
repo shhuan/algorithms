@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7741&rd=10671",
+	"statement":"In aviation, a &quot;near miss&quot; occurs if the distance between two aircraft at some point in time is less than or equal to some threshold distance <b>R</b>. At a moment in time, the positions and velocities of two aircraft are known exactly. Assuming that each aircraft continues to fly with constant speed and direction, you need to work out if the aircraft will undergo a near miss now or at some point in the future. <br /><br /><br /><br /> You will be given the threshold distance <b>R</b> and the positions and velocities of the aircraft in 4 int[]s: <b>p1</b>, <b>v1</b>, <b>p2</b> and <b>v2</b>. The position of the first aircraft in 3-D cartesian space is given by (<b>p1</b>[0] , <b>p1</b>[1] , <b>p1</b>[2]) and its velocity vector by (<b>v1</b>[0] , <b>v1</b>[1] , <b>v1</b>[2]) and similarly the second aircraft's position and velocity are given by (<b>p2</b>[0] , <b>p2</b>[1] , <b>p2</b>[2]) and (<b>v2</b>[0] , <b>v2</b>[1] , <b>v2</b>[2]). So, if an aircraft's initial position is the vector <b>p</b> and its velocity vector is <b>v</b>, the position of this aircraft at some future time t will be <b>p</b> + <b>v</b> * t. You should return a String containing &quot;YES&quot; if the aircraft will undergo a near miss now or in the future or &quot;NO&quot; if they won't (quotes for clarity).",
+	"notes":[{
+		"order":1,
+		"val":"The distance between two points  and  is given by ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Aircraft",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"nearMiss",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String nearMiss(int[] p1, int[] v1, int[] p2, int[] v2, int R)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{25,1,0}",
+			"id":0,
+			"input":"{15,50,5}",
+			"note":"At time 4, the first aircraft will be at position {115,54,5} and the second at {121,62,5}, which is the first point in time at which they are exactly 10 distance units apart.",
+			"order":1
+		},
+		{
+			"expect":"{2,2,0}",
+			"id":0,
+			"input":"{0,0,0}",
+			"note":"At time 2.25, aircraft 1 will be at {4.5, 4.5, 0} and aircraft 2 at {4.5, 4.5, 5}, exactly a distance of 5 units apart.",
+			"order":2
+		},
+		{
+			"expect":"{-2,2,0}",
+			"id":0,
+			"input":"{0,0,0}",
+			"note":"The aircraft are flying away from each other here, so the distance always increases with time.",
+			"order":3
+		},
+		{
+			"expect":"{1,1,-2}",
+			"id":0,
+			"input":"{-2838,-7940,-2936}",
+			"note":"The closest approach of the aircraft occurs at time 12,158",
+			"order":4
+		},
+		{
+			"expect":"{-89,-33,62}",
+			"id":0,
+			"input":"{-8509,9560,345}",
+			"note":"A near miss occurs between times 111 and 112",
+			"order":5
+		},
+		{
+			"expect":"{-59,-41,-14}",
+			"id":0,
+			"input":"{-7163,-371,-2459}",
+			"note":"The aircraft almost have a near miss between times 15 and 16, but stay just outside the threshold distance.",
+			"order":6
+		},
+		{
+			"expect":"{-12,19,-24}",
+			"id":0,
+			"input":"{1774,-4491,7810}",
+			"note":"The aircraft are here flying with identical velocities, so the distance between them never changes. The distance at time 0 is lower than the threshold, so a near miss is already underway.",
+			"order":7
+		},
+		{
+			"expect":"{-70,71,32}",
+			"id":0,
+			"input":"{3731,8537,5661}",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"p1, v1, p2 and v2 will contain exactly 3 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of p1, v1, p2 and v2 will be between -10000 and 10000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"R will be between 0 and 10000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,104 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8603&rd=12019",
+	"statement":"<p> <i>NOTE: This problem contains images that may not be displayed properly if viewed outside the contest applet.</i> </p> <p> The Cartesian plane is covered with snakes. You will be given a rectangular portion of the plane, divided into a grid of squares. Each square will either contain a segment of a snake or a barrier. </p> <p> Each snake occupies a chain of adjacent squares, connected horizontally and/or vertically. Snakes are at least 2 segments long (one segment per square) and cannot overlap each other or themselves. Each snake must meet at least one of the following two conditions (see the figures below for examples): </p> \n <ol> \n  <li>Both endpoints must be in squares on the edge of the rectangle.</li> \n  <li>Both endpoints must be horizontally or vertically adjacent to each other, and the snake is at least 4 segments long (so the snake forms a loop).</li> \n </ol> <p> The portion of the plane will be given as a String <b>grid</b>, where each character represents one square. A '#' represents a barrier and a '.' (period) represents a square that contains a segment of a snake. Fill the grid with snakes so that all of the non-barrier squares are filled. Do this in such a way that minimizes n, the number of snakes whose endpoints are not adjacent (and therefore, must be on the edge of the grid). Return n, or return -1 if there is no way to fill every non-barrier square. </p> <p> For example, the grid defined by the following input: </p> <pre>\n\n    { &quot;......&quot;,\n      &quot;.#.##.&quot;,\n      &quot;.#....&quot;,\n      &quot;....#.&quot;,\n      &quot;.##.#.&quot;,\n      &quot;......&quot; }\n</pre> <p> can be filled with snakes in several ways and a few are shown in the figures below: </p> <br /><br /> \n <center> \n  <img src=\"http://www.topcoder.com/contest/problem/SnakesOnAPlane/snakes1.gif\" /> \n  <img src=\"http://www.topcoder.com/contest/problem/SnakesOnAPlane/black10.gif\" /> \n  <img src=\"http://www.topcoder.com/contest/problem/SnakesOnAPlane/snakes2.gif\" /> \n  <img src=\"http://www.topcoder.com/contest/problem/SnakesOnAPlane/black10.gif\" /> \n  <img src=\"http://www.topcoder.com/contest/problem/SnakesOnAPlane/snakes0.gif\" /> \n </center> <p> In each figure, there are 2 snakes that do not form a loop. There is no way to fill the grid with only 1, so 2 is the correct answer for this input. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SnakesOnAPlane",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"snakes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int snakes(String[] grid)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{ \"......\", \".#.##.\", \".#....\", \"....#.\", \".##.#.\", \"......\" }",
+			"note":"This is the example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"###.###\", \"###.###\", \".......\", \"###.###\", \"###.###\" }",
+			"note":"This grid cannot be filled without two snakes overlapping.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{ \"#.....##\", \"...#....\", \"........\", \"..#.#.#.\", \"......#.\", \"...#..#.\", \"#.......\" } ",
+			"note":"This grid can be filled by a single snake, as shown in this figure:  ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{ \"###########\", \"#......#...\", \"#.####.#...\", \"#.#..#.####\", \"#.#..#.####\", \"#.####.#..#\", \"#......#..#\", \"###########\" }",
+			"note":"This grid can be completely filled with 4 snakes that form a loop. You do not need to count these, so the answer is 0.",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"####.######\", \"#.........#\", \"..........#\", \"#..........\", \"#.........#\", \"#####.#####\" } ",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"##\", \"#.\" } ",
+			"note":"Snakes must be at least 2 segments long.",
+			"order":6
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{ \".\", \".\" }",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{ \"#\" }",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain between 1 and 12 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of grid will contain the same number of characters, between 1 and 12, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of grid will contain only the characters '#' and '.' (period)."
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8256&rd=10956",
+	"statement":"<p> You have n cards. Each card has some integer value, and some letter written on it. You also have n slots in a row. Each slot has some required value. </p> <p> You must place the cards in the slots such that each slot contains a card with a value greater than or equal to the required value of that slot. You must order the cards such that the string formed by reading the letters on the cards from left to right comes as early as possible lexicographically while not violating the first rule. </p> <p> You are given a int[] <b>values</b> and a String <b>letters</b>, the i-th elements of which are the value and letter, respectively, of the i-th card. You are also given a int[] <b>required</b>, the i-th element of which is the required value of the i-th slot. The slots are ordered from left to right. Place the cards into the slots as described above and return the resulting string. If there is no valid way to fill the slots, return an empty string instead. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CardsAndSlots",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"firstValid",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String firstValid(int[] values, String letters, int[] required)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"ABC\"",
+			"id":0,
+			"input":"{1, 2, 3}",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"\"BBBAA\"",
+			"id":0,
+			"input":"{1, 2, 3, 4, 5}",
+			"note":"Note that there can be equal letters on different cards.",
+			"order":2
+		},
+		{
+			"expect":"\"AA\"",
+			"id":0,
+			"input":"{1, 1}",
+			"note":"No card fits any slot.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"values will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of values will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"letters will contain exactly n characters, where n is the number of elements in values."
+		},
+		{
+			"order":4,
+			"val":"letters will contain only uppercase letters ('A'-'Z')."
+		},
+		{
+			"order":5,
+			"val":"required will contain the same number of elements as values."
+		},
+		{
+			"order":6,
+			"val":"Each element of required will be between 1 and 1000, inclusive."
+		}
+	]
+}

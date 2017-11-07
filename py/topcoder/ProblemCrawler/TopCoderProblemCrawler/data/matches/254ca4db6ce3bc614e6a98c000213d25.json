@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.85,
+			"constraints":[],
+			"correctRatio":88.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10451&rd=14174",
+			"name":"MazeMaker",
+			"notes":[],
+			"submission":619
+		},
+		{
+			"avgPts":296.07,
+			"constraints":[],
+			"correctRatio":65.54,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10412&rd=14174",
+			"name":"PlanarGraphShop",
+			"notes":[],
+			"submission":534
+		},
+		{
+			"avgPts":502.19,
+			"constraints":[],
+			"correctRatio":25.35,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10420&rd=14174",
+			"name":"TheAlmostLuckyNumbers",
+			"notes":[],
+			"submission":71
+		}
+	],
+	"name":"Single Round Match 453.5 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14174"
+}

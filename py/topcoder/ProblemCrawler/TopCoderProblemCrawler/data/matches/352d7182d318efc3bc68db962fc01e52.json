@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":219.68,
+			"constraints":[],
+			"correctRatio":92.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7544&rd=10751",
+			"name":"SortMaterials",
+			"notes":[],
+			"submission":288
+		},
+		{
+			"avgPts":297.23,
+			"constraints":[],
+			"correctRatio":49.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7622&rd=10751",
+			"name":"Candles",
+			"notes":[],
+			"submission":205
+		},
+		{
+			"avgPts":594.97,
+			"constraints":[],
+			"correctRatio":36.63,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7335&rd=10751",
+			"name":"VotingBloc",
+			"notes":[],
+			"submission":101
+		}
+	],
+	"name":"2007 TopCoder Open > Online Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10751"
+}

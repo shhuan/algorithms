@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":209.17,
+			"constraints":[],
+			"correctRatio":78.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12975&rd=15839",
+			"name":"EllysNumberGuessing",
+			"notes":[],
+			"submission":509
+		},
+		{
+			"avgPts":263.03,
+			"constraints":[],
+			"correctRatio":59.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11036&rd=15839",
+			"name":"EllysPairing",
+			"notes":[],
+			"submission":198
+		},
+		{
+			"avgPts":498.58,
+			"constraints":[],
+			"correctRatio":15.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12979&rd=15839",
+			"name":"Subcube",
+			"notes":[],
+			"submission":13
+		}
+	],
+	"name":"Single Round Match 606 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15839"
+}

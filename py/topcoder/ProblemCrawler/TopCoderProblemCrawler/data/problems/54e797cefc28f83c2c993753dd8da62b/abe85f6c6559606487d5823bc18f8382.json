@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11360&rd=14435",
+	"statement":"<i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet.</i> <br /><br /> <br /><br /> You are playing a game titled Slime Rancher. You will be training slimes in this game. <br /><br /> <br /><br /> You have three slimes-in-training. Associated with each slime are N different attributes, each represented by a positive integer. The attributes of the slimes will be given in String[]s <b>first_slime</b>, <b>second_slime</b>, and <b>third_slime</b>. The concatenation of elements of each of these String[]s will be a space-separated list of N positive integers representing the attributes for the respective slime given in order from first to last attribute. <br /><br /> <br /><br /> You will train these slimes, and after the training is complete, each of the slimes' attributes will either increase by some integral value or stay the same. The weight of the training is defined as the sum of the differences between the final and initial values of all the attributes for all three slimes. <br /><br /> <br /><br /> These slimes are going to be combined to make an even stronger slime. Three slimes produce the strongest result when combined if there exists a way such that when their final attributes are sorted in ascending order of values (identical valued attributes may be permuted to your liking), the attribute types match. That is, the i-th attribute in the sorted attributes for the first, second, and third slime must be the same attribute type (their values need not be the same, only their relative ordering). <br /><br /> <br /><br /> You are a master slime breeder and you're able to obtain any possible final values for the slimes' attributes. What is the minimum possible weight of the training that gives the strongest result?",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SlimeXSlimeRancher",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"train",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long train(String[] first_slime, String[] second_slime, String[] third_slime)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"1 3 5\"}",
+			"id":0,
+			"input":"{\"1 6 2\"}",
+			"note":"We will use the following legends:    Initially, the slimes' attributes are as follows.    Train the slimes as follows.    The attributes can then be sorted as follows.  The attributes match for all three slimes in the ordering above. Since the attributes can be sorted such that the attributes match for all the slimes, the slime produced by combining them is the strongest.",
+			"order":1
+		},
+		{
+			"expect":"{\"6 5 4\"}",
+			"id":0,
+			"input":"{\"3 2 1\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{\"12 3 \", \"4\"}",
+			"id":0,
+			"input":"{\"1 2\", \"3 4\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"1000000000 1000000000 1000000000 1 1 1\"}",
+			"id":0,
+			"input":"{\"1 1 1 1000000000 1000000000 1000000000\"}",
+			"note":"Watch out for integer overflow.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"first_slime, second_slime, and third_slime will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in first_slime, second_slime, and third_slime will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"first_slime, second_slime, and third_slime will each be formatted as described in the problem statement without leading or trailing spaces."
+		},
+		{
+			"order":4,
+			"val":"Each of first_slime, second_slime, and third_slime will contain the same number of integers."
+		},
+		{
+			"order":5,
+			"val":"All the integers in first_slime, second_slime, and third_slime will be between 1 and 1,000,000,000, inclusive, given without leading zeroes."
+		},
+		{
+			"order":6,
+			"val":"The number of integers in first_slime will be between 1 and 150, inclusive."
+		}
+	]
+}

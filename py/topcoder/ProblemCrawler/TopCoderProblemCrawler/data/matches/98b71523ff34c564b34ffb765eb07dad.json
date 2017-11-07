@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":160.01,
+			"constraints":[],
+			"correctRatio":25.76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10356&rd=13803",
+			"name":"UnluckyIntervals",
+			"notes":[],
+			"submission":427
+		},
+		{
+			"avgPts":251.04,
+			"constraints":[],
+			"correctRatio":28.81,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10355&rd=13803",
+			"name":"EndlessStringMachine",
+			"notes":[],
+			"submission":118
+		},
+		{
+			"avgPts":503.5,
+			"constraints":[],
+			"correctRatio":29.63,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10027&rd=13803",
+			"name":"FeudaliasWar",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"Single Round Match 438 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13803"
+}

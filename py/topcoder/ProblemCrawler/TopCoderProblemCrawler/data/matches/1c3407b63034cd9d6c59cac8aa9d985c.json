@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":240.4,
+			"constraints":[],
+			"correctRatio":94.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=332&rd=4031",
+			"name":"Sums",
+			"notes":[],
+			"submission":73
+		},
+		{
+			"avgPts":365.08,
+			"constraints":[],
+			"correctRatio":86.96,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=353&rd=4031",
+			"name":"Change",
+			"notes":[],
+			"submission":69
+		},
+		{
+			"avgPts":505.54,
+			"constraints":[],
+			"correctRatio":34.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=354&rd=4031",
+			"name":"Script",
+			"notes":[],
+			"submission":66
+		}
+	],
+	"name":"Single Round Match 60 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4031"
+}

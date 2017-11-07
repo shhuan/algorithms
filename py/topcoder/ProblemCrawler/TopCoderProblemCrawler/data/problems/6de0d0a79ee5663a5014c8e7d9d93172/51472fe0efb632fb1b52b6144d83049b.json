@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8248&rd=10956",
+	"statement":"<p> Scientists have discovered a text in some ancient language. The text is written using two types of hieroglyphs. We will denote the hieroglyphs of the first type with uppercase letters ('A'-'Z'), and the hieroglyphs of the second type with lowercase letters ('a'-'z'). The types of hieroglyphs in the text alternate, meaning that every pair of adjacent hieroglyphs have different types. For example, &quot;AaAbBaAcCaAa&quot; is a valid example of the text, but &quot;ACbD&quot; is not. </p> <p> Scientists have a hypothesis that the text they have found is a sequence of words. Each word in this language consists of a pair of hieroglyphs of different types. For example, &quot;Aa&quot;, &quot;bB&quot;, &quot;bC&quot; are valid examples of words. </p> <p> Words in text can overlap, so, for example, &quot;AaAbB&quot; can be viewed as the sequence of words (&quot;Aa&quot;, &quot;aA&quot;, &quot;bB&quot;). </p> <p> Now scientists want to know the minimal possible number of different words the text can contain. For example, the text &quot;AaAbBaAcCaAa&quot; can be interpreted as the sequence of words (&quot;Aa&quot;, &quot;aA&quot;, &quot;bB&quot;, &quot;aA&quot;, &quot;cC&quot;, &quot;aA&quot;, &quot;Aa&quot;), which uses only four different words: &quot;Aa&quot;, &quot;aA&quot;, &quot;bB&quot;, &quot;cC&quot;. </p> <p> You are given a String[] <b>t</b>. The text is the concatenation of all the elements of <b>t</b>. Return the minimal number of different words that the text can contain. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AncientLanguage",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minWords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minWords(String[] t)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"AaAbBaAcCaAa\"}",
+			"note":"An example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"AbAb\"}",
+			"note":"The first letter in the text can be uppercase.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"aBaB\"}",
+			"note":"The first letter in the text can be lowercase.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"AaB\", \"b\"}",
+			"note":"You must concatenate all elements of  before processing.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"t will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of t will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of t will contain only letters ('A'-'Z', 'a'-'z')."
+		},
+		{
+			"order":4,
+			"val":"The total number of characters in t will be between 2 and 2500, inclusive."
+		},
+		{
+			"order":5,
+			"val":"In the concatenation of all elements of t, letters will alternate between uppercase and lowercase."
+		}
+	]
+}

@@ -1,0 +1,110 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6830&rd=10136",
+	"statement":"<p> Before the final round of the TCCC, audience members head to the buffet for lunch. The buffet line contains a number of food items, in a fixed order. Those indulging line up at the buffet, each intending to sample a subset of the items available. </p> <p> It takes each person exactly 10 seconds to help themselves to a food item. Every 10 seconds, each person moves up as far as they can (without passing by any food they want, of course!). This movement takes no time. The first person in line moves immediately to each item he wants, in order, spending 10 seconds at each item. Depending on which items the rest of the people want, they may be able to move up to each item immediately, but also may have to spend some time waiting for the person they are following. </p> <p> Each person is always either waiting in line before reaching the first food item, standing in front of exactly one food item, or has passed the last food item and is looking for a place to sit. Two people may not stand in front of the same food item at the same time. Also, people always remain in the order in which they lined up, and they never move backward in line. No one ever passes another person in line -- even after they have taken all the food they want, they still exit the buffet in line. People can only take a food item that they are standing directly in front of. Anyone who cannot reach the next food item they want (because they are waiting for the person in front of them) will advance as far as possible in line, to avoid blocking the people behind them unnecessarily. </p> <p> Anxious to get back to the TCCC event, the people wish to get the group through the buffet line as quickly as possible. Given the list of food items in the buffet and the items that each person wants, return the optimal order in which the people should line up at the buffet so that everyone can get all the food they desire in the least total amount of time. </p> <p> The food items available at the buffet will be given as a String <b>food</b>. Each item in <b>food</b> will contain only letters ('a'-'z', 'A'-'Z'), and there will be exactly one space between each pair of adjacent items. Each item in <b>food</b> will be unique. The order of items in <b>food</b> is the order they appear in the buffet line, with the first item in <b>food</b> being the first item available. The items each person wants are given in a String[] <b>cravings</b>. There will be one element in <b>cravings</b> for each person. Each element in <b>cravings</b> will be a list of food items found in <b>food</b>, with exactly one space between each food items. Within each element of <b>cravings</b>, each food item will be unique. </p> <p> Return a int[] containing the optimal order, where each element is the 0-based index of a person in <b>cravings</b>, and elements are ordered from first to last in line. If there are multiple solutions, return the one that comes first lexicographically. A int[] a1 comes before a int[] a2 lexicographically if, at the first element at which they differ, a1 contains the smaller value. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BuffetLine",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"order",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] order(String food, String[] cravings)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ \"beans\", \"applesauce\", \"dates\" }",
+			"id":0,
+			"input":"\"applesauce beans carrots dates eggplant\"",
+			"note":"All three people can get through the line in 10 seconds if the person who wants dates goes first, followed by the person who wants beans, and then the person who wants applesauce. Any other order would require 20 or 30 seconds.",
+			"order":1
+		},
+		{
+			"expect":"{ \"beans\", \"applesauce\", \"beans\", \"dates\" }",
+			"id":0,
+			"input":"\"applesauce beans carrots dates eggplant\"",
+			"note":"In this example there are two people who want beans. Since only one person can take any given food item at once, it will take at least 20 seconds for all 4 people to get through the line. There are several orders that get them through in 20 seconds, and { 0, 1, 3, 2 } is selected according to the tiebreaking rules.",
+			"order":2
+		},
+		{
+			"expect":"{ \"\" }",
+			"id":0,
+			"input":"\"bread water\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{ \"A C E D\", \"A B D E F\", \"B C A D\", \"B C F D E\", \"B D C F\" }",
+			"id":0,
+			"input":"\"A B C D E F\"",
+			"note":" ",
+			"order":4
+		},
+		{
+			"expect":"{ \"A\", \"A\", \"A\", \"A\", \"B\", \"B\", \"B\", \"B\", \"C\", \"C\", \"C\", \"C\" }",
+			"id":0,
+			"input":"\"A B C\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{ \"D C A H\", \"H B F G A\", \"B F G D\", \"F C E B A G\", \"D H B C\", \"B A D F G\", \"E B C F D\", \"A D H E B G\", \"A H B G E C\", \"F D A B C\", \"B D A G C\", \"A G E C F\" } ",
+			"id":0,
+			"input":"\"A G E F D B H C\"",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"food will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"food will be formatted as described in the problem statement and contain between 1 and 8 items, inclusive."
+		},
+		{
+			"order":3,
+			"val":"food will not contain any duplicate items."
+		},
+		{
+			"order":4,
+			"val":"cravings will contain between 1 and 12 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of cravings will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of cravings will be formatted as described in the problem statement."
+		},
+		{
+			"order":7,
+			"val":"Each word in each element of cravings will be an item from food."
+		},
+		{
+			"order":8,
+			"val":"Each element of cravings will not contain any duplicate items."
+		}
+	]
+}

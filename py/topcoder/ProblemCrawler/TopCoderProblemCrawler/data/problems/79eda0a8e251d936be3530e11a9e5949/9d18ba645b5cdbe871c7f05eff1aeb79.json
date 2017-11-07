@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11714&rd=14551",
+	"statement":"Mr. Dengklek is going to compose a long binary string called <i>message</i>. He is given a String[] <b>pieces</b>. He will construct the message as a concatenation of exactly <b>K</b> strings called <i>parts</i>. Each part will be an element of <b>pieces</b> chosen uniformly at random. Each element of <b>pieces</b> can be used multiple times. Each part is generated independently of the others. For example, if <b>pieces</b> = {&quot;0&quot;, &quot;10&quot;, &quot;110&quot;} and <b>K</b> = 5, then one possible message he can construct is &quot;01100100&quot;. <br /><br /><br /><br /> Mr. Dengklek has a string he would like to see in the message. You are given this string as a String[] <b>goodSubstring</b>. Concatenate all elements of <b>goodSubstring</b> to get the string he would like to see. The score is the number of (possibly overlapping) occurrences of <b>goodSubstring</b> as a contiguous substring within the message. <br /><br /><br /><br /> For example, if <b>goodSubstring</b> = {&quot;0&quot;, &quot;1&quot;}, the string he would like to see is &quot;01&quot; and the score for the example message from the previous paragraph is 2. <br /><br /><br /><br /> You are given the String[] <b>pieces</b>, the String[] <b>goodSubstring</b>, and the long <b>K</b>. Return the expected value of the score of the message that Mr. Dengklek will compose. ",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to within a relative or absolute error of 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DengklekMessage",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theExpected",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double theExpected(String[] pieces, String[] goodSubstring, long K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"00\"}",
+			"id":0,
+			"input":"{\"0\"}",
+			"note":"He will compose the message \"0000000000\". It contains 9 occurrences of \"00\". ",
+			"order":1
+		},
+		{
+			"expect":"{\"00\"}",
+			"id":0,
+			"input":"{\"0\"}",
+			"note":"This time the message is \"0\" and it scores nothing. ",
+			"order":2
+		},
+		{
+			"expect":"{\"00\"}",
+			"id":0,
+			"input":"{\"0\", \"1\"}",
+			"note":"There are 8 possible messages that he can compose, each with the same probability: \"000\", \"001\", \"010\", \"011\", \"100\", \"101\", \"110\", \"111\". Of them, \"000\" scores 2, each of \"001\" and \"100\" scores 1 and other messages score nothing. The expected score is (2 + 1 + 1) / 8 = 0.5. ",
+			"order":3
+		},
+		{
+			"expect":"{\"0\", \"1\"}",
+			"id":0,
+			"input":"{\"0\", \"10\", \"110\"}",
+			"note":"The example from the problem statement.",
+			"order":4
+		},
+		{
+			"expect":"{\"000101000101010100\"}",
+			"id":0,
+			"input":"{\"0\", \"10\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pieces will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of pieces will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in pieces will be '0' (zero) or '1' (one)."
+		},
+		{
+			"order":4,
+			"val":"pieces will not contain duplicate elements."
+		},
+		{
+			"order":5,
+			"val":"goodSubstring will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of goodSubstring will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each character in goodSubstring will be '0' (zero) or '1' (one)."
+		},
+		{
+			"order":8,
+			"val":"K will be between 1 and 1,000,000,000,000 (10^12), inclusive."
+		}
+	]
+}

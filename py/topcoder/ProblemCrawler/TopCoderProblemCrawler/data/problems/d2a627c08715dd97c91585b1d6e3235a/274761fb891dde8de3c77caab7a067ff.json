@@ -1,0 +1,113 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4660&rd=7995",
+	"statement":"<p> Yesterday I was cleaning my house and I made a startling discovery. In the corner of the living room stood a nice decorated Christmas tree. The next Christmas is still too far away, thus I decided to remove all the decorations, put them into cardboard boxes and store them in the garage. However, the garage is almost full of other stuff. Therefore I'd like to arrange the boxes to form a tall stack, one atop another. </p> <p> This may not be possible. Christmas tree decorations are fragile and the boxes that contain them aren't exactly made of steel. I weighed each of the boxes and for each of them I estimated the maximum weight that can be placed on the top of the box without it collapsing. In the following text we will use the term <i>carrying capacity of a box</i> when referring to this maximum weight. </p> <p> You will be given this information in two String[]s: <b>weight</b> and <b>canCarry</b>. Each element of <b>weight</b> will contain the weights of some of the boxes. Similarly, each element of <b>canCarry</b> will contain the carrying capacities of some of the boxes. The carrying capacities of the boxes will be given in the same order as their weights. </p> <p> Your task is to find and return the largest N such that N of the boxes can be selected and placed one atop another in some order such that none of the boxes collapse. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StackingBoxes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"highestStack",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int highestStack(String[] weight, String[] canCarry)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"11\", \"100 10\"}",
+			"id":0,
+			"input":"{\"10 20 30\"}",
+			"note":"Here we are given 3 boxes. The first one has weight 10 and can carry 11, the second one has weight 20 and can carry 100, the third one has weight 30 and can carry 10. It is possible to create a stack using all three of them: the first box goes on the top, the third one below and the second one on the bottom.",
+			"order":1
+		},
+		{
+			"expect":"{\"11\", \"100 10\"}",
+			"id":0,
+			"input":"{\"11 20 30\"}",
+			"note":"The first box is now too heavy, so the previous arrangement doesn't work anymore.",
+			"order":2
+		},
+		{
+			"expect":"{\"11\", \"100 10\"}",
+			"id":0,
+			"input":"{\"10\", \"20\", \"91\"}",
+			"note":"Again, the original arrangement doesn't work anymore. This time boxes 1 and 3 together are too heavy -- box 2 won't be able to carry both of them.",
+			"order":3
+		},
+		{
+			"expect":"{\"1000000000\"}",
+			"id":0,
+			"input":"{\"100000\"}",
+			"note":"You can always use at least one box, as it doesn't have to carry anything.",
+			"order":4
+		},
+		{
+			"expect":"{\"90\", \"91 92 93\"}",
+			"id":0,
+			"input":"{\"100 100\", \"1000 100\"}",
+			"note":"Each of the boxes is too heavy to be placed on any other box.",
+			"order":5
+		},
+		{
+			"expect":"{\"1000 20 150 700 10\"}",
+			"id":0,
+			"input":"{\"200 200 600 700 400\"}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"weight contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"canCarry contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of weight and canCarry contains between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of weight is of the form &quot;NUMBER NUMBER ... NUMBER&quot;."
+		},
+		{
+			"order":5,
+			"val":"Each element of canCarry is of the form &quot;NUMBER NUMBER ... NUMBER&quot;."
+		},
+		{
+			"order":6,
+			"val":"Each NUMBER in weight is an integer between 1 and 100,000, inclusive"
+		},
+		{
+			"order":7,
+			"val":"Each NUMBER in canCarry is an integer between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":8,
+			"val":"All NUMBERs in weight and canCarry will contain no leading zeroes."
+		},
+		{
+			"order":9,
+			"val":"weight and canCarry contain the same total count of NUMBERs."
+		}
+	]
+}

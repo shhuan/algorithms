@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1748&rd=4580",
+	"statement":"<p> Balanced binary search trees are among the most studied data structures in computer science. However, implementing them can be rather tricky. Most designs of balanced binary search trees are based on the same four basic transformations--left single rotations, right single rotations, left double rotations, and right double rotations--but differ in exactly when and where these transformations are applied. </p> <p> <i>Red-black trees</i> are one of the most popular kinds of balanced binary search trees. In a red-black tree, every node is colored either red or black, and no red node is allowed to have a red parent. In addition, every path from the root to a leaf contains the same number of black nodes. Most books on data structures contain a description of how to maintain the red-black properties, based on the usual four rotations. In this problem, we will consider a simpler scheme for maintaining red-black trees, based on a single transformation, called a <i>twist</i>. </p> <p> Inserting a new key into a red-black tree proceeds in two phases: a search phase followed by a rebalancing phase. In the search phase, you start at the root and walk down the tree, going left when the new key is smaller than the key at the current node and going right when the new key is larger than the key at the current node. (You may assume the new key will not be equal to the key at the current node.) When the search reaches the bottom of the tree, the new key is added as a new child of the last node in the search path, on the left or right, as appropriate. The new node is always a leaf and is always colored <i>red</i>. </p> <p> If the new node's parent is also red, then we now have a violation of the rule that no red node may have a red parent. The job of the rebalancing phase is to detect such situations, and to correct them using a transformation called a <i>twist</i>. A twist involves the red node, its red parent, and its black grandparent. There are four possible configurations for these three nodes, shown below: </p> <pre>\n     (Blk) z         (Blk) z               x (Blk)         x (Blk)\n          / \\             / \\             / \\             / \\\n   (Red) y   T4    (Red) x   T4         T1   z (Red)    T1   y (Red)\n        / \\             / \\                 / \\             / \\\n (Red) x   T3         T1   y (Red)   (Red) y   T4         T2   z (Red)\n      / \\                 / \\             / \\                 / \\\n    T1   T2             T2   T3         T2   T3             T3   T4\n</pre> where <tt>T1</tt>, <tt>T2</tt>, <tt>T3</tt>, and <tt>T4</tt> are subtrees (possibly empty). All four configurations are rewritten to exactly the same shape: <pre>\n                             (Red) y\n                                  / \\\n                                 /   \\\n                          (Blk) x     z (Blk)\n                               / \\   / \\\n                              T1 T2 T3 T4  \n</pre> After the twist, <tt>y</tt>'s parent may be red, so the process continues until there are no more positions where a twist can be applied. Note that there will never be more than one red node with a red parent at the same time. <p> There is one last case to worry about. It is possible to have a red node with a red parent, but with no grandparent because the parent is the root. A twist cannot be applied without the grandparent, so to protect against this case, we color the root black at the end of every insert. </p> <p> Given a sequence of numbers to be inserted one at a time into an initially empty red-black tree, your task is to determine the total number of twists that occur during the inserts. </p> <p> As an example, consider the steps involved in inserting the numbers {1,2,3}. Initially the tree is empty, so when we insert the 1 node, it becomes the new root. The new node starts out red, but, because it is the root, it is recolored black at the end of the insert. The tree now looks like </p> <pre>\n            1 (Blk)\n</pre> When we insert the 2 node, it goes on the right. The new node is colored red. <pre>\n            1 (Blk)\n             \\\n              2 (Red)\n</pre> When we insert the 3 node, it again goes on the right and is colored red. <pre>\n            1 (Blk)\n             \\\n              2 (Red)\n               \\\n                3 (Red)\n</pre> The new node starts out red, but it has a red parent, so a twist is necessary. After the twist, the tree looks like <pre>\n            2 (Red)\n           / \\\n    (Blk) 1   3 (Blk)\n</pre> However, the root is recolored black at the end of every insert, so the final tree is <pre>\n            2 (Blk)\n           / \\\n    (Blk) 1   3 (Blk)\n</pre> Altogether, this series of inserts requires 1 twist, so your method should return 1.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RedBlack",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numTwists",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numTwists(int[] keys)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{ 1,2,3 }",
+			"note":"The example above.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{ 1,2,3,4,5,6,7 }",
+			"note":"One twist happens when we insert the 3, and another happens when we insert the 5, leaving  When we insert the 7, we initially get  but the 7 node has a red parent, so we do a twist  Now, the 6 node has a red parent, so we do another twist.  At the end of the insert, we recolor the root black.  Altogether, 4 twists were required.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{ 7,1,4,6,3,5,2 }",
+			"order":3
+		},
+		{
+			"expect":"Returns: 11",
+			"id":0,
+			"input":"{ 5,10,15,14,3,4,11,2,1,12,6,9,7,13,8 }",
+			"order":4
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{ 6,8,10,12,4,2,18,14,16,19,7,15,9,17,13,5,11,3,1 }",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"keys contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"keys is a permutation of the numbers between 1 and n, inclusive, where n is the length of keys."
+		}
+	]
+}

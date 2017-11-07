@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8015&rd=10775",
+	"statement":"You're given several rectangles in the cartesian plane with sides parallel to the coordinate axes. A &quot;cool rectangle&quot; is a rectangle in the plane such that each of its edges completely lies on the edges of some input rectangles (these edges may overlap). You want to &quot;compress&quot; the input rectangles by shrinking them into cool rectangles (this will happen instantaneously).<br /><br /><br /><br /> To compress an input rectangle into a cool rectangle, the interior of the cool rectangle must be completely contained within the input rectangle. The interiors of the chosen cool rectangles must not overlap (though their edges may touch), and each cool rectangle may compress at most one input rectangle. Determine the smallest total area of cool rectangles required to shrink all the input rectangles, or return -1 if it is impossible.<br /><br /><br /><br /> The input rectangles will be described by int[]s <b>x1</b>, <b>y1</b>, <b>x2</b>, and <b>y2</b>, where (<b>x1</b>[i],<b>y1</b>[i]) and (<b>x2</b>[i],<b>y2</b>[i]) are opposite corners of the <i>i</i>th rectangle.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CoolRectangles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"compress",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int compress(int[] x1, int[] y1, int[] x2, int[] y2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,1,2}",
+			"id":0,
+			"input":"{0,1,2}",
+			"note":"We have three non-overlapping squares, so the only cool rectangles are the input rectangles.",
+			"order":1
+		},
+		{
+			"expect":"{0,1}",
+			"id":0,
+			"input":"{0,1}",
+			"note":"The overlapping squares generate 3 cool rectangles. However, there is no way to choose 2 non-overlapping cool rectangles to use.",
+			"order":2
+		},
+		{
+			"expect":"{1,2}",
+			"id":0,
+			"input":"{1,0}",
+			"note":"These rectangles intersect in a way that allows for cool rectangles of area 1 and 2 to be used (although there are 11 available cool rectangles).",
+			"order":3
+		},
+		{
+			"expect":"{0,1,1}",
+			"id":0,
+			"input":"{0,1,1}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{0,1,2,3}",
+			"id":0,
+			"input":"{0,-1,-2,-3}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{189,-1504,1830,-1383,-319,825} ",
+			"id":0,
+			"input":"{1011,-647,134,-2009,875,819}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x1 will contain between 1 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x1, y1, x2, and y2 will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of x1, y1, x2, and y2 will be between -10000 and 10000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"For each rectangle, x1[i] &lt; x2[i], and y1[i] &lt; y2[i]."
+		}
+	]
+}

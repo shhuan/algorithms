@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":173.75,
+			"constraints":[],
+			"correctRatio":54.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3507&rd=6527",
+			"name":"TimeOfPossession",
+			"notes":[],
+			"submission":142
+		},
+		{
+			"avgPts":710.61,
+			"constraints":[],
+			"correctRatio":61.76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3510&rd=6527",
+			"name":"NestedRandomness",
+			"notes":[],
+			"submission":102
+		}
+	],
+	"name":"2005 TCCC > Qualification Set 5 & 7",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6527"
+}

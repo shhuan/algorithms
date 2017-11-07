@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":213.61,
+			"constraints":[],
+			"correctRatio":89.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3490&rd=8001",
+			"name":"CmpdWords",
+			"notes":[],
+			"submission":278
+		},
+		{
+			"avgPts":303.94,
+			"constraints":[],
+			"correctRatio":41.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4677&rd=8001",
+			"name":"MaxTrip",
+			"notes":[],
+			"submission":191
+		},
+		{
+			"avgPts":443.53,
+			"constraints":[],
+			"correctRatio":18.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3925&rd=8001",
+			"name":"CommentNest",
+			"notes":[],
+			"submission":33
+		}
+	],
+	"name":"Single Round Match 268 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8001"
+}

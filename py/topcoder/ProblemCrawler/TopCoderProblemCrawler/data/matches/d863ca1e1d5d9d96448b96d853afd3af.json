@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.48,
+			"constraints":[],
+			"correctRatio":89.42,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11329&rd=14540",
+			"name":"RotatedClock",
+			"notes":[],
+			"submission":690
+		},
+		{
+			"avgPts":258.49,
+			"constraints":[],
+			"correctRatio":64.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11508&rd=14540",
+			"name":"NewItemShop",
+			"notes":[],
+			"submission":88
+		},
+		{
+			"avgPts":547.82,
+			"constraints":[],
+			"correctRatio":46.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11507&rd=14540",
+			"name":"MeetInTheMaze",
+			"notes":[],
+			"submission":13
+		}
+	],
+	"name":"Single Round Match 515 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14540"
+}

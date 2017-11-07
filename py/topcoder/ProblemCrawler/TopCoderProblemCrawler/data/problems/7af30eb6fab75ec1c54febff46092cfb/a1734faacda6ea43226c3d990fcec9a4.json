@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3565&rd=6554",
+	"statement":"We want to find the location of a local maximum in an unknown function. y = f(x) is a continuous real-valued function defined on the real numbers. We already have a number of data pairs, (xi, yi), and we need to find a small interval on the x axis that is guaranteed to contain at least one local (or global) maximum. But taking a sample from this function is quite expensive so we are only allowed to take <b>N</b> samples. Our problem is to choose them in such a way as to minimize the size of the interval that we determine. <p> The sampling will be done sequentially: we choose a value of x and find the corresponding y value, f(x). We repeat this process <b>N</b> times, choosing the x value based on all the data collected so far. We are willing to assume that no two y values will be exactly equal to each other. </p><p> Create a class LocalMax that contains a method length that is given <b>N</b>, the number of samples we can take, and double[]s <b>xData</b> and <b>yData</b> (the existing data pairs). It will return the worst case length for our interval around a local maximum using optimal sampling. If it is not possible to make such a guarantee, it returns -1.0. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to within a relative or absolute value of 1E-9"
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LocalMax",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"length",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, double[], double[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double length(int N, double[] xData, double[] yData)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{3,4,5}",
+			"id":0,
+			"input":"1",
+			"note":" From the data we already have we cannot guarantee that this function even has a local maximum -- it might be monotonically increasing. ",
+			"order":1
+		},
+		{
+			"expect":"{3,4,5}",
+			"id":0,
+			"input":"0",
+			"note":" We know that there is a local maximum between x=3 and x=5.",
+			"order":2
+		},
+		{
+			"expect":"{3,5,8}",
+			"id":0,
+			"input":"2",
+			"note":" Here is one way (there are others) get an interval of length 2 or less with just two additional samples. Take the first sample at x=6.5. The worst case is that the corresponding y value is less than 923.2. In that case we know that the interval (3,6.5) contains a local maximum, and that the y value at x=5 is greater than either endpoint y value. Take the second sample at x=4.7. In the worst case the corresponding value of y will be bigger than 923.2, in which case we could conclude that there is a local max somewhere in the interval (3,5). ",
+			"order":3
+		},
+		{
+			"expect":"{3,4,6,5}",
+			"id":0,
+			"input":"1",
+			"note":" If we take a sample at x=4.0+epsilon, for some tiny epsilon, then the worst case would be that the corresponding y value would be smaller than 53. In that case the interval between 3.0 and 4.0+epsilon would contain a local maximum. So by choosing epsilon arbitrarily small, we get an interval whose length is (arbitrarily close to) 1.0. ",
+			"order":4
+		},
+		{
+			"expect":"{1,4.3,7.2,95.4,534.0}",
+			"id":0,
+			"input":"3",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 0 and 25 inclusive."
+		},
+		{
+			"order":2,
+			"val":"xData will contain between 1 and 50 elements inclulsive."
+		},
+		{
+			"order":3,
+			"val":"yData will contain the same number of elements as xData."
+		},
+		{
+			"order":4,
+			"val":"The elements of yData will be distinct."
+		},
+		{
+			"order":5,
+			"val":"The elements of xData will be distinct."
+		},
+		{
+			"order":6,
+			"val":"Each element of xData and yData will be greater than 0.0 and less than 10000.0."
+		}
+	]
+}

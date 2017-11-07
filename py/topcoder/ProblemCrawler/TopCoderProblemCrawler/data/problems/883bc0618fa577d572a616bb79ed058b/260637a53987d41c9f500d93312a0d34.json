@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11302&rd=14424",
+	"statement":"Rabbit Hanako has <b>N</b> cards numbered 1 through <b>N</b>. Each card's number is written on its front side. The back side of each card is colored red if the number is prime, and blue if it is not prime. <br /><br /> <br /><br /> Cat Taro has chosen a subset of these cards and arranged them face down in a row. The cards are sorted in increasing order from left to right. He wants Hanako to guess the numbers written on the cards. Hanako can only see the colored back side of each card. You are given a String <b>colors</b>, where the i-th character is 'R' if the i-th card from the left is red, and 'B' if it is blue. <br /><br /> <br /><br /> Return a int[] containing exactly K elements, where K is the number of characters in <b>colors</b>. The i-th element of the return must be the number written on the i-th card if it can be uniquely determined. Otherwise, the i-th element must be -1. It is guaranteed that there exists at least one sequence that matches <b>colors</b>. ",
+	"notes":[{
+		"order":1,
+		"val":"A positive integer number is called prime if it has exactly two divisors, 1 and itself. By convention, 1 is not considered to be a prime number."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ColorfulCards",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theCards",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] theCards(int N, String colors)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"RRR\"",
+			"id":0,
+			"input":"5",
+			"note":"The numbers written on these cards are primes less than or equal to 5, so the only possibility is {2, 3, 5}. ",
+			"order":1
+		},
+		{
+			"expect":"\"BBB\"",
+			"id":0,
+			"input":"7",
+			"note":"The numbers written on these cards are not primes less than or equal to 7, so the only possibility is {1, 4, 6}. ",
+			"order":2
+		},
+		{
+			"expect":"\"RBR\"",
+			"id":0,
+			"input":"6",
+			"note":"There are two possibilities: {2, 4, 5} {3, 4, 5} ",
+			"order":3
+		},
+		{
+			"expect":"\"RBRRBRBBRBRRBBRRBBBRRBBBRR\"",
+			"id":0,
+			"input":"58",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"RBRRBRBBRBRRBBRRBBBRRBBBRR\"",
+			"id":0,
+			"input":"495",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"colors will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in colors will be 'R' or 'B'."
+		},
+		{
+			"order":4,
+			"val":"There will exist at least one sequence that matches colors."
+		}
+	]
+}

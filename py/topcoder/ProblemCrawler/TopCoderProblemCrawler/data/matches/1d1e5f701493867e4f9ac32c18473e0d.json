@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":189.08,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=210&rd=54",
+			"name":"MatchMaker",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":253.54,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=203&rd=54",
+			"name":"Tothello",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":674.76,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=202&rd=54",
+			"name":"ChessCover",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2001 Invitational > Semifinals B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=54"
+}

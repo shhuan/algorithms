@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":227.49,
+			"constraints":[],
+			"correctRatio":92.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7397&rd=10665",
+			"name":"KLastNonZeroDigits",
+			"notes":[],
+			"submission":540
+		},
+		{
+			"avgPts":250.35,
+			"constraints":[],
+			"correctRatio":29.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7512&rd=10665",
+			"name":"LandAndSea",
+			"notes":[],
+			"submission":250
+		},
+		{
+			"avgPts":395.08,
+			"constraints":[],
+			"correctRatio":11.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6876&rd=10665",
+			"name":"ValidPlates",
+			"notes":[],
+			"submission":9
+		}
+	],
+	"name":"Single Round Match 341 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10665"
+}

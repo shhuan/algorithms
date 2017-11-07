@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":180.57,
+			"constraints":[],
+			"correctRatio":70.68,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11364&rd=15037",
+			"name":"FoxAndGCDLCM",
+			"notes":[],
+			"submission":839
+		},
+		{
+			"avgPts":260.44,
+			"constraints":[],
+			"correctRatio":23.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11454&rd=15037",
+			"name":"FoxAndBusiness",
+			"notes":[],
+			"submission":316
+		},
+		{
+			"avgPts":550.57,
+			"constraints":[],
+			"correctRatio":37.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11778&rd=15037",
+			"name":"FoxAndGreed",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 535 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15037"
+}

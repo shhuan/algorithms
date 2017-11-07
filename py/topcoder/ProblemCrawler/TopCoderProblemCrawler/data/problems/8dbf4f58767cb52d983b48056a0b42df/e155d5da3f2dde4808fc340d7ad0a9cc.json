@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10701&rd=14729",
+	"statement":"<i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet.</i><br /><br /> <br /><br /> Cat Taro has the following building blocks: unit cubes of different colors (none of them black) and black rectangular prisms with dimensions 2x1x1. The number of cubes of each color is given as a int[] <b>cubes</b>. For example, if Taro has 5 red cubes, 1 yellow cube, and 2 blue cubes, then <b>cubes</b>={5,1,2}. The number of black prisms is given by int <b>B</b>.<br /><br /> <br /><br /> Taro is using the blocks to build <b>w</b> adjacent towers of blocks (some possibly empty), as shown on the right side of the picture below. Taro will always place the rectangular prisms vertically. In other words, each prism will look like two black unit cubes placed one on top of the other. Taro is not required to use all of the blocks when building the towers. However, he must use at least one block (a cube or a prism).<br /><br /> <br /><br /> <img src=\"http://community.topcoder.com/contest/problem/SkewedPerspective/pniub.jpg\" /> <br /><br /> <br /><br /> Rabbit Hanako is looking at Taro's towers from the left side of the room. To him, the towers seem as a single tower, as shown on the left side of the picture above. More precisely, at each height i Hanako sees the color of the block at height i in the leftmost tower that has such a block. Hanako's view can be described as a sequence of colors, giving the colors of each 1x1 square seen by Hanako in the order from bottom to top.<br /><br /> <br /><br /> Taro and Hanako now wonder how many different non-empty views can Hanako see. (Two views are different if either their heights differ, or for some height the colors seen at that height differ.) You are given the int[] <b>cubes</b>, the int <b>B</b>, and the int <b>w</b>. Return the number of different non-empty views modulo 1,000,000,007 (10^9 + 7).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SkewedPerspective",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countThem",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countThem(int[] cubes, int B, int w)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{1,1}",
+			"note":"The 19 possible views are: ",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1}",
+			"note":"The 19 possible views are: ",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{}",
+			"note":"As we only have black prisms, each possible view will only contain black squares. The five possible views have heights 2, 4, 6, 8, and 10.",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{7,7,7}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"w will be between 1 and 8, inclusive."
+		},
+		{
+			"order":2,
+			"val":"cubes will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of cubes will be between 1 and 50, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The total sum of the elements of cubes will be between 0 and 50, inclusive."
+		},
+		{
+			"order":5,
+			"val":"B will be between 0 and 10, inclusive."
+		}
+	]
+}

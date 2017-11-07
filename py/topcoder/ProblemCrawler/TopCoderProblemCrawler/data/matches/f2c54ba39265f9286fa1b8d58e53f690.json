@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":208.99,
+			"constraints":[],
+			"correctRatio":92.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10071&rd=13509",
+			"name":"TwoLotteryGames",
+			"notes":[],
+			"submission":573
+		},
+		{
+			"avgPts":236.74,
+			"constraints":[],
+			"correctRatio":34.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9886&rd=13509",
+			"name":"StampsCollection",
+			"notes":[],
+			"submission":219
+		},
+		{
+			"avgPts":503.2,
+			"constraints":[],
+			"correctRatio":23.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8211&rd=13509",
+			"name":"Barracks",
+			"notes":[],
+			"submission":86
+		}
+	],
+	"name":"Single Round Match 418 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13509"
+}

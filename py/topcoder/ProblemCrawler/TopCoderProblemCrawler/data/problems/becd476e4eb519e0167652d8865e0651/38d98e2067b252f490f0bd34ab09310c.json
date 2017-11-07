@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6386&rd=9986",
+	"statement":"<p>You are given a directed graph <b>g</b>, and you must determine the number of distinct cycles in <b>g</b> that have length less than <b>k</b>. Since this number can be really big, return the answer modulo <b>m</b>. A cycle is a non-empty sequence of nodes (not necessarily distinct) in which there is an edge from each node to the next node, and an edge from the last node in the sequence to the first node. Two cycles are distinct if their sequences are not identical. See example 0 for further clarification.</p> <p><b>g</b> will be given as a String[] where the jth character of the ith element indicates whether there is an edge from node i to node j ('Y' means there is one, and 'N' means there is not).</p>",
+	"notes":[{
+		"order":1,
+		"val":"The answer modulo  means that you must return the remainder of dividing the result by ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TourCounting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countTours",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countTours(String[] g, int k, int m)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"{\"NYNY\", \"NNYN\", \"YNNN\", \"YNNN\"}",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"40",
+			"id":0,
+			"input":"{\"NYNNNNN\", \"NNYNNNN\", \"NNNYNNN\", \"NNNNYNN\", \"NNNNNYN\", \"NNNNNNY\", \"YNNNNNN\"}",
+			"note":"All cycles have lengths that are multiples of 7. For each starting node and each multiple of 7 there exists one cycle. There are 5 non-zero multiples of 7 that are less than 40 (7,14,21,28,35) and 7 possible starting nodes. Therefore, the total number of cycles is 5x7=35. 35 modulo 13 is 9.",
+			"order":2
+		},
+		{
+			"expect":"1000000",
+			"id":0,
+			"input":"{\"NYNY\", \"NNNN\", \"YYNY\", \"NYNN\"}",
+			"note":"The graph does not have cycles.",
+			"order":3
+		},
+		{
+			"expect":"1500",
+			"id":0,
+			"input":"{\"NY\", \"YN\"}",
+			"note":"Any number modulo 1 is zero.",
+			"order":4
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"{\"NYYNYYN\", \"YNYNYNY\", \"NYNYNYN\", \"YYYNYNY\", \"NNYYNNY\", \"NYYYNNY\", \"YYYYYYN\"}",
+			"order":5
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"{\"NYYY\", \"YNYY\", \"YYNY\", \"YNYN\"}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"g will have between 1 and 35 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of g will have exactly N characters, where N is the number of elements in g."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of g will be 'Y' or 'N'."
+		},
+		{
+			"order":4,
+			"val":"The ith character of the ith element of g will be 'N'."
+		},
+		{
+			"order":5,
+			"val":"k will be between 1 and 1000000 (106), inclusive."
+		},
+		{
+			"order":6,
+			"val":"m will be between 1 and 1000000000 (109), inclusive."
+		}
+	]
+}

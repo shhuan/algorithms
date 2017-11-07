@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4612&rd=7223",
+	"statement":"In basketball it is very important to consider how much time is left in the game, especially near the end of the game. In this problem, we will consider two teams, A and B, in a game with <b>time</b> seconds left, where neither team has any way to stop the clock (time outs). To keep things simple, we will ignore three point shots and fouls, and only consider regular baskets, which score 2 points. <br /><br /><br /><br /> In the game, the two teams take turns trying to score baskets. After one team attempts to score a basket and fails, that team may get the <i>rebound</i> and attempt to score again. Otherwise, if a team successfully scores or fails to get the rebound, the other team gets the ball. An attempt to score always involves some set up time where players get into position and pass the ball and things like that. The amount of time that a team takes to set up influences the probability that its shot attempt will be successful. If a team attempts to score and gets its own rebound, the setup starts over. To prevent teams from simply holding the ball until the end of the game when they are winning, the team with the ball must attempt to score within a certain timeframe (this is known as the shot clock, and is reset if a team attempts to score and rebounds).<br /><br /><br /><br /> In this problem, the probabilities of team A scoring are given by <b>percentageA</b>. Element i of <b>percentageA</b> indicates the probability (as a percentage) that a shot will score after i+2 seconds of setup. Due to the shot clock, team A must shoot after a number of seconds corresponding to an element of <b>percentageA</b>. Also, the probabilities that team A will rebound the ball after shooting and failing to score are given by <b>reboundA</b>, where element i corresponds to i+2 seconds of setup. Finally, <b>scoreA</b> indicates team A's current score. The parameters for team B are analogous.<br /><br /><br /><br /> Given the inputs as described above, the fact that team A has just gained possession of the ball, and the assumption that A plays optimally to win, while B plays optimally to prevent A from winning, you should compute the probability that team A wins the game (ties don't count). ",
+	"notes":[
+		{
+			"order":1,
+			"val":"In this problem, teams may not attempt to score with less than 2 seconds of setup time."
+		},
+		{
+			"order":2,
+			"val":"Time is treated discretely in this problem."
+		},
+		{
+			"order":3,
+			"val":"Your return must have error less than 1E-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ClockManagement",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[], int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double winProbability(int[] percentageA, int[] percentageB, int[] reboundA, int[] reboundB, int time, int scoreA, int scoreB)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{10,20,30,40}",
+			"id":0,
+			"input":"{10,20,30,40}",
+			"note":"Trailing by only 1 point, the best strategy is to set up as long as possible (5 seconds), and then attempt to score right at the end of a game, making two points with a probability of 40%.",
+			"order":1
+		},
+		{
+			"expect":"{10,20,30,40}",
+			"id":0,
+			"input":"{10,20,30,40}",
+			"note":"There is no way to win here; the best you can do is score 2 points and tie it up, after which team B will wait until the end of the game.",
+			"order":2
+		},
+		{
+			"expect":"{10,20,30,40}",
+			"id":0,
+			"input":"{10,20,30,40}",
+			"note":"The best strategy here is to set up for 2 or 3 seconds (it doesn't matter which) and then attempt to score. If you succeed, team B will set up for 5 seconds and then attempt to score. Assuming that B fails to score and fails to get the rebound, you will then have 2 or 3 seconds to set up and score again. The probability of things working out like this is 0.1*0.6*0.96*0.2 = 0.01152.",
+			"order":3
+		},
+		{
+			"expect":"{100}",
+			"id":0,
+			"input":"{100}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"percentageA, percentageB, reboundA, and reboundB will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"percentageA, percentageB, reboundA, and reboundB will all contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of percentageA, percentageB, reboundA, and reboundB will be between 0 and 100, inclusive."
+		},
+		{
+			"order":4,
+			"val":"scoreA and scoreB will be between 0 and 100, inclusive."
+		},
+		{
+			"order":5,
+			"val":"time will be between 1 and 300, inclusive."
+		}
+	]
+}

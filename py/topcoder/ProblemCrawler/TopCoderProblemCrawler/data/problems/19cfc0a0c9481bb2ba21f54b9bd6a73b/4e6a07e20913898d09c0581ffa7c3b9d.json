@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6447&rd=9987",
+	"statement":"You are given a int[] <b>data</b>. All elements in <b>data</b> are distinct. Only consecutive pairs of elements in <b>data</b> can be swapped. You are allowed to perform at most <b>nSwaps</b> swaps. Return the lexicographically maximal possible result. ",
+	"notes":[{
+		"order":1,
+		"val":"Given two int[]s  and  of equal length,  is lexicographically greater than  if an index  (0 <=  < ) exists such that [0] = [0], [1] = [1], ..., [ - 1] = [ - 1] and [i] > [i], where  is the size of ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PartSorting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"process",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] process(int[] data, int nSwaps)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{10, 20, 30, 40, 50, 60, 70}",
+			"note":"Swap the first two elements.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{3, 5, 1, 2, 4} ",
+			"note":"First, swap the third and fourth elements, and then, swap the first and second elements. ",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{19, 20, 17, 18, 15, 16, 13, 14, 11, 12}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"data will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in data will be between 1 and 1000000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements in data will be distinct."
+		},
+		{
+			"order":4,
+			"val":"nSwaps will be between 0 and 1000000, inclusive."
+		}
+	]
+}

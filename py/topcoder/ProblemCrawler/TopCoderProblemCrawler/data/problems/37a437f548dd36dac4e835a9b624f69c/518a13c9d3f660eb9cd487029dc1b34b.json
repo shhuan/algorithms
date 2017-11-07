@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2332&rd=5867",
+	"statement":"In algebra, a presentation is a convenient way to describe a set. The presentation includes what the atomic elements of the set are, and what relations are used to simplify strings of atoms. These atoms are usually called generators. In this problem we will be looking at a set whose generators are <i>x</i> and <i>y</i>. You will be given a String <b>expression</b> consisting of <i>x</i>'s and <i>y</i>'s. The simplifying rules are: \n <ul> \n  <li> 1) Any occurrence of <i>yyyyyy</i> can be deleted from the string. </li> \n  <li> 2) Any occurrence of <i>xxxxxxxx</i> can be deleted from the string. </li> \n  <li> 3) Any occurrence of <i>xy</i> can be replaced by <i>yyyyyx</i>.</li> \n </ul> Two strings A and B are equivalent if there is a string C such that A can be simplified into C and B can be simplified into C by applying the rules above 0 or more times. Return the shortest string equivalent to <b>expression</b>. If there are multiple possible solutions, return the one that comes first alphabetically. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PresentationComp",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"simplify",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String simplify(String expression)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"\"xxxxxxxxyyyyyy\"",
+			"note":"Simplifies greatly.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"xy\"",
+			"id":0,
+			"input":"\"xy\"",
+			"note":"Doesn't get much simpler.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"xxyy\"",
+			"id":0,
+			"input":"\"yyxx\"",
+			"note":"Use the one that comes first alphabetically.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"expression will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in expression will be x or y."
+		}
+	]
+}

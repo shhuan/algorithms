@@ -1,0 +1,66 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7787&rd=10780",
+	"statement":"You are given the radius <b>r</b> of a circle centered at the origin. Your task is to return the number of lattice points (points whose coordinates are both integers) on the circle. The number of pairs of integers (x, y) that satisfy x^2 + y^2 = n is given by the formula 4*(d1(n) - d3(n)), where di(n) denotes the number of divisors of n that leave a remainder of i when divided by 4.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PointsOnCircle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long count(int r)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"1",
+			"note":"The only lattice points on the circle are (0, 1), (1, 0), (-1, 0), (0, -1).",
+			"order":1
+		},
+		{
+			"expect":"Returns: 76",
+			"id":0,
+			"input":"2000000000",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"3",
+			"note":"The number of lattice points on the circle of radius 3 is the same as the number of integer solutions of the equation x^2 + y^2 = 9. Using the formula from the problem statement we can calculate this number as 4*(d1(9) - d3(9)). It is easy to see that d1(9) = 2 (divisors 1 and 9) and d3(9) = 3 (divisor 3). So the answer is 4*(2 - 1) = 4.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"1053",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"r will be between 1 and 2*10^9, inclusive."
+	}]
+}

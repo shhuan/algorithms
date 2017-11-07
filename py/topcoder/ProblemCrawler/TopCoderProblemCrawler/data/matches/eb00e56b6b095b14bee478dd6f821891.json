@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":215.5,
+			"constraints":[],
+			"correctRatio":87.7,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4731&rd=8016",
+			"name":"PlayingCubes",
+			"notes":[],
+			"submission":187
+		},
+		{
+			"avgPts":314.16,
+			"constraints":[],
+			"correctRatio":32.97,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4013&rd=8016",
+			"name":"OptimalTax",
+			"notes":[],
+			"submission":182
+		},
+		{
+			"avgPts":465.11,
+			"constraints":[],
+			"correctRatio":31.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4769&rd=8016",
+			"name":"Springs",
+			"notes":[],
+			"submission":22
+		}
+	],
+	"name":"2005 TCO > Online Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8016"
+}

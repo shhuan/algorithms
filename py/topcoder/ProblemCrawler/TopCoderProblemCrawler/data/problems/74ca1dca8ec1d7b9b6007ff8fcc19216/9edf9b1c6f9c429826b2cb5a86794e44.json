@@ -1,0 +1,105 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12808&rd=15706",
+	"statement":"Fox Ciel is playing Go with Jiro. Ciel plays black and Jiro plays white. You are given a String[] <b>board</b> that represents a square board on which they play. Black pieces are denoted 'x', white pieces 'o' and empty cells '.' (period). <br /><br /> <br /><br /> <br /><br /> In the current position no two white pieces are adjacent. Jiro has already given up and he will not be making any more moves. Ciel is considering making some more moves. Her goal now is to maximize the number of empty cells on the board. <br /><br /> <br /><br /> <br /><br /> In each move, Ciel can add a black piece onto an empty cell. After each move, all dead white pieces are removed from the board. A white piece is considered dead if its cell does not share a side with any empty cell. <br /><br /> <br /><br /> <br /><br /> Return the maximum number of empty cells on the board, after Ciel makes zero or more moves as described above.",
+	"notes":[{
+		"order":1,
+		"val":"The rules described in the statement are not identical with the rules of Go. In particular, black pieces never die in this problem."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxAndGo3",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxEmptyCells",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxEmptyCells(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"o.o\", \".o.\", \"o.o\"}",
+			"note":"The best solution is to put black pieces on (1,2), (2,1), (2,3), and then on (3,2). After that the board will look as follows:  There are 5 empty cells.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{\"...\", \".o.\", \"...\"} ",
+			"note":"This time the best solution is don't do any move.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"xxxxx\", \"xxoxx\", \"xo.ox\", \"xxoxx\", \"xxxxx\"} ",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{\".xox.\", \".o.ox\", \"x.o.o\", \"ox.ox\", \".ox..\"} ",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{\"o.o.o\", \".ox..\", \"oxxxo\", \"..x..\", \"o.o.o\"} ",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"...\", \"...\", \"...\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 3 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"board will contain exactly n elements."
+		},
+		{
+			"order":3,
+			"val":"Each element in board will contain exactly n characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in board will be one of 'o', 'x', and '.'."
+		},
+		{
+			"order":5,
+			"val":"No two white pieces will be adjacent."
+		},
+		{
+			"order":6,
+			"val":"Each white piece will be adjacent to at least one empty cell."
+		}
+	]
+}

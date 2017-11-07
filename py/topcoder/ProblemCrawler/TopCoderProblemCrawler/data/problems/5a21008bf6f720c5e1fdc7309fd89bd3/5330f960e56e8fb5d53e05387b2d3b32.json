@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3999&rd=6552",
+	"statement":"<p> Structured langugages such as Java, C# and C++ are made up of blocks of code (usually nested several levels), where the start and end markers for a block are denoted by curly brackets, '{' and '}'. A variable declared in a block is only accessible within that block and its sub-blocks. </p> <p> In C#, you are not allowed to declare a variable in a block if any of its sub-blocks also declares a variable with the same name. The following code, for instance, will give a compiler error in C# (but not in Java or C++): </p> <pre>\n    public void MyMethod()\n    {\n    \tfor(int j = 0; j &lt; 5; j++)\n    \t{\n    \t    int i = j;\n    \t}      \n    \tint i = 0;        \n    }\n</pre> <p> Changing <tt>int i = 0;</tt> to <tt>{ int i = 0; }</tt> would be legal C#. </p> <p> Your task is to write a method which finds this kind of illegal variable declaration. The input will be a String containing curly brackets (marking the start and end positions for a block) and lower case letters. Each lowercase letter in the input denotes that a variable with that name has been declared in this position. Hence the code above would be encoded with the String &quot;{{ji}i}&quot; (quotes for clarity only). </p> <p> Create a class VariableDeclaration containing the method badVariable which takes a String <b>code</b> containing a piece of code in the format above, and returns a String containing a list of all variables (in alphabetical order) that have been badly declared. The list should not contain any duplicates. You can assume that the curly brackets match up properly, and that there is a single outer block. Further, a variable will never be declared several times in the same block, so inputs like &quot;{a{b}a}&quot; are not allowed. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"VariableDeclaration",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"badDeclaration",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String badDeclaration(String code)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"i\"",
+			"id":0,
+			"input":"\"{{ji}i}\"",
+			"note":"This is the example in the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"\"{{ji}{i}}\"",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"ad\"",
+			"id":0,
+			"input":"\"{d{{e}{fd}}{e}{df{{a}}}a}\"",
+			"note":"Make sure not to output duplicates, and to sort the badly declared variables in alphabetical order. ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"code will contain between 2 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in code will be a '{', a '}' or a lowercase letter."
+		},
+		{
+			"order":3,
+			"val":"The curly brackets in code will match up properly."
+		},
+		{
+			"order":4,
+			"val":"Tbere will be a single outer block; that is, the first character in code will be a '{', whose corresponding '}' will be the last character."
+		},
+		{
+			"order":5,
+			"val":"A variable won't be declared more than once in the same block."
+		}
+	]
+}

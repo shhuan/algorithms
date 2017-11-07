@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4457&rd=6539",
+	"statement":"Your mailbox is a mess: it contains e-mails from weeks ago and you want to archive them. You know which folder you want to move each e-mail to. The names of the destination folders are given in a String[] <b>destFolders</b> and consist of letters (both upper- and lowercase) and spaces. The names are case sensitive. The i-th element of <b>destFolders</b> corresponds to the i-th element of your inbox. <br /><br /><br /><br /> To archive the e-mails you can just select the first one and move it to the appropriate folder, then select the second one, etc. Using this method, you need to make exactly the same number of selections as the number of e-mails you have. By selecting contiguous ranges of e-mails (that have to be moved to the same folder) and moving them at once, you can often do better. After moving one or more e-mails, they disappear from your inbox, so other e-mails may become adjacent. <br /><br /><br /><br /> Return the minimal number of selections you need to make to archive all your e-mails. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MailArchiving",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minSelections",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minSelections(String[] destFolders)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"Deleted messages\",\"Saved messages\",\"Deleted messages\"}",
+			"note":"First move the second e-mail to its destination. The other two become adjacent then and can be moved at once.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"Folder A\",\"Folder B\",\"Folder C\",\"Folder D\",\"Folder E\",\"Folder F\"}",
+			"note":"When all the destination folders different, you can't do anything smart.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"FOLDER\",\"folder\"}",
+			"note":"The names are case sensitive.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"a\",\"b\",\"a\",\"c\",\"a\",\"a\",\"b\",\"a\",\"c\",\"d\",\"a\"}",
+			"note":"First move the e-mails to folders \"b\", \"c\", and \"d\" all separately and then move the e-mails to folder \"a\" at once.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 20",
+			"id":0,
+			"input":"{\"a\",\"b\",\"b\",\"c\",\"d\",\"e\",\"d\",\"e\",\"d\",\"e\", \"c\",\"c\",\"a\",\"a\",\"a\",\"f\",\"g\",\"g\",\"f\",\"a\", \"h\",\"h\",\"i\",\"j\",\"i\",\"j\",\"a\",\"a\",\"k\",\"k\", \"l\",\"m\",\"k\",\"l\",\"m\",\"a\",\"o\",\"o\",\"p\",\"a\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"destFolders contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of destFolders has length between 1 and 50, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of destFolders consists of letters and spaces."
+		}
+	]
+}

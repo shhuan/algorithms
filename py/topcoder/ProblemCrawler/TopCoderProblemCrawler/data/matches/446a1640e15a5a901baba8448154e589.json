@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":170.35,
+			"constraints":[],
+			"correctRatio":93.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13778&rd=16500",
+			"name":"Bitwisdom",
+			"notes":[],
+			"submission":336
+		},
+		{
+			"avgPts":256.59,
+			"constraints":[],
+			"correctRatio":46.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13841&rd=16500",
+			"name":"Balance",
+			"notes":[],
+			"submission":158
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13753&rd=16500",
+			"name":"MinimumCuts",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"2015 TopCoder Open Algorithm > Round 2B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16500"
+}

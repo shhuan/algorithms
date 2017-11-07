@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10095&rd=13516",
+	"statement":"<p>An out-of-control robot is placed on a plane, and it takes <b>n</b> random steps. At each step, the robot chooses one of four directions randomly and moves one unit in that direction. The probabilities of the robot choosing north, south, east or west are <b>north</b>, <b>south</b>, <b>east</b> and <b>west</b> percent, respectively.</p> <p>The robot's path is considered simple if it never visits the same point more than once. (The robot's starting point is always the first visited point.) Return a double containing the probability that the robot's path is simple. For example, &quot;EENE&quot; and &quot;ENW&quot; are simple, but &quot;ENWS&quot; and &quot;WWWWSNE&quot; are not ('E', 'W', 'N' and 'S' represent east, west, north and south, respectively).</p>",
+	"notes":[{
+		"order":1,
+		"val":"Your return must have relative or absolute error less than 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CrazyBot",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getProbability(int n, int east, int west, int south, int north)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"25",
+			"id":0,
+			"input":"1",
+			"note":"The robot only takes one step, so it never visits a point more than once.",
+			"order":1
+		},
+		{
+			"expect":"25",
+			"id":0,
+			"input":"2",
+			"note":"The robot will visit its starting point twice only if the two moves are in opposite directions.",
+			"order":2
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"7",
+			"note":"Here, the only possible directions are north and east, so the robot will never visit the same point twice.",
+			"order":3
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"14",
+			"note":"Here, the only possible directions are east and west. The only two available paths are \"EEEEEEEEEEEEEE\" and \"WWWWWWWWWWWWWW\". The probability is equal to 2 / (2^14).",
+			"order":4
+		},
+		{
+			"expect":"25",
+			"id":0,
+			"input":"14",
+			"note":"The probability is quite small for =14.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 14, inclusive."
+		},
+		{
+			"order":2,
+			"val":"east will be between 0 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"west will be between 0 and 100, inclusive."
+		},
+		{
+			"order":4,
+			"val":"south will be between 0 and 100, inclusive."
+		},
+		{
+			"order":5,
+			"val":"north will be between 0 and 100, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The sum of east, west, south and north will be 100."
+		}
+	]
+}

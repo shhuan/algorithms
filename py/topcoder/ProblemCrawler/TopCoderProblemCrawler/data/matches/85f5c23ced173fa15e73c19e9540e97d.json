@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":190.29,
+			"constraints":[],
+			"correctRatio":96.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2235&rd=5070",
+			"name":"FanFailure",
+			"notes":[],
+			"submission":155
+		},
+		{
+			"avgPts":292.96,
+			"constraints":[],
+			"correctRatio":65.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2383&rd=5070",
+			"name":"SimpleIO",
+			"notes":[],
+			"submission":106
+		},
+		{
+			"avgPts":530.62,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2827&rd=5070",
+			"name":"ChangeOptimizer",
+			"notes":[],
+			"submission":18
+		}
+	],
+	"name":"Single Round Match 195 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5070"
+}

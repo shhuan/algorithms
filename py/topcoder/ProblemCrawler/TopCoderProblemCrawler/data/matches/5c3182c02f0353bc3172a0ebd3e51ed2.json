@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.15,
+			"constraints":[],
+			"correctRatio":71.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3467&rd=6531",
+			"name":"MusicLicenses",
+			"notes":[],
+			"submission":46
+		},
+		{
+			"avgPts":305.68,
+			"constraints":[],
+			"correctRatio":65,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3449&rd=6531",
+			"name":"Triptych",
+			"notes":[],
+			"submission":40
+		},
+		{
+			"avgPts":585.34,
+			"constraints":[],
+			"correctRatio":60,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3522&rd=6531",
+			"name":"HanoiDistance",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"2005 TCCC > Round 4",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6531"
+}

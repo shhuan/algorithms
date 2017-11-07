@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174.23,
+			"constraints":[],
+			"correctRatio":84.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11204&rd=14432",
+			"name":"ToastXToast",
+			"notes":[],
+			"submission":746
+		},
+		{
+			"avgPts":278.07,
+			"constraints":[],
+			"correctRatio":63.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11063&rd=14432",
+			"name":"KingdomXCitiesandVillages",
+			"notes":[],
+			"submission":230
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10836&rd=14432",
+			"name":"KingdomXEmergencyStaircase",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"Member Single Round Match 503 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14432"
+}

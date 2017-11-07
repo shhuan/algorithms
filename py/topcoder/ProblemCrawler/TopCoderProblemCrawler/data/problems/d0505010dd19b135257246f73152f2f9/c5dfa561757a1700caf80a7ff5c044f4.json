@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4515&rd=9891",
+	"statement":"We need to know the k-th digit in x to the power y. A value of 0 for k means that the digit of interest is the rightmost digit, a value of 1 means the digit next to the rightmost digit, etc. <p> Create a class PowerDigit that contains a method digitK that is given <b>x</b>, <b>y</b>, and <b>k</b> and that returns the k-th digit (an integer in the range 0 to 9 inclusive) in <b>x</b> to the power <b>y</b>. If there is no k-th digit in <b>x</b> to the power <b>y</b> return -1. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PowerDigit",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"digitK",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int digitK(int x, int y, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"2",
+			"note":" 2^10 = 1024 so the digit 1 is 2. ",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"2",
+			"note":" 1024 does not have a digit 4 (the 1 in 1024 is digit 3)",
+			"order":2
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"2",
+			"note":" 2^1000 is a very large number. But digit 0 is predictable since with succeeding powers it follows the sequence 2, 4, 8, 6, 2, 4, 8, 6, 2, ....",
+			"order":3
+		},
+		{
+			"expect":"10000",
+			"id":0,
+			"input":"9999",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x is between 0 and 10,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"y is between 1 and 10,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"k is between 0 and 4, inclusive."
+		}
+	]
+}

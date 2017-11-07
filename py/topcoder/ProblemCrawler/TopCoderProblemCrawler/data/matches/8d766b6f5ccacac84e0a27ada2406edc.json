@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":207.64,
+			"constraints":[],
+			"correctRatio":93.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2941&rd=5873",
+			"name":"NinePatch",
+			"notes":[],
+			"submission":188
+		},
+		{
+			"avgPts":478.96,
+			"constraints":[],
+			"correctRatio":52.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2008&rd=5873",
+			"name":"LogCabin",
+			"notes":[],
+			"submission":69
+		}
+	],
+	"name":"2004 TCO > Qualification Round Set 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5873"
+}

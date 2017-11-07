@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4687&rd=7992",
+	"statement":"An undirected graph is defined as a set of vertices with undirected edges connecting some of the pairs of vertices. A clique in an undirected graph is a non-empty subset of vertices where there is a direct connection between every pair of vertices in the subset. A maximal clique is a clique that is not a proper subset of any other clique. You will be given a graph as a String[] where the jth character of the ith element is a '1' if and only if vertices i and j are connected. Your method should return the number of maximal cliques in the graph.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CliqueCount",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countCliques",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countCliques(String[] graph)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"010\", \"100\", \"000\"}",
+			"note":"If the vertices are 0, 1, and 2, corresonding to the elements of the input, then the two maximal cliques are {0,1} and {2}. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"011\", \"101\", \"110\"}",
+			"note":"All nodes are connected so there is just one big clique.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 28",
+			"id":0,
+			"input":"{\"00010000000000100000\", \"00110000000000000000\", \"01011001000000011000\", \"11101000000100010110\", \"00110000001100000000\", \"00000000010000000001\", \"00000000000000011001\", \"00100000000010000001\", \"00000000000100011000\", \"00000100000010000010\", \"00001000000000000010\", \"00011000100001000101\", \"00000001010000000000\", \"00000000000100000010\", \"10000000000000000010\", \"00110010100000000000\", \"00100010100000000000\", \"00010000000100000000\", \"00010000011001100000\", \"00000111000100000000\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"00\", \"00\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"graph will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of graph will contain as many characters as graph has elements."
+		},
+		{
+			"order":3,
+			"val":"Each character in graph will be '0' or '1'."
+		},
+		{
+			"order":4,
+			"val":"Character j of element i of graph will be the same as character i of element j for all i and j."
+		},
+		{
+			"order":5,
+			"val":"Character i of element i of graph will be '0' for all i."
+		}
+	]
+}

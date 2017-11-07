@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.05,
+			"constraints":[],
+			"correctRatio":85.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12615&rd=15693",
+			"name":"SimilarSequences",
+			"notes":[],
+			"submission":102
+		},
+		{
+			"avgPts":298.73,
+			"constraints":[],
+			"correctRatio":79.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12617&rd=15693",
+			"name":"AntlerSwapping",
+			"notes":[],
+			"submission":72
+		},
+		{
+			"avgPts":483.42,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12517&rd=15693",
+			"name":"ToastJumping",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"2013 TCO Algorithm > Round 3B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15693"
+}

@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7614&rd=10841",
+	"statement":"We have a collection of jobs to run on <b>k</b> processors. Each job requires a certain amount of processor time, but is migratable and preemptible -- it can be started on one processor, suspended, continued on another processor, etc., as long as the total time it gets on processors is sufficient. <p> How long can we keep all <b>k</b> processors busy? Given <b>k</b> and int[] <b>need</b> (the processor time needed by each job), return the maximum possible time we can keep all <b>k</b> processors busy with optimal scheduling. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"A return value with either an absolute or relative error of less than 1.0E-9 is considered correct."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BusyTime",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"busy",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double busy(int k, int[] need)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{100,75}",
+			"id":0,
+			"input":"3",
+			"note":"With only 2 jobs we can never have all 3 processors busy.",
+			"order":1
+		},
+		{
+			"expect":"{2000,100,100}",
+			"id":0,
+			"input":"2",
+			"note":" We can run job A on processor 1 and job B on processor 2. When job B finishes after 100 time units, we can put job C on processor 2 for the next 100 time units. But now we only have 1 job that needs to run, so we can't keep both processors busy any longer. ",
+			"order":2
+		},
+		{
+			"expect":"{20,20,21,100}",
+			"id":0,
+			"input":"3",
+			"note":" We can run job A on processor 1 from time 0 to time 20. We can run job B on processor 2 from time 10.5 to time 30.5. We can run job C on processor 2 from time 0 to time 10.5 and then on processor 1 from time 20 to time 30.5. We can run job D on processor 3 from time 0 to time 100.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"k will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"need will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of need will be between 1 and 1,000,000, inclusive."
+		}
+	]
+}

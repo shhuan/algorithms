@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":169.52,
+			"constraints":[],
+			"correctRatio":94.02,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1993&rd=8007",
+			"name":"ScheduleStrength",
+			"notes":[],
+			"submission":301
+		},
+		{
+			"avgPts":270.79,
+			"constraints":[],
+			"correctRatio":60.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4708&rd=8007",
+			"name":"Recipe",
+			"notes":[],
+			"submission":135
+		},
+		{
+			"avgPts":451.71,
+			"constraints":[],
+			"correctRatio":14.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1981&rd=8007",
+			"name":"PokerDeck",
+			"notes":[],
+			"submission":7
+		}
+	],
+	"name":"Single Round Match 265 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8007"
+}

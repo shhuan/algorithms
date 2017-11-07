@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":211.82,
+			"constraints":[],
+			"correctRatio":73.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=339&rd=4045",
+			"name":"Factors",
+			"notes":[],
+			"submission":71
+		},
+		{
+			"avgPts":328.28,
+			"constraints":[],
+			"correctRatio":69.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=442&rd=4045",
+			"name":"Digraph",
+			"notes":[],
+			"submission":72
+		},
+		{
+			"avgPts":390.02,
+			"constraints":[],
+			"correctRatio":9.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=338&rd=4045",
+			"name":"Crypto",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"Single Round Match 63 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4045"
+}

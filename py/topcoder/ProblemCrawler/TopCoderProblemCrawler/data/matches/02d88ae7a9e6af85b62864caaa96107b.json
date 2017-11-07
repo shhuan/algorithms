@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.35,
+			"constraints":[],
+			"correctRatio":57.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11781&rd=14726",
+			"name":"CasketOfStar",
+			"notes":[],
+			"submission":741
+		},
+		{
+			"avgPts":273.45,
+			"constraints":[],
+			"correctRatio":30.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11780&rd=14726",
+			"name":"MagicBoard",
+			"notes":[],
+			"submission":378
+		},
+		{
+			"avgPts":418.2,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11779&rd=14726",
+			"name":"Pikachu",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"Single Round Match 533 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14726"
+}

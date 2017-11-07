@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":181.56,
+			"constraints":[],
+			"correctRatio":77.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13389&rd=16075",
+			"name":"PotentialArithmeticSequence",
+			"notes":[],
+			"submission":432
+		},
+		{
+			"avgPts":330.5,
+			"constraints":[],
+			"correctRatio":57.07,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13323&rd=16075",
+			"name":"CandyCupRunningCompetition",
+			"notes":[],
+			"submission":205
+		},
+		{
+			"avgPts":502.25,
+			"constraints":[],
+			"correctRatio":86.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13352&rd=16075",
+			"name":"PatternLock",
+			"notes":[],
+			"submission":22
+		}
+	],
+	"name":"Single Round Match 632 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16075"
+}

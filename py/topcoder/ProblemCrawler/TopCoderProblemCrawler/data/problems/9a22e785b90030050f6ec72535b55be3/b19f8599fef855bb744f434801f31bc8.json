@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4712&rd=8020",
+	"statement":"In a simple game, two players take turns placing 'X's in a 4x4 grid. Players may place 'X's in any available location ('.' in the input) that is not horizontally or vertically adjacent to another 'X'. The player who places the last 'X' wins the game. It is your turn and you want to know how many of the moves you could make guarantee you will win the game, assuming you play perfectly.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GridGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winningMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int winningMoves(String[] grid)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"....\", \"....\", \"....\", \"....\"}",
+			"note":"You can't win this game.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 11",
+			"id":0,
+			"input":"{\"....\", \"....\", \".X..\", \"....\"}",
+			"note":"Any legal move guarantees you win the game.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\".X.X\", \"..X.\", \".X..\", \"....\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\".X.X\", \"..X.\", \"X..X\", \"..X.\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"X..X\", \"..X.\", \".X..\", \"X..X\"}",
+			"note":"There are no valid moves.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain exactly 4 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of grid will contain 4 characters ('X's or '.'s), inclusive."
+		},
+		{
+			"order":3,
+			"val":"There will be no two horizontally or vertically adjacent 'X's in grid."
+		}
+	]
+}

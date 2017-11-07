@@ -1,0 +1,89 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10898&rd=14152",
+	"statement":"John and Brus are going to a theater to see a very interesting movie. They would like to have seats next to each other in the same row. The theater contains <b>n</b> rows, with <b>m</b> seats in each row. Rows are numbered 1 to <b>n</b> from front to back, and seats are numbered 1 to <b>m</b> from left to right. Some of the seats are already reserved, but John and Brus can book any of the available seats. <br /><br /><br /><br /> You are given int[]s <b>row</b> and <b>seat</b>. The i-th elements of <b>row</b> and <b>seat</b> are the row number and seat number of the i-th reserved seat. All remaining seats are available. Return the number of ways for John and Brus to book two available seats next to each other in the same row. ",
+	"notes":[{
+		"order":1,
+		"val":"Two bookings are considered different only if one contains a seat that the other does not contain. In other words, they don't need to decide which seat John sits in and which seat Brus sits in."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheMoviesLevelOneDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long find(int n, int m, int[] row, int[] seat)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"The first and the second seat in the second row are the only two free seats next to each other in the same row.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"There are no free seats in the theater.",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"4",
+			"order":3
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"10",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n and m will each be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"row will contain between 1 and 47 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"row and seat will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of row will be between 1 and n, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of seat will be between 1 and m, inclusive."
+		},
+		{
+			"order":6,
+			"val":"All pairs (row[i], seat[i]) will be distinct."
+		}
+	]
+}

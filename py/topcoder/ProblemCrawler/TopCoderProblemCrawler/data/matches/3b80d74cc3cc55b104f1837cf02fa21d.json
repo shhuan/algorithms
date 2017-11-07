@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.27,
+			"constraints":[],
+			"correctRatio":69.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12948&rd=15838",
+			"name":"AlienAndHamburgers",
+			"notes":[],
+			"submission":634
+		},
+		{
+			"avgPts":242.78,
+			"constraints":[],
+			"correctRatio":70.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12980&rd=15838",
+			"name":"AlienAndSetDiv1",
+			"notes":[],
+			"submission":119
+		},
+		{
+			"avgPts":531.8,
+			"constraints":[],
+			"correctRatio":85.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12949&rd=15838",
+			"name":"AlienAndPermutation",
+			"notes":[],
+			"submission":7
+		}
+	],
+	"name":"Single Round Match 605 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15838"
+}

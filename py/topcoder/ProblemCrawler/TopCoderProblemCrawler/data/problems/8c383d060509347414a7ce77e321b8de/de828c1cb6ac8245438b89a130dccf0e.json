@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10780&rd=14182",
+	"statement":"The formerly celebrated general Archibald Waving has retired after losing the fifth army. His new peaceful lifestyle made him fond of board games. A particular one is a two player game in which each player has to take a checker across a sequence of cells on the board until reaching the final cell. There are <b>n</b> cells in the board and they are numbered from 1 to <b>n</b>. The dice in use has <b>d</b> faces and each number between 1 and <b>d</b> has the same probability of being the result of a dice throw. For fun purposes, Waving may play with insanely multi-faced dices. In each turn, a player throws a dice and then moves his piece up for as many positions as the face of the dice indicates. A player wins when he reaches the cell <b>n</b>.<br /><br /> <br /><br /> Waving has been playing against his wife, Esther, who has added a new rule to the game called 'bouncing'. This rule comes into action when a player whose position is on the last cells of the board gets a dice value that is larger than necessary to reach the <b>n</b>-th cell. In that case, instead of winning the game, the player will bounce back to the previous cells.<br /><br /> <br /><br /> Formally, if <i>a</i> is the current cell number in which the player's checker is located and <i>b</i> is the result of the dice throw then the following rules are used: <br /><br /> \n <ul> \n  <li>If <i>a</i> + <i>b</i> is less than <b>n</b>, the player moves the checker to cell (<i>a</i> + <i>b</i>).</li> \n  <li>If <i>a</i> + <i>b</i> is exactly <b>n</b>, the player moves the checker to cell <b>n</b> and hence wins the game.</li> \n  <li>If <i>a</i> + <i>b</i> is higher than <b>n</b>, the player moves the checker to cell (<b>n</b> - (<i>a</i> + <i>b</i> - <b>n</b>)).</li> \n </ul> <br /><br /> <br /><br /> Archibald has been wondering how does this rule affect the odds of winning the game at different states. You are given the number of cells <b>n</b>, the number of faces in the dice <b>d</b>, the cell on which Archibald's checker is currently located <b>x</b> and the cell on which Esther's checker is located <b>y</b>. Archibald is the next player to move. Return the probability of Archibald winning the game.",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BouncingDiceGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double winProbability(int n, int d, int x, int y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"10",
+			"note":"With a two faces dice, the bouncing aspect of the game has less of an effect and thus the probability for the first player to win is larger.",
+			"order":2
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"10",
+			"note":"Even though Waving is one cell away from the goal cell, the probability is still far from 100% due to the bouncing rule.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 10 and 5000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"d, x and y will be between 1 and n-1, inclusive."
+		}
+	]
+}

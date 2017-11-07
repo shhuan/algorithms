@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":199.51,
+			"constraints":[],
+			"correctRatio":67.35,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12867&rd=15711",
+			"name":"BigFatInteger",
+			"notes":[],
+			"submission":686
+		},
+		{
+			"avgPts":228.84,
+			"constraints":[],
+			"correctRatio":17.83,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12842&rd=15711",
+			"name":"FindPolygons",
+			"notes":[],
+			"submission":129
+		},
+		{
+			"avgPts":587.49,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12868&rd=15711",
+			"name":"SimilarNames",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"Single Round Match 599 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15711"
+}

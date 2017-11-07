@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12693&rd=15697",
+	"statement":"You are given an int <b>m</b>. Consider a square in the plane such that the corners of the square have coordinates (0, 0), (<b>m</b>, 0), (<b>m</b>, <b>m</b>), and (0, <b>m</b>). All the lattice points on the boundary of this square are red. That is, the red points have coordinates (0, 0), (1, 0), ..., (<b>m</b>, 0), (<b>m</b>, 1), ..., (<b>m</b>, <b>m</b>), (<b>m</b>-1, <b>m</b>), ..., (0, <b>m</b>), (0, <b>m</b>-1), ..., and (0, 1). <br /><br /><br /><br /> Some other lattice points are black. Each black point lies strictly inside the square. You are given two int[]s: <b>x</b> and <b>y</b>. These describe the black points: For each i, there is a black point at (<b>x</b>[i], <b>y</b>[i]). <br /><br /><br /><br /> <img src=\"http://www.topcoder.com/contest/problem/EnclosingTriangle/EnclosingTriangle0.png\" /> <br /><br /><br /><br /> You want to draw a triangle such that: \n <ol> \n  <li>all three of its vertices are red, </li> \n  <li>all black points lie inside or on the boundary of the triangle. </li> \n </ol> Return the number of ways to draw such a triangle. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EnclosingTriangle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getNumber(int m, int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ 1, 2, 3 }",
+			"id":0,
+			"input":"4",
+			"note":"The picture shows the 19 ways to draw a triangle.  ",
+			"order":1
+		},
+		{
+			"expect":"{ 1, 1, 6, 6 }",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{ 2 }",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{ 2, 6, 7, 6 }",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{ 7, 6, 5, 4, 3 }",
+			"id":0,
+			"input":"15",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"m will be between 2 and 58,585, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"x and y will each contain between 1 and 20 elements, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"x and y will contain the same number of elements. "
+		},
+		{
+			"order":4,
+			"val":"Each element of x and y will be between 1 and m-1, inclusive. "
+		},
+		{
+			"order":5,
+			"val":"All points described by x and y will be distinct. "
+		}
+	]
+}

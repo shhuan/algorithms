@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12527&rd=15497",
+	"statement":"Elly has a standard chessboard, divided into 8 by 8 unit square cells. She wants to place pebbles onto some of the cells. You are given a String[] <b>board</b>. The j-th character of the i-th element of <b>board</b> is '#' if she wants to put a pebble onto the cell (i, j), and it is '.' otherwise. <br /><br /><br /><br /> Initially the chessboard doesn't contain any pebbles. Elly places the pebbles one by one. The cost of adding a pebble is defined as follows. If this is the first pebble to be placed (i.e., the board is empty), it can be placed for free. Otherwise, the cost is the Manhattan distance (see Notes for the definition) to the most distant pebble that has already been placed on the board. <br /><br /><br /><br /> Return the minimal total cost of placing a pebble onto each chosen cell.",
+	"notes":[{
+		"order":1,
+		"val":"The Manhattan distance between the cell (x1, y1) and the cell (x2, y2) is defined as |x1-x2| + |y1-y2|, where || denotes absolute value."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EllysChessboard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCost(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"{\"........\", \"........\", \"...#....\", \".#......\", \".......#\", \"........\", \"........\", \"........\"}",
+			"note":"Elly wants to put pebbles on three cells: (2, 3), (3, 1), and (4, 7). One of the optimal ways to do this is as follows:  The total cost is 0 + 3 + 7 = 10.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"........\", \"........\", \"........\", \"........\", \"........\", \"........\", \"........\", \"........\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 58",
+			"id":0,
+			"input":"{\".#......\", \"........\", \"..#..#.#\", \"...#..#.\", \"........\", \"...#...#\", \"...#...#\", \"........\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 275",
+			"id":0,
+			"input":"{\"##..####\", \"#####..#\", \"..#.#...\", \"#..##.##\", \".#.###.#\", \"####.###\", \"#.#...#.\", \"##....#.\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 476",
+			"id":0,
+			"input":"{\"########\", \"########\", \"########\", \"########\", \"########\", \"########\", \"########\", \"########\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain exactly 8 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain exactly 8 characters."
+		},
+		{
+			"order":3,
+			"val":"Each character in board will be either '#' or '.'."
+		}
+	]
+}

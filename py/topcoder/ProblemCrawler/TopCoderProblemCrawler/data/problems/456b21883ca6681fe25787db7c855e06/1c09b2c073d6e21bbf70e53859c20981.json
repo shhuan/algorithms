@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8820&rd=12018",
+	"statement":"We're going to play a very simple game of poker. As in regular poker, there is a <i>pot</i>, and the winner of the hand wins the money in the pot. In this game, each of two players will be given a single card, numbered between 0 and <tt>N-1</tt>, inclusive. The pot initially contains $1, and the size of each bet is also $1. The player who goes first may either check (put nothing in the pot) or bet (put $1 in the pot). If the first player checked, the second player may either check or bet. If he bets the first player must then either fold (concede the pot to the second player) or call (put $1 in). If, on the other hand, the first player bets, the second player must decide whether to fold or call. If one player folds, then the other player wins the pot automatically. If neither player folds, then the player with the higher card wins the pot (ties split the pot). Thus, there will only be five possible outcomes to the betting: \n <ul> \n  <li>Player 1 bets, player 2 folds; player 1 wins the pot</li> \n  <li>Player 1 bets, player 2 calls; the player with the higher card wins, a tie results in the pot being evenly divided</li> \n  <li>Player 1 checks, player 2 checks; the player with the higher card wins, a tie results in the pot being evenly divided</li> \n  <li>Player 1 checks, player 2 bets, player 1 folds; player 2 wins the pot</li> \n  <li>Player 1 checks, player 2 bets, player 1 calls; the player with the higher card wins, a tie results in the pot being evenly divided</li> \n </ul> You will be given a complete description of a probabilistic strategy played by player 1. You, as player two, want to maximize your expected value, and must play accordingly, given player one's strategy. <br /><br /><br /><br /> A double[] <b>betProb</b> gives the probability that player one will bet with each of the <tt>N</tt> cards. <b>betProb[i]</b> gives the probability that player one will bet given that his card is <tt>i</tt>. Similarly, <b>callProb[i]</b> gives the probability that player one will first check, and then call if you bet, given that his card is <tt>i</tt>. Therefore, <tt>1-<b>betProb[i]</b>-<b>callProb[i]</b></tt> gives the probability that player one will check and then fold to your bet.<br /><br /><br /><br /> You should return your expected profit (including the initial $1 in the pot) given that you play optimally (knowing player one's strategy), and that each player's card is assigned independently and uniformly at random.",
+	"notes":[
+		{
+			"order":1,
+			"val":"The players do not know each other's cards."
+		},
+		{
+			"order":2,
+			"val":"The call probability is not conditional on not betting. It gives the joint probability of checking and then calling."
+		},
+		{
+			"order":3,
+			"val":"The profit is the amount you get from the pot that you didn't put in. Thus, if you tie your profit is $0.5, half of the original $1. If you call a bet and win your profit is $2. If you call a bet and lose, your profit is -$1."
+		},
+		{
+			"order":4,
+			"val":"Your return must have relative or absolute error less than 1E-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OptimalPlay",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winnings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"double[], double[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double winnings(double[] betProb, double[] callProb)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,0}",
+			"id":0,
+			"input":"{0,0}",
+			"note":"You can win every time -- just bet and your opponent will fold, giving you the initial $1.",
+			"order":1
+		},
+		{
+			"expect":"{0,0,0}",
+			"id":0,
+			"input":"{1,1,1}",
+			"note":"Your opponent bets no matter what. You should call if your card is a 1 or a 2. When it is a one, you will lose $1 when your opponent has a 2, win $2 when your opponent has a 0, and win $0.5 when your opponent also has a 1.",
+			"order":2
+		},
+		{
+			"expect":"{0,1,0}",
+			"id":0,
+			"input":"{0.5,0,1}",
+			"note":"We can describe your optimal strategy one card at a time (this is not the unique optimal strategy):  Using this strategy you will win 0.083 when you have card 0, 0.333 when you have card 1, and 1.333 when you have card 2. Thus 1.75/3=0.583 overall.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"betProb and callProb will each contain exactly N elements between 0 and 1, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The sum of corresponding elements of betProb and callProb will be at most 1."
+		}
+	]
+}

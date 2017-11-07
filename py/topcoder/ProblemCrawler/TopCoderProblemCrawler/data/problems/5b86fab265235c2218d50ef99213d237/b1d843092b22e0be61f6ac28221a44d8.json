@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=42&rd=2001",
+	"statement":"<pre>Create a class called Football. In football, scores are incremented by either\n2, 3, or 7 points. Given a numerical input (integer between 1 and 75)\nrepresenting a final score, calculate the number of all possible combinations\nof (2, 3, 7) which add up to that score. The output should be the number of\ncombinations found. Here are a couple of examples:\n\ninput | output | combinations\n1       0\n4       1        (2, 2)\n9       3        (2, 7), (2, 2, 2, 3), (3, 3, 3)\n11      3        (2, 2, 7), (2, 2, 2, 2, 3), (2, 3, 3, 3)\n\nHere is the method signature (be sure your method is public:\nint fetchCombinations(int input)\n\nWe will check to make sure the input to this problem is valid.</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Football",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fetchCombinations",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int fetchCombinations(int param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

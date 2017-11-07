@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7995&rd=13677",
+	"statement":"<p>In &quot;The Game of Eight&quot;, you are given a 3x3 board containing 8 squares labelled 1 through 8, and one empty space. The initial state of the board is given in the String[] <b>board</b>, where '.' represents the empty space. In each turn, you pick any square which is horizontally or vertically adjacent to an empty space and move it to the empty space (see example 0 for clarification). Your goal is to arrange the squares so the board looks like this: </p> <pre>\n{&quot;123&quot;,\n &quot;456&quot;,\n &quot;78.&quot;}\n</pre> <p> Return the minimum number of moves necessary to achieve this goal, or -1 if it's impossible. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GameOfEight",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fewestMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int fewestMoves(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"123\", \"485\", \"76.\"}",
+			"note":"The optimal solution is the following:  ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"123\", \"456\", \"78.\"}",
+			"note":"The game is already completed.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\".23\", \"456\", \"781\"}",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain exactly 3 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain exactly 3 characters."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of board will be a digit ('1' - '8') or a dot ('.')."
+		},
+		{
+			"order":4,
+			"val":"Each number between 1 and 8 will appear exactly once on the board."
+		}
+	]
+}

@@ -1,0 +1,105 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4436&rd=6534",
+	"statement":"<p>The blueprints for a large building call for a rectangular metal sheet of uniform thickness and density that has rectangular holes punched out at various positions. You are responsible for analyzing the stability of the building. To accomplish this, you need to determine the position of the perforated sheet's center of mass. The center of mass of a set of pointlike objects is defined as (Sum over all objects of object mass * object position)/(Total mass of all objects). In other words, it is the weighted average position of all the points. This definition also applies to continuous sets containing an infinite number of points, with the sum replaced by an integral and the masses replaced by a density function. For example, the center of mass of a uniformly dense rectangular sheet is just the center of the rectangle.</p> <p>Write a class PerforatedSheet with a method getCenterOfMass that takes two ints <b>sheetWidth</b> and <b>sheetHeight</b>, four int[]s <b>x</b>, <b>y</b>, <b>width</b>, and <b>height</b>, and returns a double[] containing the coordinates of the perforated sheet's center of mass. If the holes consume the entire sheet (the center of mass is undefined in this case), return an empty double[]. Otherwise, return a double[] with exactly two elements, with the first equal to the x-coordinate and the second equal to the y-coordinate. The sheet is positioned with one corner at (0,0) and the opposite corner at (<b>sheetWidth</b>,<b>sheetHeight</b>). Hole <i>i</i> has one corner at (<b>x</b>[<i>i</i>],<b>y</b>[<i>i</i>]) and its opposite corner at (<b>x</b>[<i>i</i>]+<b>width</b>[<i>i</i>],<b>y</b>[<i>i</i>]+<b>height</b>[<i>i</i>]).</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"It is possible for the holes to separate the sheet into two or more disconnected pieces. The definition of center of mass still applies."
+		},
+		{
+			"order":2,
+			"val":"Return values with either an absolute or relative error of less than 1e-9 are considered correct."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PerforatedSheet",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getCenterOfMass",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double[] getCenterOfMass(int sheetWidth, int sheetHeight, int[] x, int[] y, int[] width, int[] height)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"5",
+			"note":"The center of mass of a uniform rectangle is just its center.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"10",
+			"note":"The holes here just trim the edges of the sheet, leaving a smaller rectangle.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"Cutting out a small hole shifts the center of mass slightly.",
+			"order":3
+		},
+		{
+			"expect":"110524",
+			"id":0,
+			"input":"822741",
+			"order":4
+		},
+		{
+			"expect":"314159",
+			"id":0,
+			"input":"1234567",
+			"note":"The hole consumes the entire sheet.",
+			"order":5
+		},
+		{
+			"expect":"2000000",
+			"id":0,
+			"input":"2000000",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sheetWidth and sheetHeight will be between 1 and 2,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x, y, width and height will each contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"x, y, width and height will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of width and height will be a positive number."
+		},
+		{
+			"order":5,
+			"val":"Each of the holes represented by the inputs will be within the sheet (though they may touch the edges), and none of them will overlap."
+		}
+	]
+}

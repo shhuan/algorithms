@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":188.75,
+			"constraints":[],
+			"correctRatio":39.7,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12494&rd=15594",
+			"name":"TheLargestString",
+			"notes":[],
+			"submission":874
+		},
+		{
+			"avgPts":280.95,
+			"constraints":[],
+			"correctRatio":46.97,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12495&rd=15594",
+			"name":"TheMagicMatrix",
+			"notes":[],
+			"submission":66
+		},
+		{
+			"avgPts":451.14,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12185&rd=15594",
+			"name":"ThePowers",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"2013 TCO Algorithm > Round 2A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15594"
+}

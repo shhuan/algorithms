@@ -1,0 +1,124 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11117&rd=14245",
+	"statement":"Gogo lives in Rainyland and wants to attend a party. There are <b>N</b> houses in Rainyland, conveniently numbered 0 through <b>N</b>-1. Gogo lives in house 0 and the party is in house <b>N</b>-1. There are several bidirectional roads of various lengths that Gogo can traverse. <br /><br /> <br /><br /> It rains a lot in Rainyland. In fact, with the exception of several sunny intervals, it rains all the time. The i-th sunny interval starts at the beginning of minute <b>sunnyStart</b>[i] and ends at the beginning of minute <b>sunnyEnd</b>[i]. Gogo can't get his party clothes wet, so whenever it is raining, he must be inside a house. He can only traverse roads during sunny intervals. More exactly, if he starts traversing a road at the beginning of minute A and ends at the beginning of minute B, there must exist such i that <b>sunnyStart</b>[i] &lt;= A &lt; B &lt;= <b>sunnyEnd</b>[i]. <br /><br /> <br /><br /> The roads are given in the String[] <b>roads</b>. Concatenate the elements of <b>roads</b> to get a single space separated list of roads. Each road is formatted &quot;a,b,travelcost&quot; (quotes for clarity), which means that the bidirectional road connects city a and city b, and requires travelcost minutes to traverse either way. <br /><br /> <br /><br /> Gogo also has a time machine, which he can use to go back in time. He can only use the time machine inside a house, and it requires <b>machineStartTime</b> + X minutes to go back in time by X minutes. He can go back as far as time 0, but no further. For example, suppose the time is currently 100, <b>machineStartTime</b> is 10, and he wants to go back to time 80 because it was sunny then. It will take him 10 + 20 = 30 minutes to get back to time 80. Note that when he uses the time machine, his position will not change. In other words, he won't go back to where he happened to be at time 80 the last time he was there. <br /><br /> <br /><br /> Gogo is initially in his house at the beginning of minute 0. Return the minimum number of minutes Gogo needs to reach house <b>N</b>-1 without getting wet. Return -1 if it's impossible. Note that Gogo does not have to be in constant motion. For example, he can wait inside a house while waiting for a sunny interval. Also, note that time travel does not affect Gogo's total time. For example, in the scenario described above, if he used the time machine for the first time at time 100, then when he goes back to time 80, his total time will be 130 minutes, not 80 minutes.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TimeTravellingGogo",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"determineTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[], String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long determineTime(int N, int[] sunnyStart, int[] sunnyEnd, String[] roads, int machineStartTime)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,8}",
+			"id":0,
+			"input":"3",
+			"note":"First, walk from house 0 to house 1, arriving at minute 3. Then, go back in time to minute 1. This time travel requires 1+2=3 minutes. Finally, walk 3 minutes from house 1 to house 2, arriving at minute 4. The total time is 3+3+3=9 minutes.",
+			"order":1
+		},
+		{
+			"expect":"{0,8}",
+			"id":0,
+			"input":"3",
+			"note":"First, walk from house 0 to house 1, arriving at minute 3. Then, wait inside house 1 for 5 minutes. Finally, walk 4 minutes from house 1 to house 2, arriving at minute 12. The total time is 3+5+4=12 minutes.",
+			"order":2
+		},
+		{
+			"expect":"{1,3}",
+			"id":0,
+			"input":"2",
+			"note":"The length of each sunny interval is 1 minute, but the road from house 0 to house 1 requires 2 minutes to traverse, so it is impossible for Gogo to arrive at the party without getting his clothes wet.",
+			"order":3
+		},
+		{
+			"expect":"{0,17}",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 20, inclusive."
+		},
+		{
+			"order":2,
+			"val":"sunnyStart will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of sunnyStart will be between 0 and 999,999,999, inclusive."
+		},
+		{
+			"order":4,
+			"val":"sunnyEnd will contain the same number of elements as sunnyStart."
+		},
+		{
+			"order":5,
+			"val":"sunnyEnd[i] will be between sunnyStart[i]+1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"There will be at least a minute of rain between two sunny intervals, that is, sunnyEnd[i] &lt; sunnyStart[i+1]."
+		},
+		{
+			"order":7,
+			"val":"roads will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Each element of roads will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":9,
+			"val":"Each character in roads will be '0'-'9', ' ', or ','."
+		},
+		{
+			"order":10,
+			"val":"roads will be formatted as described in the problem statement without leading or trailing spaces."
+		},
+		{
+			"order":11,
+			"val":"All integers in the concatenation of all the elements of roads in the order they are given will have no extra leading zeroes."
+		},
+		{
+			"order":12,
+			"val":"In each road, a and b as described in the problem statement will be different and will each be between 0 and N-1, inclusive."
+		},
+		{
+			"order":13,
+			"val":"In each road, travelcost as described in the problem statement will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":14,
+			"val":"For each two different houses, there will be at most one road connecting them."
+		},
+		{
+			"order":15,
+			"val":"machineStartTime will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

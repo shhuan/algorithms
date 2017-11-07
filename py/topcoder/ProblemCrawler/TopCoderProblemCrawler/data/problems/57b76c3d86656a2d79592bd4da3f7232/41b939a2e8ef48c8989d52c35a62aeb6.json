@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6085&rd=9817",
+	"statement":"A popular musical group 'Flattened' has decided to release a new album. It consists of <b>nSongs</b> songs. All songs are of the same <b>length</b> (given in seconds). A CD can store <b>cdCapacity</b> seconds of audio. Each pair of consecutive songs must be separated by a 1 second pause. The group director is superstitious, so the number of songs on a CD must never be divisible by 13. Given these constraints, return the smallest number of CDs required to fit the entire album. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NewAlbum",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"leastAmountOfCDs",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int leastAmountOfCDs(int nSongs, int length, int cdCapacity)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"7",
+			"note":"There are at most two songs on each CD.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"20",
+			"note":"All the songs will fit on a single CD. ",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"26",
+			"note":"Even though all 26 songs will fit on a single CD, we must use two CDs because 26 is divisible by 13.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"26",
+			"order":4
+		},
+		{
+			"expect":"271",
+			"id":0,
+			"input":"67",
+			"order":5
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"27",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"nSongs will be between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"cdCapacity will be between 1 and 10000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"length will be between 1 and cdCapacity, inclusive."
+		}
+	]
+}

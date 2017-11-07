@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":229.15,
+			"constraints":[],
+			"correctRatio":83.08,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1633&rd=4490",
+			"name":"SpriteCollision",
+			"notes":[],
+			"submission":130
+		},
+		{
+			"avgPts":292.21,
+			"constraints":[],
+			"correctRatio":81.61,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1209&rd=4490",
+			"name":"RoundRobin",
+			"notes":[],
+			"submission":87
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1624&rd=4490",
+			"name":"Knapsack",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"Single Round Match 140 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4490"
+}

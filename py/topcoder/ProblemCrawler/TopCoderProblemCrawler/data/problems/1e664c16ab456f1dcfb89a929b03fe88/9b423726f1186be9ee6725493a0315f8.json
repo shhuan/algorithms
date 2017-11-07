@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11266&rd=14436",
+	"statement":"<p>Fox Ciel has <b>Ns</b> cubes with edge length 1 and <b>Nb</b> cubes with edge length <b>L</b>. She wants to pack her cubes in a rectangular parallelepiped box. Each cube must be packed in the box such that each of its edges is parallel to an edge of the box.</p> <p></p> <p>Ciel wants to know the smallest possible box she can use. Return the minimum possible volume of a box which can store her cubes.</p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"A rectangular parallelepiped is a closed box composed of three pairs of rectangular faces placed opposite each other and joined at right angles to each other."
+		},
+		{
+			"order":2,
+			"val":"The answer will fit in 32-bit signed integer."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CubePacking",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimumVolume",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimumVolume(int Ns, int Nb, int L)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"19",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"51",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"987",
+			"id":0,
+			"input":"12345",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Ns will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Nb will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"L will be between 2 and 10, inclusive."
+		}
+	]
+}

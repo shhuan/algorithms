@@ -1,0 +1,109 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3082&rd=5885",
+	"statement":"As the manager of a large company, you have a number of factories, and a number of retail stores. Each factory has a location given as (x,y), and some output capacity. Each store also has a location given as (x,y), and a demand specifying the number of products it must receive. Products are produced at the factories, and sent to the stores, and it is important that the stores receive the number of products they ask for. Recently, the factories have not been able to keep up with demand, so you are planning to build a new one. However, you are not sure where the best place to build it is. There is a constant cost of shipping per product, per unit of distance, which we'll call C. Hence, shipping 3 products from (0,0) to (3,4) costs 3*sqrt(3*3+4*4)*C = 15*C. Your new factory will have an output capacity exactly equal to the current difference between the sum of the capacities of all the factories, and the sum of the demands of all the stores. Your task is, assuming an optimal shipping plan, determine the best location to place the new factory.<br /><br /><br /><br /> A String[], <b>factories</b>, will specify the location and capacity of each factory in the format &quot;X Y CAPACITY&quot;, where X, Y and CAPACITY are integers. Another String[], <b>stores</b>, will specify the locations and demands of the stores in the format &quot;X Y DEMAND&quot;, where X, Y and DEMAND are integers. You should return the optimal factory location as a int[] with two elements, x and y, in that order.",
+	"notes":[
+		{
+			"order":1,
+			"val":"The location of the new factory must have integral coordinates."
+		},
+		{
+			"order":2,
+			"val":"There may be multiple factories or stores at the same location."
+		},
+		{
+			"order":3,
+			"val":"The constraints ensure that the return is unique."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Supply",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"newFactory",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] newFactory(String[] factories, String[] stores)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"5 0 7\",\"10 0 8\"}",
+			"id":0,
+			"input":"{\"4 0 10\"}",
+			"note":"There are two stores, with demands of 7 and 8. The single existing factory has a capacity of 10, so our new factory must have a capacity of 5. The best place to put the factory is (10,0), the same spot as the store. Then, we have to ship 3 units from the existing factory to (10,0), and 7 units to (5,0). Thus, our total cost is 7*1*C + 3*6*C = 25*C. ",
+			"order":1
+		},
+		{
+			"expect":"{\"5 5 7\",\"10 10 8\",\"10 0 5\"}",
+			"id":0,
+			"input":"{\"0 0 1\"}",
+			"note":"Notice that the optimal factory placement is not always at the same location as a store. The total cost here is about 92.485*C.",
+			"order":2
+		},
+		{
+			"expect":"{\"0 0 8\", \"1 1 8\", \"2 2 4\", \"3 3 9\", \"4 4 9\", \"5 5 8\", \"6 6 1\", \"7 7 5\", \"8 8 2\", \"9 9 10\"}",
+			"id":0,
+			"input":"{\"0 0 10\",\"0 10 10\",\"10 0 10\",\"10 10 10\"}",
+			"order":3
+		},
+		{
+			"expect":"{\"6 2 10\",\"2 6 2\",\"7 1 9\"}",
+			"id":0,
+			"input":"{\"3 3 10\",\"10 7 7\"} ",
+			"order":4
+		},
+		{
+			"expect":"{\"8 10 9\",\"8 5 2\",\"5 4 7\",\"6 6 7\",\"9 10 3\", \"6 8 7\",\"5 2 6\",\"6 9 2\",\"6 3 9\",\"10 10 9\"} ",
+			"id":0,
+			"input":"{\"2 8 10\",\"0 1 9\",\"6 4 10\",\"4 8 10\"} ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"stores will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"factories will contain between 1 and 4 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each X and Y in stores and factories will be between 0 and 10, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each CAPACITY and DEMAND will be between 1 and 10, inclusive."
+		},
+		{
+			"order":5,
+			"val":"There will be no extraneous leading zeros or extra spaces in either input."
+		},
+		{
+			"order":6,
+			"val":"The total DEMAND will exceed the total CAPACITY."
+		},
+		{
+			"order":7,
+			"val":"The location providing the minimum cost will be unique, and there will be no other locations that have costs within 1E-3*C of that minimum."
+		}
+	]
+}

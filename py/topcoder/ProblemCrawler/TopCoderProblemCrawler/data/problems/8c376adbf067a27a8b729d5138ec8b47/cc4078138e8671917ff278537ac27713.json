@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4723&rd=8021",
+	"statement":"You will be given a String, <b>eq</b>, representing some simple addition. It will be formatted as a sequence of terms separated by single plus signs. Each term will be either an integer between 0 and 1000, inclusive, or a sequence of lowercase letters, representing a variable. The values of all the variables in <b>eq</b> will be given in a String[], <b>vars</b>, each element of which will be formatted as &quot;VARIABLE VALUE&quot;. You should return the sum represented by <b>eq</b>.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"VariableAddition",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"add",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int add(String eq, String[] vars)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"\"1+2+3\"",
+			"order":1
+		},
+		{
+			"expect":"{\"a 1\",\"aa 2\",\"aaa 1\"}",
+			"id":0,
+			"input":"\"a+aa+aaa\"",
+			"order":2
+		},
+		{
+			"expect":"{\"a 999\",\"xyz 0\",\"num 11\"}",
+			"id":0,
+			"input":"\"1+3+a+xyz+33+num+num\"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"eq will be formatted as described in the problem."
+		},
+		{
+			"order":2,
+			"val":"eq will contain at least one plus sign."
+		},
+		{
+			"order":3,
+			"val":"eq will contain between 3 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of vars will be formatted as &quot;VARIABLE VALUE&quot;, where VARIABLE is a sequence of lowercase letters and VALUE is an integer between 0 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"None of the integers in the input will have extra leading zeros."
+		},
+		{
+			"order":6,
+			"val":"Each variable in eq will be present in vars."
+		},
+		{
+			"order":7,
+			"val":"Each variable in vars will be present in eq, and no variable will occur more than once in vars."
+		},
+		{
+			"order":8,
+			"val":"Each element of vars will contain at most 50 characters."
+		}
+	]
+}

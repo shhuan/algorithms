@@ -1,0 +1,116 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10805&rd=14185",
+	"statement":"Little Dazdraperma likes graphs a lot. Recently she invented a new game for one person with graphs. She is given a connected undirected graph with N vertices numbered 0 to N-1, inclusive (see the notes for definitions of all unclear terms from graph theory). Each edge of the graph is labeled with a positive integer length. She tries to remove some edges (possibly 0) so that the resulting graph satisfies the following conditions: \n <ul> \n  <li>The graph that remains is a tree with exactly N-1 edges.</li> \n  <li>For each v, 0 &lt; v &lt; N, the shortest distance between vertex 0 and vertex v is the same in the resulting graph and in the initial graph.</li>\n </ul> Dazdraperma wonders how many different resulting graphs that satisfy these conditions she can obtain. Two graphs are considered different if there are two different vertices such that one of the graphs contains an edge between these two vertices and another graph doesn't contain an edge between them. <br /><br /> <br /><br /> You are given the representation of the initial graph as a String[] <b>graph</b>. This String[] contains exactly N elements and each element contains exactly N characters. The j-th character in the i-th element will be '0' if there is no edge between vertices i and j. Otherwise, it will be a character between '1' and '9' representing the length of the edge between vertices i and j. <br /><br /> <br /><br /> Return the number of possible resulting graphs modulo 1000000007.",
+	"notes":[
+		{
+			"order":1,
+			"val":"For the purpose of this problem, an undirected graph can be treated as a set of vertices and a set of edges, where each edge establishes a bidirectional connection between two different vertices."
+		},
+		{
+			"order":2,
+			"val":"A path between two different vertices A and B in a graph G is a sequence of 2 or more vertices v[0] = A, v[1], ..., v[L-1] = B, such that there's an edge in G between each two adjacent vertices in this sequence. A path is said to consist of edges between v[i] and v[i+1], where 0 ≤ i < L-1. The length of a path is the sum of lengths of all edges it consists of. "
+		},
+		{
+			"order":3,
+			"val":"The path between vertices A and B in a graph G that has the minimum possible length is called the shortest path between them. The length of this path is called the shortest distance between A and B."
+		},
+		{
+			"order":4,
+			"val":"A graph G is connected if there's a path between each two different vertices of G."
+		},
+		{
+			"order":5,
+			"val":"A graph G is a tree if it is connected and contains exactly V-1 edges, where V is the total number of vertices in G."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TreesCount",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(String[] graph)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"01\", \"10\"}",
+			"note":"The graph is already a tree, so the answer is 1.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"011\", \"101\", \"110\"}",
+			"note":"The only possibility is to delete the edge between vertices 1 and 2.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"021\", \"201\", \"110\"}",
+			"note":"You can either delete the edge between vertices 1 and 2 or the edge between vertices 0 and 1.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"0123\", \"1012\", \"2101\", \"3210\"}",
+			"note":"More possibilities.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"073542\", \"705141\", \"350721\", \"517031\", \"442304\", \"211140\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"graph will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of graph will contain the same number of characters as the number of elements in graph."
+		},
+		{
+			"order":3,
+			"val":"Each character in each element of graph will be between '0' and '9', inclusive."
+		},
+		{
+			"order":4,
+			"val":"For each i, the i-th character of i-th element of graph will always be '0'."
+		},
+		{
+			"order":5,
+			"val":"For each i and j, the i-th character of j-th element of graph will always be equal to the j-th character of i-th element of graph."
+		},
+		{
+			"order":6,
+			"val":"graph will represent a connected graph."
+		}
+	]
+}

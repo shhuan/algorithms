@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1125&rd=4375",
+	"statement":"This problem involves an elaborate marble maze game. The maze is composed of choosers that look like this:<pre>\n        Right Oriented                     Left Oriented\n           |       |                         |       |                     \n           |       |                         |       |\n           |       |                         |       |\n          / \\       \\                       /       / \\\n         /   \\       \\                     /       /   \\\n        /     \\       \\                   /       /     \\\n       /       O       \\                 /       O       \\\n      /       / \\       \\               /       / \\       \\\n     /       /   \\       \\             /       /   \\       \\            </pre> A marble is put in the top of the chooser. The bar in the middle of the chooser determines whether the marble will leave to the left or the right. After a marble passes through the chooser the bar moves. For example, if a marble enters the right oriented chooser pictured above, it would leave toward the right but, the next marble to pass through would leave toward the left. The exact opposite would hold true for the left oriented chooser pictured above. We can make a game by networking a bunch of choosers together using tubes. For example:<br /><br /> game = {&quot;L 1 2&quot;,&quot;R 2 0&quot;,&quot;L X X&quot;}<br /><br /> This means that chooser 0 begins oriented to the left. Its left path leads to chooser 1, and its right path leads to chooser 2. Chooser 1 begins oriented to the right. Its left path leads to chooser 2, and its right path leads to chooser 0. Chooser 2 begins oriented to the left. Its left and right path both leave the game. If I place a marble in chooser 0 it will pass through 4 choosers before leaving the game (namely 0 then 1 then 0 then 2). Given a network of choosers, and a chooser that we drop the marble into, determine how many choosers the marble will pass through before leaving the game. If it will never leave return -1.<br /><br /> <br /><br /> Create a class Choosers that contains the method length, which takes a String[] game, and an int chooser, and returns an int representing how many choosers the marble will pass through before leaving the game. Return -1 if it will never leave.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Choosers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"length",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int length(String[] game, int start)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"L 1 2\",\"R 2 0\",\"L X X\"}",
+			"note":"The marble goes from 0 to 1 to 0 to 2 and then leaves.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"L 1 2\",\"R 2 0\",\"L X X\"}",
+			"note":"The marble leaves immediately.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"L 0 0\"}",
+			"note":"Clearly, the marble never leaves.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"game will contain between 1 and 15 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of game will be formatted as &quot;&lt;dir&gt; &lt;left&gt; &lt;right&gt;&quot; with no extra, leading or trailing spaces, or extra leading 0's."
+		},
+		{
+			"order":3,
+			"val":"&lt;dir&gt; is either 'L' or 'R'"
+		},
+		{
+			"order":4,
+			"val":"&lt;left&gt; and &lt;right&gt; are each either the character 'X' or integers between 0 and the length of game - 1, inclusive."
+		}
+	]
+}

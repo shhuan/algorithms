@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":157.69,
+			"constraints":[],
+			"correctRatio":60,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8110&rd=10898",
+			"name":"LetterInterchange",
+			"notes":[],
+			"submission":385
+		},
+		{
+			"avgPts":347.78,
+			"constraints":[],
+			"correctRatio":77.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7501&rd=10898",
+			"name":"LongestSubanagramChain",
+			"notes":[],
+			"submission":236
+		},
+		{
+			"avgPts":601.62,
+			"constraints":[],
+			"correctRatio":60.87,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8162&rd=10898",
+			"name":"KSlopePermutation",
+			"notes":[],
+			"submission":46
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Online Round 1A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10898"
+}

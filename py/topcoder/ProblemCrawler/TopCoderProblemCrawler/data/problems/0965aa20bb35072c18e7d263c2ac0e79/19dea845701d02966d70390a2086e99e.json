@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8315&rd=12173",
+	"statement":"<p>Particles (which can be considered points in 3D-space for the purposes of the problem) can move in an electro-magnetic field. If a particle is charged, its trajectory can be described as spiral, and if it is uncharged, it is just a straight line. Given two particles (one charged and one uncharged) it should be determined whether they can possibly collide or not. Two particles can possibly collide if and only if their trajectories intersect.</p> <p>Some steps have already been made by the physicist to simplify the problem, so the coordinates of the charged particle are represented as follows:</p> <p>x1 = cos(PI * t)</p> <p>y1 = sin(PI * t)</p> <p>z1 = t</p> <p>and for the uncharged particle:</p> <p>x2 = <b>vx</b> * t + <b>x0</b></p> <p>y2 = <b>vy</b> * t + <b>y0</b></p> <p>z2 = <b>vz</b> * t + <b>z0</b></p> <p>Here t is a parameter which can be chosen arbitrarily and independently for both trajectories.</p> <p>Your method will be given 6 integers - <b>vx</b>, <b>vy</b>, <b>vz</b>, <b>x0</b>, <b>y0</b> and <b>z0</b>, describing the trajectory of the uncharged particle. It should determine whether the two given trajectories intersect or not. If they do, it should return a double[] containing exactly 3 elements x, y and z - the coordinates of the point where a collision can happen. If there is more than one such point, it should return a double[] containing exactly three zeroes. If collision of the two particles is impossible it should return an empty double[].</p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"PI can be considered equal to 3.14159265358979323846."
+		},
+		{
+			"order":2,
+			"val":"All return values with either an absolute or relative error of less than 1.0E-9 are considered correct."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ParticleCollision",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"collision",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double[] collision(int vx, int vy, int vz, int x0, int y0, int z0)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"The second trajectory is a single point (0, 0, 0), which doesn't lie on the first trajectory.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"2",
+			"note":"There is a single intersection point with coordinates (0, 1, 0.5).",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"There are two intersection points.",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"There are infinitely many intersection points.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"vx, vy and vz will each be between -10 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x0, y0 and z0 will each be between -10 and 10, inclusive."
+		}
+	]
+}

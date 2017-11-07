@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.2,
+			"constraints":[],
+			"correctRatio":37.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=521&rd=4100",
+			"name":"ArithOrGeo",
+			"notes":[],
+			"submission":206
+		},
+		{
+			"avgPts":366.1,
+			"constraints":[],
+			"correctRatio":30.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=465&rd=4100",
+			"name":"Raindrops",
+			"notes":[],
+			"submission":154
+		},
+		{
+			"avgPts":428.45,
+			"constraints":[],
+			"correctRatio":14.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=554&rd=4100",
+			"name":"Puzzle",
+			"notes":[],
+			"submission":35
+		}
+	],
+	"name":"Single Round Match 75 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4100"
+}

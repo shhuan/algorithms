@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12331&rd=15185",
+	"statement":"We say that a string Z can be obtained by shuffling two strings X and Y together, if it is possible to interleave the letters of X and Y so that Z is obtained. It is not allowed to change the order of letters in X and Y. For example, you can shuffle the strings X=&quot;abcd&quot; and Y=&quot;efg&quot; to produce any of the strings &quot;abcdefg&quot;, &quot;aebfcgd&quot;, &quot;abcefgd&quot;, or &quot;eabcfdg&quot;, but you cannot produce the string &quot;bacdefg&quot;. <br /><br /> <br /><br /> <br /><br /> Formally, let Shuffle(X,Y) be the set of all strings that can be produced by shuffling X and Y together. We can define Shuffle inductively as follows: \n <ul> \n  <li>for any string X: Shuffle(&quot;&quot;,X) = Shuffle(X,&quot;&quot;) = { X }</li> \n  <li>for any letters a, b and any strings X, Y: Shuffle(aX,bY) = { aZ : Z belongs to Shuffle(X,bY) } united with { bZ : Z belongs to Shuffle(aX,Y) }.</li> \n </ul> <br /><br /> <br /><br /> <br /><br /> Fox Ciel wants to register on TopCoder. In order to do that, she has to pick a handle. Ciel has a pet cat called <b>S</b>. As her handle, Ciel wants to use a string H with the following property: <b>S</b> can be obtained by shuffling H and some permutation of H together.<br /><br /> For example, if <b>S</b>=&quot;ceiiclel&quot;, one possible handle would be H=&quot;ciel&quot;: she can permute H to obtain H'=&quot;eicl&quot;, and then shuffle these H and H' together to produce <b>S</b>. <br /><br /> <br /><br /> <br /><br /> You are given the String <b>S</b>. The constraints guarantee that there is at least one possible handle H with the above property. Find and return the lexicographically smallest valid H.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxAndHandle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"lexSmallestName",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String lexSmallestName(String S)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"fox\"",
+			"id":0,
+			"input":"\"foxfox\"",
+			"note":"There are five possible handles for Fox Ciel in this test case: \"fox\", \"fxo\", \"ofx\", \"oxf\", and \"xfo\". The lexicographically smallest one is \"fox\".",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"ceil\"",
+			"id":0,
+			"input":"\"ccieliel\"",
+			"note":"Note that \"ciel\" is also a valid handle, but \"ceil\" is lexicographically smaller.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"aabb\"",
+			"id":0,
+			"input":"\"abaabbab\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"bbaa\"",
+			"id":0,
+			"input":"\"bbbbaaaa\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"afedcb\"",
+			"id":0,
+			"input":"\"fedcbafedcba\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"deilvon\"",
+			"id":0,
+			"input":"\"nodevillivedon\"",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"S will contain between 2 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of S will be a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":3,
+			"val":"Each letter ('a'-'z') will occur in S an even number of times."
+		}
+	]
+}

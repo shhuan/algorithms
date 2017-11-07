@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":117.81,
+			"constraints":[],
+			"correctRatio":60,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=914&rd=9912",
+			"name":"BankingArray",
+			"notes":[],
+			"submission":5
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6048&rd=9912",
+			"name":"MaxKTrace",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"TCO 06 > Sponsor Track Set 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9912"
+}

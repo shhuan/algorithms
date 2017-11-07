@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":187.35,
+			"constraints":[],
+			"correctRatio":55.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7654&rd=10711",
+			"name":"DateFormat",
+			"notes":[],
+			"submission":501
+		},
+		{
+			"avgPts":396.73,
+			"constraints":[],
+			"correctRatio":44.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7248&rd=10711",
+			"name":"RemissiveSwaps",
+			"notes":[],
+			"submission":466
+		},
+		{
+			"avgPts":556.53,
+			"constraints":[],
+			"correctRatio":80.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7658&rd=10711",
+			"name":"RooksPlacement",
+			"notes":[],
+			"submission":131
+		}
+	],
+	"name":"Single Round Match 354 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10711"
+}

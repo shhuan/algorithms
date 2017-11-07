@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":227.83,
+			"constraints":[],
+			"correctRatio":96.73,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=665&rd=4335",
+			"name":"Bullets",
+			"notes":[],
+			"submission":428
+		},
+		{
+			"avgPts":229.38,
+			"constraints":[],
+			"correctRatio":39.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=511&rd=4335",
+			"name":"MatArith",
+			"notes":[],
+			"submission":219
+		},
+		{
+			"avgPts":575.01,
+			"constraints":[],
+			"correctRatio":50.94,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=979&rd=4335",
+			"name":"Doorknobs",
+			"notes":[],
+			"submission":53
+		}
+	],
+	"name":"2002 TopCoder Invitational > Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4335"
+}

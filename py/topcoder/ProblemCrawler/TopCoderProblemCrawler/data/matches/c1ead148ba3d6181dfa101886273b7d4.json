@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":215.73,
+			"constraints":[],
+			"correctRatio":93.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7881&rd=10839",
+			"name":"CostMatrix",
+			"notes":[],
+			"submission":16
+		},
+		{
+			"avgPts":237.68,
+			"constraints":[],
+			"correctRatio":55.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7769&rd=10839",
+			"name":"DifferentPokerHands",
+			"notes":[],
+			"submission":9
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7768&rd=10839",
+			"name":"WorstCaseQuicksort",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2007 TopCoder Open > Semifinal Room 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10839"
+}

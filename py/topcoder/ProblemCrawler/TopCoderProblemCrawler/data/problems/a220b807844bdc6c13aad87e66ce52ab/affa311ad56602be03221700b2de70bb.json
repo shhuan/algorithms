@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8769&rd=12016",
+	"statement":"<p> Several people play with a 6-sided die and take alternating turns. In each turn the player starts by throwing the die, and the player who throws a '6' wins immediately. Obviously, each turn entails a one in six chance of winning. As soon as one player wins, the game ends and all other players lose the game. </p> <p> The game is not fair. For example, in a two-player version, the first player is expected to win 6 out of 11 games. </p> <p> In our problem <b>playerCount</b> mathematicians decided to play a fair version of the game. After a while, they came up with a solution -- they will not take alternating turns. Instead, they will find and follow a different sequence of turns that will make the game fair. (See notes for a precise definition.) </p> <p> For simplicity, assume that the players are assigned the first <b>playerCount</b> letters of the alphabet. Then the sequence of turns can be represented as an infinite string of letters. Out of all fair sequences we will be interested in the lexicographically smallest one. </p> <p> You are given an int <b>playerCount</b>, and an int <b>turnNumber</b>. Your method should find the lexicographically smallest fair sequence of moves for <b>playerCount</b> players, and return a one-character String containing the player that has to play in the turn <b>turnNumber</b>. Turns are numbered starting from 1. If there is no fair sequence of moves for <b>playerCount</b> players, return an empty string instead. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Given two different sequences of turns X and Y, sequence X is lexicographically smaller than Y if and only if at the first place where they differ the character in X is earlier in the alphabet than the one in Y."
+		},
+		{
+			"order":2,
+			"val":"An infinite sequence of turns S is fair if for any player P and for any number of turns T the following sentence is true: If the players take turns according to the sequence, then the probability that player P wins in one of the first T turns is at most equal to 1/."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FairDiceGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getPlayer",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getPlayer(int playerCount, int turnNumber)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"note":"For two players, there are many fair sequences of turns. In the lexicographically smallest one, the first player must obviously be A.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"There is at least one fair sequence such that A takes the second turn as well.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"2",
+			"note":"In the lexicographically smallest fair sequence for two players the player A takes the first three turns, and B takes the fourth one.",
+			"order":3
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"17",
+			"note":"There is no fair sequence of turns for 17 players.",
+			"order":4
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"3",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"playerCount will be between 2 and 26, inclusive."
+		},
+		{
+			"order":2,
+			"val":"turnNumber will be between 1 and 20, inclusive."
+		}
+	]
+}

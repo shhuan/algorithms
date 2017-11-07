@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":221.52,
+			"constraints":[],
+			"correctRatio":97.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=336&rd=4115",
+			"name":"PoemCode",
+			"notes":[],
+			"submission":213
+		},
+		{
+			"avgPts":329.07,
+			"constraints":[],
+			"correctRatio":53.88,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=337&rd=4115",
+			"name":"Pinball",
+			"notes":[],
+			"submission":206
+		},
+		{
+			"avgPts":631.14,
+			"constraints":[],
+			"correctRatio":36.92,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=342&rd=4115",
+			"name":"CleanupCrew",
+			"notes":[],
+			"submission":65
+		}
+	],
+	"name":"Single Round Match 78 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4115"
+}

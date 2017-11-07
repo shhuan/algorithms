@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":154.09,
+			"constraints":[],
+			"correctRatio":79.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12025&rd=14737",
+			"name":"StrIIRec",
+			"notes":[],
+			"submission":560
+		},
+		{
+			"avgPts":286.31,
+			"constraints":[],
+			"correctRatio":76.76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11937&rd=14737",
+			"name":"Spacetsk",
+			"notes":[],
+			"submission":185
+		},
+		{
+			"avgPts":523.9,
+			"constraints":[],
+			"correctRatio":15.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12004&rd=14737",
+			"name":"SetAndSet",
+			"notes":[],
+			"submission":26
+		}
+	],
+	"name":"Single Round Match 545 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14737"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.53,
+			"constraints":[],
+			"correctRatio":83.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12165&rd=15150",
+			"name":"FloodFill3D",
+			"notes":[],
+			"submission":12
+		},
+		{
+			"avgPts":313.01,
+			"constraints":[],
+			"correctRatio":80,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12216&rd=15150",
+			"name":"StRings",
+			"notes":[],
+			"submission":10
+		},
+		{
+			"avgPts":543.07,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12149&rd=15150",
+			"name":"YetAnotherNim",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2012 TCO Algorithm > Semifinal 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15150"
+}

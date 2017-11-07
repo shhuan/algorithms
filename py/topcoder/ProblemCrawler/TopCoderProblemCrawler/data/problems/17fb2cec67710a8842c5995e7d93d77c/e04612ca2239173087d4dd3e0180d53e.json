@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4808&rd=7999",
+	"statement":"A Z-curve is a path that traces through all the points in a two-dimensional square grid in such a way that the four quadrants are visited in order: first the upper left, then the upper right, then the lower left, and finally the lower right. If those quadrants contain more than 1 cell, these cells are visited recursively, in the same manner. A Z-curve of order N is a path through a 2^N by 2^N grid. A Z-curve of order 1 is a simple Z-shape through a 2-by-2 grid, as shown below. <br /><br /> <p> <img src=\"http://www.topcoder.com/contest/problem/ZCurve/zcurve1.png\" /> </p> <br /><br /> Here is a diagram of a Z-curve of order 2. <br /><br /> <p> <img src=\"http://www.topcoder.com/contest/problem/ZCurve/zcurve2.png\" /> </p> <br /><br /> Notice the order each quadrant was visited:<br /><br /> - upper left quadrant: 0, 1, 2, 3 <br /><br /> - upper right quadrant: 4, 5, 6, 7<br /><br /> - lower left quadrant: 8, 9, 10, 11<br /><br /> - lower right quadrant: 12, 13, 14, 15<br /><br /><br /><br /> You will be given a value <b>N</b> and coordinates <b>r</b> and <b>c</b> denoting the row and the column in a 2^N by 2^N grid. Coordinates range from 0 to (2^N)-1 inclusive, with the upper left corner at coordinates (0,0). Assuming you start from the upper left corner and the points are traversed in the order specified by a Z-curve of order <b>N</b>, determine how many steps it takes to reach the point at coordinates (<b>r</b>,<b>c</b>). ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ZCurve",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"zValue",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int zValue(int N, int r, int c)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"3",
+			"note":"(7,7) is in the lower right corner of the grid and, as shown in the following diagram, it is the last point visited. ",
+			"order":3
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"4",
+			"note":"The upper left quadrant of a Z-curve of order 4 is actually a Z-curve of order 3 and, because it is the first quadrant visited, the answer is the same as in the previous example.",
+			"order":4
+		},
+		{
+			"expect":"511",
+			"id":0,
+			"input":"10",
+			"order":5
+		},
+		{
+			"expect":"512",
+			"id":0,
+			"input":"10",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N is between 1 and 15, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"r and c are between 0 and 2^N-1, inclusive. "
+		}
+	]
+}

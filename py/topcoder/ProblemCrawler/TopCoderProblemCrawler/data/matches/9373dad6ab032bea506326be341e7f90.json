@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":220.36,
+			"constraints":[],
+			"correctRatio":96.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10933&rd=14279",
+			"name":"EqualizeStrings",
+			"notes":[],
+			"submission":1429
+		},
+		{
+			"avgPts":269.74,
+			"constraints":[],
+			"correctRatio":60.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10937&rd=14279",
+			"name":"TwoRegisters",
+			"notes":[],
+			"submission":756
+		},
+		{
+			"avgPts":582.73,
+			"constraints":[],
+			"correctRatio":80.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10897&rd=14279",
+			"name":"VacationTours",
+			"notes":[],
+			"submission":145
+		}
+	],
+	"name":"2010 TCO Algorithm > Online Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14279"
+}

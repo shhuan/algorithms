@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11524&rd=14541",
+	"statement":"Toastman has sent Fox Ciel a message consisting entirely of lowercase 'o' and 'x' letters. This message has the interesting property that for any even-length contiguous substring of this message, the number of 'o's will equal the number of 'x's. <br /><br /> <br /><br /> Unfortunately due to the nature of the network, some of the letters in the message can become corrupted. You are given a String <b>message</b>, each character of which is 'o', 'x', or '?'. 'o' or 'x' denotes that the letter in the message is not corrupted and is equal to the corresponding letter. A '?' denotes that the letter at that position is corrupted and might have been either 'o' or 'x'. <br /><br /> <br /><br /> Your job is to replace each of the '?' characters in the input by either 'o' or 'x' such that the resulting message has the interesting property described above, and return that corrected message. It is guaranteed that there will be exactly one such message for the given input.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NetworkXZeroOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"reconstruct",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String reconstruct(String message)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"xoxo\"",
+			"id":0,
+			"input":"\"x?x?\"",
+			"note":"Consider the entire message, which is a contiguous substring of the input message of length 4, which is even. It has two 'x's, so it follows that the other two '?' characters must be both 'o'.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"oxox\"",
+			"id":0,
+			"input":"\"?xo?\"",
+			"note":"Consider the first two characters of message. Since it's a contiguous substring of the input message and has a length of 2, which is even, and since it already contains one 'x', the first '?' must be 'o'. Then, by considering the entire message as a contiguous substring of length 4, the last character must be 'x'.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"xo\"",
+			"id":0,
+			"input":"\"xo\"",
+			"note":"Sometimes the message is not corrupted.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"oxoxoxo\"",
+			"id":0,
+			"input":"\"o??x??o\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"oxoxoxox\"",
+			"id":0,
+			"input":"\"???????x\"",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"message will contain between 2 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in message will be lowercase 'o', lowercase 'x', or '?'."
+		},
+		{
+			"order":3,
+			"val":"There will be exactly one possible corrected message which has the interesting property described in the problem statement."
+		}
+	]
+}

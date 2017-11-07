@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1833&rd=4708",
+	"statement":"We are given <b>k</b> candy bars to divide up among <b>n</b> people. Each bar may be left whole, split into 2 equal pieces, or split into 3 equal pieces. We must distribute all the candy to the people, but we want to be as fair as possible. Define the &quot;inequity&quot; of a distribution of the candy to be the difference between the minimum amount received by a person and the maximum amount received by a person. We want to minimize the inequity. <p> Among solutions that have minimum inequity, we want to choose the one that has the fewest pieces. Each whole bar counts as one piece, while each split bar counts as either two or three pieces depending on how it was split. Create a class Equity that contains a method minPieces that takes <b>n</b>, the number of people, and <b>k</b>, the number of candy bars, and returns the smallest number of pieces that we will need in order to divide the candy bars with minimum inequity. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Equity",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minPieces",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minPieces(int n, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"11",
+			"id":0,
+			"input":"12",
+			"note":" Split 2 of the bars into thirds, and 3 of the bars into halves. Give 6 of the people a third of a bar and a half of a bar each. Give the other 6 people a whole bar each. This results in an inequity of 1 - (1/2+1/3) = 1/6 which is the minimum possible inequity. There are 18 pieces: 6 thirds, 6 halves, and 6 wholes. ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"12",
+			"note":" Give each person a third of a bar. ",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"12",
+			"note":" The best we can do is to give 3 people a third, and the other 9 nothing.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 1000 inclusive"
+		},
+		{
+			"order":2,
+			"val":"k will be between 1 and 1000 inclusive"
+		}
+	]
+}

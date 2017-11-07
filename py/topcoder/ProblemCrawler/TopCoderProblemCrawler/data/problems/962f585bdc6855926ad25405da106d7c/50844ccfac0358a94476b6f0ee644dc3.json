@@ -1,0 +1,66 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13527&rd=16191",
+	"statement":"<p><b>NOTE: This problem statement contains subscripts/superscripts that may not display properly if viewed outside of the applet.</b></p> <p></p> <p> For positive integers h and r (1 &lt;= r &lt;= h) we define sequence F<sub>h,r</sub> as {1, 2, 3, ..., h-1, h, h-1, h-2, ..., r+1, r}. Let S(F<sub>h,r</sub>) be the the sum of all numbers in F<sub>h,r</sub> and N(F<sub>h,r</sub>) - the length of F<sub>h,r</sub>. </p> <p> For example, F<sub>3,2</sub> is {1, 2, 3, 2}, S(F<sub>3,2</sub>) = 1 + 2 + 3 + 2 = 8, and N(F<sub>3,2</sub>) = 4. F<sub>5,5</sub> is {1, 2, 3, 4, 5}, S(F<sub>5,5</sub>) = 15, and N(F<sub>5,5</sub>) = 5. </p> <p> You are given a long <b>sum</b>. Return minimal possible N(F<sub>i,j</sub>) such that S(F<sub>i,j</sub>) = <b>sum</b>. If there is no such sequence F<sub>i,j</sub>, return -1 instead. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AnEasyProblem",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int solve(long sum)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"6",
+			"note":"When h = r = 3, S(F) = 6 and N(F) = 3. There is no other h,r satisfing S(F) = 6. So you should return 3.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1428571",
+			"id":0,
+			"input":"1000000000000",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"sum will be between 1 and 1,000,000,000,000(10^12)."
+	}]
+}

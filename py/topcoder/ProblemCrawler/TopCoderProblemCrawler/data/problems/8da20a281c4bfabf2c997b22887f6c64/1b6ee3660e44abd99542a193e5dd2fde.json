@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8288&rd=10796",
+	"statement":"<p>Unjumpers is a puzzle played on a board consisting of 100 squares in a straight line. Pawns are placed in a certain pattern on the board, and your goal is to see which other patterns can be created starting from that position. There are 3 legal moves in Unjumpers:</p> \n <ol>\n  <li>Jump: A pawn jumps over an adjacent pawn and lands in the square immediately beyond the jumped pawn (in the same direction). The jumped pawn is removed from the board. To perform this move, there must be an adjacent pawn to jump, and the square in which the pawn lands must be unoccupied.</li> \n  <li>Unjump: A pawn jumps over an adjacent empty space and lands in the square immediately beyond that space (in the same direction). A new pawn appears in the square that was jumped (between the starting and ending squares). To perform this move, both the middle and ending squares must be unoccupied.</li> \n  <li>Superjump: A pawn moves 3 squares in one direction. To do this move, the target square must be empty. The two jumped squares may or may not have pawns - and they are not affected by the move.</li>\n </ol> <p>Only one pawn can move at a time, and pawns may never move off of the board.</p> <p>You are given a String <b>start</b> containing the initial layout of the board. Each character of the string describes one square, with the first character describing the leftmost square. In the string, '.' represents an empty space while '*' represents a pawn. You are also given a String[] <b>targets</b>, each element of which is a target layout formatted in the same way. The board is always 100 squares wide. The Strings given will specify up to 50 of the first (leftmost) squares of the layout. You must assume that the remaining squares are all empty, both when considering the the start position and when considering the various target positions.</p> <p>For each target layout, evaluate whether that layout is reachable using any number of legal moves starting at the initial layout each time. Return the number of target layouts that can be reached.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Unjumpers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"reachableTargets",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int reachableTargets(String start, String[] targets)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ \"..*\", \"*.**\", \".*.*\"} ",
+			"id":0,
+			"input":"\"**.\"",
+			"note":"Each of the 3 target layouts can be reached in one move - the first is one jump, the second is one unjump, and the third is one superjump.",
+			"order":1
+		},
+		{
+			"expect":"{ \"..****..*\", \"..***....\", \"..****\"}",
+			"id":0,
+			"input":"\"..***\"",
+			"note":"The first layout is reachable with a little ingenuity. The second layout doesn't require any moves (it's the same position, just with some extra blank spaces shown). The third is unreachable.",
+			"order":2
+		},
+		{
+			"expect":"{ \"*..*......\", \"*.....*...\", \"...*.....*\", \"...*..*...\", \"*........*\", \"*...***..*\"}",
+			"id":0,
+			"input":"\"*..*\"",
+			"note":"All of these layouts can be reached.",
+			"order":3
+		},
+		{
+			"expect":"{ \"***...\", \"..****\", \"**....**\", \".*.*.*\"}",
+			"id":0,
+			"input":"\"...***\" ",
+			"note":"Only the second layout shown is unreachable.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"start will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"start will contain only '*' and '.' characters."
+		},
+		{
+			"order":3,
+			"val":"targets will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of targets will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of targets will contain only '*' and '.' characters."
+		}
+	]
+}

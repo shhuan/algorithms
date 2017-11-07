@@ -1,0 +1,74 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11193&rd=14241",
+	"statement":"John and Brus are bored. They have <b>n</b>+<b>m</b> common friends. <b>n</b> of them are bored and <b>m</b> are not. Every hour John and Brus randomly choose two different friends A and B. If there are several possible pairs (A, B), each one has the same probability of being chosen. After that, John has a talk with friend A and Brus has a talk with friend B. For each of two chosen friends, if the friend is not bored, he becomes bored after the talk. <br /><br /><br /><br /> You have to find the expected time for all the friends to become bored. ",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to within a relative or absolute value of 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheBoredomDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double find(int n, int m)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"There are two friends overall. Since John and Brus always choose different friends for a talk, both friends will be bored after one hour.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"note":"Here John and Brus can choose two friends that are already bored, so the expectation is more than 1 hour.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"4",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 47, inclusive."
+		},
+		{
+			"order":2,
+			"val":"m will be between 1 and 47, inclusive."
+		}
+	]
+}

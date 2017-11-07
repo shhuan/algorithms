@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":170.14,
+			"constraints":[],
+			"correctRatio":69.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11274&rd=14723",
+			"name":"GogoXCake",
+			"notes":[],
+			"submission":559
+		},
+		{
+			"avgPts":251.79,
+			"constraints":[],
+			"correctRatio":34.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11267&rd=14723",
+			"name":"GogoXMarisaKirisima",
+			"notes":[],
+			"submission":162
+		},
+		{
+			"avgPts":478.8,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10849&rd=14723",
+			"name":"GogoXBallsAndBins",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 530 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14723"
+}

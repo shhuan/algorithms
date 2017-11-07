@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":195.18,
+			"constraints":[],
+			"correctRatio":64.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=100&rd=3012",
+			"name":"GoodWord",
+			"notes":[],
+			"submission":31
+		},
+		{
+			"avgPts":360.51,
+			"constraints":[],
+			"correctRatio":53.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=101&rd=3012",
+			"name":"BallMotion",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":693.81,
+			"constraints":[],
+			"correctRatio":80.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=102&rd=3012",
+			"name":"WordFinder",
+			"notes":[],
+			"submission":26
+		}
+	],
+	"name":"Single Round Match 13 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3012"
+}

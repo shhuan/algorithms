@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":227.74,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=58&rd=3002",
+			"name":"CommonChar",
+			"notes":[],
+			"submission":22
+		},
+		{
+			"avgPts":349.49,
+			"constraints":[],
+			"correctRatio":85.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=59&rd=3002",
+			"name":"Population",
+			"notes":[],
+			"submission":21
+		},
+		{
+			"avgPts":741.89,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=60&rd=3002",
+			"name":"DigitArith",
+			"notes":[],
+			"submission":18
+		}
+	],
+	"name":"Single Round Match 3 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3002"
+}

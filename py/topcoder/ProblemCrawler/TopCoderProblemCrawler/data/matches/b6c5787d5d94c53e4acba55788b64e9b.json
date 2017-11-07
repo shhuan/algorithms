@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.07,
+			"constraints":[],
+			"correctRatio":80.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1866&rd=4630",
+			"name":"ParallelSpeedup",
+			"notes":[],
+			"submission":151
+		},
+		{
+			"avgPts":332.64,
+			"constraints":[],
+			"correctRatio":92.94,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1630&rd=4630",
+			"name":"ContinuedFractions",
+			"notes":[],
+			"submission":85
+		},
+		{
+			"avgPts":563.28,
+			"constraints":[],
+			"correctRatio":53.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1879&rd=4630",
+			"name":"Scheduling",
+			"notes":[],
+			"submission":13
+		}
+	],
+	"name":"Single Round Match 165 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4630"
+}

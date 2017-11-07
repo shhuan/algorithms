@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11004&rd=14234",
+	"statement":"This time, instead of solving an easy problem with a known solution, you will be in charge in solving an old problem with a solution which was unknown to this date. The old question is whether the egg or the chicken came first. This question has been very difficult to answer over the ages, but a chance has finally come: It is said that a new oracle has appeared which knows everything.<br /><br /> <br /><br /> You tried asking the question to the oracle, but the oracle refused to answer, arguing that it has already answered the question to <b>n</b> other people and is tired of answering that question. Not to give up, you decided to interview each of the <b>n</b> people. Of them, <b>eggCount</b> people told you that the answer was &quot;The egg&quot;, while the remaining <b>n</b>-<b>eggCount</b> people claimed that the answer was &quot;The chicken&quot;. Confused by the results, you asked the oracle a second time. The oracle still refused to answer the question, but instead explained the results: In order to hide the truth to those unworthy, the oracle has intentionally given the wrong answer to exactly <b>lieCount</b> people. On the other hand, also to avoid sharing the secret, exactly <b>liarCount</b> people (not necessarily those that were told the right answer by the oracle) have intentionally given you the opposite answer to the one given to them by the oracle.<br /><br /> <br /><br /> You are still suspiscious that the explanation given by the oracle is another lie. Given ints <b>n</b>, <b>eggCount</b>, <b>lieCount</b> and <b>liarCount</b>, find out if scenarios exist such that &quot;The egg&quot; or &quot;The chicken&quot; is the correct answer. If there exist scenarios such that either answer is correct, return &quot;Ambiguous&quot; (quotes for clarity). If only one answer has a possible scenario, return &quot;The egg&quot; or &quot;The chicken&quot; (quotes for clarity) depending on the answer. If neither of the answers has a possible scenario, return &quot;The oracle is a lie&quot;. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ChickenOracle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theTruth",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String theTruth(int n, int eggCount, int lieCount, int liarCount)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"In this case, every person has answered correctly.",
+			"order":1
+		},
+		{
+			"expect":"40",
+			"id":0,
+			"input":"60",
+			"note":"According to the oracle, it has told the correct answer to all 60 people and then 30 of them lied to you. However, it contradicts the fact that 40 people have told you one answer and 20 people have told another one.",
+			"order":2
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"60",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"500",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 1000000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"eggCount, lieCount and liarCount will each be between 0 and n, inclusive. "
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":225.7,
+			"constraints":[],
+			"correctRatio":86.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5977&rd=8077",
+			"name":"CompletingBrackets",
+			"notes":[],
+			"submission":300
+		},
+		{
+			"avgPts":316.13,
+			"constraints":[],
+			"correctRatio":34.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5936&rd=8077",
+			"name":"GridCut",
+			"notes":[],
+			"submission":272
+		},
+		{
+			"avgPts":473.92,
+			"constraints":[],
+			"correctRatio":18.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4846&rd=8077",
+			"name":"DrawPlanar",
+			"notes":[],
+			"submission":16
+		}
+	],
+	"name":"Single Round Match 280 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8077"
+}

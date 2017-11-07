@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6608&rd=10765",
+	"statement":"There are several unmarried men and women living in a society where marriage is defined as either one husband with one or more wives, or one wife with one or more husbands. You are given a String[] <b>preferences</b>. The j-th character of the i-th element of <b>preferences</b> is '1' (one) if the i-th man and the j-th woman are willing to be part of the same marriage, and '0' (zero) otherwise. <p></p> Your task is to group these people into the minimum possible number of marriages. Each person must be a member of exactly one marriage, and each marriage must contain only willing members. Return the number of marriages, or -1 if this is not possible.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MarriageProblemRevised",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"neededMarriages",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int neededMarriages(String[] preferences)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"111\"}",
+			"note":"Here, we have one man and three women, and everybody is willing to be in the same marriage. Therefore, we only need one marriage.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"100\", \"010\", \"001\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"00\", \"00\"}",
+			"note":"Nobody is willing to be in the same marriage as anybody else, so there cannot be any marriages in this case.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"0001\", \"0001\", \"0001\", \"1111\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"11101011\",\"00011110\",\"11100100\",\"01010000\",\"01000010\",\"10100011\",\"01110110\",\"10111111\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"preferences will contain between 1 and 12 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"The length of each element of preferences will be betwen 1 and 12, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of preferences will be of the same length."
+		},
+		{
+			"order":4,
+			"val":"Each element of preferences will contain only '0' (zeroes) and '1' (ones)."
+		}
+	]
+}

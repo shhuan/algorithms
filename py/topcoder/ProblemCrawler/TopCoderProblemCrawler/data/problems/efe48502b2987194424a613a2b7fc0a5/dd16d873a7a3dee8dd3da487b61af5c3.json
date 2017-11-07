@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4781&rd=7997",
+	"statement":"<p>You own a large selection of DVDs that you and your friends enjoy. Unfortunately, your friends aren't the most considerate bunch, so each DVD is not necessarily returned to its respective case. When your friends want to watch a movie, they go through each of your DVD cases one by one until they find the movie they want to watch. They then take that DVD out, and switch it with the one that's currently in the player.</p> <p>You will be given a String[] <b>moviesWatched</b>: a list of all the movies watched in an unspecified time period, in the order they were watched. Assume you only own one copy of each movie. The DVD player is initially empty, and each DVD starts in its own case. You should return a String[] where each element describes a movie that is in a different movie's case after all DVDs in <b>moviesWatched</b> have been viewed. These elements should be of the format &quot;&lt;movie1&gt; is inside &lt;movie2&gt;'s case&quot;. The list should be ordered alphabetically by the title of &lt;movie1&gt;. The last DVD in <b>moviesWatched</b> will still be in the DVD player at the end of the simulation, so it should never appear as &lt;movie1&gt; in the returned list.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DVDPlayer",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findMovies",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] findMovies(String[] moviesWatched)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"casablanca is inside thegodfather's case\", \"citizenkane is inside casablanca's case\" }",
+			"id":0,
+			"input":"{\"citizenkane\", \"casablanca\", \"thegodfather\"}",
+			"note":"Your friends first remove Citizen Kane from its DVD case and put it in the player. They then look for Casablanca, find it in its own case, and swap it with the DVD in the player. Finally, they look for The Godfather, find it in its own case, and swap it with Casablanca. Note that the output is sorted alphabetically, with \"casablanca\" before \"citizenkane\".",
+			"order":1
+		},
+		{
+			"expect":"Returns: {\"empirestrikesback is inside returnofthejedi's case\", \"phantommenace is inside empirestrikesback's case\", \"returnofthejedi is inside phantommenace's case\" }",
+			"id":0,
+			"input":"{\"starwars\", \"empirestrikesback\", \"returnofthejedi\", \"empirestrikesback\", \"returnofthejedi\", \"phantommenace\", \"starwars\"}",
+			"note":"After the first time your friends watch Star Wars, they put it in the Empire Strikes Back DVD case. When they want to watch it the second time, they find the case that it's in and swap it with Phantom Menace, the disk currently in the DVD player. Therefore, Phantom Menace ends up in the Empire Strikes Back's case.",
+			"order":2
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"{\"a\", \"x\", \"a\", \"y\", \"a\", \"z\", \"a\"}",
+			"note":"All movies are back in their original cases (except movie \"a\", which is in the DVD player).",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"moviesWatched will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of moviesWatched will contain between 1 and 20 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of moviesWatched will consist of only lowercase letters ('a' - 'z')."
+		},
+		{
+			"order":4,
+			"val":"No two consecutive elements of moviesWatched will be equal."
+		}
+	]
+}

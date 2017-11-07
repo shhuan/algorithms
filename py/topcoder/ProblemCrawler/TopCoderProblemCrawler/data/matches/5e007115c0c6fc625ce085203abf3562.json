@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":177.69,
+			"constraints":[],
+			"correctRatio":77.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4495&rd=7222",
+			"name":"Musical",
+			"notes":[],
+			"submission":198
+		},
+		{
+			"avgPts":298.2,
+			"constraints":[],
+			"correctRatio":28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=875&rd=7222",
+			"name":"WordTrain",
+			"notes":[],
+			"submission":75
+		},
+		{
+			"avgPts":577.9,
+			"constraints":[],
+			"correctRatio":65.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3487&rd=7222",
+			"name":"Necklaces",
+			"notes":[],
+			"submission":26
+		}
+	],
+	"name":"Single Round Match 247 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=7222"
+}

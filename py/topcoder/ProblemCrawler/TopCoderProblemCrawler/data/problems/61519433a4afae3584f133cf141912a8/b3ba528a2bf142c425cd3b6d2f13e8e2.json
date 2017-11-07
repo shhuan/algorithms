@@ -1,0 +1,101 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3441&rd=6530",
+	"statement":"A <i>Deterministic Finite Automata</i> (DFA) is a finite state machine with some number of states which we will call states 0 through N-1. For the purposes of this problem, state 0 is the start state. The DFA is then given a sequence of symbols from a finite alphabet (an alphabet might contain only '0' and '1', for example, or might be only lowercase letters). For each state, there is a transition for each symbol in the alphabet to some state (possibly the same state). Finally, some set of states are denoted as <i>accept</i> states. If the DFA is in one of the accept states after a sequence of symbols has been given to it, then it accepts that sequence of symbols, otherwise it rejects the sequence.<br /><br /><br /><br /> For example, consider the simple DFA illustrated below: <br /><br /><img src=\"http://www.topcoder.com/contest/problem/DFAReversal/dfa.png\" /><br /><br /> The DFA starts in state 0, and a '1' causes it to switch from state 0 to state 1 and vice versa, while a '0' causes it to remain in the same state. Since state 0 is the only accept state, a sequence is accepted if, and only if, there are an even number of '1's.<br /><br /><br /><br /> You will be given a DFA as a String[], <b>dfa</b>. Element i of <b>dfa</b> will represent state i, and be formatted as a list of K integers separated by single spaces, where K is the number of symbols in the alphabet. Integer j of element i of <b>dfa</b> indicates the state that the DFA will end up in if it is currently in state i, and is given symbol j. A int[], <b>accept</b>, indicates which states are accept states. Your task is, given the DFA specified by the input, return the minimum number of states required to build a new DFA that accepts the reverse of every sequence accepted by the input DFA. That is, the new DFA should accept a sequence s if, and only if, the input DFA accepts reverse(s).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DFAReversal",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"reverse",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int reverse(String[] dfa, int[] accept)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{\"0 1\",\"1 0\"}",
+			"note":"In this DFA, we switch states whenever we see the second symbol. Since we start in state 0, and it is our accept state, this DFA accepts all strings with an even number of occurrences of the second symbol. Therefore, if s is accepted by this DFA, reverse(s) is also.",
+			"order":1
+		},
+		{
+			"expect":"{0,1}",
+			"id":0,
+			"input":"{\"0 1\", \"0 0\"}",
+			"note":"Everything is accepted, so we really only need one state.",
+			"order":2
+		},
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"{\"0 1\", \"0 2\", \"0 2\"}",
+			"note":"This DFA accepts any sequence that ends with two occurrences of the second symbol.",
+			"order":3
+		},
+		{
+			"expect":"{8}",
+			"id":0,
+			"input":"{\"1 1\", \"2 2\", \"3 3\", \"4 4\", \"5 5\", \"6 6\", \"7 7\", \"9 8\", \"8 8\", \"9 9\"}",
+			"order":4
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"{\"0 0 0 0 0 0\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Each state in dfa will be reachable from the start state, state 0."
+		},
+		{
+			"order":2,
+			"val":"dfa will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of dfa will contain between 1 and 10 integers separated by single spaces, with no extra leading zeros, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of dfa will contain the same number of integers."
+		},
+		{
+			"order":5,
+			"val":"Each integer in dfa will be between 0 and the number of elements in dfa-1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"accept will contain between 0 and 10 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of accept will be between 0 and the number of elements in dfa-1, inclusive."
+		},
+		{
+			"order":8,
+			"val":"No number will occur more than once in accept."
+		}
+	]
+}

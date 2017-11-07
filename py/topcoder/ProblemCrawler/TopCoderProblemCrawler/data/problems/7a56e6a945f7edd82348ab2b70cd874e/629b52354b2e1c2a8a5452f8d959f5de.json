@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13440&rd=16188",
+	"statement":"<p>Given a tree T, we can produce a new tree T' as follows: T' will contain the entire tree T. Additionally, for each vertex x in T, add a new vertex to T' and attach it to x. We will call this procedure <i>growing the tree</i>.</p> <br /><br /> <p>You are given ints <b>N</b>, <b>D</b>, and <b>P</b>. Start with a tree that consists of a single vertex. Grow this tree <b>N</b> times to produce a tree with 2^<b>N</b> vertices. In that tree, count all simple paths of length <b>D</b>, and return that count modulo the prime <b>P</b>.</p> <br /><br /> <p>The length of a simple path is the number of edges it contains. Two simple paths are considered different if they contain a different set of edges. In other words, the direction in which the path is traversed does not matter.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TwiceTwiceTree",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sumup",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int sumup(int N, int D, int P)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"500",
+			"id":0,
+			"input":"987654321",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"D will be between 1 and 500, inclusive."
+		},
+		{
+			"order":3,
+			"val":"P will be between 503 and 1,000,000,009, inclusive."
+		},
+		{
+			"order":4,
+			"val":"P will be a prime."
+		}
+	]
+}

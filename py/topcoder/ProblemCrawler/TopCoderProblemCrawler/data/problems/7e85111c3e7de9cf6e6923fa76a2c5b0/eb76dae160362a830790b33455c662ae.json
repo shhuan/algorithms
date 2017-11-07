@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2324&rd=5004",
+	"statement":"<i>*** You may only submit a given problem once - no resubmissions will be accepted. ***</i><br /><br /><br /><br />You have been given the opportunity of a lifetime. You and your friend get to run through a field full of money. Everything you and your friend pick up, you can keep. You will be given a String[] <b>grid</b> containing the locations of the prizes. Each character in <b>grid</b> will be a digit from 0-9 determining how much money is located in that particular location. The elements of <b>grid</b> will be the rows of the field. You and your friend will begin at row 0 column 0 of <b>grid</b> (element 0 character 0). Using only steps to the right and steps down, return the maximum amount of money both of you can collect. Here 'right' means increasing column value and 'down' means increasing row value. Note that you and your friend can take different routes. If you and your friend visit the same location, only one of you can pick up the money at that location. Both you and your friend will always end up on the lower rightmost location when you finish.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MoneyRun",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMost(String[] grid)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{ \"111\", \"101\", \"111\"}",
+			"note":"Let Y denote where you will pick up money, and H denote where he will. A possible solution is  since you are able to pick up all 8. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 27",
+			"id":0,
+			"input":"{ \"99\", \"09\" }",
+			"note":"Any way you try this, you can't get more than 27.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 52",
+			"id":0,
+			"input":"{ \"09933\", \"29333\", \"03333\", \"41111\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{\"11111\", \"22222\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain between 2 and 7 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of grid will contain between 2 and 7 characters inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of grid will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in grid will be a digit ('0'-'9')."
+		}
+	]
+}

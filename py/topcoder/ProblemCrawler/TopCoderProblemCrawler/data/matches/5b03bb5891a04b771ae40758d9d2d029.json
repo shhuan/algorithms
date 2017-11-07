@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":224.22,
+			"constraints":[],
+			"correctRatio":42.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3041&rd=5883",
+			"name":"BadXML",
+			"notes":[],
+			"submission":7
+		},
+		{
+			"avgPts":274.35,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3040&rd=5883",
+			"name":"DamagedTree",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2412&rd=5883",
+			"name":"CircularSequence",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2004 TCO > Semifinal Room 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5883"
+}

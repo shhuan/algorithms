@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":212.48,
+			"constraints":[],
+			"correctRatio":75.51,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6254&rd=10766",
+			"name":"Hotel",
+			"notes":[],
+			"submission":437
+		},
+		{
+			"avgPts":256.32,
+			"constraints":[],
+			"correctRatio":22.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6406&rd=10766",
+			"name":"WebsiteRank",
+			"notes":[],
+			"submission":335
+		},
+		{
+			"avgPts":664.53,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4593&rd=10766",
+			"name":"ChipArea",
+			"notes":[],
+			"submission":16
+		}
+	],
+	"name":"Single Round Match 357 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10766"
+}

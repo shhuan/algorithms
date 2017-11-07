@@ -1,0 +1,89 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4662&rd=9915",
+	"statement":"You have <b>k</b> objects divided evenly into <b>num</b> piles. Unfortunately, some of the digits of <b>k</b> may have been erased (replaced with 'X's in the input). Return the number of possible values that <b>k</b> could have been. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DigitFiller",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long howMany(String k, int num)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"9",
+			"id":0,
+			"input":"\"8X\"",
+			"note":"Since the objects are divided evenly into 9 piles, 81 is the only possible solution.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"\"1XX\"",
+			"note":"Here there are 10 possible values  could have been.",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"\"14\"",
+			"note":"None of the digits are missing.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"9999999999999X\"",
+			"order":4
+		},
+		{
+			"expect":"17",
+			"id":0,
+			"input":"\"23X34XX24XX34X\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"k will contain between 2 and 18 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in k will be a digit ('0'-'9') or 'X'."
+		},
+		{
+			"order":3,
+			"val":"Character 0 of k will be a positive digit ('1'-'9')."
+		},
+		{
+			"order":4,
+			"val":"num will be between 1 and 10000 inclusive."
+		},
+		{
+			"order":5,
+			"val":"The return value will be at least 1."
+		}
+	]
+}

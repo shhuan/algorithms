@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4818&rd=8095",
+	"statement":"<p> A <i>caterpillar tree</i> is a tree in which every node is on a central stalk or only one graph edge away from the stalk. The figure below illustrates to the left a caterpillar tree with 14 nodes (the stalk marked in blue), and on the right a non-caterpillar tree with 9 nodes. </p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/CaterpillarTree/CaterpillarTree.gif\" /> <p> Given the description of a tree, determine the least number of nodes that must be removed for the tree to become a caterpillar tree. The tree will be described as a string of 0's and 1's. Starting from some node in the tree, a '1' in the string traverses the tree to a previously unvisited node, while a '0' backtracks to the previous node. The trees in the figure above would be described as &quot;11101011111010010001000100&quot; and &quot;1111100100110000&quot;, respectively, if the traversals starts at node 1 and the nodes are visited in the numbered orders. </p> <p> Create a class CaterpillarTree containing the method fewestRemovals which takes a String[] <b>tree</b> containing the description of the tree (concatenate the elements to get the full description), and returns an int containing the fewest number of nodes that must be removed for the tree to become a caterpillar tree. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CaterpillarTree",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fewestRemovals",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int fewestRemovals(String[] tree)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"11101011111010010001000100\"}",
+			"note":"This is the leftmost picture above. Since it already is a caterpillar tree, no nodes have to be removed. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"1111100100110000\"}",
+			"note":"This is the rightmost picture. One of the leaf nodes to the left must be removed for it to become a caterpillar tree.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{\"1111100000\", \"1111100000\", \"1111100000\", \"1111100000\", \"1111100000\"}",
+			"note":"This is a star graph, with one node in the center and five arms containing five nodes each. If we delete four of the five nodes in three of the arms, we end up with a graph that is a caterpillar tree. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"1\",\"0\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 23",
+			"id":0,
+			"input":"{\"11110100111100100111100110100110001110101001111000\", \"1101100000011100110000111001101100010000\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"tree will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in tree will only contain the characters '0' and '1'."
+		},
+		{
+			"order":3,
+			"val":"Each element in tree will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"tree will describe a valid tree."
+		}
+	]
+}

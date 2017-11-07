@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4673&rd=8033",
+	"statement":"<p><i>NOTE: This problem statement contains an image that may not display properly if viewed outside of the applet.</i></p> <p> You have written several chess programs and want to have a tournament with them. All your programs have ratings, which entirely determine the result of each game (the player with a higher rating always wins). </p> Before the tournament all programs are placed in a list. You want to put yourself somewhere in this list (the total number of participants including you will be a power of 2). In every round, the first participant in the list plays the second, the third plays the fourth, and so on. Players who lose their games are eliminated and removed from the list, while the winners advance to the next round. In the next round the process is repeated with the list of winners. The tournament lasts until only one player (the winner of the tournament) is left. <p> <img src=\"http://www.topcoder.com/contest/problem/CheatABit/tco05_quals_cheatabit.GIF\" /> </p> <p> For example, if players participating in the tournament have ratings {100, 300, 200, 150}, then Player 1 plays Player 2 and Player 3 plays Player 4. Players 2 and 3 win and meet in the final, where Player 2 wins. </p> <br /><br /> You want to win the tournament at any price, so you enter a game winning cheat code whenever you lose. However, you want to cheat as rarely as possible. You need to find the place in the initial list which allows you to win the tournament with as few cheat codes as possible. You will be given the <b>ratings</b> of all the programs, in the order they are placed in the list. Given <b>yourRating</b> as well, return the minimal number of codes you must enter to win the tourney. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CheatABit",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"enterCodes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int enterCodes(int[] ratings, int yourRating)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{1, 2, 3, 4, 6, 7, 8}",
+			"note":"One of the best strategies is to place yourself after player 2. In the first round you win over the player with rating 3, in the second round you will succeed against the player with rating 2, and only in the final will you need to cheat.",
+			"order":1
+		},
+		{
+			"expect":"301",
+			"id":0,
+			"input":"{100, 200, 300}",
+			"note":"You win the tournament without any cheating.",
+			"order":2
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"{100, 200, 300}",
+			"note":"You must cheat twice.",
+			"order":3
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"{100, 1, 99, 2, 98, 3, 97, 4, 96, 5, 95, 6, 94, 7, 93}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"ratings will have 1, 3, 7, 15 or 31 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of ratings will be between 1 and 3000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"ratings will not contain duplicate elements."
+		},
+		{
+			"order":4,
+			"val":"yourRating will be between 1 and 3000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"yourRating will not be equal to any element of ratings."
+		}
+	]
+}

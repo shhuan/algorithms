@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=58&rd=3002",
+	"statement":"<pre>Class Name: CommonChar\nMethod Name: compare\nparameters:  String, String\nreturns: int\n\nCreate a class CommonChar containing the method compare. This method will take\ntwo Strings as inputs and return the number of characters in the second String\nthat are contained in the first string, in a one-to-one relationship.  That is,\nif a character is repeated in the second string, it must be repeated in the\nfirst string to count more than once.\n\nHere is the method signature:\npublic int compare(String input1, String input2);\n\nBOth Strings will have fewer than 100 characters.\n\nNote:\n-The method is case sensitive.  A is a different character than a.\n\nExamples:\n(&quot;java&quot;, &quot;abava&quot;) -&gt; 3  (two of the (a)s and the (v))\n(&quot;TopCoder&quot;, &quot;code guru&quot;) -&gt; 4\n(&quot;foobar&quot;, &quot;sing&quot;) -&gt; 0 </pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CommonChar",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"compare",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int compare(String param0, String param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":222.24,
+			"constraints":[],
+			"correctRatio":91.7,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6719&rd=10095",
+			"name":"UsingStats",
+			"notes":[],
+			"submission":506
+		},
+		{
+			"avgPts":337.03,
+			"constraints":[],
+			"correctRatio":30.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6682&rd=10095",
+			"name":"CheckersBoard",
+			"notes":[],
+			"submission":378
+		},
+		{
+			"avgPts":543.74,
+			"constraints":[],
+			"correctRatio":29.58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6163&rd=10095",
+			"name":"MixedUpPrimes",
+			"notes":[],
+			"submission":71
+		}
+	],
+	"name":"TCCC06 > Qualification Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10095"
+}

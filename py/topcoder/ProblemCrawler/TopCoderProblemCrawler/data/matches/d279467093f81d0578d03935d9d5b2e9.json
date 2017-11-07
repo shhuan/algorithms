@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":217.13,
+			"constraints":[],
+			"correctRatio":76.81,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1848&rd=4675",
+			"name":"BirthdayOdds",
+			"notes":[],
+			"submission":138
+		},
+		{
+			"avgPts":300.57,
+			"constraints":[],
+			"correctRatio":62.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2233&rd=4675",
+			"name":"RangeGame",
+			"notes":[],
+			"submission":53
+		},
+		{
+			"avgPts":497.37,
+			"constraints":[],
+			"correctRatio":70,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1849&rd=4675",
+			"name":"PointSystem",
+			"notes":[],
+			"submission":30
+		}
+	],
+	"name":"Single Round Match 174 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4675"
+}

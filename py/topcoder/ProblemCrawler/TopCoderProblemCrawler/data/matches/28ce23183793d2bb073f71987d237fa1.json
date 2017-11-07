@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":159.84,
+			"constraints":[],
+			"correctRatio":72.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3505&rd=6525",
+			"name":"DictionarySorter",
+			"notes":[],
+			"submission":123
+		},
+		{
+			"avgPts":488.23,
+			"constraints":[],
+			"correctRatio":61.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3502&rd=6525",
+			"name":"TimeAnalysis",
+			"notes":[],
+			"submission":44
+		}
+	],
+	"name":"2005 TCCC > Qualification Set 3 & 8",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6525"
+}

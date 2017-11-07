@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10933&rd=14279",
+	"statement":"<p> You have two Strings, <b>s</b> and <b>t</b>, and you want them to be equal. You can change individual letters in the Strings, but you cannot add or remove letters. In a single move, you can change any one letter in one String to the letter that comes directly before or after it in the alphabet. The alphabet wraps around, so you can also change 'a' to 'z' or 'z' to 'a'. You want to make the two Strings equal using the minimum possible number of moves. Return the resulting String. If there are multiple answers, return the one that comes earliest alphabetically. </p>",
+	"notes":[{
+		"order":1,
+		"val":"A String comes earlier lexicographically than another one of the same length if and only if it has a character closer to the beginning of the alphabet in the first position at which they differ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EqualizeStrings",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getEq",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getEq(String s, String t)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"dog\"",
+			"id":0,
+			"input":"\"cat\"",
+			"note":"Use 1 move to change 'd' to 'c', 12 moves to change 'o' to 'a', 6 moves to change 'g' to 'a' and 7 moves to change 't' to 'a' for a total of 26 moves to get both Strings equal to \"caa\".",
+			"order":1
+		},
+		{
+			"expect":"\"bcdefghijklmnopqrstuvwxyza\"",
+			"id":0,
+			"input":"\"abcdefghijklmnopqrstuvwxyz\"",
+			"note":"Change every letter in  to its previous letter in the alphabet, using exactly one move per letter, with the exception of the last character; it's preferable to change the 'z' in  to 'a' to obtain a lexicographically earlier solution.",
+			"order":2
+		},
+		{
+			"expect":"\"programmingcompetitionsrule\"",
+			"id":0,
+			"input":"\"programmingcompetitionsrule\"",
+			"note":"If both strings are equal, then you don't need any moves.",
+			"order":3
+		},
+		{
+			"expect":"\"onlinerounds\"",
+			"id":0,
+			"input":"\"topcoderopen\"",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"s and t will contain the same number of characters."
+		},
+		{
+			"order":3,
+			"val":"Each character of s and t will be a lowercase letter ('a'-'z')."
+		}
+	]
+}

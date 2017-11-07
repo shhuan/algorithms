@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13634&rd=16279",
+	"statement":"<p> The citizens of Byteland want to build <b>N</b> new buildings. The new buildings will all stand in a line and they will be labeled 1 through <b>N</b>, in order. The city regulations impose some restrictions on the heights of the new buildings. You are given the parameters used in these restrictions: two int[]s <b>x</b> and <b>t</b>. The restrictions are described below. </p>\n <ul> \n  <li>The height of each building must be a nonnegative integer.</li> \n  <li>The height of building 1 must be 0.</li> \n  <li>The absolute value of the difference between any two adjacent buildings must be at most 1.</li> \n  <li>For each valid i, the height of building <b>x</b>[i] must be <b>t</b>[i] or less.</li> \n </ul> <p></p> <p> Given these restrictions, the citizens of Byteland want to build a building that will be as tall as possible. Return the largest possible height some of the <b>N</b> buildings may have. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BuildingTowersEasy",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxHeight",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxHeight(int N, int[] x, int[] t)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{3,8}",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"100000",
+			"note":"There are no additional constraints so, for each valid i, the height of building i can be (i-1).",
+			"order":2
+		},
+		{
+			"expect":"{1,30,400,1300,2500}",
+			"id":0,
+			"input":"2718",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{4,7,13,15,18}",
+			"id":0,
+			"input":"20",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{32,35,55,60,61,88,91,97,128,151,181,186,192,196,198,237,259,268,291,314,341,367,389,390,391,428,435}",
+			"id":0,
+			"input":"447",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{8,1749,4550,5388,6752,7089,9737,14891,16671,16821,17691,19753,24589, 25348,30114,32213,34376,36467,37699,41490,44784,44893,57316,58275,58567, 61122,61489,63195,64776,65905,68788,69908,72853,78152,78784,82779,84488, 86277,88611,92793,93214,97583}",
+			"id":0,
+			"input":"97638",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 100,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x will contain between 0 and min(N,50) elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"t will have exactly the same number of elements as x."
+		},
+		{
+			"order":4,
+			"val":"Each element of x will be between 1 and N, inclusive."
+		},
+		{
+			"order":5,
+			"val":"x[i] &lt; x[i+1] for all valid i."
+		},
+		{
+			"order":6,
+			"val":"Each element of t will be between 0 and 100,000, inclusive."
+		}
+	]
+}

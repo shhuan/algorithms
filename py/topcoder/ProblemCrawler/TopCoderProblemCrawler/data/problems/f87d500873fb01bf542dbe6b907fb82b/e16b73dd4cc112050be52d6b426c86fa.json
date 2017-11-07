@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4645&rd=8059",
+	"statement":"There is an n by n grid of network nodes. Each node is either standard, or a token consumer. Element i of <b>setup</b>, which corresponds to row i of the grid, will contain a single space delimited list of n values. A consumer will be denoted by an 'X' character. A standard node is denoted by a nonnegative integer with no extra leading zeros, which represents how many tokens it possesses. An unknown will be denoted by a '_' character (there will be exactly 1 unknown).<br /><br /> <br /><br /> Suppose a particular standard node is adjacent to d nodes (upward, downward, leftward, or rightward with no wrap-around), and has at least d tokens. Then that node can send 1 token to each adjacent node leaving it with d fewer tokens. For example, a node in the corner with at least 2 tokens could send. Token consumers accept tokens but never send them. <b>finish</b>, which is formatted like <b>setup</b> but with the '_' character replaced by a number, should describe the state of the network after all possible tokens have been sent, and no more can be sent. Return the smallest possible nonnegative value of the unknown, or -1 if no value will work. If <b>finish</b> does not describe a network where tokens cannot be sent (a standard node has too many tokens), also return -1.",
+	"notes":[{
+		"order":1,
+		"val":"The order in which nodes send their tokens is irrelevant."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TokenGrid",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getUnknown",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getUnknown(String[] setup, String[] finish)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"X X\", \"X 0\"}",
+			"id":0,
+			"input":"{\"X X\", \"X _\"}",
+			"note":"0 works quite easily.",
+			"order":1
+		},
+		{
+			"expect":"{\"X X\", \"X 2\"}",
+			"id":0,
+			"input":"{\"X X\", \"X _\"}",
+			"note":"The lower right node in  can send its tokens, so we immediately return -1. ",
+			"order":2
+		},
+		{
+			"expect":"{\"X 1\", \"X 0\"}",
+			"id":0,
+			"input":"{\"X 2\", \"X _\"}",
+			"note":"If the unknown node begins with 1 token, the following sequence of scenarios occurs:",
+			"order":3
+		},
+		{
+			"expect":"{\"1 1 0 1\", \"2 2 2 1\", \"2 3 3 2\", \"0 1 1 X\"}",
+			"id":0,
+			"input":"{\"0 0 0 0\", \"0 0 0 0\", \"0 0 0 0\", \"_ 0 0 X\"}",
+			"order":4
+		},
+		{
+			"expect":"{\"1 1 2 X\", \"X 1 3 2\", \"2 2 2 2\", \"X 2 2 1\" }",
+			"id":0,
+			"input":"{\"50 50 50 X\", \"X 50 50 50\", \"50 50 50 50\", \"X 50 50 _\" }",
+			"note":"Big inputs.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"setup and finish will be formatted as described in the problem statement."
+		},
+		{
+			"order":2,
+			"val":"setup will contain between 2 and 4 elements inclusive."
+		},
+		{
+			"order":3,
+			"val":"setup and finish will agree on the placement of consumer nodes."
+		},
+		{
+			"order":4,
+			"val":"setup and finish will contain the same number of elements."
+		},
+		{
+			"order":5,
+			"val":"Each integer in setup and finish will be between 0 and 50 inclusive."
+		},
+		{
+			"order":6,
+			"val":"setup will contain at least 1 consumer node."
+		}
+	]
+}

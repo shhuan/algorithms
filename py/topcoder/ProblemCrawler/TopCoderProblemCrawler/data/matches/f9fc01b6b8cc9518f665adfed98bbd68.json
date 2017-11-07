@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.93,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4836&rd=8096",
+			"name":"Superking",
+			"notes":[],
+			"submission":7
+		},
+		{
+			"avgPts":368.54,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4786&rd=8096",
+			"name":"NearBirthdays",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":428.77,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4804&rd=8096",
+			"name":"ShortTaps",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2005 TCO > Final Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8096"
+}

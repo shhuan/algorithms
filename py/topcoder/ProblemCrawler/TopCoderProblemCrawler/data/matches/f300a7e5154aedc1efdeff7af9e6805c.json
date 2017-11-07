@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":167.3,
+			"constraints":[],
+			"correctRatio":57.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12918&rd=15844",
+			"name":"LCMSet",
+			"notes":[],
+			"submission":552
+		},
+		{
+			"avgPts":287.15,
+			"constraints":[],
+			"correctRatio":35.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13008&rd=15844",
+			"name":"Egalitarianism2",
+			"notes":[],
+			"submission":81
+		},
+		{
+			"avgPts":494.38,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13009&rd=15844",
+			"name":"ElephantDrinking",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"Single Round Match 611 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15844"
+}

@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12842&rd=15711",
+	"statement":" Alice is a high school student. One day, her teacher asked her to draw a simple polygon (see Notes for a definition). The polygon must satisfy two conditions:<br /><br /><br /><br /> First, each of its vertices must be at a grid point. (I.e., both coordinates of each vertex must be integers.)<br /><br /><br /><br /> Second, the perimeter of the polygon must be exactly equal to the integer <b>L</b>.<br /><br /><br /><br /> You are given the int <b>L</b>. If there is no such polygon, return -1. If there is at least one such polygon, find the one which has the least number of sides. If there are still more than one choice, find the one with the smallest possible difference between the lengths of its longest side and its shortest side. Return the difference between the lengths of its longest side and its shortest side.",
+	"notes":[
+		{
+			"order":1,
+			"val":"A simple polygon is a polygon such that no two consecutive sides are parallel and no two non-consecutive sides share a common point."
+		},
+		{
+			"order":2,
+			"val":"Return values with absolute or relative error at most 1e-9 will be accepted as correct. "
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FindPolygons",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumPolygon",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double minimumPolygon(int L)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0.0",
+			"id":0,
+			"input":"4",
+			"note":"There is no triangle whose perimeter is 4, but there is a square.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1.0",
+			"id":0,
+			"input":"5",
+			"note":"There is no simple polygon that matches all the constraints.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2.0",
+			"id":0,
+			"input":"12",
+			"note":"There is a triangle whose sides are 3, 4, 5.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 819.0",
+			"id":0,
+			"input":"4984",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"L will be between 1 and 5000, inclusive."
+	}]
+}

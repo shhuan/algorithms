@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":184.92,
+			"constraints":[],
+			"correctRatio":83.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10541&rd=15851",
+			"name":"Family",
+			"notes":[],
+			"submission":495
+		},
+		{
+			"avgPts":267.96,
+			"constraints":[],
+			"correctRatio":94.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13111&rd=15851",
+			"name":"LongWordsDiv1",
+			"notes":[],
+			"submission":139
+		},
+		{
+			"avgPts":537.37,
+			"constraints":[],
+			"correctRatio":21.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13064&rd=15851",
+			"name":"MovingRooksDiv1",
+			"notes":[],
+			"submission":71
+		}
+	],
+	"name":"Single Round Match 618 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15851"
+}

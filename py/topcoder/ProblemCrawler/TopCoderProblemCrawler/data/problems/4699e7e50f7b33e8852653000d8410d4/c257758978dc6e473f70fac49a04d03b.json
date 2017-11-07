@@ -1,0 +1,107 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10721&rd=14568",
+	"statement":"<i>NOTE: This problem statement contains subscripts that may not display properly if viewed outside of the applet.</i> <br /><br /><br /><br /><br /><br /> Manhattan can be represented as an infinite two-dimensional plane with a Cartesian coordinate system. Manhattan is crossed by horizontal and vertical streets parallel to the axes. Each point with integer coordinates lies on the intersection of two streets. <br /><br /><br /><br /> Manao is in charge of the Manhattan Police Department. He is currently investigating patrol routes. There are <b>N</b> control intersections numbered from 0 to <b>N</b>-1 in Manhattan. A patrol route is a pair {A, B} of control intersections. When a squad is completing a patrol route, it moves only along the streets and takes the shortest path from A to B. When there are multiple shortest paths from A to B, the squad can take any of them. Two paths intersect if there is an intersection that belongs to both of them. Two patrol routes intersect if no matter which paths the squads completing them choose, these paths intersect. <br /><br /><br /><br /> You are given ints <b>AX</b>, <b>BX</b>, <b>MX</b>, <b>AY</b>, <b>BY</b>, <b>MY</b>. The X-coordinates of the intersections are computed as follows: <br /><br /><br /><br /> X<sub>0</sub> = <b>BX</b><br /><br /> X<sub>i</sub> = (<b>AX</b> * X<sub>i-1</sub> + <b>BX</b>) mod <b>MX</b> for 0 &lt; i &lt; <b>N</b> <br /><br /><br /><br /> Y-coordinates are computed correspondingly using <b>AY</b>, <b>BY</b>, <b>MY</b>. The X-coordinates will be pairwise distinct, as will be the Y-coordinates. <br /><br /><br /><br /> We treat routes {A, B} and {B, A} as the same. Consider the pairs of routes {{A, B}, {C, D}} such that all points A, B, C and D are distinct. Return the number of such pairs which intersect. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ManhattanPatrol",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countIntersections",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countIntersections(int N, int AX, int BX, int MX, int AY, int BY, int MY)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"4",
+			"note":"The control intersections are: 0: (2, 2) 1: (4, 6) 2: (6, 1) 3: (8, 4) Routes {0, 3} and {1, 2} intersect.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"7",
+			"note":"This case has the same seed as the previous one, but contains three more control intersections. In addition to {0, 3} - {1, 2}, routes {0, 3} and {2, 6} also intersect.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"20",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 4 and 500, inclusive."
+		},
+		{
+			"order":2,
+			"val":"MX will be between 4 and 40000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"AX will be between 1 and MX-1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"BX will be between 1 and MX-1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"MY will be between 4 and 40000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"AY will be between 1 and MY-1, inclusive."
+		},
+		{
+			"order":7,
+			"val":"BY will be between 1 and MY-1, inclusive."
+		},
+		{
+			"order":8,
+			"val":"All elements in the sequence of X-coordinates generated according to the statement will be distinct."
+		},
+		{
+			"order":9,
+			"val":"All elements in the sequence of Y-coordinates generated according to the statement will be distinct."
+		}
+	]
+}

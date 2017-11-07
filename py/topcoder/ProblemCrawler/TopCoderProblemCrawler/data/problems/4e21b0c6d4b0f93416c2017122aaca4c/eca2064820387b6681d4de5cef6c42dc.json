@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4629&rd=8019",
+	"statement":"Depicted below is the Fibonacci sequence:<pre>\n   1, 1, 2, 3, 5, 8, 13, 21, 34, ...\n</pre> As you can see, each value from 2 on is the sum of the previous two values. Any positive integer can be written as a sum of values taken from the Fibonacci sequence. These values need not be distinct. Return the smallest number of such values that sum to <b>n</b>.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FibonacciSum",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"1",
+			"note":"Just a single number is required.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"7",
+			"note":"The best we can do is 5+2 = 7.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"70",
+			"note":"The best here is 34+34+2 = 70.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"107",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 1000000 inclusive."
+	}]
+}

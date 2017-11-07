@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=358&rd=60",
+	"statement":"<pre>PROBLEM STATEMENT\nFor every problem given on TopCoder, there are restrictions on the input that\nTopCoder checks.  For the most simple inputs, this could be as easy as ensuring\nthat a single int is between 1 and 50, inclusive.  On more complicated\nproblems, this CheckData() method (as it is called) becomes more difficult.\n\nImplement a class Checker with a method CheckData() that will take a String[]\nas an argument.  You must ensure that the String[] is a valid input for the\nfollowing &quot;problem description&quot;:\n\n****** BEGIN PSUEDO-PROBLEM DESCRIPTION ******\nYou are given a String[] lovers representing a love triangle.  Each element in\nthis String[] will be formatted as follows:\n&quot;NAME1 LOVES NAME2&quot;\n(quotes added for clarity only).\n\nChecker will ensure the following:\n*lovers will contain between 2 and 20 elements, inclusive.\n*Each element of lovers will contain less than or equal to 40 characters and\nwill be formatted as\n &quot;NAME1 LOVES NAME2&quot; (quotes added for clarity again)\nwith the capital word LOVES and only one space between words, and no leading\nor trailing spaces.\n*NAME1 and NAME2 will be names of non-zero length.\n*NAME1 and NAME2 will not be identical (everyone loves themselves anyway).\n*NAME1 and NAME2 will contain only capital letters [A-Z] and/or hyphens '-'.\n*For each NAME2 there will be a corresponding NAME1 in lovers.  That is,\neveryone loves someone else in the problem.\n\nNotes:\n*One person may love multiple people (repeated NAME1 in different elements) and\none person may be loved by multiple people (repeated NAME2 in different\nelements).\n*It is possible for two elements to be identical.\n (ex {&quot;A LOVES B&quot;,&quot;A LOVES B&quot;,&quot;B LOVES A&quot;} is valid).\n****** END PSUEDO-PROBLEM STATEMENT ******\n\nDEFINITION\nClass name: Checker\nMethod name: CheckData\nParameters: String[]\nReturns: boolean\nThe method signature is:\nboolean CheckData(String[] lovers)\nBe sure your method is public.\n\nFor technical reasons, TopCoder will ensure the following:\n*lovers contains 0 to 50 elements.\n*each element of lovers contains 0 to 50 characters, inclusive.\n*each element of lovers contains characters ([a-z][A-Z][0-9]), spaces, or any\nof the characters (quotes added for clarity) &quot;&lt;&gt;./?;:{}[]=+-_|&quot;.\n\nEXAMPLES\n{&quot;D-G LOVES M&quot;,\n &quot;M LOVES D-G&quot;,\n &quot;T LOVES G&quot;,\n &quot;G LOVES D-G&quot;}\nThis input matches the above criteria, so CheckData returns true.\n\n{&quot;D LOVES M&quot;,\n &quot;D LOVES C&quot;,\n &quot;G LOVES M&quot;,\n &quot;M LOVES T&quot;,\n &quot;T LOVES D&quot;}\nSince C is loved but never appears as NAME1, this returns false.\n\n{&quot;D LOVES M&quot;,\n &quot;C LOVES C&quot;,\n &quot;G LOVES M&quot;,\n &quot;M LOVES T&quot;,\n &quot;T LOVES D&quot;}\nNow we see that C desperately tries loving himself, but that is not allowed so\nthe method returns false.\n\n{&quot;N LOVES C&quot;,\n &quot;C LOVES D&quot;,\n &quot;D LOVES M&quot;,\n &quot;M LOVES g&quot;,\n &quot;g LOVES N&quot;}\ng has lowercase letters in his name and therefore the method returns false.\n\n{&quot;A LOVES B&quot;,\n &quot;A LOVES C&quot;,\n &quot;C LOVES A&quot;,\n &quot;B  LOVES A&quot;}\nElement 3 has a badly formatted string (two spaces where only one is allowed),\nso the result is false.\n\n{&quot;ME LOVES YOU&quot;}\nSince 2-20 elements (inclusive) are necessary, this returns false.\n\n{&quot;ME LOVES YOU&quot;,\n &quot;ME LOVES YOU&quot;}\nThis has the correct number of elements, and the repeat is legal.  However,\nsince YOU never exists as NAME1, the result is still false.\n\n{&quot;ME LOVES YOU&quot;,\n &quot;ME LOVES YOU&quot;,\n &quot;YOU LOVES ME&quot;}\nThe above situation remedied.  This returns true.\n\n{&quot;I LOVE YOU&quot;,\n &quot;YOU LOVE I&quot;}\nBoth Strings are incorrectly formatted (LOVE instead of LOVES), so the method\nreturns false.\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Checker",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"CheckData",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"boolean",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"boolean CheckData(String[] param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

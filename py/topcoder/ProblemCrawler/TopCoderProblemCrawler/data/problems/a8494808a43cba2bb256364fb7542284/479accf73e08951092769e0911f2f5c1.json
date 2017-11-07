@@ -1,0 +1,66 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7248&rd=10711",
+	"statement":"<p> You are given an integer <b>N</b>, and you are allowed to perform the following operation: take two nonzero digits of <b>N</b>, decrease each of them by one and swap the resulting digits. For example, if <b>N</b> is 166, you can reach the following numbers in one operation: 506 (swap '1' and the first '6'), 155 (swap the '6's) and 560 (swap '1' and the last '6'). You are allowed to perform the operation zero or more times consecutively. Return the largest number you can reach. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RemissiveSwaps",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findMaximum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int findMaximum(int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 560",
+			"id":0,
+			"input":"166",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 8832",
+			"id":0,
+			"input":"3499",
+			"note":"The following sequence of operations is optimal: 3499 -> 8492 -> 8832.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 88220",
+			"id":0,
+			"input":"34199",
+			"note":"The following sequence of operations is optimal: 34199 -> 84129 -> 88123 -> 88220.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 809070",
+			"id":0,
+			"input":"809070",
+			"note":"No operations can increase the number.",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N will be between 1 and 1,000,000, inclusive."
+	}]
+}

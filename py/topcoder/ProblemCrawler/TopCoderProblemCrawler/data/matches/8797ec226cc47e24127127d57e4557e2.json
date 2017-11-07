@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":221.81,
+			"constraints":[],
+			"correctRatio":63.79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=664&rd=4195",
+			"name":"TnsBalls",
+			"notes":[],
+			"submission":243
+		},
+		{
+			"avgPts":248.49,
+			"constraints":[],
+			"correctRatio":68.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=736&rd=4195",
+			"name":"Funnel",
+			"notes":[],
+			"submission":236
+		},
+		{
+			"avgPts":612.79,
+			"constraints":[],
+			"correctRatio":47.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=604&rd=4195",
+			"name":"OddsOrEven",
+			"notes":[],
+			"submission":36
+		}
+	],
+	"name":"Single Round Match 95 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4195"
+}

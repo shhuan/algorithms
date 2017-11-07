@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6723&rd=10104",
+	"statement":"You are given an 8 x 8 chessboard, and you must place the minimum possible number of queens onto the board such that all cells are under attack from at least one queen, and no queens attack each other. Some of the cells on the board are destroyed. A queen cannot be placed on a destroyed cell, and destroyed cells don't need to be under attack. A queen attacks a cell if it is in the same row, same column, or same diagonal as that cell (even if there are destroyed cells between them). Rows are labelled from 1 to 8 and columns from 'A' to 'H'. <p> You are given a String[] <b>board</b>, where the jth character of the ith element represents the cell at row i, column j. A '.' denotes an empty cell, and a '#' denotes a destroyed cell. A solution is represented by a string which concatenates the positions of the queens. Each queen will be represented by two characters rc, where r is the row label and c is the column label. For example, if the solution contains one queen at row 1, column H and another at row 5, column C, it can be represented as &quot;1H5C&quot; or &quot;5C1H&quot;. If there are several solutions which use the minimal number of queens, return the one that comes first lexicographically.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"QueenCovering",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getPlacement",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getPlacement(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"1A8B\"",
+			"id":0,
+			"input":"{ \"........\", \"..######\", \".#.#####\", \".##.####\", \".###.###\", \".####.##\", \".#####.#\", \"........\"}",
+			"note":"We place one queen on the first row and the first column, and another queen on the last row and on the second column.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"1B2D3A4C5E\"",
+			"id":0,
+			"input":"{ \"#......#\", \".#......\", \"..#...#.\", \"........\", \"..#.....\", \"..#..#..\", \"#.......\", \"#...###.\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"1A2C3E4B5D\"",
+			"id":0,
+			"input":"{ \"........\", \"........\", \"........\", \"........\", \"........\", \"........\", \"........\", \"........\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"1A4C5H6B\"",
+			"id":0,
+			"input":"{ \"..##.##.\", \".###..##\", \"##..###.\", \"#..#...#\", \".#.##.#.\", \"#...##..\", \"#..#####\", \"..#..#.#\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"{ \"########\", \"########\", \"########\", \"########\", \"########\", \"########\", \"########\", \"########\" } ",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will have exactly 8 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain exactly 8 characters."
+		},
+		{
+			"order":3,
+			"val":"Each character of board will be either '.' or '#'."
+		}
+	]
+}

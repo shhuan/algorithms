@@ -1,0 +1,77 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1107&rd=5001",
+	"statement":"<i>*** You may only submit a given problem once - no resubmissions will be accepted. ***</i><br /><br /><br /><br /> A no-zero number system uses only the digits 1 through 9. So counting begins with 1, the first &quot;counting number&quot;, and continues: \n <ul>\n  <li> 1,2,3,4,5,6,7,8,9,11,12,...,19,21,...,98,99,111,112,... </li>\n </ul> So, in this system 9 is the ninth counting number and 11 is the tenth counting number. <p> As usual, addition can be defined by reference to the counting sequence. Addition of the i-th counting number and the j-th counting number is defined to mean the (i+j)-th counting number. Thus, in this system 5 + 8 = 14, since 5 is the fifth counting number, 8 is the eighth, and 14 is the thirteenth counting number. Subtraction is the reverse of addition. Create a class NoZero that contains the method subtract that takes two no-zero numbers, <b>big</b> and <b>small</b>, and returns the no-zero value that results from calculating <b>big</b> - <b>small</b>. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NoZero",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"subtract",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int subtract(int big, int small)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"99",
+			"id":0,
+			"input":"111",
+			"note":"This  and  are adjacent in the counting sequence. So 99 + 1 = 111 and 111 - 99 = 1.",
+			"order":1
+		},
+		{
+			"expect":"11",
+			"id":0,
+			"input":"19",
+			"order":2
+		},
+		{
+			"expect":"111",
+			"id":0,
+			"input":"191",
+			"order":3
+		},
+		{
+			"expect":"9989",
+			"id":0,
+			"input":"11112",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"big and small do not contain the digit 0"
+		},
+		{
+			"order":2,
+			"val":"big is between 1 and 999,999,999 inclusive"
+		},
+		{
+			"order":3,
+			"val":"small is between 1 and 999,999,999 inclusive"
+		},
+		{
+			"order":4,
+			"val":"big is greater than small"
+		}
+	]
+}

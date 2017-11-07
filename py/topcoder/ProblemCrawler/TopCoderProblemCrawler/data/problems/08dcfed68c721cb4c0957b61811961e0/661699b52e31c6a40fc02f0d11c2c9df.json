@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12155&rd=15177",
+	"statement":"<p>We are in a distant future. After the downfall of mankind, the Earth is now ruled by fairies. The &quot;Turing game Online&quot; website is hot among fairies right now. On this website, everyone can play the programming puzzle &quot;Turing game&quot;.</p> <br /><br /> <p>Fairies love powers of 5, that is, the numbers 1, 5, 25, 125, 625, and so on. In the Turing game, the player is given a string of bits (zeros and ones). The ideal situation is when the string is represents a power of 5 in binary, with no leading zeros. If that is not the case, the fairy player tries to cut the given string into pieces, each piece being a binary representation of a power of 5, with no leading zeros. Of course, it may be the case that even this is impossible. In that case, the fairy player becomes depressed, and bad things happen when a fairy gets depressed. You, as one of the surviving humans, are in charge of checking the bit strings to prevent the bad things from happening.</p> <br /><br /> <p>You are given a String <b>S</b> that consists of characters '0' and '1' only. <b>S</b> represents the string given to a player of the Turing game. Return the smallest positive integer K such that it is possible to cut <b>S</b> into K pieces, each of them being a power of 5. If there is no such K, return -1 instead.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CuttingBitString",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getmin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getmin(String S)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"\"101101101\"",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"\"1111101\"",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"\"00000\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"\"110011011\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"\"1000101011\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"\"111011100110101100101110111\"",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"S will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in S will be either '0' or '1'."
+		}
+	]
+}

@@ -1,0 +1,130 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3481&rd=6530",
+	"statement":"Shipping is a complicated business, particularly when you are shipping fragile items. To do well, you need to deliver packages quickly, at a low cost, and without breaking them. To this end, you would like software to help you send a package, given the package's cost and the maximum delivery time. There are a number of different routes that are continually traversed by your fleet of trucks. Each route takes a certain amount of time, and it costs a certain amount to send a package along that route. Furthermore, there is a probability associated with each route indicating the percent chance that a package will be damaged along that route.<br /><br /><br /><br /> As the shipping company, you must pay the cost of an item if it is damaged during shipping. Your goal is to find the way to ship an item with the lowest expected cost. For example, if one shipping plan has a cost of X, but a 50% probability of damaging an item, it might end up with a higher expected cost than a plan that has a cost of 2X but only a 5% chance of damaging an item.<br /><br /><br /><br /> You will be given a String[], <b>routes</b>, each element of which represents a single route and will be formatted as<br /><br />&quot;ORIGIN DESTINATION TIME COST PROBABILITY&quot;<br /><br /> where ORIGIN and DESTINATION are city codes (sequences of uppercase letters), TIME is an integer between 1 and 50, COST is an integer between 1 and 20, and PROBABILITY is a real number between 0 and 10, all ranges inclusive. The inputs <b>origin</b> and <b>destination</b> are the starting and ending points for the package to be delivered. <b>time</b> is the maximum allowed delivery time, and is in the same units as TIME in <b>routes</b>. <b>cost</b> is the cost of the package, and is in the same units as COST in <b>routes</b>. You should find the shipping plan with the lowest expected cost, and return that cost as a double.",
+	"notes":[
+		{
+			"order":1,
+			"val":"A route from A to B does not imply a route from B to A."
+		},
+		{
+			"order":2,
+			"val":"You may assume that there is no waiting time when a package is transferred from one route to another."
+		},
+		{
+			"order":3,
+			"val":"You won't know that a package is damaged until it reaches its destination, so you must still send it all the way to the destination, even if it is damaged at the beginning of the trip."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PackageShipping",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"ship",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String, String, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double ship(String[] routes, String origin, String destination, int time, int packageCost)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"SANFRAN\"",
+			"id":0,
+			"input":"{\"SANFRAN CHICAGO 20 3 0.4\", \"SANFRAN MEMPHIS 30 5 1.0\", \"CHICAGO NEWYORK 15 2 2.0\", \"MEMPHIS NEWYORK 8 6 0.1\"}",
+			"note":"There are two possibilities here. We can ship the package through either CHICAGO or MEMPHIS. If we ship the package through CHICAGO, it will cost us 5, and there will be a 2.392% chance that it will be damaged. If we ship through MEMPHIS, it will cost 11, but there will only be a 1.099% chance of damage. Since the package has a cost of 100, the first option will have an expected cost of 7.392, while the second will have an expected cost of 12.099.",
+			"order":1
+		},
+		{
+			"expect":"\"SANFRAN\"",
+			"id":0,
+			"input":"{\"SANFRAN CHICAGO 20 3 0.4\", \"SANFRAN MEMPHIS 30 5 1.0\", \"CHICAGO NEWYORK 15 2 2.0\", \"MEMPHIS NEWYORK 8 6 0.1\"}",
+			"note":"Here we have the same shipping routes as example 0, but for a more expensive package. Shipping through CHICAGO will have an expected cost of 5 + 239.2 = 244.2, while MEMPHIS will have an expected cost of 11 + 109.9 = 120.9.",
+			"order":2
+		},
+		{
+			"expect":"\"SANFRAN\"",
+			"id":0,
+			"input":"{\"SANFRAN CHICAGO 20 3 0.4\", \"SANFRAN MEMPHIS 30 5 1.0\", \"CHICAGO NEWYORK 15 2 2.0\", \"MEMPHIS NEWYORK 8 6 0.1\"}",
+			"note":"In this case, the time constraint forces us to send the package along the more expensive route through CHICAGO.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"routes will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of routes will be formatted as &quot;ORIGIN DESTINATION TIME COST PROBABILITY&quot;, with no double, leading or trailing spaces."
+		},
+		{
+			"order":3,
+			"val":"Each element of routes will contain between 9 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"ORIGIN and DESTINATION will each be sequences of uppercase letters ('A'-'Z')"
+		},
+		{
+			"order":5,
+			"val":"In no element of routes will ORIGIN equal DESTINATION."
+		},
+		{
+			"order":6,
+			"val":"TIME will be an integer between 1 and 50, inclusive, with no leading zeros."
+		},
+		{
+			"order":7,
+			"val":"COST will be an integer between 1 and 20, inclusive, with no leading zeros."
+		},
+		{
+			"order":8,
+			"val":"PROBABILITY will be between 0 and 10, inclusive, and will be formatted as a sequence of 1 or more digits ('0'-'9') and an optional decimal point (extra leading/trailing zeros allowed)."
+		},
+		{
+			"order":9,
+			"val":"origin will be a sequence of uppercase letters matching an ORIGIN in some element of routes."
+		},
+		{
+			"order":10,
+			"val":"destination will be a sequence of uppercase letters matching a DESTINATION in some element of routes."
+		},
+		{
+			"order":11,
+			"val":"time will be between 1 and 100, inclusive."
+		},
+		{
+			"order":12,
+			"val":"packageCost will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":13,
+			"val":"There will be some way to deliver the package in the given amount of time or less."
+		},
+		{
+			"order":14,
+			"val":"No two elements of routes will have the same origin and destination."
+		},
+		{
+			"order":15,
+			"val":"origin and destination will not be the same."
+		}
+	]
+}

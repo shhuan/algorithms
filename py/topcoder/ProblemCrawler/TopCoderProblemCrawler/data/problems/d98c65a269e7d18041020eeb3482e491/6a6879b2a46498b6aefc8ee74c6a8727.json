@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6779&rd=10002",
+	"statement":"<p> <i>This problem statement contains superscripts that may not display correctly in some plugins. If that's the case, use the arena to see them.</i> </p><p> You have recently bought a game of extended dominoes. Each domino is a rectangle partitioned into two squares, and each square contains a number between 0 and 9, inclusive. There are exactly 45 pieces - one for each pair of distinct numbers. Pieces may be reversed, so while there is only one piece containing the numbers 1 and 2, it can be used in either of the following ways: </p><pre>\n   +---+---+     +---+---+\n   | 1 | 2 |     | 2 | 1 |\n   +---+---+     +---+---+\n</pre><p> Unfortunately, some of the pieces have disappeared, but there is still a possible game left: <i>How many ways are there to construct a cycle collection with all the remaining pieces?</i> </p><p> A cycle collection is a set of 1 or more cycles that do not share pieces. A cycle is constructed by ordering and orienting the pieces in such a way that the left number of the piece in position i is equal to the right number of the piece in position i-1, and the left number of the piece in the first position is equal to the right number of the piece in the last position (positions are numbered from left to right). </p><pre>\n   +---+---++---+---++---+---++---+---++---+---++---+---+\n   | 1 | 2 || 2 | 5 || 5 | 4 || 4 | 2 || 2 | 8 || 8 | 1 |   \n   +---+---++---+---++---+---++---+---++---+---++---+---+\n\n   +---+---++---+---++---+---++---+---++---+---++---+---+\n   | 1 | 2 || 2 | 4 || 4 | 5 || 5 | 2 || 2 | 8 || 8 | 1 |   \n   +---+---++---+---++---+---++---+---++---+---++---+---+\n\n   +---+---++---+---++---+---+  +---+---++---+---++---+---+\n   | 1 | 2 || 2 | 8 || 8 | 1 |  | 4 | 5 || 5 | 2 || 2 | 4 |   \n   +---+---++---+---++---+---+  +---+---++---+---++---+---+\n</pre><p> The figure above shows three possible cycle collections that use the same set of pieces. We say that each piece is connected to the two pieces that surround it, and the first and last pieces are also connected. Two cycles are considered the same if each piece is connected to the same two other pieces in both cycles. Two cycle collections are the same if they contain the same set of cycles. </p><p> You will be given the existing pieces as a String[] <b>pieces</b>, where each element contains exactly two digits representing the two numbers on a single domino. Return the number of distinct cycle collections that can be formed with these pieces. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Remember that each cycle collection must use all the pieces, and no two cycles in a collection can share pieces."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ExtendedDominoes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countCycles",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countCycles(String[] pieces)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"12\",\"25\",\"45\",\"24\",\"28\",\"18\"}",
+			"note":"The example in the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"01\",\"12\",\"23\",\"34\",\"45\"}",
+			"note":"There is no way to form a cycle here.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"09\",\"12\",\"24\",\"14\",\"57\",\"79\",\"05\"}",
+			"note":"The only possibility is: ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 243",
+			"id":0,
+			"input":"{\"34\",\"35\",\"36\",\"37\",\"45\",\"46\",\"47\",\"56\",\"57\",\"67\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pieces will contain between 1 and 45 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of pieces will contain exactly 2 characters."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of pieces will be a digit ('0'-'9')."
+		},
+		{
+			"order":4,
+			"val":"In each element of pieces the value of its first character will be less than the value of its second character."
+		},
+		{
+			"order":5,
+			"val":"No two elements of pieces will be equal."
+		},
+		{
+			"order":6,
+			"val":"The number of cycles for pieces will be less than 263."
+		}
+	]
+}

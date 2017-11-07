@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11939&rd=15094",
+	"statement":"<p><i>Warning: This problem statement contains superscripts and/or subscripts. It may not display properly outside of the applet.</i></p> <br /><br /> <p> Tomek and Wojtek are going to participate as a team in their local ICPC competition next week. The organizers allow the contestants to bring their own printed materials such as books to the contest site. Their university has some books they could borrow; the i-th of those books weighs <b>books</b>[i] grams. Our heroes would like to have as much material available as possible, however neither of them wishes to be carrying too much weight. Let T be the total weight of books that Tomek will take, and W be the total weight of books that Wojtek will take. Then, Tomek wants to maximize W - T, while Wojtek wants to maximize T - W; if they would have multiple optimal choices, both of them want to maximize T + W as a tie-breaker. The way it will be decided who carries which books to the contest will be as follows: </p>\n <ul> \n  <li>First, Tomek selects any <b>moves</b>[0] books from the library, and put them in Wojtek's backpack. These will be the books that their team will take to the contest.</li> \n  <li>Then, Wojtek selects any <b>moves</b>[1] books from his backpack, and moves them to Tomek's backpack.</li> \n  <li>Then, Tomek selects any <b>moves</b>[2] books from his backpack, and moves them to Wojtek's backpack, and so on...</li> \n </ul> This process continues for a total of n moves, where n is the number of elements in <b>moves</b>. If there are less than <b>moves</b>[i] books available in the i-th move, the player simply moves all the available books. <p></p> <p> You are given a int[] <b>books</b> and a int[] <b>moves</b>. Return a int[] containing exactly two elements, (T, W), with the first element equal to the total weight of books that Tomek will carry, and the second element equal to the total weight of books that Wojtek will carry. Assume that both Tomek and Wojtek make optimal choices during the process described above. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"The books may be very heavy."
+		},
+		{
+			"order":2,
+			"val":"The correct return value is always uniquely determined by the problem statement."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HeavyBooks",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findWeight",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] findWeight(int[] books, int[] moves)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{3,2,1,1,1}",
+			"id":0,
+			"input":"{5,2,3,1}",
+			"note":"The process can go as follows: ",
+			"order":1
+		},
+		{
+			"expect":"{2, 3}",
+			"id":0,
+			"input":"{10, 100, 1000}",
+			"note":"Wojtek has only two books after Tomek's opening move, so he empties his backpack in his move.",
+			"order":2
+		},
+		{
+			"expect":"{1,1,1}",
+			"id":0,
+			"input":"{155870,565381}",
+			"order":3
+		},
+		{
+			"expect":"{4,1,1,3,2}",
+			"id":0,
+			"input":"{500,500,500,500}",
+			"note":"Here, all the books have the same weight.",
+			"order":4
+		},
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"{1,1,1,1,1000000}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1}",
+			"id":0,
+			"input":"{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"books will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of books will be between 1 and 106, inclusive."
+		},
+		{
+			"order":3,
+			"val":"moves will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of moves will be between 1 and the number of elements in books, inclusive."
+		}
+	]
+}

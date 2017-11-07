@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10880&rd=14156",
+	"statement":"Rabbits often feel lonely, so they enjoy participating in programming contests together. <br /><br /> <br /><br /> Rabbit Iris is the head coach of her university's programming team. The big annual contest is going to be held next month, so she decided to hold a preliminary contest to help her decide who to put in the team. <br /><br /> <br /><br /> The preliminary contest is now over, and the submissions are being reviewed. You are given a int[] <b>points</b>, and a String[] <b>standings</b>. Each element of points represents a single problem from the contest. For the j-th problem: \n <ul> \n  <li>If <b>points</b>[j] is positive, then all submissions for this problem have been reviewed, and the point value of the problem is <b>points</b>[j]. The j-th character of the i-th element of standings is 'Y' if rabbit i correctly solved the problem, or 'N' if he did not. </li> \n  <li>If <b>points</b>[j] is negative, then none of the submissions for this problem have been reviewed yet, and the point value of the problem is -<b>points</b>[j]. The j-th character of the i-th element of standings is 'Y' if rabbit i submitted a solution (which may or may not be correct) for this problem, or 'N' if he did not. </li> \n </ul> A rabbit's score is the sum of the point values for the problems which he solved correctly. Once all the submissions are reviewed, the rabbits will be ranked according to their scores. Rabbits with higher scores will be ranked higher than rabbits with lower scores. If two rabbits have the same score, then the lower-numbered rabbit will be ranked higher. The top <b>qualified</b> ranking rabbits will be qualified to be members of the team. Among them, Iris will arbitrarily select <b>selected</b> rabbits to actually be in the team. If you consider all the possible scenarios for the problems which have not yet been reviewed, how many different teams are possible? ",
+	"notes":[{
+		"order":1,
+		"val":"Two teams are considered different if and only if at least one rabbit belongs to exactly one of the teams."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RabbitProgramming",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getTeams",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getTeams(int[] points, String[] standings, int qualified, int selected)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ \"NY\", \"YN\", \"YN\", \"YN\" }",
+			"id":0,
+			"input":"{ 1, -10 }",
+			"note":"If rabbit 0's submission for problem 1 is correct, rabbits 0, 1, and 2 are qualified, and teams { 0, 1 }, { 0, 2 }, { 1, 2 } are possible.  If it is incorrect, rabbits 1, 2, and 3 are qualified, and teams { 1, 2 }, { 1, 3 }, { 2, 3 } are possible. ",
+			"order":1
+		},
+		{
+			"expect":"{ \"YYY\", \"YNY\", \"YYN\", \"YYN\", \"YNN\" }",
+			"id":0,
+			"input":"{ -250, -500, -1000 }",
+			"note":"Any pairs of rabbits can be chosen. ",
+			"order":2
+		},
+		{
+			"expect":"{ \"YYYYYYYYYNYY\", \"YYYNYYYYYNNN\", \"YYYNYNYYNNYN\", \"YYYYYNYYYYNN\", \"YYNNYNYNYYNN\", \"YYYNNNYYNNNN\", \"YYNNNNYYNNNN\", \"NNYNYYYNYNNN\", \"NNNNNNYYYNNN\", \"YYYNNNYYYNNN\" } ",
+			"id":0,
+			"input":"{ 5, -12, 5, -15, 10, -20, 3, -25, 7, -32, 21, -45 }",
+			"note":"Example from a real programming contest. ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"points will contain between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each element of points will be between -100,000 and 100,000, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"No element of points will be 0. "
+		},
+		{
+			"order":4,
+			"val":"standings will contain between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":5,
+			"val":"Each element of standings will contain exactly N characters, where N is the number of elements in points. "
+		},
+		{
+			"order":6,
+			"val":"Each character in standings will be either 'Y' or 'N'. "
+		},
+		{
+			"order":7,
+			"val":"qualified will be between 1 and the number of elements in standings, inclusive. "
+		},
+		{
+			"order":8,
+			"val":"selected will be between 1 and qualified, inclusive. "
+		}
+	]
+}

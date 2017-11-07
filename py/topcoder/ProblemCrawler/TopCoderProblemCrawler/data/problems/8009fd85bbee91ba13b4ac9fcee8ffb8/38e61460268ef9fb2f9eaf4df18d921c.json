@@ -1,0 +1,101 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1961&rd=4706",
+	"statement":"<p><i>Note to plugin users: There is an image in this problem statement. Please use the applet to view it.</i></p> <p> An insertion into an immutable binary search tree does not alter the existing tree. Rather, it creates a new tree that contains the new value. For example, if a tree contains the values 1, 2, and 3, and you insert the value 4, then the new tree contains the values 1, 2, 3, and 4, but the old tree still exists and still contains only the values 1, 2, and 3. You could next insert, say, 5 into the new tree (obtaining a tree containing 1, 2, 3, 4, and 5) or into the old tree (obtaining a tree containing 1, 2, 3, and 5). </p> <p> The simplest technique for implementing insertion into an immutable tree is called path-copying, because the entire path from the root to the site of the insertion is copied. Nodes not on this path are shared by the two trees. For example, if we insert 6 into the tree on the left in the picture below, we get the tree on the right. </p> <p> <img src=\"http://172.16.100.15/contest/problem/ImmutableTrees/tree.jpg\" /> </p> Notice that the nodes containing 3 and 5 were copied, but that the nodes containing 1, 2, and 4 are members of both trees. Even though the two trees contain a total of 11 elements, those elements are represented using only 8 nodes. <p> If we start with an empty tree and perform N insertions, then we end up with a total of N non-empty trees. However, some of those trees may now be <i>garbage</i>, meaning that they are no longer needed and can be deallocated. When we deallocate a tree, we deallocate all of its nodes, except for those nodes that also belong to trees that are not garbage. You must determine how many nodes remain after deallocating all nodes that can be deallocated. </p> <p> A series of insertions is represented by a int[] <b>values</b> and a int[] <b>trees</b>. Let N be the number of insertions that are performed. The insertions are numbered from 0 to N-1. Insertion number I is specified by element I of <b>values</b> and element I of <b>trees</b>. Element I of <b>values</b> is the value that is inserted during the insertion, and element I of <b>trees</b> is the number of the tree that the value is inserted into, where tree number J is the result of insertion number J. If element I of <b>trees</b> is -1, then the value is inserted into the empty tree. </p> <p> For example, the inputs </p> <pre>\n     values = {  8,  6,  4,  7,  9,  1 }\n     trees  = { -1,  0,  1,  0, -1,  2 }\n</pre> correspond to the following series of insertions: <pre>\n     tree0 = insert(8,empty)\n     tree1 = insert(6,tree0)\n     tree2 = insert(4,tree1)\n     tree3 = insert(7,tree0)\n     tree4 = insert(9,empty)\n     tree5 = insert(1,tree2)\n</pre> <p> The int[] <b>garbage</b> contains the numbers of the trees that are to be deallocated. In the example above, if <b>garbage</b> = {3,1,5}, then <tt>tree3</tt>, <tt>tree1</tt>, and <tt>tree5</tt> are deallocated, but <tt>tree0</tt>, <tt>tree2</tt>, and <tt>tree4</tt> are not. You should return the total number of nodes that remain after the garbage trees have been deallocated. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ImmutableTrees",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numNodes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numNodes(int[] values, int[] trees, int[] garbage)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{-1, 0, 1, 2, 3, 4 }",
+			"id":0,
+			"input":"{ 3, 2, 5, 4, 1, 6 }",
+			"note":"The first example above.",
+			"order":1
+		},
+		{
+			"expect":"{-1, 0, 1, 0,-1, 2 }",
+			"id":0,
+			"input":"{ 8, 6, 4, 7, 9, 1 }",
+			"note":"The second example above.",
+			"order":2
+		},
+		{
+			"expect":"{-1, 0, 1, 0 }",
+			"id":0,
+			"input":"{ 1, 2, 3, 4 }",
+			"note":"Everything is garbage.",
+			"order":3
+		},
+		{
+			"expect":"{ -1,0,0,2,3,3,-1,6,5,4,2,0,10,0,0,8,3,10,6,12 }",
+			"id":0,
+			"input":"{ 61,67,46,42,38,11,88,33,9,20,31,68,48,17,74,91,15,62,21,73 }",
+			"order":4
+		},
+		{
+			"expect":"{ -1,0,1,2,3,3,3,2,-1,1,0,5,11,1,4,12,3,15,6,12,4,13,19,1,0,14,7,12,18,12,3,26,21,29,24 }",
+			"id":0,
+			"input":"{ 37,12,11,7,10,36,17,19,18,23,8,31,32,15,21,4,25,33,29,22,5,3,34,20,13,30,1,35,2,9,14,27,28,16,24 }",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"values contains between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"trees contains the same number of elements as values."
+		},
+		{
+			"order":3,
+			"val":"Each element of values is between 1 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"values contains no duplicate elements."
+		},
+		{
+			"order":5,
+			"val":"Element I of trees is between -1 and I-1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"garbage contains between 0 and N elements, inclusive, where N is the number of elements in values."
+		},
+		{
+			"order":7,
+			"val":"Each element of garbage is between 0 and N-1, inclusive."
+		},
+		{
+			"order":8,
+			"val":"garbage contains no duplicate elements."
+		}
+	]
+}

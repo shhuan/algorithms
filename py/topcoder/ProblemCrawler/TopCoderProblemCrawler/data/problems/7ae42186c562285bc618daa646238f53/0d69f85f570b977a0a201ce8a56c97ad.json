@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6765&rd=10005",
+	"statement":"<p>You will be given a int[] <b>A</b> that contains N elements and an int <b>P</b>. Return the number of distinct integer values of X for which the following inequality is true: </p> <pre>\n|<b>A</b><sub>0</sub> - X| + |<b>A</b><sub>1</sub> - X| + ... + |<b>A</b><sub>N-1</sub> - X| ≤ <b>P</b>\n</pre> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ModularInequality",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countSolutions",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countSolutions(int[] A, int P)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"{1, 2, 3}",
+			"note":"The possible values for X are 0, 1, 2, 3 and 4.",
+			"order":1
+		},
+		{
+			"expect":"42",
+			"id":0,
+			"input":"{10, 30, 15, -1, 17}",
+			"order":2
+		},
+		{
+			"expect":"17",
+			"id":0,
+			"input":"{0, 2, 3, -5, 10}",
+			"order":3
+		},
+		{
+			"expect":"1265",
+			"id":0,
+			"input":"{-693}",
+			"order":4
+		},
+		{
+			"expect":"6495",
+			"id":0,
+			"input":"{965, -938, -396, -142, 926, 31, -720}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of A will be between -1,000,000,000 and 1,000,000,000 inclusive."
+		},
+		{
+			"order":3,
+			"val":"P will be between 0 and 1,000,000,000 inclusive."
+		}
+	]
+}

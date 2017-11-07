@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3530&rd=6535",
+	"statement":"In a parking lot there are a lot of cars and parking spots and all cars want to drive to a parking spot. Due to the traffic regulations cars may only drive parallel to the boundaries of the parking lot and only at the speed of one square per unit of time. <br /><br /><br /><br /> Usually all cars drive to the nearest available parking spot, but that might turn out badly for some cars. Consider for example the following car park <pre>\n.C.....P.X...\nXX.......X..P\nXX.....C.....\n</pre> (here 'C' stands for car, 'P' for parking spot, 'X' for wall and '.' for empty spot) <br /><br /><br /><br /> If the car on the bottom drives to its nearest parking spot, the upper left car must drive all the way to the right, taking 13 units of time. If, however, the car on the bottom drives to the parking spot on the right, it will take 6 units of time for both cars to find a parking spot. <br /><br /><br /><br /> Return the minimal amount of time it takes before every car can have a parking spot (assuming that the cars act socially like above). All cars start on an empty spot. Cars are small and any number of them can drive on the same square simultaneously. They can drive over empty spots and parking spots, but not through walls. Each car has to end on a separate parking spot. <br /><br /><br /><br /> If it is impossible for each car to drive to a parking place, return -1. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Parking",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minTime(String[] park)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"C.....P\", \"C.....P\", \"C.....P\"}",
+			"note":"Every car just drives to the opposite parking spot.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 16",
+			"id":0,
+			"input":"{\"C.X.....\", \"..X..X..\", \"..X..X..\", \".....X.P\"}",
+			"note":"The slalom takes the car 16 units of time.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"XXXXXXXXXXX\", \"X......XPPX\", \"XC...P.XPPX\", \"X......X..X\", \"X....C....X\", \"XXXXXXXXXXX\"} ",
+			"note":"This would take 11 instead of 5 units of time if the car on the bottom drove to its nearest parking spot. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\".C.\", \"...\", \"C.C\", \"X.X\", \"PPP\"}",
+			"note":"While driving, the cars can be on the same empty spot or parking spot, but they have to finish on different parking spots.",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"CCCCC\", \".....\", \"PXPXP\"} ",
+			"note":"There are not enough parking spots for all the cars.",
+			"order":5
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"..X..\", \"C.X.P\", \"..X..\"}",
+			"note":"The car can't reach the parking spot.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"park will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"All elements of park have equal length."
+		},
+		{
+			"order":3,
+			"val":"Each element of park has length between 1 and 50, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each character in park is either 'C', 'P', 'X' or '.'."
+		},
+		{
+			"order":5,
+			"val":"There will be no more than 100 cars and 100 parking places in park."
+		}
+	]
+}

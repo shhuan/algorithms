@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.62,
+			"constraints":[],
+			"correctRatio":72.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11310&rd=14423",
+			"name":"Painting",
+			"notes":[],
+			"submission":689
+		},
+		{
+			"avgPts":286.71,
+			"constraints":[],
+			"correctRatio":83.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11309&rd=14423",
+			"name":"AlternatingLane",
+			"notes":[],
+			"submission":171
+		},
+		{
+			"avgPts":512.74,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8744&rd=14423",
+			"name":"KnightsOut",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"Member Single Round Match 494 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14423"
+}

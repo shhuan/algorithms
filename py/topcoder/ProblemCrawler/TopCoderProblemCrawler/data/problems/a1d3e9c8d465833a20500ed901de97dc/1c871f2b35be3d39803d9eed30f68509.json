@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8009&rd=10773",
+	"statement":"To obtain the reverse of a number, write it backwards from right to left. For example, the reverse of 1234 is 4321, and the reverse of 100 is 1 (leading zeroes are always ignored). Return the smallest non-negative number x, such that the difference x - reverse(x) is equal to <b>difference</b>. If no such number exists, return &quot;NONE&quot; (quotes for clarity) instead.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ReverseDistance",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String find(int difference)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"20\"",
+			"id":0,
+			"input":"18",
+			"note":"20 - 2 = 18. 18 can be also achieved in other ways like 42 - 24, but 20 is the smallest possible number.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"NONE\"",
+			"id":0,
+			"input":"15",
+			"note":"It's impossible to find a number with a difference of 15.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"5080\"",
+			"id":0,
+			"input":"4275",
+			"note":"5080 - 805 = 4275",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"101001\"",
+			"id":0,
+			"input":"900",
+			"note":"101001 - 100101 = 900",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"100990\"",
+			"id":0,
+			"input":"1989",
+			"note":"100990 - 99001 = 1989",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"860300\"",
+			"id":0,
+			"input":"857232",
+			"note":"860300 - 3068 = 857232",
+			"order":6
+		},
+		{
+			"expect":"Returns: \"50\"",
+			"id":0,
+			"input":"45",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"difference will be between 1 and 1000000, inclusive."
+	}]
+}

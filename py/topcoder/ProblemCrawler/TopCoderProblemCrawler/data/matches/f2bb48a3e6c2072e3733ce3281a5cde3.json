@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":203.67,
+			"constraints":[],
+			"correctRatio":50.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13614&rd=16475",
+			"name":"ModModMod",
+			"notes":[],
+			"submission":721
+		},
+		{
+			"avgPts":304.35,
+			"constraints":[],
+			"correctRatio":63.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13776&rd=16475",
+			"name":"FoxMeeting",
+			"notes":[],
+			"submission":98
+		},
+		{
+			"avgPts":572.48,
+			"constraints":[],
+			"correctRatio":88.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13775&rd=16475",
+			"name":"TrianglePainting",
+			"notes":[],
+			"submission":34
+		}
+	],
+	"name":"2015 TopCoder Open Algorithm > Round 2A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16475"
+}

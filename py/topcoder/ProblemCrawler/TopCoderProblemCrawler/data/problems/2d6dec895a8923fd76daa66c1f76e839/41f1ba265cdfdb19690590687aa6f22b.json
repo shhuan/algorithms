@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6619&rd=9996",
+	"statement":"When returning from vacation, you have to delete some unwanted email messages in your inbox, like spam or other unimportant messages. Your inbox consists of several pages that each contain the same number of messages (except possibly the last page). Each message has two corresponding buttons that allow you to: <br /><br /> <br /><br /> - add the message to the current selection <br /><br /> - remove the message from the current selection <br /><br /> <br /><br /> In addition, each page has three buttons with the following functions: <br /><br /> <br /><br /> - select all messages on the current page <br /><br /> - delete all selected messages on the current page <br /><br /> - advance to the next page of messages (unless you're already on the last page) <br /><br /><br /><br /> Selections do not extend across pages, and advancing to the next page deselects everything that is currently selected. Also, deleting messages will not cause later messages in the inbox to scroll up to the current page. <br /><br /> <br /><br /> For example if you have four email messages on one page and you would like to delete the second one, you could select it and then click on delete for a total of two clicks. An alternative is to select all messages, then deselect all other messages except the second, and then click delete, for a total of five clicks. <br /><br /> <br /><br /> Naturally, you would like to clean up your inbox with as few clicks as possible. Furthermore, you are allowed to choose the number of emails to display per page. If you decide to display K messages per page, the first K messages will be on the first page, the next K messages will be on the second one, and so on. Obviously, the last page might contain less than K messages. Note that you need to check all pages of messages, even if they do not contain any messages that must be deleted.<br /><br /> <br /><br /> You will be given a String <b>messages</b> containing a description of email messages in the order they appear in your inbox. The 'D' character denotes a message that should be deleted, while a '.' character denotes an email that should be kept. You will also be given two ints, <b>low</b> and <b>high</b>, denoting the inclusive lower and upper bounds of the number of messages on each page. You should choose how many emails to display per page such that the number of clicks needed is minimal, and then return the number of clicks. <br /><br /> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"InboxCleanup",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fewestClicks",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int fewestClicks(String messages, int low, int high)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"\"..........\"",
+			"note":"No messages to delete here. Since we can display all messages in one page, there is no need to click any button.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"\".D.D.DD.D.\"",
+			"note":"Your only choice here is to display 5 messages per page. Select the two messages from the first page and then click delete for a total of three clicks. One more click is needed for advancing to the next page. For the second page, you have two options: first select all messages and then deselect the third and fifth ones, or select each of the three 'D' messages individually. Both options require three clicks. After the selection is made, click delete.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"...D..DDDDDD...D.DD..\"",
+			"note":"Display 6 messages per page.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"D.D..D..DD.DDDD.D.DDD.DDDD..\"",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"\"DDD.........................\"",
+			"note":"Remember that you need to check all pages.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"messages will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of messages will be either 'D' or '.'."
+		},
+		{
+			"order":3,
+			"val":"low will be between 1 and the number of characters in messages, inclusive."
+		},
+		{
+			"order":4,
+			"val":"high will be between low and the number of characters in messages, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":193.94,
+			"constraints":[],
+			"correctRatio":77.01,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4630&rd=8019",
+			"name":"RectangleError",
+			"notes":[],
+			"submission":609
+		},
+		{
+			"avgPts":409.72,
+			"constraints":[],
+			"correctRatio":84.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4629&rd=8019",
+			"name":"FibonacciSum",
+			"notes":[],
+			"submission":606
+		},
+		{
+			"avgPts":428.16,
+			"constraints":[],
+			"correctRatio":14.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4715&rd=8019",
+			"name":"VariableSolve",
+			"notes":[],
+			"submission":75
+		}
+	],
+	"name":"2005 TCO > Online Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8019"
+}

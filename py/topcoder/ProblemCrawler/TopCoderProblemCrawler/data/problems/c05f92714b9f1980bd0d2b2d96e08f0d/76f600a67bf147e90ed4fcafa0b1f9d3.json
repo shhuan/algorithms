@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12432&rd=15490",
+	"statement":"<p>Cat Carol is the queen of Gridland. Gridland is a rectangular country divided into a grid of unit square cells. Each cell contains either a town or a wasteland. Carol has decided to construct some railroad tracks according to the following rules:</p> <br /><br /> \n <ul> \n  <li>The cells with wasteland must not contain any railroad tracks.</li> \n  <li>Each town cell has to contain a single segment of railroad tracks that connects two of its four sides.</li> \n  <li>Each segment of tracks has to be connected to two other segments of tracks (one on each end).</li> \n </ul> <br /><br /> <p>Note that Carol does not require the entire set of tracks to be connected. Configurations that consist of multiple disjoint loops are acceptable, too.</p> <br /><br /> <p>A Curvy is a curious animal indigenous to Gridland. These animals love curves and hate straight things. Some of the towns in Gridland are inhabited by Curvies. If such a town happens to contain a straight segment of tracks (i.e., a segment that connects two opposite sides of the cell), the Curvies in the town are very unhappy.</p> <br /><br /> <p>You are given a String[] <b>field</b> that describes Gridland: each character of each element of <b>field</b> describes one of its cells. The meaning of individual characters follows.</p> <br /><br /> \n <ul> \n  <li>The character '.' represents a town without Curvies.</li> \n  <li>The character 'C' represents a town with Curvies.</li> \n  <li>The character 'w' represents a wasteland.</li> \n </ul> <br /><br /> <p>Compute and return the minimal number of towns with unhappy Curvies when the railroad tracks are constructed according to the above constraints. If there is no way to construct the railroads according to the given rules, return -1 instead.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CurvyonRails",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getmin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getmin(String[] field)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"..\" ,\"..\"}",
+			"note":"It is possible to construct a round railroad that passes through all towns.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"wCCww\" ,\"wCC..\" ,\"..w..\" ,\"....w\" ,\"ww..w\"}",
+			"note":"     There are two valid ways to construct the railroads. In the left picture, there is one town with unhappy Curvies. In the right picture, there are no towns with unhappy Curvies.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"C.w\" ,\"...\" ,\".C.\"}",
+			"note":"The curvy in the middle of the bottom row will be unhappy.",
+			"order":3
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\".\"}",
+			"note":"There is no way to construct the railroads.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"w\"}",
+			"note":"There is no town.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"CC..CCCw.CwC..CC.w.C\", \"C.CCCwCCC.w.w..C.w..\", \"wwww...CC.wC.Cw.CC..\", \"CC..CC.w..w.C..CCCC.\", \"CC.CCC..CwwCCC.wCC..\", \"w.C..wwCC.CC.wwwCC..\", \".CC.CC..CCC..CC.CC.C\", \"Cw....C.C.CCC...CC..\", \"CC.C..Cww.C.CwwwC..w\", \"wCCww..C...CCCCCCC.w\", \"C.CCw.CC.ww...C.CCww\", \"C.C.C.CCwCC..wCCw.Cw\", \"CCC.C...w..C.wC.wCCw\", \"CC.C..C..CCC.CC.C...\", \"C.ww...CCC..CC...CCC\", \"...CCC.CwwwC..www.C.\", \"wwCCCCC.w.C.C...wCwC\", \"CCwC.CwCCC.C.w.Cw...\", \"C.w.wC.CC.CCC.C.w.Cw\", \"CCw.CCC..C..CC.CwCCw\", \"C.wwwww.CwwCCwwwwwww\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"field will contain between 1 and 25 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of field will contain between 1 and 25 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of field will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character of each element of field will be '.', 'w' or 'C'."
+		}
+	]
+}

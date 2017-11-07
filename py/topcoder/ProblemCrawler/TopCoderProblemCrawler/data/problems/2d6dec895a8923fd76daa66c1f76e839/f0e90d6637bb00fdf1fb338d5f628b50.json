@@ -1,0 +1,89 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6540&rd=9996",
+	"statement":"You have received a new puzzle as a gift. It consists of a board and several pieces of various lengths. Each piece has the same width as the board. The goal of the game is to place the least number of pieces on the board such that no other unused piece can be added legally. Pieces must not hang over the edge of the board or be twisted at an angle. Each piece must be oriented so that its width is parallel to the width of the board. Pieces must not overlap, but their edges may touch. Keep in mind that distances between pieces or the distances between pieces and the edges of the board are not necessarily integer numbers. See the examples for further clarification. <br /><br /> <br /><br /> You will be given an int <b>L</b>, the length of the board, and a int[] <b>pieces</b> containing the lengths of the pieces. Create a method optimalPlacement that returns the number of pieces placed on the board that allows you to solve the puzzle. <br /><br /> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PlacingPieces",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"optimalPlacement",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int optimalPlacement(int L, int[] pieces)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1, 8}",
+			"id":0,
+			"input":"9",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"{1, 1, 5, 5, 5}",
+			"id":0,
+			"input":"36",
+			"note":" ",
+			"order":2
+		},
+		{
+			"expect":"{1, 1, 5, 5, 5}",
+			"id":0,
+			"input":"37",
+			"note":"You cannot leave any piece out here.",
+			"order":3
+		},
+		{
+			"expect":"{2, 2, 2, 9, 9, 10}",
+			"id":0,
+			"input":"18",
+			"note":"Sometimes it is better to not place the piece with the highest length.",
+			"order":4
+		},
+		{
+			"expect":"{2, 3, 4}",
+			"id":0,
+			"input":"1",
+			"note":"No piece fits on this board.",
+			"order":5
+		},
+		{
+			"expect":"{73, 76, 90, 42, 84, 13, 57, 88, 80, 45, 80, 1, 78, 41, 73, 40, 97, 42}",
+			"id":0,
+			"input":"703",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"L will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"pieces will contain between 1 and 30 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of pieces will be between 1 and 100, inclusive."
+		}
+	]
+}

@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10516&rd=13900",
+	"statement":"<p>You are given a directed graph with n vertices, labeled 0 to n-1. The edges of the graph contain values, and each time you traverse an edge, the value of that edge gets added to your total score. If the same edge is traversed multiple times, its value gets added every time. Values can be any number between -499 and 499, inclusive. There are no edges that connect a vertex to itself.</p> <p>There's an ant at vertex 0 and it wants to get to vertex 1. It must do this in an integer number of seconds between 1 and <b>timeLimit</b>, inclusive. The ant must make exactly <b>stepsPerSecond</b> steps each second, where each step consists of moving from its current vertex V to an adjacent vertex W (W is adjacent to V if there's a directed edge from V to W in the graph). The ant's goal is to get the highest score possible.</p> <p>The graph is given as three String[]s <b>p0</b>, <b>p1</b> and <b>p2</b>. Concatenate the j-th characters of the i-th elements of <b>p0</b>, <b>p1</b> and <b>p2</b> (in that order) to get a 3-digit String S. If S is &quot;000&quot;, then there is no edge from vertex i to vertex j. Otherwise, there is an edge from vertex i to vertex j, and its value is A - 500, where A is the integer value of S. For example, if S is &quot;100&quot;, then the value is -400, and if S is &quot;999&quot;, the value is 499. Return the decimal representation of the highest possible score as a String with no extra leading zeroes. If it is impossible to reach vertex 1 under the given constraints, return &quot;<tt>IMPOSSIBLE</tt>&quot; (quotes for clarity) instead.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AntOnGraph",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maximumBonus",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String maximumBonus(String[] p0, String[] p1, String[] p2, int stepsPerSecond, int timeLimit)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"00\",\"00\"}",
+			"id":0,
+			"input":"{\"05\",\"50\"}",
+			"note":"Here, there are two vertices. There's an edge from vertex 0 to vertex 1 and an edge from vertex 1 to vertex 0. Both edges have a value of 1. The ant must make exactly 3 steps per second, so during the first second, it will make the following moves: 0->1, 1->0, 0->1. The time limit is 2, so there's time for 3 more moves. However, that would place the ant back at vertex 0, so the ant should stop after the first second.",
+			"order":1
+		},
+		{
+			"expect":"{\"00\",\"00\"}",
+			"id":0,
+			"input":"{\"05\",\"50\"}",
+			"note":"This is the same graph as the previous example, but this time, the ant must make exactly 2 steps per second. The ant can therefore never reach vertex 1 because it will always return to vertex 0 after each second.",
+			"order":2
+		},
+		{
+			"expect":"{\"0000\",\"0000\",\"0000\",\"0000\"}",
+			"id":0,
+			"input":"{\"0550\",\"0000\",\"0005\",\"5000\"}",
+			"note":"In this case the ant can traverse cycle 0->2->3->0 and earn 3 points. The ant will keep moving along this cycle and finally go to vertex 1 and earn another point. Thus the number of points modulo 3 is 1. Among all multiple of 7 less than or equal to 63, 49 is the biggest one that satisfies the constraints.",
+			"order":3
+		},
+		{
+			"expect":"{\"0090\",\"0000\",\"0009\",\"9000\"}",
+			"id":0,
+			"input":"{\"0540\",\"0000\",\"0004\",\"4000\"}",
+			"note":"This is the same as the previous example, but this time, the score for the cycle is -3.",
+			"order":4
+		},
+		{
+			"expect":"{\"038604914953\",\"804585763146\",\"350629473403\", \"028096403898\",\"575205051686\",\"427800322647\", \"655168017864\",\"582553303278\",\"980402170192\", \"620737714031\",\"686142310509\",\"092421645460\"}",
+			"id":0,
+			"input":"{\"079269665406\",\"506042219642\",\"720809987956\", \"315099331918\",\"952306192584\",\"406390344278\", \"999241035142\",\"370785209189\",\"728363760165\", \"019367419000\",\"279718007804\",\"610188263490\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"p0 will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"p1 and p2 will each contain the same number of elements as p0."
+		},
+		{
+			"order":3,
+			"val":"Each element in p0, p1 and p2 will contain exactly n characters, where n is the number of elements in p0."
+		},
+		{
+			"order":4,
+			"val":"Each character in p0, p1 and p2 will be a digit ('0'-'9')."
+		},
+		{
+			"order":5,
+			"val":"The i-th character of the i-th element of p0, p1 and p2 will be '0'."
+		},
+		{
+			"order":6,
+			"val":"stepsPerSecond will be between 1 and 100, inclusive."
+		},
+		{
+			"order":7,
+			"val":"timeLimit will be between 1 and 1000000000 (10^9), inclusive."
+		}
+	]
+}

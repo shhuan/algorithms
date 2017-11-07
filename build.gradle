@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    repositories {
+       mavenCentral()
+        //maven { url 'http://maven.oschina.net/content/groups/public/' }
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.8.2'
+        compile group: 'cglib', name: 'cglib', version: '3.2.2'
+
+    }
+
+    version = '1.0'
+
+    jar {
+        manifest.attributes provider: 'my cool company'
+    }
+}

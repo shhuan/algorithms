@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":220.3,
+			"constraints":[],
+			"correctRatio":84.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8467&rd=12180",
+			"name":"OlympicCandles",
+			"notes":[],
+			"submission":530
+		},
+		{
+			"avgPts":235.24,
+			"constraints":[],
+			"correctRatio":37.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8462&rd=12180",
+			"name":"CandyGame",
+			"notes":[],
+			"submission":342
+		},
+		{
+			"avgPts":441.88,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9802&rd=12180",
+			"name":"TournamentSeeding",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"Single Round Match 408 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12180"
+}

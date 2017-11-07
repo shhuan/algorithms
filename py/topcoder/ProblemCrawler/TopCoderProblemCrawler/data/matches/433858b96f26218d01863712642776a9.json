@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":160.45,
+			"constraints":[],
+			"correctRatio":84.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7838&rd=10710",
+			"name":"Glossary",
+			"notes":[],
+			"submission":576
+		},
+		{
+			"avgPts":357.89,
+			"constraints":[],
+			"correctRatio":60.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7847&rd=10710",
+			"name":"PlatformJumper",
+			"notes":[],
+			"submission":486
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7843&rd=10710",
+			"name":"FurnitureRobbery",
+			"notes":[],
+			"submission":50
+		}
+	],
+	"name":"Single Round Match 353 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10710"
+}

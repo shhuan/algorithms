@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12786&rd=15808",
+	"statement":"<p>Little Petya likes rooted trees a lot. Recently he has received one as a gift from his mother. The only thing Petya likes more than rooted trees is playing with little Masha. The children painted each node of Petya's new tree either black or white. The tree is represented by the int[] <b>parent</b>. Let N denote the number of nodes in the tree. The nodes are numbered 0 through N-1. Node 0 is considered to be the root of the tree. Then for each i between 0 and N-2, inclusive, the tree contains an edge between nodes (i+1) and <b>parent</b>[i]. (Note that <b>parent</b>[i] may sometimes be greater than i+1.) The colors of nodes are given in the String <b>color</b> that consists of characters 'W' and 'B'. If the i-th character (0-based index) of <b>color</b> is 'W', then the i-th node is colored white, otherwise it's colored black. </p><br /><br /> <p>The children decided to play a game with this tree. In the game Petya and Masha take alternating turns, Masha plays first. On his or her turn, the current player selects a white node, along with any subset of its descendants. (The subset can be arbitrary, possibly disconnected or even empty.) The player then toggles the color of all selected vertices: black nodes become white and vice versa. A player who can't make a turn loses the game. You goal is to determine who will be the winner assuming that both kids play optimally. Return &quot;Masha&quot; (without quotes) if Masha wins, otherwise return &quot;Petya&quot;. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Node A is called a descendant of the node B if either B is a parent of A or a parent of A is descendant of the node B."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GameWithTree",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winner",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String winner(int[] parent, String color)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"WW\"",
+			"id":0,
+			"input":"{0}",
+			"note":"As the root is white, Masha may select the root together with any subset of other vertices in the tree. The optimal strategy for her is to select and toggle both vertices.",
+			"order":1
+		},
+		{
+			"expect":"\"BWW\"",
+			"id":0,
+			"input":"{0,0}",
+			"note":"Here the root is black. Masha must select and toggle exactly one of the leaves on her first turn. Then, Petya will select the other leaf and win the game.",
+			"order":2
+		},
+		{
+			"expect":"\"BBBBB\"",
+			"id":0,
+			"input":"{0,1,2,3}",
+			"note":"In this test case there are no white nodes, so Masha can't even make the first move.",
+			"order":3
+		},
+		{
+			"expect":"\"BBWWBWW\"",
+			"id":0,
+			"input":"{5,5,6,6,0,0}",
+			"note":"Here we have a black root that has two children with identical subtrees. Petya can mirror Masha's moves. This will guarantee him a victory.",
+			"order":4
+		},
+		{
+			"expect":"\"BWWBBBW\"",
+			"id":0,
+			"input":"{5,5,6,6,0,0}",
+			"note":"One optimal strategy for Masha: In the first turn, Masha will select and toggle only the node 6. Thus, only two white nodes will remain, both of them will be leaves. After Petya toggles one of them, Masha will toggle the other one and win. (Note that there are also other winning strategies for Masha in this situation.)",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"parent will contain N-1 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of parent will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":3,
+			"val":"color will contain N characters."
+		},
+		{
+			"order":4,
+			"val":"N will be between 2 and 50, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each character of color will be either 'B' or 'W'."
+		},
+		{
+			"order":6,
+			"val":"It's guaranteed that the graph described by parent is a rooted tree with root 0."
+		}
+	]
+}

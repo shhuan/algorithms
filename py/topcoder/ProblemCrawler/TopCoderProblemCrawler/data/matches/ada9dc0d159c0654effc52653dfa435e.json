@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":173.91,
+			"constraints":[],
+			"correctRatio":92.94,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=852&rd=4350",
+			"name":"StringFold",
+			"notes":[],
+			"submission":85
+		},
+		{
+			"avgPts":341.34,
+			"constraints":[],
+			"correctRatio":75.68,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=908&rd=4350",
+			"name":"SpaceDrone",
+			"notes":[],
+			"submission":74
+		},
+		{
+			"avgPts":574.84,
+			"constraints":[],
+			"correctRatio":54.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1134&rd=4350",
+			"name":"MineMapper",
+			"notes":[],
+			"submission":35
+		}
+	],
+	"name":"Single Round Match 118 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4350"
+}

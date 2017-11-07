@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":157.46,
+			"constraints":[],
+			"correctRatio":73.47,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10768&rd=14146",
+			"name":"TheQuestionsAndAnswersDivOne",
+			"notes":[],
+			"submission":539
+		},
+		{
+			"avgPts":275.94,
+			"constraints":[],
+			"correctRatio":76.92,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10771&rd=14146",
+			"name":"TheFansAndMeetingsDivOne",
+			"notes":[],
+			"submission":195
+		},
+		{
+			"avgPts":300,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10773&rd=14146",
+			"name":"TheCitiesAndRoadsDivOne",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"Single Round Match 460 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14146"
+}

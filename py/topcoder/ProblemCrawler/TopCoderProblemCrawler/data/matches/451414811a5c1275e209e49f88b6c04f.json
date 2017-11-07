@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":269.6,
+			"constraints":[],
+			"correctRatio":56.96,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6095&rd=9917",
+			"name":"SeparateConnections",
+			"notes":[],
+			"submission":560
+		},
+		{
+			"avgPts":271.45,
+			"constraints":[],
+			"correctRatio":27.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6054&rd=9917",
+			"name":"FirstToLast",
+			"notes":[],
+			"submission":440
+		},
+		{
+			"avgPts":532.59,
+			"constraints":[],
+			"correctRatio":79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6052&rd=9917",
+			"name":"NumPermutationOrders",
+			"notes":[],
+			"submission":219
+		}
+	],
+	"name":"TCO 06 > Online Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9917"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":212.6,
+			"constraints":[],
+			"correctRatio":82.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11665&rd=14550",
+			"name":"DropCoins",
+			"notes":[],
+			"submission":705
+		},
+		{
+			"avgPts":287.1,
+			"constraints":[],
+			"correctRatio":51.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11664&rd=14550",
+			"name":"Rumor",
+			"notes":[],
+			"submission":314
+		},
+		{
+			"avgPts":478.53,
+			"constraints":[],
+			"correctRatio":44.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11377&rd=14550",
+			"name":"MonochromePuzzle",
+			"notes":[],
+			"submission":18
+		}
+	],
+	"name":"Single Round Match 525 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14550"
+}

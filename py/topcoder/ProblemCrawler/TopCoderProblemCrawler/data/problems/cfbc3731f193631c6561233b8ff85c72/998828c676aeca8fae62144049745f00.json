@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11856&rd=15858",
+	"statement":"A palindrome is a word that reads the same forwards and backwards. For example, &quot;a&quot;, &quot;abba&quot;, and &quot;zzz&quot; are palindromes, while &quot;ab&quot; and &quot;xxxyx&quot; are not.<br /><br /> <br /><br /> The anagram of a string S is any string we can obtain from S by rearranging its letters. For example, the string &quot;haha&quot; has exactly six anagrams: &quot;aahh&quot;, &quot;ahah&quot;, &quot;ahha&quot;, &quot;haah&quot;, &quot;haha&quot;, and &quot;hhaa&quot;.<br /><br /> <br /><br /> We are given a String <b>word</b>. We will choose one of its anagrams uniformly at random. Return the probability that the chosen anagram will be a palindrome.",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or a relative error of less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PalindromePermutations",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"palindromeProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double palindromeProbability(String word)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0.3333333333333333",
+			"id":0,
+			"input":"\"haha\"",
+			"note":"Each of the six anagrams of \"haha\" will be selected with probability 1/6. Two of them are palindromes: \"ahha\" and \"haah\". Hence, the probability of selecting a palindrome is 2/6.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0.2",
+			"id":0,
+			"input":"\"xxxxy\"",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1.0",
+			"id":0,
+			"input":"\"xxxx\"",
+			"note":"This word only has one anagram: \"xxxx\". That is a palindrome.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0.0",
+			"id":0,
+			"input":"\"abcde\"",
+			"note":"Regardless of how we rearrange the letters of \"abcde\", we will never get a palindrome.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0.025641025641025637",
+			"id":0,
+			"input":"\"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhff\"",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"word will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of word will be a lowercase English letter ('a'-'z')."
+		}
+	]
+}

@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13213&rd=16008",
+	"statement":"<p>You are playing a strategy game on a rectangular board. The board is divided into a grid of unit square cells. Some of the cells are occupied by enemies. It is now your turn and you want to eliminate as many enemies as possible.</p> <p>Some of the cells that are not occupied by enemy units contain your laser towers. Each laser tower is pointed in one of the four cardinal directions. The tower can target any single cell in its direction and eliminate all enemies in that cell. Note that the tower is tall and can target any cell in its direction, even if there are some enemies in cells that are closer than the target cell.</p> <p>For each tower, you have to decide whether it is going to shoot or not. Then, you have to choose a valid target cell for each of the towers that is going to shoot. Finally, all selected towers shoot their lasers at the same time and they eliminate all enemies in their target cells.</p> <p>You are also given two important pieces of information about the laser towers: </p>\n <ul> \n  <li>For safety purposes, the towers were designed in such a way that no tower can target another tower. (You may assume that this is true in all test cases.)</li> \n  <li>When you fire your laser towers, their laser beams are not allowed to cross, not even at their endpoints. That is, for each cell on the board there can be at most one laser tower that is shooting at or over that cell.</li> \n </ul><p></p> <p>You are given a String[] <b>board</b> that represents the board at the beginning of your turn, using the following format: </p>\n <ul> \n  <li>Empty cells are represented by the character '.' (period).</li> \n  <li>Characters '1' through '9' represent cells that contain 1 through 9 enemy units.</li> \n  <li>Characters 'A', 'V', '&lt;', and '&gt;' represent laser towers pointed north, south, west, and east, respectively.</li> \n </ul><p></p> <p>Return the maximal total number of eliminated enemies.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LaserTowersDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countMaxEnemies",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countMaxEnemies(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{ \".9\", \">3\", \".A\" } ",
+			"note":"The lasers shouldn't cross (Even at their endpoints) ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{ \"..V..\", \">.54.\", \".>3.6\", \"9..A.\" } ",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"{ \".9V.\", \">..7\", \".A1.\" } ",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 328",
+			"id":0,
+			"input":"{ \"........7..7......4...<...V9.5.\", \">.........2.........5..46......\", \".6...........9..<..>...5.......\", \".6...................<..A>...5.\", \".V>....................6.......\", \".....57.............<...>....7.\", \"..............6.........<V....7\", \"V..V7..V..AA>..............61..\", \"..V.......V..A.....>.....5.....\", \"......7....V....>.........7....\", \"1...........<>..............6..\", \"............5...........<......\", \".........6..V.......V...V..A...\", \".2...........<....A..>....7....\", \"5..........................<...\", \".............V...5...>.....6...\", \"........5.......V.V....A...>.8.\", \".....A.........7.....>......5..\", \"96.........................<...\", \"....AV..............7V.....VA.A\", \"..............5....6........<.V\", \"..6................<........V..\", \"....V..............>.......5..6\", \"8.6................<...>....6..\", \".........A.............V.....A.\", \".....6A........A.A.>.....6.....\", \"69....<.A>.............3.......\", \"...2.....<....A.......>...2.6..\", \"...76..5.....7..7..5........7<.\", \"...8.......6..<..V5>.....9..7..\", \"....7.....5.5.<>.4...7.556.4...\"} ",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board contains between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of board are of the same size."
+		},
+		{
+			"order":4,
+			"val":"No tower is directed towards another one."
+		},
+		{
+			"order":5,
+			"val":"Each character of the board is 'A', 'V', '&lt;', '&gt;', '.', or a digit between '1' and '9', inclusive."
+		}
+	]
+}

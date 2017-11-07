@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.53,
+			"constraints":[],
+			"correctRatio":87.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6819&rd=10136",
+			"name":"Triominoes",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":302.4,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6877&rd=10136",
+			"name":"TurtleGraphics",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6830&rd=10136",
+			"name":"BuffetLine",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"TCCC06 > Championship Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10136"
+}

@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8016&rd=10786",
+	"statement":"A big box contains marbles of one or more colors. You're given a int[] <b>colors</b>, each element of which denotes the number of marbles there are of a particular color. You draw <b>n</b> marbles randomly from the box, leaving each marble outside the box after taking it. Return the probability that all marbles drawn will be the same color.",
+	"notes":[
+		{
+			"order":1,
+			"val":"Every time we draw a marble, all marbles in the box are equally likely to be chosen."
+		},
+		{
+			"order":2,
+			"val":"A return value with either an absolute or relative error of less than 1.0E-9 is considered correct."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DrawingMarbles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sameColor",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double sameColor(int[] colors, int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"8",
+			"id":0,
+			"input":"{ 13 }",
+			"note":"All the marbles are the same color, so obviously all drawn marbles will be the same color too.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{ 5, 7 }",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{ 5, 6, 7 }",
+			"note":"The probability that the first drawn marble will be of the color 0 is 5 / 18 (there are 5 marbles of color 0 out of 18). If the first drawn marble is of the color 0, then the probability that the second drawn marble will be of the color 0 is 4 / 17 (there are 4 marbles of color 0 left out of 17). So the probability that both drawn marbles will be of the color 0 is (5 / 18) * (4 / 17) = 0.0653594771... . Similarly, the probability that both drawn marbles will be of the color 1 is (6 / 18) * (5 / 17) = 0.0980392156..., and that both drawn marbles will be of the color 2 is (7 / 18) * (6 / 17) = 0.1372549019... . The answer is the sum of these 3 probabilities.",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{ 12, 2, 34, 13, 17 }",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"colors will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of colors will be between 1 and 50, inclusive."
+		},
+		{
+			"order":3,
+			"val":"n will be between 1 and the sum of all elements of colors, inclusive."
+		}
+	]
+}

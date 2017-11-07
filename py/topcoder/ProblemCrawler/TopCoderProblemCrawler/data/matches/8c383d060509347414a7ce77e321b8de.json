@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":183.21,
+			"constraints":[],
+			"correctRatio":80.54,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10840&rd=14182",
+			"name":"TurretPlacement",
+			"notes":[],
+			"submission":442
+		},
+		{
+			"avgPts":366.65,
+			"constraints":[],
+			"correctRatio":68.35,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10792&rd=14182",
+			"name":"GreenWarfare",
+			"notes":[],
+			"submission":139
+		},
+		{
+			"avgPts":444.62,
+			"constraints":[],
+			"correctRatio":19.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10780&rd=14182",
+			"name":"BouncingDiceGame",
+			"notes":[],
+			"submission":21
+		}
+	],
+	"name":"Member Single Round Match 465 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14182"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":194.61,
+			"constraints":[],
+			"correctRatio":80.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10341&rd=13698",
+			"name":"BestView",
+			"notes":[],
+			"submission":658
+		},
+		{
+			"avgPts":291.63,
+			"constraints":[],
+			"correctRatio":52.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10337&rd=13698",
+			"name":"DoNotTurn",
+			"notes":[],
+			"submission":471
+		},
+		{
+			"avgPts":628.78,
+			"constraints":[],
+			"correctRatio":27.94,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10336&rd=13698",
+			"name":"CircularShifts",
+			"notes":[],
+			"submission":68
+		}
+	],
+	"name":"Single Round Match 436 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13698"
+}

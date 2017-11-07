@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1659&rd=4515",
+	"statement":"<p>In most states, gamblers can choose from a wide variety of different lottery games. The rules of a lottery are defined by two integers (<i>choices</i> and <i>blanks</i>) and two boolean variables (<i>sorted</i> and <i>unique</i>). <i>choices</i> represents the highest valid number that you may use on your lottery ticket. (All integers between 1 and <i>choices</i>, inclusive, are valid and can appear on your ticket.) <i>blanks</i> represents the number of spots on your ticket where numbers can be written.</p> <p>The <i>sorted</i> and <i>unique</i> variables indicate restrictions on the tickets you can create. If <i>sorted</i> is set to true, then the numbers on your ticket must be written in non-descending order. If <i>sorted</i> is set to false, then the numbers may be written in any order. Likewise, if <i>unique</i> is set to true, then each number you write on your ticket must be distinct. If <i>unique</i> is set to false, then repeats are allowed.</p> <p>Here are some example lottery tickets, where <i>choices</i> = 15 and <i>blanks</i> = 4:</p> \n <ul>\n  <li>{3, 7, 12, 14} -- this ticket is unconditionally valid.</li> \n  <li>{13, 4, 1, 9} -- because the numbers are not in nondescending order, this ticket is valid only if <i>sorted</i> = false.</li> \n  <li>{8, 8, 8, 15} -- because there are repeated numbers, this ticket is valid only if <i>unique</i> = false.</li> \n  <li>{11, 6, 2, 6} -- this ticket is valid only if <i>sorted</i> = false and <i>unique</i> = false.</li>\n </ul> <p>Given a list of lotteries and their corresponding rules, return a list of lottery names sorted by how easy they are to win. The probability that you will win a lottery is equal to (1 / (number of valid lottery tickets for that game)). The easiest lottery to win should appear at the front of the list. Ties should be broken alphabetically (see example 1).</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Lottery",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sortByOdds",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] sortByOdds(String[] rules)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"PICK TWO LIMITED\", \"PICK TWO IN ORDER\", \"PICK TWO DIFFERENT\", \"PICK ANY TWO\" }",
+			"id":0,
+			"input":"{\"PICK ANY TWO: 10 2 F F\" ,\"PICK TWO IN ORDER: 10 2 T F\" ,\"PICK TWO DIFFERENT: 10 2 F T\" ,\"PICK TWO LIMITED: 10 2 T T\"}",
+			"note":"   ",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \"RED\", \"ORANGE\", \"YELLOW\", \"GREEN\", \"BLUE\", \"INDIGO\", \"VIOLET\" }",
+			"id":0,
+			"input":"{\"INDIGO: 93 8 T F\", \"ORANGE: 29 8 F T\", \"VIOLET: 76 6 F F\", \"BLUE: 100 8 T T\", \"RED: 99 8 T T\", \"GREEN: 78 6 F T\", \"YELLOW: 75 6 F F\"} ",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"{}",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rules will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of rules will contain between 11 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of rules will be in the format &quot;&lt;NAME&gt;:_&lt;CHOICES&gt;_&lt;BLANKS&gt;_&lt;SORTED&gt;_&lt;UNIQUE&gt;&quot; (quotes for clarity). The underscore character represents exactly one space. The string will have no leading or trailing spaces."
+		},
+		{
+			"order":4,
+			"val":"&lt;NAME&gt; will contain between 1 and 40 characters, inclusive, and will consist of only uppercase letters ('A'-'Z') and spaces (' '), with no leading or trailing spaces."
+		},
+		{
+			"order":5,
+			"val":"&lt;CHOICES&gt; will be an integer between 10 and 100, inclusive, with no leading zeroes."
+		},
+		{
+			"order":6,
+			"val":"&lt;BLANKS&gt; will be an integer between 1 and 8, inclusive, with no leading zeroes."
+		},
+		{
+			"order":7,
+			"val":"&lt;SORTED&gt; will be either 'T' (true) or 'F' (false)."
+		},
+		{
+			"order":8,
+			"val":"&lt;UNIQUE&gt; will be either 'T' (true) or 'F' (false)."
+		},
+		{
+			"order":9,
+			"val":"No two elements in rules will have the same name."
+		}
+	]
+}

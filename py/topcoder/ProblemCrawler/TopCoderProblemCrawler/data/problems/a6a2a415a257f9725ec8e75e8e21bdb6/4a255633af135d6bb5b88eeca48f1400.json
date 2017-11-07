@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6684&rd=9998",
+	"statement":"<p>You are located at point (<b>X</b>, <b>Y</b>) and you want to get home to point (0, 0) as quickly as possible. There are two allowable methods of movement. The first method is walking, and you can walk at a speed of 1 unit per second. The second method is jumping, and you can jump <b>D</b> units in <b>T</b> seconds. You can jump in any straight direction, but you can only jump exactly <b>D</b> units. Return the minimum number of seconds required to get home using these two methods. You are not limited to using just one method for the entire trip; you can use any combination of walking and jumping.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ReturnToHome",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"goHome",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double goHome(int X, int Y, int D, int T)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"8",
+			"id":0,
+			"input":"6",
+			"note":"The fastest way to get home is by using two jumps.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"3",
+			"note":"You should jump one unit past your destination and then walk back.",
+			"order":2
+		},
+		{
+			"expect":"300",
+			"id":0,
+			"input":"400",
+			"note":"You should get home using four jumps.",
+			"order":3
+		},
+		{
+			"expect":"445",
+			"id":0,
+			"input":"318",
+			"note":"The fastest way is to walk.",
+			"order":4
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"6",
+			"note":"Make three jumps and then walk the remaining 1 unit.",
+			"order":5
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"X will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Y will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"D will be between 1 and 10000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"T will be between 1 and 10000, inclusive."
+		}
+	]
+}

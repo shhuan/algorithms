@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3992&rd=6552",
+	"statement":"<p> A convex polygon is placed on a large checkerboard with the polygon vertices lying on the grid intersections. Calculate the number of light and dark squares lying <i>entirely</i> inside the polygon. Assume that the polygon edges are infinitely thin. In the picture below, 28 light squares and 26 dark squares are enclosed by the polygon. The upper left corner (coordinates 0,0) will always be a dark square. </p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/CheckerPolygon/CheckerPolygon2.gif\" /> <p> Create a class CheckerPolygon containing the method countSquares which takes two int[], <b>X</b> and <b>Y</b>, describing the convex polygon. Element <i>i</i> in <b>X</b> and <b>Y</b> is the coordinate for the <i>i</i>th vertex in the polygon. The method should return a int[] containing exactly two elements: the first element is the number of light squares entirely enclosed by the polygon, and the second element the number of dark squares entirely enclosed by the polygon. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"The vertices in the polygon may be ordered clockwise or counter-clockwise."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CheckerPolygon",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countSquares",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] countSquares(int[] X, int[] Y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{7,5,2,1,2,8,11,11,9}",
+			"id":0,
+			"input":"{1,2,5,8,11,10,6,4,2}",
+			"note":"This is the example in the problem statement. ",
+			"order":1
+		},
+		{
+			"expect":"{4999,0,0,4999,5000,9999,9999,5000}",
+			"id":0,
+			"input":"{1,5000,5001,10000,10000,5001,5000,1}",
+			"order":2
+		},
+		{
+			"expect":"{3,6,1}",
+			"id":0,
+			"input":"{1,3,6}",
+			"order":3
+		},
+		{
+			"expect":"{173,98,12,107}",
+			"id":0,
+			"input":"{537,127,987,2390}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"X and Y will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"X will contain the same number of elements as Y."
+		},
+		{
+			"order":3,
+			"val":"Each element in X and Y will be between 0 and 10000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The polygon described by X and Y will be convex."
+		},
+		{
+			"order":5,
+			"val":"There will not be three points lying on the same line."
+		}
+	]
+}

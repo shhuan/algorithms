@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":152.19,
+			"constraints":[],
+			"correctRatio":66.02,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=755&rd=4210",
+			"name":"Language",
+			"notes":[],
+			"submission":259
+		},
+		{
+			"avgPts":340.25,
+			"constraints":[],
+			"correctRatio":90.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=846&rd=4210",
+			"name":"Catan",
+			"notes":[],
+			"submission":176
+		},
+		{
+			"avgPts":509.07,
+			"constraints":[],
+			"correctRatio":38.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=774&rd=4210",
+			"name":"Graph",
+			"notes":[],
+			"submission":75
+		}
+	],
+	"name":"SRM 98 - Motorola Single Round Match 98 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4210"
+}

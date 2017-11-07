@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2394&rd=5069",
+	"statement":"<p>Any integer is either odd or even. An even number is a number which divides by 2 without leaving any remainder. All other numbers are odd. We can create an arithmetic that deals with addition and multiplication of odd and even numbers. For example, the sum of two even numbers will also be an even number, but the sum of an odd and an even number must be an odd number. Here is the list of all possible sums and products in this arithmetic:</p> <pre>EVEN + EVEN = EVEN\nEVEN + ODD = ODD\nODD + ODD = EVEN\n\nEVEN * EVEN = EVEN\nEVEN * ODD = EVEN\nODD * ODD = ODD</pre> <p>A list of integers is chosen. For each unique pair of numbers in the list we record their sum and product. Given the final contents of String[] <b>sums</b> and String[] <b>products</b>, where each element is either &quot;ODD&quot; or &quot;EVEN&quot;, return the number of odd and even numbers in the original list. The corresponding elements in <b>sums</b> and <b>products</b> are NOT necessarily calculated from the same pair of numbers. Your return must be formatted as &quot;EVEN &lt;x&gt; ODD &lt;y&gt;&quot; where &lt;x&gt; is the number of evens and &lt;y&gt; is the number of odds. If the original list cannot be constructed then return &quot;IMPOSSIBLE&quot;.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OddsAndEvens",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String find(String[] sums, String[] products)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"ODD\"}",
+			"id":0,
+			"input":"{\"EVEN\"}",
+			"note":"The only sum is even. Thus the two numbers are either both even or both odd. If the two numbers are both even then their product will also be even. This contradicts what we have in . If the two numbers are both odd then their product will also be odd. This agrees with . Thus there are two odd numbers.",
+			"order":1
+		},
+		{
+			"expect":"{\"ODD\"}",
+			"id":0,
+			"input":"{\"ODD\"}",
+			"note":"If the sum is odd then one number is odd and the other is even. The product of an odd and even number is even. This contradicts . Thus this is IMPOSSIBLE.",
+			"order":2
+		},
+		{
+			"expect":"{\"EVEN\",\"EVEN\",\"EVEN\"}",
+			"id":0,
+			"input":"{\"EVEN\",\"EVEN\",\"EVEN\"}",
+			"note":"The sum and product of any two even numbers are always even. Here there are 3 even numbers.",
+			"order":3
+		},
+		{
+			"expect":"{\"ODD\",\"EVEN\",\"EVEN\"}",
+			"id":0,
+			"input":"{\"EVEN\",\"ODD\",\"ODD\"}",
+			"note":"Two numbers are odd and one number is even. The two odd numbers give us one even sum and one odd product. The even number combined with the other two odd numbers gives two odd sums and two even products.",
+			"order":4
+		},
+		{
+			"expect":"{\"ODD\",\"EVEN\",\"EVEN\",\"EVEN\",\"ODD\",\"ODD\"}",
+			"id":0,
+			"input":"{\"ODD\",\"EVEN\",\"ODD\",\"EVEN\",\"ODD\",\"EVEN\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sums will contain N(N-1)/2 elements where N is an integer between 2 and 10 inclusive."
+		},
+		{
+			"order":2,
+			"val":"products will contain the same number of elements as sums."
+		},
+		{
+			"order":3,
+			"val":"each element in sums will be either &quot;ODD&quot; or &quot;EVEN&quot;."
+		},
+		{
+			"order":4,
+			"val":"each element in products will be either &quot;ODD&quot; or &quot;EVEN&quot;."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.11,
+			"constraints":[],
+			"correctRatio":91.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4658&rd=8067",
+			"name":"CountriesRanklist",
+			"notes":[],
+			"submission":220
+		},
+		{
+			"avgPts":421.98,
+			"constraints":[],
+			"correctRatio":10.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4755&rd=8067",
+			"name":"SalesmansDilemma",
+			"notes":[],
+			"submission":124
+		},
+		{
+			"avgPts":578.73,
+			"constraints":[],
+			"correctRatio":21.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4751&rd=8067",
+			"name":"PackingShapes",
+			"notes":[],
+			"submission":95
+		}
+	],
+	"name":"Single Round Match 270 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8067"
+}

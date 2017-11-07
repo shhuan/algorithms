@@ -1,0 +1,109 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2367&rd=5080",
+	"statement":"We want to write a program to recover some missing letters from a document. You will be given a sentence, some of whose letters are missing and are represented by '?' (one question mark stands for exactly one missing letter, which cannot be a space). Your goal is to recover the values of all the question marks, given some knowledge about the structure of English.<br /><br /><br /><br /> For the purposes of this problem, we will define a sentence using the following (extremely simplified) grammar: <pre>\n&lt;sentence&gt; ::= &lt;noun phrase&gt; &lt;predicate&gt; [&lt;preposition&gt;] &lt;noun phrase&gt;\n&lt;noun phrase&gt; ::= &lt;article&gt; {&lt;adjective&gt;} &lt;noun&gt;\n&lt;predicate&gt; ::= &lt;verb&gt; {&lt;adverb&gt;} \n</pre> Elements in curly braces ('{' and '}') may be present zero or more times, and those in square brackets ('[' and ']') are optional. There are only two <tt>&lt;article&gt;</tt>'s in English: &quot;a&quot; and &quot;the&quot; (we'll be ignoring &quot;an&quot; in this problem). However, there are thousands of <tt>&lt;adjective&gt;</tt>'s, <tt>&lt;noun&gt;</tt>'s, <tt>&lt;adverb&gt;</tt>'s, <tt>&lt;preposition&gt;</tt>'s, and <tt>&lt;verb&gt;</tt>'s. Thus, a small subset of these will be given to you as five String[]'s. Each element of each of these String[]'s represents one word and is a sequence of one or more lowercase letters. <br /><br /><br /><br /> Your task is to change all of the question marks in <b>sentence</b> into letters such that the sentence matches the given grammar and return the result. If this is not possible (including cases where there are no question marks, but the given sentence doesn't match the grammar), or if there are multiple ways to change some question marks that are consistent with the grammar, return &quot;&quot;.",
+	"notes":[
+		{
+			"order":1,
+			"val":"Some words may be serve as multiple parts of speech. This occurs in English with words like \"water\" which can be both a noun and a verb."
+		},
+		{
+			"order":2,
+			"val":"We are looking to replace the question marks with letters, not understand the semantics of the sentence. Hence, there may be multiple ways to interpret a sentence within the context of the above grammar, which all lead to the question marks being replaced in the same way. See examples 0 and 5."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RecoverWords",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"recover",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[], String[], String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String recover(String sentence, String[] nouns, String[] adjectives, String[] verbs, String[] adverbs, String[] prepositions)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"fox\",\"fox\",\"dog\",\"dog\"}",
+			"id":0,
+			"input":"\"? ????k b???? f?x ????? ??? ???? dog\"",
+			"note":"The resulting sentence has the following parts of speech: ",
+			"order":1
+		},
+		{
+			"expect":"{\"rat\",\"boy\",\"field\"}",
+			"id":0,
+			"input":"\"? b?? r?? e????? ???? ??? ?????\"",
+			"note":"There are two valid interpretations for this sentence:  ",
+			"order":2
+		},
+		{
+			"expect":"{\"boy\",\"field\"}",
+			"id":0,
+			"input":"\"? b?? r?? e????? ???? ??? ?????\"",
+			"note":"Without the rat, there is only one valid interpretation.",
+			"order":3
+		},
+		{
+			"expect":"{\"farmer\",\"sally\"}",
+			"id":0,
+			"input":"\"the farmer is ?? sally\"",
+			"order":4
+		},
+		{
+			"expect":"{\"gardener\",\"water\",\"can\"}",
+			"id":0,
+			"input":"\"the gardener will ????? with a ????? can\" ",
+			"order":5
+		},
+		{
+			"expect":"{\"the\"}",
+			"id":0,
+			"input":"\"??? ??? ??? ??? ??? ??? ??? ??? ??? ??? ???\"",
+			"note":"There are multiple ways to interpret which part of speech each word is. However, every interpretation results in the same sequence of characters.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sentence will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of sentence will be a lowercase letter ('a'-'z'), a question mark ('?') or a space (' ')."
+		},
+		{
+			"order":3,
+			"val":"There will be no double spaces, leading spaces, or trailing spaces in sentence."
+		},
+		{
+			"order":4,
+			"val":"Each of the five input String[]'s will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of each of the five input String[]'s will contain between 1 and 50 lowercase letters ('a'-'z'), inclusive."
+		},
+		{
+			"order":6,
+			"val":"All complete words without question marks in sentence must be in one of the five input String[]'s (except &quot;a&quot; and &quot;the&quot;, which may or may not in the input String[]'s)."
+		}
+	]
+}

@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2986&rd=5862",
+	"statement":"You have been hired to do some refactoring. You are not really sure what that is, but you think it has something to do with factoring a number multiple times. <br /><br /> <br /><br /> Recall that a factorization of a positive integer <i>n</i> is a collection of at least two positive integers, each larger than one, whose product is <i>n</i>. Note that the order of the numbers in a factorization is ignored, so 2*12 and 12*2 represent the same factorization of 24. In fact, 24 has precisely 6 valid factorizations: 2*2*2*3, 2*2*6, 2*3*4, 2*12, 3*8, and 4*6. <br /><br /> <br /><br /> To prepare for your job, write a program that, given an int <b>n</b>, returns the number of unique factorizations of <b>n</b>. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Refactoring",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"refactor",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int refactor(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"24",
+			"note":"This is the example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"9973",
+			"note":"9973 is a prime number, so there are no valid factorizations of 9973.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 295",
+			"id":0,
+			"input":"9240",
+			"order":3
+		},
+		{
+			"expect":"Returns: 7389115",
+			"id":0,
+			"input":"1916006400",
+			"note":"The number of factorizations will never be larger than this.",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 2 and 2,000,000,000 inclusive."
+	}]
+}

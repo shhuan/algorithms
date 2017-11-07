@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6832&rd=10007",
+	"statement":"Young Andrew has just learned about quadratic equations. He was quite amazed by the fact that their solutions could look like (5+sqrt(3))/4, so he wants to dig into this issue. More specifically, given five numbers <b>x</b>, <b>y</b>, <b>d</b>, <b>z</b> and <b>k</b>, he wants to find the number of equations a*t<sup>2</sup>+b*t+c=0 such that (<b>x</b>+<b>y</b>*sqrt(<b>d</b>))/<b>z</b> is a solution of the equation (i.e., when substituting it for t the equation holds) and a, b and c are integers, -<b>k</b> &lt;= a, b, c &lt;= <b>k</b>. Notice that the equations he's looking for are not necessarily quadratic, i.e., a is allowed to be zero, as is b and/or c.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"QuadraticEquations",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long howMany(int x, int y, int d, int z, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"5",
+			"note":"The three possible equations are: 0*x+0*x+0=0, 8*x-20*x+11=0, -8*x+20*x-11=0",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"5",
+			"note":"The equation 0*x+0*x+0=0 always holds.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"2",
+			"note":"The value described is simply 2. The equations are 0*x+0*x+0=0, 0*x+1*x-2=0, 0*x-1*x+2=0, 1*x-1*x-2=0, -1*x+1*x+2=0, 1*x-2*x+0=0, -1*x+2*x+0=0.",
+			"order":3
+		},
+		{
+			"expect":"-1",
+			"id":0,
+			"input":"0",
+			"note":"It is still 2.",
+			"order":4
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"-1",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x, y and z will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"z will not be equal to 0."
+		},
+		{
+			"order":3,
+			"val":"d will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"k will be between 0 and 1000000 (106), inclusive."
+		}
+	]
+}

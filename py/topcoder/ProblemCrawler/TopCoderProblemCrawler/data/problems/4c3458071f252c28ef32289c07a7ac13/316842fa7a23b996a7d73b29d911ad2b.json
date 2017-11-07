@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10171&rd=13522",
+	"statement":"You are given a square board of size <b>N</b>x<b>N</b>. Each 1x1 cell will be colored either black or white. A rectangle on the board is called good if it contains only white cells. A good rectangle is called perfect if it doesn't lie completely within any other good rectangle.<br /><br /> Here's how the board will be colored. You are given ints <b>M</b>, <b>X0</b>, <b>Y0</b>, <b>A</b>, <b>B</b>, <b>C</b> and <b>D</b>. Generate lists X and Y, each of length <b>M</b>, using the following recursive definitions:<br /><br /> X[0] = <b>X0</b> MOD <b>N</b><br /><br /> X[i] = (X[i-1]*<b>A</b>+<b>B</b>) MOD <b>N</b><br /><br /> Y[0] = <b>Y0</b> MOD <b>N</b><br /><br /> Y[i] = (Y[i-1]*<b>C</b>+<b>D</b>) MOD <b>N</b><br /><br /> The board is initially entirely white. Then, for each i, the cell in column X[i] of row Y[i] is colored black. Return the number of perfect rectangles on the board.",
+	"notes":[{
+		"order":1,
+		"val":"The same cell can be painted black multiple times."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PerfectRectangles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numberOfRectangles",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numberOfRectangles(int N, int M, int X0, int A, int B, int Y0, int C, int D)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"5",
+			"note":"One black cell in the center.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"Black cells form the diagonal of the square.",
+			"order":2
+		},
+		{
+			"expect":"1000000",
+			"id":0,
+			"input":"1",
+			"note":"All cells are black.",
+			"order":3
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"10",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 2,000, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"M will be between 1 and 4,000,000, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"X0,Y0,A,B,C,D will each be between 0 and 2,000, inclusive."
+		}
+	]
+}

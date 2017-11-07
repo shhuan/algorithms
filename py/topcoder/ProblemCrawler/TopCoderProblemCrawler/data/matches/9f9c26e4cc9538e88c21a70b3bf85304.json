@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":210.77,
+			"constraints":[],
+			"correctRatio":69.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1234&rd=4400",
+			"name":"Probation",
+			"notes":[],
+			"submission":93
+		},
+		{
+			"avgPts":299.96,
+			"constraints":[],
+			"correctRatio":60.87,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1189&rd=4400",
+			"name":"Bookstore",
+			"notes":[],
+			"submission":69
+		},
+		{
+			"avgPts":571.04,
+			"constraints":[],
+			"correctRatio":54.76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1190&rd=4400",
+			"name":"Bikeroute",
+			"notes":[],
+			"submission":42
+		}
+	],
+	"name":"SRM 122 - Artifact Software Single Round Match 122 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4400"
+}

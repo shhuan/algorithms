@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13713&rd=16462",
+	"statement":"<p> There is a small IOI training camp for students. The camp is <b>N</b> days long. The days are numbered 0 through <b>N</b>-1. There are <b>M</b> students taking part in the camp. The students are labeled using the first <b>M</b> uppercase English letters. (For example, if there are <b>M</b>=3 students, we will call them 'A', 'B', and 'C'.) </p> <p> During lunch, the students sit in a single row along one long table. There are <b>M</b> different positions at the table. The positions are numbered 0 through <b>M</b>-1. You are given a String[] <b>a</b> with the seating arrangements: during lunch on day i, the person sitting on position j will be <b>a</b>[i][j]. </p> <p> The camp must provide lunch for all people on all days. There are three different lunch plans: </p>\n <ol> \n  <li>A double lunch for two people on the same day. The two people have to sit next to each other on that day.</li> \n  <li>A double lunch for one person in two consecutive days.</li> \n  <li>A single lunch for one person.</li> \n </ol> <p></p> <p> Two methods of providing lunch are considered different if for some d and P the lunch plans for person P on day d are different. Let X be the number of different ways in which the camp can provide lunch to the participants. Return the value (X modulo 1,000,000,007). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CampLunch",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int N, int M, String[] a)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":" ",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"16",
+			"id":0,
+			"input":"16",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 16, inclusive."
+		},
+		{
+			"order":2,
+			"val":"M will be between 1 and 16, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The number of elements in a will be exactly N."
+		},
+		{
+			"order":4,
+			"val":"The length of elements in a will be exactly M."
+		},
+		{
+			"order":5,
+			"val":"Each element of a will be a permutation of the first M uppercase English letters."
+		}
+	]
+}

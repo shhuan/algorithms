@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11372&rd=14530",
+	"statement":"<p>Fox Jiro likes to ponder integers. Today he thought about the following things. </p> <br /><br /> <p>First, he defines a function <i>s(n)</i> for positive integers <i>n</i>. s(n) indicates the sum of all digits of n in base 10. For example, s(58) = 5+8 = 13.</p> <br /><br /> <p>Next, he defines another function <i>d(n)</i> for positive integers <i>n</i>. d(n) applies function s for n repeatedly until the result has only one digit. For example, consider d(58). First, we calculate s(58) and get 13. 13 has two digits, so we calculate s(13) and get 4. So, d(58) = 4.</p> <br /><br /> <p>He says an integer x is <i>representable</i> if and only if there is at least one positive integer y such that y * d(y) = x. You are given a long <b>min</b>, a long <b>max</b>. Return the number of representable integers between <b>min</b> and <b>max</b>, inclusive.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxIntegerLevelThree",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long count(long min, long max)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"16",
+			"id":0,
+			"input":"10",
+			"note":"The representable numbers are 10 (= 10 * d(10)) and 16 (= 4 * d(4)).",
+			"order":1
+		},
+		{
+			"expect":"123",
+			"id":0,
+			"input":"123",
+			"note":"123 is not representable.",
+			"order":2
+		},
+		{
+			"expect":"160",
+			"id":0,
+			"input":"160",
+			"note":"160 can be represented by two ways: ",
+			"order":3
+		},
+		{
+			"expect":"58",
+			"id":0,
+			"input":"47",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"9876543210",
+			"id":0,
+			"input":"123456789",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"min will be between 1 and 10,000,000,000 (10^10), inclusive."
+		},
+		{
+			"order":2,
+			"val":"max will be between min and 10,000,000,000 (10^10), inclusive."
+		}
+	]
+}

@@ -1,0 +1,89 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6730&rd=10006",
+	"statement":"<p>A triangle is &quot;inscribed&quot; in a circle if all 3 points of the triangle are on the edge of the circle. For this problem, our circle will be centered at the origin and have a radius of 5. Our goal is to find the largest triangle (by area) we can inscribe in this circle. Normally, this would be any equilateral triangle, but in this case we have the added restriction that each point of our triangle must be within one (or more) of the valid ranges of degrees. The degree ranges are given in thousandths of degrees in corresponding elements of <b>angleFrom</b> and <b>angleTo</b>. For each range, <b>angleFrom</b> will be less than or equal to <b>angleTo</b> and each will be between 0 and 360000. All ranges are inclusive; see the examples for clarification. Return the area of the largest inscribed triangle that can be made while following these restrictions. If no triangle can be made, return 0.</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"The ranges may overlap."
+		},
+		{
+			"order":2,
+			"val":"Your return value must have an absolute or relative error less than 1e-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"InscribedTriangles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findLargest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double findLargest(int[] angleFrom, int[] angleTo)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{360000}",
+			"id":0,
+			"input":"{0}",
+			"note":"We can use any point we want on the circle - so we can draw an equilateral triangle (which will be the biggest we can ever draw).",
+			"order":1
+		},
+		{
+			"expect":"{15000,25000,100000,265000,330000}",
+			"id":0,
+			"input":"{15000,25000,100000,265000,330000}",
+			"note":"In this case, each of our ranges are single points. The biggest triangle can be made by using the points at 15°, 100°, and 265°.",
+			"order":2
+		},
+		{
+			"expect":"{245915,246611,252901}",
+			"id":0,
+			"input":"{245900,246500,249900}",
+			"note":"We only have 3 small ranges, all near to each other - so our best triangle is still really small.",
+			"order":3
+		},
+		{
+			"expect":"{42}",
+			"id":0,
+			"input":"{42}",
+			"note":"It's hard to draw a triangle with one point.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"angleFrom and angleTo will each contain between 1 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"angleFrom and angleTo will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of angleFrom and angleTo will be between 0 and 360000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of angleFrom will be less than or equal to the corresponding element of angleTo."
+		}
+	]
+}

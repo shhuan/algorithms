@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":195.02,
+			"constraints":[],
+			"correctRatio":80,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11014&rd=14285",
+			"name":"YetAnotherRobotSimulation",
+			"notes":[],
+			"submission":10
+		},
+		{
+			"avgPts":389.58,
+			"constraints":[],
+			"correctRatio":83.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11125&rd=14285",
+			"name":"SellingGold",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":467.21,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11120&rd=14285",
+			"name":"FunnyGames",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"2010 TCO Algorithm > Semifinal 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14285"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":161.26,
+			"constraints":[],
+			"correctRatio":60.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10195&rd=13695",
+			"name":"MagicWords",
+			"notes":[],
+			"submission":542
+		},
+		{
+			"avgPts":281.67,
+			"constraints":[],
+			"correctRatio":75.21,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10191&rd=13695",
+			"name":"SettingTents",
+			"notes":[],
+			"submission":121
+		},
+		{
+			"avgPts":619.75,
+			"constraints":[],
+			"correctRatio":45.83,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10013&rd=13695",
+			"name":"BarbarianInvasion",
+			"notes":[],
+			"submission":24
+		}
+	],
+	"name":"Single Round Match 433 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13695"
+}

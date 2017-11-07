@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":162.54,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3483&rd=6530",
+			"name":"AutoAdjust",
+			"notes":[],
+			"submission":90
+		},
+		{
+			"avgPts":240.35,
+			"constraints":[],
+			"correctRatio":37.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3481&rd=6530",
+			"name":"PackageShipping",
+			"notes":[],
+			"submission":62
+		},
+		{
+			"avgPts":728.81,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3441&rd=6530",
+			"name":"DFAReversal",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2005 TCCC > Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6530"
+}

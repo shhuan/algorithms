@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12726&rd=15710",
+	"statement":"Treeland has N cities, numbered 0 through N-1. There are N-1 undirected roads, each connecting a pair of cities. The roads form a tree. (I.e., each pair of cities is connected via some sequence of roads.) <br /><br /> <br /><br /> You are given a String <b>linked</b> with N elements, each consisting of N characters. There is a road between city i and city j if and only if <b>linked</b>[i][j] is 'Y'. In all other cases <b>linked</b>[i][j] is 'N'. <br /><br /> <br /><br /> The inhabitants of Treeland want to create the Treeland Positioning System (TPS). TPS will be a system that will help people determine which city they are in. The system will consist of K labeled beacons. Each beacon will be located in one of the cities. When a person turns on their TPS receiver, it will determine its distance to each of the beacons. (The distance is measured as the number of roads the person would have to use in order to reach the beacon.) <br /><br /> <br /><br /> Obviously, TPS will only be usable if different cities correspond to different readings on the receiver. In other words, the number K and the placement of beacons must be such that there are no two cities where the receiver will report the same sequence of values. (Note that the beacons can be distinguished. See Example 1.) <br /><br /> <br /><br /> Return the minimal possible value of K.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TPS",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimalBeacons",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimalBeacons(String[] linked)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"NYNN\", \"YNYN\", \"NYNY\", \"NNYN\"}",
+			"note":"There are 4 cities and 3 roads: 0-1-2-3. One possible solution is to put a beacon in city 0. Then city i will have distance i from that beacon, and they are distinguishable.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NYYY\", \"YNNN\", \"YNNN\", \"YNNN\"}",
+			"note":"There are also 4 cities. The road network looks as follows:  1 beacon is not enough, for example:  2 beacons are enough. For example, we can place them into cities 1 and 2. Then:  In each city the receiver shows a different sequence of distances. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NNYNNNNNNN\", \"NNNNNYNNNN\", \"YNNYNNYNNN\", \"NNYNYNNYNN\", \"NNNYNYNNYN\", \"NYNNYNNNNY\", \"NNYNNNNNNN\", \"NNNYNNNNNN\", \"NNNNYNNNNN\", \"NNNNNYNNNN\"} ",
+			"note":"The graph looks as follows:  One optimal solution is to put beacons into cities 0 and 1.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"NYNYNNYNN\", \"YNYNYNNYN\", \"NYNNNYNNY\", \"YNNNNNNNN\", \"NYNNNNNNN\", \"NNYNNNNNN\", \"YNNNNNNNN\", \"NYNNNNNNN\", \"NNYNNNNNN\"}",
+			"note":"The graph looks as follows:  ",
+			"order":4
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{\"NYYYYYYYYY\", \"YNNNNNNNNN\", \"YNNNNNNNNN\", \"YNNNNNNNNN\", \"YNNNNNNNNN\", \"YNNNNNNNNN\", \"YNNNNNNNNN\", \"YNNNNNNNNN\", \"YNNNNNNNNN\", \"YNNNNNNNNN\"} ",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"N\"}",
+			"note":"We don't need any beacon at all, since there is only 1 city.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"linked will contain N elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of linked will contain N characters."
+		},
+		{
+			"order":4,
+			"val":"Each character of each element of linked will be either 'Y' or 'N'."
+		},
+		{
+			"order":5,
+			"val":"For each i and j, if linked[i][j] is 'Y' then linked[j][i] is 'Y'."
+		},
+		{
+			"order":6,
+			"val":"For each i, linked[i][i] will be 'N'."
+		},
+		{
+			"order":7,
+			"val":"The graph described by linked will be a tree with N nodes."
+		}
+	]
+}

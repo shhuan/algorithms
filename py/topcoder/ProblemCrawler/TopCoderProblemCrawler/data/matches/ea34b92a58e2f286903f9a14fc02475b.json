@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":180.69,
+			"constraints":[],
+			"correctRatio":89.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11791&rd=14727",
+			"name":"EllysCheckers",
+			"notes":[],
+			"submission":622
+		},
+		{
+			"avgPts":263.51,
+			"constraints":[],
+			"correctRatio":24.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11787&rd=14727",
+			"name":"EllysNumbers",
+			"notes":[],
+			"submission":288
+		},
+		{
+			"avgPts":616.27,
+			"constraints":[],
+			"correctRatio":19.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10700&rd=14727",
+			"name":"EllysString",
+			"notes":[],
+			"submission":73
+		}
+	],
+	"name":"Single Round Match 534 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14727"
+}

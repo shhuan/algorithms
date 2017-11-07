@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12909&rd=15858",
+	"statement":"<p>Hero is preparing a party for his friends. He has a round table with <b>N</b> seats. The seats are numbered 0 through <b>N</b>-1, in order. In other words, seats with consecutive numbers are adjacent, and seat <b>N</b>-1 is adjacent to seat 0.</p> <p></p> <p>Hero knows that exactly <b>K</b> friends will attend the party, and that each of them will arrive at a different time. Each time a new friend arrives, Hero has to assign him (or her) one of the empty seats at the table. The friend then sits there for the rest of the party. Hero is not sitting at the table.</p> <p></p> <p>For the purpose of this problem, a cluster is a maximal group of people that occupy consecutive chairs. For example, if there are people on chairs 3, 4, 5, and 6, while chairs 2 and 7 are empty, then these four people form a cluster.</p> <p></p> <p>At a party, clusters are good: people who sit in a cluster can talk to each other and have fun. A party with too many clusters is bad. Therefore, Hero wants to make sure that at no point in time are there more than <b>G</b> clusters at his table.</p> <p></p> <p>For example, let <b>N</b> = 4 and <b>K</b> = 3. That is, we have a table with four seats, and three friends are going to arrive. We will use A, B, and C to denote the three friends (in the order in which they arrive) and a period ('.') to denote an empty chair. So, for example, &quot;ABC.&quot; denotes that A got seat 0, B seat 1, C seat 2, and seat 3 remained empty. The configurations &quot;.ABC&quot; and &quot;C.AB&quot; are considered different from &quot;ABC.&quot; and from each other: the friends sit in the same order but on different seats.</p> <p></p> <p>Continuing our example, let <b>G</b> = 1. That is, we must never have more than one cluster. This constraint restricts the set of possible final configurations. For example, &quot;ABC.&quot;, &quot;C.AB&quot;, &quot;B.CA&quot;, and &quot;.BAC&quot; are all possible, but &quot;A.BC&quot; and &quot;.ACB&quot; are not. (Note that if the final configuration were &quot;A.BC&quot;, then the configuration before C arrived was &quot;A.B.&quot;, which means that there was more than one cluster at that point in time.)</p> <p></p> <p>You are given the ints <b>N</b>, <b>K</b>, and <b>G</b>. Count the number of possible final configurations. Return that count modulo 1,000,000,007.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Seatfriends",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countseatnumb",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countseatnumb(int N, int K, int G)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"There are 6 ways how to seat your 2 friends: \"AB.\", \"A.B\", \"BA.\", \"B.A\", \".AB\", and \".BA\". All 6 are valid.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"4",
+			"note":"The first friend can take any of the four seats. The second one must then sit next to him (on either side). Thus, there are 4*2=8 valid final configurations.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"23",
+			"id":0,
+			"input":"42",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 2000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and N, inclusive."
+		},
+		{
+			"order":3,
+			"val":"G will be between 1 and K, inclusive."
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4725&rd=8032",
+	"statement":"Homes typically have 20 amp fuses in their fuseboxes. Appliances are then hooked up to the fuses. If the appliances connected to a single fuse ever draw more than 20 amps, the fuse will blow (which you would like to avoid). In large homes with a large number of appliances, multiple 20 amp fuses may be required to accommodate all of the appliances. You have a number of large appliances, each of which must be connected to some fuse. The number of amps used by each appliance will be given by <b>amps</b>. Your task is to find the minimum number of 20 amp fuses that can accommodate all of the appliances.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Fuses",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minFuses",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minFuses(int[] amps)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{10,10}",
+			"note":"We can hook up two 10 amp appliances to one 20 amp fuse.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{10,10,10,10,10,10,10,10,10,10}",
+			"note":"Here we require five 20 amp fuses. We hook up two appliances to each one.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{4,4,8,9,9,10}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Each element of amps will be between 1 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"amps will contain between 1 and 10 elements, inclusive."
+		}
+	]
+}

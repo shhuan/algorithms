@@ -1,0 +1,118 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10308&rd=14238",
+	"statement":"A team of geologists is searching a site expected to have a rich mineral deposit. Both the site and the deposit can be represented by convex polygons such that the deposit polygon is located completely inside the site polygon. The coordinates of the site polygon's vertices will be given in the int[]s <b>siteX</b> and <b>siteY</b>, and the coordinates of the deposit polygon's vertices will be given in the int[]s <b>depositX</b> and <b>depositY</b>. Each of these two sets of points is given in counter-clockwise order, starting from an arbitrary initial vertex. The size of the team is very small compared to the sizes of the site and deposit, so we shall represent the team by a point. <br /><br /><br /><br /> Since the site is so large, the team cannot explore all of it. Instead, they will start at a point chosen uniformly at random from all points on the site boundary, and move in a straight line towards a point on the site boundary which is farthest away from the starting point. If several points on the boundary are farthest away from the starting point, the team chooses one of them with equal probability. The team's analysts are hoping that this method will give the team a high chance of finding the deposit. <br /><br /><br /><br /> Let us say that the team finds the deposit if the team's path and the deposit region intersect in at least one point. Return the probability that the team finds the deposit.",
+	"notes":[
+		{
+			"order":1,
+			"val":"The returned value must have an absolute or relative error less than 1e-9."
+		},
+		{
+			"order":2,
+			"val":"A polygon is convex if it does not intersect itself, and every straight line joining any two interior points of the polygon is entirely contained in the polygon's interior."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Deposit",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"successProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double successProbability(int[] siteX, int[] siteY, int[] depositX, int[] depositY)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,0,4,4}",
+			"id":0,
+			"input":"{0,4,4,0}",
+			"note":"In the picture below, the outer square represents the site and the inner square represents the deposit. The blue sections of the site's perimeter consist of points which would lead to failure if they were chosen as the start of the team's path. The coordinates of these ranges are given (in blue). The white sections show the starting points for a successful path.  ",
+			"order":1
+		},
+		{
+			"expect":"{0,0,4,4}",
+			"id":0,
+			"input":"{0,4,4,0}",
+			"note":"Here, the team will always find the deposit.   ",
+			"order":2
+		},
+		{
+			"expect":"{3,4,2,0,0}",
+			"id":0,
+			"input":"{5,2,-1,0,4}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{520,516,407,321,104,-97,-221,-101}",
+			"id":0,
+			"input":"{200,-99,-405,-601,-708,-494,-300,-88}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{-1,-10,-9,7,3}",
+			"id":0,
+			"input":"{-3,6,10,10,-2}",
+			"order":5
+		},
+		{
+			"expect":"{-2,-2,8} ",
+			"id":0,
+			"input":"{-2,4,-2} ",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"siteX, siteY, depositX and depositY will each contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"siteX and siteY will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"depositX and depositY will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of siteX, siteY, depositX and depositY will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"The points (siteX[i], siteY[i]), taken in order, will describe a counterclockwise traversal of vertices in a convex polygon."
+		},
+		{
+			"order":6,
+			"val":"The points (depositX[i], depositY[i]), taken in order, will describe a counterclockwise traversal of vertices in a convex polygon."
+		},
+		{
+			"order":7,
+			"val":"In each of the polygons, no three adjacent vertices will lie on the same line."
+		},
+		{
+			"order":8,
+			"val":"The deposit polygon will be located entirely in the interior of the site polygon. The boundaries of the two polygons will not intersect."
+		}
+	]
+}

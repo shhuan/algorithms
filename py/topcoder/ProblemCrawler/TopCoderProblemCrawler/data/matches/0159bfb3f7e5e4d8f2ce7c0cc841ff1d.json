@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":195.76,
+			"constraints":[],
+			"correctRatio":71.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4616&rd=7224",
+			"name":"TableSeating",
+			"notes":[],
+			"submission":102
+		},
+		{
+			"avgPts":326.94,
+			"constraints":[],
+			"correctRatio":49.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4614&rd=7224",
+			"name":"ChatExit",
+			"notes":[],
+			"submission":105
+		},
+		{
+			"avgPts":661.05,
+			"constraints":[],
+			"correctRatio":53.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3996&rd=7224",
+			"name":"CultureGrowth",
+			"notes":[],
+			"submission":65
+		}
+	],
+	"name":"Single Round Match 249 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=7224"
+}

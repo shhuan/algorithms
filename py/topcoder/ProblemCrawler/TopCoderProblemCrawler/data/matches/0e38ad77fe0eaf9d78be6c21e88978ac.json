@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":155.5,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12172&rd=15152",
+			"name":"KnightOfIntegerland",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":307.97,
+			"constraints":[],
+			"correctRatio":14.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11584&rd=15152",
+			"name":"StringEquations",
+			"notes":[],
+			"submission":7
+		},
+		{
+			"avgPts":478.54,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12192&rd=15152",
+			"name":"StringSequences",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2012 TCO Algorithm > Wildcard Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15152"
+}

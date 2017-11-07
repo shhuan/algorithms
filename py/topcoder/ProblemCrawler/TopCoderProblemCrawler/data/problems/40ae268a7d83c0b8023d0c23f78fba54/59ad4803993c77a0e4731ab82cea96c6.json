@@ -1,0 +1,68 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4468&rd=8012",
+	"statement":"<p>There are some cards placed in a line. Each card is characterized by the three distinct letters written on it.</p> <p>The conformity-level of two cards is the number of distinct letters that are common to both cards. For example, the conformity-level of &quot;ABC&quot; and &quot;ACD&quot; is 2 because the letters 'A' and 'C' are common to both cards, and the conformity-level of &quot;ABC&quot; and &quot;DFE&quot; is 0 because the two cards share no common letters.</p> <p>You can remove a card if the conformity-level of its left neighbor and its right neighbor is greater than or equal to 2. Once a card is removed its left and right neighbors become neighbors themselves. The leftmost and rightmost cards are never removed.</p> <p>Given a String[] <b>cards</b>, determine the maximum quantity of cards that you can remove.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CardRemover",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calculate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int calculate(String[] cards)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"ABC\", \"CDE\", \"ABC\", \"CDE\", \"ABC\"} ",
+			"note":"You should not remove the third card before the second or the fourth.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"ABC\", \"CDE\", \"EFG\", \"GHI\", \"IJK\"} ",
+			"note":"You can't remove anything. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"ADR\", \"FDB\", \"ABC\", \"CDE\", \"ABD\"} ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cards will have between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of cards will contain exactly 3 characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of cards will contain three distinct uppercase letters ('A'-'Z')."
+		}
+	]
+}

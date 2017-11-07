@@ -1,0 +1,105 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11888&rd=14733",
+	"statement":"<p> Consider the following function:<br /><br /> f(X) = <b>Waai</b> + X + <b>Akari</b> + X + <b>Daisuki</b><br /><br /> Here, X is a string and + denotes string concatenation. <b>Waai</b>, <b>Akari</b> and <b>Daisuki</b> are constant non-empty strings. </p> <br /><br /> <p> You are given 5 Strings <b>Waai</b>, <b>Akari</b>, <b>Daisuki</b>, <b>S</b> and <b>F</b>, and a int <b>k</b>. <br /><br /> Compute how many times <b>F</b> occurs in f^<b>k</b>(<b>S</b>) as its substring. (The notation f^<b>k</b>(<b>S</b>) means that f is applied to <b>S</b> exactly <b>k</b> times in a row. See Notes for a formal definition.) Since the number can be quite large, compute the number modulo 1,000,000,007. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"Formally, we have f^1(X)=f(X) and for k greater than one we have f^k(X)=f(f^(k-1)(X))."
+		},
+		{
+			"order":2,
+			"val":"String A is substring of B if A can be obtained by erasing some (possibly zero) characters from the beginning of B and some (possibly zero) characters from the end of B."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AkariDaisukiDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countF",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String, String, String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countF(String Waai, String Akari, String Daisuki, String S, String F, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"b\"",
+			"id":0,
+			"input":"\"a\"",
+			"note":" = \"x\", f() = \"axbxc\", f^2() = f(\"axbxc\") = \"aaxbxcbaxbxcc\". This string contains the substring \"axb\" twice.",
+			"order":1
+		},
+		{
+			"expect":"\"b\"",
+			"id":0,
+			"input":"\"a\"",
+			"note":"The answer can be zero.",
+			"order":2
+		},
+		{
+			"expect":"\"a\"",
+			"id":0,
+			"input":"\"a\"",
+			"note":" = \"b\", f() = \"ababa\", f^2() = f(\"ababa\") = \"aababaaababaa\". This string contains the substring \"aba\" four times. You must count overlapping substrings.",
+			"order":3
+		},
+		{
+			"expect":"\"b\"",
+			"id":0,
+			"input":"\"a\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"x\"",
+			"id":0,
+			"input":"\"a\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\"akari\"",
+			"id":0,
+			"input":"\"waai\"",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"\"ezbiwls\"",
+			"id":0,
+			"input":"\"vfsebgjfyfgerkqlr\"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Waai, Akari, Daisuki, S, and F will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of Waai, Akari, Daisuki, S, and F will be a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":3,
+			"val":"k will be between 1 and 10,000,000, inclusive."
+		}
+	]
+}

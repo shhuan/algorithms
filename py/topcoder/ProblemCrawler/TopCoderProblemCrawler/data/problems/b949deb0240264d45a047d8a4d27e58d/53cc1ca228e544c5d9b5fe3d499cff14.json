@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11044&rd=14287",
+	"statement":"Find the area of the minimum square in the plane, such that its 4 vertices are distinct lattice points and there are exactly <b>n</b> lattice points strictly inside it. If there is no such square, return 0 instead. ",
+	"notes":[{
+		"order":1,
+		"val":"A lattice point in the coordinate plane is a point whose x-coordinate and y-coordinate are both integers. "
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EnclosingSquare",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getMinimum(long n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"4",
+			"note":"The square below contains exactly 4 lattice points strictly inside itself and has an area of 5.   ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"3",
+			"note":"There is no such square. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1000000000001",
+			"id":0,
+			"input":"1000000000000",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 104",
+			"id":0,
+			"input":"101",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 90",
+			"id":0,
+			"input":"85",
+			"note":" ",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 0 and 1,000,000,000,000, inclusive. "
+	}]
+}

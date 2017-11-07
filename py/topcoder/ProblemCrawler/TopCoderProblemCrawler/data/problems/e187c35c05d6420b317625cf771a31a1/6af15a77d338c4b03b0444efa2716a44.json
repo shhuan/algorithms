@@ -1,0 +1,59 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8480&rd=13503",
+	"statement":"A string of letters <tt>A</tt>, <tt>B</tt>, <tt>C</tt> is <i>forbidden</i> if there are three consecutive letters from which one is A, one is B, and one is C. For example, <tt>BAACAAC<b>CBA</b>AA</tt> is forbidden, while <tt>AABBCCAABB</tt> is not.<br /><br /><br /><br /> Your task is to calculate how many such strings of length <b>n</b> are not forbidden. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ForbiddenStrings",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countNotForbidden",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countNotForbidden(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"2",
+			"note":"All 9 strings of length 2 are not forbidden. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 21",
+			"id":0,
+			"input":"3",
+			"note":"There are 27 strings of length 3. Of these, 6 contain one occurrence of each letter. Those 6 strings are forbidden, so you should return 21. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 51",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 30, inclusive."
+	}]
+}

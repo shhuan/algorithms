@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13319&rd=16085",
+	"statement":"<p> Cat Taro has some trees in his garden. Initially, the i-th tree (0-based index) is <b>height</b>[i] meters tall. Each day the trees grow. For each i, the i-th tree will grow by exactly <b>add</b>[i] meters during each day. </p> <p> </p> <p> Taro wants cut the trees and he has some devices to do that. For each valid i, the i-th device (0-based index) will cut any chosen tree with height greater than <b>device</b>[i] meters to exactly <b>device</b>[i] meters. </p> <p> </p> <p> At the end of each day, Taro can choose any (possibly empty) subset of trees and cut them. There are two restrictions: </p>\n <ul> \n  <li>Each tree can be cut at most once per day.</li> \n  <li>Each device can be used at most once per day.</li> \n </ul> <p></p> <p> </p> <p> You are given the int[]s <b>height</b>, <b>add</b> and <b>device</b>, and an int <b>time</b>. Return the smallest possible sum of the heights of the trees after <b>time</b> days (i.e., <b>time</b> iterations of &quot;the trees grow and then Taro cuts some of them&quot;). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TaroCutting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getNumber(int[] height, int[] add, int[] device, int time)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{7, 1}",
+			"id":0,
+			"input":"{4, 7}",
+			"note":"There are two trees. Tree 0 starts 4 meters tall and grows by 7 meters each day. Tree 1 starts 7 meters tall and grows by 1 meter each day. Thus, during the first day the first tree will grow to 4+7 = 11 meters and the second tree will grow to 7+1 = 8 meters. Taro has a single tree-cutting device that cuts a tree to 7 meters. As both trees now have more than 7 meters, he can use it on either of them. In order to minimize the sum of heights of trees, it is better to cut the taller tree: tree 0. After the cutting, the total height of trees will be 7+8 = 15 meters.",
+			"order":1
+		},
+		{
+			"expect":"{1, 1, 1}",
+			"id":0,
+			"input":"{3, 1, 2}",
+			"note":"After two days the trees' heights will be 5, 3, and 4. The trees are still too short so Taro is unable to cut anything.",
+			"order":2
+		},
+		{
+			"expect":"{75, 30}",
+			"id":0,
+			"input":"{100, 50}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{1, 3, 4, 10, 2, 1, 6, 4, 8, 7, 5, 10}",
+			"id":0,
+			"input":"{7, 10, 1, 7, 5, 4, 11, 5, 7, 9, 10, 8}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{2, 25, 31, 5}",
+			"id":0,
+			"input":"{35, 45, 32, 8}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{391, 938, 772, 630, 54, 775, 379, 613, 647, 8, 946, 885, 604, 822, 663, 559, 452, 565, 637, 695, 24, 515, 92, 956, 194, 551, 813, 362, 190, 268, 440, 781, 450, 789, 566, 372, 402, 860, 531, 608, 434, 761, 754, 26, 504, 873, 132, 756, 206, 93, 284, 807, 642, 637, 936, 954, 205, 303, 582, 822, 134, 269, 967, 147, 589, 549, 24, 670, 403, 105, 40, 531, 486, 695, 898, 287, 443, 542, 599, 151, 45, 567, 548, 945, 912, 764, 451, 404, 700, 522, 227, 954, 84, 347, 625, 278, 377, 730, 635, 604, 959, 845, 41, 193, 459, 532, 429, 216, 473, 415, 85, 933, 90, 643, 94, 927, 692, 99, 771, 594, 318, 627, 89, 340, 110, 488, 909, 253, 20, 114, 179, 177, 116, 42, 676, 91, 787, 437, 551, 51, 880, 336, 759, 795, 243, 727, 279, 620, 488, 607}",
+			"id":0,
+			"input":"{614, 649, 977, 808, 821, 356, 801, 493, 669, 650, 652, 627, 129, 261, 883, 513, 62, 698, 83, 772, 779, 719, 83, 105, 774, 867, 412, 892, 142, 851, 743, 66, 221, 494, 125, 905, 638, 342, 723, 680, 407, 197, 111, 368, 676, 694, 765, 482, 712, 188, 325, 535, 6, 49, 655, 595, 958, 805, 659, 893, 370, 904, 276, 156, 29, 458, 757, 632, 731, 289, 582, 207, 843, 365, 387, 521, 69, 269, 459, 428, 423, 885, 744, 199, 998, 968, 296, 473, 50, 752, 492, 919, 473, 981, 380, 896, 769, 991, 269, 93, 108, 184, 762, 312, 511, 256, 374, 600, 643, 445, 908, 250, 384, 518, 119, 464, 499, 124, 82, 999, 881, 767, 177, 796, 2, 620, 759, 380, 901, 221, 407, 622, 260, 622, 729, 264, 768, 79, 236, 524, 437, 215, 108, 518, 820, 725, 490, 796, 986, 318}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"height will contain between 1 and 150 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"height and add will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"device will contain between 1 and 150 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of height, add and device will be between 0 and 10,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"time will be between 1 and 150, inclusive."
+		}
+	]
+}

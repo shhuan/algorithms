@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":167.69,
+			"constraints":[],
+			"correctRatio":83.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8444&rd=11120",
+			"name":"CandidateKeys",
+			"notes":[],
+			"submission":521
+		},
+		{
+			"avgPts":309.3,
+			"constraints":[],
+			"correctRatio":62.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8540&rd=11120",
+			"name":"PolygonCover",
+			"notes":[],
+			"submission":248
+		},
+		{
+			"avgPts":501.07,
+			"constraints":[],
+			"correctRatio":9.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7953&rd=11120",
+			"name":"EscapeArtist",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"Single Round Match 386 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=11120"
+}

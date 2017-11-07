@@ -1,0 +1,67 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2922&rd=5855",
+	"statement":"The Olympic Games in Athens end tomorrow. Given the results of the olympic disciplines, generate and return the medal table.<br /><br /> <br /><br /> The results of the disciplines are given as a String[] <b>results</b>, where each element is in the format <tt>&quot;GGG SSS BBB&quot;</tt>. <tt>GGG</tt>, <tt>SSS</tt> and <tt>BBB</tt> are the 3-letter country codes (three capital letters from <tt>'A'</tt> to <tt>'Z'</tt>) of the countries winning the gold, silver and bronze medal, respectively.<br /><br /> <br /><br /> The medal table is a String[] with an element for each country appearing in <b>results</b>. Each element has to be in the format <tt>&quot;CCO G S B&quot;</tt> (quotes for clarity), where <tt>G</tt>, <tt>S</tt> and <tt>B</tt> are the number of gold, silver and bronze medals won by country <tt>CCO</tt>, e.g. <tt>&quot;AUT 1 4 1&quot;</tt>. The numbers should not have any extra leading zeros. <br /><br /> Sort the elements by the number of gold medals won in decreasing order. If several countries are tied, sort the tied countries by the number of silver medals won in decreasing order. If some countries are still tied, sort the tied countries by the number of bronze medals won in decreasing order. If a tie still remains, sort the tied countries by their 3-letter code in ascending alphabetical order. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MedalTable",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"generate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] generate(String[] results)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"KOR 3 1 0\", \"ITA 1 0 0\", \"TPE 0 1 1\", \"CHN 0 1 0\", \"JPN 0 1 0\", \"AUS 0 0 1\", \"GBR 0 0 1\", \"UKR 0 0 1\" }",
+			"id":0,
+			"input":"{\"ITA JPN AUS\", \"KOR TPE UKR\", \"KOR KOR GBR\", \"KOR CHN TPE\"}",
+			"note":"These are the results of the archery competitions.",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \"USA 1 0 0\", \"AUT 0 1 0\", \"ROM 0 0 1\" }",
+			"id":0,
+			"input":"{\"USA AUT ROM\"}",
+			"order":2
+		},
+		{
+			"expect":"Returns: { \"AUT 1 1 1\", \"GER 1 1 1\", \"SUI 1 1 1\" }",
+			"id":0,
+			"input":"{\"GER AUT SUI\", \"AUT SUI GER\", \"SUI GER AUT\"}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"results contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of results is formatted as described in the problem statement."
+		},
+		{
+			"order":3,
+			"val":"No more than 50 different countries appear in results."
+		}
+	]
+}

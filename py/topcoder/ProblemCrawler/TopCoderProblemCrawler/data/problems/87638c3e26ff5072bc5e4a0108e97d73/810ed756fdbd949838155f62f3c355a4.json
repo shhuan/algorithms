@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11843&rd=15090",
+	"statement":"Elly's memories of last night's sleepover with her friends are rather blurry. She recalls that they played a game involving drinking orange and apple juice. In the beginning there were two identical bottles. One contained a gallon of orange juice, the other a gallon of apple juice. The game was played in turns, starting with turn zero. In even-numbered turns (turn 0, 2, 4, ...) the current player drank half of the remaining orange juice. In odd-numbered turns (turn 1, 3, 5, ...) the current player drank half of the remaining apple juice. The winner of the game is the player who drank the greatest total amount of liquid during the game. If multiple players are tied for the greatest amount, there is no winner.<p></p> For example, consider a game consisting of five turns. Suppose that the players to drink were, in order, Elly, Kriss, Stancho, Elly, and Stancho. (That is, Elly and Stancho both drank twice: Elly in turns 0 and 3, Stancho in turns 2 and 4.) In this game, Elly drank 0.75 gallons of liquid (0.5 gallons of orange juice and 0.25 of apple juice), Kriss drank 0.5 gallons of apple juice, and Stancho drank 0.375 gallons of orange juice (0.25 gallons in turn 2 and another 0.125 gallons in turn 4). In this game Elly would be the winner.<p></p> Elly knows all the people who played the game yesterday, and for each of them the number of times they drank. However, she remembers nothing about the order in which the players drank.<p></p> You are given a String[] <b>players</b>, containing the names of all players. If a player's name is contained X times in <b>players</b> that means that he or she drank exactly X times during the game. Determine all people who could have possibly won the game (for some particular order of turns). Return their names as a lexicographically sorted String[]. The return value should only contain each of the names once.",
+	"notes":[
+		{
+			"order":1,
+			"val":"A sequence of distinct Strings is sorted if each element is lexicographically smaller than all the ones following it."
+		},
+		{
+			"order":2,
+			"val":"String A is lexicographically smaller than String B if A contains smaller character at the first index where they differ. If there is no index where they differ, the shorter one is lexicographically smaller. For example \"ariadne\" is smaller than \"elly\", \"abc\" is smaller than \"abd\", \"aaa\" is smaller than \"aaaaa\", and \"czzzzzzz\" is smaller than \"kaaaaaaa\"."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EllysJuice",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getWinners",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getWinners(String[] players)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"elly\", \"stancho\" }",
+			"id":0,
+			"input":"{ \"elly\", \"kriss\", \"stancho\", \"elly\", \"stancho\" }",
+			"note":"Elly would win for the order given in the problem statement. If Stancho and Elly swapped all their turns, Stancho would win the game. Kriss cannot win.",
+			"order":1
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"{\"torb\", \"elly\", \"stancho\", \"kriss\"}",
+			"note":"In any valid game two of the four players would be tied for the lead (with half a gallon each).",
+			"order":2
+		},
+		{
+			"expect":"Returns: {\"elly\" }",
+			"id":0,
+			"input":"{\"elly\", \"elly\", \"elly\", \"elly\", \"elly\"}",
+			"note":"Since she was the only player, apparently she won.",
+			"order":3
+		},
+		{
+			"expect":"Returns: {\"ariadne\", \"elly\", \"stancho\" }",
+			"id":0,
+			"input":"{ \"ariadne\", \"elly\", \"ariadne\", \"stancho\", \"stancho\", \"kriss\", \"stancho\", \"elly\" }",
+			"note":"Although Stancho has drunk three times, there are orderings in which someone else wins.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"players will contain between 1 and 8 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of players will contain between 1 and 20 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of players will consist only of lowercase English letters ('a'-'z')."
+		}
+	]
+}

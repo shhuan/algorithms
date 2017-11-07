@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":138.1,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=495&rd=64",
+			"name":"Betting",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":437.72,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=528&rd=64",
+			"name":"Roadmap",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=484&rd=64",
+			"name":"Omaha",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"Sun Microsystems / TopCoder Collegiate Challenge > Semifinals Room A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=64"
+}

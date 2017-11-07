@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1075&rd=4371",
+	"statement":"Given an inclusive range of numbers you will first sort them in ascending order by their digit sum (sum of their decimal digits). Ties are settled by the numbers' values, lower numbers first. You will then return the value at location pos (0-based) in the newly sorted list. For example:<br /><br /> <b>rangeLow</b> = 0<br /><br /> <b>rangeHigh</b> = 10<br /><br /> <b>pos</b> = 3<br /><br /> The sorted range is : 0,1,10,2,3,4,5,6,7,8,9. The value at position 3 is 2. Note that 10 comes before 2 since the digit sum of 10 is 1 whereas the digit sum of 2 is 2. Also note that 10 comes after 1 even though they have the same digit sum since 10 is greater than 1.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SumSort",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"valueAt",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int valueAt(int rangeLow, int rangeHigh, int pos)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"0",
+			"note":"This is the example above",
+			"order":1
+		},
+		{
+			"expect":"93",
+			"id":0,
+			"input":"78",
+			"note":"The numbers are sorted as: 80, 81, 90, 82, 91, 83, 92, 84, 93, 85, 86, 78, 87, 79, 88, 89",
+			"order":2
+		},
+		{
+			"expect":"2843",
+			"id":0,
+			"input":"2167",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rangeLow will be between 0 and 1000000000 (10^9) inclusive"
+		},
+		{
+			"order":2,
+			"val":"rangeHigh will be between 0 and 1000000000 (10^9) inclusive"
+		},
+		{
+			"order":3,
+			"val":"rangeLow will be less than or equal to rangeHigh"
+		},
+		{
+			"order":4,
+			"val":"pos will be between 0 and (rangeHigh - rangeLow) inclusive"
+		}
+	]
+}

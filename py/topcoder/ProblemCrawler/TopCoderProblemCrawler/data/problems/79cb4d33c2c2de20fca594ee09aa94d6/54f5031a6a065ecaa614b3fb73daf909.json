@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10569&rd=14180",
+	"statement":"As a finance minister, Bob decided to make new denominations of coins. If the values of the coins are x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... in ascending order then x<sub>1</sub> must be 1 and x<sub>b</sub> must be an integer multiple of x<sub>a</sub> for all b &gt; a. <br /><br /> <br /><br /> He has a list of products sold in his country. The price of the i-th product is <b>price</b>[i]. He wants to minimize the number of coins required to buy each product exactly once. Each product must be purchased separately using coins that total to exactly the value of the product. Using multiple coins of the same denomination is allowed. See example 0 for further clarification. <br /><br /> <br /><br /> Return the minimal number of coins required to buy each product exactly once.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NewCoins",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCoins",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCoins(int[] price)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{25, 102}",
+			"note":"Bob can use {1, 25, 100} as the new set of coins. Then, a single coin of value 25 can be used to buy the first product. To buy the second product, one coin of value 100 and two coins of value 1 is sufficient. So, in total, 4 coins can be used to buy all products using the new set of coins.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{58}",
+			"note":"One possible set of coins is {1, 58}.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{1, 4, 5, 9, 16}",
+			"note":"One possible set of coins is {1, 2, 4, 8, 16}.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{1, 1, 1, 1, 1}",
+			"note":"Different products may have the same price.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 62",
+			"id":0,
+			"input":"{28, 569, 587, 256, 15, 87, 927, 4, 589, 73, 98, 87, 597, 163, 6, 498}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"price will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in price will be between 1 and 100,000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13841&rd=16502",
+	"statement":"There is an infinite grid of cells. Each cell is either black or white.<br /><br /> <br /><br /> A <i>component</i> is a maximal 4-connected set of cells which are all the same color. (See the Notes for the definition of a 4-connected set.) Note that by this definition, each cell belongs to exactly one component.<br /><br /> <br /><br /> The entire grid is currently white, except for one square region of cells in the grid.<br /><br /> You are given a String[] <b>initial</b> that specifies the current colors of cells in this region.<br /><br /> You want to change the colors of some cells in this region.<br /><br /> You are given a String[] <b>target</b> that specifies the desired colors of cells in this region.<br /><br /> <br /><br /> Each character of <b>initial</b> and <b>target</b> represents a 10000 by 10000 square of cells, all of the same color.<br /><br /> If the squares of the region are numbered starting from (0, 0), then square (i, j) is initially white if and only if <b>initial</b>[i/10000][j/10000] (floored integer division) is the character '#'.<br /><br /> Black cells are represented by the character '.'.<br /><br /> The target state is specified in the same way.<br /><br /> <br /><br /> Additionally, the configurations of cells described by <b>initial</b> and <b>target</b> have a special property:<br /><br /> There are no cells of the same color which share a corner but belong to different components.<br /><br /> For example, the following grid is not valid because the symbol # in the middle represents a square of 10000 times 10000 white cells, and the topmost rightmost of these cells shares its upper right corner with another white cell that is not in the same component.<br /><br /> <br /><br /> <pre>\n#####\n#..##\n#.#.#\n#...#\n#####\n</pre> <br /><br /> You may change the grid in a sequence of moves.<br /><br /> In each move you may flip the color of any single cell.<br /><br /> Note that the flipped cell may even be located outside the region.<br /><br /> The move is only valid if the following conditions are all satisfied:<br /><br /> \n <ul> \n  <li>The move does not change the number of white components.</li> \n  <li>The move does not change the number of black components.</li> \n  <li>The move does not violate the special property described above. (I.e., after the move, there must not be any cells of the same color which share a corner but belong to different components.)</li> \n </ul> After you finish your sequence of moves, all cells outside the region must be white again.<br /><br /> <br /><br /> If it is possible to transform <b>initial</b> into <b>target</b>, return &quot;Possible&quot;.<br /><br /> Otherwise, return &quot;Impossible&quot;.<br /><br /> (All quotes are for clarity only.)",
+	"notes":[{
+		"order":1,
+		"val":"A 4-connected set of cells is a set of cells which satisfies this property: for any pair of cells in the set, there is a path connecting the cells in which (a) all cells in the path are in the set, and (b) adjacent cells in the path share a side (sharing only a corner is not enough)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Balance",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"canTransform",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String canTransform(String[] initial, String[] target)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\".\"}",
+			"id":0,
+			"input":"{\"#\"}",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"{\".#\", \"##\"}",
+			"id":0,
+			"input":"{\"..\", \"..\"}",
+			"note":"Do not forget that there are white cells everywhere around the region.",
+			"order":2
+		},
+		{
+			"expect":"{\"###\", \"#.#\", \"###\"}",
+			"id":0,
+			"input":"{\"...\", \".#.\", \"...\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"...........\", \".###....#..\", \".#.#..#....\", \".###.......\", \".#####.....\", \".#...#####.\", \".#.#.....#.\", \".#.#####.#.\", \".#.......#.\", \".#########.\", \"...........\"}",
+			"id":0,
+			"input":"{\".#.#.......\", \"####.###...\", \".....####..\", \"..##.#.##.#\", \".##..#.##.#\", \".#######...\", \".#....###.#\", \".##.#.#....\", \"..#...#...#\", \"..#####...#\", \"...........\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{\".....\", \".#.#.\", \".#.#.\", \".#.#.\", \".....\"}",
+			"id":0,
+			"input":"{\".....\", \".###.\", \".....\", \".###.\", \".....\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"initial and target will contain exactly N elements each."
+		},
+		{
+			"order":3,
+			"val":"Each element of initial and target will have a length of exactly N."
+		},
+		{
+			"order":4,
+			"val":"Each element of initial and target will be composed of the characters '#' and '.'."
+		},
+		{
+			"order":5,
+			"val":"The grids described by initial and target satisfy the property that there are no cells of the same colour which share a corner but are part of different components."
+		}
+	]
+}

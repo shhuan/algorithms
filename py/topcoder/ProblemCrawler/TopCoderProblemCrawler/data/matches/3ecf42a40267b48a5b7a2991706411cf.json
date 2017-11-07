@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":167.37,
+			"constraints":[],
+			"correctRatio":49.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11004&rd=14234",
+			"name":"ChickenOracle",
+			"notes":[],
+			"submission":597
+		},
+		{
+			"avgPts":287.5,
+			"constraints":[],
+			"correctRatio":56.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11119&rd=14234",
+			"name":"BatchSystemRoulette",
+			"notes":[],
+			"submission":240
+		},
+		{
+			"avgPts":475.55,
+			"constraints":[],
+			"correctRatio":46.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11107&rd=14234",
+			"name":"TicketPrinters",
+			"notes":[],
+			"submission":45
+		}
+	],
+	"name":"Single Round Match 481 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14234"
+}

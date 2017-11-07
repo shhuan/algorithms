@@ -1,0 +1,64 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1910&rd=5000",
+	"statement":"<i>*** You may only submit a given problem once - no resubmissions will be accepted. ***</i><br /><br /><br /><br /> Diamond and Xerxes Inc. is designing their logo. It will be a hollow (the inside will be filled with spaces) diamond, in a square field of characters. The edges of the diamond will be denoted by 'X' (for Xerxes). But how big should it be? What should the background character be? They want software that will generate a logo so that they can choose. <pre>\n    .X.      --X--\n    X X      -X X-\n    .X.      X   X\n             -X X-\n             --X--   \n</pre> Above are drawn two possible logos. The left-hand one has size 2 (the number of X's along each edge of the diamond) and background character '.'. The right-hand one has size 3 and background character '-'. <p> Create a class DiamondLogo that contains a method logo that is given an int <b>size</b>, the number of X's along each edge of the diamond, and a char <b>background</b> that is the character to be used as the background. The method should return a String[] giving the resulting square logo. The first element of the return will be the top row, the next element the second row, etc. The return must not include any extraneous rows or columns. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DiamondLogo",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"logo",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, char",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] logo(int size, char background)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"'.'",
+			"id":0,
+			"input":"2",
+			"note":"This is the left-hand example above. Each element of the return contains 3 characters, thus providing the 3x3 logo.",
+			"order":1
+		},
+		{
+			"expect":"'-'",
+			"id":0,
+			"input":"3",
+			"note":"This is the right-hand example above, giving a 5x5 logo.",
+			"order":2
+		},
+		{
+			"expect":"'q'",
+			"id":0,
+			"input":"5",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"background will be an ASCII character between 32 and 126 inclusive"
+		},
+		{
+			"order":2,
+			"val":"size will be between 2 and 40 inclusive"
+		}
+	]
+}

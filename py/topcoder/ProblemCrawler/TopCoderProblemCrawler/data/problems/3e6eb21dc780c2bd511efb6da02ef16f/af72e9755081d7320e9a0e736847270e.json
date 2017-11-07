@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=116&rd=3016",
+	"statement":"<pre>Class Name: Wordless\nMethod Name: stripWord\nParameters: String\nParameters: String\n\nNed has a strange disease that causes his body temperature to rise\nuncontrollably until he fries whenever he reads an email containing the word\n&quot;word&quot;.  To combat this disease, he needs a filter to filer his email and\ncompletely removes all instances of the string &quot;word&quot;.  The filter should NOT\nbe case sensitive.  The filter should parse the input from left to right\nremoving all instances of &quot;word&quot;.  If there are still instances of &quot;word&quot; after\none pass the filter should parse the string again (and again...) until no\ninstances remain.  That is, the result of filtering &quot;awwowordrdordb&quot; is &quot;ab&quot;.\n\nHelp keep Ned from frying by implementing a class Wordless which contains a\nmethod stripWord.  The method takes a String as a parameter and returns a\nString that is the input String with all instances of &quot;word&quot; completely\nremoved, as specified above.\n\nHere is the method signature (be sure your method is public):\nString stripWord(String text);\n\nExamples:\n&quot;ThisWORDisaWWORDordtest&quot; should return &quot;Thisisatest&quot;\n&quot;wOrwOrwOrdDd&quot; should return &quot;&quot;.\n&quot;worworwor&quot; should return &quot;worworwor&quot;.\n&quot;normal text&quot; should return &quot;normal text&quot;.\n&quot;w o r d&quot; should return &quot;w o r d&quot;.\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Wordless",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"stripWord",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String stripWord(String param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

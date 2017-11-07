@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6807&rd=10004",
+	"statement":"<p>A city will host a round-robin tournament, where each competitor plays each of the other competitors exactly once. The city can be seen as an orthogonal grid, with streets in the east-west direction and avenues in the north-south direction. Each game must be played between two competitors at an intersection. You must determine the locations and ordering of the games that will minimize the total distance travelled by all the competitors. </p> <p>You are given two int[]s, <b>street</b> and <b>avenue</b>, where (<b>street[i]</b>, <b>avenue[i]</b>) is the intersection where the i<sup>th</sup> competitor is initially located. The distance between intersection (x,y) and intersection (x2,y2) is |x-x2| + |y-y2|. The competitors do not have to return to their starting locations after their last games. Return the minimum possible sum of all the distances that must be travelled by the competitors in this tournament.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TournamentPlan",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getTravelDistance",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getTravelDistance(int[] street, int[] avenue)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,0,2,2,1}",
+			"id":0,
+			"input":"{0,2,0,2,1}",
+			"note":"One possible solution is to have competitor 0 play competitor 2 (competitor indices are 0-based) at intersection (0,1). Then have competitor 1 play competitor 3 at intersection (2,1). Then schedule all the other games at intersection (1,1). Here's one possible ordering:  At this point, all the competitors are at (1,1) so no further travel is necessary for the remaining games. The sum of all the distances is 8.",
+			"order":1
+		},
+		{
+			"expect":"{1000000,0}",
+			"id":0,
+			"input":"{0,1000000}",
+			"note":"One possible solution is to organize the game at intersection (500000, 500000).",
+			"order":2
+		},
+		{
+			"expect":"{2,5,1,2}",
+			"id":0,
+			"input":"{0,1,1,3}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{0}",
+			"note":"With only one competitor, no game is needed.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"street will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"avenue will contain the same number of elements as street."
+		},
+		{
+			"order":3,
+			"val":"Each element of street and avenue will be between 0 and 1000000, inclusive."
+		}
+	]
+}

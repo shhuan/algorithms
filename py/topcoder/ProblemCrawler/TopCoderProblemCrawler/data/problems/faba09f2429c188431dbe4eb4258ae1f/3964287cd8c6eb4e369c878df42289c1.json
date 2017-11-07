@@ -1,0 +1,109 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12045&rd=14738",
+	"statement":"<p> Tetka Rapotacka just heard a juicy rumor about one of her neighbors: poor Jachym has lost <b>N</b> kacky (their local monetary unit) on a slot machine yesterday. Tetka Rapotacka now plans to share this rumor with everyone, including Tetka Klepetacka. Tetka Rapotacka has two favourite digits: <b>digit1</b> and <b>digit2</b>. She only likes numbers that contain at least <b>count1</b> occurrences of <b>digit1</b> and at least <b>count2</b> occurrences of <b>digit2</b>. When gossiping, she only uses numbers she likes. So if she does not like the number <b>N</b>, she will increase it until she finds a number that she likes. </p> <p> You are given the long <b>N</b> and the four ints <b>digit1</b>, <b>count1</b>, <b>digit2</b>, and <b>count2</b>. Return the smallest integer that is greater than or equal to <b>N</b>, contains at least <b>count1</b> occurrences of digit <b>digit1</b>, and at least <b>count2</b> occurrences of digit <b>digit2</b>. </p>",
+	"notes":[{
+		"order":1,
+		"val":"The constraints guarantee that the return value will always fit into a long."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FavouriteDigits",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findNext",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long findNext(long N, int digit1, int count1, int digit2, int count2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"47",
+			"note":"As =0 and =0, Tetka Rapotacka likes all numbers.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"47",
+			"note":"The number has to contain the digit 9. The next number that contains this digit is 49.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"47",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"47",
+			"note":"The correct return value may have more digits than .",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"123456789012345",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"92",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 10^15 - 1, inclusive."
+		},
+		{
+			"order":2,
+			"val":"digit1 will be between 0 and 9, inclusive."
+		},
+		{
+			"order":3,
+			"val":"digit2 will be between 0 and 9, inclusive."
+		},
+		{
+			"order":4,
+			"val":"digit1 and digit2 will not be equal."
+		},
+		{
+			"order":5,
+			"val":"count1 will be at least 0."
+		},
+		{
+			"order":6,
+			"val":"count2 will be at least 0."
+		},
+		{
+			"order":7,
+			"val":"count1+count2 will be at most 15."
+		}
+	]
+}

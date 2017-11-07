@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":158.59,
+			"constraints":[],
+			"correctRatio":90.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6777&rd=10112",
+			"name":"BComputation",
+			"notes":[],
+			"submission":124
+		},
+		{
+			"avgPts":371.27,
+			"constraints":[],
+			"correctRatio":81.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6520&rd=10112",
+			"name":"FracSum",
+			"notes":[],
+			"submission":112
+		},
+		{
+			"avgPts":609.17,
+			"constraints":[],
+			"correctRatio":64.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4648&rd=10112",
+			"name":"SplitSubgraphs",
+			"notes":[],
+			"submission":31
+		}
+	],
+	"name":"TCCC06 > Online Round 2B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10112"
+}

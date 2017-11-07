@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":240.62,
+			"constraints":[],
+			"correctRatio":83.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=94&rd=3010",
+			"name":"MagicSeries",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":400.51,
+			"constraints":[],
+			"correctRatio":87.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=95&rd=3010",
+			"name":"Punnet",
+			"notes":[],
+			"submission":31
+		},
+		{
+			"avgPts":580.65,
+			"constraints":[],
+			"correctRatio":65,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=96&rd=3010",
+			"name":"ShippingTrilogy",
+			"notes":[],
+			"submission":20
+		}
+	],
+	"name":"Single Round Match 11 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3010"
+}

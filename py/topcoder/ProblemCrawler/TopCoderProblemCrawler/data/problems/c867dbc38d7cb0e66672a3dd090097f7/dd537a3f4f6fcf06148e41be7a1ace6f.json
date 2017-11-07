@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10874&rd=14157",
+	"statement":"The king is trying to find new ways to generate revenue, and he is currently exploring tourism as one potential avenue. The <b>kingdom</b> is a group of islands, and the amount of revenue that can be generated depends on the combined total length of beaches on all the islands.<br /><br /> <br /><br /> You are given a String[] <b>kingdom</b> consisting of '.' or '#' characters. '#' represents a land mass, whereas '.' represents water. <b>kingdom</b>[i][j] represents a regular-hexagon shaped area with each side of unit length. Since the cells are hexagonal in shape, the odd-numbered rows (0-based) are 'shifted' towards the right. A beach is a segment which has water on one side, and land on the other.<br /><br /> An example String[] and the corresponding image are given below to illustrate. The beaches are marked in red.<br /><br /> <pre>\n{&quot;..#.##&quot;,\n &quot;.##.#.&quot;,\n &quot;#.#...&quot;}\n</pre> <img src=\"http://www.topcoder.com/contest/problem/Islands/beachLength.jpg\" /><br /><br /> <br /><br /> Return the combined total length of beaches on all the islands.<br /><br />",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Islands",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"beachLength",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int beachLength(String[] kingdom)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\".#...#..\"}",
+			"note":"There are two small islands with water on two sides of each island. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 19",
+			"id":0,
+			"input":"{\"..#.##\", \".##.#.\", \"#.#...\"}",
+			"note":"The example in the problem statement. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{\"#...#.....\", \"##..#...#.\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 24",
+			"id":0,
+			"input":"{\"....#.\", \".#....\", \"..#..#\", \"####..\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"kingdom will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of kingdom will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of kingdom will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in kingdom will be either '.' or '#'."
+		}
+	]
+}

@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13709&rd=16415",
+	"statement":"We have a square board divided into a grid of unit square cells. Initially each cell is white. You are given a String[] <b>board</b> that describes the desired final state. In the final state each cell is either white ('W') or black ('B'). <br /><br /> <br /><br /> You are also given an int <b>k</b>. The only change you can make to the board looks as follows: You may select any square of <b>k</b> by <b>k</b> cells and repaint all of them using the same color: either black or white. Later changes to the board may overlap previous ones. <br /><br /> <br /><br /> Return &quot;Possible&quot; if we can obtain the desired final state. Otherwise, return &quot;Impossible&quot;.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BichromePainting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"isThatPossible",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String isThatPossible(String[] board, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\"BBBW\", \"BWWW\", \"BWWW\", \"WWWW\"}",
+			"note":"We can reach the desired state by doing two changes. First we paint the 3x3 square in the top left corner black:  Then we paint the 3x3 square in the bottom right corner white.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"BW\", \"WB\"} ",
+			"note":"We can get only an all-white board and an all-black board.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"BWBWBB\", \"WBWBBB\", \"BWBWBB\", \"WBWBBB\", \"BBBBBB\", \"BBBBBB\"} ",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"BWBWBB\", \"WBWBWB\", \"BWBWBB\", \"WBWBWB\", \"BWBWBB\", \"BBBBBB\"} ",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"BWBWBB\", \"WBWBWB\", \"BWBWBB\", \"WBWBWB\", \"BWBWBB\", \"BBBBBB\"} ",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"BB\", \"BB\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 20, inclusive."
+		},
+		{
+			"order":2,
+			"val":"k will be between 1 and n, inclusive."
+		},
+		{
+			"order":3,
+			"val":"board will contain exactly n elements."
+		},
+		{
+			"order":4,
+			"val":"Each element in board will contain exactly n characters."
+		},
+		{
+			"order":5,
+			"val":"Each character in board will be 'W' or 'B'."
+		}
+	]
+}

@@ -1,0 +1,74 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3054&rd=5882",
+	"statement":"<pre>\n _\n/h\\_    \n\\_/ \\_\n/v\\_/ \\_\n\\_/ \\_/ \\\n/v\\_/h\\_/\n\\_/ \\_/ \\\n/v\\_/ \\_/\n\\_/ \\_/ \\\n  \\_/ \\_/\n    \\_/ \\\n      \\_/\n</pre> <p> Above is a picture of a 4 x 4 Hex game in progress. The board is a 4 x 4 collection of hexagons packed together, with 4 hexagons in each vertical column, and 4 hexagons in each diagonal from upper left to lower right. Two players play against each other. One of the players ('h') tries to make a horizontal chain of adjacent hexagons stretching between the left and right of the board. The other player ('v') tries to make a vertical chain of adjacent hexagons stretching from the bottom to the top of the board. </p><p> We can refer to any position on the board by a pair of coordinates giving the diagonal distance and vertical distance from the upper left hexagon. Using these coordinates, the two hexagons marked 'h' are located at (0,0) and at (2,1). </p><p> Given the size of the board and a list of all the marked hexagons, we want software that can draw the board using characters as shown above. Create a class Hex that contains a method picture that is given <b>n</b> (the vertical and diagonal size of the board) and <b>marks</b> (a list of all the marked hexagons) and that returns a picture of the board in the format shown above. The return will be a String[] that if printed one String per line in order would produce the picture. Each element of the return should have no trailing spaces, and at least one of the elements should have no leading spaces. </p><p> <b>marks</b> will be a String[] in which each element will consist of exactly 3 characters: two digits giving the diagonal and then the vertical coordinate of a hexagon, followed by either 'v' or 'h', the marking of that hexagon. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Hex",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"picture",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] picture(int n, String[] marks)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"00h\",\"21h\",\"01v\",\"03v\",\"02v\"}",
+			"id":0,
+			"input":"4",
+			"note":"Note that the elements in the returns are shown as string literals, so each backslash character in each String is shown as \\\\. So, for example, the second element of this return should contain just 4 characters (i.e. its length would be 4). This will print the following 4x4 picture:  ",
+			"order":1
+		},
+		{
+			"expect":"{\"00v\",\"01v\",\"02v\",\"11h\",\"21h\"}",
+			"id":0,
+			"input":"3",
+			"note":"This will print the following 3x3 picture:  ",
+			"order":2
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 10 inclusive."
+		},
+		{
+			"order":2,
+			"val":"marks will contain between 0 and 50 elements inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of marks will contain exactly 3 characters."
+		},
+		{
+			"order":4,
+			"val":"The first 2 characters in each element of marks will be digits less than n."
+		},
+		{
+			"order":5,
+			"val":"The last character in each element of marks will be 'v' or 'h'."
+		},
+		{
+			"order":6,
+			"val":"No 2 elements of marks will refer to the same hexagon."
+		}
+	]
+}

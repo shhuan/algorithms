@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12515&rd=15656",
+	"statement":"<p> Monicka has an array of <b>N</b> cells, numbered 0 through <b>N</b>-1. She chooses one cell of the array uniformly at random and places a token into that cell. </p> <p> Misko will then play a game with Monicka, trying to guess the location of the token. The gameplay is similar to binary searching for the token – in each turn, Misko picks a cell of the array and receives one of three possible answers: &quot;left&quot; if the token is in a cell with a smaller number, &quot;right&quot; if it is in a cell with a larger number, or &quot;correct&quot; if the chosen cell contains the token. The game ends when Misko gets the answer &quot;correct&quot;. </p> <p> Misko is not allowed to ask useless questions. For example, if he already chose the cell 47 and received the answer &quot;right&quot;, he is not allowed to choose any of the cells 3, 12, and 47: it is already known that these cells do not contain the token. </p> <p> Monicka does not like games that are too short or too long. She is happy with a game that takes at least <b>A</b>, but at most <b>B</b> turns. Misko wants to make Monicka happy, therefore he aims to finish the game in such a number of turns. </p> <p> You are given the ints <b>N</b>, <b>A</b>, and <b>B</b>. Find the optimal strategy for Misko and return the probability that he will finish the game in at least <b>A</b>, but at most <b>B</b> turns. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Return values with absolute or relative error at most 1e-9 will be accepted as correct."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WellTimedSearch",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getProbability(int N, int A, int B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"Monicka will be happy if Misko's second guess is correct. The best strategy for Misko is to choose the index 1 first. If he gets the answer \"correct\", he won the game too early. But if he gets the answer \"left\" or \"right\", he will win the game in the second turn. Thus the probability that Monicka will be happy when Misko uses this strategy is 2/3.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"This time Misko wants to postpone his correct guess until the third turn.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"123456",
+			"note":"Misko can use binary search to guarantee that he will be able to guess Monicka's number in well under 20 guesses.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A will be between 1 and N, inclusive."
+		},
+		{
+			"order":3,
+			"val":"B will be between A and N, inclusive."
+		}
+	]
+}

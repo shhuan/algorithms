@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.43,
+			"constraints":[],
+			"correctRatio":93.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9800&rd=13678",
+			"name":"DigitPrime",
+			"notes":[],
+			"submission":419
+		},
+		{
+			"avgPts":335.1,
+			"constraints":[],
+			"correctRatio":58.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9759&rd=13678",
+			"name":"UnknownNames",
+			"notes":[],
+			"submission":115
+		},
+		{
+			"avgPts":526.43,
+			"constraints":[],
+			"correctRatio":69.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8461&rd=13678",
+			"name":"TreeMaps",
+			"notes":[],
+			"submission":42
+		}
+	],
+	"name":"2008 TopCoder China Tournament > Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13678"
+}

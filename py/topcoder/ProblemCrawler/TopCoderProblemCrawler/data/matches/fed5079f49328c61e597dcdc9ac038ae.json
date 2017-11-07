@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":229.99,
+			"constraints":[],
+			"correctRatio":76.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2830&rd=5068",
+			"name":"CRTFun",
+			"notes":[],
+			"submission":177
+		},
+		{
+			"avgPts":265.21,
+			"constraints":[],
+			"correctRatio":45.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2834&rd=5068",
+			"name":"ShortBooleanExp",
+			"notes":[],
+			"submission":151
+		},
+		{
+			"avgPts":317.97,
+			"constraints":[],
+			"correctRatio":14.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1893&rd=5068",
+			"name":"DungeonBuilder",
+			"notes":[],
+			"submission":7
+		}
+	],
+	"name":"Single Round Match 193 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5068"
+}

@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1960&rd=4670",
+	"statement":"<p> <i>This problem contains an image. If you don't see it, view the problem description in the applet instead.</i> </p> <p> In the future, farmers won't have to rely on primitive scarecrows to keep the birds away from their crops. A new revolutionary invention, an &quot;electronic scarecrow&quot;, will make sure the birds stay out of the farmers' fields forever. </p> <p> If you have three electronic scarecrows located on a field so that they form a triangle, a bird won't be able to fly inside this area because it will get zapped by a laser beam coming out from the scarecrows. Of course, if you have more scarecrows, the whole area that is surrounded by these scarecrows becomes protected (this area is known as the convex hull). Consider the picture below: </p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/ElectronicScarecrows/scarecrow.jpg\" /> <p> The black dots represents electronic scarecrows and the area shaded gray is the part of the field that is inaccessible to the birds. </p> <p> This sounds great, but there are two drawbacks. First, the scarecrows are of course very expensive, so a farmer can't afford very many of them. Second, they are quite heavy and need firm soil to stand on, and must also be in range of a power outlet. This severely limits the number of locations the farmer can place such scarecrows. </p> <p> Given the coordinates of possible locations for the scarecrows and the maximum number of scarecrows the farmer can afford to buy, calculate the largest area that can be guarded by these scarecrows. The farmer's field is a rectangular area, and all locations given will be inside this area. </p> <p> Create a class ElectronicScarecrows containing the method largestArea which takes a int[] <b>x</b> and a int[] <b>y</b>, the coordinates of possible locations for the scarecrows (element <i>i</i> in <b>x</b> and <b>y</b> correspond to the coordinates of the <i>i</i>th location) and an int <b>n</b>, the maximum number of scarecrows the farmer can afford to buy. The method should return a double containing the largest area the scarecrows can cover. You may safely assume that it will always be possible to put the scarecrows so they will cover an area strictly greater than 0. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"The area of a simple polygon with corners at (x,y), (x,y), ..., (x,y) - in clockwise or counterclockwise direction - is the absolute value of ((x*y - x*y) + (x*y - x*y) + ... + (x*y - x*y))/2"
+		},
+		{
+			"order":2,
+			"val":"A solution will be judged correct if the absolute or relative error is within 1e-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ElectronicScarecrows",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"largestArea",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double largestArea(int[] x, int[] y, int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2,5,1,5,7,6,4}",
+			"id":0,
+			"input":"{2,1,6,5,3,7,9}",
+			"note":"Selecting the points (2,2), (6,1), (9,4) and (3,7) will yield an area of 24 (this corresponds to the picture in the figure above). ",
+			"order":1
+		},
+		{
+			"expect":"{1000,823,0,412,786,446,312,286}",
+			"id":0,
+			"input":"{183,229,723,510,395,936,447,328}",
+			"note":"The farmer can afford more scarecrows than there are possible locations for him to put them. ",
+			"order":2
+		},
+		{
+			"expect":"{12,8,6,16,27,7,31,33,35,22,22,36,29,22,32}",
+			"id":0,
+			"input":"{33,36,26,8,12,8,28,19,8,37,9,22,31,30,25}",
+			"order":3
+		},
+		{
+			"expect":"{913,843,73,213,903,444,444,905,352,54,194,207,373,57,105,959,932,480,843,424, 140,661,578,616,851,132,135,936,676,23,578,737,74,959,724,924,955,854,958,376}",
+			"id":0,
+			"input":"{327,196,744,91,709,38,944,300,927,715,835,874,958,667,748,511,377,956,184,956, 809,925,12,45,184,180,169,374,914,398,954,875,286,422,76,315,497,209,512,938}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 3 and 40 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"y will contain between 3 and 40 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"x will contain the same number of elements as y."
+		},
+		{
+			"order":4,
+			"val":"Each element in x will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element in y will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"No location will appear more than once."
+		},
+		{
+			"order":7,
+			"val":"n will be between 3 and 40, inclusive."
+		},
+		{
+			"order":8,
+			"val":"It will be possible to select the coordinates so that an area strictly greater than 0 is covered."
+		}
+	]
+}

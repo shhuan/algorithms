@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11534&rd=14542",
+	"statement":"There is a HxW rectangular board divided into 1x1 cells. Initially each cell is colored White. Fox Ciel wants to change the color of certain cells on the board. You are given a String[] <b>board</b> consisting of characters 'B' and 'W'. If the j-th character of the i-th element of <b>board</b> is 'B', she must change the color of cell (i, j) to Black, otherwise this cell must remain White. <br /><br /> <br /><br /> Fox Ciel can perform the following operation: <br /><br /> <br /><br /> 1. Choose one row or one column. <br /><br /> 2. Paint the row or the column she chose in step 1 with Black. The color of all cells in the row or the column becomes Black. <br /><br /> <br /><br /> Return the minimal number of operations required to change the color to <b>board</b>. The constraints will guarantee that it's always possible.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MonochromaticBoard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theMin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int theMin(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"WBWBW\", \"BBBBB\", \"WBWBW\", \"WBWBW\"}",
+			"note":"Paint row 1 (0-indexed), column 1 and column 3.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"BBBB\", \"BBBB\", \"BBBB\"}",
+			"note":"Paint all rows.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"BBBBB\", \"BBBBB\", \"BBBBB\", \"BBBBB\", \"BBBBB\", \"BBBBB\", \"BBBBB\", \"BBBBB\"}",
+			"note":"Paint all columns.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"WW\", \"WW\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"BBBBBBBB\", \"BBBBBBBB\", \"BBBBBBBB\", \"WBWBBBWB\", \"BBBBBBBB\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain the same number of characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of board will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each character in board will be 'W' or 'B'."
+		},
+		{
+			"order":5,
+			"val":"board can be obtained by performing the operation described in the statement 0 or more times."
+		}
+	]
+}

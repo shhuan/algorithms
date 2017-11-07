@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8110&rd=10898",
+	"statement":"<p> You are given a string of text. You must interchange two letters that are in different positions in the text to obtain a new string. Note that the two letters might be equal. For example, the string &quot;aba&quot; could become &quot;baa&quot;, &quot;aab&quot;, or &quot;aba&quot;. You must choose the two letters such that the resulting string comes as early as possible alphabetically. </p> <p> You will be given the text as two String[]s <b>s1</b> and <b>s2</b>. Concatenate all elements of <b>s1</b> and append the concatenation of all elements of <b>s2</b> to obtain the text. Return a int[] containing exactly two elements: the 0-based indices of the letters to interchange. If there are multiple solutions, return the one with the smallest first index. If there's a tie, return the one among them with the smaller second index. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LetterInterchange",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"interchangeWhich",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] interchangeWhich(String[] s1, String[] s2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"c\", \"a\", \"b\", \"a\"}",
+			"id":0,
+			"input":"{\"a\", \"b\", \"a\"}",
+			"note":"The text is \"abacaba\". We interchange the 1-st and 6-th letters to obtain \"aaacabb\". This is the best possible new text.",
+			"order":1
+		},
+		{
+			"expect":"{\"bb\"}",
+			"id":0,
+			"input":"{\"aa\"}",
+			"note":"The text here is \"aabb\". The best thing we can do here is interchange two equal letters. Anything else would result in a string that comes later alphabetically. To obtain the return value with smallest first element we interchange the 'a's.",
+			"order":2
+		},
+		{
+			"expect":"{\"b\", \"c\"}",
+			"id":0,
+			"input":"{\"a\"}",
+			"order":3
+		},
+		{
+			"expect":"{\"cb\"}",
+			"id":0,
+			"input":"{\"a\", \"b\"}",
+			"order":4
+		},
+		{
+			"expect":"{\"gggggggggggggggggggggggggggggggggggggggggggggggggg\", \"ghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\", \"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\", \"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\", \"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\", \"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\", \"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\", \"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhiiiiiiiiiiii\", \"iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii\", \"iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii\", \"iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii\", \"iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii\", \"iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii\", \"iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii\", \"iiiiiiiiiiiiiiiiiiiiiijjjjjjjjjjjjjjjjjjjjjjjjjjjj\", \"jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\", \"jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\", \"jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\", \"jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\", \"jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\", \"jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\", \"jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkk\", \"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk\", \"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk\", \"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk\", \"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk\", \"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk\", \"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk\", \"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkllll\", \"llllllllllllllllllllllllllllllllllllllllllllllllll\", \"llllllllllllllllllllllllllllllllllllllllllllllllll\", \"llllllllllllllllllllllllllllllllllllllllllllllllll\", \"llllllllllllllllllllllllllllllllllllllllllllllllll\", \"llllllllllllllllllllllllllllllllllllllllllllllllll\", \"llllllllllllllllllllllllllllllllllllllllllllllllll\", \"llllllllllllllllllllllllllllllllllllllllllllllllll\", \"lllllllllllllmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\", \"mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\", \"mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\", \"mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\", \"mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\", \"mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\", \"mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\", \"mmmmmmmmmmmmmmmmmmmmmmnnnnnnnnnnnnnnnnnnnnnnnnnnnn\", \"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn\", \"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn\", \"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn\", \"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn\", \"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn\", \"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn\"}",
+			"id":0,
+			"input":"{\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"aaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccc\", \"cccccccccccccccccccccccccccccccccccccccccccccccccc\", \"cccccccccccccccccccccccccccccccccccccccccccccccccc\", \"cccccccccccccccccccccccccccccccccccccccccccccccccc\", \"cccccccccccccccccccccccccccccccccccccccccccccccccc\", \"cccccccccccccccccccccccccccccccccccccccccccccccccc\", \"cccccccccccccccccccccccccccccccccccccccccccccccccc\", \"cccccccccccddddddddddddddddddddddddddddddddddddddd\", \"dddddddddddddddddddddddddddddddddddddddddddddddddd\", \"dddddddddddddddddddddddddddddddddddddddddddddddddd\", \"dddddddddddddddddddddddddddddddddddddddddddddddddd\", \"dddddddddddddddddddddddddddddddddddddddddddddddddd\", \"dddddddddddddddddddddddddddddddddddddddddddddddddd\", \"dddddddddddddddddddddddddddddddddddddddddddddddddd\", \"ddddddddddddddddddeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\", \"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\", \"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\", \"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\", \"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\", \"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\", \"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\", \"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeffffff\", \"ffffffffffffffffffffffffffffffffffffffffffffffffff\", \"ffffffffffffffffffffffffffffffffffffffffffffffffff\", \"ffffffffffffffffffffffffffffffffffffffffffffffffff\", \"ffffffffffffffffffffffffffffffffffffffffffffffffff\", \"ffffffffffffffffffffffffffffffffffffffffffffffffff\", \"ffffffffffffffffffffffffffffffffffffffffffffffffff\", \"ffffffffffffffffffffffffffffffffffffffffffffffffff\", \"fffffffffffffffggggggggggggggggggggggggggggggggggg\", \"gggggggggggggggggggggggggggggggggggggggggggggggggg\", \"gggggggggggggggggggggggggggggggggggggggggggggggggg\", \"gggggggggggggggggggggggggggggggggggggggggggggggggg\", \"gggggggggggggggggggggggggggggggggggggggggggggggggg\", \"gggggggggggggggggggggggggggggggggggggggggggggggggg\", \"gggggggggggggggggggggggggggggggggggggggggggggggggg\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{\"b\", \"bcc\"}",
+			"id":0,
+			"input":"{\"aa\"} ",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s1 and s2 will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of s1 and each element of s2 will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of s1 and each element of s2 will contain only lowercase letters ('a'-'z')."
+		}
+	]
+}

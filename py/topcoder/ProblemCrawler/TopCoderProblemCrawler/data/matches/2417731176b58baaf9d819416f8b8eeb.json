@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.32,
+			"constraints":[],
+			"correctRatio":98.41,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11234&rd=14244",
+			"name":"FoxMakingDice",
+			"notes":[],
+			"submission":566
+		},
+		{
+			"avgPts":346.28,
+			"constraints":[],
+			"correctRatio":31.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11009&rd=14244",
+			"name":"PrefixTree",
+			"notes":[],
+			"submission":198
+		},
+		{
+			"avgPts":498.98,
+			"constraints":[],
+			"correctRatio":3.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11236&rd=14244",
+			"name":"FoxCardGame",
+			"notes":[],
+			"submission":127
+		}
+	],
+	"name":"Member Single Round Match 491 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14244"
+}

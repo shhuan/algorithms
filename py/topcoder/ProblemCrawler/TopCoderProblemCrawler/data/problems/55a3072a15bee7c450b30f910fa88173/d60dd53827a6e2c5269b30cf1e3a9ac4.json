@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10864&rd=14277",
+	"statement":"You have recently gained access to the badge printing machine used by TopCoder to print name badges for their tournaments. Each badge produced by the machine contains the handle of a TopCoder member, and you can print any number of badges for each handle from a predefined list. You decide to play a game using the machine. Given an arbitrary sentence, you want to spell it using only name badges that you print with the machine in some optimal way. <br /><br /> The rules of the game are as follows. First, you remove all spaces and punctuation from the sentence. Then, you try to spell out the resulting string by printing out name badges and arranging them in a single row. Each badge you use must contain a handle which is a contiguous substring of the string. Badges can touch but not overlap. Letters in the string which are not represented by the badges are considered &quot;uncovered&quot;. <br /><br /> For example, consider the case where only the following TopCoder members exist: {&quot;E&quot;, &quot;HE&quot;, &quot;L&quot;}. If you want to spell the sentence &quot;HELLO&quot;, you might try to do it by printing out one &quot;E&quot; badge and two &quot;L&quot; badges. However, &quot;H&quot; and &quot;O&quot; would then be uncovered, and you wouldn't be able to add an &quot;HE&quot; badge because it would overlap with the &quot;E&quot;. A better way would be to print out one &quot;HE&quot; badge and two &quot;L&quot; badges. Then, only the &quot;O&quot; would be uncovered. <br /><br /> You want to create the best possible arrangement of badges, so you've come up with the following scoring system. Define A as the length of the longest contiguous sequence of letters covered with the badges, and B as the number of letters that are uncovered. If all letters are uncovered, A is equal to 0. The score of the arrangement is A^2-B. <br /><br /> You are given a String[] <b>parts</b>. Concatenate the elements of <b>parts</b> to obtain the original sentence (with spaces and punctuation already removed). The handles on your name badges are given to you in the String[] <b>badges</b>. Return the maximal possible score you can obtain using the given badges.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HandlesSpelling",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"spellIt",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int spellIt(String[] parts, String[] badges)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"E\",\"HE\",\"L\"}",
+			"id":0,
+			"input":"{\"HELLO\"}",
+			"note":"Example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"{\"AL\", \"CAT\", \"GOR\", \"IFI\", \"ION\", \"ROUND\", \"T\"}",
+			"id":0,
+			"input":"{\"ALGORITHM\",\"QUALIFICATION\",\"ROUND\",\"TWO\"}",
+			"note":"The optimal spelling is \"AL\"-\"GOR\"-I-\"T\"-HMQU-\"AL\"-\"IFI\"-\"CAT\"-\"ION\"-\"ROUND\"-\"T\"-WO. In this spelling, A=17 and B=7.",
+			"order":2
+		},
+		{
+			"expect":"{\"GOODLUCKBJ\",\"G\",\"L\"}",
+			"id":0,
+			"input":"{\"GOOD\",\"LUCK\"}",
+			"note":"The handle used has to be a proper substring of the sentence spelled, and not vice versa. In this case at most one letter in a row can be covered with badges, and 6 letters are left uncovered, so the total score is negative.",
+			"order":3
+		},
+		{
+			"expect":"{\"HAV\"}",
+			"id":0,
+			"input":"{\"ANDDOHAVEFUN\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"parts will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of parts will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"badges will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of badges will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"parts and badges will contain only uppercase letters ('A'-'Z')."
+		},
+		{
+			"order":6,
+			"val":"All elements of badges will be distinct."
+		}
+	]
+}

@@ -1,0 +1,116 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10920&rd=14236",
+	"statement":"After a long bout of sleeplessness, Elleonara has finally fallen asleep. To accomplish this, she had to count sheep until the number overflowed and became negative. She is now in the middle of a strange dream. She is on the bank of a river with a flock of <b>numSheep</b> sheep, and across the river are endless grass fields. She wants to take all her sheep across the river to the fields using a single boat. Elly wonders what the minimum weight capacity of the boat must be for her to accomplish this by making at most <b>maxRuns</b> runs. Crossing the river to the fields and then coming back again counts as a single run.<br /><br /><br /><br /> Her sheep are of varying weights. She decides to use the following greedy strategy to determine the order in which to take them. In each run, she first chooses the heaviest remaining sheep that can fit in the boat. Then, after putting that sheep in the boat, she again chooses the heaviest remaining sheep that can fit in the boat along with the previously chosen sheep. She repeats this process until no other sheep can fit in the boat. She then takes the boat to the other side, drops off the sheep, and comes back. For example, if the boat's capacity is 42 and the sheep have weights of 30, 15, 13, 8, 5, 3, 2 and 2, she would pick the sheep with weights 30, 8 and 3. If after <b>maxRuns</b> runs, there are still sheep remaining on the bank, this means the capacity of the boat is not high enough.<br /><br /><br /><br /> You are given String[]s <b>part1</b>, <b>part2</b>, <b>part3</b> and <b>part4</b>. Concatenate the elements in each String[] in the same order as they are given without any delimiters between its elements to get four long strings. Then, concatenate those strings to get a space separated list of integers. Each integer is the weight of one sheep in her flock. Return the minimum weight capacity of a boat that will accomplish Elly's goal.",
+	"notes":[
+		{
+			"order":1,
+			"val":"Elly's weight is a constant and can be ignored."
+		},
+		{
+			"order":2,
+			"val":"Although her strategy of matching sheep into the boat is not always optimal, she will use it anyway."
+		},
+		{
+			"order":3,
+			"val":"The capacity of the boat should be at least as much as the largest sheep (otherwise it couldn't be moved on any run) and no more than the sum of the weights of all sheep (which guarantees that they can be moved on the first run)."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Sheep",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCapacity",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String[], String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCapacity(int numSheep, int maxRuns, String[] part1, String[] part2, String[] part3, String[] part4)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"6",
+			"note":"The capacity of the boat should be at least 30, but this is not enough for all sheep to be taken with only 2 runs. Indeed, in this case Elleonora would need three runs - first, she would transfer the sheep with weight 30, then the sheep with weights 26 and 4 and finally the sheep with weights 10, 7 and 5. The smallest capacity that satisfies Elleonora is 42 - the first run will be (30, 10) and the second will be (26, 7, 5, 4). Note that there exists a strategy where the boat of size 41 is enough - the runs are (30, 7, 4) and (26, 10, 5), but Elly will not use it.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"6",
+			"note":"With capacity 54 the runs are (42, 8, 4) and (23, 16, 15). Since in both of them the boat is completely filled, this guarantees that the answer is optimal.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"15",
+			"note":"We can have equal numbers in the input.",
+			"order":3
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"7",
+			"note":"Don't forget to concatenate the elements correctly.",
+			"order":4
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"200",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"numSheep will be between 1 and 2,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"maxRuns will be between 1 and 2,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"part1, part2, part3 and part4 will each contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of part1, part2, part3 and part4 will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"After concatenating the elements of part1-part4, and then concatening those strings, the final string will be a single space separated list of integers."
+		},
+		{
+			"order":6,
+			"val":"There will be exactly numSheep integers in the list."
+		},
+		{
+			"order":7,
+			"val":"Each integer in the list will be between 1 and 2,000, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Integers in the list will have no leading zeros."
+		}
+	]
+}

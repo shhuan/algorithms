@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8144&rd=12170",
+	"statement":"<p> There is a group of n kids, numbered 0 through n-1, where n is an odd number. Each kid has some friends within the group, and each kid knows how many friends each of the other kids has. Friendship is symmetric, so if kid 0 is a friend of kid 1, then kid 1 is a friend of kid 0. Each kid i also supports exactly one other kid (i+<b>k</b>) % n, not necessarily a friend. </p> <br /><br /> <p> You ask each kid to answer the following question: Consider each kid in the group except yourself and the kid you support. What is the sum of the number of friends each of them has? For example, if you ask kid 0 this question, and kid 0 supports kid 1, he should tell you (the number of friends kid 2 has) + (the number of friends kid 3 has) + ... + (the number of friends kid n-1 has). </p> <br /><br /> <p> You are given a int[] <b>sumFriends</b>, where the i-th element (0-indexed) is the answer given to you by kid i. Some of the kids might not be telling the truth (they are just kids, forgive them). Return &quot;IMPOSSIBLE&quot; if it is impossible for all the given answers to be accurate. Otherwise, return &quot;POSSIBLE&quot; (all quotes for clarity). </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MyFriends",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calcFriends",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String calcFriends(int[] sumFriends, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{8, 9, 8, 8, 9}",
+			"note":"We can get such sums only if kid 1 has 2 friends and all other kids have 3 friends. Such a situation is possible. For example: ",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{7, 6, 5, 4, 4}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{5, 6, 5, 4, 4}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{1, 2, 3}",
+			"note":"Here kid 2 supports kid 0, so he tells us the number of friends of kid 1. But it's obviously impossible for kid 1 to have 3 friends.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sumFriends will contain odd number of elements."
+		},
+		{
+			"order":2,
+			"val":"sumFriends will contain between 3 and 49 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of sumFriends will be between 0 and 9999, inclusive."
+		},
+		{
+			"order":4,
+			"val":"k will be between 1 and (number of elements in sumFriends)-1, inclusive."
+		}
+	]
+}

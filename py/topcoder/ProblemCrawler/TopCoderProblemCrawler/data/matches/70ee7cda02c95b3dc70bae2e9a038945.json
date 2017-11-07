@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.23,
+			"constraints":[],
+			"correctRatio":86.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10314&rd=13763",
+			"name":"PawnsAndKings",
+			"notes":[],
+			"submission":37
+		},
+		{
+			"avgPts":272.99,
+			"constraints":[],
+			"correctRatio":90.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7814&rd=13763",
+			"name":"LineOfDice",
+			"notes":[],
+			"submission":33
+		},
+		{
+			"avgPts":651.24,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10319&rd=13763",
+			"name":"NumberGraph",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2009 TCO Algorithm > Elimination Round 5",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13763"
+}

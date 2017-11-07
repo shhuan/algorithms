@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":270.57,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1125&rd=4375",
+			"name":"Choosers",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":355.11,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1018&rd=4375",
+			"name":"Comment",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1008&rd=4375",
+			"name":"Mirrors",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2002 TopCoder Invitational Championship > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4375"
+}

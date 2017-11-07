@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":177.94,
+			"constraints":[],
+			"correctRatio":74.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12964&rd=15840",
+			"name":"PalindromicSubstringsDiv1",
+			"notes":[],
+			"submission":537
+		},
+		{
+			"avgPts":260.68,
+			"constraints":[],
+			"correctRatio":17.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12968&rd=15840",
+			"name":"CombinationLockDiv1",
+			"notes":[],
+			"submission":173
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12965&rd=15840",
+			"name":"PulleyTautLine",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"Single Round Match 607 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15840"
+}

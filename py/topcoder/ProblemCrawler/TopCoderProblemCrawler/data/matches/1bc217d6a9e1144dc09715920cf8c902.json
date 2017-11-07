@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":152.18,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2445&rd=5080",
+			"name":"PointClustering",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":280,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2367&rd=5080",
+			"name":"RecoverWords",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2010&rd=5080",
+			"name":"DataFilter",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2004 TCCC > Championship Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5080"
+}

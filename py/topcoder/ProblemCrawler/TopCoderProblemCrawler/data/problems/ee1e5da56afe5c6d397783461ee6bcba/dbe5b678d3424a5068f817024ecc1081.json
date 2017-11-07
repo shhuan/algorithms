@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12964&rd=15840",
+	"statement":"<p>Marco likes strings. In particular, he likes strings that have a lot of palindromic substrings. For example, he really likes the string &quot;aaa&quot; because it has 6 palindromic substrings: &quot;a&quot; occurs three times, &quot;aa&quot; occurs twice, and &quot;aaa&quot; occurs once.</p> <br /><br /> <p>Right now, Marco has a string <tt>S</tt> composed of lowercase letters and question marks. You are to reconstruct <tt>S</tt> from the given String[]s <b>S1</b> and <b>S2</b> as follows: </p>\n <ol> \n  <li>Concatenate all elements of <b>S1</b> to make a string <tt>A</tt>.</li> \n  <li>Concatenate all elements of <b>S2</b> to make a string <tt>B</tt>.</li> \n  <li>Finally, concatenate <tt>A</tt> and <tt>B</tt> to get <tt>S</tt>.</li> \n </ol> <p></p> <br /><br /> <p>Marco is going to replace every question mark in <tt>S</tt> with a random lowercase letter (<tt>'a'</tt> - <tt>'z'</tt>). Return the expected number of palindromic substrings in the resulting string.</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"For each question mark, the letter used to replace it is chosen uniformly at random. That is, the probability of choosing any particular letter is 1/26. All random choices are mutually independent."
+		},
+		{
+			"order":2,
+			"val":"A palindromic string is a string that reads the same forwards and backwards."
+		},
+		{
+			"order":3,
+			"val":"Your return value must have an absolute or a relative error of less than 1e-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PalindromicSubstringsDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expectedPalindromes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expectedPalindromes(String[] S1, String[] S2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"a\"}",
+			"id":0,
+			"input":"{\"a\",\"a\",\"\"}",
+			"note":"This is the example given in the statement.",
+			"order":1
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"{\"z??\"}",
+			"note":"There are 26^2 = 676 equally likely possibilities for the letters used to replace the question marks. Here are all possible outcomes:  The expected number of palindromic substrings can be computed simply as the average over all 676 possible cases. Hence, the correct return value is (6 + 75*4 + 600*3) / 676.",
+			"order":2
+		},
+		{
+			"expect":"{\"??\",\"a?\"}",
+			"id":0,
+			"input":"{\"ab\",\"c\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"?\"}",
+			"id":0,
+			"input":"{}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{\"f??a\"}",
+			"id":0,
+			"input":"{\"ab?def\",\"?\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"S1 and S2 will contain no more than 50 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of S1 and S2 will contain no more than 50 characters."
+		},
+		{
+			"order":3,
+			"val":"S will contain at least 1 character."
+		},
+		{
+			"order":4,
+			"val":"S will contain only lowercase letters ('a' - 'z') and question marks ('?')."
+		}
+	]
+}

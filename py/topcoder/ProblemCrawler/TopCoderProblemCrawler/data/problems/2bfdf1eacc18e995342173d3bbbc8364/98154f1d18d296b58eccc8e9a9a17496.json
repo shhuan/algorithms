@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11855&rd=14731",
+	"statement":"You used to have only 30 rocks, but now you have plenty of them. In fact, we will assume that you have a potentially infinite supply of rocks. You would like to show that you own over 9000 rocks. You have a set of boxes. You will choose a subset of those boxes and fill them with rocks so that the total number of rocks will be over 9000. Each box has a lower and an upper bound on the number of rocks it may contain.<br /><br /> <br /><br /> You are given the int[]s <b>lowerBound</b> and <b>upperBound</b>. For each i, the values <b>lowerBound</b>[i] and <b>upperBound</b>[i] have the following meaning: If you decide to use box i, the number of rocks you may put inside the box must be between <b>lowerBound</b>[i] and <b>upperBound</b>[i], inclusive.<br /><br /> <br /><br /> X is a positive integer that has two properties: \n <ul> \n  <li>X is over 9000.</li> \n  <li>It is possible to select some of the boxes and fill them with appropriate numbers of rocks in such a way that the total number of rocks used is exactly X.</li> \n </ul> Compute and return the number of possible values of X.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Over9000Rocks",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countPossibilities",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countPossibilities(int[] lowerBound, int[] upperBound)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{9001}",
+			"id":0,
+			"input":"{9000}",
+			"note":"You can place 9000 or 9001 rocks in the single box. Of the allowed values, only 9001 is over 9000.",
+			"order":1
+		},
+		{
+			"expect":"{9000, 2, 20}",
+			"id":0,
+			"input":"{9000, 1, 10}",
+			"note":"You have to choose box 0 and at least one other box, otherwise you have no chance of placing over 9000 rocks. If you only choose boxes 0 and 1, you can place 9001 or 9002 rocks. If you only choose boxes 0 and 2, you can place between 9010 and 9020 rocks, inclusive. If you choose all three boxes, you can place between 9011 and 9022 rocks, inclusive. Hence all possible values of X are 9001, 9002, and everything from 9010 to 9022, inclusive.",
+			"order":2
+		},
+		{
+			"expect":"{1003, 2003, 3003, 3003}",
+			"id":0,
+			"input":"{1001, 2001, 3001, 3001}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{9000,90000,3,15}",
+			"id":0,
+			"input":"{9000,90000,1,10}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{3,4,5,6,7,8}",
+			"id":0,
+			"input":"{1,1,1,1,1,1}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"lowerBound will contain between 1 and 15, elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"upperBound will contain the same number of elements as lowerBound."
+		},
+		{
+			"order":3,
+			"val":"Each element of lowerBound will be between 1 and 1,000,000 (10^6), inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element i of upperBound will be between lowerBound[i] and 1,000,000 (10^6), inclusive."
+		}
+	]
+}

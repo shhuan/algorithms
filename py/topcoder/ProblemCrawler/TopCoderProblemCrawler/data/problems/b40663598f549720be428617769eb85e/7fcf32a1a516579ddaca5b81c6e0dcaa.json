@@ -1,0 +1,68 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8616&rd=12014",
+	"statement":"A die has 6 sides, numbered 1-6, and each side is equally likely to come up after a roll. In this problem, you are to consider rolling <b>N</b> dice in <b>K</b> rounds. In each round, you select a subset of the dice rolled in the previous round (you have to roll them all in the first round) and reroll that subset (note that a subset can be all the dice from the previous round). After <b>K</b> rounds, you pick a number between 1 and 6 inclusive and multiply it by the number of dice showing that number. Your goal is to maximize this value.<br /><br /><br /><br /> Assuming optimal play, what is the maximum expected score for a given <b>N</b> and <b>K</b>?",
+	"notes":[{
+		"order":1,
+		"val":"If you elect not to reroll a die in one round, you may not reroll it in any subsequent round."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Collect",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expected",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expected(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"Rolling 1 die once gives an expected value of 3.5.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":"If you can roll twice, you should keep a 4, 5, or 6 on the first round, and reroll a 1, 2, or 3. Thus, half the time you'll reroll and expect 3.5, while the other half the time you'll expect to get a 5 (the average of 4, 5 and 6). Thus, the overall expected value is (3.5+5)/2 = 4.25",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"On the first roll, lock both if you have two threes or better. Otherwise keep the higher of the two dice if it is over 3. Otherwise, reroll both.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and 100, inclusive."
+		}
+	]
+}

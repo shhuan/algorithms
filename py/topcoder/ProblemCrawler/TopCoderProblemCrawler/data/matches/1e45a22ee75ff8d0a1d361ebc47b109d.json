@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":203.98,
+			"constraints":[],
+			"correctRatio":87.41,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11138&rd=14438",
+			"name":"LuckyRemainder",
+			"notes":[],
+			"submission":810
+		},
+		{
+			"avgPts":255.84,
+			"constraints":[],
+			"correctRatio":7.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11443&rd=14438",
+			"name":"PalindromizationDiv1",
+			"notes":[],
+			"submission":423
+		},
+		{
+			"avgPts":440.87,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11430&rd=14438",
+			"name":"NumberLabyrinthDiv1",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"Single Round Match 509 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14438"
+}

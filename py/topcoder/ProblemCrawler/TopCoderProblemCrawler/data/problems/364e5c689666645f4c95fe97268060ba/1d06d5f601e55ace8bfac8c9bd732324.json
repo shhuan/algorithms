@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4472&rd=7221",
+	"statement":"<p>You are developing a new software calculator. You decided to add a new feature - the three-digit button. Clicking on this button will add three digits into the edit field. This feature is for fast typing of common digit combinations. The problem is to figure out which digits should be placed on this button. You have prepared some statistical data - a long sequence of digits. You have decided that the button will be chosen to minimize the quantity of clicking required for typing this sequence.</p> <p>You will be given a String[] <b>sequence</b>. The data is divided into several rows only for convenience. You can assume that this is a solid array (i.e. the first character in the i-th row is directly after the last character in the (i-1)-th row). You should return a three-character String containing the digits on the button. If there are several solutions you should return the one which appears first lexicographically.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CalcButton",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getDigits",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getDigits(String[] sequence)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"000\"",
+			"id":0,
+			"input":"{\"100002000\"}",
+			"note":"We can type the sequence in 5 clicks (the extra button is used twice)",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"777\"",
+			"id":0,
+			"input":"{\"777777777\"}",
+			"note":"We can type the entire sequence in 3 clicks",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"032\"",
+			"id":0,
+			"input":"{\"6503\",\"210\"}",
+			"note":"A sequence can be divided into several rows.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"993\"",
+			"id":0,
+			"input":"{\"0993034\",\"6\",\"4137\",\"45959935\",\"25939\",\"93993\",\"0\",\"9358333\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sequence will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of sequence will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of sequence will contain only digits ('0'-'9')."
+		}
+	]
+}

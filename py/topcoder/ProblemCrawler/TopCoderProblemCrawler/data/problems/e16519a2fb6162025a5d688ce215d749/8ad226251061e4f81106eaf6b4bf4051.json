@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=84&rd=3006",
+	"statement":"<pre>Class Name: Dice\nMethod Name: getScores\nParameters: int, int[]\nReturns: int[]\n\nImplement a class Dice, which contains a method getScores. getScores takes an\nint representing the number of players playing the game and an int[]\nrepresenting the rolls of the die.  getScores returns the final scores of all\nthe players, as an int[].  The 0th element of the int[] is the score of the\nfirst player, 1st element is the score of second player ...\n\nHere is the method signature:\nint[] getScores(int iNumberOfPlayers, int[] dieRolls);\nBe sure your method is public.\n* iNumberOfPlayers will be a number from 3 to 10 (inclusive)\n* dieRolls will be of length 10 to 50 (inclusive), and will contain Integers\nfrom 1 to 6 (inclusive)\n\nThe game always starts with player 1.  The players sit in a circle with player\n2 to the right of player 1 and player 1 to the right of the last player.  When\nit is a player's turn, the player rolls the die. The player earns points and\nthe next player is determined based on the following rules:\n* If the die is a 1 or 2, one point is earned.\n* If the die is a 3 or 4, two points are earned.\n* If the die is a 5 or 6, three points are earned.\n* If the number on the die is even, control passes to the player on the left.\n* If the number on the die is odd, control passes to the player on the right.\n* The above rules do not apply when the number rolled is exactly the same as\nthe previously rolled number. Instead, control is kept by the current player,\nand points are earned according to the following:\n* If it is the first time the number has been rerolled(second time in a row\na number has been rolled), points are given as above, plus bonus points are\ngiven equal to the amount shown on the die.\n* Otherwise, points are earned equal to the amount shown on the die\nmultiplied by the number of times the player has rerolled the number.\n\nWalkthrough example:\nWith 5 players, and the rolls [3,4,4,4,4,6,6,2,1,5,5], the game is played as\nbelow:\nplayer 1 rolls a 3, earning 2   points. Control passes to the right (player\n2) [2,0,0,0,0]\nplayer 2 rolls a 4, earning 2   points. Control passes to the left  (player\n1) [2,2,0,0,0]\nplayer 1 rolls a 4, earning 2+4 points. Control stays with          (player\n1) [8,2,0,0,0]\nplayer 1 rolls a 4, earning 2*4 points. Control stays with          (player\n1) [16,2,0,0,0]\nplayer 1 rolls a 4, earning 3*4 points. Control stays with          (player\n1) [28,2,0,0,0]\nplayer 1 rolls a 6, earning 3   points. Control passes to the left  (player\n5) [31,2,0,0,0]\nplayer 5 rolls a 6, earning 3+6 points. Control stays with          (player\n5) [31,2,0,0,9]\nplayer 5 rolls a 2, earning 1   point.  Control passes to the left  (player\n4) [31,2,0,0,10]\nplayer 4 rolls a 1, earning 1   point.  Control passes to the right (player\n5) [31,2,0,1,10]\nplayer 5 rolls a 5, earning 3   points. Control passes to the right (player\n1) [31,2,0,1,13]\nplayer 1 rolls a 5, earning 3+5 points. Control stays with          (player\n1) [39,2,0,1,13]\n  *** GAME OVER ***\n  The int[] returned is [39,2,0,1,13].\n\nExamples:\n* With 5 players, and the rolls [3,4,4,4,6,6,2,1,5,5], the scores are\n[27,2,0,1,13].\n* With 3 players, and the rolls [2,5,6,3,1,3,2,5,5,6], the scores are [5,5,17].\n* With 5 players, and the rolls [1,1,2,1,3,5,3,3,1,2,2,1,1], the scores are\n[5,5,3,2,10].\n* With 10 players, and the rolls [5,3,5,6,5,2,2,1,6,3,6], the scores are\n[3,2,12,10,0,0,0,0,0,0].\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Dice",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getScores",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getScores(int param0, int[] param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

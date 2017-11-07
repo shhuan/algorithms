@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11205&rd=14241",
+	"statement":"John and Brus are very bored. That's why they decided to invite their friend and play a boring shooter game. John and Brus are on the first team and the friend is the only player of the second team. The game consists of <i>X</i> rounds. During a round players may shoot each other, but a player can't shoot himself. If a player shoots some player from the opposite team his score is increased by one and if he shoots his teammate his score is decreased by one. Once a player is shot, he can't shoot other players and other players can't shoot him until the end of the current round. A round ends when all the players on one of the teams are shot. <br /><br /><br /><br /> You are given six integers. <b>scoreJ</b>, <b>scoreB</b> and <b>scoreF</b> are scores of John, Brus and the friend respectively. <b>killedJ</b>, <b>killedB</b> and <b>killedF</b> are the number of times John, Brus and the friend were shot respectively. Return the int[] containing exactly two elements, where the first element is the smallest possible value of <i>X</i> and the second element is the largest possible value of <i>X</i>. If there are no possible values of <i>X</i>, return an empty int[]. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheBoringGameDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] find(int scoreJ, int killedJ, int scoreB, int killedB, int scoreF, int killedF)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"The possible scenario with two rounds is: friend kills John, Brus kills friend, round ends, friend kills Brus, John kills friend, round ends. And with three rounds - John kills friend, round ends, Brus kills friend, round ends, friend kills John, friend kills Brus, round ends. ",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"No rounds here.",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"4",
+			"note":"This is impossible.",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"scoreJ will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"scoreB will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"scoreF will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"killedJ will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"killedB will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"killedF will be between 0 and 1000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1249&rd=5007",
+	"statement":"<p> Given <i>n</i> points in the cartesian coordinate system, how many uniquely shaped triangles can you construct by letting 3 of these points be the corners of a triangle? Two triangles are unique if they are not similar - that is, if it's not possible to transform one triangle into the other by any means of rotating, flipping and/or scaling. See example 0 for further clarifications. </p> <p> Create a class UniqueTriangles which contains the method howMany that takes as input a int[] <b>x</b> and int[] <b>y</b>, the coordinates of the <i>n</i> points, and returns an int, the number of unique triangles. Element <i>i</i> in <b>x</b> and <b>y</b> corresponds to one point. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"All angles in a triangle must be strictly greater than zero."
+		},
+		{
+			"order":2,
+			"val":"Hint: Two triangles are similar if a/a = b/b = c/c where a, b and c are the sides in one triangle (in some order)."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"UniqueTriangles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,1,0,1,0}",
+			"id":0,
+			"input":"{0,1,1,0,2}",
+			"note":"    ",
+			"order":1
+		},
+		{
+			"expect":"{7,15,4,1007,-9493,6}",
+			"id":0,
+			"input":"{0,8,-3,1000,-9500,-1}",
+			"note":"All points lie on a straight line, thus there are no triangles at all. The method should return 0.",
+			"order":2
+		},
+		{
+			"expect":"{5,2,-4,2,1,3,1,-1,2,0,1,4,-3,1,0}",
+			"id":0,
+			"input":"{-4,2,5,-5,-4,-4,3,1,1,1,2,0,1,1,5}",
+			"order":3
+		},
+		{
+			"expect":"{91,14,27,-98,35,-14,-89,-12,-78,57, 6,-52,-65,-61,-60,46,-84,34,31,11, 41,97,-54,47,-12,-69,19,96,43,-45, -38,-71,53,6,-2,-43,-43,15,17,-77}",
+			"id":0,
+			"input":"{-24,-22,33,78,-77,-66,76,-54,32,40, -66,-22,-88,-50,-11,93,16,34,-79,-60, -42,-30,-73,65,92,94,67,-74,69,83, -51,91,78,-30,91,85,-78,-5,36,-91}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"y will contain the same number of elements as x."
+		},
+		{
+			"order":3,
+			"val":"Each element in x will be between -10000 and 10000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element in y will be between -10000 and 10000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"No point will occur more than once."
+		}
+	]
+}

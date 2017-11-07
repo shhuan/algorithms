@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":195.33,
+			"constraints":[],
+			"correctRatio":38.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10957&rd=14548",
+			"name":"CountingSeries",
+			"notes":[],
+			"submission":735
+		},
+		{
+			"avgPts":305.57,
+			"constraints":[],
+			"correctRatio":84.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11616&rd=14548",
+			"name":"BricksN",
+			"notes":[],
+			"submission":303
+		},
+		{
+			"avgPts":480.91,
+			"constraints":[],
+			"correctRatio":11.63,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11644&rd=14548",
+			"name":"AlphabetPaths",
+			"notes":[],
+			"submission":129
+		}
+	],
+	"name":"Single Round Match 523 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14548"
+}

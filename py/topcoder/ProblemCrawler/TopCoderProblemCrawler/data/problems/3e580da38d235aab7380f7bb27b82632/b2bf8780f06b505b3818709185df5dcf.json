@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=123&rd=3017",
+	"statement":"<pre>Class Name:  WordCalculator\nMethod Name: evaluate\nParameters:  String\nReturns:     String\n\nYou are to implement a class WordCalculator, which contains a method evaluate.\nThe method takes a string representing an arithmetic expression you are to\nevaluate.  The return value of the function is the result of evaluating the\narithmetic expression.\n\nThe input expression is structured as follows:\nEXPR    ::=     &lt;NUMBER&gt; &lt;OP&gt; &lt;NUMBER&gt;\n\nOP      ::=     { &quot;PLUS&quot; | &quot;MINUS&quot; | &quot;TIMES&quot; }\n\nNUMBER  ::=     [&quot;NEGATIVE &quot;] &lt;POS&gt; |\n                ZERO\n\nPOS     ::=     &lt;DIGIT&gt; |\n                &lt;TEEN&gt; |\n                &lt;PREFIX&gt; [&quot;-&quot; &lt;DIGIT&gt;]\n\nPREFIX  ::=     NINETY | EIGHTY | SEVENTY | SIXTY | FIFTY | FORTY | THIRTY |\nTWENTY\nDIGIT   ::=     ONE | TWO | THREE | FOUR | FIVE | SIX | SEVEN | EIGHT | NINE\nTEEN    ::=     TEN | ELEVEN | TWELVE | THIRTEEN | FOURTEEN | FIFTEEN | SIXTEEN\n|\n                SEVENTEEN | EIGHTEEN | NINETEEN\n\nSome examples of valid inputs are:\nNINETY-FOUR MINUS TWELVE\nZERO PLUS SEVENTY-THREE\nEIGHTY TIMES NEGATIVE NINETEEN\nFOUR PLUS THREE\nFOURTEEN MINUS NEGATIVE SIX\n\nNote:  Any number whose tens and ones place is over twenty and whose one place\nis not zero contains a hyphen.  Any number below twenty doesn't have a hyphen.  \n\nThe output expression is the result of the specified arithmetic operation.  The\noutput expression is structured as follows:\nEXPR    ::=     [&quot;NEGATIVE&quot;] &lt;DIGIT&gt; &quot;THOUSAND&quot; [&quot; &quot; &lt;DIGIT&gt; &quot;HUNDRED&quot;] [&quot; AND\n&quot; &lt;POS&gt;] |\n                [&quot;NEGATIVE&quot;] &lt;DIGIT&gt; &quot;HUNDRED&quot; [&quot; AND &quot; &lt;POS&gt;] |\n                [&quot;NEGATIVE&quot;] &lt;POS&gt; |\n                ZERO\n\nSome examples of valid outputs are:\nNINETY-FOUR\nNEGATIVE SEVEN THOUSAND AND EIGHT\nFOUR THOUSAND EIGHT HUNDRED AND SEVENTY-NINE\nZERO\nNEGATIVE TWO THOUSAND FOUR HUNDRED AND THREE\nSIX\nSEVEN THOUSAND FOUR HUNDRED\n\nNote:  The only place the word AND appears in a valid output is when the result\nis greater than one hundred and there is a non-zero number in the tens or ones\nplace.\n\nFor input and output, there is at most 1 space between words, and no spaces\naround hyphens.  The word calculator is case sensitive and all output should be\ncapital.\n\nThe method signature is:\nString evaluate(String s)\n\nTopCoder will verify s is a properly formed String, as described above.\n\nExamples:\nFORTY-THREE TIMES TWO = EIGHTY-SIX\nSEVEN MINUS TWENTY-FOUR = NEGATIVE SEVENTEEN\nSIXTY-FOUR TIMES TWELVE = SEVEN HUNDRED AND SIXTY-EIGHT\nNEGATIVE FOUR MINUS EIGHT = NEGATIVE TWELVE\nNEGATIVE SEVEN PLUS SEVEN = ZERO\nZERO TIMES NEGATIVE NINETY-NINE = ZERO\nNEGATIVE SEVENTY-FOUR TIMES NEGATIVE SIXTY-THREE = FOUR THOUSAND SIX HUNDRED\nAND SIXTY-TWO\nTHIRTY-TWO TIMES NEGATIVE SIXTY-THREE = NEGATIVE TWO THOUSAND AND SIXTEEN\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WordCalculator",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"evaluate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String evaluate(String param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

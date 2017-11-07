@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":198.94,
+			"constraints":[],
+			"correctRatio":90.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13088&rd=15848",
+			"name":"AmebaDiv1",
+			"notes":[],
+			"submission":712
+		},
+		{
+			"avgPts":315.66,
+			"constraints":[],
+			"correctRatio":16.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13090&rd=15848",
+			"name":"LongLongTripDiv1",
+			"notes":[],
+			"submission":106
+		},
+		{
+			"avgPts":577.85,
+			"constraints":[],
+			"correctRatio":85.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13092&rd=15848",
+			"name":"AlternativePiles",
+			"notes":[],
+			"submission":124
+		}
+	],
+	"name":"Single Round Match 615 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15848"
+}

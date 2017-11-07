@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.25,
+			"constraints":[],
+			"correctRatio":38.54,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10931&rd=14281",
+			"name":"SieveOfEratosthenes",
+			"notes":[],
+			"submission":314
+		},
+		{
+			"avgPts":280.87,
+			"constraints":[],
+			"correctRatio":47.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10990&rd=14281",
+			"name":"TheChroniclesOfAmber",
+			"notes":[],
+			"submission":117
+		},
+		{
+			"avgPts":556.02,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10934&rd=14281",
+			"name":"Passwords",
+			"notes":[],
+			"submission":21
+		}
+	],
+	"name":"2010 TCO Algorithm > Online Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14281"
+}

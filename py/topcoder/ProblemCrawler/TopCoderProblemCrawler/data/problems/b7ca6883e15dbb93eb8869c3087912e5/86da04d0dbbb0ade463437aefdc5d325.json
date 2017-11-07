@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12861&rd=15710",
+	"statement":"Fox Ciel has some items. The weight of the i-th (0-based) item is <b>item</b>[i]. She wants to put all items into bins. <br /><br /> <br /><br /> The capacity of each bin is 300. She can put an arbitrary number of items into a single bin, but the total weight of items in a bin must be less than or equal to 300. <br /><br /> <br /><br /> You are given the int[] <b>item</b>. It is known that the weight of each item is between 100 and 300, inclusive. Return the minimal number of bins required to store all items. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BinPacking",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minBins",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minBins(int[] item)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{150, 150, 150, 150, 150}",
+			"note":"You have five items and each bin can hold at most two of them. You need at least three bins.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{130, 140, 150, 160}",
+			"note":"For example, you can distribute the items in the following way:  ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{100, 100, 100, 100, 100, 100, 100, 100, 100}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{100, 200, 100, 100, 100, 100, 200, 100, 200}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{157, 142, 167, 133, 135, 157, 143, 160, 141, 123, 162, 159, 165, 137, 138, 152}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"item will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of item will be between 100 and 300, inclusive."
+		}
+	]
+}

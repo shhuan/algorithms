@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=182&rd=52",
+	"statement":"<pre>PROBLEM STATEMENT\n\nWhen a binary message is transmitted across a network, there is always a chance\nthat the message might be corrupted by the time it is received.  In order for\nthe receiver to determine if an error occurred during transmission, the\ntransmitter sends an additional shorter message, called the key.  The key is\nfunctionally derived from the first message and is used by the receiver to\nperform a check based on both of these messages.\n\nSuppose there is an original binary message M, and the derived binary message\nkey K. The verification check is accomplished by performing a bitwise\noperation. Let R be the &quot;residue&quot;, which is the result of performing this\nbitwise operation on M and K. The bitwise operation is performed as follows:\n\n1. Align K beneath M, starting with the left-most nonzero bit of M. \n2. Execute an XOR operation on M and K where XOR(x,y)=0 (zero) if x is the same\nas y, and XOR(x,y)=1 (one) if x is different than y.  Let R equal the result of\nthis step.\n3. Repeat steps 1 and 2 on each newly derived R until |R| is equal to |K|-1. If\n|R| is less than |K|-1, left-pad R with 0's (zeros) until the final |R| is\nequal to |K|-1.\n\nIf the final residue is all zeros, the message was transmitted correctly.\nOtherwise, an error occurred.\n\nCreate a class BitChecker that contains the method getResidue, which takes two\nbinary Strings, M and K as input and returns a binary String representing the\nfinal residue. \n\nDEFINITION\nClass: BitChecker\nParameters: String, String\nReturns: String\nMethod signature (be sure your method is public):  String getResidue(String M,\nString K);\n\n\nNOTES\n- Assume the key message is always received correctly.\n- Let |K| be the length of K.\n- Let |M| be the length of M counting from the leftmost nonzero bit to the\nright most bit (inclusive).\n- Let |R| be the length of R counting from the leftmost nonzero bit to the\nright most bit (inclusive).\n\n\n\nTopCoder will ensure the validity of the inputs.  Inputs are valid if all of\nthe following criteria are met:\n- The |M| &gt; |K|.\n- The leftmost bit in K must be 1.\n- Each bit of both M and K can only be a 1 (one) or 0 (zero).\n- M can be of length 3 - 50 (inclusive) counting from the leftmost nonzero bit\nto the rightmost bit (inclusive).\n- K can be of length 2 - 49 (inclusive) counting from the leftmost nonzero bit\nto the rightmost bit (inclusive).\n\t\nEXAMPLES\nHere's an example, with M = 10011010010011 and K = 10011:\n\n10011010010011\n10011\n-----\n00000010010011\n      10011\n      -----\n00000000001011 \n          Method returns 1011 \n\nHere's another example, with M = 11010110111110 and K = 10011:\n11010110111110\n10011\n-----\n01001110111110\n 10011\n -----\n00000010111110\n      10011\n      -----\n00000000100110\n        10011\n        -----\n00000000000000 \n\nMethod returns 0000\n\n\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BitChecker",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getResidue",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getResidue(String param0, String param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

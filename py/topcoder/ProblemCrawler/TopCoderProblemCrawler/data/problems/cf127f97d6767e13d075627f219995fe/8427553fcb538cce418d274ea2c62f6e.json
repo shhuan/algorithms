@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4690&rd=7992",
+	"statement":"An undirected graph is defined as a set of vertices with undirected edges connecting some of the pairs of vertices. You will be given such a graph as a String[] where character j of element i is a '1' if and only if vertices i and j are connected. Such a graph has as many vertices in it as there are elements in the String[]. Your task is to assign an integer between 1 and the total number of vertices, inclusive, to each of these vertices. You may not assign the same integer to multiple vertices. Your goal is to assign these integers such that vertices which are connected have integers which are close to each other numerically. More specifically, let <i>max</i> be the maximum difference between the two integers assigned to any two connected vertices. You want to assign the integers to the vertices such that <i>max</i> is minimized. You should return that minimum <i>max</i>.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GraphLabel",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"adjacentDifference",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int adjacentDifference(String[] graph)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"010000\", \"101111\", \"010111\", \"011010\", \"011101\", \"011010\"}",
+			"note":"One way to do this is to assign the label 1 to the first vertex (represented by element 0 of the input), 3 to the second vertex, 4 to the third, 2 to the fourth, 5 to the fifth, and 6 to the sixth.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"01111001\", \"10101000\", \"11000101\", \"10000111\", \"11000111\", \"00111000\", \"00011000\", \"10111000\"}",
+			"note":"The labels corresponding to the elements of the input are: 2 1 3 4 5 7 8 6",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"011110101\", \"100111000\", \"100000111\", \"110011011\", \"110101001\", \"010110110\", \"101001010\", \"001101101\", \"101110010\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{\"011111111\", \"101111111\", \"110111111\", \"111011111\", \"111101111\", \"111110111\", \"111111011\", \"111111101\", \"111111110\"} ",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"graph will contain between 2 and 9 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of graph will contain as many characters as graph has elements."
+		},
+		{
+			"order":3,
+			"val":"Each character in graph will be '0' or '1'."
+		},
+		{
+			"order":4,
+			"val":"Character j of element i of graph will be the same as character i of element j for all i and j."
+		},
+		{
+			"order":5,
+			"val":"Character i of element i of graph will be '0' for all i."
+		},
+		{
+			"order":6,
+			"val":"At least one character in graph will be '1'."
+		}
+	]
+}

@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12300&rd=15699",
+	"statement":"<p> Little Fox Jiro is standing at the bottom of a long flight of stairs. The bottom of the stairs has number 0, the bottommost step has number 1, the next step has number 2, and so on. The staircase is so long that Jiro is guaranteed not to reach its top. </p> <p> Jiro will now perform <b>N</b> consecutive actions. The actions are numbered 1 through <b>N</b>, in order. When performing action X, Jiro chooses between two options: either he does nothing, or he jumps exactly X steps up the stairs. In other words, if Jiro starts performing action X standing on step Y, he will end it either on step Y, or on step Y+X. </p> <p> For example, if <b>N</b>=3, Jiro will make three consecutive choices: whether or not to jump 1 step upwards, 2 steps upwards, and then 3 steps upwards. </p> <p> One of the steps is broken. The number of this step is <b>badStep</b>. Jiro cannot jump onto this step. </p> <p> You are given the ints <b>N</b> and <b>badStep</b>. Compute and return the number of the topmost step that can be reached by Jiro. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"JumpFurther",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"furthest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int furthest(int N, int badStep)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"The optimal strategy is to jump upwards twice: from step 0 to step 1, and then from step 1 to step 3. This trajectory avoids the broken step.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"note":"In this case step 1 is broken, so Jiro cannot jump upwards as his first action. The optimal strategy is to first stay on step 0, and then to jump from step 0 to step 2.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"5858",
+			"id":0,
+			"input":"1313",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"757065",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 2,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"badStep will be between 1 and 4,000,000, inclusive."
+		}
+	]
+}

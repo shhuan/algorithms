@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.23,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6761&rd=10119",
+			"name":"ConstitutiveNumbers",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":304.61,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6760&rd=10119",
+			"name":"MatrixPainting",
+			"notes":[],
+			"submission":2
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6762&rd=10119",
+			"name":"DominoesFalling",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"TCCC06 > Sponsor Track Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10119"
+}

@@ -1,0 +1,108 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12082&rd=15096",
+	"statement":"Fox Ciel has an undirected simple graph with N vertices. This graph has a special property: the degree of each vertex is at least N-3. <br /><br /> <br /><br /> Ciel wants to color the vertices of this graph. If there is an edge between vertex u and vertex v, she must use different colors for u and v. <br /><br /> <br /><br /> You are given a String[] <b>graph</b>. The vertices of the graph are labeled 0, 1, 2, and so on. If the j-th character of the i-th element of <b>graph</b> is 'Y', there is an edge between vertex i and vertex j. If the j-th character of the i-th element of <b>graph</b> is 'N', there is no edge between vertex i and vertex j. Return the minimal number of colors required to color this graph.",
+	"notes":[
+		{
+			"order":1,
+			"val":"A graph is called  if there are no self-loops and each pair of vertices is connected by at most one direct edge."
+		},
+		{
+			"order":2,
+			"val":"The  of vertex v is the number of vertices that are adjacent to v."
+		},
+		{
+			"order":3,
+			"val":"The constraint \"the degree of each vertex is at least N-3\" is also satisfied for any simple graph with N=1 or N=2."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ChromaticNumber",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minColors",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minColors(String[] graph)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"N\"}",
+			"note":"This graph contains only one vertex, so Ciel can color this graph with one color.   ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NYY\", \"YNN\", \"YNN\"}",
+			"note":"Ciel can color this graph with two colors as follows.   ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NYNN\", \"YNNN\", \"NNNY\", \"NNYN\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"NYNY\", \"YNYY\", \"NYNN\", \"YYNN\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{\"NYYYYYYY\", \"YNYYYYYY\", \"YYNYYYYY\", \"YYYNYYYY\", \"YYYYNYYY\", \"YYYYYNYY\", \"YYYYYYNY\", \"YYYYYYYN\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"graph will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of graph will contain exactly N characters, where N is the number of elements in graph."
+		},
+		{
+			"order":3,
+			"val":"Each character in each element of graph will be either 'Y' or 'N'."
+		},
+		{
+			"order":4,
+			"val":"For all i, the i-th character of the i-th element of graph will be 'N'."
+		},
+		{
+			"order":5,
+			"val":"For all i and j, the i-th character of the j-th element of graph will be equal to the j-th character of the i-th element of graph."
+		},
+		{
+			"order":6,
+			"val":"Each element of graph will contain at least N-3 'Y', where N is the number of elements in graph."
+		}
+	]
+}

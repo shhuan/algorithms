@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":204.81,
+			"constraints":[],
+			"correctRatio":92.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3049&rd=9900",
+			"name":"FractionCounting",
+			"notes":[],
+			"submission":381
+		},
+		{
+			"avgPts":330.15,
+			"constraints":[],
+			"correctRatio":25.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4446&rd=9900",
+			"name":"Synchro",
+			"notes":[],
+			"submission":155
+		}
+	],
+	"name":"TCO 06 > Qualification Set 4/11/15",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9900"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":207.15,
+			"constraints":[],
+			"correctRatio":93.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6698&rd=10093",
+			"name":"MedianProcess",
+			"notes":[],
+			"submission":594
+		},
+		{
+			"avgPts":279.03,
+			"constraints":[],
+			"correctRatio":47.96,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6505&rd=10093",
+			"name":"StudentsOrdering",
+			"notes":[],
+			"submission":392
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6667&rd=10093",
+			"name":"PenPuzzle",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"TCCC06 > Qualification Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10093"
+}

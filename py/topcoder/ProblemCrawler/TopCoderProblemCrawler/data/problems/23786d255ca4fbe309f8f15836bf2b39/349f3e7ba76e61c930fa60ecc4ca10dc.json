@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1816&rd=4702",
+	"statement":"Most large software packages have some logging options built in to them. Many times there are different logging levels that can be set. Your task is to write a class to perform this logging. Your class will be given a number of messages, each associated with some priority. If the priority of a message is equal to or higher than the logging priority, then you should log that message, otherwise it should be ignored. You will be given a String[], <b>messages</b>, each of whose elements represents a single message, a String[], <b>priorities</b>, each of whose elements represents the priority of the message with the same index, and a String[], <b>precedence</b>, giving the order of the priorities. Element 0 of <b>precedence</b> represents the lowest priority, element 1 the next lowest, and so on. Lastly, you will be given a String, <b>loggingPriority</b>, representing the lowest priority of messages to log. <b>loggingPriority</b> and each element of <b>priorities</b> will be formatted as &quot;&lt;priority&gt;&quot;, or &quot;&lt;priority&gt; &lt;num&gt;&quot;, where &lt;priority&gt; is an element of <b>precedence</b> and &lt;num&gt; is an integer between 0 and 100, inclusive. If &lt;num&gt; is not present, it is the same as if it were a 0. <br /><br /><br /><br /> You should return a String[] containing all of the messages with sufficiently high priority to be logged, in the order they were given to you. A message has sufficiently high priority to be logged if the corresponding &lt;priority&gt; is higher than that in <b>loggingPriority</b>, or if the corresponding &lt;priority&gt; is the same, and &lt;num&gt; is greater than or equal to that in <b>loggingPriority</b>. Additionally, priorities are case insensitive. <br /><br /><br /><br /> So, if <b>precedence</b> is {&quot;info&quot;,&quot;DEBUG&quot;,&quot;error&quot;,&quot;fatal&quot;}, and <b>loggingPriority</b> is &quot;debug 1&quot;, then messages with priorities of &quot;debug 1&quot;, &quot;debug 43&quot;, &quot;Error&quot;, and &quot;fatal 1&quot; would all be logged. Messages with priorities of &quot;debug 0&quot;, &quot;debug&quot;, &quot;info&quot;, and &quot;info 100&quot; would not be logged.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Logger",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"log",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] log(String[] messages, String[] priorities, String[] precedence, String loggingPriority)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"info 3\",\"debug\",\"debug\",\"debug 3\",\"error\",\"ERROR 5\",\"debug 2\",\"critical\",\"fatal 100\"}",
+			"id":0,
+			"input":"{\"in doit()...\",\"n=9\",\"n=13\",\"x=-3\",\"divide by 0\", \"index out of bounds\",\"n=-1\",\"this shouldn't happen\",\"bailing out\"}",
+			"note":"All of the messages with logging level of \"error 1\" or higher should be logged. Note that the logging level is case insensitive, so \"ERROR 5\" is the same as \"error 5\"",
+			"order":1
+		},
+		{
+			"expect":"{\"info 3\",\"debug\",\"debug\",\"debug 3\",\"error\",\"ERROR 5\",\"debug 2\",\"critical\",\"fatal 100\"}",
+			"id":0,
+			"input":"{\"in doit()...\",\"n=9\",\"n=13\",\"x=-3\",\"divide by 0\", \"index out of bounds\",\"n=-1\",\"this shouldn't happen\",\"bailing out\"}",
+			"order":2
+		},
+		{
+			"expect":"{\"A\",\"b\",\"C\",\"d\"}",
+			"id":0,
+			"input":"{\"1\",\"2\",\"3\",\"\"}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"loggingPriority and each element of priorities will be formatted as &quot;&lt;priority&gt;&quot; or &quot;&lt;priority&gt; &lt;num&gt;&quot;"
+		},
+		{
+			"order":2,
+			"val":"Each &lt;priority&gt; in priorities and loggingPriority will be an element of precedence, ignoring case."
+		},
+		{
+			"order":3,
+			"val":"Each &lt;num&gt; in priorities and loggingPriority will be between 0 and 100, inclusive, with no extraneous leading 0's."
+		},
+		{
+			"order":4,
+			"val":"precedence will contain no repeated elements, ignoring case."
+		},
+		{
+			"order":5,
+			"val":"Each element of precedence will contain between 1 and 40 letters ('a'-'z' and 'A'-'Z'), inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of messages will contain between 0 and 50 characters, inclusive, each of which will be between ASCII 32 and 126, inclusive."
+		},
+		{
+			"order":7,
+			"val":"priorities and messages will contain the same number of elements."
+		},
+		{
+			"order":8,
+			"val":"priorities, messages, and precedence will each contain between 1 and 50 elements, inclusive."
+		}
+	]
+}

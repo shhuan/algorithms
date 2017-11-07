@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4630&rd=8035",
+	"statement":"You want to draw a rectangle on a piece of paper. Unfortunately, you are not a perfect draftsman. The lines you make, although straight, do not always have the correct lengths. The top edge has length in the inclusive range [<b>topMin</b>,<b>topMax</b>], the left edge in the inclusive range [<b>leftMin</b>,<b>leftMax</b>], and the right edge in the inclusive range [<b>rightMin</b>,<b>rightMax</b>]. Fortunately, the left, top and right edges are at right angles to each other and meet (where applicable) at their ends. The bottom edge is made by connecting the bottom end of the left edge to the bottom end of the right edge. Return the maximum length the bottom edge could be minus the minimum length the bottom edge could be.",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RectangleError",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bottomRange",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"double, double, double, double, double, double",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double bottomRange(double topMin, double topMax, double leftMin, double leftMax, double rightMin, double rightMax)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"50",
+			"id":0,
+			"input":"50",
+			"note":"A perfect square! The bottom edge will be exactly 50 units long.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"A perfect trapezoid! Unfortunately, we wanted a rectangle. Nevertheless, the length of the bottom edge is uniquely determined.",
+			"order":2
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"5",
+			"note":"Here we drew the rectangle with our eyes closed.",
+			"order":3
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"5",
+			"order":4
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"10",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Each input will be between 5 and 100 inclusive."
+		},
+		{
+			"order":2,
+			"val":"topMin will not be greater than topMax."
+		},
+		{
+			"order":3,
+			"val":"leftMin will not be greater than leftMax."
+		},
+		{
+			"order":4,
+			"val":"rightMin will not be greater than rightMax."
+		}
+	]
+}

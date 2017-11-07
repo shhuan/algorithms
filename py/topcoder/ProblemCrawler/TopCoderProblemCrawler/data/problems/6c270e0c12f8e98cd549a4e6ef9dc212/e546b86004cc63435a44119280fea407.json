@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3943&rd=6520",
+	"statement":"A <i>sign test</i> is a test that is performed to determine if the results of an experiment are statistically significant. In particular, it looks at a number of similar trials, where each trial's outcome is either positive or negative. It calculates the probability that the results of your experiments would be at least as unbalanced as they actually turned out to be if the outcomes of each trial were totally random - a 50% chance of being positive and a 50% chance of being negative. For example, the probability of the five trials being split 4-1 or 5-0 is 12/32: 2 out of 32 times the results will be 5 negatives or 5 positives and 10 out of 32 times the results will have 4 negatives or 4 positives. Hence, the <i>p-value</i> of an outcome with 4 positives and 1 negative is 12/32 = 0.375. To make this more concrete, the <i>p-value</i> of <b>N</b> trials, <b>K</b> of which are negative can be calculated as<br /><br /> <img src=\"http://www.topcoder.com/contest/problem/LargeSignTest/sign.gif\" /><br /><br /> where the numerator of the fraction is the binomial coefficient: N!/(i!(N-i)!). There is one exception to this though: when <b>K</b>*2 is equal to <b>N</b>, the p-value is simply 1 (the above equation gives the wrong result).<br /><br /><br /><br /> This is all quite simple, when <b>N</b> and <b>K</b> are small, but what if they are rather large? Your task is to compute the p-value, given <b>N</b> and <b>K</b>, where 0&lt;=<b>K</b>&lt;=<b>N</b>&lt;=1,000,000 and 0&lt;N. You should return this value as a percentage with exactly one digit after the decimal point (don't forget the percent sign). You should use standard rounding when formatting your return. You need not worry about borderline cases as the constraints ensure that the percentage will not be within 1e-3 of XX.X5, where each X represents a digit. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LargeSignTest",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"pvalue",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String pvalue(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"5",
+			"note":"The p-value in this case is (choose(5,0)+choose(5,1))/2 = (1+5)/16 = 6/16 = 3/8 = 37.5%",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"10",
+			"order":2
+		},
+		{
+			"expect":"400000",
+			"id":0,
+			"input":"1000000",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"20",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 0 and N, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The percentage will not be within 1e-3 of XX.X5, where each X represents a digit."
+		}
+	]
+}

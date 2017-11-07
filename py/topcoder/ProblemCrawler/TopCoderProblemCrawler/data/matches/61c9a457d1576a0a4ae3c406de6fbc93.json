@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":183.79,
+			"constraints":[],
+			"correctRatio":93.79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13656&rd=16313",
+			"name":"Decipherability",
+			"notes":[],
+			"submission":483
+		},
+		{
+			"avgPts":310.47,
+			"constraints":[],
+			"correctRatio":70.3,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13249&rd=16313",
+			"name":"XorSequence",
+			"notes":[],
+			"submission":202
+		},
+		{
+			"avgPts":428.3,
+			"constraints":[],
+			"correctRatio":48.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13370&rd=16313",
+			"name":"CartInSupermarket",
+			"notes":[],
+			"submission":45
+		}
+	],
+	"name":"Single Round Match 649 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16313"
+}

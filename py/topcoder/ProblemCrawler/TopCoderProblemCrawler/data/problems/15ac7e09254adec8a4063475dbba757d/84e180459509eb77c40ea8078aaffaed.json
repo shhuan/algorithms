@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13142&rd=15853",
+	"statement":"In this problem we consider ordered pairs of positive integers. Given such a pair, you can now make zero or more steps. In each step, you can change your pair into a new pair of integers by adding one of them to the other. That is, if your current pair is (x, y), then your next pair will be either (x+y, y), or (x, x+y). <br /><br /> <br /><br /> <br /><br /> For example, you can start with (1, 2), change it to (3, 2), change that to (3, 5), and then change that again to (3, 8). <br /><br /> <br /><br /> <br /><br /> You are given four ints: <b>a</b>, <b>b</b>, <b>c</b>, and <b>d</b>. We are looking for a pair (x, y) such that: \n <ul> \n  <li>It is possible to start with (x, y) and end with (<b>a</b>, <b>b</b>).</li> \n  <li>It is also possible to start with the same (x, y) and end with (<b>c</b>, <b>d</b>).</li> \n </ul> The number of steps needed to reach (<b>a</b>, <b>b</b>) may be different from the number of steps needed to reach (<b>c</b>, <b>d</b>). <br /><br /> <br /><br /> <br /><br /> If there is at least one such pair (x, y), return the largest possible value of x+y. Otherwise, return -1.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PairGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxSum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxSum(int a, int b, int c, int d)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":"We have (1,1) -> (1,2) and (1,1) -> (2,1). ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"15",
+			"note":"Now we have (3,4) -> (7,4) -> (11,4) -> (15,4) and (3,4) -> (3,7) -> (10,7).",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1001",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"17928",
+			"id":0,
+			"input":"10944",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"b will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"c will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"d will be between 1 and 1,000,000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5911&rd=9810",
+	"statement":"<p>In a popular game, a ball is dropped from the top of a triangle of cells containing <b>n</b> rows. The ball keeps falling down row by row until it reaches the bottom of the triangle. In each row, the ball can fall either left or right. The first row contains one cell, the second contains two, and so on. The game looks like the following picture (where a cell is the space between two consecutive points in a row):</p> <p> </p>\n <center>\n  <img src=\"http://www.topcoder.com/contest/problem/FallingBall/FallingBall.png\" />\n </center><p></p> <p>The rows are numbered from top to bottom starting from zero, and the cells in each row are numbered from left to right starting from zero. Note that row <i>i</i> will have <i>i+1</i> cells numbered <i>0</i> to <i>i</i>, and if the ball is on cell <i>k</i> of row <i>i</i>, it will either fall left to cell <i>k</i> of row <i>i+1</i>, or right to cell <i>k+1</i> of row <i>i+1</i>.</p> <p>Given a String[] <b>cells</b>, containing a list of cells, and an int <b>n</b>, the number of rows in the triangle, return the number of paths in which the ball passes through all of the given cells. Each element of <b>cells</b> will be formatted &quot;&lt;row&gt; &lt;cell&gt;&quot; (quotes for clarity), where &lt;row&gt; is the cell's row, and &lt;cell&gt; is the cell's position within that row.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FallingBall",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(String[] cells, int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"7",
+			"id":0,
+			"input":"{\"3 2\",\"5 2\"}",
+			"note":"This example is shown in the picture above. There are 3 ways to reach the cell (3,2), then only one way to reach the second cell (5,2), and two more ways of reaching the bottom. That gives a total of 6 ways of passing through the cells.",
+			"order":1
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"{\"0 0\",\"0 0\"}",
+			"note":"All the possible paths pass through the cell (0,0).",
+			"order":2
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"{\"0 0\",\"29 0\"}",
+			"note":"There is only one way to reach the bottom-right cell.",
+			"order":3
+		},
+		{
+			"expect":"15",
+			"id":0,
+			"input":"{\"10 0\",\"10 1\"}",
+			"note":"Two different cells in the same row can never be touched in the same path.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cells will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"n will be between 1 and 30, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"Each element of cells will be formatted &quot;&lt;row&gt; &lt;cell&gt;&quot;, where &lt;row&gt; and &lt;cell&gt; are each integers, with no extra leading zeros."
+		},
+		{
+			"order":4,
+			"val":"Each &lt;row&gt; in cells will be between 0 and n-1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"In each element of cells, &lt;cell&gt; will be between 0 and &lt;row&gt;, inclusive."
+		}
+	]
+}

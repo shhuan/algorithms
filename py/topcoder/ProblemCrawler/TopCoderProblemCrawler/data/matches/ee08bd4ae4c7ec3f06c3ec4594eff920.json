@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":212.43,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=67&rd=2009",
+			"name":"Vigenere",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":394.31,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=72&rd=2009",
+			"name":"Camper",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":690.4,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=71&rd=2009",
+			"name":"Area",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"Collegiate Challenge > Finals",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=2009"
+}

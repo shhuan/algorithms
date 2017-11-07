@@ -1,0 +1,68 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2383&rd=5070",
+	"statement":"<p> Consider a simple Input/Output system. The system input consists of a button that you can press, while the system output consists of an audible beep. The system logic consists of a state machine that transitions from one state to the next every time the button is pressed. At the last state, the machine transitions to the first state when the button is pressed. On some state transitions, the audible beep is sounded, and on others it is not. The <b>pattern</b> of beeps mapped to states is known ahead of time. </p> <p> You are given a String <b>pattern</b> of beeps for state transitions. The i-th character of <b>pattern</b> (0-based index) will be a 'B' if there is a beep when state i is entered, and will be a 'N' if there is no beep. You are also given an int <b>targetState</b> to achieve, but not the starting state. Return the worst case scenario of the most number of times you must press the button to guarantee the machine is in the <b>targetState</b>. If it is not possible to always ensure you can end on the <b>targetState</b>, return -1. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SimpleIO",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"worstCase",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int worstCase(String pattern, int targetState)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"\"BNB\"",
+			"note":"In the worst case, the first state is state 2. In this case, you press the button 2 times before we narrow down that the state is now state 1. You must now press the button 2 more times to get back to state 0.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"BNBNBNBN\"",
+			"note":"In this case, we can only tell if we are on an even or odd state, we cannot determine the exact state.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"BBNNBNBBBBNBBBBBB\"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pattern will have between 2 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"pattern will only contain the characters 'B' and 'N'."
+		},
+		{
+			"order":3,
+			"val":"targetState will be between 0 and the length of pattern - 1, inclusive."
+		}
+	]
+}

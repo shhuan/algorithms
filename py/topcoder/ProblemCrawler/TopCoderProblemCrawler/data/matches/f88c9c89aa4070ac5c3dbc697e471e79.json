@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":194.16,
+			"constraints":[],
+			"correctRatio":64.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7291&rd=10657",
+			"name":"BirthNumbersValidator",
+			"notes":[],
+			"submission":434
+		},
+		{
+			"avgPts":237.91,
+			"constraints":[],
+			"correctRatio":10.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7294&rd=10657",
+			"name":"RepeatedPatterns",
+			"notes":[],
+			"submission":205
+		},
+		{
+			"avgPts":518.22,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7295&rd=10657",
+			"name":"ThreeBuses",
+			"notes":[],
+			"submission":20
+		}
+	],
+	"name":"Single Round Match 333 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10657"
+}

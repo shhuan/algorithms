@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":228.82,
+			"constraints":[],
+			"correctRatio":62.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=189&rd=52",
+			"name":"Clock",
+			"notes":[],
+			"submission":32
+		},
+		{
+			"avgPts":381.67,
+			"constraints":[],
+			"correctRatio":80.65,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=182&rd=52",
+			"name":"BitChecker",
+			"notes":[],
+			"submission":31
+		},
+		{
+			"avgPts":483.34,
+			"constraints":[],
+			"correctRatio":22.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=180&rd=52",
+			"name":"Parachuter",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"2001 Invitational > Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=52"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.15,
+			"constraints":[],
+			"correctRatio":54.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4515&rd=9891",
+			"name":"PowerDigit",
+			"notes":[],
+			"submission":368
+		},
+		{
+			"avgPts":292.92,
+			"constraints":[],
+			"correctRatio":82.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6047&rd=9891",
+			"name":"InverseCollatz",
+			"notes":[],
+			"submission":140
+		},
+		{
+			"avgPts":600.16,
+			"constraints":[],
+			"correctRatio":76.79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6044&rd=9891",
+			"name":"BlindMazeSolve",
+			"notes":[],
+			"submission":112
+		}
+	],
+	"name":"TCO 06 > Online Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9891"
+}

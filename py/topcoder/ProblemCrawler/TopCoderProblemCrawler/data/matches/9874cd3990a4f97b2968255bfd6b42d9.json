@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":202.97,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3083&rd=5885",
+			"name":"CubeSum",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":207.18,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3051&rd=5885",
+			"name":"LeftmostDerivation",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3082&rd=5885",
+			"name":"Supply",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2004 TCO > Wildcard Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5885"
+}

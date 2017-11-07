@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=131&rd=3019",
+	"statement":"<pre>Class name: LengthSorter\nMethod name: sortByLength\nParameters: String[]\nReturns: String[]\n\n\nImplement a class LengthSorter, which contains a method sortByLength.  The\nmethod sorts a String[] of elements by the length of the elements, longest to\nshortest.  If multiple Strings have the same length, their relative order in\nthe output should be the same as their relative order in the input.  \n\n\nHere is the method signature:\nString[] sortByLength(String[] stringList)\nBe sure your method is public.\n\n\nINPUT:\nA String[] containing between 1 and 50 elements, inclusive. Each element of the\nString[] will be between 1 and 50 characters in length, inclusive.\nStrings contain only letters, spaces, and numbers.\nTopCoder will ensure the input is valid.\n\n\nOUTPUT:\nA String[] containing the same Strings as the input, sorted longest to shortest.\n\n\nEXAMPLES:\n\nInput: {&quot;Top&quot;, &quot;Coder&quot;, &quot;comp&quot;, &quot;Wedn&quot;, &quot;at&quot;, &quot;midnight&quot;}\nOutput:{&quot;midnight&quot;, &quot;Coder&quot;, &quot;comp&quot;, &quot;Wedn&quot;, &quot;Top&quot;, &quot;at&quot;}\n\nInput: {&quot;one&quot;, &quot;three&quot;, &quot;five&quot;}\nOutput:{&quot;three&quot;, &quot;five&quot;, &quot;one&quot;}\n\n\nInput: {&quot;I&quot;,&quot;love&quot;,&quot;Cpp&quot;}\nOutput:{&quot;love&quot;,&quot;Cpp&quot;,&quot;I&quot;}\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LengthSorter",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sortByLength",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] sortByLength(String[] param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

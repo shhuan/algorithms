@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":195.51,
+			"constraints":[],
+			"correctRatio":78.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1549&rd=4500",
+			"name":"Vigesimal",
+			"notes":[],
+			"submission":119
+		},
+		{
+			"avgPts":310.25,
+			"constraints":[],
+			"correctRatio":89.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1551&rd=4500",
+			"name":"LambChop",
+			"notes":[],
+			"submission":105
+		},
+		{
+			"avgPts":670.73,
+			"constraints":[],
+			"correctRatio":68.42,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1553&rd=4500",
+			"name":"FlipFlop",
+			"notes":[],
+			"submission":19
+		}
+	],
+	"name":"Single Round Match 142 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4500"
+}

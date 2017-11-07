@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7849&rd=10843",
+	"statement":"<p> A binary string <i>s</i> is called &quot;repeating free&quot; if no proper prefix equals a proper suffix of the same lengh. A substring is called &quot;proper&quot; if it differs from the whole string. For example, strings &quot;0101011&quot;, &quot;10&quot;, &quot;10111100&quot; are repeating free, but the string &quot;01101011&quot; is not. </p> <p> Return the <b>k</b>-th string among all repeating free strings with length <b>n</b> in lexicographical order (<b>k</b> is a 0-based index). Return an empty string if it doesn't exist. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RepeatingFreeStrings",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"kthString",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String kthString(int n, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"2",
+			"note":"All repeating free strings of length 2 are \"01\" and \"10\".",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"All repeating strings of length 3 are \"001\", \"011\", \"100\", \"110\". ",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"k will be between 0 and 2000000000, inclusive."
+		}
+	]
+}

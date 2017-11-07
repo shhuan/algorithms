@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":194.79,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1509&rd=4457",
+			"name":"ObjectCounter",
+			"notes":[],
+			"submission":129
+		},
+		{
+			"avgPts":304.23,
+			"constraints":[],
+			"correctRatio":49.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1364&rd=4457",
+			"name":"QuickCount",
+			"notes":[],
+			"submission":83
+		},
+		{
+			"avgPts":455.18,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1365&rd=4457",
+			"name":"ExpertSystem",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"Single Round Match 134 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4457"
+}

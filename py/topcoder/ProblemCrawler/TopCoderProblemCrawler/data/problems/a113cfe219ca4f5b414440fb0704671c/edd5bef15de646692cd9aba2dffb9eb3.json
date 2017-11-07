@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10310&rd=13748",
+	"statement":"You may remember an old computer game called &quot;The Incredible Machine&quot;. It was a game where you could simulate simple processes like balls falling, lasers shooting, or cats pursuing mice. Moreover, you were able to perform these observations with different values for gravitational acceleration.<br /><br /><br /><br /> We are observing a system with some unknown acceleration of gravity. There is a slope which has the form of a polyline with N vertices. Each vertex of the polyline is positioned lower and to the right of the previous one. At time 0, a ball is placed at the first vertex. The ball is small enough to be considered a single point. Assume that there's no friction between the slope and the ball, the ball is absolutely nonelastic, and the direction of its velocity changes instantly at the polyline's vertices. Under these conditions, the ball will follow the polyline without ever losing contact with it. The ball reaches the final vertex at time <b>T</b>.<br /><br /><br /><br /> You are given int[]s <b>x</b> and <b>y</b>, where (<b>x</b>[i], <b>y</b>[i]) are the coordinates of the i-th vertex. Return the gravitational acceleration in this system. A body rolling down an inclined plane of angle alpha (measured between the plane and horizontal direction) under gravitational acceleration g has a constant acceleration of a = g * sin(alpha). The distance d travelled by an object during time t moving with initial velocity v0 and with constant acceleration a is equal to d = v0 * t + 0.5 * a * t^2. The velocity v1 of the object after time t has passed is equal to v1 = v0 + a * t.",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"IncredibleMachine",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"gravitationalAcceleration",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double gravitationalAcceleration(int[] x, int[] y, int T)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{100,22}",
+			"id":0,
+			"input":"{0,6}",
+			"note":"That's an acceleration of gravity that might be somewhere on Earth's surface. ",
+			"order":1
+		},
+		{
+			"expect":"{50,26,24}",
+			"id":0,
+			"input":"{0,26,100}",
+			"note":"And this is likely on Jupiter. ",
+			"order":2
+		},
+		{
+			"expect":"{10,6,0}",
+			"id":0,
+			"input":"{0,7,8}",
+			"note":"Note that in spite of the angle at vertex (7,6), the body won't fly off the slope and will follow the segment (7,6)-(8,0). ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Elements of x will be strictly ascending."
+		},
+		{
+			"order":3,
+			"val":"Elements of x will be between 0 and 100, inclusive."
+		},
+		{
+			"order":4,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":5,
+			"val":"Elements of y will be strictly descending."
+		},
+		{
+			"order":6,
+			"val":"Elements of y will be between 0 and 100, inclusive."
+		},
+		{
+			"order":7,
+			"val":"T will be between 1 and 100, inclusive."
+		}
+	]
+}

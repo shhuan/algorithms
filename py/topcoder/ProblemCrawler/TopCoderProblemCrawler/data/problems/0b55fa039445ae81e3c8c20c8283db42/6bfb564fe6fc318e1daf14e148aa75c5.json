@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9963&rd=13511",
+	"statement":"<p> The Change-O-Matic is a deterministic machine with a single goal: to provide change. That is, you throw in a banknote or a coin, and the machine throws out a bunch of smaller coins with the same total value. </p> <p> More precisely, the Change-O-Matic operates as follows: </p> <p> The machine contains several large stacks of coins. The values of these coins are given as a int[] <b>outputValues</b>. For the purpose of this problem we may assume that the machine contains an infinite number of coins of each of these values. One of the available values is always 1. </p> <p> The customer may throw in any coin or banknote with value greater than 1. The machine will output a set of at least two coins with the same total value. If there are multiple ways to satisfy this requirement, the machine prefers the one where the total number of output coins is minimized. If there are still multiple ways, the machine prefers the one that is lexicographically maximal (see Notes for a precise definition). </p> <p> You have a single banknote, and its value is given as a long <b>inputValue</b>. You would like to change it into coins of value 1 each. Return the number of times you have to throw something into the machine. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Let A=(a,...,a) and B=(b,...,b) be two different but equally large sets of coins, with a >= a >= ... >= a and b >= b >= ... >= b. Let x be the smallest index such that a != b. If a > b, we say that the set A is lexicographically larger than the set B."
+		},
+		{
+			"order":2,
+			"val":"Given a collection of different but equally large sets of coins, the lexicographically maximal set is the one that is lexicographically larger than each of the other sets. (Note that there is always exactly one such set.)"
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ChangeOMatic",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howManyRounds",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long howManyRounds(int[] outputValues, long inputValue)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"21",
+			"id":0,
+			"input":"{1,5,10}",
+			"note":"The process of changing your money may look as follows:  ",
+			"order":1
+		},
+		{
+			"expect":"99",
+			"id":0,
+			"input":"{1,33,90,91,92,93,94,95,96,97,98}",
+			"note":"In each step, the machine minimizes the number of coins it throws out,  the number of steps you need to accomplish your task. In the first step it will output a coin worth 98 and a coin worth 1.",
+			"order":2
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"{1,30,60}",
+			"note":"The value of the banknote may be less than the values of some coin types.",
+			"order":3
+		},
+		{
+			"expect":"60",
+			"id":0,
+			"input":"{1,30,60,90}",
+			"note":"The value of the banknote may even be equal to the value of some coin type. Note that for any input the machine must always output at least two coins. Therefore if you throw in the banknote worth 60, you will get two coins worth 30 each.",
+			"order":4
+		},
+		{
+			"expect":"120",
+			"id":0,
+			"input":"{1,8,9,11,12,100}",
+			"note":"In the first step the machine would output 100+12+8. (The combination 100+11+9 has the same number of coins, but 100+12+8 is lexicographically larger.)",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"outputValues will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"outputValues will be sorted in strictly ascending order. That is, for each i, outputValues[i] &lt; outputValues[i+1]."
+		},
+		{
+			"order":3,
+			"val":"Each element of outputValues will be between 1 and 1,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Element 0 of outputValues will be equal to 1."
+		},
+		{
+			"order":5,
+			"val":"inputValue will be between 2 and 10^15, inclusive."
+		}
+	]
+}

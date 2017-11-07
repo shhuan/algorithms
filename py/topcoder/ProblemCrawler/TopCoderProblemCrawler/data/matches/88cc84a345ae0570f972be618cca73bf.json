@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.44,
+			"constraints":[],
+			"correctRatio":41.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7773&rd=10675",
+			"name":"CoinsExchange",
+			"notes":[],
+			"submission":467
+		},
+		{
+			"avgPts":319.1,
+			"constraints":[],
+			"correctRatio":71.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7772&rd=10675",
+			"name":"BoxesArrangement",
+			"notes":[],
+			"submission":126
+		},
+		{
+			"avgPts":584.9,
+			"constraints":[],
+			"correctRatio":50.68,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7247&rd=10675",
+			"name":"NewMagicSquare",
+			"notes":[],
+			"submission":73
+		}
+	],
+	"name":"Single Round Match 351 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10675"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":208.17,
+			"constraints":[],
+			"correctRatio":95.08,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11799&rd=14728",
+			"name":"MergersDivOne",
+			"notes":[],
+			"submission":773
+		},
+		{
+			"avgPts":238.31,
+			"constraints":[],
+			"correctRatio":26.6,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11797&rd=14728",
+			"name":"RollingDiceDivOne",
+			"notes":[],
+			"submission":421
+		},
+		{
+			"avgPts":512.24,
+			"constraints":[],
+			"correctRatio":74.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11798&rd=14728",
+			"name":"BinaryPolynomialDivOne",
+			"notes":[],
+			"submission":35
+		}
+	],
+	"name":"Single Round Match 536 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14728"
+}

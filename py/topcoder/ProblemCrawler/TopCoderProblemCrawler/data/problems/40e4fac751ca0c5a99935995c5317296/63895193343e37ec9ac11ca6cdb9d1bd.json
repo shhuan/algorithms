@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8306&rd=10957",
+	"statement":"<p> The relief of an area near Alone Hill was measured using an old machine which might be inaccurate. The area has a rectangular form, and it was split into a rectangular grid containing <i>n</i> rows and <i>m</i> columns of equal squares. The results are given as a String[] <b>heights</b>, where the j-th character of the i-th element is '1' (one) if the height of the point at the center of the square at row i, column j is greater than some constant value, and '0' (zero) otherwise. <b>heights</b> contains exactly n elements, each element of which contains exactly m characters. A cell is a neighbour of another cell if they share the side. The measured area has one special property: if point A is the center of some cell and point B is the center of the neighbour cell and point A is closer to the hill peak than point B, then the height of A is greater or equal than the height of B. Distance is measured using the euclidian distance along the horizontal plane. In other words, the distance between point (x<sub>a</sub>,y<sub>a</sub>) and point (x<sub>b</sub>,y<sub>b</sub>) is equal to sqrt((x<sub>a</sub>-x<sub>b</sub>)^2+(y<sub>a</sub>-y<sub>b</sub>)^2). It is known that one of the given measurements was taken at the peak of the hill, i.e., the hill coincides with the center of one of the squares. </p> <p> Using that property, you can tell whether or not the given results might be accurate. For example, the relief map on the left might be accurate while the one on the right is definitely not: <tt><br /><br /> {&quot;0100&quot;, {&quot;01010&quot;,<br /><br /> &nbsp;&quot;1110&quot;, &nbsp;&quot;10101&quot;,<br /><br /> &nbsp;&quot;0110&quot;, &nbsp;&quot;01010&quot;,<br /><br /> &nbsp;&quot;0110&quot;} &nbsp;&quot;10101&quot;}<br /><br /> </tt> </p> <p> Return the minimal number of characters you must replace in <b>heights</b> to make the results possibly accurate. If it is already possible that the results are accurate, return 0. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ReliefMeasuring",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minValuesToFix",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minValuesToFix(String[] heights)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"0100\",\"1110\",\"0110\",\"0110\"} ",
+			"note":"This is the example from the statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"101\"}",
+			"note":"Replace the middle character.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"101\", \"010\", \"101\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"0010\", \"0101\", \"0010\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"1010\", \"0101\", \"1010\", \"0101\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"heights will contain between 1 and 25 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of heights will contain between 1 and 25 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of heights will contain the same number of characters as others."
+		},
+		{
+			"order":4,
+			"val":"Each element of heights will contain only '0' and '1' characters."
+		}
+	]
+}

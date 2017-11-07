@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":185.66,
+			"constraints":[],
+			"correctRatio":56.97,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10862&rd=14150",
+			"name":"LotteryCheating",
+			"notes":[],
+			"submission":667
+		},
+		{
+			"avgPts":337.46,
+			"constraints":[],
+			"correctRatio":90.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10863&rd=14150",
+			"name":"LotteryPyaterochka",
+			"notes":[],
+			"submission":455
+		},
+		{
+			"avgPts":462.02,
+			"constraints":[],
+			"correctRatio":62.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10854&rd=14150",
+			"name":"DrawingBlackCrosses",
+			"notes":[],
+			"submission":37
+		}
+	],
+	"name":"Single Round Match 466 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14150"
+}

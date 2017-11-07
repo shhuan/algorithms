@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=122&rd=3017",
+	"statement":"<pre>Class Name:  Rot13\nMethod Name: rot13\nParameters:  String\nReturns:     String\n\nYou are to implement a class Rot13, which contains a method rot13.  The method\ntakes\n a string representing a 'secret' message and returns an encoded message.\n The encoded\nmessage is encoded with a cipher called rot13.\n\nrot13 works as follows.  Each letter in alphabet is given an index based on\nit's position\n in the alphabet.  a=1, b=2, c=3, ..., z=26.  Each character in\nthe input string is then mapped to the character 13 places to the right.  If\nthe end of the alphabet is reached, counting resumes at the first character of\nthe alphabet.  For example, the character 'a' would be mapped to 'n', 'y' would\nbe mapped to 'l', 'f' to 's', and so on.  The exact same process is done for\ncapital letters as well.  Any non-alphabetic characters should be passed on to\nthe output string with no manipulation.\n\nThe method signature is:\nString rot13(String s)\nBe sure your method is public.\n\ns is a String of length between 1 and 50, inclusive, containing letters, digits\nand the symbols !@#$%^&amp;*()-_=+[]{}|;':,./&lt;&gt;?&quot;\n\nExamples:\n&quot;z&quot; is encoded as &quot;m&quot;\n&quot;a&quot; is encoded as &quot;n&quot;\n&quot;x&quot; is encoded as &quot;k&quot;\n&quot;Hello world!&quot; is encoded as &quot;Uryyb jbeyq!&quot;\n&quot;This is a test message.&quot; is encoded as &quot;Guvf vf n grfg zrffntr.&quot;\n&quot;abc123&lt;&gt;,xyz?*$&quot; is encoded as &quot;nop123&lt;&gt;,klm?*$&quot;\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Rot13",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"rot13",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String rot13(String param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

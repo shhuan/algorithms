@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":149.39,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13284&rd=16061",
+			"name":"Egalitarianism3",
+			"notes":[],
+			"submission":384
+		},
+		{
+			"avgPts":344.72,
+			"constraints":[],
+			"correctRatio":64.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13377&rd=16061",
+			"name":"SuffixArrayDiv1",
+			"notes":[],
+			"submission":143
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13297&rd=16061",
+			"name":"NeverAskHerAge",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"Single Round Match 630 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16061"
+}

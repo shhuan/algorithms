@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12691&rd=15698",
+	"statement":"F is a function that is defined on all real numbers from the closed interval [1,N]. You are given a int[] <b>Y</b> with N elements. For each i (1 &lt;= i &lt;= N) we have F(i) = <b>Y</b>[i-1]. Additionally, you know that F is piecewise linear: for each i, on the interval [i,i+1] F is a linear function. The function F is uniquely determined by this information. For example, if F(4)=1 and F(5)=6 then we must have F(4.7)=4.5. <br /><br /><br /><br /> As another example, this is the plot of the function F for <b>Y</b> = {1, 4, -1, 2}. <br /><br /><br /><br /> <img src=\"http://www.topcoder.com/contest/problem/PiecewiseLinearFunction/2zecd35.png\" /> <br /><br /><br /><br /> Given a real number y, we can count the number of solutions to the equation F(x)=y. For example, for the function plotted above there are 0 solutions for y=7, there is 1 solution for y=4, and there are 3 solutions for y=1.1. We are looking for the largest number of solutions such an equation can have. For the function plotted above the answer would be 3: there is no y such that F(x)=y has more than 3 solutions. <br /><br /><br /><br /> If there is an y such that the equation F(x)=y has infinitely many solutions, return -1. Otherwise, return the maximum possible number of solutions such an equation may have. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PiecewiseLinearFunction",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maximumSolutions",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maximumSolutions(int[] Y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{3, 2}",
+			"note":"The graph of this function is a line segment between (1, 3) and (2, 2). For any y such that 2 ≤ y ≤ 3 the equation F(x)=y has 1 solution, and for any other y it has 0 solutions.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{4, 4}",
+			"note":"The function's plot is a horizontal line segment between points (1, 4) and (2, 4). For y=4, F(x)=y has infinitely many solutions.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{1, 4, -1, 2}",
+			"note":"This is the example from the problem statement. Three solutions are obtained for any value of y between 1 and 2, inclusive:  ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{2, 1, 2, 1, 3, 2, 3, 2}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{125612666, -991004227, 0, 6, 88023, -1000000000, 1000000000, -1000000000, 1000000000}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Y will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of Y will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		}
+	]
+}

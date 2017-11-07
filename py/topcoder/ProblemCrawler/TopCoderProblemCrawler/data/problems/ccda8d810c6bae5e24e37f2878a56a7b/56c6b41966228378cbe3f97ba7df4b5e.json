@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3101&rd=5886",
+	"statement":"Given the elevations of a plot of land, determine the deepest lake that could exist on the plot. Assume that water will flow off the edge of the plot, and therefore a lake will not cover any land on the border. A lake could form at a location up to level h so long as there is no path of horizontal or vertical steps from the lake to the edge of the plot that is completely below h. For example, consider the following plot:<br /><br /> <pre>\n  5255\n  5225\n  5525\n  5515\n  5555\n</pre> A lake will form up to level 2 where the 1 is.<br /><br /><br /><br /> You will be given a String[], <b>plot</b>, where the ASCII value of <b>plot[i][j]</b> represents the height of the land at location (i,j). Your task is to determine the deepest lake that could form in the plot, where the depth of a lake is the largest difference between the lake height and the height of the land under the water.",
+	"notes":[{
+		"order":1,
+		"val":"If no lake can form, return 0."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LakeDepth",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"depth",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int depth(String[] plot)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":" {\"5255\", \"5225\", \"5525\", \"5515\", \"5555\"}",
+			"note":"This is the example above.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":" {\"55555\", \"59995\", \"59595\", \"59195\", \"59995\", \"55555\"}",
+			"note":"A lake of height '9' will form in the center of this plot.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":" {\"55555\", \"59995\", \"59A95\", \"59A95\", \"59995\", \"55555\"}",
+			"note":"No lake may form here, as 'A' has a higher value that '9'.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"55555\", \"52335\", \"53315\", \"45555\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"plot will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of plot will contain between 3 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of plot will be the same length."
+		},
+		{
+			"order":4,
+			"val":"Each character in plot will have an ASCII value between 32 and 126, inclusive."
+		}
+	]
+}

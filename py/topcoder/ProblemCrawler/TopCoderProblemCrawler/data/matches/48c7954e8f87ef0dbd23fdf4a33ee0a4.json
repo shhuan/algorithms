@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":99.5,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3049&rd=9913",
+			"name":"FractionCounting",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4446&rd=9913",
+			"name":"Synchro",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"TCO 06 > Sponsor Track Set 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9913"
+}

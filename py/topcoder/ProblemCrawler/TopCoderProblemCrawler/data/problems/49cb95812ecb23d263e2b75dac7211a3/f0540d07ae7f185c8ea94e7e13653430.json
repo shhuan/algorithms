@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5934&rd=8073",
+	"statement":"<p>Your company produces components used in construction. From time to time, it is necessary to run a series of tests on several of the components, to determine their breaking force. The goal of the testing is to determine the point at which the unit breaks, up to a given threshold. (Only integer forces are applied.)</p> <p>You have a set of components to be used for testing. You are to find an optimal testing plan, minimizing the number of tests that will have to be performed (in the worst case). In the process of testing, you may destroy some or all of the test components, provided that in the end, the breaking force is known.</p> <p>Unfortunately, no manufacturing process is perfect, so it is possible that one of your test components is defective. A defective component is defined as one that breaks under a lesser force than a typically produced component.</p> <p>You are given int <b>maxForce</b>, the highest force at which you need to test the components. (They may have a higher breaking force than this, but you are not concerned with testing any higher force.) You are also given int <b>testUnits</b>, the number of units that are available for testing. You are to return the fewest number of tests necessary to conclusively determine the breaking force of a non-defective component.</p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Assume that the (non-defective) component has a fixed breaking point. That is, if it breaks when tested at a given force, it will break whenever tested with a greater force. Likewise, if it passes testing for a given force, it will pass for any lower force."
+		},
+		{
+			"order":2,
+			"val":"The testing strategy may destroy all of the components that were made available for testing, as long as it finds the exact breaking force of the non-defective component."
+		},
+		{
+			"order":3,
+			"val":"All of the test components, except for possibly a single defective one, are identical, and will break under the same force."
+		},
+		{
+			"order":4,
+			"val":"It is not necessarily the case that one of the test components is defective, however, there will never be more than one defective component."
+		},
+		{
+			"order":5,
+			"val":"A defective component will always break under a lower force than a normal component."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ForceTest",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fewestTests",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int fewestTests(int maxForce, int testUnits)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":"We have to do a maximum of two tests. If the first test should fail, we need to test the second unit to determine if the first was defective.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"  ",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"10",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"100",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maxForce will be between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"testUnits will be between 2 and 20, inclusive."
+		}
+	]
+}

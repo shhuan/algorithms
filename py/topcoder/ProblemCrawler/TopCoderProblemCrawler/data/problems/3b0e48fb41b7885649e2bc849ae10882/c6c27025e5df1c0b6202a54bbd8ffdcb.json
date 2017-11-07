@@ -1,0 +1,107 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8817&rd=12182",
+	"statement":"You are given an electrical circuit for a home, with a number of nodes possibly connected by wires. Any pair of nodes may be connected by at most one wire, and a node can't be connected to itself. Each node on the circuit is either an electrical outlet for the house or a connection to the main electrical grid. The String[] <b>wires</b> tells you the wires that are already in place; the <i>x</i>th character of the <i>y</i>th element is '1' (one) if nodes <i>x</i> and <i>y</i> have a wire between them, '0' (zero) otherwise. The int[] <b>gridConnections</b> lists the indices of the nodes that are connections to the main electrical grid. <br /><br /><br /><br /> You'd like to make the circuit safer and more redundant by adding as many extra wires to it as possible. The one complication is that no two main grid connections are currently wired together (directly or indirectly), and you must preserve this, or else disaster will result. Determine the maximum number of new wires you can add to the circuit.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AddElectricalWires",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxNewWires",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxNewWires(String[] wires, int[] gridConnections)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{\"000\",\"000\",\"000\"}",
+			"note":"Every valid wire can be added.",
+			"order":1
+		},
+		{
+			"expect":"{0,1}",
+			"id":0,
+			"input":"{\"000\",\"000\",\"000\"}",
+			"note":"0 and 1 can't be connected, but 0 and 2 (or 1 and 2) still can be.",
+			"order":2
+		},
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{\"01\",\"10\"}",
+			"note":"This circuit is already complete.",
+			"order":3
+		},
+		{
+			"expect":"{0,1,2,3,4}",
+			"id":0,
+			"input":"{\"00000\",\"00000\",\"00000\",\"00000\",\"00000\"}",
+			"note":"Any connections would be disastrous.",
+			"order":4
+		},
+		{
+			"expect":"{2,4}",
+			"id":0,
+			"input":"{\"01000\",\"10100\",\"01010\",\"00100\",\"00000\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"wires will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of wires will have the same length as wires."
+		},
+		{
+			"order":3,
+			"val":"Each element of wires will contain only the characters '0' and '1'."
+		},
+		{
+			"order":4,
+			"val":"Character i of element i of wires will be a '0'."
+		},
+		{
+			"order":5,
+			"val":"Character i of element j of wires will be the same as character j of element i."
+		},
+		{
+			"order":6,
+			"val":"gridConnections will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of gridConnections will be an integer between 0 and length(wires)-1, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Each element of gridConnections will be distinct."
+		},
+		{
+			"order":9,
+			"val":"Each pair of elements of gridConnections will not index nodes connected by a path of '1's in wires."
+		}
+	]
+}

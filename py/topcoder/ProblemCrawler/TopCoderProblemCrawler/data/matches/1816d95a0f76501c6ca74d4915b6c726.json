@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":161.06,
+			"constraints":[],
+			"correctRatio":63.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6093&rd=9824",
+			"name":"SpiralNumbers",
+			"notes":[],
+			"submission":280
+		},
+		{
+			"avgPts":312.28,
+			"constraints":[],
+			"correctRatio":12.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6070&rd=9824",
+			"name":"Knights",
+			"notes":[],
+			"submission":128
+		},
+		{
+			"avgPts":548.59,
+			"constraints":[],
+			"correctRatio":46.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6062&rd=9824",
+			"name":"FourBears",
+			"notes":[],
+			"submission":13
+		}
+	],
+	"name":"Single Round Match 303 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9824"
+}

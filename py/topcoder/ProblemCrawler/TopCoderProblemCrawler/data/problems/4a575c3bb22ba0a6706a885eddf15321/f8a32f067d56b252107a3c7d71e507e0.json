@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4518&rd=8068",
+	"statement":"In some computer game, you are surrounded by monsters, and you are to kill them all. Each monster has some number of life points and damage points, and you also have some number of damage points. Life points represent the amount of life left in a monster. As long as a monster has one or more life points, it remains alive. Damage points represent the number of life points that are taken away from an enemy by a single attack. At every turn, you are attacked by each of the living monsters, and then you attack exactly one of them (at the same turn). <br /><br /><br /><br /> You are given a int[] <b>life</b>, the number of life points that each monster starts out with, a int[] <b>damage</b>, the number of damage points each monster has, and an int <b>yourDamage</b>, the number of damage points you have. The ith elements of <b>life</b> and <b>damage</b> represent the life points and damage points for the ith monster. Return the minimal number of life points you must start out with in order to kill all the monsters. At the end of the fight, you must have one or more life points remaining.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OneFight",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"monsterKilling",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int monsterKilling(int[] life, int[] damage, int yourDamage)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{10}",
+			"id":0,
+			"input":"{3}",
+			"note":"You must hit the monster twice. You lose 20 life points in the fight. Since you must have at least 1 life point remaining, the answer is 21.",
+			"order":1
+		},
+		{
+			"expect":"{5,3}",
+			"id":0,
+			"input":"{5,1}",
+			"note":"If you kill the first monster and then the second one, you will lose (3+5) + (3+5) + 3 = 19 life points. If you kill the second monster and then first one, you will lose (3+5) + 5 + 5 = 18 life points. You choose the latter option.",
+			"order":2
+		},
+		{
+			"expect":"{10,20,30,40,50,60,70,80,90,100}",
+			"id":0,
+			"input":"{5,5,5,5,5,5,5,5,5,5}",
+			"note":"Kill all the monsters in reverse order from last to first.",
+			"order":3
+		},
+		{
+			"expect":"{1,65,95,32,48,9,3,13,100,4}",
+			"id":0,
+			"input":"{6,34,21,79,31,5,8,23,9,100}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"life will have between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"life and damage will have the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"All elements of life will be between 1 and 100, inclusive."
+		},
+		{
+			"order":4,
+			"val":"All elements of damage will be between 0 and 100, inclusive."
+		},
+		{
+			"order":5,
+			"val":"yourDamage will be between 1 and 100, inclusive."
+		}
+	]
+}

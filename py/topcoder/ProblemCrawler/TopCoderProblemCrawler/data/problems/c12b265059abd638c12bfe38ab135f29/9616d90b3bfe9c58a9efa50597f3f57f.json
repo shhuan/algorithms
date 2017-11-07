@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13497&rd=16079",
+	"statement":"<p>Mirosz adores sweets. He has just bought a rectangular bar of chocolate. The bar is divided into a grid of square cells. Different cells may have a different quality. You are given the description of the bar in a String[] <b>chocolate</b>. Each character in <b>chocolate</b> is a digit between '0' and '9', inclusive: the quality of one of the cells.</p> <br /><br /> <p>Mirosz is now going to divide the chocolate into 9 parts: one for him and one for each of his 8 friends. He will do the division by making four cuts: two horizontal and two vertical ones. Each cut must go between two rows or columns of cells. Each of the 9 parts must be non-empty. The quality of a part is the sum of the qualities of all cells it contains.</p> <br /><br /> <p>Mirosz is well-mannered and he will let his friends choose their pieces first. His friends are even more addicted to chocolate than he is. Therefore, they will certainly choose the pieces with higher quality first, and Mirosz will be left with the worst of the nine pieces.</p> <br /><br /> <p>You are given the String[] <b>chocolate</b>. Find the optimal places for the four cuts. More precisely, compute and return the largest possible quality of Mirosz's part of the chocolate bar.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ChocolateDividingEasy",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findBest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int findBest(String[] chocolate)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{ \"9768\", \"6767\", \"5313\" }",
+			"note":"There are three valid ways to cut this chocolate. One of the optimal ones is shown below.    This way of cutting produces parts with the following qualities: 9, 7, 14, 6, 7, 13, 5, 3, and 4. The quality of the worst part (the one that Mirosz will get) is 3.   Here is another way of cutting the same chocolate:     If Mirosz cuts the chocolate in this way, the quality of his part will be 1, which is worse than 3.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{ \"36753562\", \"91270936\", \"06261879\", \"20237592\", \"28973612\", \"93194784\" }",
+			"note":"There is only one optimal way to divide the chocolate:      The three parts on the top have qualities 3+6+7+5+9+1+2+7 = 40, 3+5+0+9 = 17 and 6+2+3+6 = 17  The worst part is the one in the bottom right corner. Its quality is only 1+2+4+8 = 15.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{ \"012\", \"345\", \"678\" }",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"chocolate will contain between 3 and 50 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"All elements in chocolate will contain between 3 and 50 characters, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"All elements in chocolate will contain the same number of characters. "
+		},
+		{
+			"order":4,
+			"val":"All elements in chocolate will contain only digits ('0'-'9')."
+		}
+	]
+}

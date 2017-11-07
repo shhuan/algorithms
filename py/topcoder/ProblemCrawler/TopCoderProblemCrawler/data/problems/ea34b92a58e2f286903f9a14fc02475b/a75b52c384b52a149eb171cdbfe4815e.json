@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10700&rd=14727",
+	"statement":"Elly has a string S. She wants to convert it to her favorite string T. You are given two String[]s <b>s</b> and <b>t</b>. Concatenate all elements of <b>s</b> to get the string S. Concatenate all elements of <b>t</b> to get the string T. S and T will contain the same number of characters. <br /><br /> <br /><br /> Elly can perform two types of operations: \n <ul> \n  <li>Choose a character and replace it with another character. For example, she can change &quot;topcoder&quot; to &quot;topcodfr&quot; by replacing character 6 (0-based index) with 'f'.</li> \n  <li>Choose two adjacent letters and swap them. For example, she can change &quot;topcoder&quot; to &quot;tocpoder&quot; by swapping characters 2 and 3 (0-based indices). She cannot change &quot;topcoder&quot; to &quot;topdocer&quot; because the characters being swapped must be adjacent.</li> \n </ul> Return the minimal number of operations required to convert S to T. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EllysString",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theMin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int theMin(String[] s, String[] t)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"unagi\"}",
+			"id":0,
+			"input":"{\"usagi\"}",
+			"note":"Replace character 1 with 'n'. ",
+			"order":1
+		},
+		{
+			"expect":"{\"nugai\"}",
+			"id":0,
+			"input":"{\"unagi\"}",
+			"note":"In the first operation, swap characters 0 and 1 to get \"nuagi\". In the second operation, swap characters 2 and 3 to get \"nugai\". ",
+			"order":2
+		},
+		{
+			"expect":"{\"e\", \"ll\", \"ysst\", \"ring\"}",
+			"id":0,
+			"input":"{\"ellys\", \"string\"}",
+			"note":"Don't forget to concatenate strings. Both S and T are \"ellysstring\", so no operation is required. ",
+			"order":3
+		},
+		{
+			"expect":"{\"xfo\"}",
+			"id":0,
+			"input":"{\"fox\"}",
+			"note":"In the first operation, swap characters 1 and 2 to get \"fxo\". In the second operation, swap characters 0 and 1 to get \"xfo\".",
+			"order":4
+		},
+		{
+			"expect":"{\"camlon\"}",
+			"id":0,
+			"input":"{\"salmon\"}",
+			"note":"In the first operation, replace character 0 with 'c' to get \"calmon\". In the second operation, swap characters 2 and 3 to get \"camlon\".",
+			"order":5
+		},
+		{
+			"expect":"{\"jcayduvida\"}",
+			"id":0,
+			"input":"{\"boajxuidva\"}",
+			"order":6
+		},
+		{
+			"expect":"{\"qokbqyujeqcbwsinatupqfoegmvkdz\"}",
+			"id":0,
+			"input":"{\"vykdnujyezbcbmnatipqfuxqmgkvtn\"}",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s and t will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of s and t will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in s and t will be a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":4,
+			"val":"s and t will contain the same number of characters when concatenated."
+		}
+	]
+}

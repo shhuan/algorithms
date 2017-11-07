@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":173.74,
+			"constraints":[],
+			"correctRatio":85.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8223&rd=10789",
+			"name":"RoadConstruction",
+			"notes":[],
+			"submission":493
+		},
+		{
+			"avgPts":317.3,
+			"constraints":[],
+			"correctRatio":76.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8005&rd=10789",
+			"name":"RoundOfEleven",
+			"notes":[],
+			"submission":268
+		},
+		{
+			"avgPts":676.83,
+			"constraints":[],
+			"correctRatio":46.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8143&rd=10789",
+			"name":"RadarGuns",
+			"notes":[],
+			"submission":119
+		}
+	],
+	"name":"Single Round Match 372 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10789"
+}

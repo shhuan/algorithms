@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8781&rd=12015",
+	"statement":"<p> You are given a binary rectangular matrix with exactly five columns. A matrix is called <i>good</i> if it contains exactly <b>columns[i]</b> ones in the i-th column. To make the matrix good, you are allowed to perform at most <b>maxMoveCount</b> moves. With each move, you select a row of the matrix and circularly shift it to the right by 1 position (so, for example, row {0, 0, 1, 0, 0} becomes {0, 0, 0, 1, 0}). </p> <p> Given <b>matrix</b>, <b>columns</b> and <b>maxMoveCount</b>, return the lexicographically greatest good matrix you can achieve. If you can not achieve any good matrix, return an empty String[]. To compare two matrices lexicographically, concatenate all rows starting from the top for each of the matrices and compare the resulting strings. String A is lexicographically greater than string B if it contains the bigger character at the first position where they differ. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BinaryMatrix",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMaximalLexicographically",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getMaximalLexicographically(String[] matrix, int[] columns, int maxMoveCount)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,1,0,0,0}",
+			"id":0,
+			"input":"{\"01000\", \"10000\"}",
+			"note":"Shift the first row 4 times and the second row once.",
+			"order":1
+		},
+		{
+			"expect":"{1,1,0,0,0}",
+			"id":0,
+			"input":"{\"01000\", \"10000\"}",
+			"note":"Don't change anything.",
+			"order":2
+		},
+		{
+			"expect":"{1,1,1,1,1}",
+			"id":0,
+			"input":"{\"00100\", \"10000\", \"00010\", \"00001\", \"01000\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{0,1,2,2,0}",
+			"id":0,
+			"input":"{\"00011\",\"00010\",\"11000\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{5,0,0,0,0}",
+			"id":0,
+			"input":"{\"00000\",\"11111\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{0,1,0,1,0}",
+			"id":0,
+			"input":"{\"00011\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"matrix will contain between 1 and 40 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of matrix will contain exactly five digits."
+		},
+		{
+			"order":3,
+			"val":"Each element of matrix will contain only digits '0' or '1'."
+		},
+		{
+			"order":4,
+			"val":"columns will contain exactly five elements."
+		},
+		{
+			"order":5,
+			"val":"Each element of columns will be between 0 and 40, inclusive."
+		},
+		{
+			"order":6,
+			"val":"maxMoveCount will be between 0 and 160, inclusive."
+		}
+	]
+}

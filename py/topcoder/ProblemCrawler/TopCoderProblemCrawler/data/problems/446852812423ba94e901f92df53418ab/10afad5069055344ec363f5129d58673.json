@@ -1,0 +1,123 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6210&rd=9822",
+	"statement":"<p>A context free grammar is a set of words represented by a set of derivation rules, each written as<br /><br /> &lt;nonterminal&gt; ::= &lt;expression&gt; <br /><br /> where &lt;nonterminal&gt; is a symbol, and &lt;expression&gt; is a non-empty sequence of symbols (terminals and/or nonterminals) that represents a possible substitution for &lt;nonterminal&gt;. Symbols that never appear on the left side of a rule are called terminals.</p> <p>If you have several rules for the same nonterminal:<br /><br /> &lt;nonterminal&gt; ::= &lt;expr<sub>0</sub>&gt;<br /><br /> &lt;nonterminal&gt; ::= &lt;expr<sub>1</sub>&gt;<br /><br /> ...<br /><br /> &lt;nonterminal&gt; ::= &lt;expr<sub>n</sub>&gt;<br /><br /> it is also possible to write them in a single line, separated by pipes:<br /><br /> &lt;nonterminal&gt; ::= &lt;expr<sub>0</sub>&gt; | &lt;expr<sub>1</sub>&gt; | ... | &lt;expr<sub>n</sub>&gt;</p> <p>There is a special nonterminal called a seed. Sequences of terminals that can be derived from the seed are the words that belong to the set described by the grammar.</p> <p>In this problem we will use uppercase letters exclusively for nonterminals and lowercase letters for terminals.</p> <p>For example, this specification:<br /><br /> A ::= BD<br /><br /> B ::= bB | b | Bb<br /><br /> D ::= dD<br /><br /> D ::= d<br /><br /> <br /><br /> with A as the seed represents the set of words that have one or more b's followed by one or more d's (bd, bbd, bddd, bbbddd, etc.).</p> <p>A parsing tree in this context is a tree whose root node is the seed. The children of each nonterminal node are the symbols of the expression derived from that nonterminal using one of the derivation rules. These children are ordered from left to right. If read in that order, the leaves of a parsing tree form the parsed word. A terminal node is further to the left than another one if the path that leads to it from the first common ancestor begins with a branch that is further to the left in the rule used.</p> <br /><br /> The parsing tree for the string bdd in the above specification is:<br /><br /> <pre>\n   A\n  / \\\n B   D\n |  / \\\n b d   D\n       |\n       d\n</pre> Now, in this case this is the only possible parsing tree for that string, but the string bbd has two parsing trees:<br /><br /> <pre>\n     A\n    / \\\n   B   D\n  / \\  |\n b   B d\n     |  \n     b\n</pre> and <pre>\n     A\n    / \\\n   B   D\n  / \\  |\n B   b d\n |  \n b\n</pre> <p>To avoid having infinite parsing trees, no expression on the right side of a rule will be just one nonterminal.</p> <p>You are given the set of <b>rules</b> as a String[], where each element is formatted as described above, along with a <b>seed</b> and a <b>word</b>. Return the number of distinct parsing trees for the given word. If there are more than 1000000000 (10<sup>9</sup>) parsing trees, return -1.</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"Two parsing trees are considered different if they have different tree structures, or if they have the same structure, but at least one node used a different rule to derive its children than the corresponding node in the other tree."
+		},
+		{
+			"order":2,
+			"val":"According to the above note, if there are multiple equal rules (same nonterminal and same expression), there can be trees that are different even though have the same exact nodes and structure. See example 3 for further clarification."
+		},
+		{
+			"order":3,
+			"val":"All uppercase letters are considered nonterminals even if they do not appear on the left side of any rule."
+		},
+		{
+			"order":4,
+			"val":"When multiple expressions separated by pipes appear in a single line, each one still counts as a distinct rule (see example 5)."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ContextFreeGrammars",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countParsingTrees",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], char, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countParsingTrees(String[] rules, char seed, String word)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"'A'",
+			"id":0,
+			"input":"{\"A ::= BD\", \"B ::= bB | b | Bb\", \"D ::= dD\", \"D ::= d\"}",
+			"note":"The first example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"'A'",
+			"id":0,
+			"input":"{\"A ::= BD\", \"B ::= bB | b | Bb\", \"D ::= dD\", \"D ::= d\"}",
+			"note":"The second example from the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"'A'",
+			"id":0,
+			"input":"{\"A ::= BD\", \"B ::= bB | b | Bb\", \"D ::= dD\", \"D ::= d\"}",
+			"note":"This string does not belong to the represented set, so there is no parsing tree.",
+			"order":3
+		},
+		{
+			"expect":"'B'",
+			"id":0,
+			"input":"{\"B ::= topcoder | topcoder\", \"B ::= topcoder\"}",
+			"note":"Here, there are 3 trees that look the same (B as the root and 8 leaves with the \"topcoder\" letters), but you can make a tree with each one of the 3 different rules, so all those trees are considered different.",
+			"order":4
+		},
+		{
+			"expect":"'X'",
+			"id":0,
+			"input":"{\"A ::= BCD\", \"Z ::= z\", \"B ::= Cz | Dz | Zz\", \"C ::= Bz | Dz\", \"D ::= Cz | Bz\"}",
+			"note":"Every uppercase letter is a nonterminal, even though it has no associated rule.",
+			"order":5
+		},
+		{
+			"expect":"'B'",
+			"id":0,
+			"input":"{\"B ::= bB | bB | bB | bB | b\" }",
+			"note":"Here, the first 29 b's can be derived by processing a \"B ::= bB\" rule 29 times, each time picking one of the four rules that do that. The result is 4 = 288230376151711744, which is much greater than 10, so you must return -1.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"word will contain between 1 and 35 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of word will be a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":3,
+			"val":"seed will be an uppercase letter ('A'-'Z')."
+		},
+		{
+			"order":4,
+			"val":"rules will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of rules will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of rules will start with an uppercase letter, followed by &quot; ::= &quot;, followed by a list of one or more expressions separated by &quot; | &quot;, where each expression is a non-empty sequence of lowercase and uppercase letters ('a'-'z' and 'A'-'Z')."
+		},
+		{
+			"order":7,
+			"val":"No expression on the right side of a rule will be just one uppercase letter."
+		}
+	]
+}

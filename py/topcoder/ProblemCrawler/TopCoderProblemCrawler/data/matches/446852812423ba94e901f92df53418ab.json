@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":151.63,
+			"constraints":[],
+			"correctRatio":61.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6172&rd=9822",
+			"name":"IndicatorMotionReverse",
+			"notes":[],
+			"submission":313
+		},
+		{
+			"avgPts":368.34,
+			"constraints":[],
+			"correctRatio":76.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6222&rd=9822",
+			"name":"EscapingJail",
+			"notes":[],
+			"submission":299
+		},
+		{
+			"avgPts":509.11,
+			"constraints":[],
+			"correctRatio":19.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6210&rd=9822",
+			"name":"ContextFreeGrammars",
+			"notes":[],
+			"submission":36
+		}
+	],
+	"name":"Single Round Match 301 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9822"
+}

@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8462&rd=12180",
+	"statement":"<p> Your brother is playing a new game he received for his birthday. The game takes place on an acyclic, undirected <b>graph</b>, with pieces of candy located on some of the nodes. On each turn, your brother picks a node with at least 2 pieces of candy on it. He then picks up 2 pieces of candy from that node, eats one piece, and places the other piece on an adjacent node. If at any time there is a piece of candy on the <b>target</b> node, then the game is over and your brother wins. If he cannot put candy on that node through any sequence of moves, he loses. Your brother is smart, and so if there is a winning sequence of moves he will find it. </p><p> You enjoy frustrating your brother and want to make him lose the game. The <b>graph</b> will be given as a String[]. The j-th character of element i will be 'Y' if nodes i and j are connected in the graph; otherwise, it will be 'N'. Return the maximum number of pieces that can be placed on the board without your brother being able to win; if more than 2,000,000,000 pieces can be placed on the board without your brother winning, return -1 instead. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CandyGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maximumCandy",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maximumCandy(String[] graph, int target)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"NYN\", \"YNY\", \"NYN\"}",
+			"note":"The graph is a straight line:  With node 1 as the target, we can only put one piece of candy each on nodes 0 and 2. If you place a second piece on either, your brother can eat one and move the other to node 1.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"NYN\", \"YNY\", \"NYN\"}",
+			"note":"The same graph as example 0, but now node 2 is the target. The optimal strategy places 3 pieces of candy on node 0.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"NYYY\", \"YNNN\", \"YNNN\", \"YNNN\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"NYYY\", \"YNNN\", \"YNNN\", \"YNNN\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"NYNNNYN\", \"YNYNYNN\", \"NYNYNNN\", \"NNYNNNN\", \"NYNNNNN\", \"YNNNNNY\", \"NNNNNYN\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"NYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"YNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NYNYNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNYNYNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNYNYNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNYNYNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNYNYNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNYNYNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNYNYNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNYNYNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNYNYNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNYNYNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNYNYNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNYNYNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNYNYNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNYNYNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNYNYNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNYNYNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNYNYNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNYNYNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNYNYNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNYNYNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNYNYNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNYNYNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNYNYNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNYNYNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNYNYNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNNYNYNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNNNYNYNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNNNNYNYN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNNNNNYNY\", \"NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNYN\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"graph will contain N elements, where N is between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of graph will contain exactly N characters."
+		},
+		{
+			"order":3,
+			"val":"Each character in graph will be either 'Y' or 'N'."
+		},
+		{
+			"order":4,
+			"val":"In graph, the j-th character of element i will equal the i-th character of element j."
+		},
+		{
+			"order":5,
+			"val":"The i-th character of the i-th element of graph will be 'N'."
+		},
+		{
+			"order":6,
+			"val":"The graph represented by graph will have no cycles."
+		},
+		{
+			"order":7,
+			"val":"target will be between 0 and N-1, inclusive."
+		}
+	]
+}

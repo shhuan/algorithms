@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10413&rd=13764",
+	"statement":"<p> Given two sequences X=(X[0], ..., X[N-1]) and Y=(Y[0], ..., Y[M-1]), their pairwise sum is the sequence: </p> <p> X@Y = (X[0]+Y[0], X[0]+Y[1], ..., X[0]+Y[M-1], X[1]+Y[0], X[1]+Y[1], ..., X[N-1]+Y[M-1]). </p> <p> For example, if X=(0,10) and Y=(0,2,1) then X@Y=(0,2,1,10,12,11). </p> <p> Formally, X@Y is a sequence of length NM, where for each i in {0,...,N-1} and for each j in {0,...,M-1} we have (X@Y)[i*M+j] = X[i]+Y[j]. Note that X@Y is not necessarily the same sequence as Y@X. </p> <p> You are given int[]s <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, and a String[] <b>Z</b>. Concatenate the elements of <b>Z</b> to get a space-separated sequence of non-negative integers NEEDLE. Sequence HAYSTACK is defined as follows: </p> <p> HAYSTACK = ((((<b>A</b> @ <b>B</b>) @ <b>C</b>) @ <b>D</b>) @ <b>E</b>) @ <b>F</b> </p> <p> Write a method that will find and return the smallest non-negative integer X such that if we delete the first X elements of the sequence HAYSTACK, then the sequence HAYSTACK will start with the sequence NEEDLE. If there is no such X, return -1 instead. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SequenceSum",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findSubstring",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[], int[], int[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long findSubstring(int[] A, int[] B, int[] C, int[] D, int[] E, int[] F, String[] Z)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,2,1}",
+			"id":0,
+			"input":"{0,10}",
+			"note":"If Y=(0), then for any X we have X@Y=X. Hence the sequence HAYSTACK in this test case is the sequence (0,2,1,10,12,11) from the problem statement. After we delete the first 2 elements, we get the sequence (1,10,12,11) which starts with (1,10,12).",
+			"order":1
+		},
+		{
+			"expect":"{0,2,1}",
+			"id":0,
+			"input":"{0,10}",
+			"note":"Remember to concatenate the elements of  before parsing the sequence NEEDLE.",
+			"order":2
+		},
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"{1}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{1,2}",
+			"id":0,
+			"input":"{1,2}",
+			"note":"In this test case the sequence HAYSTACK starts with 6,7,7,8,7,8,8,9,..., hence we need to delete the first 7 elements.",
+			"order":4
+		},
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{1,2,3,4,5,6}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Each of A, B, C, D, E, and F will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in each of A, B, C, D, E, and F will be between 0 and 100,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Z will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of Z will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"The concatenation of the elements of Z will be a non-empty sequence of non-negative integers separated by single spaces. There will be no leading or trailing spaces, no integer will have unnecessary leading zeros, and each integer will be between 0 and 600,000,000, inclusive."
+		}
+	]
+}

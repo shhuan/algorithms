@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6477&rd=9988",
+	"statement":"<p>When text is encoded using Huffman codes, each symbol is replaced by a string of 0s and 1s called a bit string representation. The replacement is done in such a way that the bit string representation of a symbol is never the prefix of the bit string representation of any other symbol. This property allows us to unambiguously decode the encoded text.</p> <p>You will be given a String <b>archive</b> and a String[] <b>dictionary</b>. The i-th element of <b>dictionary</b> will be the bit string representation of the i-th uppercase letter. Decode <b>archive</b> using <b>dictionary</b> and return the result as a single String.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HuffmanDecoding",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"decode",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String decode(String archive, String[] dictionary)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"00\",\"10\",\"01\",\"11\"}",
+			"id":0,
+			"input":"\"101101\"",
+			"note":"Because there are no elements in dictionary that are prefixes of other elements, only one element of dictionary will be a prefix of . In this case, it is the second element (\"10\") which represents 'B'. The rest of the text can be decoded using the same logic.",
+			"order":1
+		},
+		{
+			"expect":"{\"0\",\"111\",\"10\"}",
+			"id":0,
+			"input":"\"10111010\"",
+			"note":"Note that elements of  can be of different lengths.",
+			"order":2
+		},
+		{
+			"expect":"{\"1\",\"0\"}",
+			"id":0,
+			"input":"\"0001001100100111001\"",
+			"note":"'1' is replaced by 'A', '0' is replaced by 'B'.",
+			"order":3
+		},
+		{
+			"expect":"{\"010\",\"00\",\"0110\",\"0111\",\"11\",\"100\",\"101\"}",
+			"id":0,
+			"input":"\"111011011000100110\"",
+			"order":4
+		},
+		{
+			"expect":"{\"110\",\"011\",\"10\",\"0011\",\"00011\",\"111\",\"00010\",\"0010\",\"010\",\"0000\"}",
+			"id":0,
+			"input":"\"001101100101100110111101011001011001010\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"archive will contain between 1 and 50 characters, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"archive will contain only the characters '0' (zero) and '1' (one)."
+		},
+		{
+			"order":3,
+			"val":"dictionary will contain between 1 and 26 elements, inclusive. "
+		},
+		{
+			"order":4,
+			"val":"Each element of dictionary will contain between 1 and 50 characters, inclusive. "
+		},
+		{
+			"order":5,
+			"val":"Each element of dictionary will contain only the characters '0' (zero) and '1' (one)."
+		},
+		{
+			"order":6,
+			"val":"No element of dictionary will be a prefix of any other element of dictionary."
+		},
+		{
+			"order":7,
+			"val":"archive will be decodable using dictionary"
+		}
+	]
+}

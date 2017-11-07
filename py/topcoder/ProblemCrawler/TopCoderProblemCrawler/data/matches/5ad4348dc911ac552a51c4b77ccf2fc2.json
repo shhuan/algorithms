@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.16,
+			"constraints":[],
+			"correctRatio":97.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12860&rd=15713",
+			"name":"WinterAndPresents",
+			"notes":[],
+			"submission":608
+		},
+		{
+			"avgPts":279.61,
+			"constraints":[],
+			"correctRatio":76.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12891&rd=15713",
+			"name":"WinterAndSnowmen",
+			"notes":[],
+			"submission":72
+		},
+		{
+			"avgPts":442.67,
+			"constraints":[],
+			"correctRatio":58.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12865&rd=15713",
+			"name":"WinterAndShopping",
+			"notes":[],
+			"submission":17
+		}
+	],
+	"name":"Single Round Match 601 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15713"
+}

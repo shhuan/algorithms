@@ -1,0 +1,68 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5881&rd=8071",
+	"statement":"<p>A palindrome is a string that is spelled the same forward and backward. We want to rearrange letters of the given string <b>baseString</b> so that it becomes a palindrome.</p> <p>You will be given a String <b>baseString</b>. Return the palindrome that can be made from <b>baseString</b>. When more than one palindrome can be made, return the lexicographically earliest (i.e., the one that occurs first in alphabetical order). Return &quot;&quot; (the empty string) if no palindromes can be made from <b>baseString</b>.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PalindromeMaker",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"make",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String make(String baseString)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"ABBA\"",
+			"id":0,
+			"input":"\"AABB\"",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"ABABA\"",
+			"id":0,
+			"input":"\"AAABB\"",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"AABCBAA\"",
+			"id":0,
+			"input":"\"ABACABA\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"\"ABCD\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"baseString will contain between 1 and 50 characters, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each character in baseString will be an uppercase letter ('A'-'Z')."
+		}
+	]
+}

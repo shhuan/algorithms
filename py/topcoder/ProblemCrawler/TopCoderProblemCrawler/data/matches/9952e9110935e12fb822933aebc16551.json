@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":166.8,
+			"constraints":[],
+			"correctRatio":94.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13747&rd=16416",
+			"name":"RandomPancakeStack",
+			"notes":[],
+			"submission":320
+		},
+		{
+			"avgPts":273.85,
+			"constraints":[],
+			"correctRatio":62.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13550&rd=16416",
+			"name":"PermutationCounts",
+			"notes":[],
+			"submission":24
+		},
+		{
+			"avgPts":397.55,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13754&rd=16416",
+			"name":"ForkliftTruckOperator",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"Single Round Match 656 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16416"
+}

@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=57&rd=3001",
+	"statement":"<pre>Willy the Worm is crawling through a 5x5 grid.  The squares in the grid are\nnumbered 0 through 24, from left to right, top to bottom:\n\n0   1   2   3   4\n5   6   7   8   9\n10 11 12 13 14\n15 16 17 18 19\n20 21 22 23 24\n\nSome of the squares contain obstacles.\n\nWhat is the maximum number of squares Willy can visit before he gets stuck?\n\nWilly travels through the grid as follows:\n\n-He always starts on square 0, going either down or right.\n-He can move in four directions: up, down, left, right.\n-He cannot travel through:\n  (a) an obstacle\n  (b) a square he has previously visited\n-He moves in a straight line until he reaches a square he can not travel\nthrough or the edge.\n-When he cannot move straight, he turns either left or right.\n-When he cannot move left, right, or straight, he stops.\n\nImplement a class Obstacle, which contains a method getLongestPath.\ngetLongestPath is passed an int[] of elements that are the squares which have\nobstacles in them, and returns an int that is the maximum number of squares\nWilly can visit before he stops.\n\nExamples:\n-If the obstacles int[] is {4,12,15,23}, the longest path Willy can travel is:\n 0-&gt;5-&gt;10-&gt;11-&gt;16-&gt;21-&gt;22-&gt;17-&gt;18-&gt;19-&gt;14-&gt;9-&gt;8-&gt;7-&gt;6-&gt;1-&gt;2-&gt;3\n In this path, Willy travels through 18 squares, so the method should return 18.\n-If obstacles is {4,10,11,12,14}, the method should return 14\n\nThe method signature is:\npublic int getLongestPath(int[] obstacles);\n\nobstacles is an int[] of elements between 1 and 24, inclusive (0 can not\ncontain an obstacle).\n\nNote:\n-Your algorithm must run in under 6 seconds.\n-If Willy cannot move anywhere to start (obstacles on squares 1 and 5), he has\nstill visited square 0 and the method should return 1.\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Obstacle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getLongestPath",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getLongestPath(int[] param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

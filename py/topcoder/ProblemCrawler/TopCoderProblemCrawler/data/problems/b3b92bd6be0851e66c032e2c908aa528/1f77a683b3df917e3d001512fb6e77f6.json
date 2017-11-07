@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8442&rd=10800",
+	"statement":"You have a <b>length</b> x <b>width</b> x <b>height</b> box, and you want to fill it with cubes. The cubes have sides that are powers of 2 (1x1x1, 2x2x2, 4x4x4, 8x8x8, etc.). You are given a int[] <b>cubes</b>, the i-th element of which is the number of 2^i x 2^i x 2^i cubes you have (i is a 0-based index). Return the minimum number of cubes necessary to fill the box, or -1 if it is impossible to do so.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FillBox",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCubes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCubes(int length, int width, int height, int[] cubes)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"In order to cover the 4x4x8 box we need two 4x4x4 cubes.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"Same case as before but we have only one 4x4x4 cube so we will use eight 2x2x2 cubes",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"We have only 1x1x1 cubes. We will need 1100 of those cubes to cover the whole box.",
+			"order":3
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"We don't have enough 1x1x1 cubes.",
+			"order":4
+		},
+		{
+			"expect":"42",
+			"id":0,
+			"input":"37",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"length, width and height will each be between 1 and 10^6, inclusive."
+		},
+		{
+			"order":2,
+			"val":"cubes will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of cubes will be between 0 and 10^6, inclusive."
+		}
+	]
+}

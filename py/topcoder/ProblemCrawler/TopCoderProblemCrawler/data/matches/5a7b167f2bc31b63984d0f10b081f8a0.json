@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":162.2,
+			"constraints":[],
+			"correctRatio":53.61,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6577&rd=9990",
+			"name":"PyramidOfCubes",
+			"notes":[],
+			"submission":263
+		},
+		{
+			"avgPts":292.17,
+			"constraints":[],
+			"correctRatio":53.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6551&rd=9990",
+			"name":"FloatingMedian",
+			"notes":[],
+			"submission":86
+		},
+		{
+			"avgPts":637.86,
+			"constraints":[],
+			"correctRatio":53.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6576&rd=9990",
+			"name":"BoxTower",
+			"notes":[],
+			"submission":84
+		}
+	],
+	"name":"Single Round Match 310 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9990"
+}

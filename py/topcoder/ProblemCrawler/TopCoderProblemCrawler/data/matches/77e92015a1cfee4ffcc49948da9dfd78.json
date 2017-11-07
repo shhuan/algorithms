@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":164.25,
+			"constraints":[],
+			"correctRatio":73.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10982&rd=14283",
+			"name":"LinearKingdomParkingLot",
+			"notes":[],
+			"submission":41
+		},
+		{
+			"avgPts":261.37,
+			"constraints":[],
+			"correctRatio":37.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10678&rd=14283",
+			"name":"LongJourney",
+			"notes":[],
+			"submission":29
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10477&rd=14283",
+			"name":"OverlappingConcatenation",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2010 TCO Algorithm > Online Round 5",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14283"
+}

@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5878&rd=8070",
+	"statement":"You work in the field of Robotics and you are doing some black-box testing. Two robots, Robbie and Speedy, are randomly placed in a rectangular room, which is divided into <b>xSize</b> * <b>ySize</b> cells. Each robot receives a few movement commands that are executed one by one, at the same time, by both the robots. <br /><br /> <br /><br /> A move is represented by an uppercase letter, which is one of the following: <br /><br /> - 'U': the robot moves from the coordinates (x, y) to the coordinates (x - 1, y). This command is ignored when x = 0. <br /><br /> - 'D': the robot moves from the coordinates (x, y) to the coordinates (x + 1, y). This command is ignored when x = <b>xSize</b> - 1.<br /><br /> - 'L': the robot moves from the coordinates (x, y) to the coordinates (x, y - 1). This command is ignored when y = 0. <br /><br /> - 'R': the robot moves from the coordinates (x, y) to the coordinates (x, y + 1). This command is ignored when y = <b>ySize</b> - 1. <br /><br /><br /><br /> Two robots may collide if they start one of their turns from the same cell, end one of their turns in the same cell, or exchange positions at one of their turns. You will be given an int <b>xSize</b> and an int <b>ySize</b> denoting the dimensions of the rectangular room, a String <b>commandsRobbie</b> denoting the movement commands given to Robbie and a String <b> commandsSpeedy</b> denoting the movement commands given to Speedy. Your task is to return the probability that the two robots will collide, taking into acount every possible start position for both of the robots. The probability for each robot to start in any specific cell is the same for all cells. ",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RobotCollision",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"probability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double probability(int xSize, int ySize, String commandsRobbie, String commandsSpeedy)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":"In this example, Robbie goes one step left and Speedy goes one step right. Out of the 100 possible starting positions (10 for each robot), 27 of them will lead to collision. A collision happens in one of the following three ways:  - Robbie and Speedy start at the same cell. In this case we have an instant collision. There are 10 such starting positions.  - Robbie starts at Speedy's immediate right. In this case we have a frontal collision as the two robots approach each other. There are 9 such starting positions.  - Robbie starts two steps to the right from Speedy. In this case the robots end up in the same cell after they make their moves, so again, we have a collision. There are 8 such starting positions. ",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"order":3
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"order":4
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"20",
+			"order":5
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"100",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":" xSize  will be between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":" ySize  will be between 1 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"commandsRobbie and commandsSpeedy will each contain between 0 and 10 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each character in commandsRobbie and commandsSpeedy is either 'U', 'D', 'L' or 'R'."
+		},
+		{
+			"order":5,
+			"val":"commandsRobbie and commandsSpeedy have the same length."
+		}
+	]
+}

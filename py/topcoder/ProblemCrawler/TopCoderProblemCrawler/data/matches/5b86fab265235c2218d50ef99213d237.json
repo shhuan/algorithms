@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":193.28,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=40&rd=2001",
+			"name":"StringDup",
+			"notes":[],
+			"submission":78
+		},
+		{
+			"avgPts":356.06,
+			"constraints":[],
+			"correctRatio":46.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=41&rd=2001",
+			"name":"Syntax",
+			"notes":[],
+			"submission":80
+		},
+		{
+			"avgPts":783.38,
+			"constraints":[],
+			"correctRatio":63.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=42&rd=2001",
+			"name":"Football",
+			"notes":[],
+			"submission":52
+		}
+	],
+	"name":"Collegiate Challenge > Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=2001"
+}

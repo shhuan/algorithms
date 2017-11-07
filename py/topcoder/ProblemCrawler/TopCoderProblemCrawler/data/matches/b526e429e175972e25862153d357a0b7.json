@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":186.56,
+			"constraints":[],
+			"correctRatio":75.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7748&rd=13676",
+			"name":"BrokenStrings",
+			"notes":[],
+			"submission":177
+		},
+		{
+			"avgPts":262.03,
+			"constraints":[],
+			"correctRatio":70,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7746&rd=13676",
+			"name":"TransposeMyMusic",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":790.27,
+			"constraints":[],
+			"correctRatio":83.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7783&rd=13676",
+			"name":"FreeGuitars",
+			"notes":[],
+			"submission":66
+		}
+	],
+	"name":"2008 TopCoder China Tournament > Round 1D",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13676"
+}

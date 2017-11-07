@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4582&rd=7218",
+	"statement":"A white queen and two black kings are placed on a 100 x 100 chessboard. White and black sides move by turns. The white queen moves first (only one of the two black kings is moved on each turn). Given three Strings, <b>queen</b>, <b>king1</b> and <b>king2</b>, return the minimal number of white moves needed to capture one of the kings (kings are not allowed to capture the queen, and may not move to the queen's location). <b>queen</b>, <b>king1</b> and <b>king2</b> will each contain the 0-based row and column of the corresponding piece. ",
+	"notes":[
+		{
+			"order":1,
+			"val":"The black side tries to avoid capturing as long as possible."
+		},
+		{
+			"order":2,
+			"val":"Kings move one cell in any direction, horizontally, vertically, or diagonally."
+		},
+		{
+			"order":3,
+			"val":"The queen moves any number of cells in any direction, horizontally, vertically, or diagonally."
+		},
+		{
+			"order":4,
+			"val":"The queen captures a king if it moves to the cell that the king occupies."
+		},
+		{
+			"order":5,
+			"val":"Neither side can skip a turn."
+		},
+		{
+			"order":6,
+			"val":"Pieces may not move off the board."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TwoKings",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"captureKing",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int captureKing(String queen, String king1, String king2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"99 0\"",
+			"id":0,
+			"input":"\"0 0\"",
+			"note":"You can capture any king on the first turn.",
+			"order":1
+		},
+		{
+			"expect":"\"0 97\"",
+			"id":0,
+			"input":"\"98 98\"",
+			"note":"You can move to the \"0 0\" cell and threaten both kings. You will capture one of them on the next turn.",
+			"order":2
+		},
+		{
+			"expect":"\"53 36\"",
+			"id":0,
+			"input":"\"16 35\"",
+			"order":3
+		},
+		{
+			"expect":"\"95 64\"",
+			"id":0,
+			"input":"\"22 53\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"queen, king1 and king2 will each contain two space-delimited integers between 0 and 99, inclusive."
+		},
+		{
+			"order":2,
+			"val":"The numbers in queen, king1 and king2 will not contain leading zeroes."
+		},
+		{
+			"order":3,
+			"val":"No two pieces will occupy the same cell."
+		}
+	]
+}

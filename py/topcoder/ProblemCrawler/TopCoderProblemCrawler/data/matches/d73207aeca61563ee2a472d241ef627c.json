@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":213.92,
+			"constraints":[],
+			"correctRatio":89.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1846&rd=4615",
+			"name":"PaperFold",
+			"notes":[],
+			"submission":136
+		},
+		{
+			"avgPts":296.67,
+			"constraints":[],
+			"correctRatio":84.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1586&rd=4615",
+			"name":"JarBox",
+			"notes":[],
+			"submission":82
+		},
+		{
+			"avgPts":629.3,
+			"constraints":[],
+			"correctRatio":81.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1752&rd=4615",
+			"name":"PermutationCounter",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"Single Round Match 162 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4615"
+}

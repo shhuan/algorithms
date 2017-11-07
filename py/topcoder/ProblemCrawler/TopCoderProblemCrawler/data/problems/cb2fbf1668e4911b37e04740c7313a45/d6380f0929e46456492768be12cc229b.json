@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6044&rd=9923",
+	"statement":"Each character in <b>maze</b> will be '.' or 'X' denoting a free square or an obstacle, respectively. Starting on some free square, and moving exclusively through free squares, your goal is to leave the confines of the <b>maze</b> through its left edge. Each move you make is either 'U', 'D', 'L', or 'R' denoting up, down, left, and right respectively. Moving upward decreases which element of <b>maze</b> you are in, while moving leftward decreases which character you are at in a particular element. Nothing happens (your position does not change) if you move into an obstacle, or try to leave the maze other than leftward. Similarly, nothing happens if you issue a move and you have already left the maze (you already won). <br /><br /><br /><br /> Your friend has decided to challenge you by trying to solve the <b>maze</b> with the monitor off. This means you do not know which position you have started in or if you have won. Return the shortest sequence of moves that will solve the <b>maze</b> regardless of your initial position. If there are multiple shortest solutions, return the one that occurs first lexicographically. If there is no solution, return an empty string.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BlindMazeSolve",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getSolution",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getSolution(String[] maze)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"L\"",
+			"id":0,
+			"input":"{\".X\"}",
+			"note":"Left will win immediately, so we return \"L\".",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"LL\"",
+			"id":0,
+			"input":"{ \"..\", \"..\" }",
+			"note":"Regardless of your initial position, moving left twice will result in winning.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"{ \"X..\", \"X..\", \"XXX\" }",
+			"note":"No way to win here.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"RRDDLLDDLL\"",
+			"id":0,
+			"input":"{ \"X...\", \"XXX.\", \"X...\", \"X.XX\", \"..XX\" }",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"{\".XX.\"}",
+			"note":"If you happen to be in the rightmost position, you cannot win.",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"DDDRULULULL\"",
+			"id":0,
+			"input":"{ \"XXX.\", \"..X.\", \"X...\", \"XX..\", \"X...\" }",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maze contains between 1 and 5 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of maze will contain between 1 and 4 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of maze will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in maze will be '.' or 'X'."
+		},
+		{
+			"order":5,
+			"val":"maze will contain at least one '.'."
+		}
+	]
+}

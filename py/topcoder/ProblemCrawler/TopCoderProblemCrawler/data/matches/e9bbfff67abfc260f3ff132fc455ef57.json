@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":184.99,
+			"constraints":[],
+			"correctRatio":62.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8183&rd=10802",
+			"name":"LameKnight",
+			"notes":[],
+			"submission":439
+		},
+		{
+			"avgPts":311.68,
+			"constraints":[],
+			"correctRatio":17.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8228&rd=10802",
+			"name":"CompilingDecksWithJokers",
+			"notes":[],
+			"submission":386
+		},
+		{
+			"avgPts":477.4,
+			"constraints":[],
+			"correctRatio":24.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7817&rd=10802",
+			"name":"NestedDiamonds",
+			"notes":[],
+			"submission":99
+		}
+	],
+	"name":"Single Round Match 380 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10802"
+}

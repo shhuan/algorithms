@@ -1,0 +1,64 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1283&rd=5071",
+	"statement":"An electronic component A has a size (sizeA), a number of inputs (inpA), and a number of outputs (outpA). We can join component A to component B if inpB = outpA. The result is a new component C, where sizeC = sizeA + sizeB, inpC = inpA, and outpC = outpB. The cost of joining A to B includes testing the resulting component, so it depends on the sizes of A and B and on the number of inputs and outputs. We estimate that the cost to join A to B is \n <ul>\n  <li>cost = (inpA + sizeA) * connections * (outpB + sizeB)</li>\n </ul> where connections equals outpA which equals inpB. <p> We have a sequence of n components, each of size 1, that we must assemble into bigger and bigger components until we have assembled them into a single component. This will require us to perform n-1 joins. The order of the components may not be changed, but the order in which we perform the joins should be chosen to minimize the sum of the costs. Create a class Assemble that contains a method minCost that takes <b>connect</b>, the sequence of the number of connections between adjacent components, as input and returns the minimum cost of assembling them into one component. </p><p> The first element in <b>connect</b> is the number of inputs to the first component, and the last element in <b>connect</b> is the number of outputs of the last component. Otherwise, the i-th element is both the number of outputs of component i-1 and the number of inputs of component i. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Assemble",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCost(int[] connect)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 19400",
+			"id":0,
+			"input":"{19,50,10,39}",
+			"note":" The input represents 3 components, A B and C. A has 19 inputs and 50 outputs. There are only two ways to assemble 3 components:",
+			"order":1
+		},
+		{
+			"expect":"Returns: 407518",
+			"id":0,
+			"input":"{13,18,24,11,25,100,93,92,79}",
+			"order":2
+		},
+		{
+			"expect":"Returns: 59",
+			"id":0,
+			"input":"{1,1,1,1,1,1,1,1,1}",
+			"note":"The nine elements of input represent 8 idendical components. The cheapest way to assemble them is first to join 4 adjacent pairs at a cost of 4 each, then to join two adjacent pairs of 2-component assemblies at a cost of 9 each, and finally to join the remaining pair of 4-component assemblies at a cost of 25. Total cost = 4*4 + 2*9 + 25 = 59.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"The number of elements in connect will be between 3 and 50 inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in connect will be between 1 and 100 inclusive."
+		}
+	]
+}

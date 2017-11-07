@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=180&rd=52",
+	"statement":"<pre>PROBLEM STATEMENT \n\nA parachuter wants to jump out of a plane and land in a target area outlined on\nthe ground.  However, it is a real cloudy day and the parachuter cannot see the\noutlined target area on the ground.  He needs a program to help him figure out\nif his plane is over the target area.  Conveniently enough, the target area is\na polygon, and its borders can be defined by a String[] of coordinates, with\neach coordinate representing a vertex on the polygon.\n\nImplement a class Parachuter that contains a method overArea.  overArea takes\nas its parameters, a String[] representing the coordinate points of the\nvertexes of the target area, and two ints representing the x and y coordinates\nof the parachuter's plane. \n\nThe method returns an int that equals a 0 (zero), 1 (one), or 2 (two) where \n0 - if there is an input error.  An error occurs if the input String[] defines\na polygon that is self intersecting.  A polygon is self intersecting if some\nedge in the polygon crosses some other edge, or if two vertices are the same\npoint (any two elements in the String[] are the same), or if some vertex lies\nalong some edge.\n1 - if the parachuter is currently over the target area (or exactly on the\narea's border)\n2 - if the parachuter is not over the target area.\n\nDEFINITION\nClass Name: Parachuter\nMethod Name: overArea\nParameters: String[], int, int\nReturns: int\nMethod signature (be sure your method is public): int overArea (String[]\npoints, int planeX, int planeY)\n\n-  points is a String[] of coordinate points representing the vertices of the\ntarget area's border. \n-  planeX is the x coordinate of the plane.\n-  planeY is the y coordinate of the plane.\n\nTopCoder will ensure the validity of the inputs.  Inputs are valid if all of\nthe following criteria are met:\n-  points elements are of the form &quot;(x,y)&quot; where x and y are ints between 0 and\n100, inclusive.\n-  points contains between 3 and 10, inclusive, elements.\n-  planeX and planeY are ints between 0 and 100, inclusive.\n\nNOTES\n-  Assume Earth is a two-dimensional plane with Cartesian coordinates.\n-  The x and y coordinates represent the position of the plane.  It should be\nassumed the if the parachuter jumps out of the plane at (x,y) he will land on\nthe ground at exactly that point.\n-  The target area's border is the line loop that is the first point in the\npoints String[] connected to the second, second to third, et cetera.  The last\npoint of the String[] is connected to the first point.  Each connection between\nthe vertices is an edge and each point is a vertex.  The target area is the\nborder and the space enclosed by the border.  \n\nEXAMPLES\n\nIf\npoints=[(0,0)\n         (0,2)\n         (2,2)\n         (2,0)]\nplaneX=1\nplaneY=1,\nThe method should return 1, because the plane is right in the middle of the\ntarget area.\n\nIf\npoints=[(0,0)\n         (0,2)\n         (2,2)\n         (2,0)]\nplaneX=2\nplaneY=2,\nThe method should return 1, because the plane is over the target area's border.\n\nIf\npoints=[(0,0)\n         (0,2)\n         (2,2)\n         (2,0)]\nplaneX=2\nplaneY=3,\nThe method should return 2, because the plane is outside the target area's\nborder.\n\nIf\npoints=[(10,10)\n         (10,20)\n         (20,10)\n         (10,15)\n         (20,10)]\nplaneX=1\nplaneY=1,\nThe method should return 0, because the polygon is self intersecting.\n\nIf\npoints=[(5,5)\n         (10,10)\n         (7,7)]\nplaneX=2\nplaneY=2,\nThe method should return 0, because the polygon is self intersecting.\n\n\nIf\npoints=[(0,0)\n         (4,4)\n         (0,4)\n         (4,0)]\nplaneX=2\nplaneY=2,\nThe method should return 0, because the polygon is self intersecting.\n\nIf\npoints=[(0,0)\n         (0,1)\n         (1,1)\n         (1,0)\n         (0,0)]\nplaneX=90\nplaneY=90,\nThe method should return 0, because the first and last vertex are intersecting.\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Parachuter",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"overArea",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int overArea(String[] param0, int param1, int param2)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

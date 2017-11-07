@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7246&rd=10658",
+	"statement":"<p> There is a direct bidirectional road between every pair of distinct towns in the country. Terrorists want to blow up enough of these roads that there are at least two towns that are no longer connected to each other by any direct or indirect paths. </p> <p> You will be given a String[] <b>roads</b>. The j-th character of the i-th element of <b>roads</b> is a digit representing the cost of blowing up the road from the i-th town to the j-th town. Return the minimal total cost required for the terrorists to achieve their goal. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Terrorists",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"requiredCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int requiredCost(String[] roads)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"0911\", \"9011\", \"1109\", \"1190\"}",
+			"note":"The best decision is to isolate towns 0 and 1 from towns 2 and 3. So, the terrorists should blow up roads (0,2), (0,3), (1,2) and (1,3). ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"0399\", \"3033\", \"9309\", \"9390\"}",
+			"note":"The cheapest plan is to isolate town 1. So, the roads to blow up are (1,0), (1,2) and (1,3).",
+			"order":2
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{\"030900\", \"304120\", \"040174\", \"911021\", \"027207\", \"004170\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 27",
+			"id":0,
+			"input":"{\"044967263\", \"409134231\", \"490642938\", \"916036261\", \"634306024\", \"742660550\", \"229205069\", \"633625604\", \"318140940\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"roads will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of roads will contain the same number of characters as the number of elements in roads."
+		},
+		{
+			"order":3,
+			"val":"Each element of roads will consist of digits ('0' - '9') only."
+		},
+		{
+			"order":4,
+			"val":"The i-th character of the j-th element of roads will be equal to the j-th character of the i-th element for all pairs of i and j."
+		},
+		{
+			"order":5,
+			"val":"The i-th character of the i-th element of roads will be '0' for all i."
+		}
+	]
+}

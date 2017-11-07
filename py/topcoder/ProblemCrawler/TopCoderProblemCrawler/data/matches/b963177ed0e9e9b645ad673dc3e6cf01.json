@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":232.43,
+			"constraints":[],
+			"correctRatio":80.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=792&rd=4160",
+			"name":"Pattern",
+			"notes":[],
+			"submission":197
+		},
+		{
+			"avgPts":347.94,
+			"constraints":[],
+			"correctRatio":81.28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=810&rd=4160",
+			"name":"Farmers",
+			"notes":[],
+			"submission":187
+		},
+		{
+			"avgPts":594.27,
+			"constraints":[],
+			"correctRatio":28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=788&rd=4160",
+			"name":"SlideGame",
+			"notes":[],
+			"submission":25
+		}
+	],
+	"name":"Single Round Match 88 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4160"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":170.56,
+			"constraints":[],
+			"correctRatio":69.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6415&rd=9986",
+			"name":"BifidSortMachine",
+			"notes":[],
+			"submission":203
+		},
+		{
+			"avgPts":350.6,
+			"constraints":[],
+			"correctRatio":56.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6407&rd=9986",
+			"name":"LightSwitches",
+			"notes":[],
+			"submission":150
+		},
+		{
+			"avgPts":582.37,
+			"constraints":[],
+			"correctRatio":43.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6386&rd=9986",
+			"name":"TourCounting",
+			"notes":[],
+			"submission":30
+		}
+	],
+	"name":"Single Round Match 306 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9986"
+}

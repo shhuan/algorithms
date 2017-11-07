@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":246.8,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8049&rd=10957",
+			"name":"SongsList",
+			"notes":[],
+			"submission":16
+		},
+		{
+			"avgPts":305.62,
+			"constraints":[],
+			"correctRatio":80,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8169&rd=10957",
+			"name":"FlashFlood",
+			"notes":[],
+			"submission":5
+		},
+		{
+			"avgPts":463.17,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8306&rd=10957",
+			"name":"ReliefMeasuring",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Semifinal Room 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10957"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.42,
+			"constraints":[],
+			"correctRatio":53.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13594&rd=16086",
+			"name":"TheKingsFactorization",
+			"notes":[],
+			"submission":531
+		},
+		{
+			"avgPts":261.3,
+			"constraints":[],
+			"correctRatio":19.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13526&rd=16086",
+			"name":"TheKingsArmyDiv1",
+			"notes":[],
+			"submission":333
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13501&rd=16086",
+			"name":"CasinoGame",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"Single Round Match 643 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16086"
+}

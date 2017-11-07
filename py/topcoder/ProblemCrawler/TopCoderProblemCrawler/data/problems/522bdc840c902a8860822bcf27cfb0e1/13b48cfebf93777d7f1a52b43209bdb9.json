@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11318&rd=14425",
+	"statement":"There is an infinite axis with N balls on it. The balls are moving with equal positive velocity, some of them in the positive direction of the axis and some in the opposite. The balls are small enough to be treated as points on the axis. If two balls meet at a point, they do not collide, and instead, they each continue moving in the same direction and at the same speed as before. <br /><br /><br /><br /> Manao is shown a picture of the axis taken at some moment of time. All the balls are at different points in the picture. The balls are numbered from 0 to N-1 and the i-th ball is at point <b>firstPicture</b>[i]. <br /><br /><br /><br /> Some time after the first picture is taken, several balls are added to the axis and another picture is taken. Yet again, no two balls share a point in this picture. The balls seem indistinguishable and their coordinates are given in int[] <b>secondPicture</b> in ascending order. <br /><br /><br /><br /> For each ball in the second picture, Manao has to guess whether it is present on the first one as well, and if so, say its number. Sometimes, this can't be determined unambiguously, so any valid guess is welcome. A guess is valid if the balls could move in the way described above and appear in the named locations in the second picture. Two guesses are different if there is a ball in the second picture which Manao identifies differently in these guesses. Return the number of valid guesses for the given pictures. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OneDimensionalBalls",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countValidGuesses",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countValidGuesses(int[] firstPicture, int[] secondPicture)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{10,11,13}",
+			"id":0,
+			"input":"{12,11}",
+			"note":"There are 2 balls in the first picture at points 12 and 11, respectively. One more ball is added in the second picture. The following three guesses are valid: 1) The ball at point 10 is ball 0, the ball at point 11 is the new one, the ball at point 13 is ball 1. 2) The ball at point 10 is ball 1, the ball at point 11 is ball 0, the ball at point 13 is the new one. 3) The ball at point 10 is ball 1, the ball at point 11 is the new one, the ball at point 13 is ball 0.",
+			"order":1
+		},
+		{
+			"expect":"{1,2,3}",
+			"id":0,
+			"input":"{1,2,3}",
+			"note":"Each picture contains the same number of balls, so they must contain the same set of balls. However, given that some time has passed between the shots, and the balls move with equal positive velocity, there is no way for them to have interchanged positions. ",
+			"order":2
+		},
+		{
+			"expect":"{1,3}",
+			"id":0,
+			"input":"{1,3}",
+			"note":"If the balls move in opposite directions, they will interchange their positions at some moment.",
+			"order":3
+		},
+		{
+			"expect":"{6316,689156,689160,689161,800000,1000001}",
+			"id":0,
+			"input":"{7234}",
+			"note":"Ball 0 could be any of the balls in the second picture.",
+			"order":4
+		},
+		{
+			"expect":"{1,2,3,4,5,7,8}",
+			"id":0,
+			"input":"{6,2,4}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"firstPicture will contain N elements, where N is between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of firstPicture will be between 0 and 100,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Elements in firstPicture will be distinct."
+		},
+		{
+			"order":4,
+			"val":"secondPicture will contain between N and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of secondPicture will be between 0 and 100,000,000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Elements in secondPicture will be in strictly ascending order."
+		}
+	]
+}

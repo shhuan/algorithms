@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":171.66,
+			"constraints":[],
+			"correctRatio":67.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4563&rd=8023",
+			"name":"CompanyName",
+			"notes":[],
+			"submission":317
+		},
+		{
+			"avgPts":526.74,
+			"constraints":[],
+			"correctRatio":51.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4725&rd=8023",
+			"name":"Fuses",
+			"notes":[],
+			"submission":267
+		}
+	],
+	"name":"2005 TCO > Qualification Set 4/6",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8023"
+}

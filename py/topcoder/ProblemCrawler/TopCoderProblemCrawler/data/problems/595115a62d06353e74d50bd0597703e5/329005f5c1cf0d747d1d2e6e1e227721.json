@@ -1,0 +1,107 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11228&rd=14243",
+	"statement":"Most modern mobile phones include T9 technology for typing text messages faster, and your brand new mobile phone is not an exception.<br /><br /><br /><br /> Your mobile phone has the standard keyboard layout:<br /><br /> <pre>\n  Button     Letters\n    2         a,b,c\n    3         d,e,f\n    4         g,h,i\n    5         j,k,l\n    6         m,n,o\n    7        p,q,r,s\n    8         t,u,v\n    9        w,x,y,z\n</pre> T9 requires a dictionary of words. At each moment, T9 maintains three strings: D -- the current <i>combination</i> of digits, F -- the &quot;fixed&quot; part of the message and U -- the &quot;unfixed&quot; part of the message. The message displayed on the phone's screen consists of the &quot;fixed&quot; part immediately followed by the &quot;unfixed&quot; part, i.e., it appears as F + U. The current combination of digits D is only stored in memory and not displayed. There always is the following correspondence between D and U: they have the same length and the i-th character in U is a letter written on the button with digit equal to the i-th character in D. Additionally, the string U must always be such that there's at least one word in the dictionary that starts with U. For a given combination of digits D, we will call a string U <i>valid</i> if it satisfies the described conditions.<br /><br /><br /><br /> When you start typing a new message, all three strings D, F and U are empty. Then you may do the following: \n <ul> \n  <li>press one of the digit buttons (2-9): first, the pressed digit is added to the end of D, then U is changed to the lexicographically earliest string that is valid for the new value of D. If there are no such strings, the button press is ignored, so the values of D and U remain the same as before the button press.</li> \n  <li>press the Right button: first, U is appended to the end of F, then both D and U are reset to empty strings.</li> \n  <li>press the C button: U is appended to the end of F, then both D and U are reset to empty strings, finally, if F is not empty, the last character is removed from F.</li> \n  <li>press the * button: U is changed to the lexicographically next string valid for the current value of D. If there is no such string, it is set to the lexicographically smallest valid string again.</li> \n </ul> T9 technology is very useful when you need to type a message consisting of dictionary words. However there is a small drawback - typing a word that is not contained in the dictionary becomes much more difficult, so usually you have to type this word part by part (turning T9 off is not considered).<br /><br /><br /><br /> The problem you are facing now is to type a given <b>word</b> using T9. Return the smallest number of button presses needed to type this word on your mobile phone if it is possible at all, otherwise return -1. The word is considered to be typed if F is equal to the word and U is empty.<br /><br /><br /><br /> The dictionary is given in String[] <b>t9</b>. Each element of <b>t9</b> is a list of words from the dictionary separated by single spaces.",
+	"notes":[
+		{
+			"order":1,
+			"val":"If two Strings A and B have the same length, then A comes before B lexicographically if it has an alphabetically earlier character at the first position where the Strings differ."
+		},
+		{
+			"order":2,
+			"val":"It's possible that the dictionary contains multiple occurrences of the same word."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"QuickT9",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumPressings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimumPressings(String[] t9, String word)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"babe\"",
+			"id":0,
+			"input":"{\"aae\", \"bab\", \"abad\", \"bdbd\", \"beta\"}",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"\"annie\"",
+			"id":0,
+			"input":"{\"ann\",\"ie\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"\"annie\"",
+			"id":0,
+			"input":"{\"ann\",\"amm\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"aba\"",
+			"id":0,
+			"input":"{\"aaa aab\",\"aac aba abb ccca\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"abbaca\"",
+			"id":0,
+			"input":"{\"acac aba aaab\",\"aab aa baa\",\"bba bacade abb\",\"baba\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\"ccc\"",
+			"id":0,
+			"input":"{\"aaa aab aac\",\"aba abb\",\"ccca\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"t9 will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of t9 will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of t9 will contain only lowercase letters ('a'-'z') and spaces, and will contain no leading, trailing or consecutive spaces."
+		},
+		{
+			"order":4,
+			"val":"word will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"word will contain only lowercase letters ('a'-'z')."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":217.83,
+			"constraints":[],
+			"correctRatio":84.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5870&rd=8074",
+			"name":"RogersPhenomenon",
+			"notes":[],
+			"submission":416
+		},
+		{
+			"avgPts":289.29,
+			"constraints":[],
+			"correctRatio":51.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4828&rd=8074",
+			"name":"AirlinerSeats",
+			"notes":[],
+			"submission":331
+		},
+		{
+			"avgPts":472.83,
+			"constraints":[],
+			"correctRatio":41.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5918&rd=8074",
+			"name":"SafeJourney",
+			"notes":[],
+			"submission":24
+		}
+	],
+	"name":"Single Round Match 277 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8074"
+}

@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7294&rd=10657",
+	"statement":"<p> Given are two Strings <b>P1</b> and <b>P2</b>. Each of these strings contains a pattern of zeros and ones. </p> <p> The string S(n) is formed by concatenating 1,000,000 copies of <b>P1</b> followed by n copies of <b>P2</b>. </p> <p> The infinite string S is formed by concatenating the strings S(1), S(2), S(3), ... in this order. </p> <p> The string T consists of the first 10^16 characters of the string S. </p> <p> We are interested in substrings of T that are <b>zeroCount</b> characters long and contain only zeros. Write a method that finds the first occurrence of such a substring in T, and returns the zero-based index of its first character. In case T contains no such substring return -1. </p>",
+	"notes":[{
+		"order":1,
+		"val":"The number  may be large, and therefore it is specified as a String."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RepeatedPatterns",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findZeroSegment",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long findZeroSegment(String P1, String P2, String zeroCount)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"010000001000\"",
+			"id":0,
+			"input":"\"111010100001010\"",
+			"note":"The first occurrence of three consecutive zeroes is right in the first copy of P1.",
+			"order":1
+		},
+		{
+			"expect":"\"0001000\"",
+			"id":0,
+			"input":"\"1101010010\"",
+			"note":"This time the first substring \"000\" starts with the last character of the 1,000,000th copy of P1.",
+			"order":2
+		},
+		{
+			"expect":"\"0001000\"",
+			"id":0,
+			"input":"\"1101010010\"",
+			"note":"We have the same string T as in Example 1, only we look for the substring \"00000\". The first occurrence is between the second and the third copy of P2.",
+			"order":3
+		},
+		{
+			"expect":"\"101010101010\"",
+			"id":0,
+			"input":"\"10101010\"",
+			"note":"Nowhere in the infinite string S can we find two consecutive zeroes. Clearly, in the string T there is no substring with 9876543219876 consecutive zeroes.",
+			"order":4
+		},
+		{
+			"expect":"\"0\"",
+			"id":0,
+			"input":"\"11111111111111111111111111\"",
+			"note":"The infinite string S does contain 9876543219876 consecutive zeroes. However, the first occurrence is too far, thus the string T doesn't contain it.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"P1 will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"P2 will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"P1 and P2 will contain only zeroes ('0') and ones ('1')."
+		},
+		{
+			"order":4,
+			"val":"zeroCount will contain between 1 and 17 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"zeroCount will contain only digits ('0'-'9')."
+		},
+		{
+			"order":6,
+			"val":"zeroCount will represent a positive integer between 1 and 10^16, inclusive."
+		},
+		{
+			"order":7,
+			"val":"zeroCount will not contain leading zeros."
+		}
+	]
+}

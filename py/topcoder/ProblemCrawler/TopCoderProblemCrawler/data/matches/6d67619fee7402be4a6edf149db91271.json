@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":162.79,
+			"constraints":[],
+			"correctRatio":77.01,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13066&rd=16058",
+			"name":"IntoTheMatrix",
+			"notes":[],
+			"submission":87
+		},
+		{
+			"avgPts":216.26,
+			"constraints":[],
+			"correctRatio":8.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13368&rd=16058",
+			"name":"OnePointNineNine",
+			"notes":[],
+			"submission":49
+		},
+		{
+			"avgPts":555.18,
+			"constraints":[],
+			"correctRatio":80,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13369&rd=16058",
+			"name":"TreeDistance",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"2014 TCO Algorithm > Round 3B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16058"
+}

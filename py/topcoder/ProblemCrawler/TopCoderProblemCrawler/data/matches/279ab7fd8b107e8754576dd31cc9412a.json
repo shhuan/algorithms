@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":193.31,
+			"constraints":[],
+			"correctRatio":79.37,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12398&rd=15488",
+			"name":"BallsSeparating",
+			"notes":[],
+			"submission":669
+		},
+		{
+			"avgPts":228.08,
+			"constraints":[],
+			"correctRatio":80,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12364&rd=15488",
+			"name":"EqualSums",
+			"notes":[],
+			"submission":15
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12365&rd=15488",
+			"name":"DisjointSemicircles",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 568 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15488"
+}

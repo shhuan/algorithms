@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":161.14,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=586&rd=4373",
+			"name":"Traffic",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":313.2,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=577&rd=4373",
+			"name":"TopPilot",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1017&rd=4373",
+			"name":"DNAsynth",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2002 TopCoder Invitational Semifinal > Round 4",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4373"
+}

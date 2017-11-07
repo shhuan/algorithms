@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10858&rd=14235",
+	"statement":"<p>The Towers of Hanoi puzzle consists of 3 pegs and a number of disks of distinct radii. The 3 pegs are the source, spare, and target. Initially, all disks are on the source peg, in ascending order by radius from top to bottom. The goal is to move all disks to the target peg, subject to the following rules:</p>\n <ul> \n  <li>Only one disk may be moved at a time.</li> \n  <li>No disk may be placed on top of a smaller disk.</li> \n  <li>A move consists of taking the highest disk from one peg, and placing it onto another peg above any disks already on that peg.</li> \n </ul> <p></p> <p>Dave and Earl are each solving a Towers of Hanoi puzzle with <b>N</b> disks. Dave makes as few moves as possible, solving the puzzle in only 2^N-1 moves. Earl, on the other hand, encounters every possible configuration of disks exactly once during the course of solving it, thereby requiring 3^N-1 moves to solve it. Pseudocode for their respective solutions are:</p> <pre>\nsolve_Dave(source, target, spare, N)\n{\n\tif(N&gt;0)\n\t{\n\t\tsolve_Dave(source, spare, target, N-1)\n\t\tmove a disk from source to target\n\t\tsolve_Dave(spare, target, source, N-1)\n\t}\n}\n\nsolve_Earl(source, target, spare, N)\n{\n\tif(N&gt;0)\n\t{\n\t\tsolve_Earl(source, target, spare, N-1)\n\t\tmove a disk from source to spare\n\t\tsolve_Earl(target, source, spare, N-1)\n\t\tmove a disk from spare to target\n\t\tsolve_Earl(source, target, spare, N-1)\n\t}\n}\n</pre> <p>Given <b>N</b>, and the number of moves Dave has made toward the solution, return the number of moves Earl must make in order to reach the same configuration of disks as Dave.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HanoiGoodAndBad",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"moves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int moves(int N, int Dave)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"3",
+			"note":"Dave begins by moving a disk from the source peg to the target peg. Earl begins by moving a disk from the source peg to the spare peg, then to the target peg.",
+			"order":1
+		},
+		{
+			"expect":"15",
+			"id":0,
+			"input":"4",
+			"note":"It takes Dave 15 moves to completely solve the puzzle with 4 disks, and Earl 80 moves.",
+			"order":2
+		},
+		{
+			"expect":"265",
+			"id":0,
+			"input":"9",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 19, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Dave will be bewteen 0 and 2^N-1, inclusive."
+		}
+	]
+}

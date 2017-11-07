@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":210.81,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6249&rd=9981",
+			"name":"Alignment",
+			"notes":[],
+			"submission":14
+		},
+		{
+			"avgPts":266.24,
+			"constraints":[],
+			"correctRatio":54.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6201&rd=9981",
+			"name":"FactCount",
+			"notes":[],
+			"submission":11
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4825&rd=9981",
+			"name":"InverseSoundex",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"TCO 06 > Semifinal Room 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9981"
+}

@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8568&rd=12175",
+	"statement":"<p> John thinks 4 and 7 are lucky digits, and all other digits are not lucky. A lucky number is a number that contains only lucky digits in decimal notation. </p> <p> You are given ints <b>a</b> and <b>b</b>. Return the number of lucky numbers between <b>a</b> and <b>b</b>, inclusive. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheLuckyNumbers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int a, int b)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":"There are only two lucky numbers among the first ten positive integers.",
+			"order":1
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"11",
+			"note":"But there are none among the next ten.",
+			"order":2
+		},
+		{
+			"expect":"77",
+			"id":0,
+			"input":"74",
+			"note":"These two numbers are lucky. There are no additional lucky numbers between them. ",
+			"order":3
+		},
+		{
+			"expect":"5000000",
+			"id":0,
+			"input":"1000000",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"b will be between a and 1,000,000,000, inclusive."
+		}
+	]
+}

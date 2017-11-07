@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":167.13,
+			"constraints":[],
+			"correctRatio":75.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10548&rd=13903",
+			"name":"MaxTriangle",
+			"notes":[],
+			"submission":701
+		},
+		{
+			"avgPts":262.42,
+			"constraints":[],
+			"correctRatio":73.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10549&rd=13903",
+			"name":"HexagonalBattlefield",
+			"notes":[],
+			"submission":61
+		},
+		{
+			"avgPts":496.25,
+			"constraints":[],
+			"correctRatio":31.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10551&rd=13903",
+			"name":"StairsColoring",
+			"notes":[],
+			"submission":41
+		}
+	],
+	"name":"Single Round Match 449 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13903"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":232.27,
+			"constraints":[],
+			"correctRatio":90.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10943&rd=14546",
+			"name":"MissingParentheses",
+			"notes":[],
+			"submission":704
+		},
+		{
+			"avgPts":252.97,
+			"constraints":[],
+			"correctRatio":36.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11577&rd=14546",
+			"name":"RangeSquaredSubsets",
+			"notes":[],
+			"submission":83
+		},
+		{
+			"avgPts":576.62,
+			"constraints":[],
+			"correctRatio":86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11512&rd=14546",
+			"name":"Chimney",
+			"notes":[],
+			"submission":50
+		}
+	],
+	"name":"Single Round Match 521 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14546"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":220.16,
+			"constraints":[],
+			"correctRatio":89.47,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3478&rd=6528",
+			"name":"ChessTournament",
+			"notes":[],
+			"submission":361
+		},
+		{
+			"avgPts":365.75,
+			"constraints":[],
+			"correctRatio":93.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3509&rd=6528",
+			"name":"ChessKnight",
+			"notes":[],
+			"submission":307
+		},
+		{
+			"avgPts":542,
+			"constraints":[],
+			"correctRatio":27.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3480&rd=6528",
+			"name":"ChessMatch",
+			"notes":[],
+			"submission":83
+		}
+	],
+	"name":"2005 TCCC > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6528"
+}

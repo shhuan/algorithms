@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7671&rd=10750",
+	"statement":"<p> A String <i>p</i> is called anti-palindrome if <i>p</i>[<i>i</i>] doesn't equal to <i>p</i>[<i>n</i> - <i>i</i> - 1] for each 0 &lt;= <i>i</i> &lt; (<i>n</i>-1)/2, where <i>n</i> is the length of <i>p</i>. It means that each character (except the middle in the case of a string of odd length) must be different from its symmetric character. For example, &quot;c&quot;, &quot;cpp&quot;, &quot;java&quot; are anti-palindrome, but &quot;test&quot;, &quot;pp&quot; and &quot;weather&quot; are not. </p> <p> You are given a String <b>s</b>. Rearrange its letters in such a way that the resulting string is anti-palindrome. If there are several solutions, return the one that comes earliest alphabetically. If it is impossible to do it, return the empty string. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AntiPalindrome",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"rearrange",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String rearrange(String s)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"estt\"",
+			"id":0,
+			"input":"\"test\"",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"aabcbc\"",
+			"id":0,
+			"input":"\"aabbcc\"",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"cceeeeffiillnnoorrtt\"",
+			"id":0,
+			"input":"\"reflectionnoitcelfer\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"ehllo\"",
+			"id":0,
+			"input":"\"hello\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"\"www\"",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"s will contain only lowercase letters ('a'-'z')."
+		}
+	]
+}

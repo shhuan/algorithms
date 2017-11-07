@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9886&rd=13509",
+	"statement":"You have decided to sell your stamp collection, which consists of <b>n</b> stamps numbered 0 to <b>n</b>-1. You have already found some buyers. The i-th buyer wants to buy the stamps listed in <b>demand[i]</b>. This will be a space-separated list containing either one or two stamps. He is willing to pay a total of <b>price[i]</b>. If he wants to buy two stamps, he will not agree to buy only one of them.<br /><br /><br /><br /> To make this task simpler, for each stamp, there will be no more than two buyers who want to buy it. Return the maximum amount of money you can get from selling your stamps.",
+	"notes":[{
+		"order":1,
+		"val":"You don't have to sell all of your stamps."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StampsCollection",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sell",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int sell(int n, String[] demand, int[] price)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"0 4\"}",
+			"id":0,
+			"input":"10",
+			"note":"There is only one buyer, so all we can do is to sell two stamps.",
+			"order":1
+		},
+		{
+			"expect":"{\"1 0\",\"0\"}",
+			"id":0,
+			"input":"2",
+			"note":"There are two buyers, but both want to buy stamp 0. ",
+			"order":2
+		},
+		{
+			"expect":"{\"0 1\",\"0 2\",\"1 2\"}",
+			"id":0,
+			"input":"3",
+			"note":"Only one buyer can get what he wants - we choose the third one, who is willing to pay the most.",
+			"order":3
+		},
+		{
+			"expect":"{\"0\",\"1 0\",\"1 2\"}",
+			"id":0,
+			"input":"3",
+			"note":"Although the second buyer will pay the most, it is better to choose the first and third buyers.",
+			"order":4
+		},
+		{
+			"expect":"{\"0 1\",\"1 2\",\"2 3\",\"3 0\",\"4 5\",\"5 6\",\"6 4\",\"8\",\"8\",\"9\",\"9 10\",\"10 11\",\"11 12\",\"12\"}",
+			"id":0,
+			"input":"20",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"demand will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"price will contain the same number of elements as demand."
+		},
+		{
+			"order":4,
+			"val":"Each element of demand will be a space-separated list of one or two distinct integers."
+		},
+		{
+			"order":5,
+			"val":"All numbers in demand will be between 0 and n-1, inclusive, with no leading zeroes."
+		},
+		{
+			"order":6,
+			"val":"All numbers in price will be between 1 and 1000000, inclusive."
+		},
+		{
+			"order":7,
+			"val":"For each stamp, there will be at most 2 buyers who want to buy it."
+		}
+	]
+}

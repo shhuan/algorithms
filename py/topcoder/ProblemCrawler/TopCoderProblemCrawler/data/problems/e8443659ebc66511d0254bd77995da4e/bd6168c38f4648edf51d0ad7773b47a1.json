@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11434&rd=14437",
+	"statement":"Manao is playing a game called &quot;Divide and Shift&quot;. There is a sequence of <b>N</b> slots in the game numbered from 1 to <b>N</b>. Initially each of them contains an object. Manao's goal is to obtain the object which is initially in slot <b>M</b>. At any time of the game, he can only obtain an object that is in slot 1 at that time. <br /><br /><br /><br /> Manao can perform two types of moves. The first is choosing a prime number <i>p</i> which divides <b>N</b> and dividing the sequence of the slots in <i>p</i> contiguous subsequences, namely the slots from 1 to <i><b>N</b>/p</i>, the slots from <i><b>N</b>/p+1</i> to <i>2<b>N</b>/p</i>, etc. Then, Manao keeps the subsequence which contains the desired object and gets rid of the remaining slots. The length of the chosen subsequence is then assigned to <b>N</b> and the slots in it are renumbered from 1 to the new value of <b>N</b>.<br /><br /><br /><br /> The second type of move is shifting the objects in the slots. Manao can perform a left shift and a right shift. After a left shift, for each i &gt; 1 the object in slot <i>i</i> is moved to slot <i>i-1</i> and the object in slot 1 is moved to the last slot of the sequence. After a right shift, each object is moved to the slot to the right and the object in the last slot is moved to slot 1.<br /><br /><br /><br /> Determine the least number of moves in which Manao can reach the goal. Taking the object from slot 1 is not considered a move.",
+	"notes":[
+		{
+			"order":1,
+			"val":"A positive integer number is called  if it has exactly two divisors - 1 and itself. For example, 2, 3, 5 and 7 are prime numbers, and 4, 6, 8 and 9 are not prime. By convention, 1 is not considered to be a prime number."
+		},
+		{
+			"order":2,
+			"val":"A prime number  divides N if the ratio N/ is an integer."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DivideAndShift",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getLeast",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getLeast(int N, int M)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"14",
+			"id":0,
+			"input":"56",
+			"note":"One possible way to obtain the object in slot 14 is to perform the following operations: 1. Divide by 2.  becomes equal to 28 now. 2. Shift right. The object moves to slot 15. 3. Divide by 2 again. The sequence 15..28 is kept, renumbered as 1..14 and the object appears in slot 1. ",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"49",
+			"note":"Manao divides by 7 twice and gets a single slot.",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"256",
+			"note":"Shift left until the object is in slot 1.",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"6",
+			"note":"The object may be in slot 1 right in the beginning.",
+			"order":4
+		},
+		{
+			"expect":"11111",
+			"id":0,
+			"input":"77777",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"M will be between 1 and N, inclusive."
+		}
+	]
+}

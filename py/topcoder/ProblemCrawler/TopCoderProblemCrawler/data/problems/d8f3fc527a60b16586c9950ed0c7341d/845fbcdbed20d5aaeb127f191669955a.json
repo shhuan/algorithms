@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8615&rd=12168",
+	"statement":"You are given an image represented as a String[] <b>alteredImage</b>. <b>alteredImage</b> contains only '.' and '#' characters, representing white and black pixels, respectively. For the purposes of this problem, two black pixels are directly connected if they share a common edge. Two black pixels A and B are connected indirectly if there exists a path of black pixels A = P<sub>0</sub>, P<sub>1</sub>, ..., P<sub>k</sub> = B, such that P<sub>i</sub> and P<sub>i + 1</sub> are directly connected for all i. A block is a set of black pixels where every two pixels in the set are directly or indirectly connected, and no other black pixel can be added to the block while maintaining that property. A block is considered smooth if for each pair of pixels A and B in the block, there exists a path of black pixels between A and B with length equal to the manhattan distance between A and B.<br /><br /><br /><br /> The manhattan distance between two pixels A and B with coordinates (xA, yA) and (xB, yB), respectively, is the sum of the (absolute) differences of their coordinates(i.e. |xA - xB| + |yA - yB|).<br /><br /><br /><br /> Our friend sent us an image where all the black blocks are smooth. Due to some transmission errors, some black pixels were transmitted as white (but all white pixels remained white). Your task is to retrieve the original image. Find the minimum number of pixels you have to change from white to black so that every black block is smooth and return the original image in the same format as the altered one. The solution with the minimum number of changes will always be unique.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FixImage",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"originalImage",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] originalImage(String[] alteredImage)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"....\", \".##.\", \".##.\", \"....\" }",
+			"id":0,
+			"input":"{\"....\", \".##.\", \".##.\", \"....\"}",
+			"note":"This block is smooth.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {\".....\", \".###.\", \".###.\", \".###.\", \".....\" }",
+			"id":0,
+			"input":"{\".....\", \".###.\", \".#.#.\", \".###.\", \".....\"}",
+			"note":"This block is not smooth. We need to make the center pixel black.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {\".......\", \".###...\", \".#####.\", \".#####.\", \".....#.\" }",
+			"id":0,
+			"input":"{\".......\", \".###...\", \".#..##.\", \".###.#.\", \".....#.\"}",
+			"note":"This image consists of two blocks. The right one is smooth. We make the left one smooth by changing the white pixels inside it, but now our image consists of only one block which is not smooth. To make it smooth we need to change one more white square.",
+			"order":3
+		},
+		{
+			"expect":"Returns: {\".................\", \"#####.#..#..#####\", \"..#...#..#....#..\", \"..#...#..###..#..\", \".................\" }",
+			"id":0,
+			"input":" {\".................\", \"#####.#..#..#####\", \"..#...#..#....#..\", \"..#...#..###..#..\", \".................\"}",
+			"note":"These smooth blocks spell out the word \"TILT\".",
+			"order":4
+		},
+		{
+			"expect":"Returns: {\"########\", \"########\", \"########\", \"########\", \"########\", \"########\" }",
+			"id":0,
+			"input":" {\"###.####\", \"#.#.#..#\", \".#...#.#\", \".#####.#\", \"......#.\", \"########\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: {\"..###..\", \"..###..\", \"##...##\", \"##...##\", \"##...##\", \"##...##\", \"##...##\", \"..###..\", \"..###..\" }",
+			"id":0,
+			"input":"{\"..###..\", \"..#.#..\", \"##...##\", \"#.....#\", \"#.....#\", \"#.....#\", \"##...##\", \"..#.#..\", \"..###..\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"alteredImage will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of alteredImage will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of alteredImage will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"alteredImage will contain only the characters '.' and '#'."
+		}
+	]
+}

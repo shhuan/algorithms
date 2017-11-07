@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11538&rd=14542",
+	"statement":"There is a HxW rectangular board divided into 1x1 cells. Initially each cell is colored white. Fox Ciel wants to change the color of the cells. Letters 'A', 'B', ..., 'Z', 'a', 'b', ..., 'z' represent distinct colors, and they are different from white. You are given a String[] <b>board</b>. She must change the color of the cell (i, j) to the color represented by the j-th character of the i-th element of <b>board</b>. <br /><br /> <br /><br /> Fox Ciel can perform the following operation: <br /><br /> <br /><br /> 1. Choose one row or one column. <br /><br /> 2. Choose one color from 'A', 'B', ..., 'Z', 'a', 'b', ..., 'z'. Note that she can't choose white. <br /><br /> 3. Paint the row or the column she chose in step 1 with the color she chose in step 2. The color of all cells in the row or the column becomes the color she chose in step 2. <br /><br /> <br /><br /> Return the minimal number of operations required to change the color of the cells to <b>board</b>. If it's impossible, return -1. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ColorfulBoard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theMin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int theMin(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"SSS\", \"SRR\", \"SMM\"}",
+			"note":"Initially, the board is (# represents white):  Paint row 0 with color S:  Paint row 1 with color R:  Paint row 2 with color M:  Paint column 0 with color S: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"BBBBBBBB\", \"BBBBBBBB\", \"BBBBBBBB\", \"BBBBBBBB\", \"BBBBBBBB\"}",
+			"note":"Paint five rows with color B.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"Ab\", \"bA\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"iiiii\", \"iwiwi\"} ",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 17",
+			"id":0,
+			"input":"{\"ffffffffff\", \"xfxxoofoxo\", \"ffffffffff\", \"xfxxoofoxo\", \"ffffffffff\", \"ooxxoofoxo\", \"xfxxoofoxo\", \"xfxxoxfxxo\", \"ffxxofffxo\", \"xfxxoxfxxo\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain the same number of characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of board will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each character in board will be a letter ('A'-'Z', 'a'-'z')."
+		}
+	]
+}

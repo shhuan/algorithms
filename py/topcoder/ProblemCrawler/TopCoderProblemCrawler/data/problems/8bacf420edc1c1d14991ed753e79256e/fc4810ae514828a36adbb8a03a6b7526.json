@@ -1,0 +1,69 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1693&rd=4560",
+	"statement":"The Greek mathematician Archimedes of Syracuse (287-212 B.C.) was most likely the first in finding a way to systematically (iteratively) approximate the value of Pi, the ratio between the perimeter and the diameter of a circle.<br /><br /> <br /><br /> He inscribed and circumscribed regular polygons in/around a circle and calculated their perimeter. These are lower (inscribed polygon) and upper (circumscribed polygon) bounds for the perimeter of the circle, and therefore can be used to calculate lower and upper bounds for Pi. He then found a formula for directly calculating the perimeter of inscribed and circumscribed polygons with 2*n sides only using the values previously calculated for polygons with n sides.<br /><br /> <br /><br /> You now have a slightly simpler task, considering only inscribed polygons. You are given an int <b>numSides</b>, the number of sides of a regular polygon that is inscribed in a circle. Return a double, the approximated value for Pi when the perimeter of that polygon is used as an approximation for the perimeter of the circle.<br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/Archimedes/Archimedes.gif\" /> [Image showing a circle with an 8-sided regular polygon inscribed]<br /><br /> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Perimeter of a circle: 2 * PI * radius"
+		},
+		{
+			"order":2,
+			"val":"Perimeter of a n-sided regular polygon: n * sidelength"
+		},
+		{
+			"order":3,
+			"val":"Reminder how doubles are evaluated:If your result is within 1e-9 of the expected result, your solution will be evaluated as correct.If your result is between (1+1e-9) * expected and (1-1e-9) * expected, it will be evaluated as correct."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Archimedes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"approximatePi",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double approximatePi(int numSides)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2.598076211353316",
+			"id":0,
+			"input":"3",
+			"order":1
+		},
+		{
+			"expect":"Returns: 3.0614674589207183",
+			"id":0,
+			"input":"8",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3.1415926362832276",
+			"id":0,
+			"input":"17280",
+			"order":3
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"numSides will be between 3 and 100000, inclusive."
+	}]
+}

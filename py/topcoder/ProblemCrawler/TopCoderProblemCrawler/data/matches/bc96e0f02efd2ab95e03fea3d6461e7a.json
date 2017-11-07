@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":146.07,
+			"constraints":[],
+			"correctRatio":81.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6235&rd=9982",
+			"name":"TaylorAlgebra",
+			"notes":[],
+			"submission":16
+		},
+		{
+			"avgPts":243.88,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6244&rd=9982",
+			"name":"ModelRailroad",
+			"notes":[],
+			"submission":10
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6234&rd=9982",
+			"name":"CompressedStringSearch",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"TCO 06 > Semifinal Room 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9982"
+}

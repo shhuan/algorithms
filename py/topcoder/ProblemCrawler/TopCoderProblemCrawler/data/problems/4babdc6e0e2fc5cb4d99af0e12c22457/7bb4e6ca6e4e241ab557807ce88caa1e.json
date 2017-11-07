@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11405&rd=14434",
+	"statement":"A perfect sequence is a sequence such that all of its elements are integers and the product of all of them is equal to their sum. For example {1,2,3} is a perfect sequence because 1+2+3 = 1*2*3, {-1,1,-1,1,6} is a perfect sequence as well, but {4,5,6} is not a perfect sequence because 4*5*6 is not equal to 4+5+6. <br /><br /><br /><br /> You are given a int[] <b>seq</b>. In one move you can choose one element of <b>seq</b> and increase or decrease it by 1. Return the minimum number of moves required to transform <b>seq</b> into a perfect sequence.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PerfectSequences2",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long minimumMoves(int[] seq)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{-1000000000}",
+			"note":"Any sequence consisting of 1 integer is perfect, so no additional moves are needed.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{-1,1}",
+			"note":"There are 2 perfect sequences containing two elements: {0,0} and {2,2}. In order to obtain {0,0} from {-1,1} you need 2 moves, in order to obtain {2,2} you need 4 moves.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{4,3}",
+			"note":"This time it is better to obtain {2,2}.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 33",
+			"id":0,
+			"input":"{17,95,-79}",
+			"note":"Here the best solution is to transform  into {0,95,-95}.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 21",
+			"id":0,
+			"input":"{10,9,8}",
+			"note":"Decrease each element by 7 to obtain {3,2,1}.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 38",
+			"id":0,
+			"input":"{-2,-29,-13}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"Returns: 48",
+			"id":0,
+			"input":"{-7,-31,2,-14}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"seq will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of seq will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		}
+	]
+}

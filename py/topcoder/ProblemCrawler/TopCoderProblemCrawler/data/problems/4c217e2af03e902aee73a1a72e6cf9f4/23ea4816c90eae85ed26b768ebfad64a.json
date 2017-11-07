@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10514&rd=13899",
+	"statement":"<p> John is obsessed with security. Recently he bought a new electronic lock. It is protected by a password containing <b>n</b> digits, where each digit is either zero or one. John decides to change the password every day. On the first day, the password is all zeroes. On each day that follows, he will select one or more digits that all have the same value and change their values (so zeroes become ones, and ones become zeroes). He must select the digits according to the following rules: </p>\n <ol> \n  <li>During the first 2^<b>n</b> days, he must never use the same password twice.</li> \n  <li>Each new password must come as early as possible alphabetically while not violating rule 1.</li> \n </ol> <p></p> <p> For example, if <b>n</b> is 2, the password on the first day is &quot;00&quot;. The next day, he can change one or both 0's to get &quot;01&quot;, &quot;10&quot; or &quot;11&quot;. Of these possibilities, &quot;01&quot; comes earliest alphabetically. The next day, he can change either the 0 or the 1 to get &quot;11&quot; or &quot;00&quot;. He can't choose &quot;00&quot; because it was already used, so he chooses &quot;11&quot;. The next day, he can change one or both 1's to get &quot;10&quot;, &quot;01&quot; or &quot;00&quot;. He has already used &quot;01&quot; and &quot;00&quot;, so he must choose &quot;10&quot;. </p> <p> Given ints <b>n</b> and <b>k</b>, return the password that comes latest alphabetically during the first <b>k</b> days. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"If A and B are two Strings of the same length, then A comes earlier alphabetically than B if it contains a smaller character at the first position where the Strings differ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheLockDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"password",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String password(int n, long k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"2",
+			"note":"This is the example from the statement. The password sequence is the following - \"00\", \"01\", \"11\", \"10\".",
+			"order":1
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"3",
+			"note":"\"000\", \"001\", \"011\", \"010\", \"110\", \"100\", \"101\", \"111\".",
+			"order":2
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"k will be between 1 and 2^n, inclusive."
+		}
+	]
+}

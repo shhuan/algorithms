@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1289&rd=10100",
+	"statement":"Given the dimensions of a board, and a place to start, you will draw a spiral repeating sequence. The repeating sequence is: <br /><br /> 0,1,2,3,4,5,6,7,8,9,0,1,2,...<br /><br /> First you will draw a '0' at the start position. The spiral is drawn starting right, then down, then left, then up, then right, ... repeating until no more can be drawn, making the tightest spiral possible. For example:<pre>\n<b>width</b> = 5\n<b>height</b> = 5\n<b>startx</b> = 2\n<b>starty</b> = 2\n\nBeginning    Second      Later     Even Later  Finally\n  01234       01234       01234       01234      01234\n\n0 .....       .....       .....       012..      01234\n1 .....       .....       .678.       96789      96789 \n2 ..0..       ..01.       .501.       85010      85010\n3 .....       .....       .432.       74321      74321\n4 .....       .....       .....       65432      65432</pre> If there is no place to go, stop drawing and put '.' characters in all the unreached spots:<pre>\n<b>width</b> = 5\n<b>height</b> = 6\n<b>startx</b> = 1\n<b>starty</b> = 1\n\nBeginning    Second      Later     Even Later  Finally\n  01234       01234       01234       01234      01234\n\n0 .....       .....       678..       6789.      6789.\n1 .0...       .01..       501..       5010.      5010. \n2 .....       .....       432..       4321.      4321.\n3 .....       .....       .....       ..32.      5432.\n4 .....       .....       .....       .....      .....\n5 .....       .....       .....       .....      .....</pre> Return the resulting drawing as a String[]. The parameters <b>height</b> and <b>width</b> represent the number of elements, and the number of characters per element in the returned String[], respectively. <b>startx</b> and <b>starty</b> are the column and row (both 0-indexed from the upper left corner) at which the sequence should begin.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Spirals",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"draw",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] draw(int width, int height, int startx, int starty)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"The first example in the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"5",
+			"note":"The second example from the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"11",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"width must be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"height must be between 1 and 50, inclusive."
+		},
+		{
+			"order":3,
+			"val":"startx must be between 0 and width-1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"starty must be between 0 and height-1, inclusive."
+		}
+	]
+}

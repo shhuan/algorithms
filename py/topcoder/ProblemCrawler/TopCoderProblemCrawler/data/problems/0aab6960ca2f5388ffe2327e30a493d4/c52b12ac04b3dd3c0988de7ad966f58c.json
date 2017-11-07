@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12354&rd=15845",
+	"statement":"Guillermo and Gustavo are playing a game. The game is played on a rectangular board with 100,000 rows and 100,000 columns of cells. Both the rows and the columns are numbered 1 through 100,000. <br /><br /><br /><br /> Guillermo has chosen some cells in the grid. We will call those cells special. Guillermo then created two lists of integers. One of the lists contains the x coordinates of all special cells, the other list contains the y coordinates of all special cells. If some coordinate occurs multiple times among the special cells, it gets included multiple times into the corresponding list. Guillermo shuffled each of the lists separately, and then he has shown the two lists to Gustavo. Thus, Gustavo now knows the two lists, but he does not know which x coordinate corresponds to which y coordinate. <br /><br /><br /><br /> Gustavo now has to guess which cells are special. His guess must be consistent with the two lists he saw. That is, he must select the correct number of cells, their list of x coordinates must correspond to the first list he saw, and their list of y coordinates must correspond to the second list he saw. <br /><br /><br /><br /> Gustavo wins the game if and only if at least T of the cells he guessed are actually special. <br /><br /><br /><br /> You are given two int[]s <b>x</b> and <b>y</b> that describe the special cells chosen by Guillermo. For each valid i, (<b>x</b>[i], <b>y</b>[i]) is one of the special cells. Find and return the largest T such that Gustavo will certainly win the game. In other words, find the largest T such that each valid guess will contain at least T special cells.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SpecialCells",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"guess",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int guess(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2}",
+			"id":0,
+			"input":"{1,2}",
+			"note":"The two special cells are (1,1) and (2,2). If Gustavo guesses (1,2) and (2,1) then he loses unless T is 0, so you must return 0.",
+			"order":1
+		},
+		{
+			"expect":"{1,2,1}",
+			"id":0,
+			"input":"{1,1,2}",
+			"note":"There is only one valid guess: the three special cells. Note that Gustavo's guess must contain three different cells, it cannot contain the cell (1,1) twice.",
+			"order":2
+		},
+		{
+			"expect":"{1,2,3,1,2,3}",
+			"id":0,
+			"input":"{1,2,1,2,1,2}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3}",
+			"id":0,
+			"input":"{1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{1,100000}",
+			"id":0,
+			"input":"{1,100000}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of x will be between 1 and 100,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of y will be between 1 and 100,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"All cells (x[i], y[i]) will be distinct."
+		}
+	]
+}

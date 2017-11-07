@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2347&rd=5870",
+	"statement":"<p> Suppose I want to make a decision <i>rationally</i>. One approach is to come up with several categories and weight each category according to its importance. Then I assign scores in each category to the competing alternatives, and pick the alternative with the highest total weighted score. For example, suppose I am buying a new car and I need to decide between a sedan, a minivan, or a sport-utility vehicle (SUV). In consultation with my wife, I come up with four categories </p>\n <ul> \n  <li> cost (weight 3) </li> \n  <li> carrying capacity (weight 2) </li> \n  <li> fuel efficiency (weight 1) </li> \n  <li> fun (weight 1)</li> \n </ul> After studying each vehicle carefully, we give them the following scores: <p></p> <pre>\n  Vehicle     Cost  Cap.  Eff.  Fun      Total Score \n  ----------------------------------------------------------\n  sedan        6     3     5     4      6*3+3*2+5*1+4*1 = 33\n  minivan      5     5     3     2      5*3+5*2+3*1+2*1 = 30\n  SUV          4     6     2     6      4*3+6*2+2*1+6*1 = 32\n</pre> Clearly we should purchase the sedan. Unfortunately, neither of us <i>wants</i> the sedan. I really want the minivan, and my wife really wants the SUV. And so begins the process of <i>rationalization</i>, in which we each try to tweak the numbers to make our choice come out on top. She quickly realizes that by tweaking one number, changing the weight of the fun category from 1 to 2, she can cause the SUV to win with a score of 38 (versus 37 for the sedan and 32 for the minivan). I have to work harder, but if I tweak two numbers, changing the cost score of the minivan from 5 to 6 and the efficiency score of the sedan from 5 to 4, then I can make the minivan win with a score of 33 (versus 32 for both the SUV and the sedan). Note that there are several other tweaks that each of us could have made that would have achieved our respective goals. <p> Given the inital <b>weights</b> and <b>scores</b>, as well as the zero-based index <b>desired</b> of the alternative that you <i>want</i> to win, determine the minimum number of tweaks needed to make your chosen alternative win. To win, your chosen alternative must end up with a score strictly higher than all the other alternatives--ties are not good enough. A single tweak involves changing the value of a particular weight or a particular score up or down by one. The same number cannot be tweaked more than once, and a tweak may not cause a weight or a score to exceed 9 or drop below 1. If no amount of tweaking can make your chosen alternative win, return -1. </p> <p> <b>weights</b> will be given as a int[], and <b>scores</b> will be given as a String[]. Element <i>J</i> of <b>weights</b> is the weight for category <i>J</i>, and element <i>I</i> of <b>scores</b> contains the scores for alternative <i>I</i>. Within element <i>I</i> of <b>scores</b>, character <i>J</i> represents the score for alternative <i>I</i> in category <i>J</i>. In the example above, <b>weights</b> would be <tt>{ 3, 2, 1, 1 }</tt> and <b>scores</b> would be <tt>{ &quot;6354&quot;, &quot;5532&quot;, &quot;4626&quot; }</tt>, with <b>desired</b>=2 for the SUV and <b>desired</b>=1 for the minivan. (See Examples 0 and 1.) </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Rationalization",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minTweaks",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minTweaks(int[] weights, String[] scores, int desired)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ \"6354\", \"5532\", \"4626\" }",
+			"id":0,
+			"input":"{ 3, 2, 1, 1 }",
+			"note":"The example above, trying to make the SUV win.",
+			"order":1
+		},
+		{
+			"expect":"{ \"6354\", \"5532\", \"4626\" }",
+			"id":0,
+			"input":"{ 3, 2, 1, 1 }",
+			"note":"The example above, trying to make the minivan win.",
+			"order":2
+		},
+		{
+			"expect":"{ \"555\", \"333\" }",
+			"id":0,
+			"input":"{ 3, 2, 1 }",
+			"note":"Option 1 can never beat option 0. The best it can do is tie.",
+			"order":3
+		},
+		{
+			"expect":"{ \"9234\", \"1334\" }",
+			"id":0,
+			"input":"{ 1, 2, 3, 3 }",
+			"note":"Unfortunately, we can't drop the weight of the first category to 0.",
+			"order":4
+		},
+		{
+			"expect":"{ \"55\", \"92\" }",
+			"id":0,
+			"input":"{ 8, 2 }",
+			"order":5
+		},
+		{
+			"expect":"{ \"9197287893\", \"9492555365\", \"3459972761\", \"4886112198\", \"5963616776\", \"6325897129\", \"3248793133\", \"7984474438\", \"4518544769\", \"1592681682\" } ",
+			"id":0,
+			"input":"{ 2, 8, 7, 3, 6, 5, 2, 4, 7, 2 }",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"weights contains between 2 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of weights is between 1 and 9, inclusive."
+		},
+		{
+			"order":3,
+			"val":"scores contains between 2 and 10 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of scores contains exactly W characters, where W is the number of elements in weights."
+		},
+		{
+			"order":5,
+			"val":"Each character in scores is a digit between '1' and '9', inclusive."
+		},
+		{
+			"order":6,
+			"val":"desired is between 0 and S-1, inclusive, where S is the number of elements in scores."
+		}
+	]
+}

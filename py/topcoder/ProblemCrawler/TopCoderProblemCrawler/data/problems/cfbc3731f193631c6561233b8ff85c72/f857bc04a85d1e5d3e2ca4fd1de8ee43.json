@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12551&rd=15858",
+	"statement":"<i>Block Puzzle</i> is played on a square grid of unit cells. Some of those cells are marked as start cells, and one is marked as a goal cell.<br /><br /> <br /><br /> The player begins by placing a 1x1x2 block on top of one of the start cells in such a way that the 1x1 face of the block coincides with the cell. The goal of the game is to reach the state where the block stands with its 1x1 face covering the goal cell. The game is played by rolling the block across the board. Only some types of moves are allowed: When the block stands on its 1x1 face, the player may roll the block in either of the four basic directions. However, when the block's bottom face is 2x1, the player may only roll it onto one of its 1x1 faces. In other words, the block must always be rolled over an edge of length 1.<br /><br /> <br /><br /> All allowed moves are shown in the figure below. (The old state of the block is always semi-transparent, the new state is opaque.)<br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/BlockTheBlockPuzzle/cubes.png\" /><br /><br /> <br /><br /> So far, the game seems trivial. Its difficulty comes from the fact that there are holes instead of some cells. Whenever the entire bottom face of the block stands on a hole, the block falls through the hole and the player loses the game. The block also falls off if the player rolls it across the edge of the game board. (Note that if the block stands on a 2x1 face and only one of the two cells under the face is missing, the block is still safe. Technically, the block would also be safe with one half of its bottom face sticking out of the game board, but obviously a move into such a configuration will never help you reach the goal.)<br /><br /> <br /><br /> Bohn has been playing <i>Block Puzzle</i> too much. Jrus is bored, so he decided to make Bohn's game unsolvable by making more holes into his board. Jrus can only remove cells that are neither starting nor goal. As he doesn't want to get caught, he wants to remove as few cells as possible.<br /><br /> <br /><br /> You are given the current board as a String[] <b>board</b>. The character '.' represents an ordinary cell, 'H' is a hole, 'b' is a starting cell, and '$' is the only goal cell. Return the smallest number of cells that have to be removed in order to make the puzzle unsolvable. If it is not possible to make the puzzle unsolvable, return -1 instead. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BlockTheBlockPuzzle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumHoles",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimumHoles(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"b..$\", \"....\", \"HHHH\", \"HHHH\"}",
+			"note":"Remove the two cells between the start and the goal. Note that removing just one of them is not enough.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"............H..\", \"...............\", \"...............\", \"HHH$HHH.....H..\", \"HHHHHHH........\", \"HHHHHHHH.......\", \"......b..H.....\", \"...............\", \"...............\", \"...H..H..H.....\", \"...............\", \"...............\", \"...............\", \"...............\", \"...............\"}",
+			"note":"This puzzle is already unsolvable.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"............H..\", \"...............\", \"...............\", \"HHH$HHH........\", \"HHHHHHH........\", \"HHHHHHHH.......\", \"......b..H.....\", \"...............\", \"...............\", \"...H..H..H.....\", \"...............\", \"...............\", \"...............\", \"...............\", \"...............\"}",
+			"note":"This puzzle is solvable. The only difference between this puzzle and Example 1 is that one cell in this example was a hole in Example 1. Hence, we can easily make this puzzle unsolvable by removing that one cell.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"b..$...\", \"...H...\", \".......\", \"b..b..b\", \"...H...\", \".......\", \"b..b..b\"} ",
+			"note":"A puzzle may contain multiple starting cells. Bohn may start the game from any of them.",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"b..b..b\", \"..b..b.\", \".......\", \"b..$bbb\", \".b.....\", \"....b..\", \"b..b..b\"} ",
+			"note":"You cannot replace start cells with holes.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 3 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"board will contain exactly n elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of board will contain exactly n characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in board will be '.', 'H', 'b' or '$'."
+		},
+		{
+			"order":5,
+			"val":"board will contain exactly one '$' character."
+		},
+		{
+			"order":6,
+			"val":"board will contain at least one 'b' character."
+		}
+	]
+}

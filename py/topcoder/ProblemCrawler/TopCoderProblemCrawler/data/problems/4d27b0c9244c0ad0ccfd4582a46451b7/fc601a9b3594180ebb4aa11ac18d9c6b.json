@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13350&rd=16190",
+	"statement":"<p> You have a rectangle that is divided into a grid of unit squares. The corners and sides of those squares will be called grid points and grid lines, respectively. Each square contains either a 0 or a 1. You are given these numbers in a String[] <b>grid</b>. The elements of <b>grid</b> represent the rows of squares from top to bottom. In each element, the characters represent the squares in that row from left to right. Each of those characters is either '0' or '1'. </p> <p> You want to take a walk along some grid lines. The walk must satisfy the following properties: </p>\n <ol> \n  <li>You must both start and end the walk in the top left grid point.</li> \n  <li>In each step, you have to walk along a single grid line (i.e., move by 1 up, down, left, or right).</li> \n  <li>Your walk must visit each grid point at least once.</li> \n  <li>Your walk must satisfy the additional property described in the next paragraph.</li> \n </ol> <p></p> <p> Consider any walk that satisfies the first three properties. Imagine that a boy is standing in the middle of a given square and a girl takes the entire walk once (both starting and ending in the top left grid point). While the girl walks, the boy stays in place but rotates so that he always faces the girl's current position. Clearly, when the girl ends the walk, the net result for the boy will be some number of full turns. For each square in the grid, the number written in the square must correspond to the net number of clockwise turns the boy would make if he stood in that square. (In other words, if the square contains a 0, the boy standing in that square must rotate by the same total amount clockwise and counterclockwise, and if the square contains a 1, the boy's total clockwise rotation must be 360 degrees more than the boy's total counterclockwise rotation.) </p> <p> You are given the String[] <b>grid</b>. Return the smallest L such that in the given grid there is a valid walk with L steps, or -1 if no valid walk exists. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"The walk may visit each grid point, including the top left grid point, arbitrarily many times."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LoopyPath",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findMinimumCycle",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int findMinimumCycle(String[] grid)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{\"111\"}",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"{\"10\", \"11\"}",
+			"note":"  ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 20",
+			"id":0,
+			"input":"{\"111\", \"111\", \"111\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 34",
+			"id":0,
+			"input":"{\"1110000\", \"0000111\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 364",
+			"id":0,
+			"input":"{ \"1110001110001111111000111\", \"1110001110001111111000111\", \"1110001110000011100000111\", \"1111111110000011100000111\", \"1111111110000011100000111\", \"1110001110000011100000000\", \"1110001110001111111000111\", \"1110001110001111111000111\" }",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of grid will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of grid will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in each element of grid will be either '0' or '1'."
+		}
+	]
+}

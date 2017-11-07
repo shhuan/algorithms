@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":125.7,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7671&rd=10750",
+			"name":"AntiPalindrome",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7520&rd=10750",
+			"name":"NavalBattle",
+			"notes":[],
+			"submission":0
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7672&rd=10750",
+			"name":"AmbiguousWatch",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2007 TopCoder Open > Sponsor Track Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10750"
+}

@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3083&rd=5885",
+	"statement":"Given an int, <b>N</b>, return the number of ways to represent <b>N</b> as the sum of 4 non-negative perfect cubes. Do not count different permutations of the same 4 cubes more than once. For example, (0,0,0,1) is the same as (1,0,0,0). ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CubeSum",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"1",
+			"note":"Keep in mind that 0 is a perfect cube so 1 can be represented as 0+0+0+1",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"4",
+			"note":"1+1+1+1 = 4",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"2072",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"456",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N will be between 1 and 100,000,000, inclusive."
+	}]
+}

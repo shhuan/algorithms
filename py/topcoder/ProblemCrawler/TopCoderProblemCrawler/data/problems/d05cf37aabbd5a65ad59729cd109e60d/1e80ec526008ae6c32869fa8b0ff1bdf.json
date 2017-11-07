@@ -1,0 +1,109 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13356&rd=16081",
+	"statement":"You have a lot of candles. The candles burn at a uniform rate: if you ignite a candle of length L, it will burn completely in L units of time. You can also ignite a candle at both ends, which makes it burn twice as fast. <br /><br /> <br /><br /> <br /><br /> You have arranged some candles into the shape of a tree. You want to use the tree to measure time. At the beginning, you will ingite some leaves of the tree (all at the same time). Then you will just wait and watch the flames spread across the entire tree. (Whenever a flame reaches an inner node of the tree, it spreads to all branches that meet at that node.) Note that you are not allowed to light new flames during the process. The time you will measure is the time between the moment when you lighted the fire(s) and the moment when the last part of the tree finished burning. <br /><br /> <br /><br /> <br /><br /> You are given a description of the tree as three int[]s: <b>a</b>, <b>b</b>, and <b>len</b>, with N elements each. The nodes of the tree are numbered 0 through N, inclusive. For each valid i, there is a candle between the nodes <b>a</b>[i] and <b>b</b>[i] with length <b>len</b>[i]. <br /><br /> <br /><br /> <br /><br /> Let X be the number of different times you can measure when following the above procedure. Compute and return the value (X modulo 1,000,000,007).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CandleTimer",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"differentTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int differentTime(int[] A, int[] B, int[] len)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2}",
+			"id":0,
+			"input":"{0,1}",
+			"note":"This tree looks the same as a single candle of length 11. If we light it on one end, we will measure the time 11. If we light it on both ends, we will measure the time 5.5.",
+			"order":1
+		},
+		{
+			"expect":"{1,2,3}",
+			"id":0,
+			"input":"{0,0,0}",
+			"note":"This time we have 3 ends. If we ignite all of them the time is 1, otherwise the time is 2. ",
+			"order":2
+		},
+		{
+			"expect":"{1,2,3}",
+			"id":0,
+			"input":"{0,0,0}",
+			"note":"We can get 4 different outcomes: 2.5, 3, 4, 5.",
+			"order":3
+		},
+		{
+			"expect":"{1,2,3,4,5,6,7,8}",
+			"id":0,
+			"input":"{0,1,1,2,3,3,2,4}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{1,2,3,4}",
+			"id":0,
+			"input":"{0,0,0,0}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{0,1,2,0,0,0,1,0,0,0,2,5,4,7,13,13,6,15,11,18,19,21,22,16,19,19,20,18,22,27}",
+			"id":0,
+			"input":"{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"{0}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will contain between 1 and 200 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A, B and len will contain same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element in A will be between 0 and |A|, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element in B will be between 0 and |A|, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element in len will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"A, B and len will describe a tree."
+		}
+	]
+}

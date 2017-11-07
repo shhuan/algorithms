@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.94,
+			"constraints":[],
+			"correctRatio":83.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8087&rd=10791",
+			"name":"StringFragmentation",
+			"notes":[],
+			"submission":365
+		},
+		{
+			"avgPts":275.13,
+			"constraints":[],
+			"correctRatio":37.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7521&rd=10791",
+			"name":"RoadCrossing",
+			"notes":[],
+			"submission":161
+		},
+		{
+			"avgPts":523.45,
+			"constraints":[],
+			"correctRatio":46.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6649&rd=10791",
+			"name":"SpiralConstruction",
+			"notes":[],
+			"submission":28
+		}
+	],
+	"name":"Single Round Match 373 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10791"
+}

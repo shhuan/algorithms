@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174.13,
+			"constraints":[],
+			"correctRatio":78.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11867&rd=15092",
+			"name":"PasswordXGuessing",
+			"notes":[],
+			"submission":1056
+		},
+		{
+			"avgPts":310.2,
+			"constraints":[],
+			"correctRatio":85.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11873&rd=15092",
+			"name":"PasswordXGrid",
+			"notes":[],
+			"submission":717
+		},
+		{
+			"avgPts":658.35,
+			"constraints":[],
+			"correctRatio":50.83,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11868&rd=15092",
+			"name":"PasswordXPalindrome",
+			"notes":[],
+			"submission":301
+		}
+	],
+	"name":"2012 TCO Algorithm > Round 1C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15092"
+}

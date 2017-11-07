@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6076&rd=9922",
+	"statement":"<p>You would like to return home from a party as soon as possible by taking a bus. You are currently standing at a bus stop that is serviced by several different routes. Each bus route takes a different amount of time to take you home, so it's not always optimal to take the first bus you see. Sometimes it's better to skip a bus and wait for a bus from another route. Fortunately for you, each route has a fixed time interval between consecutive buses arriving at this stop. You also know the time it takes each route to get you back home. Unfortunately, you have no idea when any of the previous buses were at this stop, so you don't know how long it will take for the next bus to arrive. </p> <p> You will be given two int[]s - <b>tripTime</b> and <b>waitTime</b>, with the i<sup>th</sup> elements of <b>tripTime</b> and <b>waitTime</b> describing the i<sup>th</sup> route. The i<sup>th</sup> element of <b>tripTime</b> represents the time it takes to get home using the i<sup>th</sup> route, and the i<sup>th</sup> element of <b>waitTime</b> gives you the exact time interval between two consecutive buses of this route. This means you'll need to wait an integer number of minutes between 0 and (<b>waitTime</b>[i] - 1), inclusive, until the next bus of the ith route arrives. Each of these intervals is equally probable. </p> <p> Return the minimal expected time you'll need to get home if your behavior is optimal. That is, at each moment you try to minimize the expected time using all the information about buses you have. </p>",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to within a relative or absolute value of 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TakeBus",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expectedTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expectedTime(int[] tripTime, int[] waitTime)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"{5}",
+			"note":"Here the bus will come either immediately or in 1 minute, giving us an average wait time of 0.5 minutes. We spend another 5 minutes to get home.",
+			"order":1
+		},
+		{
+			"expect":"{1, 10}",
+			"id":0,
+			"input":"{100, 5}",
+			"note":"Here the first bus is extremely slow, so we prefer to wait for the second.",
+			"order":2
+		},
+		{
+			"expect":"{1, 10}",
+			"id":0,
+			"input":"{6, 5}",
+			"note":"We take the second bus only if it comes to the stop immediately. If it doesn't, we immediately take the first one.",
+			"order":3
+		},
+		{
+			"expect":"{3, 3, 3}",
+			"id":0,
+			"input":"{100, 100, 100}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"tripTime and waitTime will contain the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"tripTime and waitTime will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of tripTime will be between 1 and 100, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of waitTime will be between 1 and 100, inclusive."
+		}
+	]
+}

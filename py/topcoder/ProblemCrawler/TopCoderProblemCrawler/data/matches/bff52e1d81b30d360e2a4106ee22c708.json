@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":206.04,
+			"constraints":[],
+			"correctRatio":93.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7305&rd=13675",
+			"name":"DirPattern",
+			"notes":[],
+			"submission":212
+		},
+		{
+			"avgPts":340.43,
+			"constraints":[],
+			"correctRatio":72.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7310&rd=13675",
+			"name":"KingMovement",
+			"notes":[],
+			"submission":143
+		},
+		{
+			"avgPts":724.44,
+			"constraints":[],
+			"correctRatio":89.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7306&rd=13675",
+			"name":"TooManyBugs",
+			"notes":[],
+			"submission":93
+		}
+	],
+	"name":"2008 TopCoder China Tournament > Round 1C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13675"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174.22,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12094&rd=15378",
+			"name":"XorGame",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12224&rd=15378",
+			"name":"PeriodicTiling",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12194&rd=15378",
+			"name":"DistanceGraph",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2012 TCO Algorithm > Championship Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15378"
+}

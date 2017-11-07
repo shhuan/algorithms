@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.21,
+			"constraints":[],
+			"correctRatio":74.65,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12455&rd=15585",
+			"name":"TheArray",
+			"notes":[],
+			"submission":1349
+		},
+		{
+			"avgPts":382.96,
+			"constraints":[],
+			"correctRatio":53.7,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12456&rd=15585",
+			"name":"TheOlympiadInInformatics",
+			"notes":[],
+			"submission":1082
+		},
+		{
+			"avgPts":467.92,
+			"constraints":[],
+			"correctRatio":52.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11541&rd=15585",
+			"name":"TheKnights",
+			"notes":[],
+			"submission":65
+		}
+	],
+	"name":"2013 TCO Algorithm > Round 1C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15585"
+}

@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12455&rd=15585",
+	"statement":"John has an array of <b>n</b> integers. Each pair of neighboring elements differs by at most <b>d</b>. The first and the last elements of the array are equal to <b>first</b> and <b>last</b>, respectively. <br /><br /><br /><br /> Brus does not know John's array. He only knows <b>n</b>, <b>d</b>, <b>first</b> and <b>last</b>. He wants to compute the maximal possible element John might have in his array. <br /><br /><br /><br /> You are given ints <b>n</b>, <b>d</b>, <b>first</b> and <b>last</b>. Return the maximal possible element the array might contain. ",
+	"notes":[
+		{
+			"order":1,
+			"val":"The constraints given below guarantee that there will always be at least one array that matches the values Brus knows."
+		},
+		{
+			"order":2,
+			"val":"For the constraints given below, the correct answer will always fit into an int."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheArray",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int find(int n, int d, int first, int last)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"3",
+			"note":"Only the second element of the array is unknown. Its maximal valid value is 7. ",
+			"order":1
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"10",
+			"note":"Due to the limitations, the first element is the largest element of the array.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1000000",
+			"note":"All elements of the array are equal.",
+			"order":3
+		},
+		{
+			"expect":"53",
+			"id":0,
+			"input":"97",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"99",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"d will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"first will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"last will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"|first - last| will be at most (n-1)*d."
+		}
+	]
+}

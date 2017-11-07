@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":273.45,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1259&rd=4493",
+			"name":"ZigZag",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":393.5,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=884&rd=4493",
+			"name":"Criminal",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":791.92,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1256&rd=4493",
+			"name":"TimeSlicing",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"TopCoder Collegiate Challenge > Semifinal Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4493"
+}

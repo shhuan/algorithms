@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10854&rd=14150",
+	"statement":"Pavel likes puzzles. One of his favorite puzzles is <i>DrawingBlackCrosses</i>. In this puzzle, the player starts with a rectangular grid of cells, where each cell is either white or black, and at most 8 of the cells are black. The player's goal is to achieve the state where all of the cells in the grid are black. To achieve this goal, a sequence of moves must be performed. In each move, a single white cell is selected and all white cells located in the same row and all white cells located in the same column as the selected cell, including the selected cell itself, are colored black. The moves are performed until there are no more white cells. <br /><br /> <br /><br /> Each solution to this puzzle can be written as a sequence of cells, where the i-th cell in the sequence is the cell that was selected on the player's i-th move. Two solutions are considered to be different if these sequences have different lengths or if there's an index i such that the i-th cells in these sequences are different. You are given a String[] <b>field</b> representing the initial state of the grid. The j-th character in the i-th element of <b>field</b> is '.' if the cell in row i, column j of the grid is initially white and 'B' if this cell is initially black. Return the number of different solutions that exist for the given grid, modulo 1000000007.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DrawingBlackCrosses",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(String[] field)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\".\"}",
+			"note":"Only one possible move.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"BBB\", \"BBB\"}",
+			"note":"No moves are necessary here since all the cells are already black.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"...\", \"BB.\"}",
+			"note":"Let's number rows and columns of the grid as follows:   The following sequences of moves are possible (the first coordinate of each cell is its row number, the second coordinate is column number):  1. (0, 0), (1, 2); 2. (0, 1), (1, 2); 3. (0, 2); 4. (1, 2), (0, 0); 5. (1, 2), (0, 1).",
+			"order":3
+		},
+		{
+			"expect":"Returns: 563200757",
+			"id":0,
+			"input":"{\"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\", \"....................\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 324",
+			"id":0,
+			"input":"{\"B..B\", \"B.B.\", \"...B\", \"BB.B\", \"....\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"field will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of field will contain between 1 and 20 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of field will have the same length."
+		},
+		{
+			"order":4,
+			"val":"Each character in field will be either 'B' or '.'."
+		},
+		{
+			"order":5,
+			"val":"field will contain no more than 8 'B' characters."
+		}
+	]
+}

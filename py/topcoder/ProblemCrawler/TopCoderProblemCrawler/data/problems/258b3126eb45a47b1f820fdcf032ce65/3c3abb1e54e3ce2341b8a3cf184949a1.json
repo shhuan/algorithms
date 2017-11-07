@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8062&rd=10778",
+	"statement":"<p> Our hero, Homer, has just woken to a horrible discovery! While sleeping at work, several of the power plants in the state have lost power. Even worse, his boss is on the way to his office, and if he doesn't have the situation fixed in time, he'll be fired. He's called you, desperately asking for help, and you've agreed to help him figure things out. </p><p> Homer has given you <b>connectionCost</b>, in which the j-th character of the i-th element indicates the cost to restart power plant j using power plant i; a digit ('0'-'9') stands for a cost of 0-9, while an uppercase letter ('A'-'Z') stands for a cost of 10-35. Homer has also given you the <b>plantList</b>, in which the i-th character indicates whether the i-th plant is still working after the power outage; a 'Y' indicates that it has power, otherwise, it is an 'N'. A plant can only be used to power another plant if it currently has power. Finally, he gives you <b>numPlants</b>, the minimum number of plants that need to be powered to save Homer's job. You need to return the minimum cost needed to power at least <b>numPlants</b> plants. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PowerPlants",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCost(String[] connectionCost, String plantList, int numPlants)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"YNN\"",
+			"id":0,
+			"input":"{\"024\", \"203\", \"430\"}",
+			"note":"The cheapest way is to restart plant 1 using plant 0. Once plant 1 is active, you can then use it to restart plant 2.",
+			"order":1
+		},
+		{
+			"expect":"\"YNN\"",
+			"id":0,
+			"input":"{\"0AB\", \"A0C\", \"CD0\"}",
+			"note":"Here we can use plant 0 to restart both of the others.",
+			"order":2
+		},
+		{
+			"expect":"\"NYNNN\"",
+			"id":0,
+			"input":"{\"1ABCD\", \"35HF8\", \"FDM31\", \"AME93\", \"01390\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"NNY\"",
+			"id":0,
+			"input":"{\"012\", \"123\", \"234\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"YYNYYNY\"",
+			"id":0,
+			"input":"{\"1309328\", \"DS2389U\", \"92EJFAN\", \"928FJNS\", \"FJS0DJF\", \"9FWJW0E\", \"23JFNFS\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\"YN\"",
+			"id":0,
+			"input":"{\"01\",\"20\"}",
+			"note":"The cost to restart plant 0 using plant 1 may differ from the cost of restarting plant 1 using plant 0.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"connectionCost will contain exactly N elements, where N is between 1 and 16, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of connectionCost will contain exactly N characters."
+		},
+		{
+			"order":3,
+			"val":"Each character of connectionCost will be a digit ('0'-'9') or uppercase letter ('A'-'Z')."
+		},
+		{
+			"order":4,
+			"val":"plantList will contain exactly N characters."
+		},
+		{
+			"order":5,
+			"val":"Each character of plantList will be 'Y' or 'N'."
+		},
+		{
+			"order":6,
+			"val":"At least one character of plantList will be 'Y'."
+		},
+		{
+			"order":7,
+			"val":"numPlants will be between 0 and N, inclusive."
+		}
+	]
+}

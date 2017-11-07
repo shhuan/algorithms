@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174.2,
+			"constraints":[],
+			"correctRatio":66.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13714&rd=16432",
+			"name":"Similars",
+			"notes":[],
+			"submission":936
+		},
+		{
+			"avgPts":321.66,
+			"constraints":[],
+			"correctRatio":74.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13707&rd=16432",
+			"name":"Autogame",
+			"notes":[],
+			"submission":388
+		},
+		{
+			"avgPts":675.85,
+			"constraints":[],
+			"correctRatio":83.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13708&rd=16432",
+			"name":"Revmatching",
+			"notes":[],
+			"submission":112
+		}
+	],
+	"name":"2015 TopCoder Open Algorithm > Round 1A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16432"
+}

@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10801&rd=14422",
+	"statement":"Little Romeo likes cosmic amoebas a lot. Recently he found an ancient box, and he believes that there is an amoeba inside it. Unfortunately, the box is protected by a combination lock which contains a row of digits, each between 0 and <b>K</b>, inclusive. The initial combination, from left to right, is given in the String <b>code</b>. Romeo thinks that the lock will open if he replaces each 0 digit with some digit between 1 and <b>K</b>, inclusive, such that the minimal distance between any pair of equal digits is as big as possible. The distance between two numbers in positions A and B, respectively, is |A-B|. Return the maximal possible minimal distance that can be achieved.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AmoebaCode",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int find(String code, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"\"01\"",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"\"1001\"",
+			"note":"There are only four possible ways to replace the '0's here:   In each of these combinations, the shortest distance between two equal digits is between consecutive equal digits (a distance of 1).",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"\"1010\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"01001\"",
+			"note":"One possible combination is \"31231\". There are two pairs of equal digits here. The distance between the two '3's is 3, and the distance between the two '1's is 3.",
+			"order":4
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"10012031001\"",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"K will be between 1 and 7, inclusive."
+		},
+		{
+			"order":2,
+			"val":"code will contain between K+1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character of code will be a digit between 0 and K, inclusive."
+		}
+	]
+}

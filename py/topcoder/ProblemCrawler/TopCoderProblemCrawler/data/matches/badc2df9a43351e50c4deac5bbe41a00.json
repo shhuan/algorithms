@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":185.04,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=204&rd=55",
+			"name":"Checkers",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":443.91,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=205&rd=55",
+			"name":"ArgParser",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":497.1,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=212&rd=55",
+			"name":"LongCalc",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2001 Invitational > Semifinals C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=55"
+}

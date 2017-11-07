@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2945&rd=5884",
+	"statement":"<p> A simple way to blur an image is to replace each pixel with the average of it and its neighboring pixels. The value of each pixel in the blurred image is computed by adding the values of the 3x3 region centered at the corresponding pixel of the original image, and dividing by 9. </p> <p> When computing the value of pixels on the border, the 3x3 region will fall partially outside of the original image. Assume that pixels outside of the original image are black. </p> <p> For example, given the following original image: </p> \n <center> \n  <img src=\"http://172.16.100.16/contest/problem/UnBlur/unblur_fig1a.gif\" /> \n </center> <p> the algorithm described above results in the following blurred image: </p> \n <center> \n  <img src=\"http://172.16.100.16/contest/problem/UnBlur/unblur_fig1b.gif\" /> \n </center> <p> Write a method that will, given a blurred image, return the original image. The original image will contain only black and white pixels. All pixels on the top and bottom rows and left and right columns of the original image will be black. All values of the blurred image will therefore be: 0 (black), 1/9, 2/9, 3/9, 4/9, 5/9, 6/9, 7/9, 8/9, or 9/9 (white). </p> <p> The blurred image will be given as a String[]. Each character in the blurred image will be a character between '0' and '9', inclusive, giving the value of that pixel multiplied by nine. For example, the blurred image above would be given as: </p> <pre>\n\n{ &quot;1233321000000000123332100000000000000000000&quot;,\n  &quot;1244422233222332334343323322232112332223321&quot;,\n  &quot;1255523344343443545343434434343233432334432&quot;,\n  &quot;0033303455465775633011445546454355753457753&quot;,\n  &quot;0033303333364543533011433336333364521346542&quot;,\n  &quot;0033303455464532445343545546454355753446542&quot;,\n  &quot;0022202344342200234343434434343233432323221&quot;,\n  &quot;0011101233221100123332223322232112332211111&quot; }\n</pre> <p> Return the original image as a String[]. For each pixel in the original image, return a '.' if it is black and '#' if it is white. For example, the original image for the example above would be returned as: </p> <pre>\n{ &quot;...........................................&quot;,\n  &quot;.#####...........#####.....................&quot;,\n  &quot;...#...####.####.#...#.####.###..####.####.&quot;,\n  &quot;...#...#..#.#..#.#.....#..#.#..#.#....#..#.&quot;,\n  &quot;...#...#..#.####.#.....#..#.#..#.###..####.&quot;,\n  &quot;...#...#..#.#....#...#.#..#.#..#.#....#.#..&quot;,\n  &quot;...#...####.#....#####.####.###..####.#..#.&quot;,\n  &quot;...........................................&quot; } \n</pre> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Unblur",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"original",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] original(String[] blurred)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"....\", \".##.\", \"....\" }",
+			"id":0,
+			"input":"{ \"1221\", \"1221\", \"1221\" }",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \".....\", \".....\", \".....\", \".....\" }",
+			"id":0,
+			"input":"{ \"00000\", \"00000\", \"00000\", \"00000\" }",
+			"note":"A solid black image blurs to all zeros.",
+			"order":2
+		},
+		{
+			"expect":"Returns: { \".............\", \"...#.#.#.#...\", \"..#.#.#.#.#..\", \".............\", \".#.#.#.#.#.#.\", \"..#.#.#.#.#..\", \".............\" }",
+			"id":0,
+			"input":"{ \"0011212121100\", \"0123333333210\", \"0123333333210\", \"1233333333321\", \"1233333333321\", \"1233333333321\", \"0112121212110\" } ",
+			"note":"    ",
+			"order":3
+		},
+		{
+			"expect":"Returns: { \"...........................................\", \".#####...........#####.....................\", \"...#...####.####.#...#.####.###..####.####.\", \"...#...#..#.#..#.#.....#..#.#..#.#....#..#.\", \"...#...#..#.####.#.....#..#.#..#.###..####.\", \"...#...#..#.#....#...#.#..#.#..#.#....#.#..\", \"...#...####.#....#####.####.###..####.#..#.\", \"...........................................\" }",
+			"id":0,
+			"input":"{ \"1233321000000000123332100000000000000000000\", \"1244422233222332334343323322232112332223321\", \"1255523344343443545343434434343233432334432\", \"0033303455465775633011445546454355753457753\", \"0033303333364543533011433336333364521346542\", \"0033303455464532445343545546454355753446542\", \"0022202344342200234343434434343233432323221\", \"0011101233221100123332223322232112332211111\" } ",
+			"note":"This is the example from the problem statement.",
+			"order":4
+		},
+		{
+			"expect":"Returns: { \".............\", \".....###.....\", \"...#######...\", \"..#########..\", \"..####.####..\", \".####...####.\", \".####...####.\", \"..####.####..\", \"..#########..\", \"...#######...\", \".....###.....\", \".............\" }",
+			"id":0,
+			"input":"{ \"0000123210000\", \"0012456542100\", \"0135789875310\", \"0258988898520\", \"1479865689741\", \"2589742479852\", \"2589742479852\", \"1479865689741\", \"0258988898520\", \"0135789875310\", \"0012456542100\", \"0000123210000\" } ",
+			"note":"   ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"blurred will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of blurred will have a length between 1 and 50, inclusive, and contain only characters between '0' and '9', inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of blurred will have the same length."
+		},
+		{
+			"order":4,
+			"val":"blurred will be the result of blurring a black and white image."
+		}
+	]
+}

@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12917&rd=15837",
+	"statement":"Fox Ciel has a robot. The robot is located on an infinite plane. At the beginning, the robot starts at the coordinates (0, 0). The robot can then make several steps. The steps are numbered starting from 0.<br /><br /> <br /><br /> In each step, Ciel must choose one of four directions for the robot: left (x coordinate decreases), right (x coordinate increases), up (y coordinate increases), or down (y coordinate decreases). In step k, the robot will move 3^k units in the chosen direction. It is not allowed to skip a step.<br /><br /> <br /><br /> You are given ints <b>x</b> and <b>y</b>. Return &quot;Possible&quot; (quotes for clarity) if it is possible that the robot reaches the point (<b>x</b>,<b>y</b>) after some (possibly zero) steps. Otherwise, return &quot;Impossible&quot;.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PowerOfThree",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"ableToGet",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String ableToGet(int x, int y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"1",
+			"note":"In step 0 Ciel will send the robot right to (1,0). In step 1 she will send it up to (1,3).",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"0",
+			"note":"The robot will move from (0,0) down to (0,-1) and then up to (0,2).",
+			"order":2
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"1",
+			"note":"Note that it is not allowed to move the robot right in step 0, skip step 1, and then move the robot up in step 2.",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"18252",
+			"id":0,
+			"input":"-6890",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"-1000000000",
+			"id":0,
+			"input":"1000000000",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"y will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		}
+	]
+}

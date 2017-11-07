@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11873&rd=15092",
+	"statement":"Ms. Ciel loves rabbits. She has a large special cage for her rabbits. The cage is protected by a special lock: a board containing a grid. <br /><br /> <br /><br /> <br /><br /> The board contains an N times M grid. We can assign integer coordinates to the vertices of the grid. (Vertices are the points where horizontal and vertical grid lines intersect.) The top left corner of the grid will get the coordinates (0,0) and the bottom right corner coordinates (N,M). Each line segment between two adjacent vertices is labeled by an integer from 0 to 9, inclusive. You are given two String[]s <b>horizontal</b> and <b>vertical</b> containing these labels in the format defined below. \n <ul> \n  <li>For all i, j such that 0 &lt;= i &lt;= N and 0 &lt;= j &lt;= M-1, there is a line segment between the points (i,j) and (i,j+1). This line segment has the label <b>horizontal</b>[i][j].</li> \n  <li>For all i, j such that 0 &lt;= i &lt;= N-1 and 0 &lt;= j &lt;= M, there is a line segment between the points (i,j) and (i+1,j). This line segment has the label <b>vertical</b>[i][j].</li> \n </ul> <br /><br /> <br /><br /> <br /><br /> To unlock this board, you must put your finger on the point (0, 0), and move to the point (N, M). In each step you can only go down or right. I.e., if you are currently at the point (i,j), your next step may take you either to (i,j+1), or to (i+1,j). By moving your finger you picked one of the paths from the top left to the bottom right corner. The path consists of N+M line segments, and each of those line segments has an integer label. The cost of a path is the sum of those labels. Let S be the smallest value among the costs of all valid paths from the top left to the bottom right corner. Inside the board there is a counter that computes the sum of all numbers that are on the line segments you used in your path. The lock will open if and only if you picked a path with cost exactly S, i.e., a path with the smallest possible cost. <br /><br /> <br /><br /> <br /><br /> Finding the way to unlock a given board is a shortest path problem. You could surely solve it, but Ciel is just a young fox. She does not know any complicated algorithms such as Dijkstra, Bellman-Ford, or Floyd-Warshall. Thus unlocking the board is too hard for her. She wants you to modify her board to a state in which it can be unlocked by any path from the top left to the bottom right corner. In other words, on the resulting board all valid paths must have exactly the same cost T. The only allowed operation is to increase some of the labels. (The new labels must again be integers, but they are allowed to exceed 9.) Compute and return the smallest possible value of T.",
+	"notes":[{
+		"order":1,
+		"val":"Note that Ciel can always achieve her goal: for example, she can increase every number to X, where X is the maximal number over all numbers on the board."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PasswordXGrid",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minSum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minSum(String[] horizontal, String[] vertical)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"32\"}",
+			"id":0,
+			"input":"{\"1\",\"4\"}",
+			"note":"We have two possible paths. One of them has the cost 1+2 = 3, the other one 3+4 = 7. As the costs are not equal, we have to modify some of the labels. One possible solution is to increase the label 1 to 5. Then both paths have the same cost: 7.",
+			"order":1
+		},
+		{
+			"expect":"{\"361\"}",
+			"id":0,
+			"input":"{\"47\", \"59\"}",
+			"note":"This is how the grid looks like:  One possible solution is to increase 3 to 5 and 7 to 14.",
+			"order":2
+		},
+		{
+			"expect":"{\"890\", \"176\"}",
+			"id":0,
+			"input":"{\"36\", \"23\", \"49\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"58585858\"}",
+			"id":0,
+			"input":"{\"8888585\",\"5888585\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{\"44444444\",\"44444444\",\"44444444\"}",
+			"id":0,
+			"input":"{\"7777777\",\"7777777\",\"7777777\",\"7777777\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N and M will be between 1 and 40, inclusive."
+		},
+		{
+			"order":2,
+			"val":"horizontal will contain N+1 elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of horizontal will contain M characters."
+		},
+		{
+			"order":4,
+			"val":"vertical will contain N elements."
+		},
+		{
+			"order":5,
+			"val":"Each element of vertical will contain M+1 characters."
+		},
+		{
+			"order":6,
+			"val":"Each character in each element of horizontal and vertical will be a digit: '0'-'9'."
+		}
+	]
+}

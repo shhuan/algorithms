@@ -1,0 +1,113 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6464&rd=9994",
+	"statement":"<p> Byterland Mobile, a mobile phone service provider, normally charges 10 cents per SMS (text message). In addition, it also offers monthly packs, which let you purchase a certain number of SMSs each month at a special price. You may purchase any number of these packs. If you exceed the number of SMSs covered by your monthly packs, the excess messages are charged at the normal rate. </p> <p> You expect to send <b>totalSMS</b> SMSs each month, and you would like to minimize your monthly payment. There are two monthly packs available. The first pack costs <b>pay1</b> cents and includes <b>pack1</b> messages, and the second pack costs <b>pay2</b> cents and includes <b>pack2</b> messages. You may purchase any combination of these packs. Remember that it is sometimes cheaper to buy more SMSs than you actually need (see example #2). Return the minimal monthly payment in cents. </p>",
+	"notes":[{
+		"order":1,
+		"val":"For technical reasons, we cannot use long parameters, so we are using Strings instead."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MonthlyPayment",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimalPayment",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long minimalPayment(String totalSMS, String pack1, String pay1, String pack2, String pay2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"10\"",
+			"id":0,
+			"input":"\"92\"",
+			"note":"The first pack offers 10 messages for 90 cents, and the second pack offers 20 messages for 170 cents. You want to buy 92 messages, so you choose one of the first pack and four of the second pack. You will pay for the remaining 2 messages at the normal rate of 10 cents each. The total price is 90 + 170*4 + 10*2 = 790 cents.",
+			"order":1
+		},
+		{
+			"expect":"\"10\"",
+			"id":0,
+			"input":"\"90\"",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"\"10\"",
+			"id":0,
+			"input":"\"99\"",
+			"note":"We can buy five of the second pack. The total number of SMSs covered by the purchased packs exceeds 99, but this is the cheapest way.",
+			"order":3
+		},
+		{
+			"expect":"\"1\"",
+			"id":0,
+			"input":"\"10\"",
+			"note":"Packs do not lead to a cheaper way in this case.",
+			"order":4
+		},
+		{
+			"expect":"\"10\"",
+			"id":0,
+			"input":"\"0\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\"1\"",
+			"id":0,
+			"input":"\"28\"",
+			"order":6
+		},
+		{
+			"expect":"\"63791\"",
+			"id":0,
+			"input":"\"450702146848\"",
+			"order":7
+		},
+		{
+			"expect":"\"6\"",
+			"id":0,
+			"input":"\"45\"",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"totalSMS will be an integer between 0 and 1012, inclusive, with no extra leading zeroes."
+		},
+		{
+			"order":2,
+			"val":"pack1, and pack2 will each be an integer between 1 and 1012, inclusive, with no extra leading zeroes."
+		},
+		{
+			"order":3,
+			"val":"pay1 and pay2 will each be an integer between 1 and 1013, inclusive, with no extra leading zeroes."
+		},
+		{
+			"order":4,
+			"val":"pay1 will be less than or equal to 20 * pack1."
+		},
+		{
+			"order":5,
+			"val":"pay2 will be less than or equal to 20 * pack2."
+		}
+	]
+}

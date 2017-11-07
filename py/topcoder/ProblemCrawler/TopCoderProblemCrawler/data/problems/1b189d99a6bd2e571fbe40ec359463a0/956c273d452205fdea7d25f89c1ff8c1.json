@@ -1,0 +1,89 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10823&rd=14151",
+	"statement":"Punctuality is not exactly one of Dr. Wesley's strengths. His student John always shows up for class at the scheduled starting time, but he never knows when Dr. Wesley will arrive. This is a problem for John because he cannot stay in the same place doing nothing for a long period of time. Therefore, he has come up with the following method to reduce the amount of time he spends waiting by the classroom door. <br /><br /> \n <ul>\n  <li>John arrives at time 0.</li> \n  <li>John waits for Dr. Wesley to arrive.</li> \n  <li>If after <b>waitTime</b> seconds Dr. Wesley has not arrived yet, John goes to take a walk for <b>walkTime</b> seconds.</li> \n  <li>John therefore arrives back to the classroom exactly at time <b>waitTime</b> + <b>walkTime</b>.</li> \n  <li>If Dr. Wesley has not arrived yet, John waits another <b>waitTime</b> seconds and then proceeds to take a new walk. The process is repeated until John becomes aware that Dr. Wesley has arrived.</li> \n </ul> Overall, John stands in front of the class door from time 0 to time <b>waitTime</b>, inclusive, then from time <b>walkTime</b> + <b>waitTime</b> to time <b>walkTime</b> + 2*<b>waitTime</b>, inclusive, and so on. At all other time moments he walks outside. <br /><br /> <br /><br /> This has solved John's patience issues, but it has caused a new problem. When John returns from a walk, if Dr. Wesley is already in the classroom, it will appear that John has arrived late to class. Dr. Wesley does not like that, and he will deny John access to the class if he arrives <b>lateTime</b> or more seconds after the time at which Dr. Wesley arrived.<br /><br /> <br /><br /> There are multiple variables that affect Dr. Wesley's arrival time, but for the purpose of the problem, assume that the arrival time will be a real number chosen uniformly from <b>bestArrival</b> to <b>worstArrival</b>, inclusive. Return the probability that John will be denied access to Dr. Wesley's class.",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LateProfessor",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getProbability(int waitTime, int walkTime, int lateTime, int bestArrival, int worstArrival)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"30",
+			"id":0,
+			"input":"20",
+			"note":"The professor will arrive at some random moment between 0 and 50 seconds, inclusive. During this interval, these are John's activities:  John will only be too late if the professor arrives while he is away, and more than 10 seconds before he returns. This only happens if the professor arrives strictly between times 20 and 40. The probability that this will happen is (40-20)/(50-0) = 0.4.",
+			"order":1
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"20",
+			"note":"If the professor arrives between 30 and 40 seconds or between 70 and 90 seconds, John will be late to the class.",
+			"order":2
+		},
+		{
+			"expect":"40",
+			"id":0,
+			"input":"20",
+			"note":"John's walking time is 40 seconds. Hence, even if the professor arrives while John is taking a walk, John will always be less than 50 seconds late.",
+			"order":3
+		},
+		{
+			"expect":"230",
+			"id":0,
+			"input":"101",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"20",
+			"note":"Dr. Wesley will always arrive at time 90 seconds. John will arrive at time 100 seconds after taking two different walks. Since the time difference is equal to 10 seconds, John will be too late.",
+			"order":5
+		},
+		{
+			"expect":"600",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"waitTime, walkTime, lateTime and worstArrival will each be between 1 and 10000000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"bestArrival will be between 0 and worstArrival, inclusive."
+		}
+	]
+}

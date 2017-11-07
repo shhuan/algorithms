@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":231.49,
+			"constraints":[],
+			"correctRatio":63.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=198&rd=3999",
+			"name":"GlassCo",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":405.19,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=199&rd=3999",
+			"name":"WordSquare",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":818.47,
+			"constraints":[],
+			"correctRatio":62.96,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=200&rd=3999",
+			"name":"BinString",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"Single Round Match 36 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3999"
+}

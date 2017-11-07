@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":241.59,
+			"constraints":[],
+			"correctRatio":97.95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6630&rd=9995",
+			"name":"DigitsSum",
+			"notes":[],
+			"submission":342
+		},
+		{
+			"avgPts":322.43,
+			"constraints":[],
+			"correctRatio":77.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6629&rd=9995",
+			"name":"SillySudoku",
+			"notes":[],
+			"submission":303
+		},
+		{
+			"avgPts":544,
+			"constraints":[],
+			"correctRatio":74.07,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6625&rd=9995",
+			"name":"ThreeMines",
+			"notes":[],
+			"submission":54
+		}
+	],
+	"name":"Single Round Match 315 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9995"
+}

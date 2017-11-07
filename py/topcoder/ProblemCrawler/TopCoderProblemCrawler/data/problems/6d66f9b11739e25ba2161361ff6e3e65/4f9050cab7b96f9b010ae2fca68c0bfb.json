@@ -1,0 +1,115 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10741&rd=14149",
+	"statement":"You have just entered the Colorful Maze. You are given the layout of the maze in the String[] <b>maze</b>, where the j-th character of the i-th element is the cell at row i, column j. The following types of cells exist in the maze: \n <ul> \n  <li>'#' - <i>Wall. </i> You cannot enter these cells. </li> \n  <li>'.' - <i>Empty cell. </i> You can walk freely into these cells. </li> \n  <li>'A'-'G' - <i>Empty cell with a colored floor. </i> Each of 'A'-'G' represents a different color. You can walk into these cells. </li> \n  <li>'$' - <i>Entrance. </i> This is the cell in which you start. </li> \n  <li>'!' - <i>Exit. </i> This is the cell you must reach to finish the maze. </li> \n </ul><br /><br /> Colored floors with certain colors are <i>dangerous</i>, but you don't know upfront which colors are dangerous. You only know the probability of each color being dangerous. You are given a int[] <b>trap</b>, where the first element is the percent probability of color 'A' being dangerous, the second element is the percent probability of color 'B' being dangerous, and so on. When you step into a cell with a dangerous color, you get damaged by a trap. If you get damaged twice, you die. <br /><br /> <br /><br /> When you're inside the maze, you can only move in the four cardinal directions. You cannot move diagonally. Return the probability that you can finish the maze without dying, assuming that you walk according to a strategy that maximizes this probability. See examples for further clarification.",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9. "
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ColorfulMaze",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getProbability(String[] maze, int[] trap)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ 50, 40, 0, 0, 0, 0, 0 }",
+			"id":0,
+			"input":"{ \".$.\", \"A#B\", \"A#B\", \".!.\" }",
+			"note":"First, go left one cell, and then down one cell into the 'A'. One of two things might happen with equal probability:  The probability of reaching the exit is 0.5 * 0.6 (the first case) + 0.5 (the second case) = 0.8.  The probability is the same if you try 'B' first. ",
+			"order":1
+		},
+		{
+			"expect":"{ 20, 70, 40, 0, 0, 0, 0 }",
+			"id":0,
+			"input":"{ \".$.\", \"A#B\", \"A#C\", \".!.\" }",
+			"note":"If you try 'A' first:  The probability is 0.2 * 0.3 * 0.6 (the first case) + 0.8 (the second case) = 0.836.  If you try 'B' first:  The probability is 0.7 * 0.8 (the first case) + 0.3 (the second case) = 0.86.  You see that trying 'B' first is a better choice.",
+			"order":2
+		},
+		{
+			"expect":"{ 10, 10, 10, 10, 10, 10, 10 }",
+			"id":0,
+			"input":"{ \"$A#\", \".#.\", \"#B!\" }",
+			"note":"No matter how you walk, you cannot reach the exit, so you should return 0. ",
+			"order":3
+		},
+		{
+			"expect":"{ 50, 50, 0, 0, 0, 0, 0 }",
+			"id":0,
+			"input":"{ \"$A..\", \"##.A\", \"..B!\" }",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{ 50, 50, 100, 0, 0, 0, 0 }",
+			"id":0,
+			"input":"{ \"$C..\", \"##.A\", \"..B!\" }",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{ 10, 20, 30, 40, 50, 60, 70 }",
+			"id":0,
+			"input":"{ \".$.D.E.F.G.!.\" }",
+			"order":6
+		},
+		{
+			"expect":"{ 90, 90, 25, 50, 75, 0, 0 }",
+			"id":0,
+			"input":"{ \"CC...AA\", \"C##.##A\", \"!.E.E.$\", \"D##.##B\", \"DD...BB\" }",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maze will contain between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each element of maze will contain between 1 and 50 characters, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"Each element of maze will contain the same number of characters. "
+		},
+		{
+			"order":4,
+			"val":"Each character in maze will be one of '#', '.', 'A', 'B', 'C', 'D', 'E', 'F', 'G', '$', and '!'."
+		},
+		{
+			"order":5,
+			"val":"maze will contain exactly one '$' and exactly one '!'."
+		},
+		{
+			"order":6,
+			"val":"trap will contain exactly 7 elements. "
+		},
+		{
+			"order":7,
+			"val":"Each element of trap will be between 0 and 100, inclusive. "
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":222.06,
+			"constraints":[],
+			"correctRatio":84.37,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6804&rd=10002",
+			"name":"GroupWork",
+			"notes":[],
+			"submission":467
+		},
+		{
+			"avgPts":314.09,
+			"constraints":[],
+			"correctRatio":41.41,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6779&rd=10002",
+			"name":"ExtendedDominoes",
+			"notes":[],
+			"submission":99
+		},
+		{
+			"avgPts":535.39,
+			"constraints":[],
+			"correctRatio":65.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6646&rd=10002",
+			"name":"StrawberryFieldsOnFire",
+			"notes":[],
+			"submission":103
+		}
+	],
+	"name":"Single Round Match 322 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10002"
+}

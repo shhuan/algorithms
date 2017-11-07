@@ -1,0 +1,89 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12345&rd=15186",
+	"statement":"Bob is playing with his ball destroyer robot. Initially, Bob had <i>r</i> red balls, <i>g</i> green balls and <i>b</i> blue balls. The robot repeated the following 3-step program until there were no balls left:<br /><br /> <br /><br /> \n <ul>\n  <li>If there is at least one red ball available, destroy one red ball.</li> \n  <li>If there is at least one green ball available, destroy one green ball.</li> \n  <li>If there is at least one blue ball available, destroy one blue ball.</li> \n </ul> Bob forgot how many balls of each color he initially had. He only remembers that there were <b>n</b> balls in total and that the <b>k</b>-th (1-based index) ball that was destroyed was red. Return the total number of different initial settings that match that description. Formally, return the number of different tuples (<i>r</i>, <i>g</i>, <i>b</i>) such that <i>r</i> + <i>g</i> + <i>b</i> = <b>n</b> and the <b>k</b>-th ball that was destroyed was red.",
+	"notes":[{
+		"order":1,
+		"val":"It follows from the constraints that the return value will always fit into a long."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AlternateColors2",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countWays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countWays(int n, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"There was only one ball. This ball was necessarily the first ball destroyed. Therefore, it had to be red.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"There are three cases in which the third ball to be destroyed is red: ",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1000",
+			"note":"In order for the second destroyed ball to be red, there would have to be zero balls of the other colors.",
+			"order":5
+		},
+		{
+			"expect":"100000",
+			"id":0,
+			"input":"100000",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 100000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"k will be between 1 and n, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":231.78,
+			"constraints":[],
+			"correctRatio":98.07,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2292&rd=10709",
+			"name":"NumberofFiboCalls",
+			"notes":[],
+			"submission":571
+		},
+		{
+			"avgPts":242.88,
+			"constraints":[],
+			"correctRatio":12.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7481&rd=10709",
+			"name":"FibonacciKnapsack",
+			"notes":[],
+			"submission":188
+		},
+		{
+			"avgPts":661.83,
+			"constraints":[],
+			"correctRatio":5.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6879&rd=10709",
+			"name":"PaperRacing",
+			"notes":[],
+			"submission":18
+		}
+	],
+	"name":"Single Round Match 352 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10709"
+}

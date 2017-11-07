@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10726&rd=14180",
+	"statement":"John is playing with balls. All of the balls are identical in weight and considered to have a zero radius. All balls are located on the same straight line and can move only along this line. If a ball rolling to the right and a ball rolling to the left at the same speed collide, they do not change speed, but they change direction. <br /><br /> <br /><br /> You are given int[] <b>x</b>. <b>x</b>[i] is the initial position of the i-th ball. John decides the direction for each ball (right or left) with equal probability. At time 0, he rolls the balls in the chosen directions simultaneously at a speed of one unit per second. Return the expected number of bounces between all balls during <b>T</b> seconds (including those collisions that happen exactly at <b>T</b> seconds).",
+	"notes":[
+		{
+			"order":1,
+			"val":"There is no friction. Each ball continues rolling at the same speed forever."
+		},
+		{
+			"order":2,
+			"val":"Your return value must have an absolute or relative error less than 1e-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BouncingBalls",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expectedBounces",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expectedBounces(int[] x, int T)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{5, 8}",
+			"note":"If he rolls the left ball to the right and right ball to the left, they collide at time 1.5. Otherwise, they don't collide.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{5, 8}",
+			"note":" is the same as in example 0, but  is too small.",
+			"order":2
+		},
+		{
+			"expect":"458",
+			"id":0,
+			"input":"{91, 857, 692, 54, 8679, 83, 792, 86, 9537, 913, 64, 592}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"386",
+			"id":0,
+			"input":"{75432}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 1 and 12 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of x will be between 0 and 100,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of x will be distinct."
+		},
+		{
+			"order":4,
+			"val":"T will be between 1 and 100,000,000, inclusive."
+		}
+	]
+}

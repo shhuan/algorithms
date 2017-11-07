@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":212.27,
+			"constraints":[],
+			"correctRatio":79.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=333&rd=4028",
+			"name":"Quantize",
+			"notes":[],
+			"submission":67
+		},
+		{
+			"avgPts":267.94,
+			"constraints":[],
+			"correctRatio":55.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=311&rd=4028",
+			"name":"Phone",
+			"notes":[],
+			"submission":56
+		},
+		{
+			"avgPts":474.63,
+			"constraints":[],
+			"correctRatio":22.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=314&rd=4028",
+			"name":"FastFood",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"Single Round Match 57 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4028"
+}

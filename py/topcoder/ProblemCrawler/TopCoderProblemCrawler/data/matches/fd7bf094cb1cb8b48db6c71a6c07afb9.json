@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.23,
+			"constraints":[],
+			"correctRatio":49.28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2340&rd=5071",
+			"name":"ClapLight",
+			"notes":[],
+			"submission":138
+		},
+		{
+			"avgPts":423.14,
+			"constraints":[],
+			"correctRatio":84.81,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1283&rd=5071",
+			"name":"Assemble",
+			"notes":[],
+			"submission":79
+		},
+		{
+			"avgPts":443.05,
+			"constraints":[],
+			"correctRatio":53.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2825&rd=5071",
+			"name":"Lister",
+			"notes":[],
+			"submission":26
+		}
+	],
+	"name":"Single Round Match 196 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5071"
+}

@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6073&rd=9984",
+	"statement":"<p>The goal of Notched Wood Bars puzzle is to complete the square lattice by inserting the given bars into each other. Each element of the puzzle is a rectangular bar with two or more notches. Each notch has only two kinds of depth, either shallow or deep.</p> <p>The lattice has to be constructed by inserting the bars vertically from below and horizontally from above or vice versa, matching each shallow notch with a deep one. Each bar can therefore be oriented with the notches facing upwards or downwards.</p> <pre>\n<img src=\"http://www.topcoder.com/contest/problem/NotchedWoodBarsPuzzle/puzzle1.gif\" />  <img src=\"http://www.topcoder.com/contest/problem/NotchedWoodBarsPuzzle/puzzle2.gif\" />\n</pre> <p>You have 2*K bars in the puzzle, each with K notches, and you must determine the number of ways the lattice can be constructed. Notice that you must count only distinct configurations. Two configurations are considered distinct if one is not a rotation of the other. More specifically, if one configuration can be rotated in any way (in all three dimensions) such that all of its pieces exactly coincide with identical pieces in another configuration, then the two configurations are not distinct.</p> <p>You will be given a String[] <b>bars</b>. Each element of <b>bars</b> represents the notches on a single bar. 'S' represents a shallow notch, and 'D' represents a deep notch. Return the number of distinct ways to complete the puzzle, or 0 if the puzzle is incorrect and cannot be completed.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NotchedWoodBarsPuzzle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countSolutions",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countSolutions(String[] bars)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"SD\", \"SD\", \"SD\", \"SD\"}",
+			"note":"The only way to solve this puzzle is to insert \"SD\" and \"DS\" from below, and \"DS\" and \"SD\" from above. All other correct configurations are rotations of this one.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"SDS\", \"SDS\", \"SDS\", \"DDD\",\"SSS\",\"DDD\"}",
+			"note":"There are two ways to solve this puzzle. We can insert from below either \"SDS\", \"SDS\" and \"SDS\" or \"SDS\", \"SSS\" and \"SDS\".",
+			"order":2
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"SDD\", \"SSS\", \"SDS\", \"DDD\", \"SDD\", \"DSS\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"SDDS\", \"SDDS\", \"SDDS\", \"SDDS\", \"SDDS\", \"SDDS\", \"SDDS\", \"SDDS\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 80",
+			"id":0,
+			"input":"{\"DSDD\", \"DDSD\", \"SDDD\", \"SSSS\", \"DSSD\", \"DSSS\", \"SSDD\", \"SDSD\"}",
+			"order":5
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"SSSS\",\"SSSS\",\"SSSS\",\"SSSS\",\"DDDD\",\"DDDD\",\"DDDD\",\"DDDD\"}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"bars will contain exactly 4, 6, or 8 elements."
+		},
+		{
+			"order":2,
+			"val":"The number of characters in each element of bars will be equal to the number of elements in bars divided by 2."
+		},
+		{
+			"order":3,
+			"val":"Each element in bars will consist of only 'S' and 'D' characters. "
+		}
+	]
+}

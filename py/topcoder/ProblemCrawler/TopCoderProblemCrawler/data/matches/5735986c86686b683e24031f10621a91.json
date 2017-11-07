@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":197.91,
+			"constraints":[],
+			"correctRatio":46.42,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8148&rd=10908",
+			"name":"LazyCat",
+			"notes":[],
+			"submission":293
+		},
+		{
+			"avgPts":282.85,
+			"constraints":[],
+			"correctRatio":33.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8150&rd=10908",
+			"name":"TristripeBacteria",
+			"notes":[],
+			"submission":238
+		},
+		{
+			"avgPts":578.23,
+			"constraints":[],
+			"correctRatio":13.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7738&rd=10908",
+			"name":"SimilarPairs",
+			"notes":[],
+			"submission":30
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Online Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10908"
+}

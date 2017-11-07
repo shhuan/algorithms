@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":218.9,
+			"constraints":[],
+			"correctRatio":85.28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2969&rd=5877",
+			"name":"TheThe",
+			"notes":[],
+			"submission":197
+		},
+		{
+			"avgPts":481.02,
+			"constraints":[],
+			"correctRatio":45.68,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2979&rd=5877",
+			"name":"FewestTurns",
+			"notes":[],
+			"submission":81
+		}
+	],
+	"name":"2004 TCO > Qualification Round Set 5",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5877"
+}

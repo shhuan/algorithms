@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":187.83,
+			"constraints":[],
+			"correctRatio":48.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10268&rd=13696",
+			"name":"FindingSquareInTable",
+			"notes":[],
+			"submission":594
+		},
+		{
+			"avgPts":290.15,
+			"constraints":[],
+			"correctRatio":71.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10266&rd=13696",
+			"name":"HexatridecimalSum",
+			"notes":[],
+			"submission":404
+		},
+		{
+			"avgPts":461.45,
+			"constraints":[],
+			"correctRatio":25.81,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10265&rd=13696",
+			"name":"IncreasingLists",
+			"notes":[],
+			"submission":31
+		}
+	],
+	"name":"Single Round Match 434 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13696"
+}

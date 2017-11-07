@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":214.8,
+			"constraints":[],
+			"correctRatio":88.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2990&rd=5875",
+			"name":"Rank",
+			"notes":[],
+			"submission":177
+		},
+		{
+			"avgPts":529.84,
+			"constraints":[],
+			"correctRatio":76.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2974&rd=5875",
+			"name":"GeneticCrossover",
+			"notes":[],
+			"submission":84
+		}
+	],
+	"name":"2004 TCO > Qualification Round Set 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5875"
+}

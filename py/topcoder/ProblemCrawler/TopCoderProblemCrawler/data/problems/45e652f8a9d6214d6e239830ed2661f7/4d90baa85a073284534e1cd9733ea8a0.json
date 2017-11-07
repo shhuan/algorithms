@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6625&rd=9995",
+	"statement":"A Company that Makes Everything (ACME) has entered the surface mining business. They bought a rectangular field which is split into cells, with each cell having a profit value. A mine is a non-empty rectangular region, and the profit of a mine is equal to the sum of the values of all its cells. ACME wants to extract ore from three different non-overlapping mines. You are to choose these mines to maximize the total profit. <br /><br /><br /><br /> You are given a String[] field where each character represents the profit value of a single cell. Characters 'a' to 'z' correspond to the numbers 0 through 25 and characters 'B' to 'Z' correspond to numbers -1 through -25. The jth char in the ith element of field is the profit value of the cell at row i, column j. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ThreeMines",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maximumProfit",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maximumProfit(String[] field)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{ \"bbbb\", \"bBBB\", \"BBbb\", \"BBBB\"}",
+			"note":"One of the optimal solutions is the following: One mine contains all cells in the first row, the second mine contains the cell (1, 0), and the third mine contains the cells (2, 2) and (2, 3).",
+			"order":1
+		},
+		{
+			"expect":"Returns: 14",
+			"id":0,
+			"input":"{\"cfCBDCbcdZb\"}",
+			"note":"A single row example.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 54",
+			"id":0,
+			"input":"{\"d\", \"c\", \"B\", \"m\", \"Z\", \"h\", \"g\", \"B\", \"z\", \"G\", \"H\", \"b\", \"Y\"} ",
+			"note":"A single column example.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 62",
+			"id":0,
+			"input":"{ \"hBhh\", \"BBBB\", \"BBBB\", \"hBhh\", \"hBhh\"}",
+			"note":"This test has only one solution. ",
+			"order":4
+		},
+		{
+			"expect":"Returns: -3",
+			"id":0,
+			"input":"{ \"BB\", \"BB\"}",
+			"note":"It is possible for the maximum possible profit to be negative.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 671",
+			"id":0,
+			"input":"{ \"ZcabcaacacabcbbbcababacaccbZaa\", \"acaaccccacbccbaaccabaccaacbZbc\", \"bcbaacbcbbccbbcbabbbbaZcbcbccb\", \"cccacbabccbZbcbabaacbbZcbacbab\", \"cacbabbcabbabbcacbcbbcaacaabbc\", \"bacZcacaaccbabbcccccabcaacbaca\", \"cbcccacabcabacaccacaZbbcbcacbb\", \"cZbbbcaacbaacaabZcaccbcZccbbab\", \"Zcababaacbbbbccbcbbaccacacbbcc\", \"cZcccaaabbcbcbccccbcbaabbbccbb\", \"bbcaacacabccababacbccacccbbaba\", \"cccbbcaZabccacabbccccabbabbbab\", \"bbbacbccbbcaabaaabccbcaabcacaa\", \"cbbababbccccbcccbaacacccaabaac\", \"aaccaccaccbabbccaaaacbacccacca\", \"bbbcabcabZZcabcabbaacZbaaabaZb\", \"aaabbabcabaaacbcccccbbcabcccbc\", \"bbbaccbacacaccbbaccabacbbbaaac\", \"acaaacccbabbccbcbabbcbaaaccabb\", \"bcaaaaabcbabaaabccacccbaacbbbc\", \"bZcbcbcccaabccaabbccbababbbcca\", \"cbbbbcccabcabcbacaaaaabbbbbcac\", \"ccbbcbacacbbcacacbaabcbbacbaba\", \"cbbbaabaabbbbaccabbcbcaccaaaac\", \"abZcabaacbbcacbaaabccbabacacaa\", \"aabccacbabaacaccccbbbbcccccaca\", \"aabcbaaacbabcaccbaabbbabbabbca\", \"ababcabaccaaaacccacbcbcabacbcb\", \"bcaaaacabcabbbaccccccacabccacb\", \"cbbabbbccaaaaacbccaabcbbccbacc\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"field will contain between 1 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of field will contain between 1 and 30 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character of field will be from the set 'a'..'z' and 'B'..'Z'."
+		},
+		{
+			"order":4,
+			"val":"All elements of field will contain the same number of characters."
+		},
+		{
+			"order":5,
+			"val":"field must contain at least 3 cells."
+		}
+	]
+}

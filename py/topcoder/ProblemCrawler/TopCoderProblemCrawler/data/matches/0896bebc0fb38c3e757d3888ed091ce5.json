@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":141.5,
+			"constraints":[],
+			"correctRatio":82.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7420&rd=10663",
+			"name":"BusTrip",
+			"notes":[],
+			"submission":295
+		},
+		{
+			"avgPts":330.81,
+			"constraints":[],
+			"correctRatio":81.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7422&rd=10663",
+			"name":"TestBettingStrategy",
+			"notes":[],
+			"submission":251
+		},
+		{
+			"avgPts":585.41,
+			"constraints":[],
+			"correctRatio":81.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6539&rd=10663",
+			"name":"RPSTournament",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"Single Round Match 339 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10663"
+}

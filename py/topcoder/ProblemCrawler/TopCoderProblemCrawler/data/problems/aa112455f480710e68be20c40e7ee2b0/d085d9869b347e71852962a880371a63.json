@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6714&rd=9999",
+	"statement":"<i>This statement contains images which must be viewed in the applet.</i> <p>A <i>Binary Search Tree (BST)</i> is a tree data structure which obeys the following properties: </p>\n <ul> \n  <li>Each node has at most 2 children.</li> \n  <li>Each node except the root has exactly 1 parent.</li> \n  <li>There is exactly 1 root node. The root node does not have any parents. </li> \n  <li>If a node has a left child, all values in the left subtree are less than or equal to the value of the node itself.</li> \n  <li>If a node has a right child, all values in the right subtree are strictly greater than the value of the node itself.</li> \n </ul> <p></p> <p>A BST is constructed from a string of characters in the following way: The root node of the tree is assigned the value of the first character in the string. All subsequent characters are added as children of existing nodes subject to the above rules. Note that the tree is never altered in any other manner. In this problem, nodes are identified starting from the root node as 1, and following in order with nodes at the next level, etc. See the figure below for clarification.</p> <p> <img src=\"http://www.topcoder.com/contest/problem/ConstructBST/bst.jpg\" /> </p> <p>You will be given the shape of a particular BST by specifying the identities of the nodes which constitute the tree, according to the above scheme. Note that you do not know the exact input string used to construct the given BST. You do know, however, that the first N uppercase letters were used to construct the given BST with N nodes. See the examples below for further clarification.</p> <p>Create a class ConstructBST that contains a method numInputs. The method takes an int[] <b>tree</b> with a list of node numbers present in the tree and returns a long corresponding to the number of strings composed of the characters from 'A' to 'Z' that could have been used to produce the particular BST. Note that <b>tree</b> will always contain a root node numbered 1. Note also, that <b>tree</b> will represent a connected tree, that is, all nodes present in the tree will be reachable from the root node.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ConstructBST",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numInputs",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long numInputs(int[] tree)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{1, 2}",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{1, 3, 6}",
+			"note":"  ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{1, 2, 5, 3, 4}",
+			"note":"Using the characters {'A','B','C','D','E'} the following 8 strings generate a tree with the given shape: , , , , , , , .",
+			"order":3
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{1, 2, 4, 6, 3}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 96096",
+			"id":0,
+			"input":"{2, 4, 3, 62, 7, 15, 1, 31, 5, 14, 28, 57, 56, 114}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"tree will contain between 1 and 26 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of tree will be between 1 and 226-1, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of tree will be distinct."
+		},
+		{
+			"order":4,
+			"val":"tree will represent a connected tree."
+		},
+		{
+			"order":5,
+			"val":"tree will contain a root node numbered 1."
+		}
+	]
+}

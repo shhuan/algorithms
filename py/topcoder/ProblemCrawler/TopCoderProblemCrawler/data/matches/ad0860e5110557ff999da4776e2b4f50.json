@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":223.22,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=478&rd=66",
+			"name":"MaxDensity",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":284.77,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=356&rd=66",
+			"name":"Gin",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":528.33,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=632&rd=66",
+			"name":"Nested",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"Sun Microsystems / TopCoder Collegiate Challenge > Semifinals Room C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=66"
+}

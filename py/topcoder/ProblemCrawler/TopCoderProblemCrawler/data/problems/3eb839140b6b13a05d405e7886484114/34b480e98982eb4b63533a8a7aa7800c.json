@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6852&rd=10008",
+	"statement":"<p>You ran into some trouble when playing your favorite video game. There are <b>N</b> towns on the map, numbered from 0 to <b>N</b>-1. For each pair of distinct towns, there is exactly one way to get from one to the other by following one or more roads. Your enemy has just occupied some of the towns, and your first attempt at blocking him is to remove some of the roads in order to block off communication between every pair of distinct occupied towns. You would like to do this with as little effort as possible.</p> <p>You will be given a String[] <b>roads</b> describing the roads between towns. Each element of <b>roads</b> is in the form &quot;a b e&quot; (quotes for clarity only), meaning that there is a bidirectional road between towns a and b, and the effort required to destroy the road is e. You will also be given a int[] <b>occupiedTowns</b> containing the towns occupied by your enemy. Return the minimum total effort required to destroy enough roads so that no two distinct occupied towns have a path (direct or indirect) between them.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BlockEnemy",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minEffort",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minEffort(int N, String[] roads, int[] occupiedTowns)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"1 0 1\", \"1 2 2\", \"0 3 3\", \"4 0 4\"}",
+			"id":0,
+			"input":"5",
+			"note":"To make the communication between town 2 and the other occupied towns impossible, we must destroy one of the first two roads. We choose the first one as it requires less effort. Similarly, we choose between the last two roads in order to disconnect towns 3 and 4. The total cost is therefore 4.",
+			"order":1
+		},
+		{
+			"expect":"{\"1 0 1\", \"1 2 2\", \"0 3 3\", \"4 0 4\"}",
+			"id":0,
+			"input":"5",
+			"note":"This is the same map as above. Since there is only one occupied town, we don't need to destroy any road here.",
+			"order":2
+		},
+		{
+			"expect":"{\"0 1 3\", \"2 0 5\", \"1 3 1\", \"1 4 8\", \"1 5 4\", \"2 6 2\", \"4 7 11\", \"4 8 10\", \"6 9 7\", \"6 10 9\", \"6 11 6\"}",
+			"id":0,
+			"input":"12",
+			"note":"Towns 1 and 2 are on the path from 6 to 8. We have to destroy the sixth road to disconnect town 6 from 2. We must destroy one of the first two roads to disconnect towns 1 and 2 and we pick the first one. Also, we should destroy one of the roads on the path from 1 to 8 and we choose the fourth road. The total cost is 2 + 3 + 8 = 13.",
+			"order":3
+		},
+		{
+			"expect":"{\"0 1 3\", \"2 0 5\", \"1 3 1\", \"1 4 8\", \"1 5 4\", \"2 6 2\", \"4 7 11\", \"4 8 10\", \"6 9 7\", \"6 10 9\", \"6 11 6\"}",
+			"id":0,
+			"input":"12",
+			"note":"We have to destroy all roads this time.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"roads will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of roads will contain between 5 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of roads will be in the form &quot;a b e&quot; (quotes for clarity) where a and b are distinct integers between 0 and N-1, inclusive, and e is an integer between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"The integers in roads will not contain extra leading zeroes."
+		},
+		{
+			"order":6,
+			"val":"There will be exactly one way to get from one town to any other, by following one or more roads."
+		},
+		{
+			"order":7,
+			"val":"occupiedTowns will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Each element of occupiedTowns will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":9,
+			"val":"The elements of occupiedTowns will be distinct."
+		}
+	]
+}

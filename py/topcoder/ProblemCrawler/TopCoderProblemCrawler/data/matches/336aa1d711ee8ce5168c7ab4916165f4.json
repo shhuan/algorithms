@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":216.33,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1929&rd=4664",
+			"name":"FullMonitor",
+			"notes":[],
+			"submission":37
+		},
+		{
+			"avgPts":383.7,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1946&rd=4664",
+			"name":"AlgoHill",
+			"notes":[],
+			"submission":18
+		},
+		{
+			"avgPts":500.62,
+			"constraints":[],
+			"correctRatio":57.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1636&rd=4664",
+			"name":"SetComparison",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"CRPF Charity Challenge > Final Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4664"
+}

@@ -1,0 +1,120 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2428&rd=5072",
+	"statement":"Every spring, your grandmother plants a garden. Since she is in her later years, she often needs help with watering the plants. Of course, you always offer a helping hand but you also have a more permanent solution. You call your invention &quot;I can't believe it works!&quot;, and it is about to bring a revolution to the garden-watering industry. Your creation is a robot that will water the garden, taking the least time possible. <pre></pre> Your job is to implement part of the software that will guide the robot. The robot may only move and see in the four cardinal directions: North, East, West or South. The garden will be represented by the String[] <b>garden</b>, which consists of digits, dots, a single 'R' and a single 'W' (quotes for clarity). Each digit will represent how many units of water a plant in that location needs. The character '.' marks an empty location, 'R' marks the robot's current location and 'W' marks the location of a well (quotes for clarity). During the robot's travels, it may not step on any plants (that would only upset your grandmother) or the well (that would really make you angry). <pre></pre> Given <b>garden</b> and <b>carryLimit</b>, calculate and return the minimum amount of time needed to water all plants if the robot may only carry at most <b>carryLimit</b> units of water at any time. It takes n time units to water a plant that needs n units of water. In addition, m time units are needed to get m units of water from the well and each step in any direction takes 1 unit of time. The robot can change the direction in which it is facing instantly, taking zero time units. The robot may only water a plant if it is directly next to it; the same requirement must be met when taking water from the well. Finally, the robot may water only one plant at a time. If it is impossible to water all plants, return -1.",
+	"notes":[
+		{
+			"order":1,
+			"val":"Initially, the robot is holding zero units of water."
+		},
+		{
+			"order":2,
+			"val":"The robot may not step out of the garden at any time."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WaterBot",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minTime(String[] garden, int carryLimit)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{\"5....\", \".....\", \".....\", \".....\", \"...RW\"}",
+			"note":"The robot begins its journey next to the well. It takes 5 units of time to collect 5 units of water. Then, it takes 6 units of time to move to the only plant that needs watering. At last, the robot will water the plant for 5 units of time. The total time required is 16 units.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{\"3.2..\", \".....\", \".....\", \"....R\", \"....W\"}",
+			"note":"Once again, the robot is next to the well. The most efficient schedule is to collect 5 units of water, then water both plants without returning to the well.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\".5555\", \".....\", \".....\", \"....R\", \"....W\"}",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"R.....55\", \"......55\", \"........\", \"........\", \"........\", \".......W\"}",
+			"note":"The robot cannot reach the top-right plant without stepping on at least one other plant.",
+			"order":4
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\"R.......\", \"........\", \"....5...\", \"...5W5..\", \"....5...\", \"........\"}",
+			"note":"The robot cannot get any water from the well.",
+			"order":5
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{\".1\", \".2\", \".3\", \".4\", \"R.\", \"W.\"}",
+			"order":6
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{\"R....\", \".....\", \".....\", \".....\", \"....W\"}",
+			"note":"There are no plants to water here.",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"garden will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in garden will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements in garden will be of the same size."
+		},
+		{
+			"order":4,
+			"val":"Each element in garden may only contain the following characters: 'W', 'R', '.', '1', '2', '3', '4', '5' (quotes for clarity)."
+		},
+		{
+			"order":5,
+			"val":"garden will contain exactly one occurrence of 'R' and 'W'."
+		},
+		{
+			"order":6,
+			"val":"garden will contain between 0 and 4 digits, inclusive."
+		},
+		{
+			"order":7,
+			"val":"carryLimit will be between 1 and 5, inclusive."
+		}
+	]
+}

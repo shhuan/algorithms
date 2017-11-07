@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":169.52,
+			"constraints":[],
+			"correctRatio":77.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6790&rd=10111",
+			"name":"Diamonds",
+			"notes":[],
+			"submission":127
+		},
+		{
+			"avgPts":309.31,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6718&rd=10111",
+			"name":"WordGuessingGame",
+			"notes":[],
+			"submission":78
+		},
+		{
+			"avgPts":552.69,
+			"constraints":[],
+			"correctRatio":53.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6648&rd=10111",
+			"name":"TopologicalEquivalence",
+			"notes":[],
+			"submission":13
+		}
+	],
+	"name":"TCCC06 > Online Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10111"
+}

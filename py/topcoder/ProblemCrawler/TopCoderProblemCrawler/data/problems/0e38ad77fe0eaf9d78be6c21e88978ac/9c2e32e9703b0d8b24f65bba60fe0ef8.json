@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11584&rd=15152",
+	"statement":"In this problem, we consider 26 variables A, B, C, ..., Z, each of which represents a (possibly empty) string consisting of lowercase letters. You are given a String[] <b>equations</b>. Each element of <b>equations</b> is formatted as &quot;VAR1 = VAR2 + VAL&quot;, where VAR1 and VAR2 will each be an uppercase letter representing a variable, and VAL is a non-empty string consisting of lowercase letters. This equation claims that variable VAR1 is equal to the concatenation of variable VAR2 and string VAL (in this order). <br /><br /><br /><br /> If there is no (A, B, C, ..., Z) satisfying all given equations, return -1. Otherwise, return the minimum possible sum of the lengths of A, B, C, ..., Z. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StringEquations",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(String[] equations)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 11",
+			"id":0,
+			"input":"{ \"B = A + top\", \"C = B + coder\", \"C = A + topcoder\" }",
+			"note":"If we assign B = top, C = topcoder and the empty string to each of the other variables, these three equations are satisfied and the sum of the lengths is minimized. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"B = A + coder\", \"C = B + top\", \"C = A + topcoder\" }",
+			"note":"The first two equations imply \"C = A + codertop\", which contradicts the third one. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{ \"A = B + p\", \"C = A + q\", \"D = F + r\", \"E = B + x\", \"G = A + y\", \"H = F + z\" }",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"X = X + a\" }",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"Y = X + a\", \"Y = X + b\" }",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"equations will contain between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each element of equations will contain between 9 and 50 characters, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"Each element of equations will be formatted as &quot;VAR1 = VAR2 + VAL&quot;, where VAR1 and VAR2 will each be an uppercase letter, and VAL will be a non-empty string consisting of lowercase letters. "
+		}
+	]
+}

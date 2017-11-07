@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":234.42,
+			"constraints":[],
+			"correctRatio":70.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=88&rd=3008",
+			"name":"Profit",
+			"notes":[],
+			"submission":34
+		},
+		{
+			"avgPts":297.26,
+			"constraints":[],
+			"correctRatio":45.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=89&rd=3008",
+			"name":"StringProcessor",
+			"notes":[],
+			"submission":33
+		},
+		{
+			"avgPts":731.54,
+			"constraints":[],
+			"correctRatio":56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=90&rd=3008",
+			"name":"DigitArrange",
+			"notes":[],
+			"submission":25
+		}
+	],
+	"name":"Single Round Match 9 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3008"
+}

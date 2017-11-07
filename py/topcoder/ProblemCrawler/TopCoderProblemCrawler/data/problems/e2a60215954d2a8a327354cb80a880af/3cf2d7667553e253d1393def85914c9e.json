@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11555&rd=14544",
+	"statement":"<p>You are given a String[] <b>digits</b>. Concatenate its elements to obtain a very large positive integer D.</p> <p>We are interested in <i>very smooth decompositions</i> of D; that is, the ways in which D can be written as a product of numbers not exceeding 16.</p> <p>(In the product, each factor must be greater than 1. The order of factors does not matter, i.e., 24=3*8 is the same decomposition as 24=8*3.)</p> <p>Your method must return the number of very smooth decompositions of D, modulo 1,000,000,009.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"VerySmoothDecompositions",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int solve(String[] digits)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"47\"}",
+			"note":"No valid decompositions.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"2\"}",
+			"note":"The only valid decomposition is the one with a single factor equal to 2.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"10\"}",
+			"note":"Two valid decompositions: 10 and 2*5.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{\"36\"}",
+			"note":"All decompositions of 36 are: 36 = 2*18 = 3*12 = 4*9 = 6*6 = 2*2*9 = 2*3*6 = 3*3*4 = 2*2*3*3. The first two of these (36 and 2*18) contain a factor larger than 16. The other seven decompositions are very smooth.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"1\",\"21\"}",
+			"note":"Here the only valid decomposition is 11*11.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 23",
+			"id":0,
+			"input":"{\"1024\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"digits will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of digits will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of digits will be a digit ('0'-'9')."
+		},
+		{
+			"order":4,
+			"val":"Character 0 of element 0 of digits will not be '0'."
+		}
+	]
+}

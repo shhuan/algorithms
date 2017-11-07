@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13692&rd=16318",
+	"statement":"<p> There are N rooms in Maki's new house. The rooms are numbered from 0 to N-1. Some pairs of rooms are connected by bidirectional passages. The passages have the topology of a tree. That is, there are exactly N-1 of them and it is possible to go from any room to any other room by following some sequence of passages. </p> <p> You are given two int[]s <b>a</b> and <b>b</b> that describe the passages. For each valid i, there is a passage that connects the rooms <b>a</b>[i] and <b>b</b>[i]. You are also given two ints: <b>s1</b> and <b>s2</b> The house has exactly two entrances from the outside. One leads to the room <b>s1</b>, the other leads to the room <b>s2</b>. </p> <p> Niko is helping Maki move into the new house. Maki has exactly N pieces of furniture. The pieces are numbered from 0 to N-1. Niko will carry them into the house in this order. Each piece of furniture must be placed into a different room. Maki does not care which piece goes where, each of the N! permutations is allowed. </p> <p> However, not all of those N! permutations are actually possible. This is because the furniture is large. As soon as a room contains a piece of furniture, it is impossible to move other pieces through this room. Thus, Niko must place the furniture carefully. Formally, she can place a new piece of furniture into the room x if and only if there is a path from one of the entrances to x that consists only of empty rooms. (For any room x, there is exactly one path from <b>s1</b> to x and exactly one path from <b>s2</b> to x. At least one of these two paths must be completely empty.) </p> <p> Niko is smart and she will always place the furniture in such a way that she never gets stuck. Thus, at the end each of Maki's rooms will contain exactly one piece of furniture. </p> <p> Let X be the number of ways how the furniture can be arranged in Maki's house at the end. As X can be large, calculate and return the value (X modulo 1,000,000,007). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TwoEntrances",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int[] a, int[] b, int s1, int s2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1, 2, 3}",
+			"id":0,
+			"input":"{0, 1, 2}",
+			"note":"Niko must fill the rooms in one of the following four orders: {3,2,1,0}, {3,2,0,1}, {3,0,2,1}, or {0,3,2,1}. (Note that, for example, she cannot place a piece of furniture into room 2 before he places another piece into room 3.)",
+			"order":1
+		},
+		{
+			"expect":"{1, 2, 3}",
+			"id":0,
+			"input":"{0, 1, 2}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{1, 2, 3, 4, 5, 6, 7, 8, 9}",
+			"id":0,
+			"input":"{0, 1, 1, 3, 3, 3, 6, 7, 6}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10, 11, 12}",
+			"id":0,
+			"input":"{0, 0, 1, 2, 3, 1, 2, 0, 6, 5, 10, 10}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"{0}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 3000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"a and b will contain exactly N-1 elements each."
+		},
+		{
+			"order":3,
+			"val":"Each element of a and b will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The graph described by a and b will be a tree."
+		},
+		{
+			"order":5,
+			"val":"s1 and s2 will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"s1 and s2 will be different."
+		}
+	]
+}

@@ -1,0 +1,62 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8266&rd=10958",
+	"statement":"We want to design a network consisting of <b>n</b> identical Worker nodes and one Server node. The network must be connected and must not contain any cycles. We also require that each Worker node must be connected to an odd number of other nodes. How many distinct networks are there? <p> Here is a listing of all the distinct networks containing exactly 5 worker nodes:</p><pre>\n                                                       \n       W               W     W              W          W  W \n       |                \\    |              |          | /   \n   W---S----W            S---W          S---W      S---W    \n       | \\              /    |              |          | \\  \n       W  W            W     W          W---W---W      W  W  \n                                                       \n</pre> Two configurations G and G' are not distinct if there is a 1-1 mapping between their nodes such that the server in G maps to the server in G', and such that for every pair of nodes in G the pair that they are mapped to in G' is connected if and only if the pair in G is connected. Note that two configurations are not distinct if they have the same connection pattern, even if they are different geometrically as displayed in the plane. For example, these two configurations with 8 worker nodes are not distinct:<pre>\n\n   W   W   W          W       W                                      \n   |   |   |          |       |  \n   W---S---W      W---S-------W                                                 \n   |   |   |          |       | \n   W   W   W      W---W---W   W          \n</pre> Given <b>n</b>, return the number of distinct networks that can be constructed with exactly <b>n</b> worker nodes. ",
+	"notes":[{
+		"order":1,
+		"val":"The answer will fit in an int."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OddGraph",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"5",
+			"note":"The 4 networks are listed above. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"1",
+			"note":" S---W is the only network with 1 worker node. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 929556155",
+			"id":0,
+			"input":"40",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 40, inclusive. "
+	}]
+}

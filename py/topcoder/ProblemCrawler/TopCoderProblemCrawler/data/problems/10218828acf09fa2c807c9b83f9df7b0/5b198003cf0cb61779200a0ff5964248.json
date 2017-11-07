@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7538&rd=10731",
+	"statement":"<p> Since the rules of basketball do not allow games to result in ties, comparing two teams during a tournament is usually done by comparing the number of games they've won. When comparing two teams that have played a different number of games, the team that played <i>k</i> games less than the other gets <i>k</i>/2 added to its win total. For further clarification, please see the following table (the notation 7/15 means that a team played 15 games and won 7 of them): </p> <pre>\nTeam A   Team B    Difference\n7 / 15   8 / 20    Team A played 5 games less than team B, so we assume it will win 2.5 games more.\n\t\t   Therefore Team A is (7 + 2.5) - 8 = 1.5 games ahead of team B.\n8 / 8    18 / 18   Though both teams have won all their games, team A played 10 games less. \n                   We assume it wins 5 of those 10 games, so it is 5 games behind team B.\n20 / 40  10 / 20   Team B played 20 games less, so we assume it will have 10 more wins.\n                   Therefore, the gap between the teams is 0. \n</pre> <p> Since this comparison is transitive (if team A is better than team B, and team B is better than team C, then team A is better than team C), the teams can be placed into the standings table according to this order. If the gap between two teams is 0, the team whose name comes earlier alphabetically is given the better rank. </p> <p> You will be given a String[] <b>teams</b>, with the i-th element of <b>teams</b> representing the i-th team. Each element of <b>teams</b> will be formatted as &quot;<i>NAME WINS LOSSES</i>&quot; (quotes for clarity), where <i>NAME</i> is a sequence of uppercase letters representing the name of the team, and <i>WINS</i> and <i>LOSSES</i> are integers representing the number of games the team won and lost respectively. You are to sort teams from the best to worst according to the comparison method defined above, and return the standings as a String[]. Each element of the result must be formatted as &quot;<i>NAME GAP</i>&quot; (quotes for clarity), where <i>NAME</i> is the team's name and <i>GAP</i> is the gap between this team and the top team in the standings. <i>GAP</i> must consist of one or more digits, followed by a decimal point, followed by exactly one digit. There must be no extra leading zeroes. For example, &quot;0.0&quot;, &quot;0.5&quot; and &quot;1.0&quot; are valid, but &quot;.5&quot;, &quot;0&quot;, &quot;05.0&quot; and &quot;5.&quot; are not. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BasketballStandings",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"constructTable",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] constructTable(String[] teams)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"A 0.0\", \"A 0.0\", \"B 0.0\", \"BAA 0.0\", \"C 0.0\", \"D 0.0\" }",
+			"id":0,
+			"input":"{\"A 1 1\", \"A 8 8\",\"D 0 0\", \"B 7 7\", \"C 99 99\", \"BAA 13 13\"}",
+			"note":"All teams win 50% of their games. They are all tied in the standings and sorted in alphabetical order. Please note that multiple teams may have the same name.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {\"D 0.0\", \"B 7.0\", \"A 7.5\", \"C 8.0\" }",
+			"id":0,
+			"input":"{\"B 11 10\", \"A 10 10\", \"C 10 11\", \"D 20 5\"}",
+			"note":"D is a clear favorite here.  Team B played 1 game more than team A, therefore A is supposed to get 0.5 wins out of this game. Since B has 1 win more, it is 0.5 wins ahead of team A. Team B and team C played the same number of games. Team B get 1 win more, therefore it is 1 win ahead.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {\"MAVS 0.0\", \"SUNS 4.5\", \"SPURS 8.5\", \"JAZZ 11.5\" }",
+			"id":0,
+			"input":"{\"MAVS 54 11\", \"SUNS 50 16\", \"SPURS 46 20\", \"JAZZ 43 23\"}",
+			"note":"Top 4 NBA team as of March 20, 2007.",
+			"order":3
+		},
+		{
+			"expect":"Returns: {\"WINNER 0.0\", \"TEAMD 18.5\", \"TEAMB 19.5\", \"TEAMC 19.5\", \"TEAMA 20.0\", \"LOSER 58.5\" }",
+			"id":0,
+			"input":"{\"TEAMA 17 15\", \"TEAMB 14 11\", \"TEAMC 3 0\", \"TEAMD 99 94\", \"LOSER 10 85\", \"WINNER 76 34\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"teams will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of teams will contain between 5 and 16 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of teams will be formatted as &quot;NAME WINS LOSSES&quot; (quotes for clarity)."
+		},
+		{
+			"order":4,
+			"val":"In each element of teams, NAME will contain between 1 and 10 uppercase letters ('A'-'Z'), inclusive."
+		},
+		{
+			"order":5,
+			"val":"In each element of teams, WINS will be an integer between 0 and 99, with no extra leading zeroes."
+		},
+		{
+			"order":6,
+			"val":"In each element of teams, LOSSES will be an integer between 0 and 99, with no extra leading zeroes."
+		}
+	]
+}

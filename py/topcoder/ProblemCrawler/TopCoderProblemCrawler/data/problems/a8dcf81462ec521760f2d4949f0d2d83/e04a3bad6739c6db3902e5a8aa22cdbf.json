@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8374&rd=10793",
+	"statement":"<p>Syllable sorting is a method of sorting words based on their syllabic decompositions. The first step is to decompose each word into syllables. A syllable is defined as a maximal non-empty substring of consonants followed by a maximal non-empty substring of vowels. The only vowels are <tt>'a'</tt>, <tt>'e'</tt>, <tt>'i'</tt>, <tt>'o'</tt> and <tt>'u'</tt>. All other letters are considered consonants. All words will start with a consonant and end with a vowel.</p><br /><br /> <p>To compare two words syllabically, first decompose them into sequences of syllables. For example, the words &quot;zcdbadaerfe&quot; and &quot;foubsyudba&quot; decompose as follows:</p> \n <ul> \n  <li><tt>&quot;zcdbadaerfe&quot;</tt> = {<tt>&quot;zcdba&quot;</tt>, <tt>&quot;dae&quot;</tt>, <tt>&quot;rfe&quot;</tt>}</li> \n  <li><tt>&quot;foubsyudba&quot;</tt> = {<tt>&quot;fou&quot;</tt>, <tt>&quot;bsyu&quot;</tt>, <tt>&quot;dba&quot;</tt>}</li> \n </ul> <p>Then, sort each sequence of syllables alphabetically. In the above example, the sequences become:</p> \n <ul> \n  <li>{<tt>&quot;dae&quot;</tt>, <tt>&quot;rfe&quot;</tt>, <tt>&quot;zcdba&quot;</tt>}</li> \n  <li>{<tt>&quot;bsyu&quot;</tt>, <tt>&quot;dba&quot;</tt>, <tt>&quot;fou&quot;</tt>}</li> \n </ul> <p>Then, compare these sorted sequences lexicographically. A sequence S1 comes before a sequence S2 lexicographically if S1 has an alphabetically earlier element at the first index at which they differ. In the above example, the second sequence comes earlier lexicographically because <tt>&quot;bsyu&quot;</tt> comes before <tt>&quot;dae&quot;</tt> alphabetically.</p><br /><br /> <p>If two sorted sequences are equal, then compare their corresponding unsorted sequences instead. For example, the words <tt>&quot;daba&quot;</tt> and <tt>&quot;bada&quot;</tt> decompose into the same sorted sequence {<tt>&quot;ba&quot;</tt>, <tt>&quot;da&quot;</tt>}. Compare the unsorted sequences {<tt>&quot;da&quot;</tt>, <tt>&quot;ba&quot;</tt>} and {<tt>&quot;ba&quot;</tt>, <tt>&quot;da&quot;</tt>} to determine that <tt>&quot;bada&quot;</tt> comes before <tt>&quot;daba&quot;</tt>.</p><br /><br /> <p>You are given a String[] <b>words</b>. Sort the <b>words</b> using the method above and return the resulting String[].</p><br /><br />",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SyllableSorting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sortWords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] sortWords(String[] words)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"gawayama\", \"yamagawa\", \"xiaoxiao\" }",
+			"id":0,
+			"input":"{\"xiaoxiao\", \"yamagawa\", \"gawayama\"}",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"Returns: {\"bcedba\", \"dbabce\", \"zyuxxo\" }",
+			"id":0,
+			"input":"{\"bcedba\", \"dbabce\", \"zyuxxo\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: {\"hgnibqqaxeiuteuuvksi\", \"vredfvavvexliu\", \"lmopbookoagyco\", \"jxbuzui\", \"zrotyqeruiydozui\", \"ywuuzkto\" }",
+			"id":0,
+			"input":"{\"hgnibqqaxeiuteuuvksi\", \"jxbuzui\", \"zrotyqeruiydozui\", \"ywuuzkto\", \"lmopbookoagyco\", \"vredfvavvexliu\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: {\"mgabmo\", \"crazgo\", \"cwsoygiokiuo\", \"tuadiojvugeoe\", \"nrohjuasoia\", \"sgukkelyoi\", \"naumxditui\", \"yueoseeu\" }",
+			"id":0,
+			"input":"{\"crazgo\", \"cwsoygiokiuo\", \"yueoseeu\", \"tuadiojvugeoe\", \"naumxditui\", \"sgukkelyoi\", \"nrohjuasoia\", \"mgabmo\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: {\"sgiibgwi\", \"bgyikouapae\", \"coutcu\", \"wheewjuguoi\", \"hqivaa\", \"wqakeu\", \"skolfo\", \"pzesaa\", \"ypaqpki\", \"ypivhi\" }",
+			"id":0,
+			"input":"{\"wheewjuguoi\", \"coutcu\", \"hqivaa\", \"sgiibgwi\", \"ypaqpki\", \"bgyikouapae\", \"wqakeu\", \"skolfo\", \"pzesaa\", \"ypivhi\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"words will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of words will contain between 2 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of words will contain only lowercase letters ('a'-'z')."
+		},
+		{
+			"order":4,
+			"val":"The first character of each element of words will be a consonant."
+		},
+		{
+			"order":5,
+			"val":"The last character of each element of words will be a vowel."
+		}
+	]
+}

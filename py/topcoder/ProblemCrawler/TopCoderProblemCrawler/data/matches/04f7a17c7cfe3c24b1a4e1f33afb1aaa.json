@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.32,
+			"constraints":[],
+			"correctRatio":81.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=177&rd=51",
+			"name":"TCMLParser",
+			"notes":[],
+			"submission":59
+		},
+		{
+			"avgPts":293.91,
+			"constraints":[],
+			"correctRatio":57.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=178&rd=51",
+			"name":"EndOfContest",
+			"notes":[],
+			"submission":57
+		},
+		{
+			"avgPts":679.92,
+			"constraints":[],
+			"correctRatio":80,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=179&rd=51",
+			"name":"FSM",
+			"notes":[],
+			"submission":35
+		}
+	],
+	"name":"2001 Invitational > Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=51"
+}

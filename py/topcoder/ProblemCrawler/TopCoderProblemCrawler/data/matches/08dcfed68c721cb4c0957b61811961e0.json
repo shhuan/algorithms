@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":184.89,
+			"constraints":[],
+			"correctRatio":83.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12155&rd=15177",
+			"name":"CuttingBitString",
+			"notes":[],
+			"submission":680
+		},
+		{
+			"avgPts":320.07,
+			"constraints":[],
+			"correctRatio":73.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12180&rd=15177",
+			"name":"XorBoard",
+			"notes":[],
+			"submission":293
+		},
+		{
+			"avgPts":529.89,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12152&rd=15177",
+			"name":"MapGuessing",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"Single Round Match 555 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15177"
+}

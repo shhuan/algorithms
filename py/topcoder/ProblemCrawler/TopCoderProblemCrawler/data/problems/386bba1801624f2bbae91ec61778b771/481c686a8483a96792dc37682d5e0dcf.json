@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8754&rd=12171",
+	"statement":"<p> You are organizing a dance party. The party will be attended by n boys and n girls. There will be several rounds of dancing. </p> <p> In each round, you divide the guests into n dancing pairs. Each guest must be in exactly one pair, and each pair must contain one boy and one girl. Each boy must dance with a different girl in every round. Some boys and girls like each other and some do not. During the party, each boy agrees to dance with at most <b>k</b> girls he doesn't like. Similarly, each girl agrees to dance with at most <b>k</b> boys she doesn't like. </p> <p> You are given a String[] <b>likes</b>. The j-th character of <b>likes</b>[i] is 'Y' if the i-th boy and the j-th girl like each other, and 'N' if they don't. Return the maximum number of rounds you can organize. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DancingParty",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxDances",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxDances(String[] likes, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"YYY\", \"YYY\", \"YYY\"}",
+			"note":"Every boy likes every girl, so you can organize 3 rounds.",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"YYY\", \"YYN\", \"YNY\"}",
+			"note":"For example, you can have one round with pairs 1-2, 2-1 and 3-3 and one round with pairs 1-3, 2-2 and 3-1.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"YN\", \"YN\"}",
+			"note":"The second girl doesn't like anybody.",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"YN\", \"YN\"}",
+			"note":"The second girl doesn't like anybody again, but this time she agrees to dance with someone she doesn't like once.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"likes will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of likes will contain exactly n characters, where n is the number of elements in likes."
+		},
+		{
+			"order":3,
+			"val":"Each element of likes will contain only the characters 'Y' and 'N'."
+		},
+		{
+			"order":4,
+			"val":"k will be between 0 and 50, inclusive."
+		}
+	]
+}

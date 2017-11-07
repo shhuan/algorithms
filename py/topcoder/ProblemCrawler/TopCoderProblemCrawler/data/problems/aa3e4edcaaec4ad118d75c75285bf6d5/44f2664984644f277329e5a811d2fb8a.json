@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2973&rd=5876",
+	"statement":"In genetics, most large animals have two copies of every gene - one from each parent. In the simplest genetic model, each of the genes takes on one of two forms, usually represented by an uppercase and lowercase letter of the same value ('A' and 'a', for example). The pair of genes typically contributes to the external qualities of the animal in one of two ways. If both genes are uppercase, they contribute in one way, while if both genes are lowercase, they contribute in another way. If one gene is uppercase and the other is lowercase, then the pair acts like either a pair of uppercase genes or a pair of lowercase genes depending on whether the gene represented by the uppercase letter is <i>dominant</i> or <i>recessive</i>, respectively. <br /><br /><br /><br /> In this problem, you will be given two Strings, <b>g1</b> and <b>g2</b>, each representing the genes from one parent. Hence, two characters from <b>g1</b> and <b>g2</b> with the same index make up a single gene. You will also be given a String, <b>dom</b>, telling you whether an uppercase gene is dominant or recessive, represented by 'D' and 'R', respectively (characters of <b>dom</b> correspond to characters of <b>g1</b> and <b>g2</b> with the same index). You are to return a String representing the external qualities of each pair of genes. If a pair of genes has the quality of two uppercase letters, the return should have an uppercase letter, and if not the return should have a lowercase letter. In either case, each letter should have the same value as the corresponding letters of <b>g1</b> and <b>g2</b>. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Genetics",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getOffspring",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getOffspring(String g1, String g2, String dom)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"AAaa\"",
+			"id":0,
+			"input":"\"AAAA\"",
+			"note":"Whenever there are two 'A's, the return character is an 'A', and when there is one 'A' and one 'a', the return character is an 'A' only if the corresponding character in  is a 'D'.",
+			"order":1
+		},
+		{
+			"expect":"\"abcdefg\"",
+			"id":0,
+			"input":"\"ABCDEFG\"",
+			"order":2
+		},
+		{
+			"expect":"\"z\"",
+			"id":0,
+			"input":"\"Z\"",
+			"order":3
+		},
+		{
+			"expect":"\"mgSKGzTFQoClnDJzU\"",
+			"id":0,
+			"input":"\"MGskgzTFQoclnDjZu\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"g1 and g2 will contain only letters ('a'-'z' and 'A'-'Z')."
+		},
+		{
+			"order":2,
+			"val":"dom will contain only 'D's and 'R's."
+		},
+		{
+			"order":3,
+			"val":"dom, g1 and g2 will each contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"dom, g1 and g2 will each contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Corresponding letters in g1 and g2 will have the same value, though potentially different cases."
+		}
+	]
+}

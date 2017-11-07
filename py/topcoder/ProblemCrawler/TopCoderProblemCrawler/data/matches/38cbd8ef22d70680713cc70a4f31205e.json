@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":203.76,
+			"constraints":[],
+			"correctRatio":70,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=491&rd=63",
+			"name":"IntCount",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":259.14,
+			"constraints":[],
+			"correctRatio":71.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=490&rd=63",
+			"name":"BlackJack",
+			"notes":[],
+			"submission":28
+		},
+		{
+			"avgPts":534.33,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=506&rd=63",
+			"name":"SetOperations",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Sun Microsystems and TopCoder Collegiate Challenge > Regional Final",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=63"
+}

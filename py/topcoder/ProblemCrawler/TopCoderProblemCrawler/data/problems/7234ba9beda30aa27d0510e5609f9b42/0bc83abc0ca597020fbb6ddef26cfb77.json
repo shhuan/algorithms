@@ -1,0 +1,69 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4847&rd=8081",
+	"statement":"We write programs in a script language which are embedded in HTML files and downloaded over the internet. To speed up our downloads, we would like to &quot;smoosh&quot; our source code, reducing its size without destroying the program. <p> One smooshing technique that we are interested in analyzing is to replace all the nice meaningful identifiers in our code with shorter names. This script language is case sensitive, and an identifier in this language consists of (a maximal sequence of) letters. In order to avoid smooshing identifiers that are reserved words, we will encourage our programmers to start their identifiers with an uppercase letter (since all the reserved words start with a lowercase letter) and we will only smoosh identifiers that start with an uppercase letter. </p><p> Here is the proposed smooshing algorithm. Find the most frequent identifier that begins with an uppercase letter and replace all its occurrences by its first letter. Continue with the next most frequent identifier, etc. Whenever a one letter abbreviation conflicts by matching an already assigned abbreviation, use the first two letters. If that still gives a conflict, then try the first three letters. If even after using all the letters of the identifier there is still a conflict, continue adding letters to the abbreviation by circling around to the front of the identifier. So it is possible that the abbreviation(!?) for &quot;Car&quot; might be &quot;CarCarCa&quot;. When several identifiers appear with the same frequency, they are given abbreviations in the order that they first appear in the program. </p><p> Create a class Smooshing that contains a method savings that is given a String[] <b>program</b> that contains the lines of source code. It calculates the number of characters by which the source code would be reduced by smooshing it. </p><p> Note that lines of source code are distinct -- an identifier cannot cross line boundaries and the smooshed code will have the same number of lines as the original code. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Smooshing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"savings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int savings(String[] program)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 42",
+			"id":0,
+			"input":"{\"MyInt = YrInt; if(MyInt==2*That) MyInt++;\", \"while(MyInt>3){\", \" MyDouble = MyShort+MyLong;\", \"}\", \"return MyDouble;\", \"end\" }",
+			"note":" MyInt is most frequent and so is smooshed to M. MyDouble is next most frequent and is smooshed to My. YrInt, That, MyShort, and MyLong all have the same frequency and first appear in the order given, so they are smooshed to Y, T, MyS, and MyL. The smooshed program is The length of the smooshed program is 42 characters less than the length of the original program.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 16",
+			"id":0,
+			"input":"{\"MyInt3 = MyInt\",\"MyIntMyInt\"}",
+			"note":"This smooshes to  which is 8 characters versus the original 24 (not counting the end-of-line characters which are never affected by this kind of smooshing).",
+			"order":2
+		},
+		{
+			"expect":"Returns: -2",
+			"id":0,
+			"input":"{\"C = Cda; CdC=CdCd+2*Cd;\"}",
+			"note":"Here there are 5 different identifiers, each appearing once. The code is smooshed as follows, showing the code after each abbreviation has been performed: ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"program contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of program contains between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in each element of program is between ASCII 32 and ASCII 126, inclusive."
+		}
+	]
+}

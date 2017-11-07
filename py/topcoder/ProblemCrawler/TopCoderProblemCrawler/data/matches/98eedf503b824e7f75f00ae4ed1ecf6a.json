@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":205.44,
+			"constraints":[],
+			"correctRatio":84.68,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1910&rd=5000",
+			"name":"DiamondLogo",
+			"notes":[],
+			"submission":111
+		},
+		{
+			"avgPts":434.92,
+			"constraints":[],
+			"correctRatio":81.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1359&rd=5000",
+			"name":"Surveyor",
+			"notes":[],
+			"submission":58
+		}
+	],
+	"name":"2004 TCCC > Qualification Problem Set 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5000"
+}

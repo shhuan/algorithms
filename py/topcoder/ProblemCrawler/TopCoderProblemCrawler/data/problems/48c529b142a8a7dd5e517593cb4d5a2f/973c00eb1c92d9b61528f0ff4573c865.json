@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3497&rd=6524",
+	"statement":"<p> This morning, at exactly 8:00am, Alice started on a hike up from the bottom to the top of a local hill. At the same time, Bob began to hike down from the top to the bottom of the same hill. Both hikers used the same trail, and they passed each other sometime during the hike. Given minute-by-minute records of the distance hiked by each hiker, as two int[]'s, <b>alice</b> and <b>bob</b>, you are to determine the time at which they met on the trail, measured as minutes after 8:00am, rounding down to the nearest minute if necessary. </p> <p> For example, suppose Alice hiked at a steady pace of 25 meters per minute for a total of 10 minutes, whereas Bob hiked at 30 meters per minute for the first 7 minutes, and 20 meters per minute for the next 2 minutes. They passed each other between 8:04am and 8:05am, so you would return 4. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Hiking",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"meet",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int meet(int[] alice, int[] bob)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ 30,30,30,30,30,30,30,20,20 }",
+			"id":0,
+			"input":"{ 25,25,25,25,25,25,25,25,25,25 }",
+			"note":"The example above.",
+			"order":1
+		},
+		{
+			"expect":"{ 100,100,0,0,0,100,100 }",
+			"id":0,
+			"input":"{ 100,100,0,0,0,100,100 }",
+			"note":"The hikers met at exactly 8:02am. They stopped to chat for several minutes before continuing their hikes.",
+			"order":2
+		},
+		{
+			"expect":"{ 1000 }",
+			"id":0,
+			"input":"{ 100,100,100,100,100,100,100,100,100,100 }",
+			"note":"Bob tripped over a root at the top of the hill and fell all the way to the bottom.",
+			"order":3
+		},
+		{
+			"expect":"{ 1,2,3,4,5,6,7,8,9,30 }",
+			"id":0,
+			"input":"{ 1,2,3,4,5,6,7,8,9,30 }",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"alice contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"bob contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of alice is between 0 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of bob is between 0 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"At least one element of alice is positive."
+		},
+		{
+			"order":6,
+			"val":"At least one element of bob is positive."
+		},
+		{
+			"order":7,
+			"val":"The sum of the elements in alice equals the sum of the elements in bob."
+		}
+	]
+}

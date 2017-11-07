@@ -1,0 +1,101 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5961&rd=8080",
+	"statement":"<p> <i>Note: this problem statement contains an image that may not display properly if viewed outside the applet.</i> </p> <p> Given an int <b>m</b> and a int[] <b>a</b> containing n numbers, return the result of the following expression: </p> <p> <img src=\"http://www.topcoder.com/contest/problem/FactorialTower/FactorialTower1.gif\" /> </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"The expression is calculated from top to bottom. See example 5."
+		},
+		{
+			"order":2,
+			"val":"\"x mod y\" means the remainder of x divided by y."
+		},
+		{
+			"order":3,
+			"val":"Assume 0! = 1."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FactorialTower",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"exprValue",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int exprValue(int[] a, int m)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{2,2,2,2}",
+			"note":"Last digit of 65536.",
+			"order":1
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"{3,8}",
+			"note":"(3!) mod 100 = 76.",
+			"order":2
+		},
+		{
+			"expect":"39877",
+			"id":0,
+			"input":"{775,967,1,1,1}",
+			"order":3
+		},
+		{
+			"expect":"40000",
+			"id":0,
+			"input":"{0}",
+			"note":"Remember that 0! is 1.",
+			"order":4
+		},
+		{
+			"expect":"40000",
+			"id":0,
+			"input":"{5,4,123456789,987654321,687955994,1162330089,195458992,1687386387, 1092101949,1086091397,902287014,341660341,1600834655,131565486,1494304912, 384585199,1883009662,916903507,1895924341,397197724,1883021244,1616061080, 1437763283,621297237,1883141487,282508826,285957625,1249530903,1484124572, 1822993209,1668351723,174237628,1589170712,992959839,1281777023,1158939002, 1488964134,1806511164,1519656093,159671689,542573000,1571768398,1203500608, 1053387535,793607740,1535801392,1798307613,552983945,901802936,1023595016}",
+			"order":5
+		},
+		{
+			"expect":"36864",
+			"id":0,
+			"input":"{2,3,2}",
+			"note":"The expression is calculated from top to bottom. (2! to the power of (3!)) mod 36864 = 4096.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of a will be between 0 and 2147483647, inclusive."
+		},
+		{
+			"order":3,
+			"val":"m will be between 1 and 40000, inclusive."
+		}
+	]
+}

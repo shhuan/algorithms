@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":209.84,
+			"constraints":[],
+			"correctRatio":79.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1772&rd=4570",
+			"name":"Inventory",
+			"notes":[],
+			"submission":124
+		},
+		{
+			"avgPts":267.37,
+			"constraints":[],
+			"correctRatio":68.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1771&rd=4570",
+			"name":"Collision",
+			"notes":[],
+			"submission":61
+		},
+		{
+			"avgPts":475,
+			"constraints":[],
+			"correctRatio":61.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1770&rd=4570",
+			"name":"GasStations",
+			"notes":[],
+			"submission":18
+		}
+	],
+	"name":"Single Round Match 153 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4570"
+}

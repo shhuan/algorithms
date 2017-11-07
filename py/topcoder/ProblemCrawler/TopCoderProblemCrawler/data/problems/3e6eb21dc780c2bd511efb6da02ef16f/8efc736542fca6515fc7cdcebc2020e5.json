@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=117&rd=3016",
+	"statement":"<pre>Class name: RemoteControl\nMethod name: getMinClicks\nParameters: int[], int, int, int[]\nReturns: int\n\nLazy Bob is watching TV from his couch.  He has highlighted in his TV guide the\nchannels he would like to watch every half hour.  Every click of his remote\ncontrol drains Bob of precious energy - so he would like to minimize the number\nof buttons he needs to press to get him through his television marathon.  There\nare 13 buttons on his remote: 10 buttons for the digits (0-9), a &quot;Next Channel&quot;\nbutton, a &quot;Previous Channel&quot; button, and a &quot;Flashback&quot; button:\n\n-The digit buttons allow you to jump directly to a desired channel.  (Ex: go to\nchannel 63 by typing [\\u147]6[\\u148], [\\u147]3[\\u148].)\n-The &quot;Next Channel&quot; button increments the current channel to the next higher\nviewable channel, unless the current channel is the highest viewable channel,\nin which case it goes to the lowest viewable channel.  The &quot;Previous Channel&quot;\nbutton decrements to the next lower viewable channel, unless the current\nchannel is the lowest viewable channel, in which case it goes to the highest\nviewable channel.\n-The &quot;Flashback&quot; button reverts to whatever channel was on the television\nbefore the current channel. (Ex:  If channel 1 is viewed, then channel 100,\nthen Flashback is pressed, the TV will go to channel 1.)\n\nBob can get from one channel to the next in one of two ways:\n1) Clicking any combination of &quot;Next Channel&quot;, &quot;Previous Channel&quot;, and\n&quot;Flashback&quot; buttons.\n2) Keying in the digits to the channel.\nBob will never combine &quot;Flashback&quot; and digit buttons when moving from one\nchannel to the next.\n \nThere are certain channels that are blocked on Bob's television.  These\nchannels are not viewable, so they are skipped by the &quot;Next Channel&quot; and\n&quot;Previous Channel&quot; buttons.  \n\nImplement a class RemoteControl which contains the method getMinClicks.  The\nmethod takes as parameters a int[] of channels to view, an int that is the\nlowest channel, an int that is the highest channel, and a int[] of blocked\nchannels.  The method returns the minimum number of clicks necessary to get\nthrough all the shows that Bob would like to watch.  \n\nThe method signature is:\npublic: int getMinClicks(int[] sequence, int lowestChannel, int highestChannel,\nint[] blocked);\n\n*int[] sequence - The sequence of channels that Bob must view (in order).  All\nchannels in this sequence are not in the blocked list and are between\nlowestChannel and highestChannel, inclusive.  The int[] contains between 1 and\n50 elements, inclusive.\n*int lowestChannel - The lowest channel on the television.  Must be greater\nthan 0, and less than or equal to 10,000.\n*int highestChannel - The highest channel on the television - must be greater\nthan or equal to lowestChannel, and less than or equal to 10,000.\n*int[] blocked - The list of channels that are blocked on Bob's television.\nAll the channels in this array must be valid channels (greater than or equal to\nlowestChannel, less than or equal to highestChannel).  Duplicates may be\nignored.  The int[]contains at most 50 elements.\n\nNote:\n*When keying in digits:  The television will not actually change channels until\nthere's a significant pause between digit clicks - Bob can move fast enough\nthat he can key in the digits of a channel without pausing long enough for the\ntelevision to go to the wrong channel.  (If Bob wants to go to channel 35 and\nthen 42, he can key in &quot;3&quot;,&quot;5&quot; and then &quot;4&quot;,&quot;2&quot; and the tv will visit only\nthose channels and when at channel 42, flashback will go to 35.)\n*If multiple successive channels in the sequence are the same: it takes 0\nclicks to go from one channel to another if the channels are the same.  Also,\nflashback contains the value of the last different channel (if there is one).\n*The TV assumes no channel when turned on, so the first channel must be keyed\nin.  Also, when the TV is turned on, and when viewing the first channel, there\nis no channel in flashback and pressing flashback does nothing.\n*Flashback only remembers one channel, so pressing flashback multiple times in\na row loops between the same two channels.   That is, if Bob pressed 17 30\nflashback flashback flashback he would visit, in order, channels 17, 30, 17,\n30, 17.\n\nExamples:\n\nsequence - 15, 14, 17, 1, 17\nlowestChannel - 1\nhighestChannel - 20\nblocked - 18, 19\nFirst, Bob must key in channel 15.. that's two clicks (&quot;1&quot;, &quot;5&quot;).Then, Bob will\nclick &quot;Previous Channel&quot; to get to channel 14.\nThen, Bob will key in channel 17.. that's two more clicks (&quot;1&quot;, &quot;7&quot;).\nBob will then key in channel 1.. that's one click (&quot;1&quot;).\nFinally, Bob will hit flashback to get back to channel 17.\nresult: 7 clicks\n----------------------------------------\nsequence - 105, 106, 107, 103\nlowestChannel - 103\nhighestChannel - 108\nblocked - 104\nFirst, Bob keys in channel 105.. three clicks (&quot;1&quot;, &quot;0&quot;, &quot;5&quot;).\nThen, Bob clicks &quot;Next Channel&quot; to get to channel 106.\nAgain, Bob clicks &quot;Next Channel&quot; to get to channel 107.\nThen, Bob clicks &quot;Next Channel&quot; twice to get to channel 103 (107-&gt;108-&gt;103).\nresult: 7\n----------------------------------------\nsequence [\\u150] 1, 100, 1, 101\nlowestChannel [\\u150] 1\nhighestChannel [\\u150] 200\nblocked [\\u150] empty\nBob clicks\n[\\u147]1[\\u148]...[\\u148]1[\\u148],[\\u148]0[\\u148],[\\u148]0[\\u148],...[\\u148]flas\nhback[\\u148],[\\u148]flashback[\\u148],[\\u148]Next Channel[\\u148].\nresult: 7\n----------------------------------------\nsequence - 10, 13, 13, 100, 99, 98, 77, 81\nlowestChannel - 1\nhighestChannel - 100\nblocked - 78, 79, 80, 3\nresult: 12\n----------------------------------------\nsequence - 1, 3, 5, 10, 2, 10\nlowestChannel - 1\nhighestChannel - 10\nblocked - 4, 6\nresult: 7\n-----------------------------------------\nsequence [\\u150] 600, 1000\nlowestChannel [\\u150] 1 \nhighesChannel [\\u150] 1000\nblocked [\\u150] empty\nresult: 7\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RemoteControl",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinClicks",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int, int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinClicks(int[] param0, int param1, int param2, int[] param3)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":238.25,
+			"constraints":[],
+			"correctRatio":65,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=128&rd=3018",
+			"name":"PrimeFinder",
+			"notes":[],
+			"submission":20
+		},
+		{
+			"avgPts":450.02,
+			"constraints":[],
+			"correctRatio":95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=129&rd=3018",
+			"name":"ReverseFibonacci",
+			"notes":[],
+			"submission":20
+		},
+		{
+			"avgPts":737.49,
+			"constraints":[],
+			"correctRatio":62.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=130&rd=3018",
+			"name":"AnalyzeDNA",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 19 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3018"
+}

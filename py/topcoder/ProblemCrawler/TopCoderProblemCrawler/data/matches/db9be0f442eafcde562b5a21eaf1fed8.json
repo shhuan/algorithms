@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":183.69,
+			"constraints":[],
+			"correctRatio":82.72,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13743&rd=16434",
+			"name":"DevuAndPlantingTrees",
+			"notes":[],
+			"submission":683
+		},
+		{
+			"avgPts":345.41,
+			"constraints":[],
+			"correctRatio":82.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13746&rd=16434",
+			"name":"UnrelatedPaths",
+			"notes":[],
+			"submission":507
+		},
+		{
+			"avgPts":752.46,
+			"constraints":[],
+			"correctRatio":92.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13731&rd=16434",
+			"name":"DevuAndBeautifulSubstrings",
+			"notes":[],
+			"submission":232
+		}
+	],
+	"name":"2015 TopCoder Open Algorithm > Round 1C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16434"
+}

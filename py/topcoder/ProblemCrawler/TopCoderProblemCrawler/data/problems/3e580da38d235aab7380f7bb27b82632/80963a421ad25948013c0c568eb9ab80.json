@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=124&rd=3017",
+	"statement":"<pre>Class Name:  AlienInvasion\nMethod Name: invasionTime\nParameters:  String[], int, int\nReturns:     int\n\nAfter doing such a good job on your last assignment, Zorono, the king of an\nalien tribe planning to take over earth, has another assignment for you.\nZorono is in the process of planning his conquest of the White House.\n\nZorono has used his long-range scanners to obtain a floor plan of the White\nHouse, and has identified several key locations on the floor plan that his\ntroops need to visit during the invasion.  Zorono has given you a copy of the\nfloor plan along with a starting location.  It's up to you to determine the\nminimum amount of time that Zorono's troops will have to spend taking over the\nWhite House.  Assume that moving from cell to cell costs Zorono's troops one\nunit of time.  The troops can only move to cells that are directly above,\nbelow, or next to the current cell.  No diagonal moves are allowed.  The troops\nalways stay together.\n \nImplement a class AlienInvasion, containing a method invasionTime.  The method\ntakes 3 parameters.  The first is an String[] that stores the floor plan of the\nWhite House.  The String[] contains elements, each of the same length.  Each\ncharacter in each String represents a cell.  The characters are ' ' (space),\n'W', or 'X'.  A space corresponds to an open area in which Zorono's troops can\nmove freely.  A 'W' corresponds to a wall or some other obstacle blocking the\npath of Zorono's troops.  An 'X' corresponds to a location that Zorono's troops\nmust visit and conquer.  Consider them waypoints that you must visit (in no\nparticular order).  The first String in the String[] is the top row of the\nroom, and the last String is the bottom row of the room.  The second and third\nparameters are the x (horizontal) and y (vertical) coordinates, respectively,\nof the starting location for Zorono's troops.  (0,0) is in the upper left\ncorner of the room.  The return value of the method should be the minimum\namount of time for Zorono's men to move from the starting location to every\nspecified location on the map the troops must visit (all the X?s).  If Zorno's\nmen can't visit every location, then the value -1 should be returned.  If there\nare no locations to visit, the method should return 0.\n\nHere is the method signature:\nint invasionTime(String[] map, int x, int y)\n\nmap is a String[] of between 1 and 25, inclusive, elements.  The Strings are\nall of equal length and contain between 1 and 25, inclusive, characters.  The\nStrings will contain only W?s, X?s, and spaces.  The number of locations marked\noff on the map (X?s) is between 0 and 7, inclusive.  x and y are such that\nspecified starting location (x,y) is inside the map, and not on top of a wall.\nThe White House is surrounded by wall so all edge characters must be ?W?.\nTopCoder will check the validity of the input.\n\nExamples:\n\nIf the String[] =\n{\n &quot;WWWWWWWWWWWWWWWWWWWW&quot;  0\n &quot;W                  W&quot;  1\n &quot;W WWW  WWWWWWWWWW  W&quot;  2\n &quot;W W         W      W&quot;  3\n &quot;W W X       W      W&quot;  4\n &quot;W WWWWW     W X    W&quot;  5\n &quot;W W         WWWWWWWW&quot;  6\n &quot;W WWWWWWWW  W    X W&quot;  7\n &quot;W      X W         W&quot;  8\n &quot;WWWWWWWWWWWWWWWWWWWW&quot;  9\n}\n  01234567890123456789\n            1111111111\n\n(The numbers are included for clarity, but will not be in the String[]).\n\nWith a starting location of x=1 and y=1. (top left corner) the invasion time is\n89.\n\n[The order (1,1) to (7,8) to (4,4) to (17,7) to (14,5) will result in the\nlength of 89.]\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AlienInvasion",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"invasionTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int invasionTime(String[] param0, int param1, int param2)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

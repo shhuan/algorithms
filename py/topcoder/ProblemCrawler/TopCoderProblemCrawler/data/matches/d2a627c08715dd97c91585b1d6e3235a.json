@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":220.17,
+			"constraints":[],
+			"correctRatio":57.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4661&rd=7995",
+			"name":"PrimeStatistics",
+			"notes":[],
+			"submission":304
+		},
+		{
+			"avgPts":316.43,
+			"constraints":[],
+			"correctRatio":83.94,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4700&rd=7995",
+			"name":"EncodingTrees",
+			"notes":[],
+			"submission":137
+		},
+		{
+			"avgPts":640.09,
+			"constraints":[],
+			"correctRatio":32.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4660&rd=7995",
+			"name":"StackingBoxes",
+			"notes":[],
+			"submission":40
+		}
+	],
+	"name":"Single Round Match 261 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=7995"
+}

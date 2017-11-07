@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3476&rd=8093",
+	"statement":"Our department is sending <b>n</b> faculty members to an academic conference and we are determined to cover as many meetings as possible. We have a list of all the meetings, with their start and end times. All the meetings are in adjacent rooms so no time is required to travel from one meeting to another. This means that if the end time of one meeting is the same as the start time of another meeting, a single person could cover both meetings from start to end. <p> Each element of the String[] <b>meetings</b> gives the start and end time of a meeting, separated by a single space. Each time is given in the form hh:mm and represents a time between 08:00 in the morning and 08:00 in the evening inclusive. </p><p> Create a class Conference that contains a method coverage that is given <b>n</b>, the number of faculty sent to the conference, and the String[] <b>meetings</b> listing the times of all the meetings. The method returns the most meetings that we can cover by having at least one faculty member at the meeting from start to end. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Conference",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"coverage",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int coverage(int n, String[] meetings)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"08:00 08:00\",\"08:00 08:00\",\"08:00 08:00\", \"08:00 08:00\",\"08:00 08:00\"}",
+			"id":0,
+			"input":"3",
+			"note":" All these meetings last all day long. Nobody can cover more than one. ",
+			"order":1
+		},
+		{
+			"expect":"{\"09:00 08:00\",\"08:00 12:00\",\"12:00 08:00\", \"08:00 08:00\",\"08:00 08:00\"}",
+			"id":0,
+			"input":"2",
+			"note":" One person can cover the 8-12 meeting and the 12-8 meeting. The other person can cover one of the all-day meetings.",
+			"order":2
+		},
+		{
+			"expect":"{\"08:00 01:00\",\"08:25 12:50\",\"12:00 12:30\", \"12:30 08:00\",\"08:00 08:00\"}",
+			"id":0,
+			"input":"1",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"meetings will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of meetings will contain 11 characters in the form &quot;hh:mm hh:mm&quot;"
+		},
+		{
+			"order":4,
+			"val":"Each hh:mm will represent a time between 8 am and 8 pm inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each mm will be between 00 and 59, inclusive."
+		},
+		{
+			"order":6,
+			"val":"In each element of meetings the second time will be strictly later than the first."
+		}
+	]
+}

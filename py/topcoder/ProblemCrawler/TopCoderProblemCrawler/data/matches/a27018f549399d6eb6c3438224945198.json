@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":169.5,
+			"constraints":[],
+			"correctRatio":88.76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=971&rd=4275",
+			"name":"StreetLite",
+			"notes":[],
+			"submission":89
+		},
+		{
+			"avgPts":286.21,
+			"constraints":[],
+			"correctRatio":62.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=966&rd=4275",
+			"name":"BuildCost",
+			"notes":[],
+			"submission":67
+		},
+		{
+			"avgPts":599.93,
+			"constraints":[],
+			"correctRatio":71.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=978&rd=4275",
+			"name":"CovEncoder",
+			"notes":[],
+			"submission":7
+		}
+	],
+	"name":"Single Round Match 111 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4275"
+}

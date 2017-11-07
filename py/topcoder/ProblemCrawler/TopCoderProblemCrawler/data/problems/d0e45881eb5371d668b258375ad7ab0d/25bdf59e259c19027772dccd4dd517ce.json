@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=739&rd=4165",
+	"statement":"<p> A number is a <i>Perfect Square</i> if it can be expressed as k^2 for some positive integer k. A number is a <i>Perfect Power</i> if it can be expressed as k^n (k to the n<sup>th</sup> power) for some positive integers k and n, where n and k must both be greater than 1. </p><p> Create a class Powerful that contains the method power that takes an int, <b>number</b>, as input and returns the String &quot;&lt;k&gt;^&lt;n&gt;&quot;, where &lt;k&gt; to the &lt;n&gt;<sup>th</sup> power is equal to <b>number</b>. If a number cannot be represented as a Perfect Power, your method should return &quot;NOT A PERFECT POWER&quot;. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"If there is more than one way to express a number as a Perfect Power, your method should express it with the highest exponent possible. (see example 1)"
+		},
+		{
+			"order":2,
+			"val":"Your method should return \"<k>^<n>\"; (quotes and angle brackets for clarity only) with no blanks or leading zeroes."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Powerful",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"power",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String power(int number)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"2^3\"",
+			"id":0,
+			"input":"8",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"3^4\"",
+			"id":0,
+			"input":"81",
+			"note":"Do NOT return \"9^2\"",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"NOT A PERFECT POWER\"",
+			"id":0,
+			"input":"675",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"NOT A PERFECT POWER\"",
+			"id":0,
+			"input":"1",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"NOT A PERFECT POWER\"",
+			"id":0,
+			"input":"2000000000",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"number is between 1 and 2,000,000,000 inclusive."
+	}]
+}

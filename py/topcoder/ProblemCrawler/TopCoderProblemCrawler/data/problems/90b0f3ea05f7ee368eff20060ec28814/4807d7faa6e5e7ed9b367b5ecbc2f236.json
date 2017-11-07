@@ -1,0 +1,104 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10229&rd=13697",
+	"statement":"In genetics, a DNA sequence is a sequence of nucleotides (A, C, G or T). Some DNA sequences translate to proteins, which are non-empty sequences of amino acids. Let's examine the DNA translation process::<br /><br /> \n <ol> \n  <li>From left to right, split the DNA sequence into consecutive, non-overlapping triples of nucleotides. Each triple is called a codon. There may be one or two nucleotides left over at the end - those should be ignored. For example, the DNA sequence &quot;ACCTGTACG&quot; will produce the codon sequence &quot;ACC&quot;, &quot;TGT&quot;, &quot;ACG&quot;. The DNA sequence &quot;ACCTGTAC&quot; will produce the codon sequence &quot;ACC&quot;, &quot;TGT&quot; (&quot;AC&quot; is left over and ignored).</li> \n  <li>You are given a codon table that maps codons to their associated amino acids. From left to right, look up each codon in the sequence generated above and replace it with its associated amino acid. Every codon in the sequence must have an associated amino acid - otherwise, the DNA sequence does not translate to a protein. For example, if &quot;ACC&quot; and &quot;ACG&quot; each map to threonin (&quot;thr&quot;) and &quot;TGT&quot; maps to cysteine (&quot;cys&quot;), the DNA sequence &quot;ACCTGTACG&quot; will translate to the protein &quot;thr cys thr&quot;.</li> \n </ol> Sometimes, after replication, one or more nucleotides in a DNA sequence go missing. This situation is called deletion. After a deletion, a DNA sequence can become any of its subsequences. For example, &quot;ACTG&quot; may become &quot;ACG&quot; or &quot;CG&quot;.<br /><br /> <br /><br /> You are given a String[] <b>DNASequence</b> containing a DNA sequence. Concatenate the elements of <b>DNASequence</b> to obtain the DNA sequence. You are also given a String[] <b>codonTable</b> containing the codon table. Each element is formatted &quot;CODON AMINOACID&quot; (quotes for clarity), where AMINOACID is the name of the amino acid associated with codon CODON. Compute the number of different possible proteins that the given DNA sequence can translate to after undergoing zero or more deletions. Since this number can be quite large, return its value modulo 1000000007. Remember that only nonempty amino acid sequences are considered proteins. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DNADeletion",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"differentProteins",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int differentProteins(String[] DNASequence, String[] codonTable)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"ACT gua\", \"ACG cys\", \"ATG leu\", \"CTG thr\"}",
+			"id":0,
+			"input":"{\"ACTG\"}",
+			"note":"You can get proteins: \"gua\" (deletion of 'G' or no deletion), \"cys\" (deletion of 'T'), \"leu\" (deletion of 'C'), \"thr\" (deletion of 'A'). Other deletions do not result in proteins.",
+			"order":1
+		},
+		{
+			"expect":"{\"AAA thr\", \"CCC cys\"}",
+			"id":0,
+			"input":"{\"AAACCC\"}",
+			"note":"You can get proteins: \"thr\", \"cys\" and \"thr cys\".",
+			"order":2
+		},
+		{
+			"expect":"{\"AAA gua\",\"TCC dop\",\"AAT dop\",\"CCC gua\"}",
+			"id":0,
+			"input":"{\"AAATCCC\"}",
+			"note":"You can get proteins: \"gua\", \"dop\", \"gua dop\" (from sequence \"AAATCC\"), \"dop gua\" (from sequence \"AATCCC\"), \"gua gua\" (from sequence \"AAACCC\").",
+			"order":3
+		},
+		{
+			"expect":"{\"AAC RpjZt\",\"AAT ZeiC\",\"GCA ChZwh\",\"TCC RpjZt\",\"GAA I\", \"TAG ZeiC\",\"CTG dVK\",\"GAG ZeiC\",\"GTG I\",\"AAG q\",\"ATT dVK\", \"AGA cJEjM\",\"GGG KONUd\",\"GTC ZRV\",\"GGC ZeiC\",\"TTA KONUd\", \"GAC q\",\"CCA q\",\"GCC ZRV\",\"GCG RpjZt\",\"CCT ZRV\",\"ATG dVK\", \"ATC ChZwh\",\"CTC cJEjM\",\"CCC q\",\"ATA dWjz\",\"TTG DkEG\", \"CAG q\",\"CAA ZRV\",\"ACT dVK\",\"TCG dVK\",\"ACC I\",\"CGC dVK\"}",
+			"id":0,
+			"input":"{\"ATGCGCATTAACCTCCTACCATGGAAGGGACGTAACCCGGCAATTTGATC\", \"CTGATGACGGCATAAGCTACCCCTAGAGGTAAAAATGCATACTGCGTGCT\", \"ATGCAG\"}",
+			"note":"Be sure to concatenate the elements of .",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"DNASequence will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Every element of DNASequence will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Every element of DNASequence will contain only characters 'A', 'C', 'T', 'G'."
+		},
+		{
+			"order":4,
+			"val":"codonTable will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Every element of codonTable will contain a codon, followed by a single space, followed by an amino acid."
+		},
+		{
+			"order":6,
+			"val":"Every codon in codonTable will contain exactly 3 characters."
+		},
+		{
+			"order":7,
+			"val":"Every codon in codonTable will contain only characters 'A', 'C', 'T', 'G'."
+		},
+		{
+			"order":8,
+			"val":"Every codon in codonTable will be unique."
+		},
+		{
+			"order":9,
+			"val":"Every amino acid in codonTable will contain between 1 and 20 characters."
+		},
+		{
+			"order":10,
+			"val":"Every amino acid in codonTable will contain only letters ('a'-'z', 'A'-'Z')."
+		}
+	]
+}

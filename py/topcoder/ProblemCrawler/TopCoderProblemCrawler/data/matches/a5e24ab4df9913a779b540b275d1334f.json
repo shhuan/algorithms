@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":206.02,
+			"constraints":[],
+			"correctRatio":97.79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1877&rd=4650",
+			"name":"MineField",
+			"notes":[],
+			"submission":181
+		},
+		{
+			"avgPts":348.6,
+			"constraints":[],
+			"correctRatio":89.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1901&rd=4650",
+			"name":"FairWorkload",
+			"notes":[],
+			"submission":147
+		},
+		{
+			"avgPts":472.93,
+			"constraints":[],
+			"correctRatio":69.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1957&rd=4650",
+			"name":"GoldMine",
+			"notes":[],
+			"submission":56
+		}
+	],
+	"name":"Single Round Match 169 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4650"
+}

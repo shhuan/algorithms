@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7313&rd=10660",
+	"statement":"I want a list of BioServices that are associated with each KindOfInput (such as &quot;gene&quot;, &quot;DNAFragment&quot;, &quot;genome&quot;, etc.). What is available from my service provider is a list of strings, each containing the name of a service followed by all the KindsOfInput it requires. <p> Given a String[] <b>services</b>, return a String[] in which each element contains a KindOfInput followed by the names of all the services that use that kind of input. </p><p> Each KindOfInput should appear exactly once in the return. Within each element of the return, the service names should be in alphabetical order, and should be separated by the 2 characters &quot;, &quot; (comma space). The KindOfInput should be separated from the first service name by the 5 characters &quot; ==&gt; &quot; (space eq eq gt space). The returned list should be in alphabetical order. </p><p> Note that all names are case-sensitive, and that &quot;alphabetical order&quot; refers to the ASCII ordering, where, for example, 'Z' precedes 'a'. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ServiceNames",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"makeList",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] makeList(String[] services)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"Annotation ==> BLAST, X\", \"Genome ==> BLAST\", \"Sensitivity ==> BLAST\" }",
+			"id":0,
+			"input":"{\"BLAST Genome Annotation Sensitivity\",\"PING\",\"X Annotation\"}",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"{\"PING\"}",
+			"note":" There are no KindsOfInput so the return has 0 elements.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {\"Annotation ==> X\", \"Genome ==> BLAST\", \"Sensitivity ==> BLAST\", \"X ==> Apple\", \"ample ==> Apple\", \"annotation ==> BLAST\" }",
+			"id":0,
+			"input":"{\"BLAST Genome annotation Sensitivity\",\"PING\",\"X Annotation\",\"Apple X ample\"}",
+			"note":"annotation and Annotation are distinct kinds of input. annotation comes later alphabetically than any name that starts with an uppercase letter.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"services will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of services will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of services will contain tokens separated by a single space (' ')."
+		},
+		{
+			"order":4,
+			"val":"Each token will consist of 1 or more letters ('A'-'Z' or 'a'-'z')."
+		},
+		{
+			"order":5,
+			"val":"The first tokens of the elements in services will be distinct."
+		},
+		{
+			"order":6,
+			"val":"Within each element of services the KindsOfInput will be distinct."
+		}
+	]
+}

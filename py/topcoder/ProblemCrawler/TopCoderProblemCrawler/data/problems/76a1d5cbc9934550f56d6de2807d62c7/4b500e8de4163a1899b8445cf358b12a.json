@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1256&rd=4493",
+	"statement":"<p> Concurrency can be simulated on a single processor using the technique of <i>time-slicing</i>, giving each process a chance to run for some small, fixed interval before switching to the next process. For example, two processes might take turns executing for 10 milliseconds each until both have finished. However, switching between processes is expensive, so it is sometimes desirable to allow a process to execute more than one time slice in a row. On the other hand, to preserve the illusion of parallel execution, it is desirable that no process have to wait too long before getting a chance to run. One way to balance these conflicting desires is to set a limit <b>K</b> on the number of time slices a process might wait between turns. More precisely, no process that still needs more time slices will ever wait more than <b>K</b> time slices before getting a chance to run. </p> <p> Consider two processes, A and B, that both need to run for <b>N</b> time slices. Given <b>N</b> and <b>K</b>, your task is to determine how many ways there are to schedule A and B such that A gets the first time slice and B gets the last time slice. For example, if <b>N</b>=3 and <b>K</b>=3, there are six possible schedules: </p> <pre>\n     AAABBB\n     AABABB\n     AABBAB\n     ABAABB\n     ABABAB\n     ABBAAB\n</pre> If <b>K</b> is reduced to 2, then the AAABBB schedule is eliminated, leaving five possible schedules. <p> Your task is to write a method that takes two integers, <b>N</b> (the number of time slices needed by each process) and <b>K</b> (the maximum number of time slices an unfinished process is willing to wait), and returns the number of possible schedules as a long (see examples). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TimeSlicing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long howMany(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"The example above.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"4",
+			"note":"The twelve possible schedules are  Notice in the first schedule (AABAABBB) that process B runs for three time slices in a row even though =2. This is legal because process A has already finished.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"15",
+			"order":3
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"20",
+			"order":4
+		},
+		{
+			"expect":"28",
+			"id":0,
+			"input":"30",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N is between 1 and 30, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K is between 1 and 30, inclusive."
+		}
+	]
+}

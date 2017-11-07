@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11196&rd=14241",
+	"statement":"John and Brus are going to open a boring store. They would like to have a really boring name for it. John has one wooden plate with an old store name on it. Brus also has one. <br /><br /><br /><br /> Now they need to compose two plates with the same name (case-sensitive) for the new store. They would like to produce these new plates as follows: \n <ol> \n  <li>John will cut two pieces from his plate. Each of the pieces will contain a non-empty contiguous substring of the name written on the original plate and the locations of these two substrings within the plate will not overlap. For example, if the name on John's plate is &quot;abCDeF&quot;, then he can cut pieces with &quot;bC&quot; and &quot;e&quot; or with &quot;CDeF&quot; and &quot;ab&quot;, but he can't cut pieces with &quot;aC&quot; and &quot;eF&quot; (&quot;aC&quot; is not a contiguous substring), with &quot;abCD&quot; and &quot;&quot; (empty substring is not allowed) or with &quot;DeF&quot; and &quot;CD&quot; (locations of the substrings overlap). Let's denote the substrings on John's pieces as A and B.</li> \n  <li>Brus will cut two pieces from his plate according to the same rules. Let's denote the substrings on these pieces as C and D.</li> \n  <li>One plate for the new store will be constructed as A + C (where '+' means concatenation of two strings) and another plate will be constructed as B + D.</li> \n </ol> You are given two Strings <b>J</b> and <b>B</b> - the names on John's and Brus's plates respectively. Return the longest possible name for the new store that can be achieved as described above. In case of a tie choose the one that comes first lexicographically. If it is impossible to achieve the goal, return an empty String. ",
+	"notes":[{
+		"order":1,
+		"val":"If two Strings A and B have the same length, then A comes before B lexicographically if it has a smaller character at the first position where the Strings differ. When comparing the characters, refer to the following list of characters in ascending order: 'A', 'B', ..., 'Z', 'a', 'b', ..., 'z'."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheBoringStoreDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String find(String J, String B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"StoreOfBrus\"",
+			"id":0,
+			"input":"\"StoreOfJohn\"",
+			"note":"John's plate contains two 'o's, and Brus's plate contains two 'r's, so one possible solution is for each new plate to contain one 'o' from John's plate and one 'r' from Brus's plate.",
+			"order":1
+		},
+		{
+			"expect":"\"John\"",
+			"id":0,
+			"input":"\"JohnAndJohn\"",
+			"note":"The name on both new plates must end with a character from one of Brus's pieces. However, all characters on Brus's plate are different, so it is impossible to achieve the goal.",
+			"order":2
+		},
+		{
+			"expect":"\"BrusAlsoLikesToPlayGames\"",
+			"id":0,
+			"input":"\"JohnLikesToPlayGames\"",
+			"note":" ",
+			"order":3
+		},
+		{
+			"expect":"\"abacabadabacaba\"",
+			"id":0,
+			"input":"\"abacaba\"",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"J will contain between 1 and 47 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"B will contain between 1 and 47 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character of J will be an uppercase or lowercase letter ('a' - 'z', 'A' - 'Z')."
+		},
+		{
+			"order":4,
+			"val":"Each character of B will be an uppercase or lowercase letter ('a' - 'z', 'A' - 'Z')."
+		}
+	]
+}

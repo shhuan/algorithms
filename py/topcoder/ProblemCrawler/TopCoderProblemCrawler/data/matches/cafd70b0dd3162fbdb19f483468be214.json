@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":190.94,
+			"constraints":[],
+			"correctRatio":42.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4517&rd=9898",
+			"name":"Runway",
+			"notes":[],
+			"submission":344
+		},
+		{
+			"avgPts":396.65,
+			"constraints":[],
+			"correctRatio":52.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6049&rd=9898",
+			"name":"NumJordanForms",
+			"notes":[],
+			"submission":122
+		}
+	],
+	"name":"TCO 06 > Qualification Set 2/10/13",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9898"
+}

@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=89&rd=3008",
+	"statement":"<pre>Class Name: StringProcessor\nMethod Name: processString\nParameters: String,String\nReturns: String\n\nImplement a class StringProcessor, which contains a method processString.  The\nmethod takes two Strings as parameters: a String to process and a String of\ncommands.  The method successively (from left to right) processes the commands\nin the command String on the String to process and returns the resulting String.\n\nThere is always a pointer pointing to some position in the String to process.\nWhen the method starts, the pointer is pointing to the first character in the\nString.  The pointer can point anywhere from the first character to 1 position\nto the right of the last character.\n\nThe commands are:\n\n0 - move pointer to point to first character. (That's a zero, not a capital\nletter oh)\n\n$ - move pointer to the position after the last character.\n\nx - delete the character at the pointer position and shift all characters (if\nany) after the position left.  The pointer location does not change.  This\ncommand is processed only if the pointer position is not the position to the\nright of the string.\n\ns - swap the character at the pointer position with that to the right of it.\nThe pointer location does not change.  This command is processed as long as the\npointer is not at the last character or the position to the right of all\ncharacters.\n\nic - shift all characters at and after the current position right and put the\ncharacter 'c' at the pointer location.  Then move the pointer location right so\nit points to the same character it was pointing too before the insert (or\npoints to the right of the String if it pointed to the right of the String\nbefore the insert).  'c' is a variable and can be any allowed character, even a\ncharacter that ordinarily is a command.\n\nl - move the pointer right one position.  Processed if the current position is\nnot to the right of the string.\n\nh - move the pointer left one position.  Processed if the current position is\nnot the first character.\n\nu - undo the most recent processed command that is not undo, if there is such a\ncommand.  Undo restores the String and pointer location to the state before the\nlast non-undo command was processed. Remember: Sometimes a command is given,\nbut not processed (because, for example, the end of the String has been\nreached).  'x', 's', 'l', 'h' may be given but not processed.  '0', '$', 'ic'\nare always processed when given.\n\nThe method signature is:\npublic String processString(String toProcess, String commands);\n\ntoProcess is a String containing letters('a'-'z', 'A'-'Z'), digits('0'-'9'),\nspaces(' '), and punctuation ('.',',','?','!').  toProcess will have at least 1\ncharacter and at most 50 characters.\ncommands will be a String of valid commands only.  Any characters following an\n'i' (insert) in the String will be letters, digits, spaces, or the punctuation\nlisted above.  commands will have at most 50 characters.\nTopCoder will check that these Strings are valid.\n\nExamples:\n-if toProcess=&quot;It doesnt get any better than TopCoder.&quot; and\ncommands=&quot;lllluxxxxxxxxulllislllxhxi ilioit$hxhi!hs&quot;, the resulting String is:\n&quot;It gets a lot better than TopCoder!&quot;.  Note there is a space between the\nsecond and third 'i' in the command string.\n\n-if toProcess=&quot;This is a test.&quot; and commands = &quot;0$$uhhhx&quot;, the resulting String\nis &quot;This is a tet.&quot;\n\n-if toProcess=&quot;This is a test.&quot; and commands = &quot;xhhhhhhhhhhhhhhhhhhhu&quot;, the\nresulting String is &quot;This is a test.&quot;\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StringProcessor",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"processString",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String processString(String param0, String param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

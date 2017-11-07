@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9800&rd=13678",
+	"statement":"<p> A number is called <i>2-digit-prime</i> if using each of its digits at most once, we can make a prime number containing exactly 2 digits (with no leading zeros). For example, 153 is <i>2-digit-prime</i> because we can use its digits to make 13, which is a prime number with 2 digits (note that we can also make 53 and 31). Given ints <b>a</b> and <b>b</b>, return the number of <i>2-digit-prime</i> numbers between <b>a</b> and <b>b</b>, inclusive. See examples for further clarification. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DigitPrime",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countNumbers",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countNumbers(int a, int b)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"20",
+			"id":0,
+			"input":"11",
+			"note":" numbers are: 11 (note that we can use some digit twice if it appears twice in the number), 13, 14 (using its digits we can make 41), 16 (we can make 61), 17 and 19.",
+			"order":1
+		},
+		{
+			"expect":"98",
+			"id":0,
+			"input":"37",
+			"order":2
+		},
+		{
+			"expect":"9003",
+			"id":0,
+			"input":"9003",
+			"note":"Note that we are looking for 2 digit prime numbers with no leading zeros, so 03 is not considered a 2 digit prime number.",
+			"order":3
+		},
+		{
+			"expect":"11111",
+			"id":0,
+			"input":"11",
+			"order":4
+		},
+		{
+			"expect":"100000",
+			"id":0,
+			"input":"97463",
+			"order":5
+		},
+		{
+			"expect":"33601",
+			"id":0,
+			"input":"33561",
+			"note":"The only number in this interval that is not  is 33600. ",
+			"order":6
+		},
+		{
+			"expect":"11999",
+			"id":0,
+			"input":"11000",
+			"note":"Each number in this interval is .",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"b will be between 10 and 100000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"a will be between 10 and b, inclusive."
+		}
+	]
+}

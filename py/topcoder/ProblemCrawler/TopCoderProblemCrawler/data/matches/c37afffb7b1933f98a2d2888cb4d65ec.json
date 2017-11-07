@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":231.54,
+			"constraints":[],
+			"correctRatio":81.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6820&rd=10135",
+			"name":"AlmostBipartiteMatching",
+			"notes":[],
+			"submission":11
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6238&rd=10135",
+			"name":"SingleElimination",
+			"notes":[],
+			"submission":7
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6103&rd=10135",
+			"name":"Regulars",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"TCCC06 > Wildcard Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10135"
+}

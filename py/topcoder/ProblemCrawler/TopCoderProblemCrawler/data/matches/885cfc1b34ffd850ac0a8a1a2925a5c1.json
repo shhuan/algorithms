@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.51,
+			"constraints":[],
+			"correctRatio":69.99,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11096&rd=14514",
+			"name":"TheNumbersWithLuckyLastDigit",
+			"notes":[],
+			"submission":813
+		},
+		{
+			"avgPts":317.82,
+			"constraints":[],
+			"correctRatio":26.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11097&rd=14514",
+			"name":"TheJackpotDivOne",
+			"notes":[],
+			"submission":494
+		},
+		{
+			"avgPts":563.01,
+			"constraints":[],
+			"correctRatio":82.95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11098&rd=14514",
+			"name":"TheTicketsDivOne",
+			"notes":[],
+			"submission":217
+		}
+	],
+	"name":"Single Round Match 504.5 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14514"
+}

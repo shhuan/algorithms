@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9751&rd=13513",
+	"statement":"You have recently bought a field containing gold and silver, and you want to hire some workers to gather the treasure and build beautiful things with it. The field is divided into square cells of equal size. You are given a String[] <b>field</b>, where the j-th character of the i-th element is the content of the cell at row i, column j. A period ('.') represents grass, an uppercase 'X' represents rocks, and uppercase 'G' and 'S' represent gold and silver, respectively. You have also built special workplace cells for your workers, each denoted by an uppercase 'W'.<br /><br /><br /><br /> Each worker must be assigned exactly one workplace, one gold cell and one silver cell. None of these three cells can be assigned to any of the other workers. Each worker will be transporting gold and silver from his cells to his workspace, and for efficiency reasons, you do not want workers to carry anything for more than <b>K</b> meters. This means every worker's workplace must be at most <b>K</b> meters away from his gold cell and at most <b>K</b> meters away from his silver cell. Distance is measured as follows. From each cell, a worker can only move left, right, up or down to an adjacent cell (if one exists). The distance between two consecutive cells is one meter. Workers are only allowed to walk on grass when moving between their cells.<br /><br /><br /><br /> Return the largest number of workers you can hire while meeting these requirements.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WorkersOnPlane",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(String[] field, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{ \"G..X\", \"..XS\", \"W...\" }",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{ \"GG..\", \"....\", \"..W.\", \"..W.\", \"SS..\" }",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{ \"GG..\", \"XX..\", \"..W.\", \"..W.\", \"SS..\" }",
+			"note":"We can hire only one worker, because the gold mine in the top left corner can't be reached from any of the workplaces.",
+			"order":3
+		},
+		{
+			"expect":"11",
+			"id":0,
+			"input":"{\"G.XXX.S\", \"G..WW.S\"}",
+			"note":"If we hire a worker for the left workplace, he won't be able to reach any of the silver mines. Similarly, if we hire a worker for the right workplace, he won't be able to reach gold mines. So we can't hire anybody.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"field will contain between 1 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of field will contain between 1 and 30 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of field will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in each element of field will be a period ('.'), an uppercase 'X', an uppercase 'G', an uppercase 'S' or an uppercase 'W'."
+		},
+		{
+			"order":5,
+			"val":"K will be between 1 and 1000, inclusive."
+		}
+	]
+}

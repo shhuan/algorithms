@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":169.94,
+			"constraints":[],
+			"correctRatio":55.95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12976&rd=15847",
+			"name":"MinimumSquare",
+			"notes":[],
+			"submission":647
+		},
+		{
+			"avgPts":245.01,
+			"constraints":[],
+			"correctRatio":84.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13013&rd=15847",
+			"name":"CycleColoring",
+			"notes":[],
+			"submission":78
+		},
+		{
+			"avgPts":635.38,
+			"constraints":[],
+			"correctRatio":84.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12984&rd=15847",
+			"name":"TorusSailing",
+			"notes":[],
+			"submission":13
+		}
+	],
+	"name":"Single Round Match 614 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15847"
+}

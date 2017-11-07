@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7397&rd=10665",
+	"statement":"<p> You are given an int <b>N</b>. The factorial of <b>N</b> is defined as <b>N</b>*(<b>N</b>-1)*(<b>N</b>-2)*...*1. Compute the factorial of <b>N</b> and remove all of its rightmost zero digits. If the result is more than <b>K</b> digits long, return the last <b>K</b> digits as a string. Otherwise, return the entire result as a string. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"KLastNonZeroDigits",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getKDigits",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getKDigits(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"10",
+			"note":"You would first compute the factorial of 10, which is 10*9*8*7*6*5*4*3*2*1=3628800. You would then remove all rightmost zeros to get 36288. Finally, you would return the last 3 digits as a string: \"288\".",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"7",
+			"note":"The factorial of 7 is 5040. We remove the last zero to get \"504\". The last 2 digits of \"504\" are \"04\".",
+			"order":4
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"20",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 20, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and 9, inclusive."
+		}
+	]
+}

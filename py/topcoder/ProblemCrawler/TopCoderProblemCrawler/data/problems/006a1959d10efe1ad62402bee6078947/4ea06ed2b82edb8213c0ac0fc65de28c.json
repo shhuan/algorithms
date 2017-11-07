@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7336&rd=10660",
+	"statement":"We are going to plant a tree on level ground near a streetlight, and we want to know how big a shadow it will cast. We will model the tree as a (possibly degenerate) rectangular solid, and treat the streetlight as casting rays from a single point. We will use an x,y,z coordinate system that is aligned with the rectangular solid and in which y is the distance above ground level. <p> int[] <b>tree</b> contains exactly 6 elements, namely the x,y,z coordinates of one corner of the rectangular solid followed by the coordinates of the diagonally opposite corner. int[] <b>light</b> contains exactly 3 elements, the x,y,z coordinates of the streetlight. Given <b>tree</b> and <b>light</b>, return the area of the shadow, or return -1 to indicate that the shadow has an infinite area. If the shadow is an infinitely long line, return 0 as its area. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"A return value with either an absolute or relative error of less than 1.0E-9 is considered correct."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Shadow",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"area",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double area(int[] tree, int[] light)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{5,5,5}",
+			"id":0,
+			"input":"{1,1,1, 10,1,1}",
+			"note":" This tree is just a line so its shadow has no area. ",
+			"order":1
+		},
+		{
+			"expect":"{2,2,2}",
+			"id":0,
+			"input":"{1,3,1, 10,1,1}",
+			"note":" This tree is just a rectangle. Its shadow covers an infinite rectangular area on the ground. ",
+			"order":2
+		},
+		{
+			"expect":"{3,3,3}",
+			"id":0,
+			"input":"{1,1,1, 2,2,2}",
+			"note":" This is a unit cube one unit above the ground. The shadowed area is a six-sided polygon.",
+			"order":3
+		},
+		{
+			"expect":"{2,2,2}",
+			"id":0,
+			"input":" {1,1,1, 3,3,3} ",
+			"note":" When the light is inside the tree the shadow extends everywhere. ",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"tree will contain exactly 6 elements."
+		},
+		{
+			"order":2,
+			"val":"light will contain exactly 3 elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of tree and of light will be between 1 and 10, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The coordinates of the light will not lie on the boundary of the tree."
+		}
+	]
+}

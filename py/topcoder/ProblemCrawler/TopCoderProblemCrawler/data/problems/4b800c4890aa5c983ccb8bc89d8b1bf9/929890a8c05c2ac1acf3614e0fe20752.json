@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12585&rd=15501",
+	"statement":"Manao is playing a new board game. The game is played on an NxM board with each cell initially colored either black or white. The cell on the intersection of the i-th (0-based) row and j-th (0-based) column is referred to as (i, j). <br /><br /><br /><br /> Manao may perform two types of moves: \n <ol> \n  <li>Pick a cell (i, j) (0 ≤ i &lt; N, 0 ≤ j &lt; M) and toggle the color of cells (i-1, j), (i+1, j), (i, j-1), (i, j+1). If some of these cells are outside the board, the move is considered valid, and the cells outside of the board are ignored.</li> \n  <li>Pick a cell (i, j) (0 ≤ i &lt; N, 0 ≤ j &lt; M) and toggle the color of cells (i, j), (i-1, j), (i+1, j), (i, j-1), (i, j+1). Again, the cells outside of the board, if any, are ignored.</li> \n </ol> We call the two move types &quot;type 1 moves&quot; and &quot;type 2 moves&quot;. In both cases, we say that Manao performed the move on the cell (i, j). <br /><br /><br /><br /> Manao cannot perform the moves arbitrarily, he has to follow some additional constraints: For each row, all moves applied to cells in the row have to be of the same type. Also, for each column, all moves applied to cells in the column have to be of the same type. In particular, Manao is not allowed to perform a type 1 move on a cell and then a type 2 move on the same cell (nor vice versa). <br /><br /><br /><br /> You are given a String[] <b>board</b> consisting of N elements, each M characters long. The j-th character in the i-th row (0-based indices) of <b>board</b> is 'W' if cell (i, j) is initially white, and 'B' otherwise. Manao wants to turn the board all black. Determine the minimum number of moves he needs to perform to accomplish this task. If it is impossible to turn every cell on the board black, return -1.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"YetAnotherBoardGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimumMoves(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"BBBBBBBBB\", \"BBWBBBBBB\", \"BWWWBBBBB\", \"BBWBBBWBB\", \"BBBBBWBWB\", \"BBBBBBWBB\"}",
+			"note":"A type 1 move on (4, 6) and a type 2 move on (2, 2) turn the whole board black.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"BBW\", \"WWW\", \"BWW\"}",
+			"note":"Manao can perform a move of type 2 on cell (1, 2) and a move of type 1 on cell (2, 0).",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"WBW\", \"BBW\", \"WBW\"}",
+			"note":"If no additional constraints were imposed, Manao would perform a type 1 move on (1, 0) and a type 2 move on (1, 2). However, these cells are in the same row and thus these moves are incompatible. Instead, Manao can perform four type 2 moves on cells (1, 0), (1, 1), (0, 2) and (2, 2).",
+			"order":3
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"BBBB\", \"WBWB\", \"BBBB\", \"BBBB\"}",
+			"note":"There is no way to turn this board black.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{\"WWWWWBW\", \"WBWBWBW\", \"BBWBBWW\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 30",
+			"id":0,
+			"input":"{\"WWWWWWWWWW\", \"WWWWWWWWWW\", \"WWWWWWWWWW\", \"WWWWWWWWWW\", \"WWWWWWWWWW\", \"WWWWWWWWWW\", \"WWWWWWWWWW\", \"WWWWWWWWWW\", \"WWWWWWWWWW\", \"WWWWWWWWWW\"} ",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 13 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will be between 1 and 13 characters long, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The elements of board will be of the same length."
+		},
+		{
+			"order":4,
+			"val":"Each element of board will consist of 'W' and 'B' characters only."
+		}
+	]
+}

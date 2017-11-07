@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":199.37,
+			"constraints":[],
+			"correctRatio":88.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1677&rd=4530",
+			"name":"Bonuses",
+			"notes":[],
+			"submission":126
+		},
+		{
+			"avgPts":331.43,
+			"constraints":[],
+			"correctRatio":86.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1130&rd=4530",
+			"name":"VendingMachine",
+			"notes":[],
+			"submission":84
+		},
+		{
+			"avgPts":622.61,
+			"constraints":[],
+			"correctRatio":61.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1158&rd=4530",
+			"name":"HillHike",
+			"notes":[],
+			"submission":21
+		}
+	],
+	"name":"Single Round Match 145 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4530"
+}

@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=130&rd=3018",
+	"statement":"<pre>Class name: AnalyzeDNA\nMethod name: findClosest\nParameters: String[]\nReturns: int\n\nImplement a class AnalyzeDNA which contains a method findClosest.  findClosest\ntakes a String[] as a parameter and returns an int indicating the least number\nof &quot;mutations&quot; needed to turn any one String from the String[] into any other\ndifferent String from the String[] (in other words, return the minimum of the\nminimums).\n\nValid &quot;mutations&quot; include:\n*removing one letter from any position in the String. (i.e. AGACT -&gt; AGCT)\n*inserting one letter at any position in the String. (i.e. AGACT -&gt; ATGACT)\n*changing any one letter at any position in the String. (i.e. AGACT -&gt; ATACT)\n\nDuplicate Strings in the String[] are not considered to be different.  For\nexample, if the String &quot;ATGC&quot; appears in the String[] twice, the second\noccurrence should be ignored.  Also, if no combination of &quot;mutations&quot; can turn\none String from the String[] into another different String, the method should\nreturn -1.  Therefore, for a String[] containing no Strings, one String, or all\nduplicates of the same String, the method should return -1.\n\nThe method signature is:\nint findClosest (String[] collection);\nBe sure your method is public.\n\n*collection must contain no more than 10 Strings.\n*All Strings in collection are no longer than 15 letters in length, no shorter\nthan 1 letter and can only contain the characters 'A', 'T', 'G', and 'C'.\n\nExamples:\n\n*collections = {&quot;GTTCAGCACC&quot;, &quot;GACTGATCCC&quot;} requires 5 mutations as follows\n(changing the first to the second):\nGTTCAGCACC GACTGATCCC -&gt; Remove 8th character -&gt;\nGTTCAGCCC GACTGATCCC -&gt; Insert 'A' at 2nd position-&gt;\nGATTCAGCCC GACTGATCCC -&gt; Change 3rd position to 'C' -&gt;\nGACTCAGCCC GACTGATCCC -&gt; Change 4th position to 'G' -&gt;\nGACTGAGCCC GACTGATCCC -&gt; Change 6th position to 'T' -&gt;\nGACTGATCCC GACTGATCCC (done) and the method should return 5.\n*If collection={&quot;ATGC&quot;}, then there is only one string, and the method should\nreturn -1.\n*If collection={&quot;ATGCGCGTA&quot;,&quot;CGAGTGACG&quot;}, then 7 mutations are required to\ntransform &quot;ATGCGCGTA&quot; into &quot;CGAGTGACG&quot;, and the method should return 7.\n*If collection={&quot;TCAGGTCGCACTTTG&quot;,&quot;GGACCGGCGTATCTC&quot;}, then 9 mutations are\nrequired to transform &quot;TCAGGTCGCACTTTG&quot; into &quot;GGACCGGCGTATCTC&quot;, and the method\nshould return 9.\n*If\ncollection={&quot;AAAAAAAAAAAAAAA&quot;,&quot;CCCCCCCCCCCCCCC&quot;,&quot;TTTTTTTTTTTTTTT&quot;,&quot;GGGGGGGGGGGGG\nGG&quot;} then 15 mutations are required to turn any String into any other and the\nmethod should return 15.\n\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AnalyzeDNA",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findClosest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int findClosest(String[] param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

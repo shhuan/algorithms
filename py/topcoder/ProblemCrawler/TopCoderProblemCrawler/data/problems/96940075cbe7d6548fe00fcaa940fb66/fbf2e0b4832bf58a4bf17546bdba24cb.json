@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11054&rd=14734",
+	"statement":"N rabbits (numbered 0 through N - 1) aim to work at the new TopCoder office in Rabbitland. You are to choose some of these applicants as employees. <br /><br /> <br /><br /> Each pair of rabbits will make a certain profit when they work together. Given a group of rabbits, we can easily compute the total profit P as the sum of profits for each pair of rabbits in the group. However, hiring rabbits also brings some costs: they want to have a supply of fresh carrots. Surprisingly, the cost of supplying carrots to K rabbits is not linear in K. This cost is given by the formula C = (K * (200 - K)). The <i>efficiency</i> of a given group of rabbits is the real number (P / C), where P is their total profit and C is the cost of supplying carrots for them. <br /><br /> <br /><br /> You are given a String[] <b>profit</b>, the j-th character of the i-th element of which represents the profit gained from rabbit i and rabbit j working together. The characters '0', '1', ..., '9' represent the values 0, 1, ..., 9, respectively. You may hire an arbitrary non-empty subset of the available rabbits. Return the maximum possible efficiency of the group of hired rabbits. ",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9. "
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RabbitWorking",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMaximum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getMaximum(String[] profit)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0.017676767676767676",
+			"id":0,
+			"input":"{ \"071\", \"702\", \"120\" } ",
+			"note":" You should choose rabbit 0 and rabbit 1 to maximize the efficiency. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0.015228426395939087",
+			"id":0,
+			"input":"{ \"061\", \"602\", \"120\" } ",
+			"note":"You should choose all three rabbits here. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0.0",
+			"id":0,
+			"input":"{ \"0\" } ",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0.021996615905245348",
+			"id":0,
+			"input":"{ \"013040\", \"100010\", \"300060\", \"000008\", \"416000\", \"000800\" } ",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0.06871794871794872",
+			"id":0,
+			"input":"{ \"06390061\", \"60960062\", \"39090270\", \"96900262\", \"00000212\", \"00222026\", \"66761201\", \"12022610\" } ",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"profit will contain between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each element of profit will contain exactly N characters, where N is the number of elements in profit. "
+		},
+		{
+			"order":3,
+			"val":"Each character in each element of profit will be a digit ('0' - '9'). "
+		},
+		{
+			"order":4,
+			"val":"For each index i and j, the i-th character of the j-th element of profit will be equal to the j-th character of the i-th element of profit. "
+		},
+		{
+			"order":5,
+			"val":"For each index i, the i-th character of the i-th element of profit will be '0'. "
+		}
+	]
+}

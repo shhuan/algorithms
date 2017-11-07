@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11420&rd=14560",
+	"statement":"<p>Fox Ciel is going to walk through an unpaved road to meet her friend. The road is one-dimensional. It is separated into N parts numbered from 0 to N-1, where part 0 is Ciel's current part and part N-1 is her destination part.</p> <p>Ciel will perform her trip tomorrow. Unfortunately today it is raining, so tomorrow some parts of the road will be muddy. You are given a int[] <b>road</b> containing N elements. The probability that the i-th part of the road will be muddy tomorrow is <b>road</b>[i]/100.</p> <p></p> <p>Ciel can walk along the road using any combination of strides with lengths 1 and 2. If she is at part i, a stride of length 1 will move her to part i+1 and a stride of length 2 will move her to part i+2 (skipping part i+1). If there are many ways to reach part N-1 from part 0, Ciel will choose the one among them where the number of visited muddy parts is minimal.</p> <p></p> <p>Return the expected number of muddy parts that she will visit tomorrow.</p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Assume that events \"i-th part of the road will be muddy tomorrow\" are totally independent."
+		},
+		{
+			"order":2,
+			"val":"Ciel has very good sight, so when starting her trip at part 0, she is already able to see for each part whether it is muddy or not."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MuddyRoad",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getExpectedValue",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getExpectedValue(int[] road)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0.36",
+			"id":0,
+			"input":"{0, 60, 60, 0}",
+			"note":"   ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0.5625",
+			"id":0,
+			"input":"{0, 50, 50, 50, 50, 0}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3.0",
+			"id":0,
+			"input":"{0, 0, 100, 100, 100, 100, 100, 100, 0, 0, 100, 0}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1.7352539420031923",
+			"id":0,
+			"input":"{0, 12, 34, 56, 78, 91, 23, 45, 67, 89, 0}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 2.288125",
+			"id":0,
+			"input":"{0, 50, 50, 100, 50, 100, 50, 50, 100, 66, 0}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"road will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of road will be between 0 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The first element and the last element of road will be 0."
+		}
+	]
+}

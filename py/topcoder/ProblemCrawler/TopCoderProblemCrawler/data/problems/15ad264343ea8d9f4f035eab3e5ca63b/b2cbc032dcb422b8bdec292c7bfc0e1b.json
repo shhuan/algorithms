@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2246&rd=8006",
+	"statement":"<p> A self-catalogue is a sentence that truthfully and comprehensively describes its own composition. In this problem, we are concerned with sentences that count numerals occurring in themselves, such as the following. </p> <p> <i> This sentence contains <b>1</b> occurrence of <b>0</b>, <b>2</b> occurrences of <b>1</b>, <b>3</b> occurrences of <b>2</b>, and <b>2</b> occurrences of <b>3</b>. </i> </p> <p> The above is a self-catalogue because it gives an accurate count for each numeral occurring in itself. The following sentence, although accurate in the counts that it gives, is not a self-catalogue because it does not give a count for the numeral 3. </p> <p> <i> This sentence contains <b>3</b> occurrences of <b>1</b>, <b>1</b> occurrence of <b>8</b>, and <b>1</b> occurrence of <b>9</b>. </i> </p> <p> A self-catalogue must not give more than one count for the same numeral. Thus, the following is not a self-catalogue. </p> <p> <i> This sentence contains <b>4</b> occurrences of <b>4</b>, and <b>4</b> occurrences of <b>4</b>. </i> </p> <p> Given a int[] specifying a count for each of the numerals 0 through 9, try to find a self-catalogue that agrees with these counts. A count of 0 means that the numeral does not appear in the sentence at all, and a specified count of -1 means that any count (including 0) is acceptable. If there is no sentence meeting this specification, return an empty int[]. Otherwise, return a int[] of the same size as the input and containing the same non-negative counts, but with each -1 replaced by an accurate count. If several self-catalogues are possible, choose the one that yields the smallest value in element 0 of the result. If a tie remains, select for the smallest value in element 1; if there is still a tie, select for the smallest value in element 2; and so forth. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Leading zeros are not permitted for any number appearing in a self-catalogue."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SelfCatalogue",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"construct",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] construct(int[] counts)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {1, 2, 3, 2, 0, 0, 0, 0, 0, 0 }",
+			"id":0,
+			"input":"{1, -1, -1, -1, -1, -1, -1, -1, -1, -1}",
+			"note":"The first sentence from the problem statement satisfies the input specification that there be exactly one occurrence of the numeral 0: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"{100, -1, -1, -1, -1, -1, -1, -1, -1, -1}",
+			"note":"It is impossible to make a self-catalogue with 100 zeros.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {1, 11, 0, 1, 1, 1, 1, 1, 1, 1 }",
+			"id":0,
+			"input":"{1, 11, -1, -1, -1, -1, -1, -1, -1, -1}",
+			"note":"Note that 11 contains two occurrences of 1.",
+			"order":3
+		},
+		{
+			"expect":"Returns: {0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }",
+			"id":0,
+			"input":"{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1}",
+			"note":"The following self-catalogue illustrates this degenerate case: ",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"counts contains exactly 10 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of counts is between -1 and 100, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":179.83,
+			"constraints":[],
+			"correctRatio":72.88,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11856&rd=15858",
+			"name":"PalindromePermutations",
+			"notes":[],
+			"submission":671
+		},
+		{
+			"avgPts":270.53,
+			"constraints":[],
+			"correctRatio":53.51,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12551&rd=15858",
+			"name":"BlockTheBlockPuzzle",
+			"notes":[],
+			"submission":185
+		},
+		{
+			"avgPts":523.79,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12909&rd=15858",
+			"name":"Seatfriends",
+			"notes":[],
+			"submission":24
+		}
+	],
+	"name":"Single Round Match 625 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15858"
+}

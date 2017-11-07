@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9924&rd=13508",
+	"statement":"<p>A map of the city consists of a number of streets connecting several junctions. All the streets are straight line segments connecting two junctions, organized in such a way that starting at any junction and walking along the streets one can reach any other junction. The walking distance between two points (each either a junction or some intermediate point of a street) in the city is the shortest path from the first point to the second, if you are allowed to walk only along the streets. The length of the street is the Cartesian distance between its ends. Streets never intersect outside the junctions. Tunnels and overpasses are used whenever necessary to achieve this (see example 1 for further clarification).</p> <br /><br /> <p>Given a map of the city, your goal is to find the maximal walking distance among any two points in the city. The map of the city is provided as follows. You are given two int[]s <b>x</b> and <b>y</b>, each of the same length N. These two int[]s represent N junctions with Cartesian coordinates (<b>x</b>[i], <b>y</b>[i]) for i = 0..N-1. You are also given a String[] <b>streets</b>, where the j-th element of <b>streets</b>[i] is 'Y' if the junctions i and j are connected by a street, and 'N' otherwise.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WalkingDistance",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getLongestShortest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getLongestShortest(int[] x, int[] y, String[] streets)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,1}",
+			"id":0,
+			"input":"{0,1}",
+			"note":"There are just two junctions conntected by a road. So the answer is the length of the street, which is the square root of 2.",
+			"order":1
+		},
+		{
+			"expect":"{0,0,2,2}",
+			"id":0,
+			"input":"{0,2,2,0}",
+			"note":"Both points on which this maximal shortest distance is achieved have coordinates (1, 1), but they are located on different streets. ",
+			"order":2
+		},
+		{
+			"expect":"{0,0,1}",
+			"id":0,
+			"input":"{0,1,0}",
+			"note":"The three junctions form a right isosceles triangle. Two points for which the maximal walking distance is achieved are (0,0) and (1/2, 1/2).",
+			"order":3
+		},
+		{
+			"expect":"{0, 1, 2}",
+			"id":0,
+			"input":"{0, 1, 2}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x and y and streets will each contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x, y and streets will have the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of x and y will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of streets will contain exactly n characters, where n is the number of elements in streets."
+		},
+		{
+			"order":5,
+			"val":"Each element of streets will contain only 'N' and 'Y' characters."
+		},
+		{
+			"order":6,
+			"val":"The i-th character of the i-th element of streets will always be 'N'."
+		},
+		{
+			"order":7,
+			"val":"The i-th character of the j-th element of streets will always be equal to the j-th character of the i-th element of streets."
+		},
+		{
+			"order":8,
+			"val":"All junctions represented by x and y will be distinct."
+		},
+		{
+			"order":9,
+			"val":"There will be a path between every pair of junctions."
+		}
+	]
+}

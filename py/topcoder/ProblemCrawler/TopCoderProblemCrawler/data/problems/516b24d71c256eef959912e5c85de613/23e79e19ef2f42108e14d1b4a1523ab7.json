@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11912&rd=14735",
+	"statement":"Shopping is by no means an easy task. Yes, sure, if you want to buy shoes or some clothes that's no problem at all. But what happens if you would like an extremely rare poison, found only in the mists of Amazonia? Now you see, Elly's life is not as easy as you would think. She has almost reached her final destination, but unfortunately she can only use boats and travel by foot for the final part.<p></p> There are N+1 really long, but narrow parallel islands, going from South to North, numbered from 0 to N, inclusive. There are also N rivers between the islands, numbered from 0 to N-1, inclusive. River i is <b>width</b>[i] kilometers wide and flows between islands i and i+1. The speed of the current in each river is negligible. For river i, the maximum speed at which Elly can sail is <b>speed</b>[i] kilometers per hour, regardless of the direction in which she sails.<p></p> All islands are <b>length</b> kilometers long. Starting from the southmost point, each one has boat docks one kilometer apart throughout its entire coastline. Thus, there are <b>length</b> + 1 docks on each island (at kilometer 0, 1, ?, <b>length</b>). The islands are so narrow, that you can assume the same dock serves the boats on both sides of the island, and that walking horizontally from one side of the island to the other takes no time.<p></p> For simplicity we can represent the islands as parallel vertical line segments, and the docks as points on the plane. Island 0 goes from point (0, 0) to (0, <b>length</b>), island 1 from (<b>width</b>[0], 0) to (<b>width</b>[0], <b>length</b>), island 2 from (<b>width</b>[0] + <b>width</b>[1], 0) to (<b>width</b>[0] + <b>width</b>[1], length), and so on, where <b>width</b>[i] gives the width of the i-th river. The docks on island 0 are with coordinates (0, 0), (0, 1), ? (0, <b>length</b>); the ones on island 1 are with coordinates (<b>width</b>[0], 0), (<b>width</b>[0], 1), ?, (<b>width</b>[0], <b>length</b>); these on island 2 are with coordinates (<b>width</b>[0] + <b>width</b>[1], 0), (<b>width</b>[0] + <b>width</b>[1], 1), ?, (<b>width</b>[0] + <b>width</b>[1], <b>length</b>) and so on.<p></p> Elly can only take boats from dock to dock (i.e. she can neither depart from nor arrive at non-integer coordinates). She can also walk (vertically) along any island with a constant speed of <b>walk</b> kilometers per hour. The girl is currently on the southmost point of the westmost island and wants to reach the northmost point of the eastmost island. Elly wonders what is the minimal time required to travel to her destination. Help her by writing a method that calculates this for her.<p></p> You are given the length of the islands in the int <b>length</b> and the walking speed in the int <b>walk</b>. The widths of the rivers will be given in the int[] <b>width</b> and the maximal sailing speeds in the int[] <b>speed</b>. Return a double giving the shortest time in which she can reach her destination.",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have a relative or an absolute error of less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EllysRivers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getMin(int length, int walk, int[] width, int[] speed)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"10",
+			"note":"Elly will not walk on any of the islands. She will sail four kilometers to the north in the first river, reaching the second island at point (5, 4). Then she sails another one kilometer to the north in the second river, going to (7, 5) on the third island. In the end she will sail to her destination at (10, 10). The required times for her journey are as follows:  ",
+			"order":1
+		},
+		{
+			"expect":"211",
+			"id":0,
+			"input":"10000",
+			"note":"Don't forget that Elly can walk on the islands.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1337",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"119",
+			"id":0,
+			"input":"77",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1525",
+			"id":0,
+			"input":"7134",
+			"note":"A large random example.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"length will be between 1 and 100,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"walk will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"width will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"speed will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"width and speed will contain the same number of elements."
+		},
+		{
+			"order":6,
+			"val":"Each element of width will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of speed will be between 1 and 1,000,000, inclusive."
+		}
+	]
+}

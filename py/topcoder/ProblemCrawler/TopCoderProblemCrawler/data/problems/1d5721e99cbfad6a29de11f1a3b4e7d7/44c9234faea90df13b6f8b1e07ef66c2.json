@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11607&rd=14549",
+	"statement":"You found <b>n</b> Magic Diamonds in the mountain. You are now thinking about transfering them to your home. The only way you can transfer Magic Diamonds is to use Transfer Magic one or more times. <br /><br /> <br /><br /> The Magic Diamonds are very strange. For any positive integer x you can use Transfer Magic to transfer x Magic Diamonds at once. However, if x is a prime number, the Magic Diamonds will disappear instead of getting transferred. You are not allowed to lose any of the Magic Diamonds, therefore you may never use Transfer Magic on a prime number of Magic Diamonds. Your task is to transfer all Magic Diamonds using Transfer Magic as few times as possible. <br /><br /> <br /><br /> You are given a long <b>n</b>. Return the minimal number of Transfer Magic usages you need to transfer <b>n</b> Magic Diamonds.",
+	"notes":[
+		{
+			"order":1,
+			"val":"A positive integer x is a prime number if and only if it has exactly 2 divisors: 1 and x. Note that 1 is not a prime number."
+		},
+		{
+			"order":2,
+			"val":"Your task can always be accomplished. For example, you can use Transfer Magic n times and transfer 1 Magic Diamond each time."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MagicDiamonds",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimalTransfer",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long minimalTransfer(long n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"2",
+			"note":"We have to use Transfer Magic twice, each time we transfer 1 Magic Diamond.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"4294967297",
+			"note":"We just need to use Transfer Magic once, because 4294967297 is not a prime. We have 4294967297 = 641 * 6700417.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"2147483647",
+			"note":"This time  is a prime, so we have to use Transfer Magic at least twice. We have 2147483647 = 2147400000 + 83647 (83647 = 233 * 359, which is not a prime), thus the answer is 2.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 1,000,000,000,000 (10^12), inclusive."
+	}]
+}

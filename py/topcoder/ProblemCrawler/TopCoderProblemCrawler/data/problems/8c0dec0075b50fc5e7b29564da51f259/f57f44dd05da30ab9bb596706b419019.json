@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1328&rd=4464",
+	"statement":"Given a collection of n strings, there are n! ways to concatenate them into a single string. Create a class LongestRun that contains method runLength that takes a String[] <b>collection</b> as input and returns the length of the longest run that can be formed by concatenating the strings. <p> A run is a sequence of adjacent identical characters. For example, &quot;CACAAABBQ&quot; contains a run of 2 B's and a run of 3 A's (as well as four other runs of length 1). </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LongestRun",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"runLength",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int runLength(String[] collection)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"ABC\", \"CBBB\", \"CC\", \"ABCDEFG\"}",
+			"note":" We can get a run of 4 'C's by concatenating as follows: \"ABC\" + \"CC\" + \"CBBB\" + \"ABCDEFG\" -> \"ABCCCCBBBABCDEFG\"",
+			"order":1
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"ABC\", \"CBBBC\",\"ABCDEFG\", \"AD\", \"AE\", \"AF\"}",
+			"note":" Any concatenation of these will have a run of 3 'B's",
+			"order":2
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"GOOD\",\"DOG\",\"EGG\",\"DO\",\"GIGABYTE\",\"OOO\",\"G\",\"G\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"AAABBBBAAA\",\"BAABBBBAB\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"AAABBBBAAA\",\"AABBBBA\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"collection contains between 1 and 50 elements inclusive"
+		},
+		{
+			"order":2,
+			"val":"each element of collection contains between 1 and 50 characters inclusive"
+		},
+		{
+			"order":3,
+			"val":"each element of collection contains only uppercase letters, 'A'-'Z'"
+		}
+	]
+}

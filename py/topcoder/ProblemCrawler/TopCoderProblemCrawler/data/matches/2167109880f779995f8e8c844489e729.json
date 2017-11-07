@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":124.9,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=704&rd=67",
+			"name":"PolePosition",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":363.33,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=545&rd=67",
+			"name":"SetPartition",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":510.29,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=529&rd=67",
+			"name":"ExactChange",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"Sun Microsystems / TopCoder Collegiate Challenge > Semifinals Room D",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=67"
+}

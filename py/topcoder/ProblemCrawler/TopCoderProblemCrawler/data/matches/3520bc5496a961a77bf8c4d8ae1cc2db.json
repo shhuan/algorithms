@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":215.39,
+			"constraints":[],
+			"correctRatio":89.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3543&rd=6538",
+			"name":"ATaleOfThreeCities",
+			"notes":[],
+			"submission":210
+		},
+		{
+			"avgPts":275.92,
+			"constraints":[],
+			"correctRatio":52.98,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3555&rd=6538",
+			"name":"MatchCounting",
+			"notes":[],
+			"submission":151
+		},
+		{
+			"avgPts":548.5,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4439&rd=6538",
+			"name":"HiddenTriangles",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"Single Round Match 239 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6538"
+}

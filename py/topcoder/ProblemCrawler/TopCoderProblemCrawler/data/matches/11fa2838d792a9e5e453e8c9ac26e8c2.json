@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":157.98,
+			"constraints":[],
+			"correctRatio":88.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10615&rd=13902",
+			"name":"TheBlackJackDivOne",
+			"notes":[],
+			"submission":482
+		},
+		{
+			"avgPts":269.74,
+			"constraints":[],
+			"correctRatio":65.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10617&rd=13902",
+			"name":"TheCardShufflingDivOne",
+			"notes":[],
+			"submission":112
+		},
+		{
+			"avgPts":456.78,
+			"constraints":[],
+			"correctRatio":16.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10619&rd=13902",
+			"name":"TheCardLineDivOne",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"Single Round Match 448 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13902"
+}

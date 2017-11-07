@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10369&rd=13699",
+	"statement":"<p> There is nothing more beautiful than just an integer number. </p> <p> You are given an integer <b>n</b>. Write down <b>n</b> in decimal notation with no leading zeroes, and let M be the number of written digits. Perform the following operation exactly <b>k</b> times: </p>\n <ul> \n  <li>Choose two different 1-based positions, i and j, such that 1 &lt;= i &lt; j &lt;= M. Swap the digits at positions i and j. This swap must not cause the resulting number to have a leading zero, i.e., if the digit at position j is zero, then i must be strictly greater than 1.</li> \n </ul> <p></p> <p> Return the maximal possible number you can get at the end of this procedure. If it's not possible to perform <b>k</b> operations, return -1 instead. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheSwap",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findMax",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int findMax(int n, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"16375",
+			"note":"The optimal way is to swap 1 and 7.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"432",
+			"note":"In this case the result is less than the given number.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"90",
+			"note":"We can't make even a single operation because it would cause the resulting number to have a leading zero.",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"5",
+			"note":"Here we can't choose two different positions for an operation.",
+			"order":4
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"436659",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"k will be between 1 and 10, inclusive."
+		}
+	]
+}

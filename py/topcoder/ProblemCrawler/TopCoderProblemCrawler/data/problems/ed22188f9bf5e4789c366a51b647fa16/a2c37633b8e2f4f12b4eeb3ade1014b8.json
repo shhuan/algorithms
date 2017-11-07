@@ -1,0 +1,120 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8495&rd=11127",
+	"statement":"<p>An airline wishes to supply passengers with Internet access on its flights. To do so, it is going to to install powerful radio transceivers on all of its aircraft and at the airports it operates from. The airports will be connected to the Internet and the aircraft will be able to access the connection via a radio link to any airport that is within the range of its tranceiver. Aircraft will also be able to relay the Internet connection on to other aircraft that are within range, so even if an aircraft cannot communicate directly with an airport, it may be able to access the Internet via another aircraft. The cost of the radio equipment is proportional to its range and the airline wishes to supply the Internet connection at minimal cost. It therefore wants your help in determining the minimum transceiver range required such that all of the aircraft can access the Internet all of the time.</p> <p>The area that the airline operates in is represented as a 2-D cartesian plane. You are given a String[] <b>airports</b> containing the locations of the airports that the airline operates from. Each element will contain two space-separated integers, formatted without leading zeros, giving the x- and y-coordinates of an airport. You are also given the flight-schedule in a String[] <b>flights</b>. Each element of <b>flights</b> describes a single flight and will be formatted &quot;<i>&lt;start&gt; &lt;destination&gt; &lt;take-off time&gt; &lt;landing time&gt;</i>&quot; (quotes for clarity). All elements are integers formatted without leading zeros. <i>&lt;start&gt;</i> and <i>&lt;destination&gt;</i> reference zero-based indexes of airports in <b>airports</b>. The aircraft starts out at the airport referenced by <i>&lt;start&gt;</i> at time <i>&lt;take-off time&gt;</i>, and flies in a straight line at constant speed to the airport referenced in <i>&lt;destination&gt;</i>, arriving at <i>&lt;landing time&gt;</i>. All radio tranceivers have the same range <tt>R</tt> and an aircraft can communicate with an airport or another aircraft if the in-plane distance between the two is no greater than <tt>R</tt>. An aircraft can access the Internet if it can either communicate with an airport, or it can communicate with another aircraft that can access the Internet (directly or indirectly). Return a double containing the minimum value of <tt>R</tt> which ensures that all aircraft can access the Internet at all times.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must be accurate to within an absolute or relative tolerance of 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AirlineInternet",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumRange",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double minimumRange(String[] airportLocations, String[] flights)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"0 1 0 100\"}",
+			"id":0,
+			"input":"{\"0 0\",\"100 0\"}",
+			"note":"A single aircraft flies between two airports. It is farthest from an airport when it is exactly halfway between them, so the minimum required range is half the distance between the two airports.",
+			"order":1
+		},
+		{
+			"expect":"{\"0 1 0 100\",\"0 1 25 125\",\"0 1 50 150\",\"0 1 75 175\"}",
+			"id":0,
+			"input":"{\"0 0\",\"100 0\"}",
+			"note":"This time, four aircraft fly between the same two airports, setting off at intervals of 25 time units. The aircraft closer to the airports can relay the connection to those farther away, so the minimum required range is shorter.",
+			"order":2
+		},
+		{
+			"expect":"{\"0 1 0 500\",\"2 5 10 300\",\"2 0 100 200\" ,\"3 6 150 400\",\"4 5 50 450\",\"5 1 0 300\" ,\"2 6 10 100\"}",
+			"id":0,
+			"input":"{\"25 100\",\"0 50\",\"90 150\",\"22 22\",\"60 1\",\"95 8\",\"12 40\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"0 1 0 100\"}",
+			"id":0,
+			"input":"{\"0 0\",\"50 0\",\"100 0\"}",
+			"note":"All airports have radio transceivers, even if no aircraft fly to or from them.",
+			"order":4
+		},
+		{
+			"expect":"{\"0 1 376 534\",\"0 2 603 763\",\"1 0 137 431\" ,\"0 1 525 583\",\"2 1 367 551\",\"0 1 953 996\" ,\"0 1 668 886\"}",
+			"id":0,
+			"input":"{\"417 262\",\"519 592\",\"941 778\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{\"3 0 855 890\",\"2 0 260 698\",\"3 4 229 743\" ,\"1 2 519 898\",\"3 1 863 955\",\"4 0 407 993\" ,\"2 4 872 969\",\"0 3 320 663\"}",
+			"id":0,
+			"input":"{\"101 591\",\"283 183\",\"346 696\",\"436 638\",\"738 46\"}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{\"1 0 347 530\",\"0 3 75 819\",\"3 1 893 935\" ,\"1 0 971 992\",\"2 0 471 887\",\"2 0 924 955\"}",
+			"id":0,
+			"input":"{\"152 998\",\"656 487\",\"75 999\",\"913 535\"}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"airportLocations will contain between 2 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of airportLocations will contain 2 space-separated integers, formatted without leading zeros, between 0 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The elements of airportLocations will be distinct."
+		},
+		{
+			"order":4,
+			"val":"flights will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of flights will be formatted &quot;&lt;start&gt; &lt;destination&gt; &lt;take-off time&gt; &lt;landing time&gt;&quot; (quotes for clarity)."
+		},
+		{
+			"order":6,
+			"val":"&lt;start&gt; and &lt;destination&gt; will be integers, formatted without leading zeros, between 0 and N-1, inclusive, where N is the number of elements in airportLocations."
+		},
+		{
+			"order":7,
+			"val":"&lt;take-off time&gt; and &lt;landing time&gt; will be integers, formatted without leading zeros, between 0 and 1000, inclusive."
+		},
+		{
+			"order":8,
+			"val":"In each element of flights, &lt;start&gt; and &lt;destination&gt; will be distinct and &lt;take-off time&gt; will be strictly less than &lt;landing time&gt;."
+		}
+	]
+}

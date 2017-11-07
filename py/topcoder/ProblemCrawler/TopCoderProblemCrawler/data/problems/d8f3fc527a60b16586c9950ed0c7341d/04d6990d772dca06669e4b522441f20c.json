@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8584&rd=12168",
+	"statement":"A string of length L is called periodic with period p if the i-th character is equal to the (i+p)-th character for all i between 0 and L-p-1, inclusive. For example, the strings &quot;CATCATC&quot;, &quot;CATCAT&quot;, &quot;ACTAC&quot; and &quot;ACT&quot; are all periodic with period 3. <br /><br /><br /><br /> You are given a String[] <b>dna</b>. Concatenate the elements of <b>dna</b> and return the minimum number of replacements needed to make the resulting string periodic with period less than or equal to <b>maxPeriod</b>. Each replacement consists of changing a single character from one letter to any other letter.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DNAString",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minChanges",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minChanges(int maxPeriod, String[] dna)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"ATAGATA\"}",
+			"id":0,
+			"input":"3",
+			"note":"Here, we only need one replacement to make the string periodic with period 2. Replace the 'G' with a 'T': \"ATATATA\". ",
+			"order":1
+		},
+		{
+			"expect":"{\"ACGTGCA\"}",
+			"id":0,
+			"input":"2",
+			"note":"With 3 replacements we get the string ACACACA with period 2.",
+			"order":2
+		},
+		{
+			"expect":"{\"ACGCTGACAGATA\"}",
+			"id":0,
+			"input":"13",
+			"note":"Here there is no need to change anything since our string already has period 13.",
+			"order":3
+		},
+		{
+			"expect":"{\"AAAATTTCCG\"}",
+			"id":0,
+			"input":"1",
+			"note":"The best way to do this is to replace all non-'A' characters with 'A's.",
+			"order":4
+		},
+		{
+			"expect":"{\"ACGTATAGCATGACA\",\"ACAGATATTATG\",\"ACAGATGTAGCAGTA\",\"ACCA\",\"GAC\"}",
+			"id":0,
+			"input":"12",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"dna will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of dna will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in dna will be 'A','C','G' or 'T'."
+		},
+		{
+			"order":4,
+			"val":"maxPeriod will be between 1 and n, inclusive, where n is the number of characters in the concatenated string."
+		}
+	]
+}

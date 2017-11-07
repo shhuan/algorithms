@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4769&rd=8016",
+	"statement":"Consider a group of metal springs supporting a rigid rod. The rod's weight is uniformly distributed along its length at a rate of 1 pound per inch. Each of the springs exerts an upwards force when it is compressed. This force is given by <tt>F<sub>i</sub> = k<sub>i</sub>*x<sub>i</sub>+1/(max<sub>i</sub>-x<sub>i</sub>)<sup>2</sup></tt> where F<sub>i</sub> is the force, x<sub>i</sub> is the amount the spring is compressed (x<sub>i</sub> may be negative, in which case the spring is extended and the force may be downward), and max<sub>i</sub> and k<sub>i</sub> are inputs. Notice that as the compression approaches max, the force goes to infinity, so the spring will never be compressed by max or more. Given the positions, k's, and max's for the springs supporting the rod (corresponding elements of the inputs represent one spring), you are to determine how much each spring is compressed by the rod. You may assume that the leftmost spring supports the leftmost end of the rod, while the rightmost spring supports the rightmost end of the rod. Note that some of the springs may be negatively compressed (see examples). <br /><br /><br /><br /> There are three basic conditions that must be fulfilled by the compressions of the springs. First, the total force exerted upwards (the sum of the F's) must equal the weight of the rod. Second, since the rod is rigid, the compressions of the springs must be such that the tops of the springs are all in a line (with some constant slope). Third, the sum of the torques around every point where the rod touches a spring must be 0. The torques come from both the upward (or downward) forces exerted by the springs, and also from the weight of the rod. The torque around a point due to a spring is equal to the force exerted by the spring times the horizontal distance from the spring to the point. The torque around a point caused by the weight of the rod to the right of the point is equal to the weight of the portion of the rod to the right squared, and then divided by 2. The left side of the point is analogous. See examples for more information. ",
+	"notes":[
+		{
+			"order":1,
+			"val":"In reality, the rotation of the rod would result in some more complicated effects which we will ignore for this problem. "
+		},
+		{
+			"order":2,
+			"val":"When none of the springs are compressed at all, their tops form a horizontal line."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Springs",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"compression",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double[] compression(int[] positions, int[] ks, int[] maxs)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,1,1} ",
+			"id":0,
+			"input":"{0,1,3} ",
+			"note":" The image above shows the approximate setup of the springs and rod. The values in  are large enough that we can ignore them in this discussion and our results won't be far off. The first spring is compressed by 6/7, the second by 27/28, and the third by 33/28. You will note that the sum of these three compressions is 3. Furthermore, the slope of the rod (3/28) matches the compression of the springs. Finally, we can calculate the torque at each location (negative values indicate counterclockwise torque):  You can easily verify that the sum of the torques at each of the three positions is 0.When you solve the problem taking  into account, you find that each of the above values is approximately one millionth too high.",
+			"order":1
+		},
+		{
+			"expect":"{2,1,1,1}",
+			"id":0,
+			"input":"{0,1,2,4}",
+			"order":2
+		},
+		{
+			"expect":"{1,100,100}",
+			"id":0,
+			"input":"{1,99,101}",
+			"order":3
+		},
+		{
+			"expect":"{1,1000}",
+			"id":0,
+			"input":"{0,1000}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"positions, ks and maxs will each contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"positions, ks and maxs will each contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"positions will be sorted in strictly ascending order."
+		},
+		{
+			"order":4,
+			"val":"Each element of positions will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of maxs and ks will be between 1 and 1000, inclusive."
+		}
+	]
+}

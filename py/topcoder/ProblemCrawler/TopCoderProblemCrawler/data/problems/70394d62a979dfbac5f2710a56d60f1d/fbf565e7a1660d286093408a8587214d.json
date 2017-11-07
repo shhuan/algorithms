@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7794&rd=14294",
+	"statement":"There are N students standing in a single row, one next to the other, numbered 0 to N-1 from left to right. Your goal is to minimize the number of adjacent pairs where one student is a boy and the other is a girl. More precisely, you want to minimize the number of values i, 0 &lt;= i &lt; N-1, where student i and student i+1 are of different genders. <br /><br /><br /><br /> You are given the current arrangement as a String <b>row</b>, where the i-th character is 'G' if student i is a girl, and 'B' if student i is a boy. In a single move, you can choose two adjacent students and swap their positions. Return the minimum number of moves required to achieve your goal.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GirlsAndBoys",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sortThem",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int sortThem(String row)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"\"GGBBG\"",
+			"note":"You can swap the rightmost girl with the two boys (one after the other) to get \"GGGBB\", with a minimum of only 1 pair of adjacent students of different gender.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"\"BBBBGGGG\"",
+			"note":"There is already a single pair of adjacent students of different gender, and there is no arrangement without such pairs at all, so the best solution is to swap nothing.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 33",
+			"id":0,
+			"input":"\"BGBGBGBGGGBBGBGBGG\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"\"B\"",
+			"note":"With only one student, there is not much swapping to do.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"row will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in row will be 'G' or 'B'."
+		}
+	]
+}

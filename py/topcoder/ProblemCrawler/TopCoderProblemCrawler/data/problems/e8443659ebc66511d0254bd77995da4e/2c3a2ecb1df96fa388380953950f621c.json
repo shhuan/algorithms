@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11379&rd=14437",
+	"statement":"<i>NOTE: This problem statement contains subscripts that may not display properly if viewed outside of the applet.</i><br /><br /><br /><br /> You're given a long[] <b>R</b> containing N elements. Count the number of sequences A<sub>0</sub>, A<sub>1</sub>, ..., A<sub>N-1</sub> such that each A<sub>i</sub> is an integer satisfying 0 &amp;le A<sub>i</sub> &amp;le <b>R[i]</b> and A<sub>0</sub> + A<sub>1</sub> + ... + A<sub>N-1</sub> = A<sub>0</sub> | A<sub>1</sub> | ... | A<sub>N-1</sub>. The '|' symbol stands for bitwise OR of the operands. Return the number of such sequences modulo 1,000,000,009.",
+	"notes":[{
+		"order":1,
+		"val":"If a and b are single bits then a | b is defined as max(a, b). For two integers, A and B, in order to calculate A | B, they need to be represented in binary: A = (a...a), B = (b...b) (if the lengths of their representations are different, the shorter one is prepended with the necessary number of leading zeroes). Then A | B = C = (c...c), where c = a | b. For example, 10 | 3 = (1010) | (0011) = (1011) = 11."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"YetAnotherORProblem",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countSequences",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countSequences(long[] R)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{3,5}",
+			"note":"All the possible sequences are: {0,0}, {0,1}, {0,2}, {0,3}, {0,4}, {0,5}, {1,0}, {1,2}, {1,4}, {2,0}, {2,1}, {2,4}, {2,5}, {3,0}, {3,4}.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 16",
+			"id":0,
+			"input":"{3,3,3}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 194",
+			"id":0,
+			"input":"{1,128}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 8409",
+			"id":0,
+			"input":"{26,74,25,30}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 420352509",
+			"id":0,
+			"input":"{1000000000,1000000000}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"R will contain between 2 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of R will be between 1 and 10^18, inclusive."
+		}
+	]
+}

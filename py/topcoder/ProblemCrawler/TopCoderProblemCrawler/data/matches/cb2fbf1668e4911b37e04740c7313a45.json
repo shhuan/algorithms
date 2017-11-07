@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4515&rd=9923",
+			"name":"PowerDigit",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6047&rd=9923",
+			"name":"InverseCollatz",
+			"notes":[],
+			"submission":0
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6044&rd=9923",
+			"name":"BlindMazeSolve",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"TCO 06 > Sponsor Track Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9923"
+}

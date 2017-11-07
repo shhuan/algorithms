@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8150&rd=10908",
+	"statement":"<p> You are given a String[] <b>photo</b> containing a photograph of some bacteria. The bacteria lie in a rectangular grid, and the j-th character of the i-th element of <b>photo</b> represents the content of the cell at row i, column j of the grid. The '.' character represents empty space and the '*' character represents a part of a bacterium. Two non-empty cells <i>a</i> and <i>b</i> belong to the same bacterium if and only if there exists a chain of cells where the first cell is <i>a</i>, the last cell is <i>b</i>, and each pair of consecutive cells in the chain shares a common side. </p> <p> You are studying a special kind of bacteria called tristripe bacteria. They have a special property: a tristripe bacterium can be formed by exactly three stripes (horizontal or vertical) that possibly intersect and/or overlap. All four bacteria in the picture below are tristripe: </p> <pre>{&quot;........................***...&quot;,\n &quot;......*........*.........***..&quot;,\n &quot;...******..................***&quot;,\n &quot;......*.............*.........&quot;,\n &quot;.....**.........******........&quot;,\n &quot;..............................&quot;}</pre> <p> Return the number of tristripes in the <b>photo</b>. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TristripeBacteria",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(String[] photo)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"........................***...\", \"......*........*.........***..\", \"...******..................***\", \"......*.............*.........\", \".....**.........******........\", \"..............................\"}",
+			"note":"This example is from the statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\".....................*********\", \"......*..............*********\", \"...******............*********\", \"......*.........*...*.........\", \".....**.........******........\", \"....**........................\"}",
+			"note":"The leftmost bacterium is not a tristripe.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\".\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"*****************\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"*\",\"*\",\"*\",\"*\",\"*\",\"*\",\"*\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"photo will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of photo will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of photo will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each element of photo will contain only the characters '.' and '*'."
+		}
+	]
+}

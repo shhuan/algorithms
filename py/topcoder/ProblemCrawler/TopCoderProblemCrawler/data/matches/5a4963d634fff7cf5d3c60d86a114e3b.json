@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.24,
+			"constraints":[],
+			"correctRatio":94.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8482&rd=10810",
+			"name":"UnderscoreJustification",
+			"notes":[],
+			"submission":554
+		},
+		{
+			"avgPts":279.73,
+			"constraints":[],
+			"correctRatio":67.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8471&rd=10810",
+			"name":"TurningMaze",
+			"notes":[],
+			"submission":295
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8458&rd=10810",
+			"name":"InfiniteAddition",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 385 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10810"
+}

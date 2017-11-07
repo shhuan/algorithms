@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13412&rd=16078",
+	"statement":"<p><i> After the Challenge Phase of TCO 2014 round 2C ended, I realized that I probably wouldn't get into top 50. With the best place I'd ever gotten in an SRM, however, it would've been possible. Aargh, why can't I just swap them... but what about making another problem out of this situation? </i></p> <br /><br /> <p> Bonif&aacute;c is going to compete in a tournament with <tt>N</tt> online rounds, numbered <tt>0</tt> through <tt>N-1</tt> in no particular order. Unlike the TCO, each contestant may compete officially in all online rounds. However, only contestants who finished among the top <tt><b>cutoff</b>[i]</tt> participants of round <tt>i</tt> for all <tt>0 &lt;= i &lt; N</tt> are invited to the onsite finals. </p> <br /><br /> <p> Bonif&aacute;c wants to compete in the onsite finals. For that, he assessed his skills and determined that if he competed in round <tt>i</tt>, he'd take the <tt><b>places</b>[i]</tt>-th place. This might not be sufficient, but Bonif&aacute;c is able to select any subset of elements of <tt><b>places</b></tt> and reorder them in any way (don't think too deeply into how he'd do it). However, such a feat is very difficult, so he wants to perform it on as few elements as possible. </p> <br /><br /> <p> You're given int[]s <tt><b>cutoff</b></tt> and <tt><b>places</b></tt>. Return the smallest non-negative integer <tt>K</tt>, such that Bonif&aacute;c could advance to the onsite finals after reordering (permuting) his results in <tt>K</tt> online rounds. Formally, for Bonif&aacute;c to advance, there have to be <tt>K</tt> elements of <tt><b>places</b></tt>, such that after rearranging them into a different order, <tt><b>places</b>[i] &lt;= <b>cutoff</b>[i]</tt> would hold for all <tt>0 &lt;= i &lt; N</tt>. If no such <tt>K</tt> exists, return <tt>-1</tt> instead. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StoryFromTCO",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumChanges",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimumChanges(int[] places, int[] cutoff)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{7500,2250,150,24}",
+			"id":0,
+			"input":"{20,100,500,50}",
+			"note":"Without any changes to , Bonifác's current performance in rounds 2 and 3 isn't sufficient (because ). For Bonifác to advance to the finals, he should permute  to , which requires moving 3 elements.",
+			"order":1
+		},
+		{
+			"expect":"{5,4,3,2,1}",
+			"id":0,
+			"input":"{5,4,3,2,1}",
+			"note":"Bonifác's current performance is exactly sufficient.",
+			"order":2
+		},
+		{
+			"expect":"{8,6,4,2}",
+			"id":0,
+			"input":"{1,5,5,5}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{6,4,2}",
+			"id":0,
+			"input":"{3,1,5}",
+			"note":"There's exactly 1 correct order; to achieve it, all elements must be permuted.",
+			"order":4
+		},
+		{
+			"expect":"{11,16,37,41,47} ",
+			"id":0,
+			"input":"{14,11,42,9,19}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{3,3,5,2,4,4,5,4,3,5}",
+			"id":0,
+			"input":"{4,1,3,3,2,4,5,5,4,4}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{33,40,41,48,74,84,117,125,126,164,197,197,201,218,222,231,244,277,290,309,321,321,360,376,440, 442,465,477,491,513,639,645,647,675,706,710,726,736,736,765,801,838,845,854,863,865,887,902,908}",
+			"id":0,
+			"input":"{213,177,237,444,497,315,294,104,522,635,13,26,22,276,88,249,374,17,42,245,80,553,121,625,62,105, 53,132,178,250,18,210,492,181,2,99,29,21,62,218,188,584,702,63,41,79,28,452,2}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"places and cutoff will contain the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"places will contain between 1 and 1,000 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of places and cutoff will be between 1 and 1,000,000, inclusive."
+		}
+	]
+}

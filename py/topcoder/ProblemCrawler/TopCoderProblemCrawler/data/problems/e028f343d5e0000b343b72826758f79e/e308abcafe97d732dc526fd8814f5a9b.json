@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11564&rd=14553",
+	"statement":"Fox Ciel wants to eat eels as a celebration of this year's end. <p></p> Initially, Ciel has some eels of various lengths. She only likes to eat eels of length exactly 10, no more, no less. Before she eats, she may cut the eels to prepare pieces of desired length. However, she only has the time to make at most <b>maxCuts</b> cuts. A single cut looks as follows: \n <ol> \n  <li>Fox Ciel chooses one of the eels. Let its length be x. She can only choose an eel of length greater than 1.</li> \n  <li>She chooses an integer y such that 0 &lt; y &lt; x.</li> \n  <li>She cuts the eel into two pieces so that one of them measures exactly y. In other words, instead of one eel of length x she now has two eels of lengths y and (x-y), respectively.</li> \n </ol> <p></p> You are given a int[] <b>eelLengths</b>. Each element of <b>eelLengths</b> is the length of one of the eels Ciel has at the beginning. You are also given the int <b>maxCuts</b>. Return the maximum number of eels of length exactly 10 she can produce.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Cut",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMaximum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMaximum(int[] eelLengths, int maxCuts)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{13, 20, 13}",
+			"note":"One optimal solution looks as follows:  First, cut eel 0 into two pieces of lengths 10 and 3. Next, cut eel 1 into two equal parts of length 10 each. This produces a total of 3 eels whose length is 10.  ",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{5, 5, 5, 5}",
+			"note":"There are four eels whose length is 5. As you cannot combine eels, it is impossible to make an eel of length 10.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{34, 10, 48}",
+			"note":"She already has one eel of length 10. By cutting the other two eels she can produce four more eels of the desired length.",
+			"order":3
+		},
+		{
+			"expect":"350",
+			"id":0,
+			"input":"{30, 50, 30, 50}",
+			"note":"She may cut eels at most 350 times, but in this case she doesn't have to cut them so many times.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"eelLengths will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of eelLengths will be between 1 and 1,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"maxCuts will be between 1 and 1,000, inclusive."
+		}
+	]
+}

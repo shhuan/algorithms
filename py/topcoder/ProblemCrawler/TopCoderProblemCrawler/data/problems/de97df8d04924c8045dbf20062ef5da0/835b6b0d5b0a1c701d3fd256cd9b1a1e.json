@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1099&rd=4715",
+	"statement":"Our world consists of rows and columns of identical square regions. We have a list of regions that we want to visit, starting from the center of the first region in the list and going in straight lines to the center of each successive region. Every time we cross from one region into the interior of another region (even if we have previously visited it) we will be charged a tax. <p> Create a class Regions that contains the method numTaxes that takes int[]s <b>rows</b> and <b>columns</b> of the regions on our list and returns the number of taxes we will have to pay. The i-th elements of <b>rows</b> and <b>columns</b> give the location of the i-th region that we must visit. If we must pay more than 2,000,000,000 taxes (!) then return -1. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"We are not charged a tax if we just touch the boundary of a region."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Regions",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numTaxes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numTaxes(int[] row, int[] col)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{4,2,6}",
+			"id":0,
+			"input":"{4,2,3}",
+			"note":"Going from the center of 4,4 to the center of 2,2 we pay tax when we enter region 3,3 and when we enter region 2,2. Going from the center of 2,2 to the center of 3,6 we pay tax as we enter 2,3 then 2,4 then 3,4 then 3,5 then 3,6. ",
+			"order":1
+		},
+		{
+			"expect":"{0,1000000000,0}",
+			"id":0,
+			"input":"{0,1000000000,0}",
+			"note":"We enter each region along the diagonal on the first leg, a total of 1,000,000,000 regions. On the way back we go back down the diagonal but we still have to pay taxes.",
+			"order":2
+		},
+		{
+			"expect":"{0,2,2}",
+			"id":0,
+			"input":"{0,10,10}",
+			"note":"The first leg enters (1,0),(2,0),(3,1),(4,1),(5,1),(6,1),(7,1),(8,2),(9,2),(10,2). The second leg just stays within region (10,2), paying no additional taxes. ",
+			"order":3
+		},
+		{
+			"expect":"{0,999999999,18}",
+			"id":0,
+			"input":"{0,1000000000,6}",
+			"note":"Each of the two legs enters almost 2 billion regions, so the sum of the taxes along this path is greater than 2 billion.",
+			"order":4
+		},
+		{
+			"expect":"{1,1,1,6}",
+			"id":0,
+			"input":"{999999999,1,999999999,999999999}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rows has between 1 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"columns has the same number of elements as rows."
+		},
+		{
+			"order":3,
+			"val":"Each element of rows and or columns is between 0 and 1,000,000,000 inclusive."
+		}
+	]
+}

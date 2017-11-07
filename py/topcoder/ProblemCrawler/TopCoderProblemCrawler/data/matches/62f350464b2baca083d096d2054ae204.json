@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.99,
+			"constraints":[],
+			"correctRatio":68.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1704&rd=4515",
+			"name":"BinaryCode",
+			"notes":[],
+			"submission":96
+		},
+		{
+			"avgPts":304.23,
+			"constraints":[],
+			"correctRatio":86.54,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1659&rd=4515",
+			"name":"Lottery",
+			"notes":[],
+			"submission":52
+		},
+		{
+			"avgPts":640.89,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1649&rd=4515",
+			"name":"PenLift",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"Single Round Match 144 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4515"
+}

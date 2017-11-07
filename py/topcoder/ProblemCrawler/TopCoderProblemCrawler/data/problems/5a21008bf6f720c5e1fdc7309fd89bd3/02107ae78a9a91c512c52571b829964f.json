@@ -1,0 +1,111 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3471&rd=6552",
+	"statement":"<p><i>The problem statement contains an image.</i></p> <p> More and more electronic devices can be connected to the internet. So far, most of them don't support wireless networking, which means you have to pull TP (twisted pair) cables in your apartment. You also have to use hubs, which split a cable from one connection to four other connections. A <i>connection</i> can either be the internet connection, an electronic device or a hub. All cables must be pulled on the floor along the walls, and all connections will be at the floor near a wall. There will be a single internet connection in the apartment, and all electronic devices (there will always be more than one) must be connected to it through one or more hubs. The hubs may be interconnected as well. </p> <p> Given the design of an apartment as a top-down view, the number of hubs at your disposal, the location of the internet connection and the locations of all electronic devices, determine the least amount of TP cable needed. You may place the hubs anywhere along a wall. Several hubs can be placed at the exact same location, and hubs can be at the same location as other existing connections. </p> <p> Consider the image below, showing the design of an apartment from a top-down view. The red dot marks the internet connection, the green dots mark electronic devices, the gray boxes the positions of the hubs, and the blue lines TP cable. Note that the dots, boxes and lines are slightly separated from the wall on the image, but this is for clarification only. </p> <p> <img src=\"http://www.topcoder.com/contest/problem/CableWoes/CableWoes.gif\" /> </p> <p> The apartment design will be given as a String[] describing the top-down view as a simple polygon. All lines in the polgyon will be either horizontal or vertical. Each element will be in the form <tt>&quot;&lt;x&gt; &lt;y&gt;&quot;</tt> describing a point in the polygon. The points will be given in either clockwise or counter-clockwise order. </p> <p> The connections will also be given as a String[], where each element will be in the format <tt>&quot;&lt;x&gt; &lt;y&gt;&quot;</tt>. The first element will be the location of the internet connection, and the other elements the locations of the electronic devices. </p> <p> Create a class CableWoes containing the method leastTPCable which takes a String[] <b>design</b>, the apartment design, a String[] <b>connections</b>, the locations of the connections, and an int <b>hubs</b>, the number of hubs at your disposal. The method should return an int, the least amount of TP cable needed to be pulled. If it's not possible to connect all devices to the internet, return -1 (see example 4). </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Not all hubs at your disposal need to be used, see example 3."
+		},
+		{
+			"order":2,
+			"val":"The coordinates in  are not necessarily unique, see example 2."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CableWoes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"leastTPCable",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int leastTPCable(String[] design, String[] connections, int hubs)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"4 6\",\"1 4\",\"3 1\",\"11 1\",\"10 10\",\"2 11\"}",
+			"id":0,
+			"input":"{\"1 1\",\"6 1\",\"6 5\",\"7 5\",\"7 1\",\"12 1\",\"12 5\",\"8 5\", \"8 6\",\"10 6\",\"10 8\",\"8 8\",\"8 9\",\"10 9\",\"10 11\", \"6 11\",\"6 7\",\"5 7\",\"5 11\",\"1 11\",\"1 6\",\"5 6\",\"5 5\",\"1 5\"}",
+			"note":"This is the example in the picture. Hubs have been placed at \"1 4\" and \"2 11\". ",
+			"order":1
+		},
+		{
+			"expect":"{\"4 6\",\"1 4\",\"3 1\",\"11 1\",\"10 10\",\"2 11\"}",
+			"id":0,
+			"input":"{\"1 1\",\"6 1\",\"6 5\",\"7 5\",\"7 1\",\"12 1\",\"12 5\",\"8 5\", \"8 6\",\"10 6\",\"10 8\",\"8 8\",\"8 9\",\"10 9\",\"10 11\", \"6 11\",\"6 7\",\"5 7\",\"5 11\",\"1 11\",\"1 6\",\"5 6\",\"5 5\",\"1 5\"}",
+			"note":"Same as above, except that we now have three hubs at our disposal. Even though we don't need three hubs, using them all decreases the cable length a bit. The hubs should be placed at \"1 4\", \"2 11\" and \"4 6\". ",
+			"order":2
+		},
+		{
+			"expect":"{\"0 500\",\"1 500\",\"0 500\",\"1 500\"}",
+			"id":0,
+			"input":"{\"0 0\",\"1 0\",\"1 1000\",\"0 1000\"}",
+			"note":"No matter where the hub is placed along the wall, the same amount of cable is needed. Note that the distance between \"0 500\" and \"1 500\" is 1001 and not 1, since the cable must go around the whole wall. ",
+			"order":3
+		},
+		{
+			"expect":"{\"0 0\",\"0 10\",\"10 10\",\"10 0\",\"0 0\",\"0 10\",\"10 10\",\"10 0\"}",
+			"id":0,
+			"input":"{\"0 0\",\"0 10\",\"10 10\",\"10 0\"}",
+			"note":"Only 4 of the 15 hubs are needed to get the optimal solution.",
+			"order":4
+		},
+		{
+			"expect":"{\"5 0\",\"5 0\",\"5 0\",\"5 0\",\"5 0\",\"5 0\",\"5 0\"}",
+			"id":0,
+			"input":"{\"0 0\",\"0 10\",\"10 10\",\"10 0\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"design will contain between 4 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"connections will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element in design and connections will be in the format &quot;&lt;x&gt; &lt;y&gt;&quot;."
+		},
+		{
+			"order":4,
+			"val":"The elements in design will be unique."
+		},
+		{
+			"order":5,
+			"val":"design will describe a simple polygon containing only horizontal and vertical lines. No lines in the polygon will intersect or overlap other lines."
+		},
+		{
+			"order":6,
+			"val":"All coordinates in connections will be on a line in the polygon describing the apartment."
+		},
+		{
+			"order":7,
+			"val":"Each &lt;x&gt; and &lt;y&gt; in design and connections will be an integer between 0 and 1000, inclusive, and will not contain any leading zeros."
+		},
+		{
+			"order":8,
+			"val":"hubs will be between 1 and 20, inclusive."
+		}
+	]
+}

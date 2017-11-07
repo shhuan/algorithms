@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7544&rd=10751",
+	"statement":"<p> Your shipping company has just delivered some materials to you, and you'd like to find out how many of these materials are useful. All materials are packed into cubical boxes. The information about each box will be given to you in a String[] <b>data</b>, with the i-th element representing the i-th box. Each element of <b>data</b> will be formatted as &quot;<i>EDGE QUALITY COLOR</i>&quot; (quotes for clarity), where <i>EDGE</i> and <i>QUALITY</i> are positive integers representing the length of an edge of the box and the quality of the material (higher is better), respectively. <i>COLOR</i> will be a sequence of lowercase letters representing the color of the material. </p> <p> A String[] <b>requirements</b> will represent the specifications for your project. Each element of <b>requirements</b> will follow one of the following templates (all quotes for clarity only): </p>\n <ul> \n  <li>&quot;EDGE=X&quot; (where X is a positive integer), which means that you can use only materials from boxes with edge length equal to X.</li> \n  <li>&quot;QUALITY=X&quot; (where X is a positive integer), which means that you can use only materials with the quality greater than or equal to X.</li> \n  <li>&quot;COLOR=s&quot; (where s is a sequence of lowercase letters), which means that you can use only materials of color s.</li> \n </ul> Given all this information, you are to return the total volume of the materials you can use. <p></p>",
+	"notes":[{
+		"order":1,
+		"val":"The volume of a box with edge length of X is equal to X*X*X."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SortMaterials",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"totalVolume",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int totalVolume(String[] data, String[] requirements)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"{\"1 20 red\", \"2 30 blue\", \"10 1 green\"}",
+			"note":"With no special requirements, you can use all the materials you get. The sum of the volumes is 1*1*1 + 2*2*2 + 10*10*10 = 1009.",
+			"order":1
+		},
+		{
+			"expect":"{\"QUALITY=20\"}",
+			"id":0,
+			"input":"{\"1 20 red\", \"2 30 blue\", \"10 1 green\"}",
+			"note":"Now you must choose materials with QUALITY of at least 20, so you can not use the third box.",
+			"order":2
+		},
+		{
+			"expect":"{\"COLOR=red\", \"EDGE=5\"}",
+			"id":0,
+			"input":"{\"1 20 red\", \"2 30 blue\", \"10 1 green\", \"5 5 red\", \"5 6 red\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"EDGE=1\", \"EDGE=5\"}",
+			"id":0,
+			"input":"{\"1 20 red\", \"2 30 blue\", \"10 1 green\", \"5 5 red\", \"5 6 red\"}",
+			"note":"Obviously, no box can have an edge length of 1 and 5 simultaneously.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"data will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of data will contain between 5 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of data will be formatted as &quot;EDGE QUALITY COLOR&quot; (quotes for clarity), where EDGE and QUALITY are integers between 1 and 99, inclusive, with no leading zeroes, and COLOR is a non-empty sequence of lowercase letters ('a'-'z')."
+		},
+		{
+			"order":4,
+			"val":"requirements will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of requirements will contain between 6 and 50 characters, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of requirements will be formatted as &quot;EDGE=X&quot; (where X is an integer between 1 and 99, inclusive, with no leading zeroes), &quot;QUALITY=X&quot; (where X is an integer between 1 and 99, inclusive, with no leading zeroes), or &quot;COLOR=s&quot; (where s is a non-empty sequence of lowercase letters ('a'-'z'). All quotes for clarity only."
+		}
+	]
+}

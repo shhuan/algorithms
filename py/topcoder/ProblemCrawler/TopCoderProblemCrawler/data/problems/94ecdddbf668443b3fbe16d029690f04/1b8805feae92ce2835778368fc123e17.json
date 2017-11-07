@@ -1,0 +1,115 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12832&rd=15828",
+	"statement":"Cat Snuke has drawn a huge graph. You are given a long <b>n</b> and a long[] <b>d</b> that describe the graph. The graph has <b>n</b> vertices, numbered 0 through <b>n</b>-1. Vertices i and j are connected by an edge if and only if |i-j| is an element of <b>d</b>. Return the number of connected components of this graph.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HugeGraph",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countComponents",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countComponents(long n, long[] d)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"5",
+			"note":"The graph will look as follows:      There are two connected components in this graph: {0, 2, 4} and {1, 3}.",
+			"order":1
+		},
+		{
+			"expect":"{2, 3}",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{6, 8, 9}",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{10, 20, 30, 40, 50, 60, 70, 80, 90}",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{30, 29, 26, 15}",
+			"id":0,
+			"input":"33",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{195, 774, 788, 781, 723}",
+			"id":0,
+			"input":"808",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{47932970752927, 47933439462262, 2570167893116, 47933306684356, 47931823444952}",
+			"id":0,
+			"input":"47933736652472",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"{33250482667239488, 37822264384529608, 40095838646694298, 43479356281340667, 35203783529829951, 40580747920061306, 43377164971019776, 39064579296221318, 40001593684678420, 33451277901601382, 40995812050106167, 37014304154501058, 17759267713188789, 36704554868973353}",
+			"id":0,
+			"input":"45466964736857613",
+			"note":"",
+			"order":8
+		},
+		{
+			"expect":"{748147148561484840, 701393167746858761, 769696254000454180, 704972921953280463, 759946249333871738, 884450289438010670, 746985782208205106, 774136608403627034, 340934288037171102, 842771692796482305, 781200159564662404, 714890479593837724, 692135607544998078, 869198777483846839, 857427314409450650, 769959320733418646, 834561823397164073, 859931184678488658, 772342405210344280, 884209280453229287, 742707070877737742, 713634305824576668, 885018270712907537, 774793793947310152, 742703922481466469, 903242244337866282, 891008000483677106, 811279910869615440, 741113236129095213, 739459726110363505, 762358705144212813, 830373753788440496, 908779619221983459, 887664283422679667, 759617794878713552, 910640611592949081, 783409949952075625, 863540471792847786, 927341859483997999, 836772868602095563, 698935183681576178, 862350615052508395, 878270753526059153, 702073460709372995, 699733226194776258, 695875778245571985, 827812810943605830, 873126653781760917, 889807390074772165, 897362441882835952}",
+			"id":0,
+			"input":"927386907126310589",
+			"note":"",
+			"order":9
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 10^18, inclusive."
+		},
+		{
+			"order":2,
+			"val":"d will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of d will be between 1 and n-1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Elements of d will be pairwise distinct."
+		}
+	]
+}

@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11798&rd=14728",
+	"statement":"<p><i>Warning: This problem statement contains superscripts and/or subscripts. It may not display properly outside of the applet.</i></p> <br /><br /> In this problem we will consider <i>binary polynomials.</i> A binary polynomial P of degree n, where n is a nonnegative integer, is given by a sequence of coefficients: n+1 zeroes and ones <b>a</b>[0], <b>a</b>[1], ..., <b>a</b>[n], where <b>a</b>[n] = 1. They represent the following: <p> P(x) = <b>a</b>[0] * x<sup>0</sup> + <b>a</b>[1] * x<sup>1</sup> + ... + <b>a</b>[n] * x<sup>n</sup> </p> Binary polynomials can be evaluated in points 0, 1 and multiplied by each other just like ordinary polynomials, with one exception: all calculations take place modulo 2. For example, we assume that (x + x<sup>3</sup>) * (1 + x<sup>2</sup>) = x + 2 * x<sup>3</sup> + x<sup>5</sup> = x + x<sup>5</sup>. Since we can multiply binary polynomials, we can also raise them to positive integer powers; for example, if P = 1 * x<sup>0</sup> + 0 * x<sup>1</sup> + 1 * x<sup>2</sup> and <b>m</b> = 3, then P<sup><b>m</b></sup> = 1 * x<sup>0</sup> + 0 * x<sup>1</sup> + 1 * x<sup>2</sup> + 0 * x<sup>3</sup> + 1 * x<sup>4</sup> + 0 * x<sup>5</sup> + 1 * x<sup>6</sup>. <br /><br /> <br /><br /> You are given integers <b>m, k</b> and a binary polynomial P as the array <b>a</b> of its coefficients. Return the coefficient that stands by x<sup><b>k</b></sup> in the binary polynomial P<sup><b>m</b></sup>.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BinaryPolynomialDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findCoefficient",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], long, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int findCoefficient(int[] a, long m, long k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1, 0, 1}",
+			"note":"This corresponds to the example from the problem statement. P equals 1 + x + x + x. The coefficient by x is hence 1.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1, 0, 1}",
+			"note":"This is the same polynomial as in the previous example.",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"{0, 0, 1, 1, 0, 1}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{1}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"2229508454872453",
+			"id":0,
+			"input":"{1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"The degree of P will be between 0 and 49, inclusive."
+		},
+		{
+			"order":2,
+			"val":"a will contain exactly n+1 elements, where n is the degree of P."
+		},
+		{
+			"order":3,
+			"val":"Each element of a will be either 0 (zero) or 1 (one)."
+		},
+		{
+			"order":4,
+			"val":"a[n] will be equal to 1 (one)."
+		},
+		{
+			"order":5,
+			"val":"m will be between 1 and 1016, inclusive."
+		},
+		{
+			"order":6,
+			"val":"k will be between 0 and n * m, inclusive."
+		}
+	]
+}

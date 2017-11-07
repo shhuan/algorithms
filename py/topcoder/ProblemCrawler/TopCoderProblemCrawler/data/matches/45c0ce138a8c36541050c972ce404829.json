@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":160.28,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7642&rd=10746",
+			"name":"PacketRepack",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6641&rd=10746",
+			"name":"MemorizingPi",
+			"notes":[],
+			"submission":1
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7636&rd=10746",
+			"name":"BalancingGame",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2007 TopCoder Open > Sponsor Track Qualification",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10746"
+}

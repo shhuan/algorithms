@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":228.71,
+			"constraints":[],
+			"correctRatio":85.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=213&rd=4008",
+			"name":"Ladder",
+			"notes":[],
+			"submission":34
+		},
+		{
+			"avgPts":312.36,
+			"constraints":[],
+			"correctRatio":70,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=214&rd=4008",
+			"name":"Combinatorics",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":494.65,
+			"constraints":[],
+			"correctRatio":80,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=215&rd=4008",
+			"name":"Expression",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 37 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4008"
+}

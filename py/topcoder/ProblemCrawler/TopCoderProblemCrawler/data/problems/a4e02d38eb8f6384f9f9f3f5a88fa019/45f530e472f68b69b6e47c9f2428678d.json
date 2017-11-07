@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=136&rd=3020",
+	"statement":"<pre>Class name: PokerWish\nMethod name: winChance\nParameters: String\nReturns: int\n\nImplement a class PokerWish, which contains a method winChance.  winChance\nreturns an int that is the maximum possible percentage chance a winning poker\nhand will result from the input hand after one draw (one draw means any number\nof cards between 0 and 5, inclusive, can by simultaneously replaced with cards\nfrom the deck).  \n\nThe input will be of the form &quot;CS,CS,CS,CS,CS&quot; (no spaces), representing a\nfive-card poker hand, drawn from a standard playing deck.  C can take on the\nvalues '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', or 'A'\nrepresenting the card rank and S can take on the values 'C', 'D', 'H', or 'S'\nrepresenting the suit of each card.  A standard playing deck contains 52 cards,\nthe thirteen possible card ranks (possible C values) in the four possible suits\n(possible S values). \n\nA winning hand is defined as being either a straight or a flush.  The cards\nhave a defined order that is given by the list above ('2'-'A'); with the\nexception that, in a hand, Ace ('A') can be the highest valued card or the\nlowest valued card, but not both.  A straight consists of having five cards in\nsequence (the cards in your hand can be rearranged to put them in order).\n(Therefore a straight can be 5A234, 6789T, TJQKA, etc... but not QKA23 nor\n23567).  A flush consists of having five cards of the same suit.  All other\ntypes of standard poker hands are ignored.\n\nYou are allowed to exchange any number of cards with an equal number of cards\nfrom the remaining deck exactly one time.  The remaining deck contains the\n52-5=47 cards that are not in the original hand.  Following this rule, compute\nthe percentage chance of having a winning hand, assuming you replace the cards\nsuch that your chances of getting a winning hand are maximized. Possible\nreplacement is the replacement of between 0 and 5 cards, inclusive, that\nresults in the highest chance of winning.  The returned percentage should be\ntruncated (fractional part dropped) to an int.\n\nHere is the method signature (be sure your method is public):\nint winChance(String hand);\n\n*hand will be of the input for above and will contain 5 unique valid cards.\nTopCoder will verify the input is valid.\n\nExamples:\n&quot;AS,4S,8S,3S,JC&quot; returns 19  (best chance is to discard the club, hoping for a\nspade)\n&quot;2S,3H,5C,4D,6H&quot; returns 100 (this is a straight, and the player replaces\nnothing)\n&quot;8S,3H,5C,4D,6H&quot; returns 17  (best chance is to discard the 8, hoping for a 2\nor 7)\n&quot;8S,QD,5C,4D,6H&quot; returns 8   (missing the 7 for a straight)\n&quot;AS,AH,AC,KD,KH&quot; returns 1\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PokerWish",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winChance",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int winChance(String param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

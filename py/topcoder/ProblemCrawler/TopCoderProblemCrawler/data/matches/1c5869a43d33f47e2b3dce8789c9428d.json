@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.93,
+			"constraints":[],
+			"correctRatio":83.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12946&rd=15836",
+			"name":"MaxMinTreeGame",
+			"notes":[],
+			"submission":502
+		},
+		{
+			"avgPts":276.54,
+			"constraints":[],
+			"correctRatio":85.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12788&rd=15836",
+			"name":"PairsOfStrings",
+			"notes":[],
+			"submission":121
+		},
+		{
+			"avgPts":505.71,
+			"constraints":[],
+			"correctRatio":44.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12910&rd=15836",
+			"name":"SumOfArrays",
+			"notes":[],
+			"submission":9
+		}
+	],
+	"name":"Single Round Match 603 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15836"
+}

@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12725&rd=15702",
+	"statement":"Fox Ciel is playing a game with some chess pawns and a strip of paper. The strip of paper is divided into a row of cells. Each cell can contain at most one pawn.<br /><br /> The white pawns will be denoted 'R', because they are only allowed to move to the right.<br /><br /> The black pawns will be denoted 'L', because they are only allowed to move to the left.<br /><br /> <br /><br /> <br /><br /> You are given a String <b>begin</b> that describes the current state of the strip: 'R' and 'L' are cells with corresponding pawns, and '.' are empty cells.<br /><br /> <br /><br /> <br /><br /> You are now allowed to make some moves (as many as you wish, possibly zero). In each move you may either take a 'R' pawn and move it one cell to the right, or take a 'L' pawn and move it one cell to the left. Of course, both types of moves are only valid if the destination cell is currently empty. Pawns are not allowed to move out of bounds.<br /><br /> <br /><br /> <br /><br /> You are also given a String <b>target</b> that represents the desired state of the strip.<br /><br /> If it is possible to reach <b>target</b> from <b>begin</b> by making some valid moves, return &quot;Possible&quot; (quotes for clarity), otherwise return &quot;Impossible&quot;.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxAndChess",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"ableToMove",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String ableToMove(String begin, String target)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"..R.\"",
+			"id":0,
+			"input":"\"R...\"",
+			"note":"You have to move the only pawn to the right twice.",
+			"order":1
+		},
+		{
+			"expect":"\"R...\"",
+			"id":0,
+			"input":"\"..R.\"",
+			"note":"Here  cannot be reached because the only pawn is only allowed to move to the right.",
+			"order":2
+		},
+		{
+			"expect":"\"L...R.R\"",
+			"id":0,
+			"input":"\".L.R.R.\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\".R.L.\"",
+			"id":0,
+			"input":"\".L.R.\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"LRLLRLRLLRLLRLRLRL\"",
+			"id":0,
+			"input":"\"LRLLRLRLLRLLRLRLRL\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\".\"",
+			"id":0,
+			"input":"\"L\"",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"begin will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"begin and target will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each character in begin and target will be one of '.', 'L' and 'R'."
+		}
+	]
+}

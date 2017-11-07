@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":225.24,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1212&rd=9984",
+			"name":"ShipBoxes",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":213.18,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6073&rd=9984",
+			"name":"NotchedWoodBarsPuzzle",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":773.23,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6150&rd=9984",
+			"name":"PhoneNetwork",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"TCO 06 > Championship Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9984"
+}

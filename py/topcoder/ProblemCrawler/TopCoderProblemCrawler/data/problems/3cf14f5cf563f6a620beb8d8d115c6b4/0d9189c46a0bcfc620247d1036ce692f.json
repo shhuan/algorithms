@@ -1,0 +1,114 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11286&rd=14430",
+	"statement":"<p>Fox Ciel has a map of some underground ruins. It describes the position of several jewels and their values. She wants to collect some of the jewels. The map is a rectangle with width <b>W</b> and height <b>H</b>. It contains <b>W</b>*<b>H</b> cells. The cell in the upper left corner has the coordinates (0,0) and the cell in the lower right corner has coordinates (<b>W</b>-1,<b>H</b>-1). There are <b>jewelCount</b> jewels. The i-th jewel is located at coordinates (x[i],y[i]) and has a value of v[i]. 0, 1, 2 or more jewels may be in the same cell.</p> <br /><br /> <p>Ciel starts from any cell in the top row (any cell whose y-coordinate is 0 and x-coordinate is arbitrary). She has a super drill so she can move down any number of times, but she can move to the left or right at most <b>LR</b> times. Moving up is not allowed. She collects all the jewels in a cell by moving to that cell (or starting in that cell). Moving down takes <b>timeY</b> seconds and moving left or right takes <b>timeX</b> seconds. Collecting jewels takes no time.</p> <br /><br /> <p>Calculate and return the minimum time required to collect enough jewels so that the sum of the values of the collected jewels is greater than or equal to <b>goalValue</b>. If she can't collect enough jewels then return -1.</p> <br /><br /> <p>You can calculate x[i], y[i], and v[i] as follows:</p> <pre>\n    x[0] = (<b>seeds</b>[1] * <b>seeds</b>[0] + <b>seeds</b>[2]) mod <b>W</b>\n    y[0] = (<b>seeds</b>[4] * <b>seeds</b>[3] + <b>seeds</b>[5]) mod <b>H</b>\n    v[0] = (<b>seeds</b>[7] * <b>seeds</b>[6] + <b>seeds</b>[8]) mod <b>seeds</b>[9]\n    for i=1 to <b>jewelCount</b>-1:\n        x[i] = (<b>seeds</b>[1] * x[i-1] + <b>seeds</b>[2]) mod <b>W</b>\n        y[i] = (<b>seeds</b>[4] * y[i-1] + <b>seeds</b>[5]) mod <b>H</b>\n        v[i] = (<b>seeds</b>[7] * v[i-1] + <b>seeds</b>[8]) mod <b>seeds</b>[9]\n</pre> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxSearchingRuins",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theMinTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int, int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long theMinTime(int W, int H, int jewelCount, int LR, int goalValue, int timeX, int timeY, int[] seeds)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"8",
+			"id":0,
+			"input":"5",
+			"note":"The map of the ruins is as follows:  Ciel's optimal moves: ",
+			"order":1
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"7",
+			"note":"The map and Ciel's optimal moves: ",
+			"order":2
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"7",
+			"note":"Note that Ciel can move left or right at most 3 times. ",
+			"order":3
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"7",
+			"note":"Now Ciel can move left or right at most 4 times. ",
+			"order":4
+		},
+		{
+			"expect":"503",
+			"id":0,
+			"input":"497",
+			"note":"Watch out for integer overflow when computing x[i], y[i] and v[i].",
+			"order":5
+		},
+		{
+			"expect":"749613275",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"W will be between 1 and 1,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"H will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"jewelCount will be between 1 and 1,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"LR will be between 0 and 1,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"timeX and timeY will each be between 1 and 100, inclusive."
+		},
+		{
+			"order":6,
+			"val":"goalValue will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":7,
+			"val":"seeds will contain exactly 10 elements."
+		},
+		{
+			"order":8,
+			"val":"for i=0..8, seeds[i] will be between 0 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":9,
+			"val":"seeds[9] will be between 2 and 1,000,000, inclusive."
+		}
+	]
+}

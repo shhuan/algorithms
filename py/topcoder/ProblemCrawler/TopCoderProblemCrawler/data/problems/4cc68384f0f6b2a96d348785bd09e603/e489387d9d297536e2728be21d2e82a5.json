@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7244&rd=10658",
+	"statement":"<p>Given a positive integer N, raise each of its digits to the K-th power and sum those values to get S<sub>K</sub>(N). For example, S<sub>2</sub>(65) = 6<sup>2</sup> + 5<sup>2</sup> = 61. Now, consider a sequence N, S<sub>K</sub>(N), S<sub>K</sub>(S<sub>K</sub>(N)) and so on. The happiness of N with respect to K is the smallest number in this sequence.</p> <p>You will be given three ints <b>A</b>, <b>B</b> and <b>K</b>. Calculate the happiness of each integer between <b>A</b> and <b>B</b>, inclusive, with respect to <b>K</b> and return their sum.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ExtendedHappyNumbers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calcTheSum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long calcTheSum(int A, int B, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"13",
+			"id":0,
+			"input":"13",
+			"note":"The sequence for 13 is 13, 10, 1, 1...",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1",
+			"note":"The sequences for numbers 1 to 5 are: 1: 1, 1, 1... 2: 2, 4, 16, 37, 58, 89, 145, 42, 20, 4... 3: 3, 9, 81, 65, 61, 37, 58, 89, 145, 42, 20, 4, 16, 37... 4: 4, 16, 37, 58, 89, 145, 42, 20, 4... 5: 5, 25, 29, 85, 89, 145, 42, 20, 4, 16, 37, 58, 89... ",
+			"order":2
+		},
+		{
+			"expect":"99",
+			"id":0,
+			"input":"10",
+			"order":3
+		},
+		{
+			"expect":"538",
+			"id":0,
+			"input":"535",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"400000",
+			"id":0,
+			"input":"100000",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"B will be between A and 1,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"K will be between 1 and 6, inclusive."
+		}
+	]
+}

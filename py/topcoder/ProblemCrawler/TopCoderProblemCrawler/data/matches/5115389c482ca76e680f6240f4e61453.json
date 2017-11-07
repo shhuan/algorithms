@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":150.67,
+			"constraints":[],
+			"correctRatio":94.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12336&rd=15486",
+			"name":"PenguinSledding",
+			"notes":[],
+			"submission":502
+		},
+		{
+			"avgPts":281.22,
+			"constraints":[],
+			"correctRatio":79.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12338&rd=15486",
+			"name":"PenguinEmperor",
+			"notes":[],
+			"submission":131
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12339&rd=15486",
+			"name":"FencingPenguins",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"Single Round Match 566 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15486"
+}

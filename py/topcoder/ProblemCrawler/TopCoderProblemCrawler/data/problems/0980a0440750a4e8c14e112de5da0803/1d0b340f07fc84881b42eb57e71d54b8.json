@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=75&rd=3004",
+	"statement":"<pre>Class Name: Partitions\nMethod Name: getKthPartition\nParameters: int,int\nReturns: int[]\n\nA nice order partition of positive integer n is a nonincreasing ordered\nsequence of positive integers that sum to n.  For example, {6,2,1} is a nice\norder partition of 9 and {10,3,3,2} is a nice order partition of 18 and {3} is\na nice order partition of 3.\n\nNice order partitions are ordered based on the following rule:\n\nPartition A is before partition B if and only if there exists a positive\ninteger x such that\n      A1 = B1 and A2 = B2 and . . . and A(x-1) = B(x-1) and Ax &gt; Bx\nwhere Pn is the nth integer in partition P (the i integers in the partition are\nnumbered 1 to i).\n\nFor example the partition {6,3,2,1} is before the partition {6,3,1,1,1} in the\nordered list of nice order partitions of 12.\n\nImplement a class Partitions which contains a method getKthPartition.  The\nmethod inputs two ints, n and k.  The method returns the kth unique nice order\npartition of n, using the ordering rule above.  k=1 refers to the first\npartition (Start counting at 1, not 0).  The partition is returned as an int[]\nof the elements in the partition, where the element with index 0 of the int[]\nis the first Integer in the partition, index 1 is the second, etc...\n\nIf k is larger than the number of partitions, the method should return an empty\ninstance of an int[] object.\n\nThe method signature is:\npublic int[] getKthPartition(int n, int k);\n\nn and k satisfy:\n  0 &lt; n &lt; 21\n  0 &lt; k &lt; 1001\n\nNote:\n-The solution must run in under 6 seconds on TopCoder's tester.\n\nExamples:\n*If n=5 and k=2, the partitions, in order, are:\n  {5}\n  {4,1}\n  {3,2}\n  {3,1,1}\n  {2,2,1}\n  {2,1,1,1}\n  {1,1,1,1,1}\n  The 2nd one is {4,1} and the method should return {4,1} as an int[].\n*If n=10 and k=7, the method should return {7,1,1,1}\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Partitions",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getKthPartition",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getKthPartition(int param0, int param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":237.7,
+			"constraints":[],
+			"correctRatio":87.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8253&rd=10958",
+			"name":"Police",
+			"notes":[],
+			"submission":16
+		},
+		{
+			"avgPts":357.11,
+			"constraints":[],
+			"correctRatio":71.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8266&rd=10958",
+			"name":"OddGraph",
+			"notes":[],
+			"submission":7
+		},
+		{
+			"avgPts":421.88,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8030&rd=10958",
+			"name":"BinaryPowerBishop",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Semifinal Room 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10958"
+}

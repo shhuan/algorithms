@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3075&rd=5866",
+	"statement":"<p>You are part of a data-mining operation that only cares about numbers as data. As such, you have been assigned to write a program that gets a long chunk of text and searches for all the numbers in the text. Because your boss cares more about large numbers, he only wants you to give him the larger half of the numbers.</p> <p>You are given a String[] <b>text</b>, the lines of text to be searched for numbers, and you are to find and return the larger half of the numeric substrings in <b>text</b>. Numeric substrings should never overlap, and you should always use the longest possible contiguous sequence of numbers. For instance, <tt>&quot;sk12345fj&quot;</tt> has just one numeric substring - <tt>&quot;12345&quot;</tt>. <tt>&quot;sk12 345fj&quot;</tt> has 2 - <tt>&quot;12&quot;</tt> and <tt>&quot;345&quot;</tt>. If there are an odd number of numeric substrings in <b>text</b>, you will return <tt>(n+1)/2</tt> strings. These numbers should be sorted in ascending order of numeric value, and returned with any leading zeros intact. If two numbers found in <b>text</b> have the same numeric value but have different numbers of leading zeros, the one with fewer leading zeros should be considered &quot;less&quot;. It is possible for numbers to wrap across lines - if one line ends in a number and the next one begins with a number, these are consecutive parts of the same number.</p>",
+	"notes":[{
+		"order":1,
+		"val":"While the input will be no more than 50 elements, your return value may have more than 50 elements."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HiddenNumbers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findAll",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] findAll(String[] text)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"9\", \"44\", \"098\", \"444\", \"890\", \"0983\", \"00000002998\", \"34534539893\", \"80239802389\", \"390804980498409480\" }",
+			"id":0,
+			"input":"{\"098m03r9f80239802389f0m9KDKLKLJDKLJm0983m890DMOm03\", \"dlkfj3hljf4h3klhl 4j4 444 44 rjhkrrkr34534539893\", \" 390804980498409480 dkldjkl djkl djkl d00000002998\"}",
+			"note":"Most of the omitted numbers are one-digit numbers.",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \"0000002222\", \"2912\", \"3090\", \"3949\", \"9000\", \"939939\" }",
+			"id":0,
+			"input":"{\"39 000220 30 skldjdije939939slkk 3090 2912kjdk3949\", \"dlkjd dkljsl098 dkd3 23kdkdkl 0000002222kdjdie9000\"}",
+			"note":"Be careful about using the length of the string to compare the numeric values - leading zeros can mess you up!",
+			"order":2
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"{}",
+			"note":"This is a shorter one.",
+			"order":3
+		},
+		{
+			"expect":"Returns: { \"0022\", \"00022\" }",
+			"id":0,
+			"input":"{\"0022 22k00022a022\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"text will have between 0 and 50 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element in text will have between 0 and 50 characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of text will contain only digits ('0'-'9'), letters ('a'-'z', 'A'-'Z'), and spaces (' ')."
+		},
+		{
+			"order":4,
+			"val":"All of the numbers hidden in text will be between 0 and 263-1, but they may have leading zeros."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":204.91,
+			"constraints":[],
+			"correctRatio":82.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4619&rd=8012",
+			"name":"NumericalSequence",
+			"notes":[],
+			"submission":157
+		},
+		{
+			"avgPts":430.56,
+			"constraints":[],
+			"correctRatio":27.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4718&rd=8012",
+			"name":"SuperString",
+			"notes":[],
+			"submission":159
+		},
+		{
+			"avgPts":612.38,
+			"constraints":[],
+			"correctRatio":31.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4468&rd=8012",
+			"name":"CardRemover",
+			"notes":[],
+			"submission":80
+		}
+	],
+	"name":"Single Round Match 259 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8012"
+}

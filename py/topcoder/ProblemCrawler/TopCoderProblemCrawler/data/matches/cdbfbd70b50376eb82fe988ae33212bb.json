@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.56,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13778&rd=16502",
+			"name":"Bitwisdom",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":314.65,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13841&rd=16502",
+			"name":"Balance",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13753&rd=16502",
+			"name":"MinimumCuts",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2015 TopCoder Open Algorithm > Parallel Round 2B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16502"
+}

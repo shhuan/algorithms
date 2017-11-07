@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6866&rd=10808",
+	"statement":"Alice and Bob are hobby chess players. They would like to become the best in the world so they are training a lot. Today they are going to play the following game with queens on a 100 x 100 chessboard to improve their offensive skills. <br /><br /><br /><br />In each turn a player must choose one queen and move with it. From position (x, y) a queen can be moved to (x - k, y) or (x, y - k) or (x - k, y - k), where k &gt; 0. (Queens can move through squares containing other queens, and multiple queens can coexist on a single square). The two players alternate turns, and Alice goes first. The first player who moves any queen to the position (0,0) will become the winner. You are given the initial positions of the queens in the int[]s <b>x</b> and <b>y</b>, where (<b>x</b>[i], <b>y</b>[i]) is the position of the i-th queen. Suppose Alice and Bob are playing optimally. Return &quot;Alice will win&quot; if Alice can win or &quot;Bob will win&quot; otherwise (all quotes for clarity). ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ChessTraining",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"game",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String game(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{3,5}",
+			"id":0,
+			"input":"{3,4}",
+			"note":"Alice can move a queen from (3,3) to (0,0) to win in her first move.",
+			"order":1
+		},
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"{1}",
+			"note":"No matter how Alice moves the queen, Bob can win in the next move.",
+			"order":2
+		},
+		{
+			"expect":"{8,3,7,8}",
+			"id":0,
+			"input":"{5,7,3,5}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{4,4,11,9,9,9,9}",
+			"id":0,
+			"input":"{3,3,18,6,0,14,1}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{3,3}",
+			"id":0,
+			"input":"{1,2}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{2,2,1}",
+			"id":0,
+			"input":"{3,4,3}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"y will contain the same number of elements as x."
+		},
+		{
+			"order":3,
+			"val":"Each element of x and y will be between 0 and 99, inclusive."
+		},
+		{
+			"order":4,
+			"val":"No queen will be at position (0,0) at the beginning."
+		}
+	]
+}

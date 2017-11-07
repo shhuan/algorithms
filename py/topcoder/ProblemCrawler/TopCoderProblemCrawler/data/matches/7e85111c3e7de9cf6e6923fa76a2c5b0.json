@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":211.04,
+			"constraints":[],
+			"correctRatio":91.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2334&rd=5004",
+			"name":"FunctionIter",
+			"notes":[],
+			"submission":123
+		},
+		{
+			"avgPts":325.99,
+			"constraints":[],
+			"correctRatio":54.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2324&rd=5004",
+			"name":"MoneyRun",
+			"notes":[],
+			"submission":83
+		}
+	],
+	"name":"2004 TCCC > Qualification Problem Set 5",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5004"
+}

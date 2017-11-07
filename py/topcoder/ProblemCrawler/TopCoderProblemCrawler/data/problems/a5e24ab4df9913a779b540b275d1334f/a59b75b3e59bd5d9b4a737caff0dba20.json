@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1877&rd=4650",
+	"statement":"Bob wants to program a game where a player tries to reveal all the squares on a minefield that do not contain mines. He has created an algorithm to generate random locations for mines. He wants to take these locations and use them to create a 9x9 board. The board needs to indicate the locations of the mines, as well as indicate how many mines border the spaces without mines. A mine borders a space if it is horizontally, vertically, or diagonally adjacent to that space.<br /><br /> <br /><br /> Write a class MineField, which contains a method getMineField. getMineField takes a String <b>mineLocations</b> representing the locations of mines in the 9x9 field. getMineField returns a String[] representing the entire board. The <i>i</i>th element of the returned String[] corresponds to row <i>i</i> of the board. Each element of the returned String[] should be 9 characters in length, where each character is either 'M' (symbolizing a mine) or a digit, d, between '0' and '8' inclusive (symbolizing an empty space bordering d mines.)<br /><br /> <br /><br /> The String passed to the method will be in the following format (quotes added for clarity): \n <ol>\n  <li>&quot;(r0,c0)(r1,c1)...(rN,cN)&quot;</li>\n </ol> <br /><br /> Each pair of parentheses holds the coordinates of a mine in (row, column) format. Counting begins at 0, not 1. Therefore, (0,0) represents the upper-left corner, and (8,8) represents the bottom-right corner. For example, suppose Bob randomly generated the following locations:<br /><br /> \n <ol>\n  <li>&quot;(0,0)(1,0)(2,0)(3,0)(4,0)&quot;</li>\n </ol> The board he would want to return would look like: <pre>\n{ &quot;M20000000&quot;,\n  &quot;M30000000&quot;,\n  &quot;M30000000&quot;,\n  &quot;M30000000&quot;,\n  &quot;M20000000&quot;,\n  &quot;110000000&quot;,\n  &quot;000000000&quot;,\n  &quot;000000000&quot;,\n  &quot;000000000&quot; }\n</pre> There are 5 mines (symbolized by &quot;M&quot;) located straight down the first column. Two spots on the board border 1 mine; two spots border 2 mines; and three spots border 3 mines. All other spots on the board border no mines.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MineField",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMineField",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getMineField(String mineLocations)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"M20000000\", \"M30000000\", \"M30000000\", \"M30000000\", \"M20000000\", \"110000000\", \"000000000\", \"000000000\", \"000000000\" }",
+			"id":0,
+			"input":"\"(0,0)(1,0)(2,0)(3,0)(4,0)\"",
+			"note":"This is the example from above.",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \"M1000001M\", \"110000011\", \"000000000\", \"000000000\", \"000000000\", \"000000000\", \"000000000\", \"110000011\", \"M1000001M\" }",
+			"id":0,
+			"input":"\"(0,0)(0,8)(8,0)(8,8)\"",
+			"note":"There is a mine in each corner of the board. There are twelve spots that border exactly 1 mine. All other spots border no mines.",
+			"order":2
+		},
+		{
+			"expect":"Returns: { \"000000000\", \"000000000\", \"012321000\", \"02MMM2000\", \"03M8M3000\", \"02MMM2111\", \"0124321M1\", \"0001M1111\", \"000111000\" }",
+			"id":0,
+			"input":"\"(3,2)(3,3)(3,4)(4,2)(4,4)(5,2)(5,3)(5,4)(7,4)(6,7)\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: { \"000000000\", \"000000000\", \"000000000\", \"000000000\", \"000000000\", \"000000000\", \"000000000\", \"000000000\", \"000000000\" }",
+			"id":0,
+			"input":"\"\"",
+			"note":"Don't forget the empty case.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"mineLocations will contain between 0 and 50 characters, inclusive"
+		},
+		{
+			"order":2,
+			"val":"mineLocations will contain between 0 and 10 mines, inclusive"
+		},
+		{
+			"order":3,
+			"val":"mineLocations will be in the format &quot;(r0,c0)(r1,c1)...(rN,cN)&quot; where each r# and c# is a digit between '0' and '8', inclusive"
+		},
+		{
+			"order":4,
+			"val":"mineLocations will not contain duplicate locations"
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3994&rd=6532",
+	"statement":"A 100 meter long pipe must be cut in two places. It can only be cut at certain places, where it was originally welded from smaller pipes. If the two cut locations are chosen at random (each potential location has equal probability of being chosen), find the probability of a resulting pipe being longer than <b>L</b> meters. <br /><br /> <br /><br /> Create a method named probability that accepts a int[] <b>weldLocations</b> and int <b>L</b> as parameters. It should calculate the probability of one or more resulting pipes being strictly longer than <b>L</b> if the two cut locations are chosen at random from <b>weldLocations</b>. Each element in <b>weldLocations</b> represents the number of meters from the left end of the pipe.",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have a relative or absolute error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PipeCuts",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"probability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double probability(int[] weldLocations, int L)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"25",
+			"id":0,
+			"input":"{25, 50, 75}",
+			"note":"Any random set of cuts results in a pipe being longer than 25 meters.",
+			"order":1
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"{25, 50, 75}",
+			"note":"This time, it is impossible to cut the pipe such that some resulting pipe is longer than 50 meters.",
+			"order":2
+		},
+		{
+			"expect":"24",
+			"id":0,
+			"input":"{25, 50, 75}",
+			"order":3
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"{99, 88, 77, 66, 55, 44, 33, 22, 11}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"weldLocations will have between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in weldLocations will be between 1 and 99, inclusive."
+		},
+		{
+			"order":3,
+			"val":"weldLocations will not contain duplicate elements."
+		},
+		{
+			"order":4,
+			"val":"L will be between 1 and 100, inclusive."
+		}
+	]
+}

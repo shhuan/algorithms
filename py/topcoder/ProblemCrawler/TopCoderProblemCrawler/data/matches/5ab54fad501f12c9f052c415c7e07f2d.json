@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":221.42,
+			"constraints":[],
+			"correctRatio":92.47,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8016&rd=10786",
+			"name":"DrawingMarbles",
+			"notes":[],
+			"submission":558
+		},
+		{
+			"avgPts":321.95,
+			"constraints":[],
+			"correctRatio":58.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8185&rd=10786",
+			"name":"ConnectTheCities",
+			"notes":[],
+			"submission":366
+		},
+		{
+			"avgPts":597.73,
+			"constraints":[],
+			"correctRatio":39.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7863&rd=10786",
+			"name":"NumberOfDivisors",
+			"notes":[],
+			"submission":276
+		}
+	],
+	"name":"Single Round Match 370 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10786"
+}

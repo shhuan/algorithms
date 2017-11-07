@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":160.62,
+			"constraints":[],
+			"correctRatio":39.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7875&rd=10772",
+			"name":"SumOfSelectedCells",
+			"notes":[],
+			"submission":500
+		},
+		{
+			"avgPts":300.17,
+			"constraints":[],
+			"correctRatio":45.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7876&rd=10772",
+			"name":"PrinceOfPersia",
+			"notes":[],
+			"submission":319
+		},
+		{
+			"avgPts":567.91,
+			"constraints":[],
+			"correctRatio":53.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7877&rd=10772",
+			"name":"ConvexArray",
+			"notes":[],
+			"submission":56
+		}
+	],
+	"name":"Single Round Match 360 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10772"
+}

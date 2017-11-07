@@ -1,0 +1,115 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10720&rd=14179",
+	"statement":"<p>Petya likes oriented graphs, especially rooted trees. He has such a tree described in a String <b>target</b>. Every edge may be in an <i>active</i> or <i>inactive</i> state. Initially every edge is in an inactive state. Petya wants to change the states of all the edges so that they are all active. To do so he has some trees described in a String[] <b>trees</b> in which each element describes a single tree. Initially, every edge in <b>target</b> is inactive and he must activate them by repeating the following process:</p> <p></p>\n <ol> \n  <li>He chooses some vertex V from <b>target</b> and some tree T from <b>trees</b>. The pair (V, T) can only be chosen once overall.</li> \n  <li>He chooses a subtree T' from <b>target</b> that is rooted at V and is isomorphic to T (see notes for a definition if required).</li> \n  <li>The state of every edge in T' is toggled (i.e., if it was active, it becomes inactive; if it was inactive it becomes active).</li> \n </ol><p></p> <p>Each time he follows the process he incurs a cost that depends on which tree he selected. If he selects <b>trees</b>[i] it costs him <b>costs</b>[i]. Petya also likes the number 5 and so no vertex in <b>target</b> will have more than 5 children. Return the minimum cost of activating all the edges in <b>target</b> or -1 if it is impossible to do so.</p> <p><b>target</b> and the trees in <b>trees</b> will be described using the same format:</p> <p></p>\n <ul> \n  <li>The vertices are indexed sequentially starting with the root as vertex 0.</li> \n  <li>The parent of each vertex in index order is then written in a space-separated list. I.e., if the i-th number written (zero-indexed) is p[i], it means that there is a directed edge from vertex p[i] to vertex i in the tree. Since the root has no parent, the first number in the list will be -1 instead.</li> \n </ul> <p></p>",
+	"notes":[{
+		"order":1,
+		"val":"Two trees T and T' are  if there exists a 1-to-1 mapping between the vertices of T and T', such that for each pair of vertices V1 and V2 in T, there is an edge (V1, V2) if and only if and edge exists between the corresponding vertices of T'. I.e., one tree can be transformed into the other simply by relabelling the vertices."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ActivateTree",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCost(String[] trees, String target, int[] costs)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"-1 0\"",
+			"id":0,
+			"input":"{\"-1 0\"}",
+			"order":1
+		},
+		{
+			"expect":"\"-1 0 0\"",
+			"id":0,
+			"input":"{\"-1 0\"}",
+			"order":2
+		},
+		{
+			"expect":"\"-1 0 0\"",
+			"id":0,
+			"input":"{\"-1 0\",\"-1 0\"}",
+			"note":"Petya can not use the first tree twice in the same position so he has to pay once for each of the trees.",
+			"order":3
+		},
+		{
+			"expect":"\"-1 0 3 0\"",
+			"id":0,
+			"input":"{\"-1 0\",\"-1 0\",\"-1 0 3 0\"}",
+			"note":"Here it is cheaper to use the first tree twice and the second tree once than to use only the third tree.",
+			"order":4
+		},
+		{
+			"expect":"\"-1 0 0 0 2\"",
+			"id":0,
+			"input":"{\"-1 0 1\",\"-1 0 0\",\"-1 0\",\"-1 0 1 0 2\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"target will contain between 1 and 46 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"trees will contain between 1 and 5 elements inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of trees will contain between 4 and 10 characters."
+		},
+		{
+			"order":4,
+			"val":"target and each element of trees will be single-space delimited lists of integers formatted without leading zeros, with no leading or trailing spaces."
+		},
+		{
+			"order":5,
+			"val":"target will contain between 2 and 16 integers, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of trees will contain between 2 and 5 integers, inclusive."
+		},
+		{
+			"order":7,
+			"val":"The first integer in target and in each element of trees will be -1."
+		},
+		{
+			"order":8,
+			"val":"target and each element of trees will describe valid trees as specified in the problem statement."
+		},
+		{
+			"order":9,
+			"val":"No vertex in the tree represented by target will have more than 5 children."
+		},
+		{
+			"order":10,
+			"val":"costs will contain the same number of elements as trees."
+		},
+		{
+			"order":11,
+			"val":"Each element of costs will be between 0 and 65536, inclusive."
+		}
+	]
+}

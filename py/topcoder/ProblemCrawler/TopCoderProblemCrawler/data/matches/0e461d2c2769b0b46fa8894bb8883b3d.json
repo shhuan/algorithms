@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.5,
+			"constraints":[],
+			"correctRatio":64.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10638&rd=13952",
+			"name":"TwistedMatrix",
+			"notes":[],
+			"submission":273
+		},
+		{
+			"avgPts":291.77,
+			"constraints":[],
+			"correctRatio":43.65,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10654&rd=13952",
+			"name":"TransportationNetwork",
+			"notes":[],
+			"submission":197
+		},
+		{
+			"avgPts":531.26,
+			"constraints":[],
+			"correctRatio":30.88,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10419&rd=13952",
+			"name":"PrefixFreeCode",
+			"notes":[],
+			"submission":68
+		}
+	],
+	"name":"Pilot Round 2 > Member Pilot 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13952"
+}

@@ -1,0 +1,67 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4709&rd=8057",
+	"statement":"You are tiling a floor that is <b>width</b> by <b>height</b> units. You are using strips of tile that are <b>size</b> by 1 units. The long side of the tiles should run along the side of the floor that is <b>width</b> units long. See the diagram for more details on exactly how the tiles should be placed. <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/FloorTiling/FloorTiling.png\" /> <br /><br /> Note how each row is offset by <b>offset</b> units from the one below it. (When thinking of how to offset the rows, imagine infinite horizontal strips of tiles.) Also, notice that the bottom row is touching the side. As the diagram illustrates, you will not be able to tile the whole floor with pieces that are <b>size</b> by 1. You should return the area of the region that will not be covered when tiling according to the strategy shown in the image.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FloorTiling",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"tile",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int tile(int size, int offset, int width, int height)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"The example in the diagram above.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"5",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"offset will be between 0 and size-1, inclusive."
+		},
+		{
+			"order":2,
+			"val":"size will be between 2 and floor(width/2), inclusive."
+		},
+		{
+			"order":3,
+			"val":"width and height will each be between 4 and 50, inclusive."
+		}
+	]
+}

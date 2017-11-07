@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":165.54,
+			"constraints":[],
+			"correctRatio":67.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2866&rd=5853",
+			"name":"RegularSeason",
+			"notes":[],
+			"submission":163
+		},
+		{
+			"avgPts":275.34,
+			"constraints":[],
+			"correctRatio":77.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2894&rd=5853",
+			"name":"TCSocks",
+			"notes":[],
+			"submission":80
+		},
+		{
+			"avgPts":569.29,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2926&rd=5853",
+			"name":"GetThemAll",
+			"notes":[],
+			"submission":16
+		}
+	],
+	"name":"Single Round Match 207 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5853"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":190.35,
+			"constraints":[],
+			"correctRatio":72.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10898&rd=14152",
+			"name":"TheMoviesLevelOneDivOne",
+			"notes":[],
+			"submission":744
+		},
+		{
+			"avgPts":264.24,
+			"constraints":[],
+			"correctRatio":30.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10900&rd=14152",
+			"name":"TheMoviesLevelTwoDivOne",
+			"notes":[],
+			"submission":390
+		},
+		{
+			"avgPts":528.7,
+			"constraints":[],
+			"correctRatio":16.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10902&rd=14152",
+			"name":"TheMoviesLevelThreeDivOne",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"Single Round Match 469 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14152"
+}

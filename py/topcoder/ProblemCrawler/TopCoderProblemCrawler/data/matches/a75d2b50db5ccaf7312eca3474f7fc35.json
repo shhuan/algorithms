@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":161.98,
+			"constraints":[],
+			"correctRatio":87,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13229&rd=16316",
+			"name":"ThePermutationGame",
+			"notes":[],
+			"submission":454
+		},
+		{
+			"avgPts":253.54,
+			"constraints":[],
+			"correctRatio":52.54,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13596&rd=16316",
+			"name":"MaliciousPath",
+			"notes":[],
+			"submission":59
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13640&rd=16316",
+			"name":"NoRightTurn",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"Single Round Match 652 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16316"
+}

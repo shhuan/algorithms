@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":177.17,
+			"constraints":[],
+			"correctRatio":68.72,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11157&rd=14240",
+			"name":"BunnyComputer",
+			"notes":[],
+			"submission":665
+		},
+		{
+			"avgPts":271.52,
+			"constraints":[],
+			"correctRatio":16.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11011&rd=14240",
+			"name":"BunnyExam",
+			"notes":[],
+			"submission":176
+		},
+		{
+			"avgPts":519.13,
+			"constraints":[],
+			"correctRatio":68.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10761&rd=14240",
+			"name":"BunnySequence",
+			"notes":[],
+			"submission":66
+		}
+	],
+	"name":"Single Round Match 487 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14240"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":193.43,
+			"constraints":[],
+			"correctRatio":62.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6831&rd=10132",
+			"name":"Coherency",
+			"notes":[],
+			"submission":16
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6865&rd=10132",
+			"name":"Architects",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":579.62,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6861&rd=10132",
+			"name":"Amazing",
+			"notes":[],
+			"submission":9
+		}
+	],
+	"name":"TCCC06 > Semifinal Room 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10132"
+}

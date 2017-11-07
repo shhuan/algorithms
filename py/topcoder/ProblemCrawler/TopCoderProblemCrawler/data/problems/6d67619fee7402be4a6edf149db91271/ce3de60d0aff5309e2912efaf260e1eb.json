@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13368&rd=16058",
+	"statement":"Jeip drew N black points onto the plane. The points were in a special configuration: for each pair of points, their distance was either at most <b>D</b>, or at least 1.99*<b>D</b>. <br /><br /> <br /><br /> You are given the coordinates of the points as int[]s <b>x</b> and <b>y</b>. You are also given the int <b>D</b>. <br /><br /> <br /><br /> Ouju wants to paint some (possibly none or all) of the N points red. The distance between any two red points must be at least 1.99*<b>D</b>. Return the number of ways to do this, modulo 1,000,000,007.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OnePointNineNine",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countSubsets",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countSubsets(int[] x, int[] y, int D)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,10,0,10}",
+			"id":0,
+			"input":"{0,0,10,10}",
+			"note":"At most one of these four points can be red.",
+			"order":1
+		},
+		{
+			"expect":"{0,10,0,10}",
+			"id":0,
+			"input":"{0,0,10,10}",
+			"note":"Any subset of these four points can be red.",
+			"order":2
+		},
+		{
+			"expect":"{0,3,6}",
+			"id":0,
+			"input":"{0,4,8}",
+			"note":"In one of the valid solutions the points (0,0) and (8,6) are both red.",
+			"order":3
+		},
+		{
+			"expect":"{0, 3, 6, 20, 20, 20, 20, 20}",
+			"id":0,
+			"input":"{0, 4, 8, 20, 25, 30, 35, 40}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{4026, 2791, 3044, 4049, 6759, 6606, 3440, 8858, 6954, 2544, 4778, 2367, 5113, 8588, 3772, 4741, 3693, 5140, 8822, 8853, 9934, 6277, 5097, 285, 1031, 9872, 1012, 5883, 8992, 7257, 8889, 6558, 9997, 3868, 7731, 7508, 3729, 6398, 4102, 2054, 4835, 5707, 4271, 1676, 9487, 6336, 9829, 1058, 9965, 4998, 1042, 6320, 7669, 1893, 6021, 4211, 8496, 7585, 6882, 8410, 5155, 5869, 3376, 7173, 5726, 1574, 8911, 4192, 8324, 963, 8867, 7292, 7127, 4238, 6796, 6225, 4143, 7775, 4312, 965, 5933, 558, 8642, 268, 7208, 5688, 267, 4338, 4023, 7982, 4535, 545, 7228, 1884, 1660, 3241, 6388, 6572, 6515, 5912}",
+			"id":0,
+			"input":"{4637, 7770, 9911, 3887, 310, 8546, 104, 9820, 6710, 4128, 8224, 2492, 8956, 6162, 3392, 9736, 1540, 7744, 3783, 5451, 3756, 6153, 4846, 9852, 2678, 6500, 4117, 3994, 9126, 8950, 4913, 8598, 5692, 3400, 133, 4284, 656, 4742, 8727, 4904, 338, 7144, 7447, 8807, 1985, 6591, 40, 9614, 1839, 2724, 391, 1419, 2404, 9268, 1490, 3121, 654, 1337, 7787, 9269, 9413, 4515, 7787, 8622, 6718, 839, 238, 2490, 253, 1029, 9286, 5226, 180, 6451, 7826, 1707, 5119, 7238, 3393, 8980, 7234, 879, 5481, 703, 3991, 35, 3205, 2697, 9462, 4489, 2074, 7880, 1909, 150, 2378, 1555, 5232, 5959, 8755, 7679}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x and y will contain between 1 and 1000 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of x and y will be between 0 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"D will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"No two points are exactly at the same position."
+		},
+		{
+			"order":6,
+			"val":"The points are in a special configuration described in the statement."
+		}
+	]
+}

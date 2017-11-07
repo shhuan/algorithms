@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":215.65,
+			"constraints":[],
+			"correctRatio":83.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11374&rd=14560",
+			"name":"TripleStrings",
+			"notes":[],
+			"submission":1463
+		},
+		{
+			"avgPts":313.91,
+			"constraints":[],
+			"correctRatio":95.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11420&rd=14560",
+			"name":"MuddyRoad",
+			"notes":[],
+			"submission":699
+		},
+		{
+			"avgPts":530.24,
+			"constraints":[],
+			"correctRatio":50.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11378&rd=14560",
+			"name":"IPv444",
+			"notes":[],
+			"submission":163
+		}
+	],
+	"name":"2011 TCO Algorithm > Online Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14560"
+}

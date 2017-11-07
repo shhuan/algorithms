@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12742&rd=15852",
+	"statement":"<p> Two sequences A and B are called similar if they have the same length and have the following property: we can obtain two identical sequences by deleting at most two elements of A and at most two elements of B. (The elements deleted from A don't have to have the same indices as the elements deleted from B. The order of the remaining elements in each sequence has to be preserved.) </p> <p> You are given ints <b>N</b> and <b>bound</b>. Consider all the sequences with length <b>N</b> such that each element is an integer between 1 and <b>bound</b>, inclusive. Compute the number of ordered pairs of such sequences that are similar. Return this count modulo 1,000,000,009. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SimilarSequencesAnother",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getCount(int N, int bound)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"2",
+			"note":"Any two 2-element sequences are similar. There are (10^2)^2 = 10,000 pairs of such sequences.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"In this case, two sequences are similar if they have at least one element in common. In other words, the two sequences are similar if there is a value that occurs in each of them. Let's count the pairs of sequences that are  similar. There are two possibilities:  Thus, the total number of pairs of similar sequences is 3^6 - 6 - 36 = 687.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"8",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"123456789",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1000000000",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"bound will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

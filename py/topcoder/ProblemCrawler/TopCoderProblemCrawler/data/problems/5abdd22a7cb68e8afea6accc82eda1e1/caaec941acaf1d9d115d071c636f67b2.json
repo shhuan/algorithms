@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12216&rd=15150",
+	"statement":"<i>This problem statement contains images that may not display properly outside the applet.</i> <br /><br /> <br /><br /> There are <b>N</b> characters in the Ninja language. As the number of different characters can be very large, we will use numbers from 1 to <b>N</b> to represent the individual characters in Ninja language. The characters are numbered in alphabetical order. That is, whenever i &lt; j, character i is earlier in the alphabet than character j. Each string in Ninja language can now be seen as a sequence of integers. When comparing two different strings of the same length, the lexicographically smaller one is the one with a smaller integer on the first place where they differ. <br /><br /> <br /><br /> Ninja Ren has a string R of length <b>N</b> that contains each character exactly once. Then she converted the string R to the string S using the following method: <br /><br /> <br /><br /> First, Ren takes her string R and writes it onto a circular piece of paper. The paper can now be cut at one of <b>N</b> possible positions, each time producing a different string of length <b>N</b>. Ren takes those <b>N</b> different strings and sorts them into lexicographical order (starting with the lexicographically smallest one). The string S is obtained by taking the <i>last</i> characters of the <b>N</b> sorted strings, in order. In other words, Ren takes the <b>N</b> cyclic rotations of R, sorts them, and then only looks at their last letters. <br /><br /> <br /><br /> For example, when R is &quot;2 4 5 1 3&quot;, S will be &quot;5 3 1 2 4&quot;. The following picture shows how the conversion works. <br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/StRings/string.png\" /> <br /><br /> <br /><br /> You are given the int <b>N</b> and a int[] <b>first</b>. containing a prefix of the string S. More precisely, for each valid index i, element i of <b>first</b> is the i-th character of S. (Both indices are 0-based.) <br /><br /> <br /><br /> Find the lexicographically smallest possible string S. If <b>N</b> is less than or equal to 50, return the entire string S. If <b>N</b> is greater than 50, return just the last 50 characters of S. If there is no such S, return an empty int[] instead.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StRings",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getSmallest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getSmallest(int N, int[] first)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2, 4}",
+			"id":0,
+			"input":"5",
+			"note":"{2, 4, 1, 5, 3} is the lexicographically smallest possible string S.",
+			"order":1
+		},
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"5",
+			"note":"There is no S that starts with 1.",
+			"order":2
+		},
+		{
+			"expect":"{3, 8, 6}",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{34, 68, 97, 87, 47, 39, 50, 59, 4, 7, 29, 91, 1, 80, 90, 95, 60, 40, 43, 73, 54, 69, 32, 31, 53, 11, 84, 3, 28, 77, 44, 86, 2, 75, 85, 52, 93, 81, 70, 89, 19, 67, 98, 100, 41, 65, 57, 27, 33, 49}",
+			"id":0,
+			"input":"100",
+			"note":"If  is greater than 50, return just the last 50 characters of S.",
+			"order":4
+		},
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 100,000 inclusive."
+		},
+		{
+			"order":2,
+			"val":"first will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of first will be between 1 and N, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Elements of first will be pairwise distinct."
+		},
+		{
+			"order":5,
+			"val":"The constraints above guarantee that the number of elements of first will be less than or equal to N."
+		}
+	]
+}

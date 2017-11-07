@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.55,
+			"constraints":[],
+			"correctRatio":85.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10946&rd=14280",
+			"name":"SnowPlow",
+			"notes":[],
+			"submission":732
+		},
+		{
+			"avgPts":312.95,
+			"constraints":[],
+			"correctRatio":74.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10994&rd=14280",
+			"name":"RepresentableNumbers",
+			"notes":[],
+			"submission":521
+		},
+		{
+			"avgPts":448.32,
+			"constraints":[],
+			"correctRatio":5.81,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10930&rd=14280",
+			"name":"BreakingChocolate",
+			"notes":[],
+			"submission":86
+		}
+	],
+	"name":"2010 TCO Algorithm > Online Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14280"
+}

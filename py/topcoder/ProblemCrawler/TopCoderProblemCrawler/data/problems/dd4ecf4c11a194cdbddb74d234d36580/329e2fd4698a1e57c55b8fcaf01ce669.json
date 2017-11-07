@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11974&rd=14736",
+	"statement":"Eel Takahashikun is playing a simple game on a rectangular board. <br /><br /> <br /><br /> The rectangular board is divided into H x W unit squares. Each unit square contains a 0 or a 1. In each operation, Takahashikun chooses a shortest path along edges of unit squares from the upper-left corner to the lower-right corner, and flips the numbers in all unit squares that are below the chosen path (i.e., changes all 0s into 1s and vice versa). <br /><br /> <br /><br /> For example, the following picture shows a valid operation. The squares below the chosen path are highlighted in green. <br /><br /> <br /><br /> <img src=\"http://community.topcoder.com/contest/problem/FlipGame/pic1.png\" /> <br /><br /> <br /><br /> The operation in the following picture is invalid because the path is not shortest. <br /><br /> <br /><br /> <img src=\"http://community.topcoder.com/contest/problem/FlipGame/pic2.png\" /> <br /><br /> <br /><br /> You are given the initial state of the board in String[] <b>board</b>. The j-th character of the i-th element is the number written in the unit square at row i, column j. Rows are numbered from top to bottom, and columns are numbered from left to right. Return the minimal number of iterations required to change all numbers to 0s. ",
+	"notes":[{
+		"order":1,
+		"val":"It is always possible to change all numbers to 0s by a finite number of operations."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FlipGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minOperations",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minOperations(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"1000\", \"1110\", \"1111\"}",
+			"note":"Takahashikun can flip all 1s in one operation. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"1111\", \"1111\", \"1111\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"00\", \"00\", \"00\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"00000000\", \"00100000\", \"01000000\", \"00001000\", \"00000000\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 29",
+			"id":0,
+			"input":"{\"000000000000001100000000000000\", \"000000000000011110000000000000\", \"000000000000111111000000000000\", \"000000000001111111100000000000\", \"000000000011111111110000000000\", \"000000000111111111111000000000\", \"000000001100111111001100000000\", \"000000011000011110000110000000\", \"000000111100111111001111000000\", \"000001111111111111111111100000\", \"000011111111111111111111110000\", \"000111111111000000111111111000\", \"001111111111100001111111111100\", \"011111111111110011111111111110\", \"111111111111111111111111111111\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of board will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in board will be '0' or '1'."
+		}
+	]
+}

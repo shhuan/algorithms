@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7643&rd=12058",
+	"statement":"<p> A local charity is asking for donations of Ethernet cable. You realize that you probably have a lot of extra cable in your house, and make the decision that you will donate as much cable as you can spare. </p> <p> You will be given a String[] <b>lengths</b> indicating the length (in meters) of cables between each pair of rooms in your house. You wish to keep only enough cable so that every pair of rooms in your house is connected by some chain of cables, of any length. The <i>j</i>th character of <b>lengths</b>[i] gives the length of the cable between rooms <i>i</i> and <i>j</i> in your house. A value of '0' (zero) indicates no cable, values of 'a' through 'z' indicate lengths of 1 through 26, and values of 'A' through 'Z' indicate lengths of 27 through 52. </p> <p> If both the <i>j</i>th character of <b>lengths</b>[i] and the <i>i</i>th character of <b>lengths</b>[j] are greater than 0, this means that you have two cables connecting rooms <i>i</i> and <i>j</i>, and you can certainly donate at least one of them. If the <i>i</i>th character of <b>lengths</b>[i] is greater than 0, this indicates unused cable in room <i>i</i>, which you can donate without affecting your home network in any way. </p> <p> You are not to rearrange any cables in your house; you are only to remove unnecessary ones. Return the maximum total length of cables (in meters) that you can donate. If any pair of rooms is not initially connected by some path, return -1. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CableDonation",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"cable",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int cable(String[] lengths)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 40",
+			"id":0,
+			"input":"{ \"abc\", \"def\", \"ghi\" }",
+			"note":"You can part with the following cables:  for a total of 40 meters.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"a0\", \"0b\" }",
+			"note":"The two rooms are not connected.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{ \"0X00\", \"00Y0\", \"0000\", \"00Z0\" }",
+			"note":"You have no unnecessary cable.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 105",
+			"id":0,
+			"input":"{ \"Az\", \"aZ\" }",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 134",
+			"id":0,
+			"input":"{ \"0top\", \"c0od\", \"er0o\", \"pen0\" }",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"lengths will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"The length of each element of lengths will be equal to the number of elements in lengths."
+		},
+		{
+			"order":3,
+			"val":"Each character in lengths will be a letter ('a'-'z', 'A'-'Z') or '0' (zero)."
+		}
+	]
+}

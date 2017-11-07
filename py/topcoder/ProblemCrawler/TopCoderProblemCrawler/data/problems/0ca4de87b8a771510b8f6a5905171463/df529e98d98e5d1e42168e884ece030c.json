@@ -1,0 +1,64 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1315&rd=4711",
+	"statement":"<p> Define the height of a binary tree to be the number of nodes in the longest path from the root to a leaf. The empty tree is considered to have height 0. A node is <b>k</b>-balanced if its left and right subtrees differ in height by at most <b>k</b>. A tree is <b>k</b>-balanced if all of its nodes are <b>k</b>-balanced. The empty tree is considered to be <b>k</b>-balanced. </p> <p> For example, the tree below has height 4. </p> <pre>\n           o\n          / \\\n         o   o\n        / \\\n       o   o\n          /\n         o\n</pre> This tree is 2-balanced but not 1-balanced, because the left subtree of the root has height 3 and the right subtree of the root has height 1. <p> Your task is to write a method that takes a balance factor <b>k</b> and a number of nodes <b>n</b> and returns the maximum height of a <b>k</b>-balanced tree with <b>n</b> nodes. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BalancedTrees",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxHeight",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxHeight(int k, int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"7",
+			"id":0,
+			"input":"1",
+			"note":"A tree that achieves the maximum height for 7 nodes and balance factor 1 is  ",
+			"order":1
+		},
+		{
+			"expect":"40",
+			"id":0,
+			"input":"2",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"10",
+			"note":"With =10, a tree of size 5 can be completely linear (eg, every right subtree is empty) without violating the balance factor. ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"k is between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"n is between 1 and 1000000, inclusive."
+		}
+	]
+}

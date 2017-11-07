@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3968&rd=6533",
+	"statement":"<i>The problem statement contains superscripts and subscripts that can be seen in the applet.</i><br /><br /> Given a randomly generated sequence, it can be useful to know how unsorted it is. The sequence <pre>\n\ta<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, a<sub>4</sub>, ... , a<sub><b>n</b></sub></pre> gets 1 'unsortedness point' for every distinct pair (i,j) where i &lt; j but a<sub>i</sub> &gt; a<sub>j</sub>. The terms in the sequence are defined by the following formula: <pre>\n\ta<sub>1</sub> = 1   and   a<sub>k</sub> = (<b>m</b> * a<sub>k-1</sub> + <b>c</b>) % (2<sup>31</sup> - 1)</pre> Here % denotes the modulus or remainder operator. Return the number of unsortedness points scored by this <b>n</b>-element sequence. ",
+	"notes":[{
+		"order":1,
+		"val":"Make sure to use 64-bit types when generating the random values."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HowUnsorted",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long howMany(int m, int c, int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"2",
+			"note":"The sequence used here is:  Since the values are sorted, the return is 0.",
+			"order":1
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"1000",
+			"note":"The sequence here is:  The 3 unsortedness points come from the pairs (4,6), (5,6), and (4,5). ",
+			"order":2
+		},
+		{
+			"expect":"123",
+			"id":0,
+			"input":"1234257123",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"m will be between 1 and 2000000000 inclusive."
+		},
+		{
+			"order":2,
+			"val":"c will be between 0 and 2^31-2 inclusive."
+		},
+		{
+			"order":3,
+			"val":"n will be between 3 and 100000 inclusive."
+		}
+	]
+}

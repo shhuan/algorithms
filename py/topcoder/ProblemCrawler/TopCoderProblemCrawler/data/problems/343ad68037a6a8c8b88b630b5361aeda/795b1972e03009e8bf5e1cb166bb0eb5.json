@@ -1,0 +1,121 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12156&rd=15180",
+	"statement":"There are some red points and blue points on the Cartesian plane. All red points are on the x-axis and all blue points are in the upper half-plane. That is, the y-coordinate of each red point is 0, and the y-coordinate of each blue point is strictly positive. <p></p> Fox Ciel wants to form an ear-shaped figure using these points. She defines that the pair of four different red points A, B, C, D and two blue points P, Q is called an <i>ear</i> if and only if all the following conditions are satisfied. \n <ul> \n  <li>Both points B and C lie strictly inside the segment AD.</li> \n  <li>The angles PAD, PDA, QBC and QCB are strictly less than 90 degrees.</li> \n  <li>Point Q is strictly inside of the triangle PAD.</li> \n </ul> In the following image, points in the left figure form an ear while points in the right figure do not. <p></p> <img src=\"http://www.topcoder.com/contest/problem/Ear/ear.png\" /> <p></p> You are given three String[]s <b>redX</b>, <b>blueX</b> and <b>blueY</b>. Concatenate all elements of <b>redX</b> to get a space-separate list of integers. The i-th integer of this list represents the x-coordinate of i-th red point. In the same way, <b>blueX</b> and <b>blueY</b> encode lists of x-coordinates and y-coordinates of blue points. <p></p> Your method must return the number of ways in which we can choose the four red and two blue points that form an ear. ",
+	"notes":[{
+		"order":1,
+		"val":"The order of points in an ear does not matter. I.e., if two ears have the same four red and two blue points, they are considered the same."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Ear",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getCount(String[] redX, String[] blueX, String[] blueY)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"5 4\"}",
+			"id":0,
+			"input":"{\"3 2 8 7\"}",
+			"note":"This case corresponds to the left figure in the statement.",
+			"order":1
+		},
+		{
+			"expect":"{\"2 8\"}",
+			"id":0,
+			"input":"{\"3 2 8 7\"}",
+			"note":"This case corresponds to the right figure in the statement.",
+			"order":2
+		},
+		{
+			"expect":"{\"3 6 8 5\"}",
+			"id":0,
+			"input":"{\"1 2 6 9\"}",
+			"note":"There exists only one possible combinations of A, B, C and D since there are only four red points. Possible combinations of P and Q are as follows.   ",
+			"order":3
+		},
+		{
+			"expect":"{\"10000 9999\"}",
+			"id":0,
+			"input":"{\"10000\"}",
+			"note":"It is impossible to choose four red points from only one red point.",
+			"order":4
+		},
+		{
+			"expect":"{\"15\", \"0 250 \", \"349\"}",
+			"id":0,
+			"input":"{\"100 2\", \"00\", \" 39\", \"9\", \" 800 900 9\", \"99\"}",
+			"note":"Concatenate each element of the String[]s correctly.",
+			"order":5
+		},
+		{
+			"expect":"{\"4\", \" \", \"5\", \" \", \"6\", \" 7 \", \"8\"}",
+			"id":0,
+			"input":"{\"1\", \" \", \"2\", \" \", \"3\", \" \", \"4 5 6\", \" 7 8 9\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"redX, blueX and blueY will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of redX, blueX and blueY will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"After concatenating the elements of redX, the resulting string will be a single space separated list of integers."
+		},
+		{
+			"order":4,
+			"val":"After concatenating the elements of blueX, the resulting string will be a single space separated list of integers."
+		},
+		{
+			"order":5,
+			"val":"After concatenating the elements of blueY, the resulting string will be a single space separated list of integers."
+		},
+		{
+			"order":6,
+			"val":"There will be between 1 and 300 integers in each of the lists."
+		},
+		{
+			"order":7,
+			"val":"The number of integers in the lists of blueX and blueY will be the same."
+		},
+		{
+			"order":8,
+			"val":"Each integer in the lists will be between 1 and 10,000, inclusive."
+		},
+		{
+			"order":9,
+			"val":"All the integers in each list will be distinct."
+		},
+		{
+			"order":10,
+			"val":"Integers in the lists will have no leading zeros."
+		}
+	]
+}

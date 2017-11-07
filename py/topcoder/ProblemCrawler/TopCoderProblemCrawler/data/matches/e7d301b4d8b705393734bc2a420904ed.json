@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.77,
+			"constraints":[],
+			"correctRatio":73.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10190&rd=13904",
+			"name":"OrderedNim",
+			"notes":[],
+			"submission":583
+		},
+		{
+			"avgPts":254.67,
+			"constraints":[],
+			"correctRatio":18.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10389&rd=13904",
+			"name":"StrongEconomy",
+			"notes":[],
+			"submission":299
+		},
+		{
+			"avgPts":391.15,
+			"constraints":[],
+			"correctRatio":8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10664&rd=13904",
+			"name":"RowGame",
+			"notes":[],
+			"submission":25
+		}
+	],
+	"name":"Single Round Match 450 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13904"
+}

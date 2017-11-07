@@ -1,0 +1,113 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12875&rd=15712",
+	"statement":"<p><i>Note that the memory limit for all tasks in this SRM is 256 MB.</i></p> <p></p> <p> Fox Ciel has a matrix A that consists of N rows by M columns. Both N and M are even. Each element of the matrix is either 0 or 1. The rows of the matrix are numbered 0 through N-1 from top to bottom, the columns are numbered 0 through M-1 from left to right. The element in row i, column j is denoted A(i, j). You are given a String[] <b>A</b> that describes the matrix A. The character <b>A</b>[i][j] is '1' if A(i, j)=1 and it is '0' otherwise. </p> <p> A palindrome is a string that reads the same forwards and backwards. For example, &quot;1001&quot; and &quot;0111001110&quot; are palindromes while &quot;1101&quot; and &quot;000001&quot; are not. </p> <p> Some rows and some columns in Ciel's matrix may be palindromes. For example, in the matrix below both row 0 and column 3 are palindromes. (Row 0 is the palindrome &quot;0000&quot;, column 3 is the palindrome &quot;0110&quot;.) </p> <pre>\n0000\n0011\n0111\n1110\n</pre> <p> You are also given two ints: <b>rowCount</b> and <b>columnCount</b>. Ciel wants her matrix A to have <i>at least</i> <b>rowCount</b> rows that are palindromes, and at the same time <i>at least</i> <b>columnCount</b> columns that are palindromes. If this is currently not the case, she can change A by changing some of the elements (from '0' to '1' or vice versa). Compute and return the smallest possible number of elements she needs to change in order to reach her goal. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PalindromeMatrix",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minChange",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minChange(String[] A, int rowCount, int columnCount)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"0000\" ,\"1000\" ,\"1100\" ,\"1110\"}",
+			"note":"An optimal solution is to change A(3, 0) to 0. Then we will have palindromes in two rows (0 and 3), and in two columns (0 and 3).",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\"0000\" ,\"1000\" ,\"1100\" ,\"1110\"}",
+			"note":"This is similar to the previous example, but in this case we must have three row palindromes. An optimal solution is to change A(1, 0), A(2, 0) and A(3, 0) to 0.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"01\" ,\"10\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"1110\" ,\"0001\"}",
+			"note":"Here, we do not have to change A at all.",
+			"order":4
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"01010101\" ,\"01010101\" ,\"01010101\" ,\"01010101\" ,\"01010101\" ,\"01010101\" ,\"01010101\" ,\"01010101\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{\"000000000000\" ,\"011101110111\" ,\"010001010101\" ,\"010001010101\" ,\"011101010101\" ,\"010101010101\" ,\"010101010101\" ,\"011101110111\" ,\"000000000000\" ,\"000000000000\"}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"{\"11111101001110\" ,\"11000111111111\" ,\"00010101111001\" ,\"10110000111111\" ,\"10000011010010\" ,\"10001101101101\" ,\"00101010000001\" ,\"10111010100100\" ,\"11010011110111\" ,\"11100010110110\" ,\"00100101010100\" ,\"01001011001000\" ,\"01010001111010\" ,\"10100000010011\"}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N and M will be between 2 and 14, inclusive."
+		},
+		{
+			"order":2,
+			"val":"N and M will be even."
+		},
+		{
+			"order":3,
+			"val":"A will contain N elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of A will contain M characters."
+		},
+		{
+			"order":5,
+			"val":"Each character of A will be either '0' or '1'."
+		},
+		{
+			"order":6,
+			"val":"rowCount will be between 0 and N."
+		},
+		{
+			"order":7,
+			"val":"columnCount will be between 0 and M."
+		}
+	]
+}

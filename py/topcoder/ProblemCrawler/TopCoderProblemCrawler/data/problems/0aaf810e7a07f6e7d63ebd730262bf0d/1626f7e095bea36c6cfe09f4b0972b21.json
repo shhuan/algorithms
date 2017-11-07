@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12888&rd=15712",
+	"statement":"<p><i>Note that the memory limit for all tasks in this SRM is 256 MB.</i></p> <i>This problem statement contains subscripts that may not display properly if viewed outside of the applet.</i> <br /><br /><br /><br /> Manao is playing a solitaire game called OR-solitaire. In this game, the player starts with a number X = 0 and should obtain the number <b>goal</b> in one or more moves. The set of valid moves is determined by a int[] <b>numbers</b>. In each move, the player chooses some element of <b>numbers</b> and replaces X with the bitwise OR of X and the chosen element. <br /><br /><br /><br /> Fox Ciel wants Manao to stop playing OR-solitaire and move on with his life. She decided to erase some of the elements from <b>numbers</b> in such a way that it becomes impossible to complete the game. Return the minimum number of elements that need to be removed to achieve this.",
+	"notes":[{
+		"order":1,
+		"val":"If a and b are single bits then a | b is defined as max(a, b). For two integers, A and B, in order to calculate A | B, they need to be represented in binary: A = (a...a), B = (b...b) (if the lengths of their representations are different, the shorter one is prepended with the necessary number of leading zeroes). Then A | B = C = (c...c), where c = a | b. For example, 10 | 3 = (1010) | (0011) = (1011) = 11."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ORSolitaire",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(int[] numbers, int goal)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"7",
+			"id":0,
+			"input":"{1, 2, 4}",
+			"note":"The goal of the game is to obtain X = 7 from X = 0. The possible moves are to replace X with bitwise OR of X and 1, bitwise OR of X and 2 and bitwise OR of X and 4. X = 7 can be obtained only by using each of the three moves at least once, so removing any single element from  will make the game impossible to finish.",
+			"order":1
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"{1, 2, 4, 7, 8}",
+			"note":"In this example, Fox Ciel should remove the number 7 and one of the numbers 1, 2, 4.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{12571295, 2174218, 2015120}",
+			"note":"There is no need to remove elements from , since the game cannot be completed in its initial version.",
+			"order":3
+		},
+		{
+			"expect":"11",
+			"id":0,
+			"input":"{5,2,4,52,62,9,8,3,1,11,6}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"510",
+			"id":0,
+			"input":"{503, 505, 152, 435, 491, 512, 1023, 355, 510, 500, 502, 255, 63, 508, 509, 511, 60, 250, 254, 346}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"numbers will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of numbers will be between 1 and 1,000,000,000."
+		},
+		{
+			"order":3,
+			"val":"The elements in numbers will be distinct."
+		},
+		{
+			"order":4,
+			"val":"goal will be between 1 and 1,000,000,000."
+		}
+	]
+}

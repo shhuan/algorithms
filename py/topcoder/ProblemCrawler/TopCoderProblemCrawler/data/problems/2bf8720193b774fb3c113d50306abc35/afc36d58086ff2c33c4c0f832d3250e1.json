@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4679&rd=8000",
+	"statement":"Valet parking is used to maximize the number of cars that we can park in our lot. The parking spaces are arranged in a 100 x 100 grid of squares. Each square can hold one car, and it is possible to drive a car onto any of the four orthogonally adjacent squares (provided that it is not already occupied by a car). A car may enter or leave the lot only on the corner square whose coordinates are (0,0). <p> The lot is full when all but one of the squares is occupied. Given the location of the one empty square and the location of the customer's car, we want to know how many times the valet will have to get into a car and drive it before he can maneuver the customer's car to the location (0,0). The valet is not allowed to drive any of the cars out of the lot. </p><p> Create a class ValetParking that contains a method minMoves that is given the coordinates (<b>emptyRow</b> and <b>emptyCol</b>) of the one empty square in the full lot, and the coordinates of the customer's car (<b>cusRow</b> and <b>cusCol</b>). The method returns the number of times the valet will have to move a car. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ValetParking",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minMoves(int emptyRow, int emptyCol, int cusRow, int cusCol)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"22",
+			"id":0,
+			"input":"50",
+			"note":" The customer's car is already at the exit position. ",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":" The valet can immediately drive the customer's car to the empty exit position. ",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":" ",
+			"order":3
+		},
+		{
+			"expect":"15",
+			"id":0,
+			"input":"80",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"emptyRow, emptyCol, cusRow, and cusCol will be between 0 and 99, inclusive."
+		},
+		{
+			"order":2,
+			"val":"(emptyRow,emptyCol) is not the same position as (cusRow,cusCol)."
+		}
+	]
+}

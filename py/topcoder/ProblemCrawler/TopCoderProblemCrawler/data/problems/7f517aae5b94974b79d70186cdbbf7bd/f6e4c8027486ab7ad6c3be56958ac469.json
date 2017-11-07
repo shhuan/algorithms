@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13457&rd=16082",
+	"statement":"Little Petya likes puzzles a lot. Recently he has received one as a gift from his mother. The puzzle has the form of a rectangular sheet of paper that is divided into <b>N</b> rows by <b>M</b> columns of unit square cells. Rows are numbered 0 through <b>N</b>-1 from top to bottom, and columns 0 through <b>M</b>-1 from left to right. Each cell is colored either black or white. You are given a description of the paper, the exact format is specified at the end of this problem statement. <br /><br /> <br /><br /> The goal of the puzzle is to fold the paper. This has to be done in a sequence of turns. In each turn, Petya has to fold the paper according to the rules below. He can end the process after any number of turns (including zero), even if there are still valid ways to fold the paper. <br /><br /> <br /><br /> In each turn, Petya must follow these steps: To start folding, he must choose a line that is parallel to one of the sides of the paper and passes between two rows/columns of cells. He can then take the smaller part of the paper and fold it on top of the larger part. (If the line divides the current paper in half, he can fold either half on top of the other.) There is one additional restriction: Petya may only perform the fold if all cells of the part that is being folded land on equally-colored cells of the part that remains in place. <br /><br /> <br /><br /> For example, consider the following paper (with 0 and 1 representing white and black): <pre>\n10010101\n11110100\n00000000\n01101110\n</pre> <br /><br /> <br /><br /> Here, Petya could choose the vertical line that goes between the two leftmost columns and the rest of the paper. Note that this is a valid choice: as he makes the fold, the cells from the leftmost two columns will all match their counterparts in the right part of the paper. This is how the paper looks like after the fold (with periods representing empty spaces): <pre>\n..010101\n..110100\n..000000\n..101110\n</pre> <br /><br /> <br /><br /> Clearly, even after multiple folds the paper will always look like a subrectangle of the original paper. Two states of the game are considered the same if that rectangle has the same dimensions and the same offset with respect to the original top left corner of the paper. (Note that folding order does not matter. Two different sequences of folding may produce the same final state.) <br /><br /> <br /><br /> You are given the ints <b>N</b> and <b>M</b>. You are also given a description of the original state of the paper in a compressed form, as a String[] <b>compressedPaper</b>. Compute and return the number of possible final states of the game. <br /><br /> <br /><br /> The String[] <b>compressedPaper</b> will contain <b>N</b> elements with ceil(<b>M</b>/6) characters each. Each character (except possibly the last one) encodes six cells of the paper. The actual paper can be obtained from <b>compressedPaper</b> using the following pseudocode: <br /><br /> <br /><br /> <pre>\nfor i in 0..N-1:\n    for j in 0..M-1:\n        paper[i][j] = (tonumber(compressedPaper[i][j / 6]) &gt;&gt; (j modulo 6)) modulo 2\n</pre> <br /><br /> <br /><br /> In the above pseudocode, &quot;/&quot; represents integer division (rounding down), &quot;&gt;&gt;&quot; is a bit shift to the right, and tonumber(x) maps the character x to a number between 0 and 63 as follows: the characters '0'-'9' map to integers 0-9, 'a'-'z' map to 10-35, 'A'-'Z' map to 36-61, '#' maps to 62, and '@' maps to 63. <br /><br /> <br /><br /> If paper[i][j] = 0, then the cell (i,j) is white, otherwise it is black.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BoardFolding",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int N, int M, String[] compressedPaper)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"The paper looks as follows:  There is no valid way to fold this paper, so there is just one possible outcome.",
+			"order":1
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"2",
+			"note":"In this case the paper looks like this:  We can fold it into any of the 84 possible subrectangles of the original rectangle.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"Here the paper is: ",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"6",
+			"note":"Here the paper is: ",
+			"order":4
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"In this case the paper looks like: ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N and M will be between 1 and 250, inclusive."
+		},
+		{
+			"order":2,
+			"val":"compressedPaper will contain N elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of compressedPaper will contain ceil(M / 6) elements."
+		},
+		{
+			"order":4,
+			"val":"compressedPaper will contain only characters '0'-'9', 'a'-'z', 'A'-'Z', '#' and '@'."
+		}
+	]
+}

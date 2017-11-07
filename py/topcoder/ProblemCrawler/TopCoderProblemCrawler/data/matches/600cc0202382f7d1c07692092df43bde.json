@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":194.31,
+			"constraints":[],
+			"correctRatio":80.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11359&rd=14431",
+			"name":"TheLotteryBothDivs",
+			"notes":[],
+			"submission":532
+		},
+		{
+			"avgPts":295.75,
+			"constraints":[],
+			"correctRatio":29.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11357&rd=14431",
+			"name":"TheProgrammingContestDivOne",
+			"notes":[],
+			"submission":355
+		},
+		{
+			"avgPts":446.3,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11351&rd=14431",
+			"name":"TheCowDivOne",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"Single Round Match 502 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14431"
+}

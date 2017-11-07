@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":183.33,
+			"constraints":[],
+			"correctRatio":42.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8641&rd=12011",
+			"name":"DiscountCombination",
+			"notes":[],
+			"submission":1394
+		},
+		{
+			"avgPts":313.84,
+			"constraints":[],
+			"correctRatio":83.83,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6851&rd=12011",
+			"name":"Chomp",
+			"notes":[],
+			"submission":798
+		},
+		{
+			"avgPts":527.51,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8598&rd=12011",
+			"name":"BoxFilling",
+			"notes":[],
+			"submission":125
+		}
+	],
+	"name":"2008 TopCoder Open > Online Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12011"
+}

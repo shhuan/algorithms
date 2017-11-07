@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7351&rd=10660",
+	"statement":" Given a dictionary of words, where will a newly coined word be most likely to fit? <p> We are given <b>k</b>, the length of the new word, and <b>dictionary</b>, a String[] of words in ascending alphabetical order. Suppose that the new word is equally likely to be any <b>k</b>-letter word that is not already in the dictionary. Return the most likely 0-based index for the new word. If there is more than one most likely index, return -1. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LikelyWord",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"likely",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int likely(String[] dictionary, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"time\",\"zoology\"}",
+			"note":" There are many more 1 letter words before \"time\" than either between \"time\" and \"zoology\" or after \"zoology\". ",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"az\",\"ma\",\"xz\"}",
+			"note":" 12 words (\"b\", \"c\", ..., \"m\") would have index 1, while 11 (\"n\", ... , \"x\") would have index 2.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"az\",\"ma\",\"xz\"}",
+			"note":" With the same dictionary but a longer new word, it becomes most likely that the new word will go between \"ma\" and \"xz\". ",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"a\",\"m\",\"y\"}",
+			"note":" There are 23 equally likely 1-letter words (since 3 are already in the dictionary). 0 would have index 0, 11 would have index 1, 11 would have index 2, and 1 would have index 3. So no index is most likely.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"dictionary will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of dictionary will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in each element of dictionary will be a lowercase letter ('a'-'z')."
+		},
+		{
+			"order":4,
+			"val":"The elements of dictionary will be distinct and in ascending alphabetical order."
+		},
+		{
+			"order":5,
+			"val":"k will be between 1 and 10, inclusive."
+		},
+		{
+			"order":6,
+			"val":"There will be at least one k-letter word that is not in dictionary. "
+		}
+	]
+}

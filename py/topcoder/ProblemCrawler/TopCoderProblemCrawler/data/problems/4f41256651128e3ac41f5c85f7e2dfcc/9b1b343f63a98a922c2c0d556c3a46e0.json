@@ -1,0 +1,66 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8705&rd=11126",
+	"statement":"<p><b>N</b> cells are located around a circle. Cells are numbered 1 through <b>N</b> in the clockwise direction.</p> <p>Initially, you can place a token into any one of these cells.</p> <p>In each turn, you look at the number of the cell containing the token and you calculate s, the sum of the digits in that number. You then move the token s cells clockwise.</p> <p>This process continues until you move the token into a cell that already contained the token before. Your score is the number of cells that were visited by the token at least once during the process (including the initial cell).</p> <p>Given <b>N</b>, return the maximal possible score you can get.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RoundAboutCircle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxScore",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxScore(int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"4",
+			"note":"The list of possible moves looks like this: 1->2 2->4 3->2 4->4  You can only visit 3 out of 4 cells, and there are two ways to do so: 1->2->4->4 and 3->2->4->4.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"5",
+			"note":"If you start on cell 5, the process will terminate after the first move. Otherwise, the token will travel along the loop 1->2->4->3->1 until the entire loop is visited, thus making your score equal to 4.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 11",
+			"id":0,
+			"input":"17",
+			"note":"The longest path of the token is 5->10->11->13->17->8->16->6->12->15->4->8.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 176",
+			"id":0,
+			"input":"566",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N will be between 1 and 200000, inclusive."
+	}]
+}

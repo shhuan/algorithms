@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":184.7,
+			"constraints":[],
+			"correctRatio":49.28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12691&rd=15698",
+			"name":"PiecewiseLinearFunction",
+			"notes":[],
+			"submission":623
+		},
+		{
+			"avgPts":247.14,
+			"constraints":[],
+			"correctRatio":79.63,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12692&rd=15698",
+			"name":"History",
+			"notes":[],
+			"submission":162
+		},
+		{
+			"avgPts":520.48,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12690&rd=15698",
+			"name":"StringWeight",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 586 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15698"
+}

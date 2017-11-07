@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10638&rd=13952",
+	"statement":"<i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet.</i><br /><br /> <br /><br /> &quot;Twisted Matrix&quot; is a strange game in which you are given a binary matrix (containing only '1' or '0') and must perform a series of twist operations in order to reach a certain goal matrix. A twist operation involves taking any 2x2 block inside the matrix and then rotating the elements within the block 90 degrees clockwise or counterclockwise.<br /><br /> The following image shows two consecutive twist operations performed on a initial matrix.<br /><br /><br /><br /> <img src=\"http://www.robandtim.com/TC/twist.png\" /> <br /><br /> Little Johnny has won the first prize in a world wide Twisted Matrix tournament. Unfortunately, his friends do not believe him. The situation is not helped by the fact that little Johnny has a very bad memory and cannot clearly remember the last move he made in order to reach the goal matrix in the finals. He only partially remembers the last two matrices in the game. You are given matrices <b>A</b> and <b>B</b>. Each matrix is given as String[], the j-th character of the i-th element of each String[] describes the cell at row i, column j of the matrix. Each cell contains '0' or '1' if little Johnny remembers the number in that cell or '?' otherwise. Matrix <b>B</b> was the last matrix in the game and <b>A</b> was the matrix preceeding it, which means that performing one twist operation on <b>A</b> must transform it into <b>B</b>. Return a String[] representing the complete contents of the matrix <b>B</b>. If there are many valid solutions then return the lexicographically first solution. If no solution is possible then return an empty String[].",
+	"notes":[
+		{
+			"order":1,
+			"val":"The lexicographically first of two matrices is the one with the lexicographically earlier row at the first row at which they differ."
+		},
+		{
+			"order":2,
+			"val":"The lexicographically first of two rows is the one with the smaller cell at the first column at which they differ."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TwistedMatrix",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] solve(String[] A, String[] B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"0000\", \"?000\", \"0000\", \"0000\"}",
+			"id":0,
+			"input":"{\"1000\", \"0000\", \"0000\", \"0000\"}",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"{\"??\", \"??\"}",
+			"id":0,
+			"input":"{\"11\", \"01\"}",
+			"note":"Another possibility is {\"11\",\"10\"} but {\"01\",\"11\"} comes earlier lexicographically.",
+			"order":2
+		},
+		{
+			"expect":"{\"111\", \"1?1\", \"111\"}",
+			"id":0,
+			"input":"{\"000\", \"0?0\", \"000\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"?1111\", \"11111\", \"1??11\", \"1??11\"}",
+			"id":0,
+			"input":"{\"?1111\", \"11111\", \"11011\", \"10111\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{\"??1??\", \"??1??\", \"?????\", \"?????\"}",
+			"id":0,
+			"input":"{\"00111\", \"00111\", \"11111\", \"11111\"}",
+			"note":"In order to get the lexicographically earliest solution, you must rotate the 2x2 block containing only zeros. Note that this movement does not modify the matrix, but it is still valid.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A and B will each contain N elements, where N is between 2 and 30, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of A and B will contain M characters, where M is between 2 and 30, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in each element of A and B will be '1', '0' or '?'."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.19,
+			"constraints":[],
+			"correctRatio":74.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12725&rd=15702",
+			"name":"FoxAndChess",
+			"notes":[],
+			"submission":778
+		},
+		{
+			"avgPts":248.44,
+			"constraints":[],
+			"correctRatio":56.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12079&rd=15702",
+			"name":"XorCards",
+			"notes":[],
+			"submission":137
+		},
+		{
+			"avgPts":509.22,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12727&rd=15702",
+			"name":"FoxAndCity",
+			"notes":[],
+			"submission":15
+		}
+	],
+	"name":"Single Round Match 590 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15702"
+}

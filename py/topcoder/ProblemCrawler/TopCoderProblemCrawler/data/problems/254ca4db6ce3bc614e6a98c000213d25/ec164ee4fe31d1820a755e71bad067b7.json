@@ -1,0 +1,122 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10451&rd=14174",
+	"statement":"<p> Mike Mazemeister has recently built a large <b>maze</b> in his backyard. The j-th character of the i-th element of <b>maze</b> is 'X' if the square is an impassable bush; otherwise, it is a '.'. Mike wants his friend, Jumping Jim, to solve the maze. Jim will start in row <b>startRow</b> in column <b>startCol</b>. </p><p> Unlike typical maze solvers, Jim has the ability to jump through the maze, rather than simply walking. Jim's possible moves are described in <b>moveRow</b> and <b>moveCol</b>. The i-th element corresponds to a move Jim can make in which his current row is changed by <b>moveRow</b>[i], and his current column is changed by <b>moveCol</b>[i]. For example, if <b>moveRow</b> = {1, 0, -1} and <b>moveCol</b> = {3, -2, 5}, Jim's legal moves are (1,3), (0, -2), and (-1, 5). However, Jim cannot move outside the boundary of the maze, and he cannot land on an impassable bush. </p><p> Mike wants to make the maze impossible for Jim to exit, and can place the exit in any cell containing a '.' in the maze. If this turns out to be impossible, then Mike wants to make Jim's trip take as long as possible. Jim is smart, and he will always exit the maze in the minimum number of jumps that he can. Return the maximum number of jumps that Jim will make to exit the maze; if it is impossible for him to exit the maze, return -1 instead. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MazeMaker",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"longestPath",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int longestPath(String[] maze, int startRow, int startCol, int[] moveRow, int[] moveCol)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"...\", \"...\", \"...\"}",
+			"note":"Here Jim can move up, down, left and right. Mike will set the exit in one of the bottom corners, which take Jim 3 steps to reach.",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"...\", \"...\", \"...\"}",
+			"note":"This is the same problem, but now Jim can move diagonally. With this, he can reach any section in at most two steps.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"X.X\", \"...\", \"XXX\", \"X.X\"}",
+			"note":"Here Mike can place the exit in the empty section of the bottom row; Jim can never reach it.",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{\".......\", \"X.X.X..\", \"XXX...X\", \"....X..\", \"X....X.\", \".......\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\".......\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"..X.X.X.X.X.X.\"}",
+			"note":"Since Jim can only jump (and can't move to the side), Mike can place the exit anywhere except the start to prevent Jim from winning.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maze will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of maze will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of maze will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character of maze will be either 'X' or '.'."
+		},
+		{
+			"order":5,
+			"val":"maze will contain at least 2 '.' characters."
+		},
+		{
+			"order":6,
+			"val":"startRow will be between 0 and N-1, inclusive, where N is the number of elements in maze."
+		},
+		{
+			"order":7,
+			"val":"startCol will be between 0 and M-1, inclusive, where M is the number of characters in each element of maze."
+		},
+		{
+			"order":8,
+			"val":"maze[startRow][startCol] will be '.'."
+		},
+		{
+			"order":9,
+			"val":"moveRow will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":10,
+			"val":"moveCol will contain the same number of elements as moveRow."
+		},
+		{
+			"order":11,
+			"val":"Each element of moveRow and moveCol will be between -50 and 50, inclusive."
+		}
+	]
+}

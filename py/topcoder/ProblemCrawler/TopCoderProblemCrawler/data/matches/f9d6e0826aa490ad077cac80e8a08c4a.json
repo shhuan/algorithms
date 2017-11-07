@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":179.01,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12705&rd=15812",
+			"name":"TheFourSquares",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":213.79,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12829&rd=15812",
+			"name":"ModuloCounters",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":382.31,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12818&rd=15812",
+			"name":"SemiMultiple",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2013 TCO Algorithm > Wildcard Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15812"
+}

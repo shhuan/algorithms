@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11577&rd=14546",
+	"statement":"<p> Given a real number n, a set of points P in the XY plane is called <i>n-squared</i> if it is not empty and there exists a square of side n in the XY plane with its sides parallel to the axes such that a point from the given set of points is in P if and only if it is contained within the square. A point lying on a side or a vertex of the square is considered to be contained in it. </p><p> You will be given two ints <b>nlow</b> and <b>nhigh</b>. You will also be given two int[]s <b>x</b> and <b>y</b> such that the coordinates of point i are (<b>x</b>[i],<b>y</b>[i]). Return the number of subsets of the input set described by <b>x</b> and <b>y</b> that are n-squared for some n between <b>nlow</b> and <b>nhigh</b>, inclusive. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RangeSquaredSubsets",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countSubsets",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countSubsets(int nlow, int nhigh, int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"The following subsets are 5-squared: {(-5,0)}, {(0,0)}, {(5,0)}, {(-5,0),(0,0)}, {(0,0),(5,0)}.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"The following subsets are 10-squared: {(-5,0)}, {(5,0)}, {(0,0),(5,0)}, {(-5,0),(0,0)}, {(-5,0),(0,0),(5,0)}.",
+			"order":2
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"1",
+			"note":"{(-5,0),(5,0)} is not x-squared for any x. From the previous 2 examples you can infer that all other non-empty subsets are 5-squared or 10-squared.",
+			"order":3
+		},
+		{
+			"expect":"100000000",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"108",
+			"id":0,
+			"input":"64",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"nlow will be between 1 and 100000000 (10^8), inclusive."
+		},
+		{
+			"order":2,
+			"val":"nhigh will be between nlow and 100000000 (10^8), inclusive."
+		},
+		{
+			"order":3,
+			"val":"x and y will contain between 1 and 40 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":5,
+			"val":"Each element of x and y will be between -100000000 (-10^8) and 100000000 (10^8), inclusive."
+		},
+		{
+			"order":6,
+			"val":"All described points will be different."
+		}
+	]
+}

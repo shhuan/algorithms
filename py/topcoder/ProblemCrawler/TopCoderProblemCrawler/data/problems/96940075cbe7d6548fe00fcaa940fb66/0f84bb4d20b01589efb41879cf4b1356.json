@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11934&rd=14734",
+	"statement":"<p>There are exactly <b>X</b>*<b>Y</b> places in the Planar Kingdom: For each pair of integers (x, y) such that 0 &lt;= x &lt; <b>X</b> and 0 &lt;= y &lt; <b>Y</b> there is a place with coordinates (x, y). When a citizen of the kingdom wants to move from (x1, y1) to (x2, y2), the required time is |x1 - x2| + |y1 - y2| (where |t| denotes the absolute value of t).</p> <p></p> <p>In order to improve stability in the kingdom, the police wants to introduce a specific <i>patrol route</i>. The route will contain exactly three places A, B, and C. A policeman will visit these three places and verify that everything is as it should be. The three places that determine a valid route must satisfy the following criteria:: </p>\n <ul> \n  <li>x-coordinates of A, B and C are pairwise distinct.</li> \n  <li>y-coordinates of A, B and C are pairwise distinct.</li> \n  <li>Let T be the total time required to follow along the route: first from A to B, then from B to C and finally from C back to A. T must be between <b>minT</b> and <b>maxT</b>, inclusive.</li> \n </ul><p></p> <p></p> You are given the ints <b>X</b>, <b>Y</b>, <b>minT</b>, and <b>maxT</b>. Return the number of different patrol routes that satisfy these criteria, modulo 1,000,000,007. Two routes are considered to be different if there is a place that belongs to one of them, but does not belong to the other one.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PatrolRoute",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countRoutes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countRoutes(int X, int Y, int minT, int maxT)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"The time requirement is very flexible in this case. There are 6 patrol routes where both x and y coordinates of places are pairwise distinct.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"The time of 7 is too small for any patrol route.",
+			"order":2
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"4000",
+			"id":0,
+			"input":"4000",
+			"note":"Don't forget about the modulo!",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"X and Y will each be between 3 and 4,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"minT will be between 1 and 20,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"maxT will be between minT and 20,000, inclusive."
+		}
+	]
+}

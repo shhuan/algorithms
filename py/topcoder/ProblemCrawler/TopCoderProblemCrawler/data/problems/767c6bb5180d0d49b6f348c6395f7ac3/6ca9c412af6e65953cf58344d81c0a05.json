@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11212&rd=14242",
+	"statement":"Cat Taro likes dice. He has a die which is a 1 x 1 x 1 cube where each face contains a number between 1 and 6. Each number appears on exactly one face, and the sum of the numbers on opposite faces is always 7. <br /><br /> <br /><br /> There is an infinitely large board which is divided into 1 x 1 cells. The board has a coordinate system in which the x-coordinate (the first coordinate) increases from left to right, while the y-coordinate (the second coordinate) increases from bottom to top. Taro initially places the die on the cell with coordinates (0, 0). The die shows '1' on the top face, '2' on the front face, and '3' on the left face (so the bottom face shows '6', the back face shows '5', and the right face shows '4'). <br /><br /> <br /><br /> Taro wants to move this die to cell (<b>goalx</b>, <b>goaly</b>) by performing a sequence of rotations. There are two ways to rotate the die: \n <ul> \n  <li>Rotate toward the right. This operation moves the die from cell (x, y) to cell (x+1, y).</li> \n  <li>Rotate toward the top. This operation moves the die from cell (x, y) to cell (x, y+1).</li> \n </ul> For example, if Taro's first rotation is toward the right, then the die will move to cell (1, 0) and the top face will show '3'. <br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/DiceRotation/DiceRotation2.gif\" /> <br /><br /> <br /><br /> Return the number of sequences of rotations which move the die to cell (<b>goalx</b>, <b>goaly</b>), such that the following conditions are satisfied: \n <ul> \n  <li>The die must show '1' again on the top face when it reaches (<b>goalx</b>, <b>goaly</b>).</li> \n  <li>The die must not show '1' on the top face before it reaches (<b>goalx</b>, <b>goaly</b>).</li> \n </ul> ",
+	"notes":[{
+		"order":1,
+		"val":"The answer will always fit in a signed 32-bit integer."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DiceRotation",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int theCount(int goalx, int goaly)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"There are two ways to move the die to cell (2,2) that satisfy the conditions: ",
+			"order":1
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"58",
+			"id":0,
+			"input":"47",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"489",
+			"id":0,
+			"input":"489",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1000000000",
+			"id":0,
+			"input":"1000000000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"goalx will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"goaly will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

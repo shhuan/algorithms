@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.83,
+			"constraints":[],
+			"correctRatio":90.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10804&rd=14185",
+			"name":"RouteIntersection",
+			"notes":[],
+			"submission":441
+		},
+		{
+			"avgPts":326.1,
+			"constraints":[],
+			"correctRatio":74.54,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10805&rd=14185",
+			"name":"TreesCount",
+			"notes":[],
+			"submission":271
+		},
+		{
+			"avgPts":467.27,
+			"constraints":[],
+			"correctRatio":51.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10800&rd=14185",
+			"name":"GameWithGraphAndTree",
+			"notes":[],
+			"submission":33
+		}
+	],
+	"name":"Member Single Round Match 474 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14185"
+}

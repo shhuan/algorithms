@@ -1,0 +1,70 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4507&rd=7219",
+	"statement":"Given a group of dancers' heights, arrange a circle formation that minimizes the maximum height difference between each pair of neighboring dancers. Write a class CircleDance with a method arrangeDancers that takes a int[], <b>heights</b>, and returns the maximum height difference between neighboring dancers.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CircleDance",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"arrangeDancers",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int arrangeDancers(int[] heights)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{180,183,178,185}",
+			"note":"The dancers may be arranged in a circle like this:  Their height differences are shown below:  The maximum difference is 5. Other arrangements may not lead to an optimal solution. For example, the following one has a maximum difference of 7: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 20",
+			"id":0,
+			"input":"{170,180,190}",
+			"note":"Any arrangement is equivalent to the following one:  So the result is 20. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{180,180,180,180,180}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"{184,165,175,186,192,200,176,192,194,168,205,201}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"heights will contain between 3 and 20 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of heights will be between 150 and 210 inclusive."
+		}
+	]
+}

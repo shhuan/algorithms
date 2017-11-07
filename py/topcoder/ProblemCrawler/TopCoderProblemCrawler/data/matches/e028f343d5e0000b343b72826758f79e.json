@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.75,
+			"constraints":[],
+			"correctRatio":64.98,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11564&rd=14553",
+			"name":"Cut",
+			"notes":[],
+			"submission":711
+		},
+		{
+			"avgPts":271.25,
+			"constraints":[],
+			"correctRatio":62.97,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11634&rd=14553",
+			"name":"SPartition",
+			"notes":[],
+			"submission":316
+		},
+		{
+			"avgPts":613.45,
+			"constraints":[],
+			"correctRatio":26.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11595&rd=14553",
+			"name":"ColorfulCookie",
+			"notes":[],
+			"submission":90
+		}
+	],
+	"name":"Single Round Match 528 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14553"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":214.36,
+			"constraints":[],
+			"correctRatio":82.92,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5886&rd=8069",
+			"name":"FewestFactors",
+			"notes":[],
+			"submission":363
+		},
+		{
+			"avgPts":265.95,
+			"constraints":[],
+			"correctRatio":51.88,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4835&rd=8069",
+			"name":"RoundTable",
+			"notes":[],
+			"submission":160
+		},
+		{
+			"avgPts":573.66,
+			"constraints":[],
+			"correctRatio":47.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5883&rd=8069",
+			"name":"ManhattanDistance",
+			"notes":[],
+			"submission":40
+		}
+	],
+	"name":"Single Round Match 272 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8069"
+}

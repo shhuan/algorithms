@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":180.72,
+			"constraints":[],
+			"correctRatio":61.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13688&rd=16317",
+			"name":"CountryGroupHard",
+			"notes":[],
+			"submission":354
+		},
+		{
+			"avgPts":294.4,
+			"constraints":[],
+			"correctRatio":61.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13680&rd=16317",
+			"name":"Singing",
+			"notes":[],
+			"submission":166
+		},
+		{
+			"avgPts":498.6,
+			"constraints":[],
+			"correctRatio":86.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13683&rd=16317",
+			"name":"RockPaperScissorsMagic",
+			"notes":[],
+			"submission":22
+		}
+	],
+	"name":"Single Round Match 653 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16317"
+}

@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11015&rd=14282",
+	"statement":"Given a positive integer N, let P(N) denote the product of all digits in the decimal representation of N. For example, P(4256) = 4 * 2 * 5 * 6 = 240, P(2112) = 2 * 1 * 1 * 2 = 4 and P(100) = 1 * 0 * 0 = 0. <br /><br /><br /><br /> Consider the infinite sequence S = (P(1), P(2), P(3), ...). Given a int[] <b>prod</b> containing exactly M elements, find the first occurrence of (<b>prod</b>[0], <b>prod</b>[1], ..., <b>prod</b>[M-1]) in S as a consecutive subsequence. In other words, return the smallest positive index X such that P(X + i) = <b>prod</b>[i] for all i between 0 and M-1, inclusive. The constraints will guarantee that at least one such X exists.",
+	"notes":[{
+		"order":1,
+		"val":"It can be shown that under the constraints of this problem, the return value will always fit within a 64-bit signed integer datatype."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ProductsOfDigits",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"firstOccurrence",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long firstOccurrence(int[] prod)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{1, 2, 3, 4, 5}",
+			"note":"Since P(1) = 1, P(2) = 2, ..., P(5) = 5, we have that S starts with an occurrence of (1, 2, 3, 4, 5).",
+			"order":1
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{9, 0, 1}",
+			"note":"P(9) = 9, P(10) = 0, P(11) = 1.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 100",
+			"id":0,
+			"input":"{0, 0, 0, 0}",
+			"note":"All numbers between 100 and 103, inclusive, have a 0 in their decimal representations.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 489",
+			"id":0,
+			"input":"{288}",
+			"note":"4 * 8 * 9 = 288.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 789946",
+			"id":0,
+			"input":"{108864, 127008, 145152, 163296, 0, 22680, 45360, 68040, 90720}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{1}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"{0, 1, 2, 3, 4, 5}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"prod will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of prod will be between 0 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"There will be at least one occurrence of (prod[0], ..., prod[M-1]) in S as a consecutive subsequence, where M is the number of elements in prod."
+		}
+	]
+}

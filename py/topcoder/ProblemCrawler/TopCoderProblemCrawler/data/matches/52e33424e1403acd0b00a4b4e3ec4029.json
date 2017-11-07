@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":231.13,
+			"constraints":[],
+			"correctRatio":84.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=259&rd=3998",
+			"name":"LetterPairs",
+			"notes":[],
+			"submission":33
+		},
+		{
+			"avgPts":294.04,
+			"constraints":[],
+			"correctRatio":84.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=260&rd=3998",
+			"name":"DandyLand",
+			"notes":[],
+			"submission":33
+		},
+		{
+			"avgPts":613.6,
+			"constraints":[],
+			"correctRatio":62.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=261&rd=3998",
+			"name":"Permutations",
+			"notes":[],
+			"submission":24
+		}
+	],
+	"name":"Single Round Match 48 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3998"
+}

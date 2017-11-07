@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":226.01,
+			"constraints":[],
+			"correctRatio":97.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4639&rd=10094",
+			"name":"ProseFlip",
+			"notes":[],
+			"submission":678
+		},
+		{
+			"avgPts":280.5,
+			"constraints":[],
+			"correctRatio":46.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6045&rd=10094",
+			"name":"CheapestTabComplete",
+			"notes":[],
+			"submission":316
+		},
+		{
+			"avgPts":540.76,
+			"constraints":[],
+			"correctRatio":34.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2321&rd=10094",
+			"name":"QuickTableau",
+			"notes":[],
+			"submission":94
+		}
+	],
+	"name":"TCCC06 > Qualification Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10094"
+}

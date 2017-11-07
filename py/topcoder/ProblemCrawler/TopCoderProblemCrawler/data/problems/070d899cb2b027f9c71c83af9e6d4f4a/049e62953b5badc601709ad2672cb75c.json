@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3498&rd=6515",
+	"statement":"<p>You are in a big flat city, and wish to travel to a road. The road is an infinite straight line that may have any orientation, but you are restricted to only moving in the four cardinal directions. If the city is represented by the xy-plane, your starting location is the point (<b>x0</b>, <b>y0</b>) and the road is the line <b>a</b>*<i>x</i> + <b>b</b>*<i>y</i> = 1. You can change directions at any point and travel as far as you want in each direction, but you can only travel parallel to the x or y-axis. Write a class ManhattanMovement with a method getDistance that takes four ints <b>a</b>, <b>b</b>, <b>x0</b>, and <b>y0</b> and returns the shortest distance you must travel in order to reach the road.</p>",
+	"notes":[{
+		"order":1,
+		"val":"A return value with either an absolute or relative error of less than 1e-9 is considered correct."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ManhattanMovement",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getDistance",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getDistance(int a, int b, int x0, int y0)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"37",
+			"id":0,
+			"input":"37",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"-100",
+			"order":3
+		},
+		{
+			"expect":"-2147483648",
+			"id":0,
+			"input":"0",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a, b, x0, and y0 will all be between -2147483648 and 2147483647, inclusive."
+		},
+		{
+			"order":2,
+			"val":"a and b will not both equal zero."
+		}
+	]
+}

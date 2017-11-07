@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11940&rd=15094",
+	"statement":"<p><i>Warning: This problem statement contains superscripts and/or subscripts. It may not display properly outside of the applet.</i></p> <br /><br /> <p> Tomek and Wojtek are testing their new revolutionary BitX network transmission technology. It is based on a system of incredibly precise clocks. The transmission protocol uses a single cable and just two different voltages, called high and low. During the transmission of a sequence of bits the signal is high while '1' bits are being transmitted and low while '0' bits are being transmitted. Therefore, during the transmission of a sequence of bits b<sub>0</sub>, b<sub>1</sub>, ..., b<sub>m - 1</sub> the number of signal changes is equal to the number of indices i between 0 and m - 2, inclusive, such that b<sub>i</sub> is different from b<sub>i + 1</sub>. </p> <p> Tomek is going to transmit <b>n</b> elements of the arithmetic sequence <b>a</b> * x + <b>b</b> to Wojtek using BitX. He will transmit the binary representations of numbers <b>a</b> * 1 + <b>b</b>, <b>a</b> * 2 + <b>b</b>, ..., <b>a</b> * n + <b>b</b> sequentially, without any breaks or delimiters between consecutive numbers. For example, if <b>a</b> = 3, <b>b</b> = 5, <b>n</b> = 4, the sequence of bits he will transmit will be 10001011111010001. The number of signal changes will therefore be equal to 8. </p> <p> You are given longs <b>a</b>, <b>b</b> and <b>n</b>. Return the total number of signal changes during Tomek's transmission. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SequenceTransmission",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"signalChanges",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long signalChanges(long a, long b, long n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"3",
+			"note":"This example is from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"576460752303423487",
+			"id":0,
+			"input":"1",
+			"note":" consists of only 1s in binary representation.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"The sequence transmitted is (2, 3, 4, 5, 6, 7, 8, 9, 10, 11).",
+			"order":3
+		},
+		{
+			"expect":"1000000000000000000",
+			"id":0,
+			"input":"40000",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a will be between 1 and 40,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"b will be between 1 and 1018, inclusive."
+		},
+		{
+			"order":3,
+			"val":"n will be between 1 and 1012, inclusive."
+		}
+	]
+}

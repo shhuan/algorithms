@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4563&rd=8032",
+	"statement":"<p> You are choosing the name for your company. You have several proposals, and you want to choose the easiest to remember. Thus you calculate a special <i>remembering value</i> for each word, and choose the word with the smallest <i>remembering value</i>. </p> <p> You can calculate the <i>remembering value</i> of the word in two steps. First, you should find all maximal groups of consecutive vowels (if the word is &quot;DoUble&quot;, &quot;oU&quot; and &quot;e&quot; are the two groups). Each such group adds 1 point to the <i>remembering value</i>. Second, you should find all maximal groups of consecutive consonants. Each such group adds (2*(Length of the group) - 1) points to the <i>remembering value</i>. </p> <p> Given a list of all proposals, return the one with the smallest <i>remembering value</i>. In case of a tie, return the proposal which comes first in the input. </p>",
+	"notes":[{
+		"order":1,
+		"val":"For the purposes of this problem, we are always considering 'Y' to be a consonant. The vowels are only 'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U' and 'u'."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CompanyName",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"shortestProposal",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String shortestProposal(String[] proposals)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"Top\"",
+			"id":0,
+			"input":"{\"Top\", \"Coder\", \"SRM\"}",
+			"note":"The  of \"Top\" is 3, for \"Coder\" and \"SRM\" it is 5.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"TCO\"",
+			"id":0,
+			"input":"{\"SRM\", \"TCO\", \"TCCC\"}",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"java\"",
+			"id":0,
+			"input":"{\"java\", \"CPP\", \"CSharp\", \"VBasic\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"aaa\"",
+			"id":0,
+			"input":"{\"aaa\", \"AAa\", \"aaA\", \"AAA\", \"AaA\", \"Aaa\"}",
+			"note":"The  of all proposals is 1. You should return the first one.",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"jIIOwgKw\"",
+			"id":0,
+			"input":"{\"bIwuZFsHVQUWIABhgXYiyBmUgwSFvUfJKcGrKUb\", \"CbjspPBtuDwlyxNMaJBIEzVDPipR\", \"wGiqORBPEaKOYVwtiCmKHLkBS\", \"aBpRqKPBtxYNuGMhtXmgWxT\", \"sALonbrAMgOESizcTNhgBeAT\", \"PpnecUCIPdyyeOvZwVHygGgjthT\", \"jsiAzTEiBiXqgeSGd\", \"fxUtmmfbpQoYMPenNaTtKKoCYaIhwHBJePAFtvhVPDQHiLjDcr\", \"jIIOwgKw\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"proposals will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of proposals will contain between 3 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of proposals will contain only letters ('a'-'z' and 'A'-'Z')."
+		}
+	]
+}

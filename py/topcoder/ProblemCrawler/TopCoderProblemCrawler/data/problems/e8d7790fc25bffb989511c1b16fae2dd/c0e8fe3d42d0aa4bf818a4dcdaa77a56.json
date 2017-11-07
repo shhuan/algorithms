@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6254&rd=10766",
+	"statement":"The hotel industry is difficult to thrive in, especially when competing at a resort city like Las Vegas. Marketing is essential and often gets a large part of total revenues. You have a list of cities you can market at, and a good estimate of how many customers you will get for a certain amount of money spent at each city. <br /><br /> <br /><br /> You are given int[]s <b>customers</b> and <b>cost</b>. <b>cost[i]</b> is the amount of money required to get <b>customers[i]</b> customers from the i-th city. You are only allowed to spend integer multiples of the cost for any city. For example, if it costs 9 to get 3 customers from a certain city, you can spend 9 to get 3 customer, 18 to get 6 customers, 27 to get 9 customers, but not 3 to get 1 customer, or 12 to get 4 customers. Each city has an unlimited number of potential customers. Return the minimum amount of money required to get at least <b>minCustomers</b> customers.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Hotel",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"marketCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int marketCost(int minCustomers, int[] customers, int[] cost)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2,3}",
+			"id":0,
+			"input":"10",
+			"note":"Just get 12 customers from the third city.",
+			"order":1
+		},
+		{
+			"expect":"{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}",
+			"id":0,
+			"input":"10",
+			"note":"It does not matter from which city you get your customers.",
+			"order":2
+		},
+		{
+			"expect":"{5, 1}",
+			"id":0,
+			"input":"12",
+			"note":"Get 10 customers from the first city, and 2 from the second city.",
+			"order":3
+		},
+		{
+			"expect":"{9, 11, 4, 7, 2, 8}",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"minCustomers will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"customers will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"cost will have the same number of elements as customers."
+		},
+		{
+			"order":4,
+			"val":"Each element of cost and customers will be between 1 and 100, inclusive."
+		}
+	]
+}

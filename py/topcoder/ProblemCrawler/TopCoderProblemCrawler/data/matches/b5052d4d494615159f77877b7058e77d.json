@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":183.72,
+			"constraints":[],
+			"correctRatio":49.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5984&rd=8078",
+			"name":"IntegerGenerator",
+			"notes":[],
+			"submission":333
+		},
+		{
+			"avgPts":305.65,
+			"constraints":[],
+			"correctRatio":40.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5919&rd=8078",
+			"name":"BallBouncing",
+			"notes":[],
+			"submission":87
+		},
+		{
+			"avgPts":610.28,
+			"constraints":[],
+			"correctRatio":33.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5949&rd=8078",
+			"name":"Equidistance",
+			"notes":[],
+			"submission":68
+		}
+	],
+	"name":"Single Round Match 281 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8078"
+}

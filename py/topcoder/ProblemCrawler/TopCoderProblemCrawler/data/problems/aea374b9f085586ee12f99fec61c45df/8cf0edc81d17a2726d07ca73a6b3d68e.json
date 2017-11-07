@@ -1,0 +1,108 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10459&rd=13749",
+	"statement":"Onise likes to play with paper and paint. He has a piece of paper with dimensions <b>width</b> x <b>height</b>. He performs K operations, one for each i between 0 and K-1, inclusive. Each operation consists of the following steps: \n <ol> \n  <li>Fold the paper along the line x = <b>xfold</b>[i] (the left side of the paper is folded over the right side).</li> \n  <li>Divide the paper vertically into <b>cnt</b>[i]+1 equal sections. Then, <b>cnt</b>[i] times, take the topmost section and fold it over the section below it.</li> \n  <li>Paint a rectangle with the lower-left corner at (<b>x1</b>[i], <b>y1</b>[i]) and the upper-right corner at (<b>x2</b>[i], <b>y2</b>[i]). Note that (0, 0) is now the lower-left corner of the paper in its current folded state, not its original state. The paint will seep through all the layers of the folded paper. See the image below for clarification.</li> \n  <li>Unfold the paper.</li> \n </ol> For example, let's say Onise has a piece of paper that is 5 x 6. He performs one operation where <b>xfold</b> is 2, <b>cnt</b> is 2, and the coordinates of the painted rectangle's corners are (1, 1) and (3, 2). The following will happen (note that the paper starts out blue in the images and gets painted white): \n <center>\n  <img src=\"http://www.topcoder.com/contest/problem/PaperAndPaint/1.png\" />&nbsp; \n  <img src=\"http://www.topcoder.com/contest/problem/PaperAndPaint/2.png\" />&nbsp; \n  <img src=\"http://www.topcoder.com/contest/problem/PaperAndPaint/3.png\" />&nbsp; \n  <img src=\"http://www.topcoder.com/contest/problem/PaperAndPaint/4.png\" />&nbsp; \n  <img src=\"http://www.topcoder.com/contest/problem/PaperAndPaint/5.png\" />&nbsp; \n  <img src=\"http://www.topcoder.com/contest/problem/PaperAndPaint/6.png\" />\n </center><br /><br /><br /><br /> You are given ints <b>width</b> and <b>height</b>, and int[]s <b>xfold</b>, <b>cnt</b>, <b>x1</b>, <b>y1</b>, <b>x2</b> and <b>y2</b>, each containing exactly K elements. Return the total area of of the paper that is not covered in paint after Onise is done.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PaperAndPaint",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"computeArea",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[], int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long computeArea(int width, int height, int[] xfold, int[] cnt, int[] x1, int[] y1, int[] x2, int[] y2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"5",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"2",
+			"note":"Onise will get the following result: ",
+			"order":2
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"21",
+			"order":4
+		},
+		{
+			"expect":"42",
+			"id":0,
+			"input":"30",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"60",
+			"id":0,
+			"input":"26",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"17",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"width and height will be between 1 and 10^9, inclusive."
+		},
+		{
+			"order":2,
+			"val":"xfold, cnt, x1, y1, x2 and y2 will all contain the same number of elements, between 1 and 50, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Every element of xfold will be between 0 and width, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Every element of cnt will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"For every i, cnt[i]+1 will be a divisor of height."
+		},
+		{
+			"order":6,
+			"val":"For every i, 0 &lt;= x1[i] &lt; x2[i] &lt;= max(xfold[i], width-xfold[i]) and 0 &lt;= y1[i] &lt; y2[i] &lt;= height/(cnt[i]+1)."
+		}
+	]
+}

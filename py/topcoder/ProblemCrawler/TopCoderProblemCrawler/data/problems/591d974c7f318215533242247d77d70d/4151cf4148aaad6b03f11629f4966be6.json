@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7738&rd=10922",
+	"statement":"<p> You are given a String[] <b>text</b>. Concatenate all the elements to make one string. A pair of non-empty two <i>non-overlapping</i> substrings of equal length (A, B) is called <b>k</b>-similar if there are no more than <b>k</b> positions where A and B have different characters. Return the number of distinct strings that belong to at least one such pair. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SimilarPairs",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howManyElements",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howManyElements(String[] text, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"abacd\"}",
+			"note":"The following strings each belong to at least one similar pair: \"a\", \"b\", \"c\", \"d\", \"ab\", \"ac\".",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"aaaa\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"abcdefgh\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"a\", \"ab\", \"abc\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"abacd\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"text will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of text will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of text will contain only lowercase letters ('a'..'z')."
+		},
+		{
+			"order":4,
+			"val":"k will be between 0 and 2500, inclusive."
+		}
+	]
+}

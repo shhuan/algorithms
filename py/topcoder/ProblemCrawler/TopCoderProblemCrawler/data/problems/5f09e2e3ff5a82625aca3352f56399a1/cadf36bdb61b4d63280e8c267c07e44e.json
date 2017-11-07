@@ -1,0 +1,128 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12692&rd=15698",
+	"statement":"There were N ancient nations. We will denote them using uppercase letters from 'A' to 'A'+N-1. <br /><br /><br /><br /> All nations were using the same calendar: the new year always started on the same day in each nation. However, each nation used its own numbering of years. For example, the years 47, 48, and 49 of nation A could correspond to years 123, 124, and 125 of nation B. <br /><br /><br /><br /> Each nation had several monarchs over its history. For each nation, the monarchs are numbered starting from 0, in chronological order. For example, &quot;C0&quot; denotes the earliest ruling monarch of the nation 'C'. Each monarch started his rule on the first day of some year. For each monarch we know the exact years when they ruled, according to the corresponding nation's calendar. <br /><br /><br /><br /> Manao wants to determine how the calendars of those nations correspond to each other. To do this, he collected information about various battles that have occurred throughout the history. For each battle we know the two monarchs that were involved. For example, &quot;C0-D3&quot; denotes a battle between the monarchs &quot;C0&quot; and &quot;D3&quot;. The information that this battle has occurred tells us that &quot;C0&quot; and &quot;D3&quot; had to rule in the same year. <br /><br /><br /><br /> Manao now has to answer a bunch of questions. Each question is of the following form: &quot;Given all the known information, is it possible that there was a battle between monarchs Xn and Ym?&quot; <br /><br /><br /><br /> You are given the above information encoded as three String[]s: <b>dynasties</b>, <b>battles</b>, and <b>queries</b>. <br /><br /><br /><br /> For each i, element i of <b>dynasties</b> contains information about all monarchs of the nation 'A'+i: the year when each of them started ruling, and finally the first year after the last monarch died. More precisely, <b>dynasties</b>[i] is a space-separated list of increasing integers: the years described above. For example, if <b>dynasties</b>[0]=&quot;42 47 55 63&quot;, nation 'A' had three monarchs: &quot;A0&quot; ruled in years 42-46, &quot;A1&quot; ruled in years 47-54, and &quot;A2&quot; ruled in years 55-62. <br /><br /><br /><br /> Concatenate the elements of <b>battles</b> to obtain a single String. The string will represent a space-separated list of battles that are known to have occurred. Each battle will be given in the above format. <br /><br /><br /><br /> Each element of <b>queries</b> is a single battle given in the same format. <br /><br /><br /><br /> Return a String of the same length as the number of elements in <b>queries</b>. For each i, character i of this String should be 'Y' if the battle in <b>queries</b>[i] is possible, and 'N' otherwise.",
+	"notes":[
+		{
+			"order":1,
+			"val":"The Constraints guarantee that there will be at most 10 monarchs in each dynasty. Thus, the number of each monarch will be a single digit."
+		},
+		{
+			"order":2,
+			"val":"Each query should be processed separately. In other words, if you answer 'Y' to some query, this should  be considered as new information for the remaining queries."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"History",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"verifyClaims",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String verifyClaims(String[] dynasties, String[] battles, String[] queries)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"A1-B0\"}",
+			"id":0,
+			"input":"{\"1 2 4\", \"1 2 3\"}",
+			"note":"There are two nations. Both had two monarchs. Nation A's monarch 0 ruled in year 1 according to this nation's year numbering. Nation A's monarch 1 ruled in years 2 and 3. Nation B's monarch 0 ruled in year 1 and its monarch 1 ruled in year 2, according to nation B's year numbering.  Manao knows for sure that a battle between nation A's monarch 1 and nation B's monarch 0 occured. He is interested whether the following battles could take place:  ",
+			"order":1
+		},
+		{
+			"expect":"{\"B1-C0 A0-B0 A2-C1 B1-C1\"}",
+			"id":0,
+			"input":"{\"1000 2000 3000 10000\", \"600 650 2000\", \"1 1001 20001\"}",
+			"note":"Some monarchs can rule for thousands of years.",
+			"order":2
+		},
+		{
+			"expect":"{\"A0-B0 A0-B0 B0-A0\"}",
+			"id":0,
+			"input":"{\"1 4 5\", \"10 13 17\"}",
+			"note":"Note that a battle between the same monarchs can occur multiple times. Also note that they all may occur during the same year.",
+			"order":3
+		},
+		{
+			"expect":"{\"A0\", \"-B0 A\", \"1-B1\"}",
+			"id":0,
+			"input":"{\"1 5 6\", \"1 2 5\"}",
+			"note":"Note that you need to concatenate the elements of  before parsing the tokens.",
+			"order":4
+		},
+		{
+			"expect":"{\"A0-B4 B4-E2 B3-E2 D2-E4 A0-E4 B1-C3 A0-E3 A0-E6 D0\",\"-E2 B2-E1 B4-E3 B4-D0 D0-E3 A0-D1 B2-C3 B1-C3 B4-E\",\"3 D0-E1 B3-D0 B3-E2\"} ",
+			"id":0,
+			"input":"{\"2294 7344\",\"366 384 449 965 1307 1415\",\"307 473 648 688 1097\",\"1145 1411 1569 2606\",\"87 188 551 598 947 998 1917 1942\"} ",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"dynasties will contain between 2 and 26 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of dynasties will be between 3 and 50 characters long, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of dynasties will be a space-separated list containing between 2 and 11 integers, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each integer in dynasties will be between 1 and 99999, inclusive."
+		},
+		{
+			"order":5,
+			"val":"The sequence of integers in each element of dynasties will be strictly increasing."
+		},
+		{
+			"order":6,
+			"val":"battles will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of battles will be between 1 and 50 characters long, inclusive."
+		},
+		{
+			"order":8,
+			"val":"The String B obtained by concatenating the elements of battles will be a space-separated list of tokens."
+		},
+		{
+			"order":9,
+			"val":"Each token in the string B will be of the form &quot;Xn-Ym&quot;, where X and Y are two distinct uppercase letters that represent valid nations, and n and m are digits that represent valid monarchs of those nations."
+		},
+		{
+			"order":10,
+			"val":"The information given in dynasties and battles will not be contradictory."
+		},
+		{
+			"order":11,
+			"val":"queries will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":12,
+			"val":"Each element of queries will be of the form &quot;Xn-Ym&quot;, where X and Y are two distinct uppercase letters that represent valid nations, and n and m are digits that represent valid monarchs of those nations."
+		}
+	]
+}

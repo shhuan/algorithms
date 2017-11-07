@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12785&rd=15709",
+	"statement":"<p>Little Petya likes convex polygons a lot. Recently he has received a convex polygon as a gift from his mother. The only thing that Petya likes more than convex polygons is playing with little Masha. Petya invented the following game for two players that involves his polygon.</p><br /><br /> <p>At the beginning of the game there is a convex polygon drawn on the plane. The coordinates of vertices of this polygon are given in int[] <b>X</b> and int[] <b>Y</b>. Petya and Masha take alternate turns, Masha plays first. On his or her turn the player draws a new convex polygon that has the following properties:</p> \n <ul> \n  <li> All vertices of the new polygon have integer coordinates. </li> \n  <li> Each new vertex is located either strictly inside the old polygon or on an edge of the old polygon. </li> \n  <li> No vertex of the new polygon coincides with any vertex of the old polygon. </li> \n  <li> No three vertices of the new polygon lie on the same line. </li> \n  <li> The new polygon has non-zero area. </li> \n </ul> <p>Note that the new polygon and the old polygon are not required to have the same number of vertices. </p> <p>After drawing a new polygon the player erases the old one. A player who can't make a move loses the game. Determine who will be the winner if both kids play optimally. If the winner is Masha, return the String &quot;Masha&quot; (without quotes), otherwise return &quot;Petya&quot;.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ConvexPolygonGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winner",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String winner(int[] X, int[] Y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 0, 1}",
+			"id":0,
+			"input":"{0, 1, 0}",
+			"note":"Masha has no valid moves, so she loses the game immediately.",
+			"order":1
+		},
+		{
+			"expect":"{0, 0, 2}",
+			"id":0,
+			"input":"{0, 4, 2}",
+			"note":"One of the possible Masha's moves is to select the triangle (1, 0), (3, 1), (1, 1). Regardless of her first move Petya will never be able to make the next move.",
+			"order":2
+		},
+		{
+			"expect":"{0, 0, 100, 100}",
+			"id":0,
+			"input":"{0, 100, 100, 0}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{0, -1, 0, 1}",
+			"id":0,
+			"input":"{0, 50, 100, 50}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{-1, -1, 1, 1}",
+			"id":0,
+			"input":"{-100000, 100000, 100000, -100000}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"X will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Y will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"X and Y will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of X will be between -100 000 and 100 000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of Y will be between -100 000 and 100 000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The polygon represented by X and Y will be convex, will have non-zero area and won't contain any 3 vertices that are located on the same line."
+		},
+		{
+			"order":7,
+			"val":"Vertices of the polygon will be listed in counter-clockwise order."
+		}
+	]
+}

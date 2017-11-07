@@ -1,0 +1,69 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7846&rd=10897",
+	"statement":"We install marble countertops. The marble comes in a standard width but varying lengths. It is very difficult to cut the marble -- we have a special machine that cuts a length of marble into two pieces, one of which must be exactly <b>k</b> feet long. A piece that is no bigger than <b>k</b> cannot be cut. <pre></pre><p> int[] <b>stock</b> contains the lengths of marble that we have on hand, and int[] <b>orders</b> contains the lengths that our customers have ordered. Given <b>k</b>, <b>stock</b>, and <b>orders</b>, return the minimum number of cuts needed to satisfy all our customers. If it is not possible, return -1. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MarbleTop",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCuts",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCuts(int k, int[] stock, int[] orders)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{5,3,11}",
+			"id":0,
+			"input":"5",
+			"note":" There is no way to deliver a piece of length 10. The only sizes we could deliver are 11,6,5,3,1. ",
+			"order":1
+		},
+		{
+			"expect":"{5,3,11}",
+			"id":0,
+			"input":"5",
+			"note":" We can deliver one length of 6 and a length of 5 but not the second 6.",
+			"order":2
+		},
+		{
+			"expect":"{7,6,2,1}",
+			"id":0,
+			"input":"1",
+			"note":" Cut the 6 into a 5 and 1, cut the 5 into a 4 and 1, cut the 4 into a 3 and 1. Now we have 7, 3, 2, and four 1's. Cut the 2 and we have (in addition to the 7) a 3 and 6 1's as needed. ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"k will be between 1 and 40, inclusive."
+		},
+		{
+			"order":2,
+			"val":"stock and orders will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of stock and of orders will be between 1 and 40, inclusive."
+		}
+	]
+}

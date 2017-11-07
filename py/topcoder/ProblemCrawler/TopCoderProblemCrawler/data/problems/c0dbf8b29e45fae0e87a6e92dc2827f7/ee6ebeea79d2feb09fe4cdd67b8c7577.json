@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1047&rd=4324",
+	"statement":"A lexer (lexical analyzer) is used in compilers to break input text into pieces called tokens. In this problem you will be given a list of valid tokens. For example: <br /><br /> tokens = {&quot;ab&quot;,&quot;aba&quot;,&quot;A&quot;} <br /><br /> <br /><br /> Given a list of valid tokens and an input string your lexer will work as follows: <br /><br /> 1) a) If the input doesn't begin with one of the valid tokens, remove the first character from the string. <br /><br /> b) If the input does begin with a valid token, determine the longest valid token the input starts with and remove it from the string. The removed portion is considered CONSUMED. <br /><br /> 2) Repeat 1 until there are no characters left in the input. <br /><br /> <br /><br /> The lexer is CASE-SENSITIVE so a token must exactly match the beginning of the string. <br /><br /> <br /><br /> Given a list of valid tokens and an input string your method will return a list containing the CONSUMED valid tokens in the order they were CONSUMED. For example: <br /><br /> tokens = {&quot;ab&quot;,&quot;aba&quot;,&quot;A&quot;} <br /><br /> input = &quot;ababbbaAab&quot; <br /><br /> <br /><br /> &quot;ab&quot; and &quot;aba&quot; are found at the beginning of the input but &quot;aba&quot; is longest so it is consumed. Now: <br /><br /> consumed = {&quot;aba&quot;} <br /><br /> input = &quot;bbbaAab&quot; <br /><br /> <br /><br /> There are no tokens that start with 'b' so the lexer will remove the first 3 characters from the string. <br /><br /> consumed = {&quot;aba&quot;} <br /><br /> input = &quot;aAab&quot; <br /><br /> <br /><br /> The 'a' doesn't match the token &quot;A&quot; due to CASE-SENSITIVITY. The lexer removes the 'a' from the beginning of the string.<br /><br /> consumed = {&quot;aba&quot;}<br /><br /> input = &quot;Aab&quot;<br /><br /> <br /><br /> The lexer consumes the &quot;A&quot; token.<br /><br /> consumed = {&quot;aba&quot;,&quot;A&quot;}<br /><br /> input = &quot;ab&quot;<br /><br /> <br /><br /> Finally the lexer consumes the &quot;ab&quot; token and completes the process.<br /><br /> consumed = {&quot;aba&quot;,&quot;A&quot;,&quot;ab&quot;}<br /><br /> input = &quot;&quot;<br /><br /> The returned list is {&quot;aba&quot;,&quot;A&quot;,&quot;ab&quot;}.<br /><br /> <br /><br /> Create a class Lexer that contains the method tokenize, which takes a String[] tokens, and a String input, and returns a String[] in the form specified above. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Lexer",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"tokenize",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] tokenize(String[] tokens, String input)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"ababbbaAab\"",
+			"id":0,
+			"input":"{\"ab\",\"aba\",\"A\"}",
+			"note":"Same as above",
+			"order":1
+		},
+		{
+			"expect":"\"aaaaaaaaaaaaaaaaaaaaaaaaa\"",
+			"id":0,
+			"input":"{\"a\",\"a\",\"aa\",\"aaa\",\"aaaa\",\"aaaaa\",\"aa\"}",
+			"note":"Make sure to use the longest valid starting token",
+			"order":2
+		},
+		{
+			"expect":"\"awofwwofowwowowowwwooo\"",
+			"id":0,
+			"input":"{\"wow\",\"wo\",\"w\"}",
+			"order":3
+		},
+		{
+			"expect":"\"intlongdoublecharintintboolean\"",
+			"id":0,
+			"input":"{\"int\",\"double\",\"long\",\"char\",\"boolean\",\"byte\",\"float\"}",
+			"order":4
+		},
+		{
+			"expect":"\"Great\"",
+			"id":0,
+			"input":"{}",
+			"note":"No valid tokens, so nothing is CONSUMED",
+			"order":5
+		},
+		{
+			"expect":"\"abCdEfGhIjAbCdEfGhIj\"",
+			"id":0,
+			"input":"{\"AbCd\",\"dEfG\",\"GhIj\"}",
+			"note":"Remember CASE-SENSITIVITY",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"tokens will contain between 0 and 50 elements inclusive"
+		},
+		{
+			"order":2,
+			"val":"Each element of tokens will have length between 1 and 50 inclusive"
+		},
+		{
+			"order":3,
+			"val":"Each element of tokens will only consist of letters (A-Z,a-z)"
+		},
+		{
+			"order":4,
+			"val":"input will have length between 0 and 50 inclusive"
+		},
+		{
+			"order":5,
+			"val":"input will only consist of letters (A-Z,a-z)"
+		}
+	]
+}

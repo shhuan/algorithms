@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":162.78,
+			"constraints":[],
+			"correctRatio":46.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12548&rd=15653",
+			"name":"DancingFoxes",
+			"notes":[],
+			"submission":917
+		},
+		{
+			"avgPts":248.01,
+			"constraints":[],
+			"correctRatio":74.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12299&rd=15653",
+			"name":"TheMountain",
+			"notes":[],
+			"submission":105
+		},
+		{
+			"avgPts":584.82,
+			"constraints":[],
+			"correctRatio":9.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12515&rd=15653",
+			"name":"WellTimedSearch",
+			"notes":[],
+			"submission":53
+		}
+	],
+	"name":"2013 TCO Algorithm > Round 2C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15653"
+}

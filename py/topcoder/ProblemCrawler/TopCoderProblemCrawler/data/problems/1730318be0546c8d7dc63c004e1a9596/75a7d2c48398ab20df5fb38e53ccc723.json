@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13766&rd=16464",
+	"statement":"<p> The least common multiple (denoted &quot;lcm&quot;) of a non-empty sequence of positive integers is the smallest positive integer that is divisible by each of them. For example, lcm(2)=2, lcm(4,6)=12, and lcm(1,2,3,4,5)=60. </p> <p> Alice had a positive integer <b>N</b>. Then she chose some positive integer M that was strictly greater than <b>N</b>. Afterwards, she computed two values: the value A = lcm(<b>N</b>+1, <b>N</b>+2, ..., M) and the value B = lcm(1, 2, ..., M). She was surprised when she saw that A = B. </p> <p> You are given the int <b>N</b>. Find and return the smallest M Alice could have chosen. (Such an M will always exist.) </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MissingLCM",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMin(int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"1",
+			"note":"Alice needs to choose an M > 1 such that lcm(2,...,M) = lcm(1,...,M). We can see M=2 is the minimum value that works, since lcm(1,2) = lcm(2) = 2.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"3",
+			"note":"We have lcm(4,5,6) = lcm(1,2,3,4,5,6) = 60.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 82",
+			"id":0,
+			"input":"42",
+			"note":"Oh... that doesn't fit the pattern.",
+			"order":6
+		},
+		{
+			"expect":"Returns: 1999966",
+			"id":0,
+			"input":"999999",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N will be between 1 and 1,000,000, inclusive."
+	}]
+}

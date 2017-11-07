@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":169.37,
+			"constraints":[],
+			"correctRatio":68.98,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6409&rd=9826",
+			"name":"UnfairDivision",
+			"notes":[],
+			"submission":274
+		},
+		{
+			"avgPts":289.05,
+			"constraints":[],
+			"correctRatio":53.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6435&rd=9826",
+			"name":"InterleavePal",
+			"notes":[],
+			"submission":84
+		},
+		{
+			"avgPts":559.04,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6408&rd=9826",
+			"name":"PowerCollector",
+			"notes":[],
+			"submission":36
+		}
+	],
+	"name":"Single Round Match 305 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9826"
+}

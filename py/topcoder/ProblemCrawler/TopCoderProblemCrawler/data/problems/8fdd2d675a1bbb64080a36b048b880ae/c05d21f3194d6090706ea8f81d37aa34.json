@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8143&rd=10789",
+	"statement":"<p> You are in a bit of a jam. The head of the local police force has been ordered to discover the number of people who have been speeding on a local road. He set up two radar guns at each end of the road, and recorded the times that the vehicles entered the road, and the times at which they exited the road. Thus, he could easily determine how many people were speeding and collect fines from them. </p><p> The police chief's plan fell through, though, when he was fired for illegal gambling involving squirrels. On his way out the door, he scrambled the times so that you no longer know which entering time belongs to which exit time. </p><p> You need to solve this issue so that you can plan this year's budget. You have <b>enterTimes</b> and <b>exitTimes</b>, which correspond to times (in seconds) in which cars entered and exited the road, respectively. You also know <b>speedTime</b>; a car is considered speeding if it takes less than <b>speedTime</b> seconds to travel down the road. No matter how quickly the cars are speeding, it always takes at least 1 second for a car to travel down the road. </p><p> You must select a matching of <b>enterTimes</b> and <b>exitTimes</b>, such that each car exits the road at a time later than when it enters, and each element of <b>enterTimes</b> and <b>exitTimes</b> is used exactly once. Once you have done this, you will collect fines from those cars that were speeding. If a speeding car took T seconds to travel on the road, then you will collect (<b>speedTime</b>-T)^2 dollars from the car (up to a maximum of <b>fineCap</b> dollars); if a car was not speeding (i.e., it took at least <b>speedTime</b> seconds to travel on the road), you can collect no fine from that car. </p><p> Since you can't exactly determine the total amount of money that you should collect from all of the cars, you instead want to determine the minimum and maximum sums of money that you can collect. You will return a int[] containing two elements, the first being the minimum sum that can be collected, and the second containing the maximum sum. If the data could not be obtained by the radar guns, you are to return an empty int[]. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RadarGuns",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getRange",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getRange(int[] enterTimes, int[] exitTimes, int speedTime, int fineCap)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{4, 5}",
+			"id":0,
+			"input":"{1, 2}",
+			"note":"In this case, we have two possible pairs:  1) (1,4) and (2,5). Here, both cars took 3 seconds, so no fines are collected.  2) (1,5) and (2,4). Here, the second car took only 2 seconds, and so must be fined (3-2)^2 = 1 dollar.",
+			"order":1
+		},
+		{
+			"expect":"{60,40}",
+			"id":0,
+			"input":"{2,1}",
+			"note":"It doesn't matter how we arrange the cars here. Each one receives the maximum fine of $100.",
+			"order":2
+		},
+		{
+			"expect":"{987, 724, 814, 597, 422}",
+			"id":0,
+			"input":"{1000, 584, 390, 392, 109}",
+			"order":3
+		},
+		{
+			"expect":"{4,5,6}",
+			"id":0,
+			"input":"{1,2,3}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"enterTimes will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of enterTimes will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"exitTimes will contain the same number of elements as enterTimes."
+		},
+		{
+			"order":4,
+			"val":"Each element of exitTimes will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"speedTime will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"fineCap will be between 0 and 10000, inclusive."
+		}
+	]
+}

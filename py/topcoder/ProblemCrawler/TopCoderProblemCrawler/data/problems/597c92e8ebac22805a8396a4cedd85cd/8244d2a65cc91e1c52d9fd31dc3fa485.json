@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6241&rd=9989",
+	"statement":"<p>You took a test consisting of N questions, each of which has a distinct point value between 1 and N, inclusive, and you have finally received the results. Along with your final score, you are told which questions you answered correctly. However, you are not given the point values that were assigned to the questions. For each correct answer, you received the full point value of the question, and for each wrong answer, you received 0 points. You must determine the minimum possible error of a valid point assignment that would result in the final score that you received. The error of a valid assignment of points is defined as follows: For each question i (where i is a 1-based index), let e(i) = the absolute value of (i minus the point value of the question). The error of the point assignment is the maximum value of e(i).</p> <p>Given a String <b>questions</b> and an int <b>score</b>, return an int representing the minimum possible error of a valid point assignment. The ith character (where i is a 1-based index) of <b>questions</b> is either 'C', meaning that you answered question i correctly, or 'W', meaning that you answered it wrong. If there is no valid point assignment, return -1.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ScoreRecomposition",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minError",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minError(String questions, int score)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"\"CCC\"",
+			"note":"Contact the contest director immediately! Since you answered every question correctly, your score should be 6.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"\"WCWW\"",
+			"note":"Obviously, you answered only the 4-point question correctly.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"\"CWW\"",
+			"note":"The minimum error occurs when each question i is assigned a point value of i.",
+			"order":3
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"\"CWCC\"",
+			"note":"One valid point assignment with the lowest possible error is 1, 4, 2, 3.",
+			"order":4
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"WWCC\"",
+			"order":5
+		},
+		{
+			"expect":"55",
+			"id":0,
+			"input":"\"CWCCWWCWCC\"",
+			"order":6
+		},
+		{
+			"expect":"37",
+			"id":0,
+			"input":"\"CWWCWCCWWC\"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"questions will contain exactly N elements, where N is between 1 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of questions will be either 'C' or 'W'."
+		},
+		{
+			"order":3,
+			"val":"score will be between 0 and N*(N+1)/2, inclusive."
+		}
+	]
+}

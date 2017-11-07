@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6871&rd=10007",
+	"statement":"A string is called <i>ugly</i> if it has 3 vowels in a row, or 5 consonants in a row, or both. A string is called <i>nice</i> if it is not ugly. You are given a string <b>s</b>, consisting of uppercase letters ('<tt>A</tt>'-'<tt>Z</tt>') and question marks ('<tt>?</tt>'). Return &quot;<tt>UGLY</tt>&quot; if the string is definitely ugly (that means you cannot substitute letters for question marks so that the string becomes nice), &quot;<tt>NICE</tt>&quot; if the string is definitely nice, and &quot;<tt>42</tt>&quot; if it can be either ugly or nice (quotes for clarity only).",
+	"notes":[{
+		"order":1,
+		"val":"The letters '', '', '', '', '' are vowels, and all others are consonants."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NiceOrUgly",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"describe",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String describe(String s)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"NICE\"",
+			"id":0,
+			"input":"\"HELLOWORLD\"",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"UGLY\"",
+			"id":0,
+			"input":"\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"",
+			"note":"Apparently the English alphabet has 5 consonants in a row.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"42\"",
+			"id":0,
+			"input":"\"HELLOW?RLD\"",
+			"note":"\"\" is nice, \"\" is ugly.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"NICE\"",
+			"id":0,
+			"input":"\"H??LOWOR??\"",
+			"note":"You just can't make it ugly.",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"UGLY\"",
+			"id":0,
+			"input":"\"EE?FFFF\"",
+			"note":"Whatever you put there, it becomes ugly.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in s will be either '?', or an uppercase letter ('A'-'Z')."
+		}
+	]
+}

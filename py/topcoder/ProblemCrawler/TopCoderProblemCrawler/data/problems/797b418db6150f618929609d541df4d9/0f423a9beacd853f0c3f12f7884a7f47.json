@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9976&rd=13514",
+	"statement":"<p> N checkers are placed on an infinitely large board. The i-th checker is in the cell at row <b>x</b>[i], column <b>y</b>[i]. There can be more than one checker in the same cell. A move consists of taking one checker and moving it one cell up, down, left or right. </p> <p> Return a int[] containing exactly N elements, where the i-th element (0-based) is the minimum number of moves necessary to end up with at least i+1 checkers in the same cell. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheTower",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] count(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1, 1, 1, 1}",
+			"id":0,
+			"input":"{1, 2, 4, 9}",
+			"note":"Here is one possible way to get the minimal number of moves:  ",
+			"order":1
+		},
+		{
+			"expect":"{14, 16, 15, 15}",
+			"id":0,
+			"input":"{15, 15, 14, 16}",
+			"note":"Whenever we need to have more than one checker in a single cell, we can put them in cell (15, 15).",
+			"order":2
+		},
+		{
+			"expect":"{7, 7}",
+			"id":0,
+			"input":"{4, 4}",
+			"note":"They are already at the same cell.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"y will contain the same number of elements as x."
+		},
+		{
+			"order":3,
+			"val":"Each element of x will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of y will be between 1 and 1,000,000, inclusive."
+		}
+	]
+}

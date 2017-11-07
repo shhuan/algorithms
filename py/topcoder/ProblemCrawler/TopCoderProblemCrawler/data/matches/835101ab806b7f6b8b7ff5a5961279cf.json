@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":223.24,
+			"constraints":[],
+			"correctRatio":93.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6041&rd=9820",
+			"name":"Projections",
+			"notes":[],
+			"submission":389
+		},
+		{
+			"avgPts":404.93,
+			"constraints":[],
+			"correctRatio":64.95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6043&rd=9820",
+			"name":"PalindromePartition",
+			"notes":[],
+			"submission":311
+		},
+		{
+			"avgPts":472.99,
+			"constraints":[],
+			"correctRatio":40.54,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6039&rd=9820",
+			"name":"Wizards",
+			"notes":[],
+			"submission":37
+		}
+	],
+	"name":"Single Round Match 299 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9820"
+}

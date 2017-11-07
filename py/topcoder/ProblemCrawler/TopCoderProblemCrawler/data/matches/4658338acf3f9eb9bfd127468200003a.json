@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":164.91,
+			"constraints":[],
+			"correctRatio":72.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11965&rd=15171",
+			"name":"PointyWizardHats",
+			"notes":[],
+			"submission":510
+		},
+		{
+			"avgPts":279.76,
+			"constraints":[],
+			"correctRatio":47.37,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11966&rd=15171",
+			"name":"MagicalHats",
+			"notes":[],
+			"submission":38
+		},
+		{
+			"avgPts":432.02,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12034&rd=15171",
+			"name":"CosmicBlocks",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"Single Round Match 549 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15171"
+}

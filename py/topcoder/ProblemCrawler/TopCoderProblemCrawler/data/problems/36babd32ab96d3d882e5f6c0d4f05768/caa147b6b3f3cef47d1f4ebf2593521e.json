@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12924&rd=15820",
+	"statement":"TypoCoder is a programming contest like TopCoder. TypoCoder also has a rating system. There are two types of coders in TypoCoder: brown coders and ciel coders. A brown coder is a coder whose rating is greater than or equal to 2200. A ciel coder is a coder whose rating is less than 2200. <br /><br /><br /><br /> Cat Lower competes in TypoCoder. He is currently a ciel coder. His rating at the end of the current year is <b>X</b>. <br /><br /><br /><br /> Next year there will be some contests. In each of those contests, Cat Lower can either try his best or lose on purpose. For each i, the i-th contest (0-based index) has weight <b>D</b>[i]. If Cat Lower tries his best in the i-th contest, his rating will increase by <b>D</b>[i]. If he decides to lose on purpose instead, his rating will decrease by <b>D</b>[i], but not below zero. Formally, his rating will decrease by min(<b>D</b>[i],his rating before the contest). <br /><br /><br /><br /> Cat Lower loves being a ciel coder. Therefore, he must never be a brown coder twice in a row. That is, whenever Cat Lower becomes a brown coder, he must be ciel again after the next contest (if there are any contests left). <br /><br /><br /><br /> TypoCoder awards &quot;Chameleon coder of the year&quot; to the coder whose color changed the most times during the year. <br /><br /><br /><br /> You are given the int[] <b>D</b> and the int <b>X</b>. Return the maximal number of color changes Cat Lower can have next year. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TypoCoderDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getmax",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getmax(int[] D, int X)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2000",
+			"id":0,
+			"input":"{100,200,100,1,1}",
+			"note":"When he increase at the second, the third and the last competition and decrease at the first and the fourth competition, he can change the color 3 times and this is the maximal.",
+			"order":1
+		},
+		{
+			"expect":"2199",
+			"id":0,
+			"input":"{0,0,0,0,0}",
+			"note":"He cannot be a brown coder in this case.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{90000,80000,70000,60000,50000,40000,30000,20000,10000}",
+			"note":"Note that Cat Lower always has at least one valid strategy: if he decides to lose in all contests, he will remain ciel forever. In this test case, the optimal strategy for him is to lose in the first eight contests and then to win in the last one. Note that before the last contest his rating will be 0.",
+			"order":3
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"{1000000000,1000000000,10000,100000,2202,1}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"2199",
+			"id":0,
+			"input":"{2048,1024,5012,256,128,64,32,16,8,4,2,1,0}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"1223",
+			"id":0,
+			"input":"{61,666,512,229,618,419,757,217,458,883,23,932,547,679,565,767,513,798,870,31,379,294,929,892,173,127,796,353,913,115,802,803,948,592,959,127,501,319,140,694,851,189,924,590,790,3,669,541,342,272}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"1328",
+			"id":0,
+			"input":"{34,64,43,14,58,30,2,16,90,58,35,55,46,24,14,73,96,13,9,42,64,36,89,42,42,64,52,68,53,76,52,54,23,88,32,52,28,96,70,32,26,3,23,78,47,23,54,30,86,32}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"D will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of D will be between 0 and 1,000,000,000 (10^9), inclusive."
+		},
+		{
+			"order":3,
+			"val":"X will be between 0 and 2199, inclusive."
+		}
+	]
+}

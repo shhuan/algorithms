@@ -1,0 +1,121 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13297&rd=16061",
+	"statement":"Fox Jiro is attending a dancing party. There are <b>n</b> girls at the party. Being a geek, Jiro immediately numbered the girls 1 through <b>n</b>. We will use x[i] to denote the age of girl i. We will assume that each x[i] is an integer between 1 and 100, inclusive. <br /><br /> <br /><br /> <br /><br /> In Jiro's culture, asking a girl's age is taboo. Luckily, it is acceptable to ask about arithmetic expressions that contain the girls' ages. Jiro has been asking such questions for a while. For example, he may now know that x[1] + x[2] is exactly 10 and that x[3] / x[8] is at least 2.500. <br /><br /> <br /><br /> <br /><br /> Formally, each information Jiro has about the ages has the following form: &quot;x[girl1] operation x[girl2] relation value&quot;. <br /><br /> <br /><br /> <br /><br /> You are given Jiro's information encoded into five sequences: int[]s <b>id1</b> and <b>id2</b>, String[]s <b>op</b> and <b>rl</b>, and a int[] <b>val</b>. For each valid i, the i-th elements of these sequences encode one information as follows: \n <ul> \n  <li><b>id1</b>[i] and <b>id2</b>[i] are the numbers of two different girls. (These are girl1 and girl2 in the above expression.)</li> \n  <li><b>op</b>[i] is one of &quot;+&quot;, &quot;-&quot;, &quot;*&quot;, and &quot;/&quot;. (This is the operation in the above expression.)</li> \n  <li><b>rl</b>[i] is one of &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;&quot;, &quot;&gt;=&quot;, and &quot;=&quot;. (This is the relation in the above expression.)</li> \n  <li><b>val</b>[i] is an integer between -10,000,000 and 10,000,000, inclusive. (The value in the above expression is computed as <b>val</b>[i]/1000.)</li> \n </ul> <br /><br /> <br /><br /> Find one possible solution for the ages of all <b>n</b> girls, and return them as a int[] with <b>n</b> elements (element i being the age of girl i+1, for all i). If there are multiple valid solutions, you may return any of them. If there are no valid solutions, return an empty int[] instead.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NeverAskHerAge",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"possibleSolution",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[], String[], String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] possibleSolution(int n, int[] id1, int[] id2, String[] op, String[] rl, int[] val)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,1}",
+			"id":0,
+			"input":"2",
+			"note":"We have two constraints: \"x[1]+x[2]=10.0\" and \"x[1]*x[2]=21.0\". We can solve this quadratic system to get x[1] = 3 and x[2] = 7 or x[1] = 7 and x[2] = 3.",
+			"order":1
+		},
+		{
+			"expect":"{1,2,3,4,5,6}",
+			"id":0,
+			"input":"7",
+			"note":"This time we have: x[1]/x[2] = x[2]/x[3] = x[3]/x[4] = x[4]/x[5] = x[5]/x[6] = x[6]/x[7]=2. Since x[i] is between 1 and 100, we have only 1 solution. ",
+			"order":2
+		},
+		{
+			"expect":"{1,1}",
+			"id":0,
+			"input":"2",
+			"note":"From the given constraints we know that x[1]/x[2] must be strictly between 2.621 and 2.622. There is only one solution: 97/37 = 2.621621...",
+			"order":3
+		},
+		{
+			"expect":"{1,1}",
+			"id":0,
+			"input":"2",
+			"note":"We have x[1]*x[2]> 6 and x[1]+x[2] <= 5. It has solutions like x[1]=x[2]=2.5, but there is no integer solution. ",
+			"order":4
+		},
+		{
+			"expect":"{1,3,5,7}",
+			"id":0,
+			"input":"8",
+			"note":"We have x[1]+x[2]>=200.0, x[3]-x[4]<=-99.0, x[5]*x[6]=3589.0, x[7]/x[8]<=0.01.",
+			"order":5
+		},
+		{
+			"expect":"{7,1,3,4,4,3,7,2,3,6,4,4,6,5,2,8,2,2,7,6,2,2,8,6,5,6,5,4,4,8,6,1,3,5,5,4,3,7,4,8}",
+			"id":0,
+			"input":"8",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{7,1,3,4,4,3,7,2,3,6,4,4,6,5,2,8,2,2,7,6,2,2,8,6,5,6,5,4,4,8,6,1,3,5,5,4,3,7,4,8}",
+			"id":0,
+			"input":"8",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"id1 will contain between 1 and 1,000 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"id1, id2, op, rl and val will each contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element in id1 will be between 1 and n, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element in id2 will be between 1 and n, inclusive."
+		},
+		{
+			"order":6,
+			"val":"For each i, id1[i] and id2[i] will be different."
+		},
+		{
+			"order":7,
+			"val":"Each element in op will be one of &quot;+&quot;, &quot;-&quot;, &quot;*&quot; and &quot;/&quot;."
+		},
+		{
+			"order":8,
+			"val":"Each element in rl will be one of &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;&quot;, &quot;&gt;=&quot; and &quot;=&quot;."
+		},
+		{
+			"order":9,
+			"val":"Each element in val will be between -10,000,000 and 10,000,000, inclusive."
+		}
+	]
+}

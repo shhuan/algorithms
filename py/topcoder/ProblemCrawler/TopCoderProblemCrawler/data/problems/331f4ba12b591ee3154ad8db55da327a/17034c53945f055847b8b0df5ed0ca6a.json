@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1889&rd=4709",
+	"statement":"<i>Problem contains images. Plugin users can view them in the applet.</i><br /><br /> In the city, roads are arranged in a grid pattern. Each point on the grid represents a corner where two blocks meet. The points are connected by line segments which represent the various street blocks. Using the cartesian coordinate system, we can assign a pair of integers to each corner as shown below. <br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/AvoidRoads/AvoidPic1.GIF\" /> <br /><br /> You are standing at the corner with coordinates 0,0. Your destination is at corner <b>width</b>,<b>height</b>. You will return the number of distinct paths that lead to your destination. Each path must use exactly <b>width+height</b> blocks. In addition, the city has declared certain street blocks untraversable. These blocks may not be a part of any path. You will be given a String[] <b>bad</b> describing which blocks are bad. If (quotes for clarity) &quot;a b c d&quot; is an element of <b>bad</b>, it means the block from corner a,b to corner c,d is untraversable. For example, let's say <pre>\n<b>width</b>  = 6\n<b>length</b> = 6\n<b>bad</b> = {&quot;0 0 0 1&quot;,&quot;6 6 5 6&quot;}</pre> The picture below shows the grid, with untraversable blocks darkened in black. A sample path has been highlighted in red.<br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/AvoidRoads/AvoidPic2.GIF\" /> <br /><br />",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AvoidRoads",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numWays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long numWays(int width, int height, String[] bad)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"6",
+			"note":"Example from above.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"Four blocks aranged in a square. Only 2 paths allowed.",
+			"order":2
+		},
+		{
+			"expect":"31",
+			"id":0,
+			"input":"35",
+			"note":"Big number.",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"width will be between 1 and 100 inclusive."
+		},
+		{
+			"order":2,
+			"val":"height will be between 1 and 100 inclusive."
+		},
+		{
+			"order":3,
+			"val":"bad will contain between 0 and 50 elements inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of bad will contain between 7 and 14 characters inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of the bad will be in the format &quot;a b c d&quot; where, \n \n   a,b,c,d are integers with no extra leading zeros,\n   a and c are between 0 and width inclusive,\n   b and d are between 0 and height inclusive,\n  and a,b is one block away from c,d.\n "
+		},
+		{
+			"order":6,
+			"val":"The return value will be between 0 and 2^63-1 inclusive."
+		}
+	]
+}

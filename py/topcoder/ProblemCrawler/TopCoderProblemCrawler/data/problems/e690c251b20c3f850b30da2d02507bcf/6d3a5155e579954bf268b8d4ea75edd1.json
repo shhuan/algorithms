@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4635&rd=8017",
+	"statement":"You are playing a one-player game. The board for the game consists of several red and green cells ordered in a row. Initially you are located at the first cell. On each move, you roll an <b>N</b>-sided die with numbers from 1 to <b>N</b> on its sides and move the corresponding number of cells ahead. If you stop on a red cell, you jump back to the cell you started the move from. If you stop at green, you stay there. You win the game when you jump on the last cell or pass it by. <br /><br /><br /><br /> Given a String[] <b>field</b>, return the expected number of moves you will need to win the game (return -1 if you will never win). All characters in all elements of <b>field</b> will be either 'G' or 'R', for green and red cells respectively. The first character of the first element of <b>field</b> represents the cell where you are located at the start of the game. The last character of the last element of <b>field</b> represents the last cell. You should concatenate all Strings from <b>field</b> to get the complete game field. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PartyGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numberOfMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double numberOfMoves(String[] field, int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"GRG\"}",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"GRRG\"}",
+			"order":2
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"{\"GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG\"}",
+			"order":3
+		},
+		{
+			"expect":"19",
+			"id":0,
+			"input":"{\"GGRRRGRGRRGRRRGRRRRRRRRRRRGRRGRRRRRRRGRRRRRR\", \"RRRRRRRRRRRRRRRRRGRRRRRRRRRRRRGRRRRGRRRRRGRGR\", \"RRRGRRRRRRGGRRRRRRRRRRRRRRGRRRGRRRRRRGRRRRRRGR\", \"RRGRRRRGRRRRGRGRRRRRRRGRRGRRRRRRRRRRRRRRGRRRGGG\", \"RRRRRRRRRRRRRRRGRRGRRRRRRGRRRRRRRRGRRRRRRRRRRGRR\", \"GRRRRRGGGRRRRRGRRRRRRRRRRRGRRRRRRRGRRGRRRRRRRRRRR\", \"RRRRRRRRGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRRRRRRGGGGGGG\", \"GGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRRRRRRRRRRRRRRRRGRRR\", \"RRRRRGRGRRRRRRRRRRRRRRRGRRRRRRRRRRRGRRRRRRRRRRRRRG\", \"GRRRRRRRRRRRRRRRRRRGRRRRRRRRRRRRRRRGRRRGRRRRRRRRGR\", \"RRRRRRGRRGRRRRRRGRRRRRRRRRRRRRRRRGRGRGRRRRRRGRRRRG\", \"RGRRRRRRRRRGRRGRRRRRRGRRRRRRRGRRGRRGRGGGGGGGGRRRRR\", \"RRRRRRRRRRRRRGRRRRRRRRRGRRRRRRRRRRGRRRRRRGGGGGGGGG\", \"GGGGGGGGGGGGGGGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGGGG\", \"GRRRRRRRRRRRRRRRRRRGRRRGGGGGGGGGGRRRRRRRRRRRRRRRRR\", \"RGGGGGGGGGGGGGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRR\", \"RRRGRRRRRRRRRGRRRRRRRRRRRGRRRRRRRRRRRRRRGRRRRRRRGG\", \"RRRRGGGGGGGGGGRRRRRRRRRRRRRRRRRRGGRRRGRGRRRRRRRRRR\", \"RRRRRGRRRRRRRRRGRGRRGRRGRRRRRRRRRRRRRRRRGGRRGRRRRR\", \"RRRRRRGRRRRRRRRRGGRRRRRGRRRRGRRRRRRRRGGRRRRRRRRRGR\", \"RRRGRRRRRRRRRRRRRRGGGRRRRRRRGRRRRRRRRRRRRRRRRGGGGG\", \"GGGGGGGRRRRRRRRRRRRRRRRRRGRRRGRRRRRRRRRRRRRGGRRRRG\", \"GRRRRRRRRRRRGRRRRRRRRRRRRRGGGGGGGGGGGGGGGGGGGGGGGG\", \"GGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRRGGGGGGGGGGGR\", \"RRRRRRRRRRRRRRRRRGRRGRRGRRRRRGRRGRRRRRRRRRGRRRRRRR\", \"RRRRRRGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRRRRRRRRG\", \"RRRRRRRRRGRRRRRRRRRRRRRRRRGRGRRRRRRRRRRGRRRRRRGRRR\", \"RRRRRRRRRGGRRRRRRRRRRRRRRRRRRGRRRRRGRRRRGRRRRRGRRR\", \"RRRGRRGRRRGRRRRRRRRRRGRRRRRRRRRRGGRRRRRRGGRRRRRRRR\", \"RRGRRRRRRRRRRRRGRGRRRGGRGRRGRRRGRRRRRRRRRRRGRRRRRR\", \"RGRRRRRRRRRRRRRGGRRRRRRRRRGRRRGRRRRRRRRRGRRRRGGRRR\", \"RRRRRRRRRRRRRRRGRRRRRRRRRGRGRRRRGGGGGGGGGRRRRRRRRR\", \"RRRRRRRRRGRRRRRRGRRRRRRRRRRGRRRRRRRGRRRRRRRRRRRRRR\", \"RRGRRRRRRRRRRRRRRRRRRGRRRRRRRRGRRRRGRGRRRRRRRRRRRG\", \"RGRRGRRRGRRRRRGRRRRRRRRRGRRRRRRRRRRGRRGRRRRRRRGRGG\", \"GRRRRRRRRRRRRRRRRRRGRRRRRRRRRRRRRRRRRGRRRRRRRGRRRR\", \"RRRRRGRRRRRRRGRGRRRRRRRRGGRRRRRRGRRRRRRRRRRRRGRRRR\", \"RRGRRRRRRRRRRRGRRGRRRRRRRRRRGRRRRRRRRRGRRRGRGRRGRR\", \"RRRRGRRRRRRRRRRGRRRRRRRRRRRRRRRGRRRRRRRGRRGGGGGGGG\", \"GGGGGGGGGGGGGGGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGRRR\", \"RGGRGGGGRRRRRRRRRRRRRRRRRRGRGRRRGGRRRRRRGGRRRRRRRG\", \"RRRRGRRRRRRRRRRRRGGGGGGRRRRRRRRRRRRRRRRRRGRRRRRRRR\", \"RRRRRRRGRRRRRRRRRRGRRGGGGGGGGGGGGGRRRRRRRRRRRRRRRR\", \"RRGRRRRRRRRRRRRRRRGGRRGRRRRGRRRRGRRRRRRRRRRRRGRGRG\", \"RGRRRRRRRGRRRRRRRGRRRGGRRRRRRRRGRRRRRRRRRGGGRRRRRR\", \"GGGGGGRRRRRRRRRRRRRRRRRRGRGRRRRRRRRRRRGRRRRRRGRRRR\", \"RRRRRRRGRRRRRRRRGRRRRRRRRRRRRRGGRRRRRRRRRRRRRRRRGR\", \"RRRRRRRRRRRRRGRRRRRRRRRRRRRRRRRGRRRRGRRRRRRRRRRGRR\", \"RRRRGRGRRRRRRRRGRRRRRGRRRRRRRRRRRRRRRGRRRRRRGRRRRR\", \"RRGRRGRRRRRRRGGRRGRRRRRRGRRRRRRRRRRRRRRRRRGRGRRRRG\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"field will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of field will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The total number of characters in the field must be at least 2."
+		},
+		{
+			"order":4,
+			"val":"Each element of field will contain only 'R' and 'G' characters."
+		},
+		{
+			"order":5,
+			"val":"The first character of the first element of field and the last character of the last element of field will both be 'G'. "
+		},
+		{
+			"order":6,
+			"val":"N will be between 1 and 20, inclusive."
+		}
+	]
+}

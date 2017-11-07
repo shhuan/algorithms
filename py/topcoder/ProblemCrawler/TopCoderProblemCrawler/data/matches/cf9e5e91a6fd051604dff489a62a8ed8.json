@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":240.37,
+			"constraints":[],
+			"correctRatio":86.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=451&rd=4080",
+			"name":"NFL",
+			"notes":[],
+			"submission":190
+		},
+		{
+			"avgPts":389.78,
+			"constraints":[],
+			"correctRatio":39.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=434&rd=4080",
+			"name":"Greatest",
+			"notes":[],
+			"submission":158
+		},
+		{
+			"avgPts":432.71,
+			"constraints":[],
+			"correctRatio":67.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=450&rd=4080",
+			"name":"Blackjack",
+			"notes":[],
+			"submission":84
+		}
+	],
+	"name":"Single Round Match 70 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4080"
+}

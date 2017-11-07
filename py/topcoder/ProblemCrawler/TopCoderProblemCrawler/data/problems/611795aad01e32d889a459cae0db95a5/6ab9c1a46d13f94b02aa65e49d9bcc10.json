@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6125&rd=11123",
+	"statement":"<p> Division is an expensive operation for a computer to perform, compared to addition, subtraction, and even multiplication. The exception is when dividing by powers of 2, because this can be done either with a bit shift (for a fixed-point value) or by subtracting 1 from the exponent (for a floating-point value). In this problem, we will approximate the quotient of two numbers using only addition, multiplication, and division by powers of 2. </p> <p> Consider the following identity: </p> <pre>\n\n     1      1      c^0     c^1     c^2\n    --- = ----- = ----- + ----- + ----- + ...\n     b     t-c     t^1     t^2     t^3\n</pre> <p> If t is a power of 2, then the denominator of each term will be a power of 2. </p> <p> Given integers <b>a</b>, <b>b</b>, and <b>terms</b>, approximate <b>a</b>/<b>b</b> by computing the first <b>terms</b> terms of the identity above, and multiplying the result by <b>a</b>. Select t to be the smallest power of 2 greater than or equal to <b>b</b>. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ApproximateDivision",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"quotient",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double quotient(int a, int b, int terms)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"2",
+			"note":"In this case t is chosen to be 8, and therefore c is 3. The first two terms are 1/8 and 3/64.",
+			"order":1
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"7",
+			"note":"If b is a power of two, the first term is equal to exactly 1/b, and all other terms are zero.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"1",
+			"order":3
+		},
+		{
+			"expect":"10000",
+			"id":0,
+			"input":"1",
+			"order":4
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"1",
+			"order":5
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"0",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"50",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"b will be between 1 and 10000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"a will be between 0 and b, inclusive."
+		},
+		{
+			"order":3,
+			"val":"terms will be between 1 and 20, inclusive."
+		}
+	]
+}

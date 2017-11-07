@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10760&rd=14148",
+	"statement":"Taro and Hanako are playing a game called <i>Nisoku</i>, which is played as follows. Initially, there is a pile of cards. Each card contains a real number between 1.5 and 10.0, inclusive. You are given a double[] <b>cards</b>, the i-th element of which is the number written on the i-th card. <br /><br /> <br /><br /> Repeat the following step until there is only one card left in the pile: Remove any two cards from the pile, and add one new card to the pile. Write either a+b or a*b on the new card, where a and b are the numbers written on the two cards that were removed. <br /><br /> <br /><br /> Return the maximal possible number written on the final card in the pile.",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Nisoku",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theMax",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"double[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double theMax(double[] cards)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 40.0",
+			"id":0,
+			"input":"{5, 8}",
+			"note":"5 * 8 = 40.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 3.3",
+			"id":0,
+			"input":"{1.5, 1.8}",
+			"note":"1.5 + 1.8 = 3.3.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 202.82857868",
+			"id":0,
+			"input":"{8.26, 7.54, 3.2567}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 9.920000000000002",
+			"id":0,
+			"input":"{1.5, 1.7, 1.6, 1.5}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1.0E50",
+			"id":0,
+			"input":"{10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10}",
+			"note":"The answer can be extremely big.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cards will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of cards will be between 1.5 and 10.0, inclusive."
+		}
+	]
+}

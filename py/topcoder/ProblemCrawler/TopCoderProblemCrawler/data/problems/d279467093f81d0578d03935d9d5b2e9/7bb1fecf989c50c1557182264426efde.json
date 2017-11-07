@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2233&rd=4675",
+	"statement":"<p>Imagine a game consisting of two billion doors (numbered starting at 1), behind some of which lie fabulous cash prizes. There are a limited number of patterns to the placement of the prizes, which the contestant knows in advance. All doors initially begin closed. Before the game begins, the host secretly selects one of the patterns from the list at random (all with equal probability), and puts prizes behind the doors specified by the pattern. For example, if the host chose the pattern &quot;3-4 9 12-15&quot;, he would put prizes behind doors 3, 4, 9, 12, 13, 14, and 15 (and nowhere else).</p> <p>Two things happen every turn. First, the contestant decides which door is currently most likely to contain a prize, and secretly records this choice. (If two or more doors both have the greatest likelihood of containing a prize, he chooses the door with the lowest number.) The second part of a turn consists of the host opening one or more doors, all of which are revealed to be empty. For example, if the host gave the hint &quot;2 7-10&quot;, this would indicate that he opened doors 2, 7, 8, 9, and 10 and there were no prizes behind any of them.</p> <p>In specific, the following grammar is used for this problem:</p> <tt>&lt;doors&gt; ::= &lt;range&gt; | &lt;range&gt;&lt;sp&gt;&lt;doors&gt;<br /><br /> &lt;range&gt; ::= &lt;num&gt; | &lt;num&gt;&lt;to&gt;&lt;num&gt; </tt> (the first <i>num</i> must be strictly less than the second <i>num</i>)<tt><br /><br /> &lt;num&gt; ::= integer between 1 and 2000000000, inclusive, with no leading zeroes<br /><br /> &lt;sp&gt; ::= ' '<br /><br /> &lt;to&gt; ::= '-'</tt> <p>Given a String[] <b>possible</b>, containing the possible placements of prizes, and a String[] <b>hints</b>, the <tt>N</tt> hints given during the course of the game, your method should return a int[] containing <tt>N+1</tt> elements. Each element should describe the most likely position of a prize at that point in the game. The first element represents your guess before any hints are given; the last element represents your guess taking every hint into account. Remember to break ties by choosing the lowest numbered door, if multiple doors are all the most likely.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Each element of  has an equal chance of being the pattern that is chosen by the host. This means that if one pattern appears on the list twice, it is twice as likely of being chosen as a pattern which appears on the same list only once."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RangeGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestDoors",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] bestDoors(String[] possible, String[] hints)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"50-75\",\"250-1000\"}",
+			"id":0,
+			"input":"{\"1-100\",\"100-200\",\"200-300\"}",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"{\"2000-4000\",\"500\"}",
+			"id":0,
+			"input":"{\"100-900 1111\",\"200-800 2222\",\"300-700 3333\",\"4444\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{\"1400000000-2000000000\",\"400000000-600000000\"}",
+			"id":0,
+			"input":"{\"346591240\",\"858005279\",\"1321831520\",\"1453846384\",\"1972718383\",\"530431653-1848872872\"}",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"possible will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of possible will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of possible will conform to the rules of &lt;doors&gt;, as specified in the grammar above."
+		},
+		{
+			"order":4,
+			"val":"For each element of possible, the ranges contained therein will be non-overlapping and in ascending order."
+		},
+		{
+			"order":5,
+			"val":"hints will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of hints will contain between 2 and 50 characters, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of hints will conform to the rules of &lt;doors&gt;, as specified in the grammar above."
+		},
+		{
+			"order":8,
+			"val":"For each element of hints, the ranges contained therein will be non-overlapping and in ascending order."
+		},
+		{
+			"order":9,
+			"val":"The information given in hints will always be consistent with at least one pattern in possible."
+		}
+	]
+}

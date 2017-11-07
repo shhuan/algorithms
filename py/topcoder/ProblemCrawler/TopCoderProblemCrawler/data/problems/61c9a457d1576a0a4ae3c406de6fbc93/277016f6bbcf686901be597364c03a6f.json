@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13370&rd=16313",
+	"statement":"You have one or more sequences of shopping carts. You are given the lengths of these sequences in a int[] <b>a</b>. You are going to remove all the shopping carts.<br /><br /><br /><br /> The process of removing the carts will consist of one or more turns. Each turn will take exactly one minute. At the beginning of each turn, you will have some sequences of carts. For each of those sequences you can choose between two options: \n <ul> \n  <li>split it (in an arbitrary place) into two shorter sequences</li> \n  <li>remove one shopping cart from the sequence</li> \n </ul><br /><br /><br /><br /> There is one additional constraint: during the entire process you can only choose to split a sequence at most <b>b</b> times.<br /><br /><br /><br /> You are given int[] <b>a</b> and int <b>b</b>. Compute and return the smallest number of minutes in which it is possible to remove all the carts.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CartInSupermarket",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calcmin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int calcmin(int[] a, int b)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{8}",
+			"note":"We have a single sequence of 8 carts and we can use at most 3 splits. The optimal solution takes 4 minutes. During the first minute split the sequence of 8 carts into two sequences with 4 carts each. During the second minute perform two splits, dividing each of the two 4-cart sequences into two new sequences with 2 carts each. Thus, after the second minute you will have four sequences of 2 carts. In the third minute choose to remove a cart from each of them. Repeat that choice in the fourth minute and you are done.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{6,6,5}",
+			"note":"One optimal solution with only 4 minutes looks as follows: ",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{12,5,6,2,6,8}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{15,20,11,13,18,24,25,21,22,10,15,14,19}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"6478",
+			"id":0,
+			"input":"{671122748,846444748,84701624,608579554,672060899,967957440,31438849,734849843,376589643,904285209 ,80693344,211737743,85405464,444633541,293184188,935462519,146753109,972886045,496631016,601669536 ,257574086,958464570,6294570,546189534,668105964,601197313,784337929,921840143,70408284,722040626 ,253400894,56411549,811940644,152086353,122638884,776352066,118932182,177589709,538122558,127914469 ,523761221,290027568,734517444,819458123,699130727,784698122,810265337,283326309,593596316,368671876}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"The number of elements in a will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in a will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"b will be between 0 and 1,000,000,000, inclusive."
+		}
+	]
+}

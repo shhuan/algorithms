@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2827&rd=5070",
+	"statement":"<p> Johnny Indecision has a change purse with some change in it. However, he is deathly afraid of having to figure out what might happen if he has to spend some of it. This fear arises because there may be more than one way to give out a certain amount of change. For example, if he has 1 dime (worth 10 cents) and 2 nickels (worth 5 cents apiece), there are two ways to make 10 cents. He also does not want to incur any more change, so he wants to be sure that he has exact change for any amount up to the amount of money he has. </p> <p> So he would like to exchange his current change with some more predictable coins at the bank. As the bank clerk, you must solve Johnny's dilemma by giving him enough change to allow him to be able to spend any amount of money up to the amount he currently has, but the coins you give him must provide exactly one way to make each of those amounts. In addition, he would like to have as few coins as possible, even if it means having more smaller denomination coins. For example, if Johnny brings 49 cents to the bank, and the only coins available are 1, 10, and 25 cent pieces, there are three valid options: </p>\n <ol> \n  <li> one 25-cent piece and 24 1-cent pieces </li> \n  <li> four 10-cent pieces and nine 1-cent pieces </li> \n  <li> 49 1-cent pieces </li> \n </ol> Each of these combinations results in only one way to make 1 to 49 cents, but the second way is preferable because it has the least number of coins of the three options. If multiple ways exist which have the fewest coins possible, return the way which has the most coins of the highest denomination. If multiple ways have an equal number of coins with the highest denomination, then return the way with the most coins of the second highest denomination, and so on. For example, with a monetary system that includes 1, 3, 6, and 2-cent pieces, and a balance of 11 cents, there are two answers with four coins: \n <ol> \n  <li>two 1-cent pieces, a one 3-cent piece, and a 6-cent piece</li> \n  <li>one 1-cent piece, two 2-cent pieces, and a 6-cent piece</li> \n </ol> The first way is preferable because of its higher valued 3-cent piece. <p></p> <p> You will be given a int[] <b>coinTypes</b>, which will be a list containing the value of each type of coin in the monetary system (which will always include a coin valued at 1). You will also be given an int <b>value</b> specifying the amount of money Johnny has. The return value should be a int[] indicating how many coins of each type you should give Johnny back. Element i of the return value should be how many coins valued at <b>coinTypes</b>[i] should be given to Johnny. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ChangeOptimizer",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fewestCoins",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] fewestCoins(int[] coinTypes, int value)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"49",
+			"id":0,
+			"input":"{1,10,25}",
+			"note":"From the problem statement",
+			"order":1
+		},
+		{
+			"expect":"11",
+			"id":0,
+			"input":"{1,3,6,2}",
+			"note":"From the problem statement",
+			"order":2
+		},
+		{
+			"expect":"1234567",
+			"id":0,
+			"input":"{1,2,3,4,5,6,7,8,9,10}",
+			"order":3
+		},
+		{
+			"expect":"65864135",
+			"id":0,
+			"input":"{91001,3567,222123,4456,1,732234,123793,982312,14781}",
+			"order":4
+		},
+		{
+			"expect":"1000000",
+			"id":0,
+			"input":"{1,10,100,1000,10000}",
+			"order":5
+		},
+		{
+			"expect":"333440639",
+			"id":0,
+			"input":"{147323, 544149, 649, 26, 3473340, 267243, 6946680, 587, 13893360, 17103552, 27786720, 60400539, 83360160, 68414208, 72482916, 1, 687, 4758}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"coinTypes has between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of coinTypes is between 1 and 100,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"There will be no repeated values in coinTypes."
+		},
+		{
+			"order":4,
+			"val":"There will be exactly one element in coinTypes equal to 1."
+		},
+		{
+			"order":5,
+			"val":"value is between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

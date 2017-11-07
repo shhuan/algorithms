@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13765&rd=16464",
+	"statement":"<p> Bob is going to create a graph with <b>N</b> nodes. The graph will be constructed in two steps. First, Bob will take <b>N</b> isolated vertices, label them 1 through <b>N</b> and color each of them using one of <b>K</b> colors. Then, Bob will add some directed edges to the graph. For each i between 2 and <b>N</b>, inclusive, Bob may choose a single value j &lt; i such that the nodes i and j have different colors. If he does, he will add the edge from i to j to his graph. Note that Bob may choose not to add any edge from node i, even if there are some valid choices of j. </p> <p> Two graphs are considered the same if they have the same node colors and the same set of edges. </p> <p> You are given the longs <b>N</b> and <b>K</b>. You are also given an int <b>M</b>. Compute and return the number of different graphs Bob may construct, modulo <b>M</b>. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ColorfulLineGraphs",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countWays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countWays(long N, long K, int M)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"15",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"100000",
+			"id":0,
+			"input":"100000",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"1000000000000",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1000000000000",
+			"id":0,
+			"input":"5000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000,000,000,000 (10^12), inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and 1,000,000,000,000 (10^12), inclusive."
+		},
+		{
+			"order":3,
+			"val":"M will be between 2 and 1,000,000 (10^6), inclusive. "
+		}
+	]
+}

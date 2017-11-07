@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13393&rd=16062",
+	"statement":"<p> Cat Taro and Fox Jiro work with a square grid with N rows and N columns (N is even). Each cell of the grid is painted either black or white. You are given a String[] <b>grid</b> which represents the current state of the grid. Each element of <b>grid</b> represents one row of the grid. In <b>grid</b>, the character 'W' represents a white cell, and the character 'B' represents a black cell. </p> <p> </p> <p> Taro works with the rows of the grid. He will take zero or more turns. In each turn he can choose any row of the grid and perform one of the following operations: </p> \n <ul> \n  <li> Paint all black cells of the row white. </li> \n  <li> Paint all white cells of the row black. </li> \n </ul> <p> Jiro works with the columns of the grid. He thinks that a column is bad if there are more than N/2 consecutive cells of the same color in the column. He is happy only if there are no bad columns in the grid. </p> <p> </p> <p> Return the minimum number of turns that Taro must perform in order to make Jiro happy. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TaroJiroGrid",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getNumber(String[] grid)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"WB\", \"BB\"}",
+			"note":"Initially, Jiro is not happy because all cells of the column 1 (0-based index) are black. In one operation, Taro can paint the first row white. After the operation, Jiro will be happy about the grid. Thus, the answer is 1.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"WB\", \"WW\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"WB\", \"WB\"}",
+			"note":"In this case, Taro should paint the first row white, and the second one black (or vice versa). Note that it is not possible to make Jiro happy in fewer than two operations.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"WBBW\", \"WBWB\", \"WWBB\", \"BWWW\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"WBBWBB\", \"BBWBBW\", \"WWBWBW\", \"BWWBBB\", \"WBWBBW\", \"WWWBWB\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"N will be even."
+		},
+		{
+			"order":3,
+			"val":"grid will contain exactly N elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of grid will contain exactly N characters."
+		},
+		{
+			"order":5,
+			"val":"Each character in grid will be 'W' or 'B'."
+		}
+	]
+}

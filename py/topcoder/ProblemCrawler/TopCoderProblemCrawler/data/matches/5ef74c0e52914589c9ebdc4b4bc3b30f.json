@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.05,
+			"constraints":[],
+			"correctRatio":66.08,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8527&rd=11121",
+			"name":"MarblesRegroupingEasy",
+			"notes":[],
+			"submission":342
+		},
+		{
+			"avgPts":350.91,
+			"constraints":[],
+			"correctRatio":76.58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8084&rd=11121",
+			"name":"IntervalSubsets",
+			"notes":[],
+			"submission":222
+		},
+		{
+			"avgPts":511.45,
+			"constraints":[],
+			"correctRatio":69.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8086&rd=11121",
+			"name":"StrangeArray",
+			"notes":[],
+			"submission":59
+		}
+	],
+	"name":"Single Round Match 387 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=11121"
+}

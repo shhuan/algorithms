@@ -1,0 +1,112 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12110&rd=15097",
+	"statement":"You are given ints <b>N</b>, <b>X0</b>, <b>XMul</b>, <b>XAdd</b>, <b>XMod</b>, <b>Y0</b>, <b>YMul</b>, <b>YAdd</b>, <b>YMod</b>. Generate N+2 points (X[0], Y[0]), (X[1], Y[1]), ..., (X[N+1], Y[N+1]) as follows: <pre>\nX[0] = <b>X0</b>,\nX[i] = (X[i-1] * <b>XMul</b> + <b>XAdd</b>) % <b>XMod</b>, 0 &lt; i &lt; N+2,\nY[0] = <b>Y0</b>,\nY[i] = (Y[i-1] * <b>YMul</b> + <b>YAdd</b>) % <b>YMod</b>, 0 &lt; i &lt; N+2.\n</pre> You can assume that no two of those N+2 points will coincide and no 3 points will lie on the same straight line. <br /><br /><br /><br /> Let S be the set of points 0-th to (N-1)-th, P be the N-th point and Q be the (N+1)-th point. In other words, S = {(X[0], Y[0]), (X[1], Y[1]), ..., (X[N-1], Y[N-1])}, P = (X[N], Y[N]) and Q = (X[N+1], Y[N+1]). A subset T of points from S is called <i>nice</i> if: \n <ul> \n  <li>It contains at least 3 points.</li> \n  <li>The convex hull of points from T contains both P and Q inside itself. (See notes for the definition of &quot;convex hull&quot;.)</li> \n </ul> Return the number of nice subsets, modulo 1,000,000,007.",
+	"notes":[
+		{
+			"order":1,
+			"val":"A set of points A is called  if for any two points p1 and p2 from A, all points of the line segment p1-p2 also belong to A."
+		},
+		{
+			"order":2,
+			"val":"A polygon is called  if its interior is a convex set."
+		},
+		{
+			"order":3,
+			"val":"A set S is called  with respect to a certain property, if this property is true for S, but false for any proper subset of S."
+		},
+		{
+			"order":4,
+			"val":"The  of a set of points A is the minimal convex set that contains all points from A. The convex hull can be shown to be a convex polygon with all vertices being points from A."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PQHulls",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countSubsets",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countSubsets(int N, int X0, int XMul, int XAdd, int XMod, int Y0, int YMul, int YAdd, int YMod)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"4",
+			"note":"S = {(3, 0), (2, 2), (9, 1), (0, 5)}. P = (3, 3). Q = (2, 4).    A nice subset needs to contain points 2 and 3 and least one of points 0 and 1.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"5",
+			"note":"S = {(1, 5), (3, 1), (5, 8), (7, 7), (1, 2)}. P = (3, 4). Q = (5, 5).    4 nice subsets can be obtained by taking points 0, 1 and 3, and by optionally adding each of the points 2 and 4 to them. One more nice subset consists of points 1, 2, 3 and 4.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"5",
+			"note":"There can be no nice subsets.",
+			"order":3
+		},
+		{
+			"expect":"9461448",
+			"id":0,
+			"input":"99",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"6927240",
+			"id":0,
+			"input":"2000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 3 and 2,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"XMod and YMod will each be between 1 and 100,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"X0, XMul and XAdd will each be between 0 and XMod-1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Y0, YMul and YAdd will each be between 0 and YMod-1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"No two of the N+2 points (generated as described in the problem statement) will occupy the exact same place."
+		},
+		{
+			"order":6,
+			"val":"No three of the N+2 points (generated as described in the problem statement) will lie on the same straight line."
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4718&rd=8012",
+	"statement":"<p>We define the goodness of a string S as the number of letters that appear in S only once. For instance, the goodness of the string &quot;CHALLENGE&quot; is 5 because it contains 5 distinct letters 'C', 'H', 'A', 'N' and 'G'. </p> <p>You are given a String[] <b>superstring</b>. <b>superstring</b> is split for convenience only, so you should concatenate all of its elements in order and treat it as a single string. You are to find the substring of <b>superstring</b> that has the maximal goodness. In case of a tie, return the substring that comes earliest alphabetically.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SuperString",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"goodnessSubstring",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String goodnessSubstring(String[] superstring)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"CHALLENG\"",
+			"id":0,
+			"input":"{\"CHALLENGE\"}",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"THEWORD\"",
+			"id":0,
+			"input":"{\"THEWORD\"}",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"HEMULTI\"",
+			"id":0,
+			"input":"{\"THE\", \"MULTI\", \"LINE\", \"TEST\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"AZYXWVUTSRQPONMLKJIHGFEDCB\"",
+			"id":0,
+			"input":"{\"ZYXWVUTSRQPONMLKJIHGFEDCBA\", \"ZYXWVUTSRQPONMLKJIHGFEDCBA\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"superstring will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of superstring will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of superstring will contain uppercase letters ('A'-'Z') only."
+		}
+	]
+}

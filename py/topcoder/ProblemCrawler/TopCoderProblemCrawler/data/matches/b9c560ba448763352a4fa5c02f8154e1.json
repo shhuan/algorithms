@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":163.61,
+			"constraints":[],
+			"correctRatio":37.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11842&rd=14732",
+			"name":"ImportantSequence",
+			"notes":[],
+			"submission":804
+		},
+		{
+			"avgPts":263.98,
+			"constraints":[],
+			"correctRatio":55.42,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11840&rd=14732",
+			"name":"RandomColoring",
+			"notes":[],
+			"submission":83
+		},
+		{
+			"avgPts":492.98,
+			"constraints":[],
+			"correctRatio":55.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11870&rd=14732",
+			"name":"ProductQuery",
+			"notes":[],
+			"submission":9
+		}
+	],
+	"name":"Single Round Match 540 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14732"
+}

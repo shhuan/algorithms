@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13627&rd=16278",
+	"statement":"John is standing at the origin of an infinite two-dimensional grid. He is going to move along this grid. During each second he can either stay where he is or he can move by one unit in one of the four cardinal directions (north, south, east, or west). Some of the grid points are blocked. John is not allowed to move to a blocked grid point. <br /><br /><br /><br /> You are given the coordinates of the blocked grid points as int[]s <b>x</b> and <b>y</b>. For each valid i, the grid point that is <b>x</b>[i] units east and <b>y</b>[i] units north of the origin is blocked. You are also given an int <b>k</b>. Compute and return the maximal possible x-coordinate of a point John can reach in <b>k</b> seconds. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheGridDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int find(int[] x, int[] y, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{-2,-1,0,1}",
+			"id":0,
+			"input":"{1,1,1,1}",
+			"note":"The optimal strategy is to move two times north to (0, 2) and then two times east to (2,2).",
+			"order":1
+		},
+		{
+			"expect":"{0, -1, 1, 0}",
+			"id":0,
+			"input":"{-1, 0, 0, 1}",
+			"note":"John can not make any moves.",
+			"order":2
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"{}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{0,-1,1,-2,2,-3,3,-4,4,-5,5}",
+			"id":0,
+			"input":"{1,0,0,-1,-1,-2,-2,-3,-3,-4,-4}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 0 and 47 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of x will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of y will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"All pairs (x[i], y[i]) will be distinct."
+		},
+		{
+			"order":6,
+			"val":"Each pair (x[i], y[i]) will be different from (0, 0)."
+		},
+		{
+			"order":7,
+			"val":"k will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

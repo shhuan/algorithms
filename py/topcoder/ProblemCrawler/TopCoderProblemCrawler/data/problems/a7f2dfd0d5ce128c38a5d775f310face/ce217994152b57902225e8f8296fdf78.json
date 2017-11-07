@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6150&rd=9984",
+	"statement":"<p> We want to build a new phone network between <b>numPoints</b> points. A number of possible cables is available to construct the network. Each of the cables connects two of the points and has an associated quality and cost. We want to select a number of these cables such that: </p> <p> 1) All the points are connected to each other, either directly or via other points. </p> <p> and </p> <p> 2) The quality/cost ratio (i.e., the sum of the qualities divided by the sum of the costs) is as high as possible. </p> <p> What is the best achievable ratio? If it is impossible to connect all the points, return -1. </p> <p> The available cables are described by a String[] <b>cables</b>. Each element of <b>cables</b> consists of four integers separated by single spaces. The first two integers describe the two points connected by the cable. The third integer describes the quality of the cable and the fourth integer describes its cost. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Your return must have relative or absolute error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PhoneNetwork",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestQuality",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double bestQuality(int numPoints, String[] cables)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"1 2 6 5\",\"2 3 3 4\",\"3 4 5 2\",\"4 1 3 3\"}",
+			"id":0,
+			"input":"4",
+			"note":"By taking cables 1, 2 and 4, we obtain a quality/cost ratio of (6+5+3)/(5+2+3) = 1.4.",
+			"order":1
+		},
+		{
+			"expect":"{\"1 2 6 5\",\"2 3 3 4\",\"3 4 5 2\",\"4 1 3 3\"}",
+			"id":0,
+			"input":"5",
+			"note":"It's impossible to connect point 5 to the others.",
+			"order":2
+		},
+		{
+			"expect":"{\"1 2 1 10\",\"2 3 3 3\",\"2 4 3 2\",\"3 4 3 1\",\"3 4 2 1\"}",
+			"id":0,
+			"input":"4",
+			"note":"The cable needed to connect point 1 to the rest is so bad that it pays off to use all the other cables, including the two different cables connecting points 3 and 4. ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"numPoints is between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"cables has between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of cables has length between 0 and 50, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of cables consists of four integers with no leading zeroes, separated by single spaces."
+		},
+		{
+			"order":5,
+			"val":"The first two integers of each element of cables are between 1 and numPoints, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The first two integers of each element of cables are not equal."
+		},
+		{
+			"order":7,
+			"val":"The third and fourth integers of each element of cables are between 1 and 100,000, inclusive."
+		}
+	]
+}

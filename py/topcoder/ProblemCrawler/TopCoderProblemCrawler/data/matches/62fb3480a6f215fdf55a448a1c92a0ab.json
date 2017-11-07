@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":230.93,
+			"constraints":[],
+			"correctRatio":62.7,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=440&rd=4090",
+			"name":"DiamondSeq",
+			"notes":[],
+			"submission":185
+		},
+		{
+			"avgPts":354.31,
+			"constraints":[],
+			"correctRatio":77.07,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=473&rd=4090",
+			"name":"Exhibition",
+			"notes":[],
+			"submission":157
+		},
+		{
+			"avgPts":492.19,
+			"constraints":[],
+			"correctRatio":39.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=475&rd=4090",
+			"name":"DiamondSet",
+			"notes":[],
+			"submission":46
+		}
+	],
+	"name":"Single Round Match 72 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4090"
+}

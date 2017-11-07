@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13797&rd=16462",
+	"statement":"<i>Note that this problem has a time limit of 3 seconds.</i> <br /><br /> <br /><br /> The city of Treeonto is a tree of <b>N</b> vertices numbered from 0 to <b>N</b>-1. For each valid i, an edge connects vertex i+1 and vertex <b>edges</b>[i]. Travelling along an edge in the graph takes one minute. <br /><br /> <br /><br /> The citizens of Treeonto are upset that it takes too long to get around, so they have decided to build a teleporter. The teleporter will consist of two identical booths, each located in some vertex. If a citizen enters either booth, he or she may choose to teleport to the other booth instantly. It is allowed to build both booths in the same vertex. <br /><br /> <br /><br /> We define the distance between two vertices as the smallest number of minutes needed to get from one vertex to the other. Let D be the maximum distance between any two vertices. Return the number of ways to place the teleporter such that D does not exceed <b>X</b>.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PublicTransitHard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countValidTeleporters",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countValidTeleporters(int N, int[] edges, int X)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 1, 2}",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"{0, 0}",
+			"id":0,
+			"input":"3",
+			"note":"Any teleporter placement is valid.",
+			"order":2
+		},
+		{
+			"expect":"{0, 0, 0, 1, 1}",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{0, 1, 0, 1, 2, 4}",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{0, 1, 0, 2, 0, 0, 4, 5, 8, 9, 10, 11, 8, 4, 6}",
+			"id":0,
+			"input":"16",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{0, 1, 1, 3, 1, 5, 1, 0, 8, 8, 10, 10, 12, 10, 10, 8, 16, 16, 18, 19, 19, 21, 19, 19, 24, 25, 25, 27, 18, 0, 30, 30, 30, 33, 34, 34, 34, 30, 38, 39, 39, 38, 42, 43, 0, 45, 45, 45, 48, 45, 45, 51, 45, 53, 54}",
+			"id":0,
+			"input":"56",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 2000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"edges will contain N-1 elements."
+		},
+		{
+			"order":3,
+			"val":"For each valid i, edges[i] will be between 0 and i, inclusive."
+		},
+		{
+			"order":4,
+			"val":"X will be between 0 and N, inclusive."
+		}
+	]
+}

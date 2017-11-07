@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":285.26,
+			"constraints":[],
+			"correctRatio":71.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13350&rd=16190",
+			"name":"LoopyPath",
+			"notes":[],
+			"submission":7
+		},
+		{
+			"avgPts":372.72,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13439&rd=16190",
+			"name":"MagicalRocketCar",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13460&rd=16190",
+			"name":"FrozenStandings",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2014 TCO Algorithm > Finals",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16190"
+}

@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8316&rd=10805",
+	"statement":"<p> A ticket number that contains exactly 2*<b>K</b> digits is called charming if and only if at least one of the following conditions is satisfied: </p>\n <ul> \n  <li>The sum of the first <b>K</b> digits is equal to the sum of the last <b>K</b> digits.</li> \n  <li>The sum of all the digits at positions with odd indices is equal to the sum of all the digits at positions with even indices.</li> \n </ul><p></p> <p> Also, you think that some digits are better than others, so a charming number must contain only digits that you consider to be good. These digits are given in the String <b>good</b>. Determine the number of different charming numbers containing exactly 2*<b>K</b> digits. Return this number modulo 999983. Remember that ticket numbers may contain leading zeroes.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CharmingTickets",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int K, String good)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"0123456789\"",
+			"id":0,
+			"input":"1",
+			"note":"Only \"XX\" numbers are charming.",
+			"order":1
+		},
+		{
+			"expect":"\"21\"",
+			"id":0,
+			"input":"2",
+			"note":"Only 1111, 1122, 1212, 1221, 2112, 2121, 2211, 2222 are charming numbers.",
+			"order":2
+		},
+		{
+			"expect":"\"0987654321\"",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"0123456789\"",
+			"id":0,
+			"input":"137",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"K will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"good will contain between 1 and 10 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"good will contain only digits ('0' - '9')."
+		},
+		{
+			"order":4,
+			"val":"All characters in good will be distinct."
+		}
+	]
+}

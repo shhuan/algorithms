@@ -1,0 +1,112 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5904&rd=9810",
+	"statement":"<p>You have to escape from a laboratory, and you have <b>pills</b> number of &quot;shrinking pills&quot; to help you. Your normal height is 100 units, but when you take one of these pills your height decreases by <b>pspeed</b> units each second. You keep shrinking until your height reaches zero or less, and at that moment, you instantly return to your normal height. For example, if you take a pill that reduces your height by 40 units per second at time 0, your height will be 60 at time 1, then 20 at time 2, and 100 again at time 3. Note that you will never be zero or less units tall. You can only take one pill at a time, and you can only take a pill when you are at your normal size.</p> <p>There are doors in the laboratory that close downward from the ceiling to the floor. All the doors start closing immediately. Each door is <b>door</b> units tall and drops down by <b>dspeed</b> units each second. For example, consider a door with a height of 200 units, and a closing speed of 150. The door will be 200 units from the floor at time 0, 50 units from the floor at time 1, and fully closed at time 2.</p> <p>All movements are discrete and simultaneous. For example, suppose you are standing next to a door that is 200 units from the floor. The door's closing speed is 125, and your pill's shrinking speed is 25. You take the pill and move towards the door. In the next second, the door will be 75 (200-125) units from the floor, you will be 75 units tall and you will be standing right under the door. If you do not move again, the door will kill you in the next second. If you do move, you'll be on the other side of the door with a height of 50 units, and the door will be fully closed.</p> <p> At each second, you can either stay where you are or move horizontally or vertically by one square. You will be given a map of the laboratory as a String[], where <tt>'@'</tt> represents your starting square, <tt>'E'</tt> the exit, <tt>'#'</tt> a wall, uppercase <tt>'X'</tt> a door and <tt>' '</tt> (space) an empty square. The laboratory will be completely surrounded by walls.</p> <p>You are given <b>pills</b>, the number of available pills, <b>pspeed</b>, the shrinking speed of the pills, <b>dspeed</b>, the closing speed of the doors, <b>door</b>, the height of each door, and <b>lab</b>, the map of the laboratory. Return the minimum number of seconds needed to escape from the laboratory, or -1 if it is not possible.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ShrinkingPills",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"escape",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int escape(int pills, int pspeed, int dspeed, int door, String[] lab)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"50",
+			"id":0,
+			"input":"3",
+			"note":"Second 0: You are standing on the  and all the doors are 100 units from the floor. ... Second 4: You are next to the first door and it is 96 units from the floor. Your height is 100, and therefore you have to take a pill to be able to pass under the door. Second 5: You have taken a pill and your height is 50 units. You are standing under the door which is 95 units from the floor. Second 6: You have returned to your normal height. The first door has been left behind. ... Second 17: You have taken the last pill. You are 50 units tall and you are standing under the last door that is 83 units from the floor. ... Second 19: You reach the exit point.",
+			"order":1
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"1",
+			"note":"You take a pill as soon as possible, and still you have to wait 2 seconds before you can move towards the door.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"0",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pills will be between 0 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"pspeed will be between 1 and 99, inclusive."
+		},
+		{
+			"order":3,
+			"val":"door will be between 1 and 200, inclusive."
+		},
+		{
+			"order":4,
+			"val":"dspeed will be between 1 and door, inclusive."
+		},
+		{
+			"order":5,
+			"val":"lab will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of lab will contain between 3 and 50 characters, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of lab will be of the same size."
+		},
+		{
+			"order":8,
+			"val":"Each character in lab will be either ' ', 'X', '#', '@' or 'E'."
+		},
+		{
+			"order":9,
+			"val":"lab will contain exactly one '@'."
+		},
+		{
+			"order":10,
+			"val":"lab will contain exactly one 'E'."
+		},
+		{
+			"order":11,
+			"val":"lab will be surrounded by '#'."
+		}
+	]
+}

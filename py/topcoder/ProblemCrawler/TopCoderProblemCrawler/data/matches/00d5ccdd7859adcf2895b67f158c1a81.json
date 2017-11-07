@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":220.63,
+			"constraints":[],
+			"correctRatio":85.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10177&rd=13515",
+			"name":"ProductOfDigits",
+			"notes":[],
+			"submission":554
+		},
+		{
+			"avgPts":349.02,
+			"constraints":[],
+			"correctRatio":44.35,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10174&rd=13515",
+			"name":"StrengthOrIntellect",
+			"notes":[],
+			"submission":239
+		},
+		{
+			"avgPts":522.28,
+			"constraints":[],
+			"correctRatio":43.95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10170&rd=13515",
+			"name":"ProductOfPrices",
+			"notes":[],
+			"submission":157
+		}
+	],
+	"name":"Single Round Match 424 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13515"
+}

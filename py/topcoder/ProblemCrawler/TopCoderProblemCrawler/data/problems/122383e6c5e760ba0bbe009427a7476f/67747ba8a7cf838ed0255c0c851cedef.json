@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1852&rd=4655",
+	"statement":"<p>The theory of elliptic curves is involved with finding the number and properties of rational points -- that is, points whose x and y values are rational numbers -- and studying relationships between them. Elliptic curves, however, are curves of the form y^2 + ay + b = x^3 + cx^2 + dx + e. You feel that this type of equation is a bit too restrictive, and so you're going to generalize things a bit.</p> <p>Given a String <b>equation</b>, and two ints <b>xmax</b> and <b>ymax</b>, find the number of lattice points (x,y) that satisfy <b>equation</b> and such that 0 &lt;= x &lt;= xmax and 0 &lt;= y &lt;= ymax. Lattice points are those with both coordinates being integers.</p> <p>The string representing the equation follows the format &quot;f(y)=g(x)&quot;, in more detail below:</p> <p> Equation := Function(y) &quot;=&quot; Function(x)<br /><br /> Function(y) := Term(y) | Term(y) + Function(y)<br /><br /> Term(y) := Integer &quot;y&quot; Power | Integer<br /><br /> Integer := 0-9<br /><br /> Power := &quot;^&quot; Integer<br /><br /></p> <p>(Function(x) is analogous to Function(y).)</p> <p>If there are terms in a given function that are of the same power, consider their coefficients to be added together. For example, the equation &quot;9y^3+5y^3=3+6&quot; would be equivalent to &quot;14y^3=9&quot; (except that the latter is not in proper form and is thus illegal as input).</p> <p>Note that no term of the form &quot;Nx^0&quot; will be allowed, to prevent ambiguity regarding 0^0.</p>",
+	"notes":[{
+		"order":1,
+		"val":"For C++ coders, the 64-bit integer type is  (a gcc extension)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Polynomials",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"integralPoints",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long integralPoints(int ymax, int xmax, String equation)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"The points that work are those where y = x, that is, (0,0), (1,1), (2,2), (3,3), (4,4), and (5,5).",
+			"order":1
+		},
+		{
+			"expect":"34",
+			"id":0,
+			"input":"65",
+			"note":"The points are (0,0), (1,1), (4,8), (9,27), and (16,64).",
+			"order":2
+		},
+		{
+			"expect":"1000000",
+			"id":0,
+			"input":"1000000",
+			"note":"Constants by themselves are allowed on either or both sides.",
+			"order":3
+		},
+		{
+			"expect":"15982",
+			"id":0,
+			"input":"55000",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"xmax will be between 0 and 1000000, inclusive"
+		},
+		{
+			"order":2,
+			"val":"ymax will be between 0 and 1000000, inclusive"
+		},
+		{
+			"order":3,
+			"val":"equation will be between 3 and 50 characters, inclusive"
+		},
+		{
+			"order":4,
+			"val":"equation will follow the form &quot;f(y)=g(x)&quot; given above"
+		},
+		{
+			"order":5,
+			"val":"no y between 0 and ymax, inclusive, will cause f(y) to exceed 2^63 - 1"
+		},
+		{
+			"order":6,
+			"val":"no x between 0 and xmax, inclusive, will cause g(x) to exceed 2^63 - 1"
+		},
+		{
+			"order":7,
+			"val":"no term of the form Nx^0 will be allowed in the input."
+		},
+		{
+			"order":8,
+			"val":"no term of the form Ny^0 will be allowed in the input."
+		}
+	]
+}

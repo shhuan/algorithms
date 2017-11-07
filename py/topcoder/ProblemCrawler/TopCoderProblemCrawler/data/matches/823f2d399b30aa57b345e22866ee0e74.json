@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.33,
+			"constraints":[],
+			"correctRatio":89.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6127&rd=9922",
+			"name":"LastStone",
+			"notes":[],
+			"submission":192
+		},
+		{
+			"avgPts":237.77,
+			"constraints":[],
+			"correctRatio":8.99,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6029&rd=9922",
+			"name":"FamilyTree",
+			"notes":[],
+			"submission":178
+		},
+		{
+			"avgPts":620.59,
+			"constraints":[],
+			"correctRatio":53.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6076&rd=9922",
+			"name":"TakeBus",
+			"notes":[],
+			"submission":66
+		}
+	],
+	"name":"TCO 06 > Online Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9922"
+}

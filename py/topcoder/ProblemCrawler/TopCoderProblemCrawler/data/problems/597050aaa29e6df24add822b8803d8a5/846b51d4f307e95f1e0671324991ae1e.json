@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12615&rd=15693",
+	"statement":"Two sequences A and B are called <i>similar</i> if they are both non-empty, have the same length, and have the following property: we can obtain two identical sequences by deleting one element of A and one element of B. (The deleted elements do not necessarily have to have the same index. The order of the remaining elements in each sequence has to be preserved.) <br /><br /><br /><br /> You are given a int[] <b>seq</b> and a int <b>bound</b>. Consider all sequences such that each element is an integer between 1 and <b>bound</b>, inclusive. Count how many of such sequences are similar to <b>seq</b>. Return this count modulo 1,000,000,009.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SimilarSequences",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int[] seq, int bound)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1, 1}",
+			"note":"We need to count the number of sequences which consist of elements in [1, 3] and are similar to (1, 1). These sequences are (1, 1), (1, 2), (2, 1), (1, 3) and (3, 1).",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{1, 2}",
+			"note":"Any valid sequence is similar to (1, 2).",
+			"order":2
+		},
+		{
+			"expect":"1000000000",
+			"id":0,
+			"input":"{999999999}",
+			"note":"Note that after deleting the elements from the sequences, the resulting sequences may be empty.",
+			"order":3
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{1, 2, 3, 4, 5}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1000000000",
+			"id":0,
+			"input":"{5, 8, 11, 12, 4, 1, 7, 9}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"seq will contain between 1 and 40 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"bound will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element in seq will be between 1 and bound, inclusive."
+		}
+	]
+}

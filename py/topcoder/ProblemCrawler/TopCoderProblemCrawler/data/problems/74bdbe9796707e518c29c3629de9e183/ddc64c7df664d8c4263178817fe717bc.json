@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3037&rd=5861",
+	"statement":"An entry in a Thesaurus is a list of words that are all synonyms. Each entry contains no duplicates within it. It is possible that two entries might have some common words, but the editors (who are somewhat cheap) have decided that if any two entries have 2 or more words in common then they should be combined into a single entry. <p> This editing process may produce new entries which can be combined. The final Thesaurus must contain no pair of entries that have 2 or more words in common. Of course, each entry must contain no duplicates. </p><p> Create a class Thesaurus that contains a method edit that is given a String[] <b>entry</b>, the entries in the original Thesaurus. The method returns the edited Thesaurus as a String[]. Each element of <b>entry</b> has no leading or trailing spaces and has its words separated by a single space. Each element of the return should also have no leading or trailing spaces and have its words separated by a single space. In addition, the words within each element of the return must be in alphabetical order, and the elements in the return must appear in alphabetical order. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Thesaurus",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"edit",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] edit(String[] entry)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"ape monkey wrench\", \"strain twist wrench\" }",
+			"id":0,
+			"input":"{\"ape monkey wrench\", \"wrench twist strain\"}",
+			"note":" These two entries have only one common word so they cannot be combined. After rearranging the words within each entry to put the words into alphabetical order, the first entry is first alphabetically. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \"ape monkey wrench\", \"frugue monkey twist\", \"strain twist wrench\" }",
+			"id":0,
+			"input":"{\"ape monkey wrench\", \"wrench twist strain\", \"monkey twist frugue\"}",
+			"note":" No entries could be combined, but two had to be arranged, and the order was changed.",
+			"order":2
+		},
+		{
+			"expect":"Returns: { \"ape frugue monkey strain twist wrench\" }",
+			"id":0,
+			"input":"{\"ape monkey wrench\", \"wrench twist strain\", \"monkey twist frugue strain\"}",
+			"note":" The first two entries could not be combined, but the last two could. After they were combined, the first entry shared both \"wrench\" and \"monkey\" with the new combined entry, so we ended up with just one entry. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: { \"cut point run score tear\", \"cut valley\", \"cute pretty\", \"dot point\" }",
+			"id":0,
+			"input":"{\"point run score\",\"point dot\",\"cut run tear score\",\"cut valley\",\"cute pretty\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"entry will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of entry will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of entry will consist of 1 or more &quot;words&quot; separated by single spaces."
+		},
+		{
+			"order":4,
+			"val":"Each element of entry will contain no leading or trailing spaces."
+		},
+		{
+			"order":5,
+			"val":"Each &quot;word&quot; will consist of 1 or more lowercase letters 'a'-'z'"
+		},
+		{
+			"order":6,
+			"val":"No element of entry will contain two identical words."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":228.29,
+			"constraints":[],
+			"correctRatio":84.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=323&rd=4030",
+			"name":"BusyHours",
+			"notes":[],
+			"submission":73
+		},
+		{
+			"avgPts":329.3,
+			"constraints":[],
+			"correctRatio":66.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=324&rd=4030",
+			"name":"Freight",
+			"notes":[],
+			"submission":59
+		},
+		{
+			"avgPts":467.61,
+			"constraints":[],
+			"correctRatio":70,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=328&rd=4030",
+			"name":"SparseArray",
+			"notes":[],
+			"submission":40
+		}
+	],
+	"name":"Single Round Match 59 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4030"
+}

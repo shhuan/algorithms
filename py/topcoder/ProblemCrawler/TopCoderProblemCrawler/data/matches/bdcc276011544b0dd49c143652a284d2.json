@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.3,
+			"constraints":[],
+			"correctRatio":62.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2275&rd=5077",
+			"name":"TextColumns",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":292.06,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2434&rd=5077",
+			"name":"TablePartitions",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2278&rd=5077",
+			"name":"Mhing",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2004 TCCC > Semifinal Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5077"
+}

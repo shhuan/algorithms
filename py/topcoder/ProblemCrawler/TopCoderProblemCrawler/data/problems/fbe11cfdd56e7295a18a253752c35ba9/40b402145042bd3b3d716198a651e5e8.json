@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3436&rd=6529",
+	"statement":"Given an int, <b>bound</b>, consider the infinite set of all reduced fractions whose numerator is a positive integer and whose denominator is a positive integer less than or equal to <b>bound</b>. Now, find the <b>N</b><sup>th</sup> smallest (indexed from 1) fraction and return it as a String in the form &quot;a/b&quot;, with no leading zeros in either integer. See example 0 for further clarifications.",
+	"notes":[{
+		"order":1,
+		"val":"A reduced fraction is one of the form  for which there is no integer  such that both  and  are divisible by ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NthFraction",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getFraction",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getFraction(int N, int bound)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"The ordered set of fractions is ",
+			"order":1
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"1000",
+			"order":2
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"1",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1000000",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 2,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"bound will be between 1 and 1000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":232.1,
+			"constraints":[],
+			"correctRatio":76.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=81&rd=3006",
+			"name":"StringParser",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":373.65,
+			"constraints":[],
+			"correctRatio":93.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=84&rd=3006",
+			"name":"Dice",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":651.04,
+			"constraints":[],
+			"correctRatio":84.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=83&rd=3006",
+			"name":"ShippingSequel",
+			"notes":[],
+			"submission":26
+		}
+	],
+	"name":"Single Round Match 7 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3006"
+}

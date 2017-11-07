@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12146&rd=15174",
+	"statement":"<p>A <i>Ball Triangle</i> is a set of identical balls placed in a triangular shape. A Ball Triangle has <b>N</b> rows, numbered 1 to <b>N</b> from top to bottom. For all i, 1 &lt;= i &lt;= <b>N</b>, the i-th row contains i balls. For example, the following image shows a Ball Triangle with <b>N</b>=3.</p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/FoxPaintingBalls/BallTrig-1.png\" /> <br /><br /> <br /><br /> <p>Fox Jiro has infinitely many Ball Triangles. He can paint a Ball Triangle according to the following conditions:</p> \n <ul> \n  <li>Each of the balls has to be painted either red, green, or blue.</li> \n  <li>No two adjacent balls may share the same color.</li> \n </ul> <p>The following image shows one valid coloring of a Ball Triangle for <b>N</b>=3.</p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/FoxPaintingBalls/BallTrig-2.png\" /> <br /><br /> <br /><br /> <p>Jiro wants to paint as many Ball Triangles as he can. As long as he follows the rules above, he may color the Ball Triangles in any way he likes. Some of the colored Ball Triangles may look exactly the same, but they don't have to. The only other constraint is the total amount of paint available to Jiro: In all the triangles together, he can paint at most <b>R</b> balls red, <b>G</b> balls green, and <b>B</b> balls blue.</p> <br /><br /> <p>You are given the longs <b>R</b>, <b>G</b>, and <b>B</b>. You are also given the int <b>N</b>. Return the maximum possible number of Ball Triangles Jiro can paint.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxPaintingBalls",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theMax",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long, long, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long theMax(long R, long G, long B, int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"Jiro can paint one Ball Triangle in the same way as in the image in the statement.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":"This time Jiro can paint no Ball Triangles.",
+			"order":2
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"8",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"48815737582834113",
+			"id":0,
+			"input":"19330428391852493",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"R, G and B will each be between 0 and 1,000,000,000,000,000,000 (10^18), inclusive."
+		},
+		{
+			"order":2,
+			"val":"N will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

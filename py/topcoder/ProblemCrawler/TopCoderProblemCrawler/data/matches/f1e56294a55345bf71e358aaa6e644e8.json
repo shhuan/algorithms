@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":214.9,
+			"constraints":[],
+			"correctRatio":91.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8519&rd=11122",
+			"name":"SmoothNumbers",
+			"notes":[],
+			"submission":617
+		},
+		{
+			"avgPts":318.56,
+			"constraints":[],
+			"correctRatio":62.66,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8473&rd=11122",
+			"name":"InformFriends",
+			"notes":[],
+			"submission":391
+		},
+		{
+			"avgPts":538.63,
+			"constraints":[],
+			"correctRatio":21.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8518&rd=11122",
+			"name":"TelephoneNumbers",
+			"notes":[],
+			"submission":23
+		}
+	],
+	"name":"Single Round Match 388 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=11122"
+}

@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=648&rd=4372",
+	"statement":"<p> 703 Gaming, inc. has released a new game called TopCraft. In this game, an army of coding professionals must attack the evil bugs infesting the world. These coding professionals (referred to in game terminology as &quot;units&quot;) are classified as either division 1 or division 2 units. </p><p> In order to control units, the player must drag a selection rectangle across the screen. Any units encompassed by the rectangle get selected for control. </p><p> Stan Ford has just bought this game to kill time. Now he's stuck in a position where he has to attack the evil bugs as fast as he can. To accomplish this, he wants to select all of the division 1 units on his screen with as few selection rectangles as possible, but without selecting any division 2 units in the process. Write a method that, given the screen configuration, returns the minimum number of selection rectangles necessary to select all of the division 1 units. </p><p> The screen will be represented by a String[] with 10 elements, each of length 10. Each character will be either a '.' for a clear space, a '1' for a division 1 unit, or a '2' for a division 2 unit. </p>",
+	"notes":[{
+		"order":1,
+		"val":"The same division 1 unit may be selected multiple times, if that leads to the least number of selection rectangles."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TopCraft",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"select",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int select(String[] select)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"..........\" ,\"..........\" ,\"..........\" ,\".1.1.1....\" ,\"..........\" ,\".1.1.1....\" ,\".......2..\" ,\".1.1.1....\" ,\"........1.\" ,\"..........\"}",
+			"note":"A selection rectangle can be drawn around the block of 9 1s, and then another one around only the isolated 1: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"..........\" ,\"..........\" ,\"..........\" ,\"..111.....\" ,\"..121.....\" ,\"..111.....\" ,\"..........\" ,\"..........\" ,\"..........\" ,\"..........\"}",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"..........\" ,\".1....1...\" ,\"..2.......\" ,\"...1.1....\" ,\"....2....1\" ,\".....1..2.\" ,\"..1.......\" ,\".......1..\" ,\".2........\" ,\"....111...\"}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"units will contain 10 elements exactly."
+		},
+		{
+			"order":2,
+			"val":"each element of units will be 10 characters in length, exactly."
+		},
+		{
+			"order":3,
+			"val":"each element of units will be composed of the three characters '.', '1', and '2'."
+		},
+		{
+			"order":4,
+			"val":"there will be at least one occurence of '1' and at least one occurence of '2' in units."
+		},
+		{
+			"order":5,
+			"val":"there will be no more than 20 total combined units."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":237.52,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=85&rd=3007",
+			"name":"DNA",
+			"notes":[],
+			"submission":33
+		},
+		{
+			"avgPts":405.74,
+			"constraints":[],
+			"correctRatio":63.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=86&rd=3007",
+			"name":"WellOrdered",
+			"notes":[],
+			"submission":33
+		},
+		{
+			"avgPts":504.43,
+			"constraints":[],
+			"correctRatio":53.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=87&rd=3007",
+			"name":"AlienTakeover",
+			"notes":[],
+			"submission":26
+		}
+	],
+	"name":"Single Round Match 8 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3007"
+}

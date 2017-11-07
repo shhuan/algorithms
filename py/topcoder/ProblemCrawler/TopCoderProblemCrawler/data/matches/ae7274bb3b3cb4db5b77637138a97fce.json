@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":229.44,
+			"constraints":[],
+			"correctRatio":90.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=269&rd=4020",
+			"name":"MultiSum",
+			"notes":[],
+			"submission":53
+		},
+		{
+			"avgPts":207.68,
+			"constraints":[],
+			"correctRatio":30,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=270&rd=4020",
+			"name":"Calculator",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":724.08,
+			"constraints":[],
+			"correctRatio":58.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=271&rd=4020",
+			"name":"SuperQueen",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"Single Round Match 49 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4020"
+}

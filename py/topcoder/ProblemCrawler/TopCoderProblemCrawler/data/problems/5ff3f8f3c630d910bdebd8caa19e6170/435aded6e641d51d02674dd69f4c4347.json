@@ -1,0 +1,128 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1130&rd=4530",
+	"statement":"<p> <i>Note that in the following problem statement, all quotes and angle brackets are for clarity</i> </p> <p> A certain vending machine delves out its goods from a rotating cylinder, which can rotate around in both clockwise and counter-clockwise directions. The cylinder has a number of shelves on it, and each shelf is divided into a number of columns. On the front of the machine, there is a panel of doors that extends the entire height of the column. There is one door for each shelf, which is the width of one column. When a purchase is made, the user uses two buttons to rotate the cylinder so their purchase is located at a door. They make their purchase by sliding the appropriate door open, and removing the item (there can only be one item per column on a particular shelf). The cylinder can rotate in a complete circle, and so there are always two ways to get from a particular column to another column. </p> <p> Because the vending machine company wants to sell the most expensive items possible, and the machine can only show one column at a time, the machine will always try to put forth the most expensive column available. The price of a column is calculated by adding up all the prices of the remaining items in that column. The most expensive column is defined to be the one with the maximum price. If 5 minutes have elapsed since the last purchase was made, the machine rotates the cylinder to the most expensive column. If, however, another purchase has been made before the 5 minutes are up, the rotation does not occur, and the 5 minute timer is reset. </p> <p> Recently, some machines' rotating motors have been failing early, and the company wants to see if it is because the machines rotate to show their expensive column too often. To determine this, they have hired you to simulate purchases and see how long the motor is running. </p> <p> You will be given the <b>prices</b> of all the items in the vending machine in a String[]. Each element of <b>prices</b> will be a single-space separated list of integers, which are the prices (in cents) of the items. The Nth integer in the Mth element of <b>prices</b> represents the price of the Nth column in the Mth shelf in the cylinder. You will also be given a String[] <b>purchases</b>. Each element in <b>purchases</b> will be in the format:<br /><br /> <tt>&quot;&lt;shelf&gt;,&lt;column&gt;:&lt;time&gt;&quot;</tt><br /><br /> &lt;shelf&gt; is a 0-based integer which identifies the shelf that the item was purchased from. &lt;column&gt; is a 0-based integer which identifies the column the item was purchased from. &lt;time&gt; is an integer which represents the time, in minutes, since the machine was turned on. </p> <p> In the simulation, the motor needs to run for 1 second in order to rotate to an adjacent column. When the machine is turned on, column 0 is facing out, and it immediately rotates to the most expensive column, even if the first purchase is at time 0. The machine also rotates to the most expensive column at the end of the simulation, after the last purchase. Note that when an item is purchased, its price is no longer used in calculating the price of the column it is in. When the machine rotates to the most expensive column, or when a user rotates the cylinder, the rotation is in the direction which takes the least amount of time. For example, in a 4-column cylinder, if column 0 is displayed, and the cylinder is rotated to column 3, it can be rotated backwards, which takes 1 second, versus rotating forwards which takes 3 seconds. </p> <p> If a user tries to purchase an item that was already purchased, this is an incorrect simulation, and your method should return -1. Otherwise, your method should return how long the motor was running, in seconds. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"When rotating to the most expensive column, if two columns have the same price, rotate to the one with the lowest column number (see example 0)."
+		},
+		{
+			"order":2,
+			"val":"If two purchases are less than 5 minutes apart, the machine does not perform a rotation to the most expensive column between the purchases. If two purchases are 5 or more minutes apart, the machine rotates to the most expensive column between the two purchases."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"VendingMachine",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"motorUse",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int motorUse(String[] prices, String[] purchases)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"0,0:0\", \"0,2:5\", \"0,1:10\"}",
+			"id":0,
+			"input":"{\"100 100 100\"}",
+			"note":"        ",
+			"order":1
+		},
+		{
+			"expect":"{\"0,2:0\", \"0,3:5\", \"0,1:10\", \"0,4:15\"}",
+			"id":0,
+			"input":"{\"100 200 300 400 500 600\"}",
+			"note":"    ",
+			"order":2
+		},
+		{
+			"expect":"{\"0,2:0\", \"0,3:4\", \"0,1:8\", \"0,4:12\"}",
+			"id":0,
+			"input":"{\"100 200 300 400 500 600\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"0,0:10\", \"0,0:11\"}",
+			"id":0,
+			"input":"{\"100 100 100\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{\"0,0:0\", \"1,1:10\", \"1,2:20\", \"0,1:21\", \"1,0:22\", \"0,2:35\"}",
+			"id":0,
+			"input":"{\"100 200 300\", \"600 500 400\"}",
+			"note":" ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"prices will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of prices will have between 5 and 50 characters, is a single-space separated list of integers, and has no leading or trailing spaces."
+		},
+		{
+			"order":3,
+			"val":"Each element of prices will have the same number of integers in it."
+		},
+		{
+			"order":4,
+			"val":"Each element of prices will have at least 3 integers in it."
+		},
+		{
+			"order":5,
+			"val":"Each integer in prices will be between 1 and 10000, inclusive, and will not contain leading 0's."
+		},
+		{
+			"order":6,
+			"val":"purchases will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of purchases will be in the format &quot;&lt;shelf&gt;,&lt;column&gt;:&lt;time&gt;&quot; (angle brackets and quotes are for clarity only), where &lt;shelf&gt;, &lt;column&gt;, and &lt;time&gt; are all integers."
+		},
+		{
+			"order":8,
+			"val":"In each element of purchases, &lt;shelf&gt; will be between 0 and M - 1, inclusive, where M is the number of elements in prices."
+		},
+		{
+			"order":9,
+			"val":"In each element of purchases, &lt;column&gt; will be between 0 and N - 1, inclusive, where N is the number of integers in each element of prices."
+		},
+		{
+			"order":10,
+			"val":"In each element of purchases, &lt;time&gt; will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":11,
+			"val":"In each element of purchases, &lt;shelf&gt;, &lt;column&gt;, and &lt;time&gt; will not contain extra leading 0's."
+		},
+		{
+			"order":12,
+			"val":"purchases will be sorted in strictly ascending order by &lt;time&gt;. This means that each purchase must occur later than all previous ones."
+		}
+	]
+}

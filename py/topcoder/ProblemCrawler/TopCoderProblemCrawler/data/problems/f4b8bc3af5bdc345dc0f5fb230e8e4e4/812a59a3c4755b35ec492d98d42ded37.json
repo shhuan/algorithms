@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3970&rd=7993",
+	"statement":"<p>Auto dealerships frequently advertise tempting loan offers in order to make it easier for people to afford the &quot;car of their dreams&quot;. A typical sales tactic is to show you various cars, and then talk in terms of what your monthly payment would be, to say nothing of how much you are actually paying for the car, how much interest you pay, or how long you have to make payments.</p> <p>A typical auto loan is calculated using a fixed interest rate, and is set up so that you make the same monthly payment for a set period of time in order to fully pay off the balance. The balance of your loan starts out as the sticker price of the car. Each month, the monthly interest is added to your balance, and the amount of your payment is subtracted from your balance. (The payment is subtracted after the interest is added.) The monthly interest rate is 1/12 of the yearly interest rate. Thus, if your annual percentage rate is 12%, then 1% of the remaining balance would be charged as interest each month.</p> <p>You have been checking out some of the cars at your local dealership, TopAuto. An excited salesman has just approached you, shouting about how you can have the car you are looking at for a payment of only <b>monthlyPayment</b> for only <b>loanTerm</b> months! You are to return a double indicating the annual percentage rate of the loan, assuming that the initial balance of the loan is <b>price</b>.</p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Because of the way interest is compounded monthly, the actual interest accrued over the course of a year is not necessarily the same as (balance * yearly interest rate). In fact, it's usually more."
+		},
+		{
+			"order":2,
+			"val":"In a real situation, information like this would typically need to be disclosed, but since you aren't at a point of signing any paperwork, the salesman has no legal obligation to tell you anything."
+		},
+		{
+			"order":3,
+			"val":"The return value must be within 1e-9 absolute or relative error of the actual result."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AutoLoan",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"interestRate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"double, double, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double interestRate(double price, double monthlyPayment, int loanTerm)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"100",
+			"id":0,
+			"input":"6800",
+			"note":"Noting that 68 payments of 100 equals the total price of 6800, so there is no interest.",
+			"order":1
+		},
+		{
+			"expect":"510",
+			"id":0,
+			"input":"2000",
+			"note":"Here, we do pay a little interest. At 9.562% annual interest, that means each month we pay 0.7968% of the balance in interest. Our payment schedule looks like this:  ",
+			"order":2
+		},
+		{
+			"expect":"364",
+			"id":0,
+			"input":"15000",
+			"note":"This is similar to what purchasing a new car with no money down might look like, if you make payments for 4 years.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"price will be between 1 and 1000000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"monthlyPayment will be between 0 and price / 2, inclusive."
+		},
+		{
+			"order":3,
+			"val":"loanTerm will be between 1 and 600, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The resulting interest rate will be between 0 and 100, inclusive."
+		}
+	]
+}

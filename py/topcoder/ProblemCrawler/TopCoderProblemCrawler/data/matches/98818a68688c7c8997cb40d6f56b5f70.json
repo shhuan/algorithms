@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":206.63,
+			"constraints":[],
+			"correctRatio":86.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6750&rd=10104",
+			"name":"FriendlySequences",
+			"notes":[],
+			"submission":274
+		},
+		{
+			"avgPts":286.7,
+			"constraints":[],
+			"correctRatio":82.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6723&rd=10104",
+			"name":"QueenCovering",
+			"notes":[],
+			"submission":123
+		},
+		{
+			"avgPts":470.65,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6695&rd=10104",
+			"name":"SnowStorm",
+			"notes":[],
+			"submission":9
+		}
+	],
+	"name":"TCCC06 > Online Round 1C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10104"
+}

@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7854&rd=10770",
+	"statement":"Bubble-sort is a well-known sorting algorithm, although not a very efficient one. In each iteration of bubble-sort, the algorithm works from start to end along a list, comparing each pair of adjacent elements. If the adjacent elements are out of order, then they are swapped. If no elements are swapped in an iteration, then the list is sorted and the algorithm terminates; otherwise, the algorithm continues with another iteration. In order to analyze the performance of bubble-sort, you want to determine how many iterations are required to sort a given list in non-decreasing order. The list might be quite large, so it will be codified in the following way. You will be given int[]s <b>X</b> and <b>Y</b>, and ints <b>L0</b>, <b>M</b>, and <b>n</b>. Generate the list L of length <b>n</b> using the following pseudo-code. Array indices are 0-based. <pre>\nL[0] = L0\nfor i := 1 to n-1\n    L[i] = (L[i-1] * X[i % length(X)] + Y[i % length(Y)]) MOD M\n</pre> You must calculate the number of iterations required to bubble-sort L in non-decreasing order.",
+	"notes":[{
+		"order":1,
+		"val":"The input is encoded purely for convenience. The intended solution does not rely on any properties of the way it is generated, and will work for any list L."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BubbleSortIterations",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numIterations",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numIterations(int[] X, int[] Y, int L0, int M, int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{10, 1, 5, 2, 3}",
+			"id":0,
+			"input":"{0}",
+			"note":"The generated sequence is 10, 1, 5, 2, 3. After one iteration it is 1, 5, 2, 3, 10. After two it is 1, 2, 3, 5, 10. The third iteration detects that the sequence is now sorted.",
+			"order":1
+		},
+		{
+			"expect":"{1, 3, 5, 7, 9}",
+			"id":0,
+			"input":"{0}",
+			"note":"The generated sequence is 1, 3, 5, 7, 9. The sequence is already sorted, but one iteration is required to detect this.",
+			"order":2
+		},
+		{
+			"expect":"{500000}",
+			"id":0,
+			"input":"{999998}",
+			"note":"Be careful not to overflow when generating L.",
+			"order":3
+		},
+		{
+			"expect":"{3413, 171, 58, 569, 40, 467, 2456, 246, 2684, 5, 61, 8, 258, 24524, 2, 58, 245, 674}",
+			"id":0,
+			"input":"{234, 56, 567, 3147, 23464, 57128, 1254, 45, 23247, 1347, 145, 123}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"X and Y will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of X and Y will be between 0 and M-1, inclusive."
+		},
+		{
+			"order":3,
+			"val":"L0 will be between 0 and M-1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"M will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"n will be between 1 and 100,000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4833&rd=8098",
+	"statement":"<p> You have an old &quot;word search&quot; puzzle which consists of a rectangular grid of letters in which several words are hidden. Each word may begin anywhere in the puzzle, and may be oriented in any straight line horizontally, vertically, or diagonally (forwards or backwards oriented). The puzzle is so old that some of the letters have been washed out and you can not recognize them anymore. Your task is to recover the washed out letters so that the puzzle is solvable - i.e., all given words can be found in the letter grid. </p> <p> You will be given <b>grid</b>, representing the letter grid, with each washed out letter replaced by a period ('.'). Further, you will be given <b>words</b>, the list of words that can be found in the grid. You are to return the letter grid with the washed out letters replaced by the original letters in those positions. There will be one unique way to replace the washed out letters such that all the words can be found in the grid. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"Although the solution to this problem will be unique, the solution of the resulting \"word search\" puzzle need not be unique - i.e., a word can be located in more than one position in the final grid (see example 1)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WordGrid",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fillSpaces",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] fillSpaces(String[] grid, String[] words)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"AFK\", \"DGJM\"}",
+			"id":0,
+			"input":"{\"ABCD\", \"E..H\", \"I.KL\", \"MNOP\"}",
+			"order":1
+		},
+		{
+			"expect":"{\"ABC\"}",
+			"id":0,
+			"input":"{\"AAAAA\", \"ABBBA\", \"AB.BA\", \"ABBBA\", \"AAAAA\"}",
+			"note":"We must fill the center square with a 'C' in order to be able to find \"ABC\" in the grid. Note that in that case \"ABC\" can be located at 8 different positions in the grid.",
+			"order":2
+		},
+		{
+			"expect":"{\"B\", \"C\", \"D\", \"AB\", \"AC\", \"AD\", \"BA\", \"CA\", \"DA\", \"AAB\", \"AAC\", \"AAD\", \"BAA\", \"CAA\", \"DAA\", \"AAAB\", \"AAAC\", \"AAAD\", \"BAAA\", \"CAAA\", \"DAAA\", \"AAAAB\", \"BAAAA\", \"AAAAAB\", \"BAAAAA\", \"AAAAAAB\", \"BAAAAAA\", \"AAAAAAAB\", \"BAAAAAAA\", \"AAAAAAAAB\", \"BAAAAAAAA\", \"AAAAAAAAAB\", \"BAAAAAAAAA\", \"AAAAAAAAAAB\", \"BAAAAAAAAAA\", \"AAAAD\", \"DAAAA\", \"AAAAAD\", \"DAAAAA\", \"AAAAAAD\", \"DAAAAAA\", \"AAAAAAAD\", \"DAAAAAAA\", \"AAAAAAAAD\", \"DAAAAAAAA\", \"AAAAAAAAAD\", \"DAAAAAAAAA\", \"AAAAAAAAAAD\", \"DAAAAAAAAAA\", \"AAAAAAAAAAAD\"}",
+			"id":0,
+			"input":"{\"AAAAAAAAAAAAAAAAAAAAAAAA\", \"AAAAAAAAAFAAAGAAAAAAAAAA\", \"AAAAAAAAAA...AAAAAAAAAAA\", \"AAAAAAAAAAAAAAAAAAAAAAAA\", \"AAAAAAAAAAAAAAAAAAAAAAAA\", \"AAAAAAAAAAAAAAAAAAAAAAAA\"}",
+			"note":"Beware of timeout!",
+			"order":3
+		},
+		{
+			"expect":"{\"AF\", \"HD\"}",
+			"id":0,
+			"input":"{\"ABCD\", \"EFGH\"}",
+			"note":"Nothing to do here (all letters of the grid are known in advance, so the same grid is returned).",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of grid will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of grid will have the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"All characters of all elements of grid will be uppercase letters ('A'-'Z') or periods ('.')."
+		},
+		{
+			"order":5,
+			"val":"grid will contain no more than 3 periods."
+		},
+		{
+			"order":6,
+			"val":"words will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of words will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Each element of words will be unique."
+		},
+		{
+			"order":9,
+			"val":"All characters of all elements of words will be uppercase letters ('A'-'Z')."
+		},
+		{
+			"order":10,
+			"val":"There will be one unique way to replace the washed out letters such that all the words can be found in the grid."
+		}
+	]
+}

@@ -1,0 +1,106 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13235&rd=16016",
+	"statement":"The range maximum query (RMQ) problem looks as follows: You are given a permutation P of the numbers 1 through <b>n</b>, and a sequence of queries. Each query is a pair of integers (L,R) such that 1 &lt;= L &lt;= R &lt;= <b>n</b>. The answer to the query is the maximum of the values that occur in P at (1-based) positions L through R, inclusive. <br /><br /> <br /><br /> For example, if P is the permutation (3,1,4,2,5), then: \n <ul> \n  <li>The answer to the query (1,2) is max(3,1)=3.</li> \n  <li>The answer to the query (2,4) is max(1,4,2)=4.</li> \n  <li>The answer to the query (4,5) is max(2,5)=5.</li> \n </ul> <br /><br /> <br /><br /> In this problem, we ask you to solve the inverse problem. You are given the int <b>n</b>, and three int[]s <b>A</b>, <b>B</b>, and <b>ans</b>, each containing the same number of elements. We are looking for a permutation P of numbers 1 through <b>n</b> with the following property: For each valid i, the answer to the query (<b>A</b>[i], <b>B</b>[i]) must be <b>ans</b>[i]. Return &quot;Possible&quot; (quotes for clarity) if at least one such permutation P exists, and &quot;Impossible&quot; otherwise.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"InverseRMQ",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"possible",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String possible(int n, int[] A, int[] B, int[] ans)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2,4}",
+			"id":0,
+			"input":"5",
+			"note":"This is the example from the problem statement. One valid permutation is (3,1,4,2,5). There are also some other valid permutations.",
+			"order":1
+		},
+		{
+			"expect":"{1,2,3}",
+			"id":0,
+			"input":"3",
+			"note":"The only sequence that corresponds to these queries is (3,3,3), but that is not a permutation.",
+			"order":2
+		},
+		{
+			"expect":"{1,101,201,301,401,501}",
+			"id":0,
+			"input":"600",
+			"note":"One valid permutation is the permutation (1,2,3,...,600).",
+			"order":3
+		},
+		{
+			"expect":"{1234,1234}",
+			"id":0,
+			"input":"1000000000",
+			"note":"There is no permutation such that two identical queries have different answers.",
+			"order":4
+		},
+		{
+			"expect":"{1,2,3,4,5,6,7,8}",
+			"id":0,
+			"input":"8",
+			"note":"The only valid permutation is clearly (4,8,2,5,6,3,7,1).",
+			"order":5
+		},
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"1000000000",
+			"note":"Obviously, for =1,000,000,000 the maximum of the entire permutation must be 1,000,000,000.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"A, B, and ans will each contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element in A will be between 1 and n, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element in B will be between 1 and n, inclusive."
+		},
+		{
+			"order":6,
+			"val":"For all i, A[i] will be less than or equal to B[i]."
+		},
+		{
+			"order":7,
+			"val":"Each element in ans will be between 1 and n, inclusive."
+		}
+	]
+}

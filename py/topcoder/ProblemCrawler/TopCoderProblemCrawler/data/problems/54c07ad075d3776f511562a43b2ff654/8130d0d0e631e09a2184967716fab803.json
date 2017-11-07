@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1995&rd=5878",
+	"statement":"You and a partner have teamed up for a coding project. He is writing the front-end of an arithmetic expression parser, and you are writing the back-end. The expressions are pretty simple, with normal arithmetic operations and no parentheses. As usual, he stayed up too late and made a terrible oversight. His parser spits out an expression tree where the precedence and associativity of the operators may be ignored. For example, let's say his program is given the expression &quot;5+2-3-4*2&quot;. Each operator is supposed to be left associative, but his program could spit out the wrong tree: <pre>\n       His tree                    Correct Tree\n          +                             -\n        /   \\                        /     \\\n       5     -                     -         *\n           /   \\                 /   \\     /   \\\n          2     -               +     3   4     2\n              /   \\           /   \\\n             3     *         5     2\n                 /   \\\n                4     2\n</pre> The expressions <i>should</i> be interpreted as follows: \n <ul> \n  <li>1) As usual, the order of operations gives * and / highest precedence whereas + and - have lowest. * and / have equal precedence. In addition, + and - have equal precedence.</li> \n  <li>2) Amongst operations of equal precedence, process the leftmost operation first.</li> \n </ul> Adhering to these rules, the input above would be processed to produce the Correct Tree. In such a tree, lower nodes are processed before higher nodes. The value of a number node is the number itself. The value of an operation node is that operation applied to the values of its left and right subnodes (the value of the left subnode belongs on the left side of the operation). The value of the tree is the value of the top node (called the root node). Unfortunately, your partner's front-end may have violated rules 1 and 2 numerous times. Luckily the <i>ordering</i> of his tree is not messed up. This means that an inorder traversal of the tree beginning with the root will produce the original expression. Inorder traversal pseudocode follows:<pre>\nInorderTraverse(node) {\n\tif (left subtree of node exists) \n\t\tInorderTraverse(root of left subtree)\n\tPrint the contents of node\n\tif (right subtree of node exists) \n\t\tInorderTraverse(root of right subtree)\n}</pre> Your program will take a String[] <b>badTree</b> describing his tree, and will return an int which is the correct value of the expression he parsed. All operations are integer operations so division truncates results. For example 5/3=1, and -5/3 = -1.<br /><br /> <br /><br /> Each element of <b>badTree</b> will be in one of two forms (quotes for clarity): \n <ul> \n  <li>1) &quot;op X Y&quot; : op is one of *,/,+,-. X,Y are integers referencing other elements of <b>badTree</b> (0-indexed). X refers to the node's left child and Y refers to the node's right child.</li> \n  <li>2) &quot;N&quot; : N is a non-negative integer with no extra leading zeros.</li> \n </ul> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BadParser",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"evaluate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int evaluate(String[] badTree)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: -4",
+			"id":0,
+			"input":"{\"+ 1 2\",\"5\",\"- 3 4\",\"2\",\"- 5 6\",\"3\",\"* 7 8\",\"4\",\"2\"}",
+			"note":"The example in the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -8",
+			"id":0,
+			"input":"{\"- 1 2\",\"5\",\"- 3 4\",\"2\",\"- 5 6\",\"3\",\"* 7 8\",\"4\",\"2\"}",
+			"note":"The example in the problem statement with the + replaced by a -.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"* 1 2\",\"5\",\"- 3 4\",\"2\",\"- 5 6\",\"3\",\"* 7 8\",\"4\",\"2\"}",
+			"note":"The example in the problem statement with the + replaced by a *.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 99",
+			"id":0,
+			"input":"{\"99\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"badTree will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of badTree will be in one of the following forms (quotes for clarity):1) &quot;op X Y&quot; where X and Y are integers, with no extra leading zeros, between 0 and M-1 inclusive. op must be *,+,-, or /. Here M denotes the number of elements in badTree.2) &quot;N&quot; where N is a nonnegative integer with no extra leading zeros between 0 and 1000 inclusive."
+		},
+		{
+			"order":3,
+			"val":"The elements of badTree will describe a single tree, with element 0 acting as root."
+		},
+		{
+			"order":4,
+			"val":"The return value, and the value of any subtree of the correct tree will all be between -100000 and 100000 inclusive."
+		},
+		{
+			"order":5,
+			"val":"The computation of the return value, and the value of any subtree of the correct tree will not require division by 0."
+		}
+	]
+}

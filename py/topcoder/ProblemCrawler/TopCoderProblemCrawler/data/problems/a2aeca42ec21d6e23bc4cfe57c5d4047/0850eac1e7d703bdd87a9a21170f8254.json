@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9791&rd=12179",
+	"statement":"You are given a set of white points on a plane, with the x and y coordinates of the i-th point represented by the i-th elements of <b>pointsX</b> and <b>pointsY</b>, respectively. You play a game with your friend alternating turns. On your turn, you pick any white point and color it red. On his turn, your friend picks any white point and colors it blue. The game ends when there are no white points left, and the final score is the sum of all distances between pairs of points with different colors. Knowing that you make the first turn, and that your opponent plays optimally and wants to minimize the final score, return the highest final score you can achieve. ",
+	"notes":[{
+		"order":1,
+		"val":"Your return must have relative or absolute error less than 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PointsGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"gameValue",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double gameValue(int[] pointsX, int[] pointsY)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,1}",
+			"id":0,
+			"input":"{0,0}",
+			"note":"There are only 2 points and the answer is the distance between them.",
+			"order":1
+		},
+		{
+			"expect":"{0,5,0,5}",
+			"id":0,
+			"input":"{0,0,1,1}",
+			"note":"Your friend can always choose the closest point to get the smallest answer.",
+			"order":2
+		},
+		{
+			"expect":"{0,1,5,6}",
+			"id":0,
+			"input":"{0,0,0,0}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{0,0,0,0}",
+			"id":0,
+			"input":"{0,1,2,3}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pointsX will contain between 2 and 12 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"pointsY will contain the same number of elements as pointsX."
+		},
+		{
+			"order":3,
+			"val":"Each element of pointsX and pointsY will be between 0 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"All points in the given set will be distinct."
+		}
+	]
+}

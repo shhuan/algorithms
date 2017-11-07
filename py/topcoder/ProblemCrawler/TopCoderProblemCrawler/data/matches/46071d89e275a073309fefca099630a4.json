@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":232.84,
+			"constraints":[],
+			"correctRatio":97.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=952&rd=4270",
+			"name":"Saxophone",
+			"notes":[],
+			"submission":103
+		},
+		{
+			"avgPts":308.3,
+			"constraints":[],
+			"correctRatio":81.61,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1031&rd=4270",
+			"name":"Router",
+			"notes":[],
+			"submission":87
+		},
+		{
+			"avgPts":524.82,
+			"constraints":[],
+			"correctRatio":31.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1027&rd=4270",
+			"name":"GlassBalls",
+			"notes":[],
+			"submission":29
+		}
+	],
+	"name":"Single Round Match 110 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4270"
+}

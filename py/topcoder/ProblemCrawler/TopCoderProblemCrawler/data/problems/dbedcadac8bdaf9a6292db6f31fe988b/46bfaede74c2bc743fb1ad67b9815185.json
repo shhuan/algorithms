@@ -1,0 +1,64 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2292&rd=10709",
+	"statement":"<p>Look at the following pseudo-code, which computes the n-th Fibonacci number:</p> <pre>\nint fibonacci(int n)\n\tbegin\n\tif n equals 0\n\t\tbegin\n\t\tprint(0)\n\t\treturn 0\n\t\tend\n\tif n equals 1\n\t\tbegin\n\t\tprint(1)\n\t\treturn 1\n\t\tend\n\treturn fibonacci(n - 1) + fibonacci(n - 2)\n\tend\n</pre> <p>For example, if one calls fibonacci(3), then the following will happen: </p>\n <ul> \n  <li>fibonacci(3) calls fibonacci(2) and fibonacci(1) (the first call).</li> \n  <li>fibonacci(2) calls fibonacci(1) (the second call) and fibonacci(0).</li> \n  <li>The second call of fibonacci(1) prints 1 and returns 1.</li> \n  <li>fibonacci(0) prints 0 and returns 0.</li> \n  <li>fibonacci(2) gets the results of fibonacci(1) and fibonacci(0) and returns 1.</li> \n  <li>The first call of fibonacci(1) prints 1 and returns 1.</li> \n  <li>fibonacci(3) gets the results of fibonacci(2) and fibonacci(1) and returns 2.</li> \n </ul> In total, '1' will be printed twice and '0' will be printed once. <p></p> <p> We want to know how many times '0' and '1' will be printed for a given <b>n</b>. You are to return a int[] which contains exactly two elements. The first and second elements of the return value must be equal to the number of times '0' and '1', respectively, will be printed during a fibonacci(<b>n</b>) call.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NumberofFiboCalls",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fiboCallsMade",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] fiboCallsMade(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {1, 0 }",
+			"id":0,
+			"input":"0",
+			"note":"If I call the Fibonacci function with n = 0, it just calls the 1 base case. Hence, the result is {1,0}.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {1, 2 }",
+			"id":0,
+			"input":"3",
+			"note":"The test case given in the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {5, 8 }",
+			"id":0,
+			"input":"6",
+			"order":3
+		},
+		{
+			"expect":"Returns: {10946, 17711 }",
+			"id":0,
+			"input":"22",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 0 and 40, inclusive."
+	}]
+}

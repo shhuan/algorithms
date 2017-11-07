@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":222.39,
+			"constraints":[],
+			"correctRatio":94.68,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1822&rd=4701",
+			"name":"LetterFreq",
+			"notes":[],
+			"submission":545
+		},
+		{
+			"avgPts":331.28,
+			"constraints":[],
+			"correctRatio":82.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1172&rd=4701",
+			"name":"Mandelbrot",
+			"notes":[],
+			"submission":457
+		},
+		{
+			"avgPts":464.74,
+			"constraints":[],
+			"correctRatio":20.63,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1882&rd=4701",
+			"name":"BitmapToGraph",
+			"notes":[],
+			"submission":63
+		}
+	],
+	"name":"2003 TCO > Qualification Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4701"
+}

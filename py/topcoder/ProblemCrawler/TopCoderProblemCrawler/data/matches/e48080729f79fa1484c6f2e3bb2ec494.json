@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":175.54,
+			"constraints":[],
+			"correctRatio":44.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8180&rd=12019",
+			"name":"CoolFunction",
+			"notes":[],
+			"submission":9
+		},
+		{
+			"avgPts":366.96,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8775&rd=12019",
+			"name":"CraneSort",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":519.27,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8603&rd=12019",
+			"name":"SnakesOnAPlane",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2008 TopCoder Open > Championship Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12019"
+}

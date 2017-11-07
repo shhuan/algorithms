@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=202&rd=54",
+	"statement":"<pre>THIS PROBLEM WAS TAKEN FROM THE SEMIFINALS OF THE TOPCODER INVITATIONAL\nTOURNAMENT\n\nPROBLEM STATEMENT\nIn a game of chess, the king is always looking out for his safety, trying to\nstay out of the path of the opponent's attacking pieces.  Given an x by y\nrectangular chess board, with z opponent pieces placed on the board, determine\nhow many safe squares are left on the board, where the king may be placed.\nSafe squares are squares that are not in the path of attack of one or more\nopponent piece(s).\n\nDiscription of piece movement:\n- A queen's path of attack is any square contained in a horizontal, vertical,\nor diagonal line crossing the square on which it stands.\n- A rook's path of attack is any square contained in a horizontal or vertical\nline crossing the square on which it stands.\n- A bishop's path of attack is any square contained in a diagonal line crossing\nthe square on which it stands.\n- A knight's path of attack is the last square of an L shaped movement\n(described below) starting from the square it is standing on.\n- A pawns path of attack is the first diagonal square in *all four directions*\nstarting from the square it is standing on.\n\nThe following must be true for a valid L shaped movement:\n1. Start from the square the knight is standing on. \n2. If the knight moves m square(s) horizontally then it must move n square(s)\nvertically\n3. If the knight moves m square(s) vertically then it must move n square(s)\nhorizontally\n4. If m equals 1 then n must equal 2\n5. If n equals 1 then m must equal 2\n\nThe input will be a String[] representing the squares on a rectangular chess\nboard.  Each square is represented by a character having one of the following\nvalues:\n'U' will represent an unoccupied square (there are no pieces located in that\nsquare)\n 'Q' will represent a queen in that square\n 'R' will represent a rook in that square\n 'B' will represent a bishop in that square\n 'K' will represent a knight in that square\n 'P' will represent a pawn in that square\n\nThe following diagrams are meant to show how the pieces can move.  The pieces\nare represented as above, 'X' represents a square in the path of attack of the\npiece and '+' represents a safe square.\n\n    Queen           Rook         Bishop         Knight          Pawn \nX + + X + + X  + + + X + + +  X + + + + + X  + + + + + + +  + + + + + + +\n+ X + X + X +  + + + X + + +  + X + + + X +  + + X + X + +  + + + + + + +\n+ + X X X + +  + + + X + + +  + + X + X + +  + X + + + X +  + + X + X + +\nX X X Q X X X  X X X R X X X  + + + B + + +  + + + K + + +  + + + P + + +\n+ + X X X + +  + + + X + + +  + + X + X + +  + X + + + X +  + + X + X + +\n+ X + X + X +  + + + X + + +  + X + + + X +  + + X + X + +  + + + + + + +\nX + + X + + X  + + + X + + +  X + + + + + X  + + + + + + +  + + + + + + +\n\nImplement a class ChessCover which contains a method getSafe.  getSafe should\nreturn the number of safe squares on the board.\n\nDEFINITION\nClass name: ChessCover\nMethod name: getSafe\nParameters:  String[]\nReturns: int\nMethod signature (be sure your method is public):  int getSafe (String[]\nboardLayout);\n\nNOTES\n- The king is not on the board.  The purpose is to count the number of\navailable safe squares on which the king can placed.\n- The board may be full, i.e. every square on the board can have a piece on it\n(z &lt;= x*y).  \n- There are five types of pieces: queen, rook, bishop, knight, and pawn.  \n- The same type of piece may be placed on the board multiple times (i.e. there\nmay be 5 queens on the board etc.).\n- The square on which a piece sits is not a safe square.\n- A Piece can block another piece's path of attack.\n- A knight is the only piece that can jump over another piece(s).\n- A pawn's path of attack differs from regular chess rules.  The pawn path of\nattack is the first diagonal square in *all four directions* starting from the\nsquare it is standing on.\n- The board is not necessarily square.  The number of rows could be the\ndifferent than the number of columns.\n\nTopCoder will ensure the validity of the inputs.  Inputs are valid if all of\nthe following criteria are met:\n- Each element of boardLayout will have a length between 1 and 10 (inclusive).\n- Each element of boardLayout will be of equal length.\n- Each element of boardLayout will consist of characters from the following\nlist: 'U', 'Q', 'R', 'B', 'K', 'P'.\n- boardLayout will have between 1 and 10 elements, inclusive.\n\nEXAMPLES\nU U -&gt; + + -&gt; 4 safe squares\nU U    + +\n\nU U U U U    X X X X X\nU Q U Q U -&gt; X Q X Q X -&gt; 0 safe squares\nU U U U U    X X X X X\n\nU U U    X + X \nU P U -&gt; + P + -&gt; 4 safe squares\nU U U    X + X \n\nU U U U    X + X +\nU U U U    X X + +\nQ U U U -&gt; Q X X X -&gt; 6 safe squares\nU U U U    X X + +\n\nU U U U U Q    X X X X X Q\nU U U U U U    + X X X X X\nB U R U U U -&gt; B X R X X X -&gt; 6 safe squares\nU U K U U U    + X K + + X\nU U U U U U    X + X + X X\n\nU B U K U U U B U U -&gt; + B + K + X X B X X -&gt; 4 safe squares\nU U U U B U U Q U R    X X X + B X X Q X R\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ChessCover",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getSafe",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getSafe(String[] param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

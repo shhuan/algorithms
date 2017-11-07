@@ -1,0 +1,101 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1993&rd=8007",
+	"statement":"A common way to rank athletic teams is based on each team's winning percentage. However, when two teams have similar percentages, the team that played against better opponents will be ranked above the team that had easier opponents. The measure of how difficult a team's opponents are, is known as the team's strength of schedule. A team that has faced tough opponents is said to have a strong schedule, and a team with poor opponents is said to have a weak schedule. <p> We will use the cumulative winning percentage of Team X's opponents (the teams that Team X played against) as a measure of Team X's strength of schedule. This percentage is the number of wins recorded by Team X's opponents divided by the total games they played, excluding games that were played against Team X. </p> <p> Given a String[] of <b>teams</b> that contains the name of each team and a String[] <b>results</b> that indicates the outcome of games played during the season, return a String[] containing the names of the teams, ordered from strongest schedule to weakest. Teams with equivalent schedule strengths should appear in increasing alphabetical order. </p> <p> Element <tt>i</tt> of <b>results</b> corresponds to team <tt>i</tt> whose name is found in <b>teams</b> at index <tt>i</tt>. Character <tt>j</tt> of element <tt>i</tt> of <b>results</b> will be one of <tt>'W'</tt>, <tt>'L'</tt> or <tt>'-'</tt> respectively indicating whether team <tt>i</tt> won, lost, or did not play a game against team <tt>j</tt>. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ScheduleStrength",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calculate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] calculate(String[] teams, String[] results)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"-WLWW-\", \"L-WL-W\", \"WL---W\", \"LW--L-\", \"L--W--\", \"-LL---\"}",
+			"id":0,
+			"input":"{\"BEARS\", \"GIANTS\", \"COWBOYS\", \"BRONCOS\", \"DOLPHINS\", \"LIONS\"}",
+			"note":"This season's  gives us the following win/loss records:   Here are the cumulative records and winning percentages calculated for each team:  ",
+			"order":1
+		},
+		{
+			"expect":"{\"-LLW\", \"W-WW\", \"WL--\", \"LL--\"}",
+			"id":0,
+			"input":"{\"BEARS\", \"COWBOYS\", \"GIANTS\", \"PACKERS\"} ",
+			"order":2
+		},
+		{
+			"expect":"{\"---L-L--W\", \"--LL-LWL-\", \"-W--WWLLW\", \"WW---L--W\", \"--L--W-L-\", \"WWLWL-LW-\", \"-LW--W-L-\", \"-WW-WLW--\", \"L-LL-----\"} ",
+			"id":0,
+			"input":"{\"AZTECS\", \"COUGARS\", \"COWBOYS\", \"FALCONS\", \"HORNEDFROGS\", \"LOBOS\", \"RAMS\", \"REBELS\", \"UTES\"} ",
+			"order":3
+		},
+		{
+			"expect":"{ \"--LLL\", \"---LL\", \"W---L\", \"WW---\", \"WWW--\" }",
+			"id":0,
+			"input":"{\"E\", \"D\", \"C\", \"B\", \"Z\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"teams will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"teams and results will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of teams will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of teams will only contain uppercase letters ('A'-'Z')."
+		},
+		{
+			"order":5,
+			"val":"Each element of teams will be distinct."
+		},
+		{
+			"order":6,
+			"val":"Each element of results will contain N characters, where N is the number of elements in teams."
+		},
+		{
+			"order":7,
+			"val":"Each element of results will only contain 'W', 'L' and '-'."
+		},
+		{
+			"order":8,
+			"val":"The ith character of the ith element of results will be '-'."
+		},
+		{
+			"order":9,
+			"val":"If the jth character of the ith element of results is 'W' then the ith character of the jth element of results will be 'L', and vice versa."
+		},
+		{
+			"order":10,
+			"val":"Every team will play at least two games."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.6,
+			"constraints":[],
+			"correctRatio":96.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2889&rd=5074",
+			"name":"TriangleCount",
+			"notes":[],
+			"submission":133
+		},
+		{
+			"avgPts":303.45,
+			"constraints":[],
+			"correctRatio":75.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2436&rd=5074",
+			"name":"ChipRace",
+			"notes":[],
+			"submission":94
+		},
+		{
+			"avgPts":466.48,
+			"constraints":[],
+			"correctRatio":11.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2890&rd=5074",
+			"name":"ClosestPoints",
+			"notes":[],
+			"submission":9
+		}
+	],
+	"name":"Single Round Match 199 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5074"
+}

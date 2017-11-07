@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8098&rd=12058",
+	"statement":"<p>There is an <b>N</b>x<b>N</b> square with its cells initially empty. The rows of the square are indexed from top to bottom, and columns from left to right. All indices start from 0.</p> <p>You wish to fill the cells of the square with consecutive integers, starting from 1, using the following algorithm. At the beginning you stand at the topmost leftmost cell and put 1 in this cell. Each time you want to find the cell for the next number, you use the following method: Move <b>a</b> cells down and <b>b</b> cells right from your current cell (all moves are cyclic, so moving down one row from row <b>N</b>-1 takes you to row 0, and moving right one column from column <b>N</b>-1 takes you to column 0). If the current cell is empty, then you put the next number in this cell. Otherwise, move an additional <b>c</b> cells down and <b>d</b> cells right. If the current cell is empty, then you put the next number in this cell, otherwise the entire algorithm is finished.</p> <p>Return a String[] describing the final state of the square after the algorithm is finished. The i-th element of the return should be a list of <b>N</b> integers, separated by single spaces and without leading or trailing spaces. The j-th integer in this list should be the integer written in the cell in row i, column j of the square, or -1 if this cell is empty.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SquareConstruction",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"construct",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] construct(int N, int a, int b, int c, int d)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"5",
+			"note":"Here you don't move at all, so the algorithm finishes after putting 1 in the topmost leftmost cell.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"5",
+			"note":"First you put numbers 1, 2, 3, 4 and 5 in the cells on the main diagonal. Then you analyze the cells at row 0, column 0 and at row 2, column 2. Neither cell is empty, so the algorithm is finished.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"5",
+			"note":"In this case you will fill all the cells with numbers.",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"a, b, c and d will each be between 0 and N-1, inclusive."
+		}
+	]
+}

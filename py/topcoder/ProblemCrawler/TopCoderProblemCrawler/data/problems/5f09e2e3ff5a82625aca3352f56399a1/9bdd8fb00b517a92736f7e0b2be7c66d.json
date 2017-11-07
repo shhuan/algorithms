@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12690&rd=15698",
+	"statement":"In this problem, all strings consist of uppercase English letters only. That is, there are 26 distinct letters. <br /><br /><br /><br /> The weight of a string S can be computed as follows: for each letter that occurs at least once in S, its leftmost and rightmost occurrences L and R are found and the weight is increased by R-L. <br /><br /><br /><br /> For example, if S=&quot;ABCACAZ&quot;, the weight of S is (5-0) + (1-1) + (4-2) + (6-6) = 7. (The leftmost occurrence of 'A' is at the index L=0, the rightmost one is at R=5, so 'A' contributes 5-0 = 5 to the weight of S. The only 'B' contributes 0, the pair of 'C's adds 2, and the only 'Z' adds 0.) <br /><br /><br /><br /> A string is S called <i>light</i> if no other string of the same length has a smaller weight. <br /><br /><br /><br /> You are given a int[] <b>L</b>. Manao is going to choose some <i>light</i> strings. The elements of <b>L</b> specify the lengths of these strings. For example, if <b>L</b> = { 3, 42, 1 }, Manao will first choose a light string of length 3, then a light string of length 42, and finally a light string of length 1. <br /><br /><br /><br /> Then, Manao is going to concatenate all of the chosen strings, in the given order. Compute and return the smallest possible weight of a string Manao may obtain at the end.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StringWeight",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(int[] L)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{1}",
+			"note":"Every string of length 1 has weight 0.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}",
+			"note":"Manao is going to concatenate 27 strings of length 1. If Manao takes 25 distinct strings and 2 equal strings and places the equal strings side by side, the weight of the resulting string will be 1.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{26, 2, 2}",
+			"note":"One possible concatenation of minimum weight is \"ABC...XYZ\"+\"YZ\"+\"YZ\".",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1826",
+			"id":0,
+			"input":"{25, 25, 25, 25}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1229",
+			"id":0,
+			"input":"{14, 6, 30, 2, 5, 61}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"L will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of L will be between 1 and 100, inclusive."
+		}
+	]
+}

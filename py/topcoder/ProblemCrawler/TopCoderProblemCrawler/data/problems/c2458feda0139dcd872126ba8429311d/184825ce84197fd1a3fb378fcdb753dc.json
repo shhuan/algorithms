@@ -1,0 +1,66 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13111&rd=15851",
+	"statement":"Fox Ciel uses an alphabet that has <b>n</b> letters. She likes all the words that have the following properties: \n <ol> \n  <li>Equal letters are never consecutive.</li> \n  <li>There is no subsequence of the form xyxy, where x and y are (not necessarily distinct) letters. Note that a subsequence doesn't have to be contiguous.</li> \n  <li>There is no longer word with properties 1 and 2.</li> \n </ol> Examples: \n <ul> \n  <li>Ciel does not like &quot;ABBA&quot; because there are two consecutive 'B's.</li> \n  <li>Ciel does not like &quot;THETOPCODER&quot; because it contains the subsequence &quot;TETE&quot;.</li> \n  <li>Ciel does not like &quot;ABACADA&quot; because it contains the subsequence &quot;AAAA&quot;. (Note that here x=y='A'.)</li> \n  <li>Ciel does not like &quot;ABCA&quot; because &quot;ABCBA&quot; is longer.</li> \n  <li>If <b>n</b>=1 and the one letter Ciel uses is 'A', then she likes the word &quot;A&quot;.</li> \n  <li>If <b>n</b>=2 and the two letters Ciel uses are 'A' and 'B', then she likes the words &quot;ABA&quot; and &quot;BAB&quot;.</li> \n </ul> Given the int <b>n</b>, compute and return the number of words Ciel likes, modulo 1,000,000,007.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LongWordsDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"1",
+			"note":"The only word Ciel likes is \"A\" (assuming 'A' is the only letter in the alphabet).",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"2",
+			"note":"The words Ciel likes are \"ABA\" and \"BAB\".",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1080",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 486425238",
+			"id":0,
+			"input":"100",
+			"note":"Don't forget to compute the answer modulo 1,000,000,007.",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 5000, inclusive."
+	}]
+}

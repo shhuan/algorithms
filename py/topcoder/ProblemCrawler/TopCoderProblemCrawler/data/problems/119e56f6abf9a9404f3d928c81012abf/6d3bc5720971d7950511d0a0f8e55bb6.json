@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10333&rd=13760",
+	"statement":"A plane fractal grows in the following way. At time 0, the fractal is a single white square. During each unit of time, each square in the fractal is divided into an <b>N</b>x<b>N</b> grid of equal subsquares. If the square was white, then the center <b>K</b>x<b>K</b> subsquares will become black (<b>N</b> and <b>K</b> will have the same parity). <br /><br /><br /><br /> For example, if <b>N</b> = 3 and <b>K</b> = 1, then at time 1, there are 3x3 squares, the middle square is black and the rest are white. At time 2, there are 9x9 squares, 17 are black and the rest are white. <br /><br /><br /><br /> <img src=\"http://www.topcoder.com/contest/problem/PlaneFractal/PlaneFractal2.png\" /> <br /><br /><br /><br /> Return a String[] representing the content of the fractal at time <b>s</b> between rows <b>r1</b> and <b>r2</b>, inclusive, and columns <b>c1</b> and <b>c2</b>, inclusive (all indices are 0-based). White squares should be represented by '0' (zero) and black squares should be represented by '1'.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PlaneFractal",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getPattern",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getPattern(int s, int N, int K, int r1, int r2, int c1, int c2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1",
+			"note":"At time 1, there are 5x5 squares, the middle 3x3 of them are black.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"The example from the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"At time 3, the fractal looks like this (the area that needs to be returned is shown in red):  ",
+			"order":3
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s will be between 0 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"N will be between 3 and 8, inclusive."
+		},
+		{
+			"order":3,
+			"val":"K will be between 1 and N-2, inclusive."
+		},
+		{
+			"order":4,
+			"val":"N and K will have the same parity, i.e., N-K will be divisible by 2."
+		},
+		{
+			"order":5,
+			"val":"r1, r2, c1 and c2 will each be between 0 and N^s-1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"r2 will be between r1 and r1+49, inclusive."
+		},
+		{
+			"order":7,
+			"val":"c2 will be between c1 and c1+49, inclusive."
+		}
+	]
+}

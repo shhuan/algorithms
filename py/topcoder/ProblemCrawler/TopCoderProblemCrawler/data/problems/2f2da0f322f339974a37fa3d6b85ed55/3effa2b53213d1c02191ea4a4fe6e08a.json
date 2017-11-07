@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3509&rd=6528",
+	"statement":"<p><i>The problem statement contains an image.</i></p> <p> Consider an empty chess board (8x8 squares), with a chess knight placed on one of the squares. The possible movements of a chess knight are marked on the picture below. </p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/ChessKnight/ChessKnightMoves.gif\" /> <p> If the knight moves <i>n</i> times, each time picking one of the eight directions uniformly at random (possibly a direction which makes the knight leave the chess board), determine the probability that it's still on the board after <i>n</i> jumps. Once the knight leaves the board, it can't enter it again. </p> <p> Create a class ChessKnight containing the method probability which takes an int <b>x</b>, an int <b>y</b> (the start square of the chess knight, where 1,1 is one of the corners) and an int <b>n</b>, the number of jumps the knight will make. The method should return a double, the probability that the knight is still on the chess board after making <i>n</i> random jumps. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Once the knight leaves the board, it can't enter it again."
+		},
+		{
+			"order":2,
+			"val":"Your return must have an absolute or relative error less than 1e-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ChessKnight",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"probability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double probability(int x, int y, int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"When starting at a corner, only two of the initial jumps will cause the knight to stay on the board. From these new squares, six of the eight jumps will cause the knight to stay on the board. Hence the probability that the knight will stay on the board after two jumps is 1/4 * 6/8 = 0.1875. ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"The knight can't fall off the board if only making a single jump from a square so close to the center. ",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"4",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will be between 1 and 8, inclusive."
+		},
+		{
+			"order":2,
+			"val":"y will be between 1 and 8, inclusive."
+		},
+		{
+			"order":3,
+			"val":"n will be between 1 and 100, inclusive."
+		}
+	]
+}

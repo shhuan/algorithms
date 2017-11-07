@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2007&rd=5078",
+	"statement":"Given a starting point and a finishing point on a square grid, along with some grid points that are forbidden, determine the length of the shortest path from start to finish. In one step you may move one unit horizontally, vertically, or diagonally (but not onto a forbidden point). <p> Create a class ShortPath with a method steps that is given int[] <b>x</b> and int[] <b>y</b> as input. Corresponding elements of <b>x</b> and <b>y</b> give the coordinates of a point. The first elements of <b>x</b> and <b>y</b> give the start, the second elements give the finish, and additional corresponding pairs of elements from <b>x</b> and <b>y</b> specify forbidden points. Your method should return the minimum number of steps required to go from start to finish, or -1 if it is not possible to go from start to finish. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ShortPath",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"steps",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int steps(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,2,1}",
+			"id":0,
+			"input":"{0,2,1}",
+			"note":" In the diagram, S is the start point, F is the finish, and X is forbidden. There are two different paths of length 3, one of which is S to (0,1) to (1,2) to F. The direct path of length 2 is blocked by the forbidden point. ",
+			"order":1
+		},
+		{
+			"expect":"{0,1,2,2}",
+			"id":0,
+			"input":"{0,1,2,2}",
+			"note":" Take a single diagonal step from (0,0) to (1,1). The second appearance of (2,2) on the forbidden list is legal but never matters.",
+			"order":2
+		},
+		{
+			"expect":"{1,200000,0,1,2,0,1,2,0,2}",
+			"id":0,
+			"input":"{1,100000,0,0,0,2,2,2,1,1}",
+			"note":"The start point is trapped in a square of forbidden points. ",
+			"order":3
+		},
+		{
+			"expect":"{1,200000,0,1,2,0,1,2,0}",
+			"id":0,
+			"input":"{1,100000,0,0,0,2,2,2,1}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will have between 2 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"y will have the same number of elements as x."
+		},
+		{
+			"order":3,
+			"val":"Each element of x will be between -1,000,000,000 and 1,000,000,000 inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of y will be between -1,000,000,000 and 1,000,000,000 inclusive."
+		},
+		{
+			"order":5,
+			"val":"The start and finish points will be distinct from each other and from all other points given by x and y."
+		}
+	]
+}

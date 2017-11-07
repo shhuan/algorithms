@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5955&rd=10009",
+	"statement":"<p> A lumberjack needs to transport a log to a paper mill. However, it's too long to fit in his truck, so he needs to cut it into multiple pieces. The log's length is <b>L</b> centimeters, and due to its nonuniform density, it can only be cut at certain places. The points at which it can be cut are represented by the expression <tt>((<b>A</b>&nbsp;*&nbsp;i)&nbsp;mod&nbsp;(<b>L</b>&nbsp;-&nbsp;1))&nbsp;+&nbsp;1</tt>, for all integers <tt>i</tt> between 1 and <b>K</b>, inclusive. Coordinates are measured as the distance in centimeters from the leftmost end of the log. The lumberjack is allowed to make at most <b>C</b> cuts. </p> <p> Determine a strategy for cutting the log that minimizes the length of the longest resulting piece. The return value should be a String formatted as <tt>&quot;MaxPart&nbsp;FirstCut&quot;</tt> (quotes for clarity only), where <tt>MaxPart</tt> is the length of the longest piece and <tt>FirstCut</tt> is the coordinate of the leftmost cut. Both <tt>MaxPart</tt> and <tt>FirstCut</tt> must be integers with no leading zeroes. If there are multiple answers, return the one with the smallest <tt>FirstCut</tt> value. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LogCutter",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestCut",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String bestCut(int L, int A, int K, int C)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"9",
+			"note":"This log of length 9 can be cut at points 4 and 7. We cut it at point 4 to produce two parts with lengths 4 and 5.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"5",
+			"note":"This log of length 5 can only be cut in one place, which is 3 centimeters from the left end of the log.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"6",
+			"note":"This log of length 6 can be cut at any integer coordinate. We are allowed up to 3 cuts, so we can make the longest part 2 centimeters long. This requires only two cuts at points 2 and 4. To minimize the coordinate of the leftmost cut, we perform a third cut at point 1.",
+			"order":3
+		},
+		{
+			"expect":"999983",
+			"id":0,
+			"input":"10000",
+			"order":4
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"5",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"L will be between 2 and 1000000000, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"A will be between 1 and 1000000000, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"K will be between 1 and 10000, inclusive. "
+		},
+		{
+			"order":4,
+			"val":"C will be between 1 and 10000, inclusive. "
+		}
+	]
+}

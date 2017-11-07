@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1639&rd=4492",
+	"statement":"A bunch of people in a large park area are setting up a telephone network using receivers directly connected by wires. There is a lot of spare wire, so the connections need not be straight. The only restriction on the medium is that there be no crossings, since they could cause interference. In other words, if observed from a helicopter above the park, none of the wires can appear to be crossing over one another. Initially, the group of people set up a base network where person 0 is connected to person 1, person 1 is connected to person 2, ..., person <i>i</i> is connected to person <i>i</i>+1, ..., and the last person is connected back to person 0 forming a cycle. Afterwards many other connections were built. The problem is, some of the new connections may have forced crossings to occur.<br /><br /> <br /><br /> Given the additional connections that were formed, your method will determine the minimum number of connections that need be removed such that there will not be any crossings. Note that, given a particular set of connections, if it is possible to lay the wires such that they will not cross, the people will do so. This means the people may change their locations and how much wire they use in order to remove crossings. They will not succeed if a crossing is inevitable. Also, since the base network must not be damaged, the removed connections cannot include any of the base network connections.<br /><br /> <br /><br /> You will be given 2 int[]s <b>connect1</b> and <b>connect2</b> representing the additional connections formed. If the <i>k</i>th elements of <b>connect1</b> and <b>connect2</b> are <i>a</i> and <i>b</i> respectively, person <i>a</i> and person <i>b</i> have formed a connection. Note, connections are symmetric, so if <i>a</i> and <i>b</i> are connected then <i>b</i> and <i>a</i> are connected. You will also be given an int <b>numPeople</b> representing the number of people forming the network. Each element of <b>connect1</b> and <b>connect2</b> will be integers between 0 and <b>numPeople</b>-1 inclusive.",
+	"notes":[{
+		"order":1,
+		"val":"Without loss of generality, you can assume that the people are arranged in a circular pattern. Continuing this image, the base network would be seen from a helicopter as a circle."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TelephoneGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int[] connect1, int[] connect2, int numPeople)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2,3}",
+			"id":0,
+			"input":"{0,1}",
+			"note":"The given connections can easily be formed without crossings as depicted below:",
+			"order":1
+		},
+		{
+			"expect":"{6,7,8,7,8,8}",
+			"id":0,
+			"input":"{4,4,4,5,5,6}",
+			"note":"There is no way for all of these connections to be added without a crossing.",
+			"order":2
+		},
+		{
+			"expect":"{3,5,1}",
+			"id":0,
+			"input":"{0,2,4}",
+			"order":3
+		},
+		{
+			"expect":"{2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20}",
+			"id":0,
+			"input":"{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18}",
+			"order":4
+		},
+		{
+			"expect":"{30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47}",
+			"id":0,
+			"input":"{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"connect1 must contain between 1 and 18 elements inclusive"
+		},
+		{
+			"order":2,
+			"val":"connect1 must contain the same number of elements as connect2"
+		},
+		{
+			"order":3,
+			"val":"numPeople must be between 4 and 10000 inclusive"
+		},
+		{
+			"order":4,
+			"val":"Element i of connect1 will not be equal to element i of connect2"
+		},
+		{
+			"order":5,
+			"val":"Each element of connect1 and connect2 will be between 0 and numPeople-1 inclusive"
+		},
+		{
+			"order":6,
+			"val":"There will be no repeated connections. In other words, if a connection from a to b exists, there will be no other connections of the form a to b or b to a allowed as input. This includes the original connections, so there will be no connections from i to i+1, or from 0 to the last person."
+		}
+	]
+}

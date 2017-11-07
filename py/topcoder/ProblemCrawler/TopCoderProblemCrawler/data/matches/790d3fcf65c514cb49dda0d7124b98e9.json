@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":212.91,
+			"constraints":[],
+			"correctRatio":74.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7408&rd=10670",
+			"name":"CommonMultiples",
+			"notes":[],
+			"submission":422
+		},
+		{
+			"avgPts":298.3,
+			"constraints":[],
+			"correctRatio":30.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7682&rd=10670",
+			"name":"HeightRound",
+			"notes":[],
+			"submission":318
+		},
+		{
+			"avgPts":560.58,
+			"constraints":[],
+			"correctRatio":35.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7683&rd=10670",
+			"name":"Meteorites",
+			"notes":[],
+			"submission":53
+		}
+	],
+	"name":"Single Round Match 346 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10670"
+}

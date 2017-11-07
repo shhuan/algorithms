@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":232.01,
+			"constraints":[],
+			"correctRatio":99.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11471&rd=14543",
+			"name":"LargestSubsequence",
+			"notes":[],
+			"submission":816
+		},
+		{
+			"avgPts":306.11,
+			"constraints":[],
+			"correctRatio":92.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11474&rd=14543",
+			"name":"ConvexSequence",
+			"notes":[],
+			"submission":532
+		},
+		{
+			"avgPts":476.52,
+			"constraints":[],
+			"correctRatio":42.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11469&rd=14543",
+			"name":"Nim",
+			"notes":[],
+			"submission":7
+		}
+	],
+	"name":"Single Round Match 518 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14543"
+}

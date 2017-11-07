@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":212.68,
+			"constraints":[],
+			"correctRatio":94.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11952&rd=15156",
+			"name":"GreedyTravelingSalesman",
+			"notes":[],
+			"submission":17
+		},
+		{
+			"avgPts":300.39,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11987&rd=15156",
+			"name":"ThreePoints",
+			"notes":[],
+			"submission":7
+		},
+		{
+			"avgPts":648.16,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11847&rd=15156",
+			"name":"FlattenOut",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"2012 TCO Algorithm > Parallel Round 2C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15156"
+}

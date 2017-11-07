@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":217.93,
+			"constraints":[],
+			"correctRatio":91.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5881&rd=8071",
+			"name":"PalindromeMaker",
+			"notes":[],
+			"submission":248
+		},
+		{
+			"avgPts":295.35,
+			"constraints":[],
+			"correctRatio":44.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5887&rd=8071",
+			"name":"DyckwordUniformer",
+			"notes":[],
+			"submission":131
+		},
+		{
+			"avgPts":744.57,
+			"constraints":[],
+			"correctRatio":60.76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4839&rd=8071",
+			"name":"RingImposition",
+			"notes":[],
+			"submission":79
+		}
+	],
+	"name":"Single Round Match 274 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8071"
+}

@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9839&rd=13504",
+	"statement":"<p><i>NOTE: This problem statement contains subscripts that may not display properly if viewed outside of the applet.</i></p><br /><br /> <p> In mathematics, an arithmetic progression or arithmetic sequence is a sequence of numbers such that the difference of any two successive members of the sequence is a constant. For instance, the sequence 3, 5, 7, 9, 11, 13... is an arithmetic progression with common difference 2. An arithmetic sequence can always be represented as a<sub>n</sub>=a0+n*d. </p> <p> You will be given a sequence <b>seq</b>, where <b>seq</b><sub>i</sub> = [a<sub>i+1</sub>] for some nondecreasing arithmetic sequence a (both indices are 0-based). [x] denotes the floor function (see Notes). The sequence a is defined as <b>a0</b>+i*d. Return the minimal possible value for d. If no possible value exists for d, return -1 instead. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"[x] denotes the floor function of x which returns the highest integer less than or equal to x. For example, [3.4] = 3, [0.6] = 0, [-1.2] = -2 and [-0.6] = -1."
+		},
+		{
+			"order":2,
+			"val":"Your return value must be accurate to within an absolute or relative tolerance of 1E-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ArithmeticProgression",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCommonDifference",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double minCommonDifference(int a0, int[] seq)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{6, 13, 20, 27}",
+			"id":0,
+			"input":"0",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"{2, 3, 4, 5, 6}",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"3",
+			"note":"Since the sequence a is nondecreasing, d must be at least 0.",
+			"order":3
+		},
+		{
+			"expect":"{3, 3, 3, 3, 4}",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{-3}",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{6, 14}",
+			"id":0,
+			"input":"0",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"seq will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of seq will be between -10^6 and 10^6, inclusive."
+		},
+		{
+			"order":3,
+			"val":"a0 will be between -10^6 and 10^6, inclusive."
+		}
+	]
+}

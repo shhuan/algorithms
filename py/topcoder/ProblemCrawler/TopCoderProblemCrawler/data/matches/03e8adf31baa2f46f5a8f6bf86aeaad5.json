@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":180.36,
+			"constraints":[],
+			"correctRatio":55.83,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3092&rd=5871",
+			"name":"ParameterSubstitution",
+			"notes":[],
+			"submission":163
+		},
+		{
+			"avgPts":343.5,
+			"constraints":[],
+			"correctRatio":68.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3098&rd=5871",
+			"name":"ComboBoxKeystrokes",
+			"notes":[],
+			"submission":127
+		},
+		{
+			"avgPts":411.52,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3485&rd=5871",
+			"name":"Triangulation",
+			"notes":[],
+			"submission":9
+		}
+	],
+	"name":"Single Round Match 225 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5871"
+}

@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7408&rd=10670",
+	"statement":"<p> You will be given a int[] <b>a</b> and two ints <b>lower</b> and <b>upper</b>. Return the number of integers between <b>lower</b> and <b>upper</b>, inclusive, that are multiples of all members of <b>a</b>. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CommonMultiples",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countCommMult",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countCommMult(int[] a, int lower, int upper)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{1,2,3}",
+			"note":"The only numbers between 5 and 15 that are multiples of 1, 2 and 3 are 6 and 12.",
+			"order":1
+		},
+		{
+			"expect":"128",
+			"id":0,
+			"input":"{1,2,4,8,16,32,64}",
+			"note":"128 is a multiple of all smaller powers of 2.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{2,3,5,7,11,13,17,19,23,29,31,37,41,43,49}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{1,1,1}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of a will be between 1 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"upper will be between 1 and 2000000000 (2*109), inclusive."
+		},
+		{
+			"order":4,
+			"val":"lower will be between 1 and upper, inclusive."
+		}
+	]
+}

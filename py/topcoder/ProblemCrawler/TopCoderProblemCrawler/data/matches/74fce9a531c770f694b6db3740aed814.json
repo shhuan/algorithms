@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":161.72,
+			"constraints":[],
+			"correctRatio":44.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12784&rd=15705",
+			"name":"HexagonalBoard",
+			"notes":[],
+			"submission":691
+		},
+		{
+			"avgPts":272.82,
+			"constraints":[],
+			"correctRatio":78.72,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12779&rd=15705",
+			"name":"MayTheBestPetWin",
+			"notes":[],
+			"submission":235
+		},
+		{
+			"avgPts":544.68,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12782&rd=15705",
+			"name":"WolfDelaymasterHard",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 593 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15705"
+}

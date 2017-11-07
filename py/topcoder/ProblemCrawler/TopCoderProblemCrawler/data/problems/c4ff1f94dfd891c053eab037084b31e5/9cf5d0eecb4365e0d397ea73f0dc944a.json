@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=222&rd=4010",
+	"statement":"<pre>PROBLEM STATEMENT\n\nCompute a truth table of a digital circuit composed of logical elements AND,\nOR, and NOT. An AND element takes between 2 and 8 inputs and outputs 1 if all\ninputs are 1, and 0 otherwise. An OR element takes between 2 and 8 inputs and\noutputs 1 if any element is 1, and 0 otherwise. A NOT element takes 1 input,\nand ouputs 0 if the input is 1, and 1 if the input is 0. The circuit does not\nhave feedbacks, meaning that no output of an element can influence any of that\nelement's inputs, either directly or through other elements.\n\nDEFINITION\nClass name: TruthTable\nMethod name: getTruthTable\nParameters: String[]\nReturn type: String[]\n\nMethod signature: String[] getTruthTable(String[] nodes); Be sure your method\nis public.\n\nnodes may have 2 to 50 String objects, inclusive. Each String defines a &quot;node&quot;\nin the circuit. A &quot;node&quot; may be an input, an output, or a logical element of\ntype &quot;AND&quot;, &quot;OR&quot;, or &quot;NOT&quot;. Strings are formatted as follows:\nTYPE:Input1,Input2,...\nTYPE is a single lowercase character designating the type of the node, as\nfollows:\n'i' - the node is an input,\n'x' - the node is an output,\n'a' - the node is a logical AND element,\n'o' - the node is a logical OR element,\n'n' - the node is a logical NOT element.\nThe input list following the colon ':' character (Input1, Input2,...)\ndesignates inputs of this node. The input list consists of numbers in the range\n0 to 48, inclusive, representing zero-based indexes of nodes used as inputs to\nthe current node. For example, string &quot;a:1,2&quot; represents a logical AND element\nwith two inputs, connected to the outputs of nodes at index 1 and 2. Elements\nof type 'a' and 'o' have 2 to 8 inputs, inclusive. Elements of type 'n' and 'x'\nhave exactly one input. Elements of type 'i' do not have inputs, therefore\nstrings that start with 'i' do not contain the ':' character.\n\nTopCoder will ensure that:\n* nodes has at least two and no more than fifty elements\n* The first character of each String is 'i', 'x', 'a', 'o', or 'n'\n* nodes contains at least one but no more than five inputs\n* nodes contains at least one output\n* Number of inputs per element type is within the limits set above: two to\neight, inclusive, for ANDs and ORs; exactly one for NOTs and Outputs, zero for\nInputs\n* Indexes of elements used as inputs to an element are lower than the index of\nthe current element (this ensures that the circuit has no feedbacks)\n\nYour method should compute truth tables for each of the outputs, and return the\nresults in a String[], one per output, arranged in the order of the outputs in\nthe circuit definition. Each truth table is a string composed of characters '1'\n(digit one) and '0' (digit zero). Truth tables consist of 2^numInputs (2 raised\nto the power of numInputs) characters, where numInputs is the number of inputs\nto the circuit. To build a truth table, your method should number all inputs 0\nthrough numInputs-1, in the order they appear in the circuit definition. Then\nyour method should go through all possible combinations of zeros and ones for\nthe inputs, interpreting each combination of inputs as a binary representation\nof an index into the truth table. The first character in the string\nrepresentation of truth tables corresponds to all inputs set to zero; The\nsecond character corresponds to the input with the lowest index set to one\nwhile the rest of the inputs are set to zero, and so on. The last character\ncorresponds to all inputs set to one. For example, the truth table for an AND\nelement with two inputs is &quot;0001&quot;.\n\nNOTES\n* Some outputs may ignore some inputs. This should not influence the length of\nthe truth table for that output.\n* Some outputs may produce a constant result regardless of the state of the\ninputs. Truth tables for such outputs should consist of 2^numInputs repetitions\nof the constant (see example number 4).\n* Circuits may use output nodes as inputs to other nodes. This is not different\nfrom re-using that output's input, in that it does not alter circuit's truth\ntable. For example,\n{&quot;i&quot;,&quot;n:0&quot;,&quot;x:1&quot;,&quot;n:2&quot;,&quot;x:4&quot;} and\n{&quot;i&quot;,&quot;n:0&quot;,&quot;x:1&quot;,&quot;n:1&quot;,&quot;x:4&quot;} are equivalent.\n\nEXAMPLES\n1. nodes = {&quot;i&quot;,&quot;i&quot;,&quot;i&quot;,&quot;n:0&quot;,&quot;a:1,2,3&quot;,&quot;x:4&quot;} This circuit contains a logical\nAND element with three inputs, two of which are connected directly to inputs,\nand one connected to an input through a logical NOT element.  See diagram below\n(for a more detailed diagram check out\nhttp://www.topcoder.com/contest/circuits.html):\n\n     +---+  +---+\ni0 --|not|--|   |\n     +---+  |   |\ni1 ---------|and|-- o0\n            |   |\ni2 ---------|   |\n            +---+\n\nThe circuit computes the following:\n\ni0 i1 i2 | o0\n---------+---\n0  0  0  |  0\n1  0  0  |  0\n0  1  0  |  0\n1  1  0  |  0\n0  0  1  |  0\n1  0  1  |  0\n0  1  1  |  1\n1  1  1  |  0\n\ngetTruthTable should return {&quot;00000010&quot;}.\n\n2. nodes = {&quot;i&quot;,&quot;x:0&quot;} This trivial circuit connects its only input to its only\noutput, with no logical elements in between. getTruthTable should return {&quot;01&quot;}.\n3. nodes = {&quot;i&quot;,&quot;n:0&quot;,&quot;x:1&quot;} This circuit contains a logical NOT element in\nbetween of its input and its output. getTruthTable should return {&quot;10&quot;}.\n4. nodes ={&quot;i&quot;,&quot;n:0&quot;,&quot;a:0,1&quot;,&quot;x:2&quot;} This circuit returns 0 regardless of the\nstate of the input, because (X AND (NOT X)) is 0 for any value of X; therefore\ngetTruthTable should return {&quot;00&quot;}.\n5. nodes = {&quot;i&quot;,&quot;i&quot;,&quot;i&quot;,&quot;n:0&quot;,&quot;a:1,2,3&quot;,&quot;x:4&quot;,&quot;x:0&quot;,&quot;x:3&quot;} getTruthTable should\nreturn {&quot;00000010&quot;,&quot;01010101&quot;,&quot;10101010&quot;}.</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TruthTable",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getTruthTable",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getTruthTable(String[] param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

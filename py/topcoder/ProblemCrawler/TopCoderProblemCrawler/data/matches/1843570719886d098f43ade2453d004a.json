@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":206.02,
+			"constraints":[],
+			"correctRatio":91.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6726&rd=10097",
+			"name":"StringSquares",
+			"notes":[],
+			"submission":433
+		},
+		{
+			"avgPts":257.09,
+			"constraints":[],
+			"correctRatio":65.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6640&rd=10097",
+			"name":"PickupBed",
+			"notes":[],
+			"submission":129
+		},
+		{
+			"avgPts":523.61,
+			"constraints":[],
+			"correctRatio":27.08,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6051&rd=10097",
+			"name":"VectorCostSequence",
+			"notes":[],
+			"submission":48
+		}
+	],
+	"name":"TCCC06 > Online Round 1A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10097"
+}

@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1969&rd=4665",
+	"statement":"<p> According to Lewis Carroll, a clock that has stopped is more accurate than one that is five minutes behind. He argues that the former is right twice a day, whereas the latter never shows the correct time. Then again, a clock that is always five minutes behind is in a sense perfectly accurate, and therefore an extraordinary specimen. More usually, a clock is ahead or behind because it runs at the wrong rate, so that its absolute discrepancy from the true time is steadily changing. If left unregulated, such a clock will show the true time at regular but perhaps lengthy intervals. </p> <p> You are given two Strings of the form &quot;hh:mm:ss&quot;. The first represents exactly the true time, while the second is exactly the time shown by an ill-tuned clock. This is an analog clock whose hour, minute, and second hands sweep continuously around the dial at a speed that is too fast or too slow by a constant factor. Both times are given in the North American style, where the hour ranges between 1 and 12, inclusive. Given an int specifying the non-zero number of seconds that the clock gains every hour, calculate the number of hours that elapse before it agrees with the true time. Your answer, a double, must be correct with either absolute or relative precision of 1.0e-9 (one billionth). </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"If  is negative, the clock falls behind by a fixed number of seconds every hour."
+		},
+		{
+			"order":2,
+			"val":"It is not the case that the clock makes discrete jumps every so often. Rather, the hands of the clock are moving smoothly and continuously at a constant rate that is too slow or too fast relative to the true time."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BadClock",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"nextAgreement",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double nextAgreement(String trueTime, String skewTime, int hourlyGain)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"07:07:07\"",
+			"id":0,
+			"input":"\"07:07:07\"",
+			"note":"The clock is already showing the true time.",
+			"order":1
+		},
+		{
+			"expect":"\"12:03:28\"",
+			"id":0,
+			"input":"\"11:59:58\"",
+			"note":"This clock loses three seconds every hour, and will catch up with the true time in exactly 70 hours.",
+			"order":2
+		},
+		{
+			"expect":"\"11:59:58\"",
+			"id":0,
+			"input":"\"12:03:28\"",
+			"note":"This clock gains three seconds per hour.",
+			"order":3
+		},
+		{
+			"expect":"\"03:01:47\"",
+			"id":0,
+			"input":"\"03:03:02\"",
+			"order":4
+		},
+		{
+			"expect":"\"03:01:47\"",
+			"id":0,
+			"input":"\"03:03:02\"",
+			"order":5
+		},
+		{
+			"expect":"\"09:08:07\"",
+			"id":0,
+			"input":"\"07:08:09\"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"trueTime and skewTime each contain exactly eight characters in the format &quot;hh:mm:ss&quot;, where the substring &quot;hh&quot; is a zero-padded integer between 1 and 12, inclusive, and &quot;mm&quot; and &quot;ss&quot; are zero-padded integers between 0 and 59, inclusive"
+		},
+		{
+			"order":2,
+			"val":"hourlyGain is either between -1800 and -1, inclusive, or between 1 and 3600, inclusive"
+		}
+	]
+}

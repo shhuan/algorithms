@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11115&rd=14426",
+	"statement":"<p> The <i>signature</i> of a permutation is a string that is computed as follows: for each pair of consecutive elements of the permutation, write down the letter '<tt>I</tt>' (increasing) if the second element is greater than the first one, otherwise write down the letter '<tt>D</tt>' (decreasing). </p> <p> For example, the signature of the permutation {3,1,2,7,4,6,5} is &quot;<tt>DIIDID</tt>&quot;. </p> <p> Your task is to reverse this computation: You are given a String <b>signature</b> containing the signature of a permutation. Find and return the lexicographically smallest permutation with the given signature. If no such permutation exists, return an empty int[] instead. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"For any positive integer N, a permutation of N elements is a sequence of length N that contains each of the integers 1 through N exactly once."
+		},
+		{
+			"order":2,
+			"val":"To compare two permutations A and B, find the smallest index i such that A[i] and B[i] differ. If A[i] < B[i], we say that A is lexicographically smaller than B, and vice versa."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PermutationSignature",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"reconstruct",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] reconstruct(String signature)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {1, 2, 3, 4, 5, 6 }",
+			"id":0,
+			"input":"\"IIIII\"",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"Returns: {2, 1, 3 }",
+			"id":0,
+			"input":"\"DI\"",
+			"note":"There are two permutations with this signature: {3,1,2} and {2,1,3}. You must return the lexicographically smaller one.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {1, 2, 3, 4, 6, 5 }",
+			"id":0,
+			"input":"\"IIIID\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: {2, 1, 3, 5, 4, 7, 6 }",
+			"id":0,
+			"input":"\"DIIDID\"",
+			"note":"This is the signature from the problem statement. Note that the correct answer is not the permutation from the problem statement.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"signature will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in signature will be either 'I' or 'D'."
+		}
+	]
+}

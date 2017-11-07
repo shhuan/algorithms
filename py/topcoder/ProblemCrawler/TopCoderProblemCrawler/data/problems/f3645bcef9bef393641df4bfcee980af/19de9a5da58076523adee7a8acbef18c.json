@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7733&rd=10759",
+	"statement":"<p> Prefix notation (also known as Polish notation in reference to the nationality of its inventor, Jan Lukasiewicz) is a notation where operators are placed before their arguments (and arguments themselves are also expressions in prefix notation). Since the arity of arithmetic operations is fixed, an expression written in prefix notation is always unambiguous, and parenthesizing the expression is unnecessary. For example: </p> <pre>\n Our usual (infix) notation        Prefix notation\n 2 + 3                             + 2 3\n 3 + 2                             + 3 2\n 4 * (-2 + 3)                      * 4 + -2 3\n (22 + 3) * (55 - 4)               * + 22 3 - 55 4\n 1 + 2 + 3 + 44 + (-5)             + + + + 1 2 3 44 -5\n 1 + (2 + (3 + (44 + (-5))))       + 1 + 2 + 3 + 44 -5\n</pre> <p> As you can see from the table, any arithmetic expression can be written unambiguously in prefix notation. Since operators and numbers are separated by spaces, we are always able to distinguish a 2-digit number and a sequence of two 1-digit numbers, as well as distinguish between unary and binary minuses. </p> <p> More formally, any valid expression in prefix notation can be described by the following rules: </p>\n <ul> \n  <li>Any integer number is a valid expression.</li> \n  <li>If S and Q are valid expressions, then &quot;+ S Q&quot;, &quot;* S Q&quot;, &quot;- S Q&quot; and &quot;/ S Q&quot; are valid expressions (all quotes are for clarity only).</li> \n </ul> <p></p> <p> You've got an expression written in prefix notation and you'd like to read it. Unfortunately, all the spaces were removed, possibly making it impossible to determine what the original expression was. For example, &quot;--456&quot; could have originally been &quot;- - 4 5 6&quot;, &quot;- -4 56&quot; or &quot;- -45 6&quot;. You are to return the number of different valid original prefix notation expressions that could have resulted in the given expression. Note that both positive and negative numbers in the original expression may contain leading zeroes. Unary minuses in the original expression are allowed, but there can be at most one unary minus in a number (so, &quot;12&quot; and &quot;-34&quot; are valid numbers, but &quot;--11&quot; and &quot;----22&quot; are not). Also, the original expression cannot contain any unary pluses. See examples for further clarification. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PolishNotation",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"waysToDecode",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long waysToDecode(String expression)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"\"01234567890123456789\"",
+			"note":"This string is already a valid expression in prefix notation, and the only way to keep it valid is to not add any spaces.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"\"+1234567\"",
+			"note":"We must put a space after '+' to split the operator and its operands. We need one more space to split the two operands, and it can be put right after '1', '2', '3', '4', '5' or '6'.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"\"23/33\"",
+			"note":"This string can not be transformed into a valid expression.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"\"/-010\"",
+			"note":"The three ways to transform this into a valid expression are (all quotes for clarity): ",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"\"-*123\"",
+			"note":"Here the minus is followed by another operation, so it must be binary.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"\"--1\"",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"expression will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"expression will contain only '+', '-', '/', '*' characters and digits ('0' - '9')."
+		}
+	]
+}

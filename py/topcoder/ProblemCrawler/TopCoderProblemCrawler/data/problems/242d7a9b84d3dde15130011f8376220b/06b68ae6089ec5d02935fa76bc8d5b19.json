@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13649&rd=16312",
+	"statement":"<p><i>This problem statement contains superscripts that may not display properly outside the applet.</i></p> <p></p> <p>Kitayuta Mart is the largest supermarket in Shuseki Kingdom, offering a great variety of food and household products. The main products are fruits, especially apples. The store sells <b>K</b> kinds of apples, numbered from 1 to <b>K</b>. The price system is a little special: the <i>original price</i> of an apple of kind <i>i</i> (1 &lt;= <i>i</i> &lt;= <b>K</b>) is <i>i</i> yen (the currency of the kingdom). However, if a customer wants to buy more than one apple of kind <i>i</i>, the second apple will cost 2*<i>i</i> yen, the third apple will cost 2<sup>2</sup>*<i>i</i> yen, and so on. In general, if a customer is buying <i>n</i> apples of kind <i>i</i>, the <i>actual price</i> of the <i>j</i>-th (1 &lt;= <i>j</i> &lt;= <i>n</i>) apple will be 2<sup><i>j</i>-1</sup>*<i>i</i> yen. The store has a sufficient supply of each kind of apples.</p> <p></p> <p>Lun the dog loves apples. She wants to buy <b>N</b> apples at Kitayuta Mart. The kinds of apples does not matter to her, thus she will choose <b>N</b> apples so that the total price calculated using the above formula is minimized. You are given two ints: <b>N</b> and <b>K</b>. Find and return the <i>actual price</i> (NOT the <i>original price</i>) of the apple with the highest <i>actual price</i> among the apples that she will buy modulo 1,000,000,007.</p>",
+	"notes":[{
+		"order":1,
+		"val":"It can be shown that the answer is unique."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"KitayutaMart",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"lastPrice",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int lastPrice(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"3",
+			"note":"The store sells only one kind of apples. Their  is 1 yen. She will buy three of them, and the most expensive one will cost 2*1 = 4 yen.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"In this case, another kind of apples is also on sale. Instead of buying three of kind 1, she can buy two of kind 1 and one of kind 2. Their costs will be 1, 2, and 2 yen, so the most expensive apple in this case only costs 2 yen.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"This time, yet another kind of apples is available, and she needs five apples. There are two options:  In either way, she will have to pay 4 yen for the most expensive apple.",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1000000000",
+			"note":"In this extreme case, the price of an apple will reach 2 yen.",
+			"order":4
+		},
+		{
+			"expect":"876543210",
+			"id":0,
+			"input":"987654321",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":217.2,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=207&rd=57",
+			"name":"UserListSorter",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":376.8,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=208&rd=57",
+			"name":"NTicTacToe",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":602.48,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=209&rd=57",
+			"name":"Networking",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2001 Invitational > Finals",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=57"
+}

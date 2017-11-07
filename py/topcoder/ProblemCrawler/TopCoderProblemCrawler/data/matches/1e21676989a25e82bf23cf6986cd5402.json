@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":170.02,
+			"constraints":[],
+			"correctRatio":39.58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7901&rd=10765",
+			"name":"AverageProblem",
+			"notes":[],
+			"submission":331
+		},
+		{
+			"avgPts":309.26,
+			"constraints":[],
+			"correctRatio":31.76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6608&rd=10765",
+			"name":"MarriageProblemRevised",
+			"notes":[],
+			"submission":85
+		},
+		{
+			"avgPts":566.69,
+			"constraints":[],
+			"correctRatio":11.96,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7353&rd=10765",
+			"name":"EscapeTheJail",
+			"notes":[],
+			"submission":92
+		}
+	],
+	"name":"Single Round Match 356 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10765"
+}

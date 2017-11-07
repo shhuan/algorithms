@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4846&rd=8077",
+	"statement":"We all know that a planar graph is one that you can draw without having any edges crossing. Perhaps less well known is that a planar graph can always be drawn with vertices on lattice points and with edges as straight lines between connected vertices.<br /><br /><br /><br /> You will be given a String[], <b>graph</b>, representing a planar undirected graph, where the j<sup>th</sup> character of element i of <b>graph</b> indicates whether vertices i and j are connected ('T' for true, 'F' for false). Your task is to find the area of the smallest rectangular box that the vertices can be placed in so that they are located on lattice points with non-overlapping straight edges between connected vertices.",
+	"notes":[{
+		"order":1,
+		"val":"Lattice points are ones with integer coordinates."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DrawPlanar",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minArea",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minArea(String[] graph)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"F\"}",
+			"note":"With just one vertex, a single point suffices to draw the graph, so the area is 0.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"FTF\", \"TFF\", \"FFF\"}",
+			"note":"In this case, we can draw the vertices all in a line, again with area 0.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"FTT\", \"TFT\", \"TTF\"}",
+			"note":"Here, we can select any three corners of a 1x1 square.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"FTTT\", \"TFTT\", \"TTFT\", \"TTTF\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{\"FTTTTTT\", \"TFTTTFT\", \"TTFFFFT\", \"TTFFTFF\", \"TTFTFTT\", \"TFFFTFT\", \"TTTFTTF\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"graph will contain between 1 and 7 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of graph will contain the same number of characters as there are elements in graph."
+		},
+		{
+			"order":3,
+			"val":"Each character in graph will be 'T' or 'F'."
+		},
+		{
+			"order":4,
+			"val":"Character i in element i of graph will be 'F'."
+		},
+		{
+			"order":5,
+			"val":"Character i in element j of graph will be equal to character j in element i."
+		},
+		{
+			"order":6,
+			"val":"The graph will be planar."
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12183&rd=15151",
+	"statement":"Cat Taro and rabbit Hanako are running the animal programming competitions in a forest. John and Brus are invited as judges. Each team that takes part in the competitions consists of exactly four members. Each team member is either a cat or a rabbit. You are given a int[] <b>rabbits</b>. The number of teams that take part in the competitions is equal to the number of elements in <b>rabbits</b>. For each i, team number i (0-based index) consists of <b>rabbits</b>[i] rabbits and 4-<b>rabbits</b>[i] cats. <br /><br /><br /><br /> According to the best traditions of the animal programming competitions, each rabbit brings one carrot at the opening ceremony and presents it to some participant (either a cat or a rabbit) from a different team. The rabbits always coordinate their choices in order to make sure that no participant receives more than one carrot as a present. It seems this task is not that easy for the rabbits, so they asked the judges (John and Brus) to help them. Now John and Brus are thinking of a carrot distribution plan. All the carrots are considered pairwise distinct. Hence, two distribution plans are considered distinct if and only if there is at least one participant that receives a different present (i.e., either a different carrot in each plan, or a carrot in one plan and no carrot in the other). Return the number of different distribution plans, modulo 1,234,567,891.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheAnimalProgrammingCompetitions",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int find(int[] rabbits)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{0, 1, 0}",
+			"note":"There are eight options for the only rabbit in the competitions.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{4}",
+			"note":"Rabbits can't present carrots to their teammates.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 60",
+			"id":0,
+			"input":"{1, 1, 0}",
+			"note":"If the first rabbit presents their carrot to somebody from the second rabbit's team then there are eight options for the second rabbit, if not - only seven. Thus the total number of different plans is 4*8 + 4*7 = 60. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 644027397",
+			"id":0,
+			"input":"{0, 1, 2, 3, 4}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rabbits will contain between 1 and 47 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of rabbits will be between 0 and 4, inclusive."
+		}
+	]
+}

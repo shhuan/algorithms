@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":183.71,
+			"constraints":[],
+			"correctRatio":67.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10759&rd=14154",
+			"name":"PotatoGame",
+			"notes":[],
+			"submission":621
+		},
+		{
+			"avgPts":279.21,
+			"constraints":[],
+			"correctRatio":82.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10947&rd=14154",
+			"name":"TwoSidedCards",
+			"notes":[],
+			"submission":39
+		},
+		{
+			"avgPts":387.66,
+			"constraints":[],
+			"correctRatio":60,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10758&rd=14154",
+			"name":"ColorfulTiles",
+			"notes":[],
+			"submission":20
+		}
+	],
+	"name":"Single Round Match 472 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14154"
+}

@@ -1,0 +1,74 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7658&rd=10711",
+	"statement":"<p> You will be given three integers <b>N</b>, <b>M</b> and <b>K</b>. You are to calculate the number of ways to place <b>K</b> rooks on a <b>N</b>x<b>M</b> chessboard in such a way that no rook is attacked by more than one other rook. A rook is attacked by another rook if they share a row or a column and there are no other rooks between them. To avoid problems with big numbers the calculation should be done modulo 1,000,001. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RooksPlacement",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countPlacements",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countPlacements(int N, int M, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"4",
+			"note":"There are only two rooks and therefore all placements are valid. The number of placements is (4 * 5) * (4 * 5 - 1) / 2 = 190.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":" ",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"6",
+			"order":3
+		},
+		{
+			"expect":"37",
+			"id":0,
+			"input":"23",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"M will be between 1 and 50, inclusive."
+		},
+		{
+			"order":3,
+			"val":"K will be between 1 and 100, inclusive."
+		}
+	]
+}

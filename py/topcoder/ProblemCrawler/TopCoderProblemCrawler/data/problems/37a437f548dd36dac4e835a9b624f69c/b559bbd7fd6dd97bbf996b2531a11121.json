@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2970&rd=5867",
+	"statement":"You will be given 2 numbers <b>start</b> and <b>finish</b> each with the same number of digits. Both may have leading zeros. You are going to transform <b>start</b> into <b>finish</b> using the following kinds of transformation steps: \n <ul> \n  <li> 1) Increment a digit less than 9 by 1. For example, changing 354 to 364. </li> \n  <li> 2) Decrement a digit greater than 0 by 1. For example, changing 354 to 254. </li> \n  <li> 3) Swapping two digits. For example, changing 354 to 453. </li> \n </ul> Return the fewest number of transformation steps required to change <b>start</b> into <b>finish</b>.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NumberChanger",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"transform",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int transform(String start, String finish)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"01234567\"",
+			"id":0,
+			"input":"\"01234567\"",
+			"note":"No steps required.",
+			"order":1
+		},
+		{
+			"expect":"\"99991111\"",
+			"id":0,
+			"input":"\"11119999\"",
+			"note":"4 swaps does the trick.",
+			"order":2
+		},
+		{
+			"expect":"\"12345678\"",
+			"id":0,
+			"input":"\"55555555\"",
+			"note":"Swapping is of no use here.",
+			"order":3
+		},
+		{
+			"expect":"\"00446688\"",
+			"id":0,
+			"input":"\"77771111\"",
+			"order":4
+		},
+		{
+			"expect":"\"30\"",
+			"id":0,
+			"input":"\"12\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"start will contain between 1 and 8 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in start will be a digit ('0'-'9')."
+		},
+		{
+			"order":3,
+			"val":"finish will contain the same number of characters as start."
+		}
+	]
+}

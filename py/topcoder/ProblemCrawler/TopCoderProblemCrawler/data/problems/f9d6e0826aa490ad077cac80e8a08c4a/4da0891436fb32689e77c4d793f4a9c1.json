@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12818&rd=15812",
+	"statement":"<p>You are given two ints: <b>N</b> and <b>M</b>.</p> <br /><br /> <p>In this problem we will consider <b>N</b>-bit integers. These are nonnegative integers that have at most <b>N</b> bits when expressed in base 2. We will allow leading zeros and treat each such integer as a sequence of exactly <b>N</b> bits.</p> <br /><br /> <p>An <b>N</b>-bit integer is called a semi-multiple of <b>M</b> if it satisfies the following conditions:</p> \n <ul> \n  <li>It is not a multiple of <b>M</b>.</li> \n  <li>We can change it into a multiple of <b>M</b> by flipping one of its <b>N</b> bits.</li> \n </ul> <br /><br /> <p>Count all <b>N</b>-bit integers that are semi-multiples of <b>M</b>. Return this count modulo 1,000,000,007.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SemiMultiple",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int N, int M)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2000",
+			"note":"Here, all -bit integers are multiples of .",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"5",
+			"note":"Only the least significant bit matters. All odd numbers are semi-multiples of .",
+			"order":3
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"1999",
+			"id":0,
+			"input":"2000",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 2000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"M will be between 1 and 2000, inclusive."
+		}
+	]
+}

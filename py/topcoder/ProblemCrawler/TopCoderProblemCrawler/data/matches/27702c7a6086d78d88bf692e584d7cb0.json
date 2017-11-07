@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.94,
+			"constraints":[],
+			"correctRatio":56.51,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7386&rd=10662",
+			"name":"ImprovingStatistics",
+			"notes":[],
+			"submission":407
+		},
+		{
+			"avgPts":330.02,
+			"constraints":[],
+			"correctRatio":86.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7289&rd=10662",
+			"name":"RandomSwaps",
+			"notes":[],
+			"submission":298
+		},
+		{
+			"avgPts":519.05,
+			"constraints":[],
+			"correctRatio":44.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7424&rd=10662",
+			"name":"CakeParty",
+			"notes":[],
+			"submission":52
+		}
+	],
+	"name":"Single Round Match 338 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10662"
+}

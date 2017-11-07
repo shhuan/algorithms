@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10654&rd=13952",
+	"statement":"Little Johnny has just been named minister of transportation for the republic of Feudalia. Feudalia currently lacks any means of transportation between its cities, which has prompted Little Johnny to begin the planning process for a new transportation network for the twentieth century. To do so, Feudalia may build roads to connect pairs of cities and may also build airports within cities. Each airport costs <b>airportCost</b> to build. The construction of a road of length L will cost <b>roadCost</b> x L. A road must be a straight line between two cities. Although roads may cross, road travel between two cities must be done in a straight line. Air travel is possible between two cities if and only if both cities have an airport. Little Johnny requires every city in Feudalia to be reachable from all the other cities. Formally, a city B is reachable from a city A if any of the following conditions is true:<br /><br /> \n <ul> \n  <li>There is a straight line road between A and B.</li> \n  <li>Both A and B contain airports.</li> \n  <li>There exists some city C, such that B is reachable from C and C is reachable A.</li> \n </ul> <br /><br /> You are given the coordinates of the cities as two int[] <b>cityX</b> and <b>cityY</b> such the i-th city will have cartesian coordinates (<b>cityX</b>[i], <b>cityY</b>[i]). You are also given <b>roadCost</b> and <b>airportCost</b>. Return the minimum cost the ministry of transportation will have to incur.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TransportationNetwork",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], double, double",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double minCost(int[] cityX, int[] cityY, double roadCost, double airportCost)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 100, 0, 100}",
+			"id":0,
+			"input":"{0, 0, 400, 400}",
+			"note":"An optimal transportation network would be: - Build roads connecting city 0 with city 1 and city 2 with city 3. - Build airports at cities 0 and 2.",
+			"order":1
+		},
+		{
+			"expect":"{0, 100, 0, 100, 2000}",
+			"id":0,
+			"input":"{0, 0, 400, 400, 2000}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{0, 100, 200, 300, 400,2000,2100,2200}",
+			"id":0,
+			"input":"{0, 100, 200, 300, 400,2000,2100,2200}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{126, 25, 402, 45, 841, 762, 982, 605, 616, 78}",
+			"id":0,
+			"input":"{798, 915, 797, 463, 895, 523, 959, 702, 235, 523}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cityX will have between 1 and 150 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"cityY will have the same number of elements as cityX."
+		},
+		{
+			"order":3,
+			"val":"Each element of cityX and cityY will be between 0 and 1000000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"roadCost will be between 0 and 3.0, inclusive."
+		},
+		{
+			"order":5,
+			"val":"airportCost will be between 0 and 10000000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The locations of the cites will be distinct."
+		}
+	]
+}

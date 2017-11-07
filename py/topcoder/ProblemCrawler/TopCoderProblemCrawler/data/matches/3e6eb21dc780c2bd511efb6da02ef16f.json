@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":223.69,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=115&rd=3016",
+			"name":"Shaky",
+			"notes":[],
+			"submission":24
+		},
+		{
+			"avgPts":371.29,
+			"constraints":[],
+			"correctRatio":65.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=116&rd=3016",
+			"name":"Wordless",
+			"notes":[],
+			"submission":23
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=117&rd=3016",
+			"name":"RemoteControl",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"C++ Single Round Match 17 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3016"
+}

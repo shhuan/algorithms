@@ -1,0 +1,101 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13775&rd=16475",
+	"statement":"<p> Cat Noku has a list of <b>N</b> paintbrushes to use for his next masterpiece. The paintbrushes are labeled from 0 to N-1, and are described by the int[]s <b>x1,y1,x2,y2</b>. Each paintbrush is a nondegenerate triangle. The vertices of paintbrush i have coordinates (0,0), (<b>x1</b>[i],<b>y1</b>[i]), (<b>x2</b>[i],<b>y2</b>[i]). </p> <p> Noku will go through his paintbrushes from 0 to N-1 and he will use the int[] <b>prob</b> to help him paint his masterpiece. Initially his masterpiece is a single point. He repeats the following procedure for each paintbrush. </p>\n <ul> \n  <li> He chooses to use paintbrush i with probability <b>prob</b>[i] / 100. </li> \n  <li> If he chooses to use the paintbrush i, he will place the brush (without rotating it) so that the point (0,0) of the paintbrush will lie somewhere on the boundary of his current masterpiece. </li> \n  <li> He will then make a stroke with the paintbrush. During the stroke, the brush will move (again, without any rotation) around the entire boundary of the current masterpiece in such a way that the point (0,0) of the paintbrush always lies on the boundary of the current masterpiece. The region painted by the stroke is added to the masterpiece. </li> \n </ul> <p></p> <p> Compute and return the expected area of Noku's final masterpiece. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error smaller than or equal to 1e-6."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TrianglePainting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expectedArea",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expectedArea(int[] x1, int[] y1, int[] x2, int[] y2, int[] prob)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2,3,-1}",
+			"id":0,
+			"input":"{1,-2,-4}",
+			"note":"    ",
+			"order":1
+		},
+		{
+			"expect":"{2,3,-1}",
+			"id":0,
+			"input":"{1,-2,-4}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"{1}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{-1,1,-1,1,-1,1,-1,1,-1,1}",
+			"id":0,
+			"input":"{1,1,1,1,1,1,1,1,1,1}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{-5,2,-5,6,6,-10,8,7,-4,-5}",
+			"id":0,
+			"input":"{-6,-2,-10,9,8,-1,10,5,7,3}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{58,-24,-80,33,-98,61,99,79,-34,29,-1,-70,70,90,43,25,-50,-54,73,18,36,8,41,3,26,-6,-80, -22,65,33,-100,-1,80,-19,-6,-8,-4,-86,-43,-34,0,-93,-61,92,74,-77,32,-78,-56,-21}",
+			"id":0,
+			"input":"{34,-71,19,78,69,-73,27,64,-100,70,-87,50,8,-97,46,-46,-30,-40,-30,-23,77,81,48,93,-40,70, 37,-66,53,-87,-85,38,-90,63,-16,24,-2,-60,-88,67,-56,-8,-80,-19,-84,35,95,-24,-26,-15}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 2,500, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x1,y1,x2,y2,prob will each have exactly N elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of x1,y1,x2,y2 will be between -100 and 100, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each triangle will have a positive area."
+		},
+		{
+			"order":5,
+			"val":"Each element of prob will be between 1 and 100, inclusive."
+		}
+	]
+}

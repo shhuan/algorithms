@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8320&rd=12173",
+	"statement":"<p>You are given a convex polygon and you must count the number of <b>N</b>-cool points. A point is <b>N</b>-cool if it is a lattice point covered by the polygon and also an endpoint of some <b>N</b>-cool segment. A line segment is <b>N</b>-cool if it contains at least <b>N</b> lattice points that are covered by the polygon. A point is considered covered by the polygon if it is inside or on the boundary of the polygon. Endpoints of a segment are considered to be inside of it. A lattice point is a point with integer coordinates.</p> <p>Consider the example in the picture below. Here <b>N</b> is equal to 6, and there are 21 6-cool points, marked green. Also two 6-cool segments, which are colored red, are shown.</p> <img src=\"http://www.topcoder.com/contest/problem/NCool/ncool.png\" /> <p>You are given int[]s <b>x</b> and <b>y</b> describing the vertices of the polygon (in no particular order). The coordinates of each vertex are specified by corresponding elements of <b>x</b> and <b>y</b>. Return the number of <b>N</b>-cool points.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"A polygon is convex if it contains all the line segments connecting any pair of its points."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NCool",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"nCoolPoints",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int nCoolPoints(int[] x, int[] y, int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{3, 1, 6, 1, 5}",
+			"id":0,
+			"input":"{0, 1, 2, 7, 7}",
+			"note":"This is the example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"{0, 0, 1}",
+			"id":0,
+			"input":"{0, 1, 0}",
+			"note":"These three points form a triangle, whose sides are 2-cool segments, so all three vertices are 2-cool.",
+			"order":2
+		},
+		{
+			"expect":"{0, 1, 2, 2, 1, 0, 0, 0, 2}",
+			"id":0,
+			"input":"{0, 0, 1, 2, 2, 1, 0, 0, 2}",
+			"note":"One point can be mentioned in the input two or more times.",
+			"order":3
+		},
+		{
+			"expect":"{1, 0, 2, 0, 2, 0, 2, 0, 2, 1}",
+			"id":0,
+			"input":"{0, 1, 1, 2, 2, 3, 3, 4, 4, 5}",
+			"note":"There can be 3 points of the polygon, lying on the same line.",
+			"order":4
+		},
+		{
+			"expect":"{1, 0, 2, 0, 2, 0, 2, 0, 2, 1}",
+			"id":0,
+			"input":"{0, 1, 1, 2, 2, 3, 3, 4, 4, 5}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x and y will each contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"All elements of x and y will be between 0 and 10000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"The number of lattice points inside or on the boundary of the specified polygon will not be greater than 500000."
+		},
+		{
+			"order":5,
+			"val":"N will be between 2 and 500000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The polygon specified by x and y will be convex and will have nonzero area."
+		}
+	]
+}

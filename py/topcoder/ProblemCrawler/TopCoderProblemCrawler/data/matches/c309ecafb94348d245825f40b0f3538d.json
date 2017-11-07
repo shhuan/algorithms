@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.29,
+			"constraints":[],
+			"correctRatio":89.87,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=732&rd=4175",
+			"name":"ChallengePhase",
+			"notes":[],
+			"submission":227
+		},
+		{
+			"avgPts":358.25,
+			"constraints":[],
+			"correctRatio":83.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=800&rd=4175",
+			"name":"StarCraft",
+			"notes":[],
+			"submission":142
+		},
+		{
+			"avgPts":547.03,
+			"constraints":[],
+			"correctRatio":61.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=795&rd=4175",
+			"name":"DVD",
+			"notes":[],
+			"submission":18
+		}
+	],
+	"name":"Citrix Single Round Match 91 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4175"
+}

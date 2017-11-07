@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1848&rd=4675",
+	"statement":"<p>Here is an interesting factoid: &quot;On the planet Earth, if there are at least 23 people in a room, the chance that two of them have the same birthday is greater than 50%.&quot; You would like to come up with more factoids of this form. Given two integers (<b>minOdds</b> and <b>daysInYear</b>), your method should return the fewest number of people (from a planet where there are <b>daysInYear</b> days in each year) needed such that you can be at least <b>minOdds</b>% sure that two of the people have the same birthday. See example 0 for further information.</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"Two people can have the same birthday without being born in the same year."
+		},
+		{
+			"order":2,
+			"val":"You may assume that the odds of being born on a particular day are (1 / )."
+		},
+		{
+			"order":3,
+			"val":"You may assume that there are no leap years."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BirthdayOdds",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minPeople",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minPeople(int minOdds, int daysInYear)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"75",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"365",
+			"id":0,
+			"input":"50",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"365",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"9227",
+			"id":0,
+			"input":"84",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"minOdds will be between 1 and 99, inclusive."
+		},
+		{
+			"order":2,
+			"val":"daysInYear will be between 1 and 10000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"For any number of people N, the odds that two people will have the same birthday (in a room with N people, on a planet with daysInYear days in each year) will not be within 1e-9 of minOdds. (In other words, you don't need to worry about floating-point precision for this problem.)"
+		}
+	]
+}

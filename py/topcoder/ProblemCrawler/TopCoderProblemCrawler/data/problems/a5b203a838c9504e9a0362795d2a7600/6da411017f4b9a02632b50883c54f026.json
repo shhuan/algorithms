@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12518&rd=15634",
+	"statement":"Fox Ciel has a board divided into <b>X</b> times <b>Y</b> square panels. Initially, all panels are unlit. Whenever Ciel presses a panel, that panel will turn on and from that moment on the panel will be lit forever. <br /><br /> <br /><br /> Ciel is going to perform the following operation twice. The operation starts with Ciel choosing a subrectangle of the board. The dimensions of the subrectangle have to be <b>sx</b> times <b>sy</b>, and the side with length <b>sx</b> has to be parallel to the side of the board with length <b>X</b>. Once the subrectangle is chosen, Ciel presses some of the panels it contains (possibly none at all or all of them). <br /><br /> <br /><br /> The following figures show an example of these operations for <b>X</b> = 5, <b>Y</b> = 4, <b>sx</b> = 3, and <b>sy</b> = 2. The picture on the left shows the initial board, the picture in the middle shows the board after the first operation, and the picture on the right shows the board after the second operation. <br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/LitPanels/pic1.png\" /> <br /><br /> <br /><br /> Compute and return the number of different patterns Ciel can have after finishing the two operations, modulo 1,000,000,007.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LitPanels",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countPatterns",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countPatterns(int X, int Y, int sx, int sy)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"All patterns with at most two lit panels are possible. The number of such patterns is C(4, 0) + C(4, 1) + C(4, 2) = 11, where C denotes binomial coefficients.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"The following picture shows all 40 possible patterns.   ",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"39",
+			"id":0,
+			"input":"40",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"X will be between 1 and 40, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Y will be between 1 and 40, inclusive."
+		},
+		{
+			"order":3,
+			"val":"sx will be between 1 and X, inclusive."
+		},
+		{
+			"order":4,
+			"val":"sy will be between 1 and Y, inclusive."
+		}
+	]
+}

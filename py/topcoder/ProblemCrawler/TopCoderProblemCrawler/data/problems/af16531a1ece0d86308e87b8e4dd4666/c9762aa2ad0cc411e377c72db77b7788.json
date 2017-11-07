@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1802&rd=4610",
+	"statement":"You are practicing your tennis game with a hitting partner. Each time the ball comes over the net a player can either hit it cross-court, or down-the-line. In this problem, a sequence of shots will be denoted by a String composed of (quotes for clarity) the letters 'c' and 'd', representing cross-court and down-the-line shots respectively. For example, &quot;cccddc&quot; would be such a sequence consisting of 3 cross-courts, 2 down-the-lines, and a final cross-court. <br /><br /><br /><br /> Since you are going to practice a particular play strategy there are certain shot sequences you will avoid. You are given a String[] <b>forbidden</b> containing precisely which sequences must be avoided. For example, if (quotes for clarity) &quot;ccd&quot; is an element of <b>forbidden</b> then you should never allow 2 cross-court shots followed by a down-the-line shot to occur consecutively at any point in the rally. If you were a professional, a single forbidden sequence might cause you to stop hitting. Since you are an amateur, you are willing to let <b>allowed</b> distinct forbidden sequences to occur before you stop. For example, if <b>allowed</b> was 2, the second forbidden sequence would terminate the hitting sequence. <br /><br /><br /><br /> You will return the number of distinct hitting sequences of length <b>numLength</b> which contain fewer than <b>allowed</b> forbidden sequences. Two hitting sequences are distinct if they differ at some stroke in the sequence. Two forbidden sequences are distinct if they differ in length, or position in the hitting sequence they begin at. For example, if <b>forbidden</b> = {&quot;cc&quot;,&quot;cd&quot;,&quot;ccd&quot;} then the sequence &quot;ccccdd&quot; has 5 distinct forbidden sequences (3 distinct &quot;cc&quot; sequences, a &quot;cd&quot; sequence, and a &quot;ccd&quot; sequence).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TennisRallies",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int numLength, String[] forbidden, int allowed)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"cc\",\"dd\"}",
+			"id":0,
+			"input":"3",
+			"note":"Since  is 1, neither \"cc\" nor \"dd\" can occur anywhere in a valid sequence. The only possible sequences are thus \"cdc\" and \"dcd\".",
+			"order":1
+		},
+		{
+			"expect":"{\"c\"}",
+			"id":0,
+			"input":"10",
+			"note":"There is exactly 1 sequence with 10 shots that contains no cross-court shots.",
+			"order":2
+		},
+		{
+			"expect":"{\"c\"}",
+			"id":0,
+			"input":"10",
+			"note":"There are 11 sequences that contain at most 1 cross-court shot.",
+			"order":3
+		},
+		{
+			"expect":"{\"c\",\"d\"}",
+			"id":0,
+			"input":"18",
+			"order":4
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"18",
+			"order":5
+		},
+		{
+			"expect":"{\"c\",\"cc\",\"ccc\",\"cccc\",\"ccccc\",\"cccccc\",\"ccccccc\", \"cccccccc\",\"ccccccccc\",\"cccccccccc\"}",
+			"id":0,
+			"input":"18",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"numLength will be between 1 and 18 inclusive"
+		},
+		{
+			"order":2,
+			"val":"forbidden will contain between 0 and 10 elements inclusive"
+		},
+		{
+			"order":3,
+			"val":"allowed will be between 1 and 100 inclusive"
+		},
+		{
+			"order":4,
+			"val":"forbidden will contain no repeated elements"
+		},
+		{
+			"order":5,
+			"val":"Each element of forbidden will contain between 1 and 18 'c's and 'd's inclusive (quotes for clarity; both are lowercase)"
+		}
+	]
+}

@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4485&rd=7216",
+	"statement":"<p>You are working on a large database that holds information about several different aspects of your company, such as customers, partners, prospects, employees, products, etc. Every user in the system has access to one or more types of data. For instance, a human resources worker might only have access to employee records, while a sales person might have access to prospects, customers, and products.</p> <p>You are in charge of writing reports that summarize large volumes of this information. However, since the reports may contain more than one type of data, you need to be determine which users should be allowed to view that report. In this case, assume that a user has permission to view a report if and only if they have permission to view all of the types of data contained in that report.</p> <p>You are given a list of usernames in String[] <b>userNames</b>. You are given a list of what data types each user can access in String[] <b>allowedData</b>, where each element of <b>allowedData</b> is a space-delimited list of the permitted data types for that user. Finally, you are given a String[] <b>reportData</b>, where each element of <b>report</b> indicates a type of data included in the report.</p> <p>You are to return a String[] indicating the user names of those users who should be able to access the report. The list should be returned in alphabetical order.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ReportAccess",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"whoCanSee",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] whoCanSee(String[] userNames, String[] allowedData, String[] reportData)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"clients products\", \"products orders\", \"clients orders\"}",
+			"id":0,
+			"input":"{\"joe\", \"nick\", \"ted\"}",
+			"note":"Here, only joe has access to both required data types.",
+			"order":1
+		},
+		{
+			"expect":"{\"users data\", \"data orders\", \"users permissions\", \"system users controls\", \"default\", \"admin users\"}",
+			"id":0,
+			"input":"{\"kathy\", \"john\", \"dan\", \"steve\", \"cheryl\", \"tony\"}",
+			"note":"Here, we only need one type of permission to view the report.",
+			"order":2
+		},
+		{
+			"expect":"{\"users order products\", \"products shipping\", \"tracking products orders\"}",
+			"id":0,
+			"input":"{\"jim\", \"scott\", \"barbara\"}",
+			"note":"Everyone has a variety of permissions, but nobody has the proper permission.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"userNames will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of userNames will contain between 1 and 50 'a'-'z' characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"allowedData will contain the same number of elements as userNames."
+		},
+		{
+			"order":4,
+			"val":"Each element of allowedData will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of allowedData will contain the characters 'a'-'z' or ' '."
+		},
+		{
+			"order":6,
+			"val":"reportData will contain between 1 and 5 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of reportData will contain between 1 and 50 'a'-'z' characters, inclusive."
+		}
+	]
+}

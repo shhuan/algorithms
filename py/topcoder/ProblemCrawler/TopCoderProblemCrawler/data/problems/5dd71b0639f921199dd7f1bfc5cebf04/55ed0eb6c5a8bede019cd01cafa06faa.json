@@ -1,0 +1,68 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1729&rd=5855",
+	"statement":"<i>This problem contains an image.</i> <br /><br /><br /><br /> TopCan, Inc. is a major producer of food. It produces all kinds of food than can be filled into a can: pineapples, mushrooms, peas, etc. However, business is not going well, so they are looking for ways to make production cheaper. An important expense factor is the amount of material needed for producing the can, which directly depends on the surface area of the can. Currently, cans are produced in all imaginable shapes and sizes, but to reduce cost, the company thinks about producing only cans in the shape of a cylinder (as shown below). So to be able to decide whether production should be changed TopCan wants to know, for a given volume, the minimal surface area possible of such a can. As the company's brightest employee, this task has been assigned to you. <br /><br /> <br /><br /> Given an int <b>volume</b>, return a double, the minimal surface area possible of a cylinder that has the given volume. <br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/TopCan/TopCan.gif\" /><br /><br />",
+	"notes":[
+		{
+			"order":1,
+			"val":"Consider the material the can is made of to be infinitely thin."
+		},
+		{
+			"order":2,
+			"val":"Some formulas for your convenience:r: radius of the circle being the base of the cylinderh: height of the cylinderVolume V = h * PI * rSurface S = 2 * PI * r * (r + h)"
+		},
+		{
+			"order":3,
+			"val":"If not provided by a library, use the value of 2*acos(0) for PI."
+		},
+		{
+			"order":4,
+			"val":"Reminder:If your result is within 10 of the expected result, your solution will be evaluated as correct.If your result is between (1+10)*expected and (1-10)*expected, it will be evaluated as correct."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TopCan",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minSurface",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double minSurface(int volume)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 25.694955950835347",
+			"id":0,
+			"input":"10",
+			"note":"For a volume of 10, the cylinder has a height of about 2.3351 and the base circle has a radius of about 1.1675.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 40.78820010663257",
+			"id":0,
+			"input":"20",
+			"order":2
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"volume will be between 1 and 100000, inclusive."
+	}]
+}

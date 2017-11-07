@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12612&rd=15808",
+	"statement":"A game development company has created a new strategy game. The game is divided into N missions numbered from 1 to N. The order of completing the missions is not linear; there might be several missions which can be attempted at the same time. Some missions' completion is a prerequisite for attempting other missions. More specifically, a directed acyclic graph with N vertices (further referred to as a DAG) is associated with the game. Each arc (i, j) in this DAG means that the mission i is a prerequisite of mission j and thus mission j cannot be attempted before mission i is completed. Note that this DAG may or may not contain redundant arcs; for example if there are arcs (1, 2) and (2, 3) in the DAG, it is clear that mission 3 cannot be attempted before mission 1 is completed, however the DAG may or may not contain arc (1, 3). <br /><br /><br /><br /> Manao is the alpha-tester of this game. The DAG of the game was generated uniformly at random from the set of all DAGs with N vertices, and then Manao played the game and completed the missions in the order given in the int[] <b>P</b>. He used the following strategy for choosing the next mission to attempt: whenever there were several missions with their prerequisites fulfilled, he chose one of them uniformly at random and completed it. <br /><br /><br /><br /> Manao wonders what was the DAG of the game he played. Given two vertices <b>A</b> and <b>B</b>, compute the probability that the edge (<b>A</b>, <b>B</b>) was present in the game's DAG. ",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheGameDAG",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getProbability(int[] P, int A, int B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{2, 1}",
+			"note":"There are three DAGs composed of 2 vertices: an empty DAG, a DAG with arc 1->2 and a DAG with arc 2->1. For the empty DAG, Manao would complete mission 2 before mission 1 with probability 0.5. For the DAG with arc 1->2, he could not complete mission 2 before mission 1. For the DAG with arc 2->1, Manao would complete missions in the given order with probability 1.0. Thus, the arc 2->1 was present in the DAG of Manao's game with probability 1.0 / (0.5 + 1.0) = 0.(6).",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1, 2, 3}",
+			"note":"The DAG cannot contain the arc 3->1, because mission 1 was finished before mission 3.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{1, 2, 3}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1, 4, 3, 6, 5, 2}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"P will contain between 2 and 9 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"P will contain each number from 1 to N exactly once, where N is the number of elements in P."
+		},
+		{
+			"order":3,
+			"val":"A will be between 1 and the number of elements in P, inclusive."
+		},
+		{
+			"order":4,
+			"val":"B will be between 1 and the number of elements in P, inclusive."
+		},
+		{
+			"order":5,
+			"val":"A and B will be distinct."
+		}
+	]
+}

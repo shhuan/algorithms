@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":233.44,
+			"constraints":[],
+			"correctRatio":93.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=304&rd=4023",
+			"name":"Socks",
+			"notes":[],
+			"submission":58
+		},
+		{
+			"avgPts":308.28,
+			"constraints":[],
+			"correctRatio":52.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=295&rd=4023",
+			"name":"UnitsAlgebra",
+			"notes":[],
+			"submission":46
+		},
+		{
+			"avgPts":557.3,
+			"constraints":[],
+			"correctRatio":42.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=294&rd=4023",
+			"name":"RPNSolver",
+			"notes":[],
+			"submission":21
+		}
+	],
+	"name":"Single Round Match 52 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4023"
+}

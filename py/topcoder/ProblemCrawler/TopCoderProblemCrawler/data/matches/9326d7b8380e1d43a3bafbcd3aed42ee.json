@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":215.86,
+			"constraints":[],
+			"correctRatio":90,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12157&rd=15151",
+			"name":"BallRemoval",
+			"notes":[],
+			"submission":10
+		},
+		{
+			"avgPts":333.97,
+			"constraints":[],
+			"correctRatio":60,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12171&rd=15151",
+			"name":"IndependentOfOR",
+			"notes":[],
+			"submission":10
+		},
+		{
+			"avgPts":578.8,
+			"constraints":[],
+			"correctRatio":60,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12183&rd=15151",
+			"name":"TheAnimalProgrammingCompetitions",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"2012 TCO Algorithm > Semifinal 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15151"
+}

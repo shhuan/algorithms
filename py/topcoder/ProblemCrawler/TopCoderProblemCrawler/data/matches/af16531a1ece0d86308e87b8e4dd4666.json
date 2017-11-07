@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":244.76,
+			"constraints":[],
+			"correctRatio":98.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1807&rd=4610",
+			"name":"IsHomomorphism",
+			"notes":[],
+			"submission":120
+		},
+		{
+			"avgPts":319.87,
+			"constraints":[],
+			"correctRatio":85.58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1802&rd=4610",
+			"name":"TennisRallies",
+			"notes":[],
+			"submission":104
+		},
+		{
+			"avgPts":545.81,
+			"constraints":[],
+			"correctRatio":16.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1808&rd=4610",
+			"name":"PermutationValues",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"Single Round Match 161 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4610"
+}

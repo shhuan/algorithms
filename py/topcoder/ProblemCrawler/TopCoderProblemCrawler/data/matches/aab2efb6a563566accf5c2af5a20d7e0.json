@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":165.53,
+			"constraints":[],
+			"correctRatio":33.41,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7741&rd=10671",
+			"name":"Aircraft",
+			"notes":[],
+			"submission":455
+		},
+		{
+			"avgPts":249.83,
+			"constraints":[],
+			"correctRatio":35.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7584&rd=10671",
+			"name":"FlightScheduler",
+			"notes":[],
+			"submission":307
+		},
+		{
+			"avgPts":441.51,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7541&rd=10671",
+			"name":"MetroNetwork",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 347 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10671"
+}

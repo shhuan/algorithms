@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":173.89,
+			"constraints":[],
+			"correctRatio":84.7,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11115&rd=14426",
+			"name":"PermutationSignature",
+			"notes":[],
+			"submission":523
+		},
+		{
+			"avgPts":255.53,
+			"constraints":[],
+			"correctRatio":46.61,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8779&rd=14426",
+			"name":"CssRules",
+			"notes":[],
+			"submission":118
+		},
+		{
+			"avgPts":453.47,
+			"constraints":[],
+			"correctRatio":21.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8741&rd=14426",
+			"name":"ModuleSequence",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"Single Round Match 497 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14426"
+}

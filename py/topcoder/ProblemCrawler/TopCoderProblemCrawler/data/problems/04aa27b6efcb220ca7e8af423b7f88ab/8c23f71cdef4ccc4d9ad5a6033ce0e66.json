@@ -1,0 +1,118 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3064&rd=5869",
+	"statement":" <p> You are in a maze containing revolving doors. The doors can be turned 90 degrees by pushing against them in either direction. You are to find a route from the start square to the end square that involves revolving as few doors as possible. Given a map of the maze, determine the fewest number of door revolutions necessary to get from the start to the end. </p> <p> In the map: </p> <pre>\n   ' ': empty space\n   '#': wall\n   'O': center of a revolving door (letter &quot;oh&quot;, not zero)\n   '-': horizontal door (always adjacent to a 'O')\n   '|': vertical door (always adjacent to a 'O')\n   'S': start square\n   'E': end square\n</pre> <p> Each revolving door will always be oriented horizontally (with two horizontal segments) or vertically (with two vertical segments): </p> <pre>\n    |\n    O  or  -O-\n    |\n</pre> <p> Doors can be revolved 90 degrees by moving onto a door segment from any of the 4 squares diagonally adjacent to the door center, i.e., the 'X' characters below: </p> <pre>\n   X|X     X X\n    O  or  -O-\n   X|X     X X\n</pre> <p> Here is an example map: </p> <pre>\n        ###\n        #E#\n       ## #\n    ####  ##\n    # S -O-#\n    # ###  #\n    #      #\n    ########\n</pre> <p> In this example, 2 door revolutions are necessary to get from 'S' to 'E'. The first turn is shown here: </p> <pre>\n        ###         ###\n        #E#         #E#\n       ## #        ## #\n    ####  ##    #### |##\n    # S -O-#    # S  OX#\n    # ### X#    # ###| #\n    #      #    #      #\n    ########    ########\n</pre> <p> And the second turn is shown here: </p> <pre>\n        ###         ###\n        #E#         #E#\n       ## #        ## #\n    ####X|##    #### X##\n    # S  O #    # S -O-#\n    # ###| #    # ###  #\n    #      #    #      #\n    ########    ########\n</pre> <p> Your method should return an int, the minimum number of door revolutions necessary to get from the start square to the end square. If there is no way to reach the end square, return -1. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"Assume that all squares off the edge of the map are walls."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RevolvingDoors",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"turns",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int turns(String[] map)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{ \" ### \", \" #E# \", \" ## # \", \"#### ##\", \"# S -O-#\", \"# ### #\", \"# #\", \"########\" }",
+			"note":"This is the example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"#### \", \"#S|##\", \"# O #\", \"##|E#\", \" ####\" } ",
+			"note":"There is no way to reach the end square.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{ \" | | | | | | | | | \", \" O O EO -O- O O O O OS O \", \" | | | | | | | | | \" } ",
+			"note":"The optimal path involves turning the 3rd door twice, and the 5th, 6th, 7th, 8th, and 9th doors once each (counting from the left). Note that the 'S' and 'E' do not block doors, and in fact you must turn the 3rd door twice to end up on the 'E'. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{ \"###########\", \"# # #\", \"# S | E #\", \"# O #\", \"# | #\", \"# #\", \"###########\" }",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \" E\", \" | \", \" O \", \" | \", \" -O-S-O- \", \" | \", \" O \", \" | \", \" \" } ",
+			"note":"You are stuck, unable to move or turn any doors from this position.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{ \"##E# \", \"# ## \", \" -O-## \", \" # ## \", \" ## ##\", \" -O- \", \"## ## \", \" # ### \", \" # S \" }",
+			"order":6
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{ \"#############\", \"# #|##|# #\", \"# O O #\", \"# E || || S #\", \"# O O #\", \"# #|##|# #\", \"#############\" }",
+			"note":"After all the doors have been turned, the map looks like this: ",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"map will contain between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of map will contain between 3 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of map will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in map will be one of 'S', 'E', 'O', '-', '|', '#', and ' ' (space)."
+		},
+		{
+			"order":5,
+			"val":"There will be exactly one 'S' and one 'E' in map."
+		},
+		{
+			"order":6,
+			"val":"There will be between 1 and 10 doors, inclusive, and they will be formatted in map as described in the problem statement."
+		},
+		{
+			"order":7,
+			"val":"No two doors will be close enough for any part of them to occupy the same square."
+		},
+		{
+			"order":8,
+			"val":"It is not allowed for a door to be blocked and unable to turn. There will not be any walls in any of the 4 squares immediately adjacent to the center of a door, nor will a door be on the edge of the map."
+		}
+	]
+}

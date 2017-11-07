@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12971&rd=15942",
+	"statement":"Elly has a String <b>S</b> of uppercase letters and a magic device that can modify the string. The strength of the device is an int <b>L</b>.<br /><br /><br /><br /> The device is used in the following way. The user enters a 0-based index i such that 0 &lt;= i &lt;= length(<b>S</b>)-<b>L</b>. The device then performs the following changes: \n <ul> \n  <li>It leaves the first i characters (i.e., characters with indices 0 through i-1) untouched.</li> \n  <li>It rearranges the next <b>L</b> characters (i.e., characters with indices i through i+<b>L</b>-1) into alphabetical order.</li> \n  <li>It erases all the remaining characters (i.e., characters with indices i+<b>L</b> and more). Note that for i=length(S)-<b>L</b> no characters are erased.</li> \n </ul> The girl can use this &quot;sorting trimmer&quot; as many times as she likes. After each use she is left with the new version of the string.<br /><br /><br /><br /> In the examples below we use brackets to highlight the region that shall be sorted. For example, &quot;ABRA[CADAB]RA&quot; means that <b>L</b>=5 and Elly chose i=4. The device keeps the letters in front of the brackets, sorts the letters in the brackets, and throws away the rest. Here is one way how Elly could have used a device with <b>L</b> = 5, starting with the string <b>S</b> = &quot;ABRACADABRA&quot;: \n <ol> \n  <li>&quot;ABRAC[ADABR]A&quot; -&gt; &quot;ABRACAABDR&quot;</li> \n  <li>&quot;ABR[ACAAB]DR&quot; -&gt; &quot;ABRAAABC&quot;</li> \n  <li>&quot;A[BRAAA]BC&quot; -&gt; &quot;AAAABR&quot;</li> \n </ol> You are given the String <b>S</b> and the int <b>L</b>. Return the lexicographically smallest string Elly can obtain.",
+	"notes":[{
+		"order":1,
+		"val":"A string A is lexicographically smaller than string B if A contains a smaller character in the first position where they differ. In case one of the strings ends before they have a different character, the shorter one is considered smaller."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EllysSortingTrimmer",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getMin(String S, int L)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"\"ABRACADABRA\"",
+			"note":"Please note that the example in the problem statement does not obtain the lexicographically smallest string. In fact, it is optimal to start by using the device on the last five characters of the string, transforming it from ABRACA[DABRA] to ABRACAAABDR.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"ESPRIT\"",
+			"note":"We can obtain the answer in the following steps:  ",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"\"BAZINGA\"",
+			"note":"We can use the sorting trimmer on the entire word.",
+			"order":3
+		},
+		{
+			"expect":"13",
+			"id":0,
+			"input":"\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"",
+			"note":"Even though the string is already sorted, shorter strings are considered lexicographically smaller, so we can use the device once to make the string as short as possible.",
+			"order":4
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"\"GOODLUCKANDHAVEFUN\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"21",
+			"id":0,
+			"input":"\"AAAWDIUAOIWDESBEAIWODJAWDBPOAWDUISAWDOOPAWD\"",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"TOPCODER\"",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"S will contain between 2 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"L will be between 2 and |S|, inclusive, where |S| denotes the number of characters in S."
+		},
+		{
+			"order":3,
+			"val":"S will consist of uppercase characters of the English alphabet, only ('A'-'Z')."
+		}
+	]
+}

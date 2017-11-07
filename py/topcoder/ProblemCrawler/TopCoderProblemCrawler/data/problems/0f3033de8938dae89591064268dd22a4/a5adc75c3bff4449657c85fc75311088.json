@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8504&rd=12174",
+	"statement":"<p>You are given a String[] <b>digits</b>. Concatenate the elements of <b>digits</b> to get one large string. Then, insert spaces to divide it into a list of strictly increasing integers (leading zeros are allowed). If there are multiple ways to do this, minimize the last integer. If there are still multiple solutions, maximize the first integer. If multiple solutions still remain, maximize the second integer, then the third one, etc. Return the product of all the integers in the list, modulo 1,000,000,003.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Two integers that differ only by the number of leading zeros they contain (for example, 0123 and 00123, or 95 and 00095) are considered equal (i.e., neither of them is less than the other)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"IncreasingSequence",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getProduct",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getProduct(String[] digits)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 120",
+			"id":0,
+			"input":"{\"12345\"}",
+			"note":"Each single character can be an integer. The sequence 1, 2, 3, 4, 5 is strictly increasing.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 45150",
+			"id":0,
+			"input":"{\"543210\"}",
+			"note":"The best thing we can get is 5, 43, 210.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 932400",
+			"id":0,
+			"input":"{\"20210222\"}",
+			"note":"  ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1356531",
+			"id":0,
+			"input":"{\"1111111111\"}",
+			"note":"Adjacent integers should never be equal to each other, so the optimal solution here is 1, 11, 111, 1111.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 385769340",
+			"id":0,
+			"input":"{\"171829294246\"}",
+			"note":"Though we can try to start the sequence by 1, 7, 18, 29, we'll soon find that the only way to finish it is with 294246, which is unsatisfactory. The optimal sequence is 1, 71, 82, 92, 94, 246. The product is 12,385,769,376, which gives 385,769,340 as a remainder, when divided by 1,000,000,003.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 264320",
+			"id":0,
+			"input":"{\"3\",\"235\",\"236\"}",
+			"note":"The last integer must be 236. But the sequence 3, 235, 236 is not optimal. We can maximize the first integer in 32, 35, 236, the product is 32 * 35 * 236 = 264,320.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"digits will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of digits will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of digits will contain digits ('0'-'9') only."
+		},
+		{
+			"order":4,
+			"val":"The first character of the first element of digits will not be '0'."
+		}
+	]
+}

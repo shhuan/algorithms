@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.23,
+			"constraints":[],
+			"correctRatio":71.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3523&rd=7223",
+			"name":"WordPattern",
+			"notes":[],
+			"submission":281
+		},
+		{
+			"avgPts":360.84,
+			"constraints":[],
+			"correctRatio":74.78,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3525&rd=7223",
+			"name":"ContractWork",
+			"notes":[],
+			"submission":230
+		},
+		{
+			"avgPts":549.94,
+			"constraints":[],
+			"correctRatio":61.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4612&rd=7223",
+			"name":"ClockManagement",
+			"notes":[],
+			"submission":73
+		}
+	],
+	"name":"Single Round Match 248 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=7223"
+}

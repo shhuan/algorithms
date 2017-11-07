@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.76,
+			"constraints":[],
+			"correctRatio":95.58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10330&rd=13757",
+			"name":"RepaintTheChessboard",
+			"notes":[],
+			"submission":1267
+		},
+		{
+			"avgPts":290.93,
+			"constraints":[],
+			"correctRatio":64.63,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10329&rd=13757",
+			"name":"PageNumbers",
+			"notes":[],
+			"submission":492
+		},
+		{
+			"avgPts":560.54,
+			"constraints":[],
+			"correctRatio":45.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10324&rd=13757",
+			"name":"DigitalCounter",
+			"notes":[],
+			"submission":127
+		}
+	],
+	"name":"2009 TCO Algorithm > Qualification Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13757"
+}

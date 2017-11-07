@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2340&rd=5071",
+	"statement":"I have a light that changes from on to off or from off to on when I clap twice. The light's sensor samples the noise level in the room at short intervals and it triggers the light to change whenever it detects a low noise level followed by exactly 2 high noise levels followed by a low noise level. <p> &quot;High&quot; or &quot;low&quot; is based on a threshold noise level. When the sampled noise level is as high or higher than the threshold level, the noise level is classified as &quot;high&quot;; otherwise it is classified as &quot;low&quot;. I have a int[] <b>background</b> that is a typical sequence of sensor readings when normal activity is taking place. I want software that will choose the threshold value so that it has the following properties:</p>\n <ol>\n  <li> 1) It causes more than 50% of all the values in <b>background</b> to be classified &quot;low&quot;. </li>\n  <li> 2) It is the lowest possible threshold value that satisfies the 50% rule and that does not cause <b>background</b> to trigger the light to change.</li>\n </ol> <p> Create a class ClapLight that contains a method threshold that is given the int[] <b>background</b> and that returns the desired threshold value. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ClapLight",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"threshold",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int threshold(int[] background)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{6,6,6,6,6}",
+			"note":" The threshold must be at least 7 to exceed more than 50% of the samples, and with the threshold set at 7 every reading will be classified \"low\" and the light will not be triggered. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{ 5,8,7,6,12,8,4,3,2,6 } ",
+			"note":" The threshold must exceed at least 6 of these values to satisfy the 50% rule. So it must be at least 7. But with the threshold set at 7 the sequence 5, 8, 7, 6 would trigger the light. A threshold of 8 will allow the sequence 6,12,8,4 to trigger the light. A threshold of 9 will never cause this sequence to trigger the light.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{8,8,8,1,1,1,1,1,1,1,1,1,1,1,2,1}",
+			"note":"Remember that the high noise levels must be both preceded and followed by low noise levels to trigger the light.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{921,1,5,900,8,813,3,3,3,3,3,3,3,813,813}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"background will contain between 4 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of background will be between 0 and 1000 inclusive."
+		}
+	]
+}

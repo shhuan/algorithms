@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":176.53,
+			"constraints":[],
+			"correctRatio":73.92,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8594&rd=11128",
+			"name":"RoughStrings",
+			"notes":[],
+			"submission":556
+		},
+		{
+			"avgPts":304.47,
+			"constraints":[],
+			"correctRatio":62.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8546&rd=11128",
+			"name":"CentersOfSymmetry",
+			"notes":[],
+			"submission":77
+		},
+		{
+			"avgPts":497.35,
+			"constraints":[],
+			"correctRatio":72.97,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8593&rd=11128",
+			"name":"PseudoRandomKingdom",
+			"notes":[],
+			"submission":37
+		}
+	],
+	"name":"Single Round Match 394 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=11128"
+}

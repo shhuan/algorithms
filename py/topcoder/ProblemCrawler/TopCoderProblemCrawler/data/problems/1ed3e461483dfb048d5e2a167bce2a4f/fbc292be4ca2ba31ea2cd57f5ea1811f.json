@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10948&rd=14278",
+	"statement":"<p> A <i>sum rectangle</i> is a rectangle divided into a grid of unit squares. Each square contains a number, and the numbers in neighboring squares always satisfy the following property: </p> <p> The number in any square S that is neither in the bottom row nor in the right column can be computed as the sum of the following three numbers: </p> \n <ul> \n  <li>The number in the square directly below S.</li> \n  <li>The number in the square directly to the right of S.</li> \n  <li>The number in the other square adjacent to the previous two squares (the one diagonally down and to the right of S).</li> \n </ul> <p> An example of a correctly filled sum rectangle: </p> <pre>\n+----+----+----+----+----+\n| 88 | 57 | 33 | 10 |  5 |\n+----+----+----+----+----+\n| 18 | 13 | 11 | 12 | -7 |\n+----+----+----+----+----+\n|  1 |  4 | -2 |  1 | 18 |\n+----+----+----+----+----+\n</pre> <p> For example, in the top left corner we have 88 = 18 + 57 + 13. </p> <p> We have a secret sum rectangle. You will be given a int[] <b>leftColumn</b> containing the leftmost number in each row of our rectangle, from the top to the bottom. You will also be given an int[] <b>topRow</b> containing the topmost number in each column of our rectangle, from the left to the right. Compute and return the number in the bottom right corner. If the input is such that this number cannot be determined uniquely, return 0 instead. </p>",
+	"notes":[{
+		"order":1,
+		"val":"You may assume that the return value will always fit into an int (i.e., a 32-bit signed integer data type)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SumRectangle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getCorner",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getCorner(int[] leftColumn, int[] topRow)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{88,57,33,10,5}",
+			"id":0,
+			"input":"{88,18,1}",
+			"note":"This is the rectangle from the problem statement. The lower right corner is uniquely determined by the left column and the top row.",
+			"order":1
+		},
+		{
+			"expect":"{0,0,0,0}",
+			"id":0,
+			"input":"{0,0,0,0}",
+			"note":"The only correct way to fill this rectangle is to place a zero into each square.",
+			"order":2
+		},
+		{
+			"expect":"{6,2}",
+			"id":0,
+			"input":"{6,1}",
+			"note":"This is the smallest non-trivial case: ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"leftColumn will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of leftColumn will be between 0 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"topRow will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of topRow will be between 0 and 100, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Element 0 of leftColumn will be equal to element 0 of topRow."
+		}
+	]
+}

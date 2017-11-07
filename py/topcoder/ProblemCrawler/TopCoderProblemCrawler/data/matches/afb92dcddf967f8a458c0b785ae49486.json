@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":189.24,
+			"constraints":[],
+			"correctRatio":68.99,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9823&rd=12181",
+			"name":"OrderedSuperString",
+			"notes":[],
+			"submission":616
+		},
+		{
+			"avgPts":381.98,
+			"constraints":[],
+			"correctRatio":71.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9828&rd=12181",
+			"name":"MagicalSpheres",
+			"notes":[],
+			"submission":297
+		},
+		{
+			"avgPts":589.08,
+			"constraints":[],
+			"correctRatio":87.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8012&rd=12181",
+			"name":"GridColoring",
+			"notes":[],
+			"submission":140
+		}
+	],
+	"name":"Single Round Match 409 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12181"
+}

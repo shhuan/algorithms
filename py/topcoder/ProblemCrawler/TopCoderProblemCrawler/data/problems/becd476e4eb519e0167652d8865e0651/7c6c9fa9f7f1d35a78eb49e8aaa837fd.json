@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6407&rd=9986",
+	"statement":"<p>In a ballroom, there are some light bulbs and some switches that control those bulbs. However, the switches and the bulbs are not related in a logical way. Each switch is connected to a subset of the bulbs, and when a switch is flipped, all the bulbs connected to that switch change state (the ones that were off are turned on, and the ones that were on are turned off). Bulbs that are not connected to the flipped switch remain as they were.</p> <p>The states of all the bulbs in the room can be described as a configuration of lights. If there are N bulbs, there are 2<sup>N</sup> possible configurations. Two configurations are distinct if a bulb in one configuration has a different state than that same bulb in the other configuration.</p> <p>You will be given the connections between the switches and bulbs as a String[] <b>switches</b>. The jth character of the ith element of <b>switches</b> is 'Y' if the ith switch is connected to the jth bulb, and 'N' otherwise. All the bulbs are initially off. Return the number of distinct configurations of lights that can be achieved using this setup.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LightSwitches",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countPossibleConfigurations",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countPossibleConfigurations(String[] switches)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"YYN\", \"NNY\", \"YYY\", \"NNN\"}",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NNNNYYYNYYNYYYYYNYY\"}",
+			"note":"There are only two possible configurations here - the initial configuration where all the bulbs are off, and the configuration that results from flipping the switch once.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 32",
+			"id":0,
+			"input":"{\"NYNYNYN\", \"YNYNYNY\", \"YYNNNYN\", \"NNNYNYN\", \"YYYYYNN\", \"YNNNNYN\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1073741824",
+			"id":0,
+			"input":"{\"YNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNNN\", \"NNNNNNNNNNNNNNNNNNNNNNNNNNNNNYNNNNNNNNNNNNNNNNNNNN\"}",
+			"note":"Each of the first 30 bulbs can be turned on and off individually while the remaining 20 bulbs are impossible to turn on. Any combination of states among the first 30 bulbs is possible, so the number of configurations is 2.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"switches will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of switches will have exactly N characters, where N is between 1 and 50, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of switches will be 'Y' or 'N'."
+		}
+	]
+}

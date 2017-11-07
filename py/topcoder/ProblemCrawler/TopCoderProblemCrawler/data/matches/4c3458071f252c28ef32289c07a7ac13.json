@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.67,
+			"constraints":[],
+			"correctRatio":97.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10258&rd=13522",
+			"name":"LaserShooting",
+			"notes":[],
+			"submission":463
+		},
+		{
+			"avgPts":252.67,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10259&rd=13522",
+			"name":"MegaCoolNumbers",
+			"notes":[],
+			"submission":52
+		},
+		{
+			"avgPts":497.64,
+			"constraints":[],
+			"correctRatio":36.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10171&rd=13522",
+			"name":"PerfectRectangles",
+			"notes":[],
+			"submission":30
+		}
+	],
+	"name":"Single Round Match 431 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13522"
+}

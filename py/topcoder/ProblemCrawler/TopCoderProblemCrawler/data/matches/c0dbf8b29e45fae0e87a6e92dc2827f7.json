@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":231.04,
+			"constraints":[],
+			"correctRatio":89.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1047&rd=4324",
+			"name":"Lexer",
+			"notes":[],
+			"submission":294
+		},
+		{
+			"avgPts":345.09,
+			"constraints":[],
+			"correctRatio":78.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=903&rd=4324",
+			"name":"UGroupOrder",
+			"notes":[],
+			"submission":249
+		},
+		{
+			"avgPts":398.06,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1124&rd=4324",
+			"name":"Wireless",
+			"notes":[],
+			"submission":52
+		}
+	],
+	"name":"2002 TopCoder Invitational > Round 1 A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4324"
+}

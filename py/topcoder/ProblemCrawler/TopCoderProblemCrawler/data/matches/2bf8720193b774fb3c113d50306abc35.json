@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":160.86,
+			"constraints":[],
+			"correctRatio":63.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4720&rd=8000",
+			"name":"Airways",
+			"notes":[],
+			"submission":155
+		},
+		{
+			"avgPts":265.68,
+			"constraints":[],
+			"correctRatio":36.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4679&rd=8000",
+			"name":"ValetParking",
+			"notes":[],
+			"submission":114
+		},
+		{
+			"avgPts":694.06,
+			"constraints":[],
+			"correctRatio":76.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4721&rd=8000",
+			"name":"HairCuts",
+			"notes":[],
+			"submission":55
+		}
+	],
+	"name":"Single Round Match 267 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8000"
+}

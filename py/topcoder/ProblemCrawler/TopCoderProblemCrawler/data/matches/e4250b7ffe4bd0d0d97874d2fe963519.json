@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":204.2,
+			"constraints":[],
+			"correctRatio":73.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8568&rd=12175",
+			"name":"TheLuckyNumbers",
+			"notes":[],
+			"submission":408
+		},
+		{
+			"avgPts":294.14,
+			"constraints":[],
+			"correctRatio":53.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8569&rd=12175",
+			"name":"TheLuckySequence",
+			"notes":[],
+			"submission":292
+		},
+		{
+			"avgPts":556.17,
+			"constraints":[],
+			"correctRatio":25.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8572&rd=12175",
+			"name":"TheLuckySum",
+			"notes":[],
+			"submission":39
+		}
+	],
+	"name":"Single Round Match 403 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12175"
+}

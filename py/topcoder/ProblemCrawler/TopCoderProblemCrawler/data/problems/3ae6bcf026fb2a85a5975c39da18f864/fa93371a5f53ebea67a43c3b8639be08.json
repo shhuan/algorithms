@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8397&rd=10806",
+	"statement":"<p>You are building a house and are laying the floorboards in one of the rooms. Each floorboard is a rectangle 1 unit wide and can be of any positive integer length. Floorboards must be laid with their sides parallel to one of the sides of the room and cannot overlap. In addition, the room may contain features such as pillars, which lead to areas of the floor where no floorboards can be laid. The room is rectangular and the features all lie on a unit-square grid within it. You want to know the minimum number of floorboards that you need to completely cover the floor.</p><br /><br /> <p>You are given a String[] <b>room</b> containing the layout of the room. Character j in element i of <b>room</b> represents the grid-square at position (i, j) and will be a '.' if this square needs to be covered with a floorboard or a '#' if the square is a feature where no floorboard can be laid. Return an int containing the minimum number of floorboards you need to completely cover the floor.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FloorBoards",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"layout",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int layout(String[] room)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\".....\" ,\".....\" ,\".....\" ,\".....\" ,\".....\"}",
+			"note":"5 boards laid side-by-side will cover this square room.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{\".......\" ,\".#..##.\" ,\".#.....\" ,\".#####.\" ,\".##..#.\" ,\"....###\"}",
+			"note":"A possible optimal layout could look like the following  Each floorboard is represented by a consecutive horizontal sequence of '-' characters or a consecutive vertical sequence of '|' characters.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"####\" ,\"####\" ,\"####\" ,\"####\"}",
+			"note":"This is a strange room, with no floor area to cover.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"...#..\" ,\"##....\" ,\"#.#...\" ,\".#....\" ,\"..#...\" ,\"..#..#\"}",
+			"note":"An optimal pattern here is: ",
+			"order":4
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\".#....\" ,\"..#...\" ,\".....#\" ,\"..##..\" ,\"......\" ,\".#..#.\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"room will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of room will contain between 1 and 10 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of room will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in room will be a '.' or a '#'."
+		}
+	]
+}

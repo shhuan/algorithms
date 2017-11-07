@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":195.66,
+			"constraints":[],
+			"correctRatio":32.35,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=112&rd=3015",
+			"name":"InverseModulus",
+			"notes":[],
+			"submission":34
+		},
+		{
+			"avgPts":391.32,
+			"constraints":[],
+			"correctRatio":43.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=113&rd=3015",
+			"name":"BasesPerm",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":550.96,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=114&rd=3015",
+			"name":"Space3d",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"Single Round Match 16 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3015"
+}

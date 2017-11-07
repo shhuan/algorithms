@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6033&rd=9809",
+	"statement":"<p>Captain Brown Beard keeps his pirate ship stocked with a healthy supply of cannon balls. Because he is very tidy, he insists that all of the cannon balls be stacked into perfect tetrahedron shapes. Such a pyramid is constructed by arranging cannon balls into an equilateral triangle with side length <i>n</i>. Then, on top of that is stacked an equilateral triangle of side length <i>n</i>-1, and so on, until there is a single cannon ball placed on the top (this single cannon ball is a triangle of side length 1). For example, a stack of size 3 will have three layers that look like this (from top to bottom):</p> <pre>\n  X\n\n  X\n X X\n\n  X\n X X\nX X X\n</pre> <p>So, each triangle will contain 1, 3, 6, 10, etc. cannon balls. Thus, any complete stack will have 1, 4, 10, 20, etc. cannon balls.</p> <p>You are given an int <b>n</b>, the number of cannon balls loaded on the ship. You are to return an int indicating the least possible number of stacks into which the cannon balls can be piled.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CannonBalls",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fewestPiles",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int fewestPiles(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"1",
+			"note":"This is the smallest single stack we can make.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"5",
+			"note":"A stack with 1 cannon ball, and a stack with 4 cannon balls.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"9",
+			"note":"9 = 4 + 4 + 1",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"15",
+			"order":4
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"91",
+			"note":"91 = 56 + 35",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 300000, inclusive."
+	}]
+}

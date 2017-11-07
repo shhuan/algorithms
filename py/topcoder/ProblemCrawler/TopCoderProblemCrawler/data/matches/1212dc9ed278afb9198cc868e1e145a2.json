@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":184.18,
+			"constraints":[],
+			"correctRatio":71.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11944&rd=15094",
+			"name":"BlurredDartboard",
+			"notes":[],
+			"submission":1051
+		},
+		{
+			"avgPts":289.95,
+			"constraints":[],
+			"correctRatio":57.73,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11939&rd=15094",
+			"name":"HeavyBooks",
+			"notes":[],
+			"submission":388
+		},
+		{
+			"avgPts":481.81,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11940&rd=15094",
+			"name":"SequenceTransmission",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"2012 TCO Algorithm > Round 2B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15094"
+}

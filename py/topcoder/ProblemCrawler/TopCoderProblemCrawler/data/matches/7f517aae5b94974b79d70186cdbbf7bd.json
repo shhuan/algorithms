@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":151.45,
+			"constraints":[],
+			"correctRatio":27.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13490&rd=16082",
+			"name":"AliceGame",
+			"notes":[],
+			"submission":496
+		},
+		{
+			"avgPts":255.63,
+			"constraints":[],
+			"correctRatio":63.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13457&rd=16082",
+			"name":"BoardFolding",
+			"notes":[],
+			"submission":130
+		},
+		{
+			"avgPts":465.26,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13365&rd=16082",
+			"name":"ElectronicPet",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"Single Round Match 639 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16082"
+}

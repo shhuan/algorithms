@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12822&rd=15707",
+	"statement":"<p> Little Elephant from the Zoo of Lviv has some balls arranged in a row. Each ball can be painted in one of two possible colors: black or white. Initially all the balls are painted white. </p> <p> </p> <p> You are given an int <b>M</b>, which represents the number of balls in the row. The balls are numbered from left to right, starting from 1. You are also given two int[]s <b>L</b> and <b>R</b>. To repaint balls, Little Elephant wants to use a robot. The robot will paint the balls in several consecutive stages. For each i, the i-th stage (1-based index) will look as follows: First, the robot will choose one of the two colors: white or black. Then, the robot will paint the balls with indices from <b>L</b>[i-1] to <b>R</b>[i-1], inclusive, using the chosen color. (Painting a ball covers all previous layers of paint.) </p> <p> </p> <p> Return the number of different colorings Little Elephant can get after the last stage. (Two colorings are considered different if there exists some ball that is white in one coloring and black in the other one). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LittleElephantAndIntervalsDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getNumber(int M, int[] L, int[] R)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1, 2, 3}",
+			"id":0,
+			"input":"4",
+			"note":"In the three stages the robot will choose the color for balls number 1, 2, and 3. The choices are independent of each other. The last, fourth ball will always remain white. Thus there are 2*2*2 = 8 different colorings.",
+			"order":1
+		},
+		{
+			"expect":"{1, 1, 2}",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{47}",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{5, 23, 4, 1, 15, 2, 22, 26, 13, 16, 28, 13, 27, 9, 18, 4, 10, 3, 4, 4, 3, 4, 1, 18, 18, 2, 38, 4, 10, 12, 3, 30, 11, 38, 2, 13, 1, 13, 18, 16, 13, 2, 14, 27, 13, 3, 26, 19, 5, 10}",
+			"id":0,
+			"input":"42",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"M will be between 1 and 1,000, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"L will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"R will contain the same number of elements as L."
+		},
+		{
+			"order":4,
+			"val":"Each element of R will be between 1 and M, inclusive."
+		},
+		{
+			"order":5,
+			"val":"i-th element of L will be between 1 and R[i], inclusive."
+		}
+	]
+}

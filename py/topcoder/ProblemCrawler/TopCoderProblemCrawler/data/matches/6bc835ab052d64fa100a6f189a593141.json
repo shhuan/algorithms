@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":193.8,
+			"constraints":[],
+			"correctRatio":74.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10104&rd=13512",
+			"name":"EquilibriumPoints",
+			"notes":[],
+			"submission":582
+		},
+		{
+			"avgPts":314.13,
+			"constraints":[],
+			"correctRatio":42.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10074&rd=13512",
+			"name":"CakesEqualization",
+			"notes":[],
+			"submission":201
+		},
+		{
+			"avgPts":521.98,
+			"constraints":[],
+			"correctRatio":30,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10107&rd=13512",
+			"name":"TeamManagement",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 421 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13512"
+}

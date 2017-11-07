@@ -1,0 +1,112 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1142&rd=4464",
+	"statement":"We have a goat. We want to tether him with a long rope to the only solid structure we have in our orchard, a cylindrical water tank with its round base sitting on the ground. We are worried that the goat will be able to get at our fruit trees and will destroy them. <p> The rope will be attached at the southernmost point on the water tank. The rope cannot pass through the water tank, so as the goat tries to reach some of our trees the rope may wrap part way around the circular base of the tank. </p><p> Create a class Tether that contains a method deadTrees that takes the length of the <b>rope</b>, the <b>radius</b> of the water tank, and the locations of our trees and returns the number of trees that the goat will be able to reach. The locations of our trees are given by int[] <b>x</b> and int[] <b>y</b>, the distances east and north respectively from the center of the tank. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":" and  give the coordinates east and north of the tank's center"
+		},
+		{
+			"order":2,
+			"val":"the goat will be tethered at the southernmost point on the tank, (0,-)"
+		},
+		{
+			"order":3,
+			"val":"if the goat can just exactly reach a tree, count the tree as dead"
+		},
+		{
+			"order":4,
+			"val":"the rope can not pass through the tank, but it is not impeded by trees (since they would have been eaten all the way down to the ground)"
+		},
+		{
+			"order":5,
+			"val":"it has been verified that none of the allowed inputs can lead to significant rounding errors. (There are no attainable distances that are within 1E-10 of an integer, and are not exactly an integer)."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Tether",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"deadTrees",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int deadTrees(int rope, int radius, int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"30",
+			"note":"The goat is tethered at (0,-10) and can easily reach the first two trees. If the tank were not in the way, the goat could get to the northern tree, but the distance is greater than 30 going around the tank. ",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"30",
+			"note":"The first tree can just be reached -- count it. The second tree is easily reached going clockwise around the tank. The third tree can be reached by going 1/4 of the way around the tank and then straight north, but the fourth tree is out of reach.",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"31",
+			"note":"This is the same as the previous example but with the rope slightly longer.",
+			"order":3
+		},
+		{
+			"expect":"27",
+			"id":0,
+			"input":"207",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rope is between 1 and 300 inclusive"
+		},
+		{
+			"order":2,
+			"val":"radius is between 1 and 300 inclusive"
+		},
+		{
+			"order":3,
+			"val":"x contains between 1 and 50 elements"
+		},
+		{
+			"order":4,
+			"val":"y contains the same number of elements as x"
+		},
+		{
+			"order":5,
+			"val":"each element of x and y is between -300 and 300 inclusive"
+		},
+		{
+			"order":6,
+			"val":"each location (xi,yi) is distinct from each other location"
+		},
+		{
+			"order":7,
+			"val":"xi*xi + yi*yi &gt; radius*radius for each element of x and y (so no trees are inside the tank)"
+		}
+	]
+}

@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12984&rd=15847",
+	"statement":"<p>Fox Ciel is sailing in the Donut sea. The Donut sea is a torus. For navigation, the torus is divided into <b>N</b> times <b>M</b> cells, as shown in the figure below.</p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/TorusSailing/torus.png\" /><br /><br /> <i>(Image by YassineMrabet from Wikimedia Commons, licensed under CC BY-SA 3.0.)</i> <br /><br /><br /><br /> <p> Each of the cells has two integer coordinates (n, m), where 0 &lt;= n &lt; <b>N</b> and 0 &lt;= m &lt; <b>M</b>. Note that the coordinates wrap around modulo <b>N</b> and <b>M</b>. For example, if you are in the cell (<b>N</b>-1, <b>M</b>-1) and you cross over one of its sides, you will reach one of the cells (<b>N</b>-2, <b>M</b>-1), (0, <b>M</b>-1), (<b>N</b>-1, <b>M</b>-2), and (<b>N</b>-1, 0). </p> <br /><br /> <p> Ciel starts in the cell (0, 0) and wants to reach the goal cell (<b>goalX</b>, <b>goalY</b>). </p> <br /><br /> <p> Unfortunately, Ciel's navigation is very poor. Whenever she moves to a new cell, there are two equally probable outcomes: either her first or her second coordinate increases by one (wrapping around if necessary). Formally, if Ciel's current coordinates are (n, m), her new coordinates will be either ((n+1) modulo <b>N</b>, m), or (n, (m+1) modulo <b>M</b>), with equal probability. Each such move takes one day. </p> <br /><br /> <p> Return the expected number of days Ciel will need to reach her goal. </p>",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TorusSailing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expectedTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expectedTime(int N, int M, int goalX, int goalY)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"100",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"M will be between 2 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"goalX will be between 0 and N - 1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"goalY will be between 0 and M - 1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"(goalX, goalY) will not be (0, 0)."
+		}
+	]
+}

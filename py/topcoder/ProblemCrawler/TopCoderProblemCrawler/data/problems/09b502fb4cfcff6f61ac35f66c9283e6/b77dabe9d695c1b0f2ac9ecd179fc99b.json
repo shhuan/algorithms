@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6412&rd=9825",
+	"statement":"Conditional probability can be illustrated with dice problems. What is the probability that you rolled a 12 on a pair of normal 6-sided dice, given that at least one of the dice shows a 6? This is the same question as the following: roll a pair of dice until at least one of the dice shows 6 -- what is the probability that your final roll has 6 on BOTH dice. The surprising answer is 1/11 since of the 36 equally likely rolls, 11 have at least one 6 and 1 of these 11 has 6 on both dice. <p> Our goal is to solve a generalized version of this problem in which we roll <b>nDice</b> identical dice, each with sides labelled 1,2,...,<b>maxSide</b>. We want to know the probability that the sum of the dice is greater than or equal to <b>theSum</b> given that at least one of the dice shows the value <b>v</b>. Create a class Conditional that contains a method probability that is given <b>nDice</b>,<b>maxSide</b>, <b>v</b>, and <b>theSum</b> and that returns the desired conditional probability. </p> ",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to within a relative or absolute value of 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Conditional",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"probability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double probability(int nDice, int maxSide, int v, int theSum)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"2",
+			"note":" This is the example above whose answer is 1/11. (Of course, the sum cannot be greater than 12.) ",
+			"order":1
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"2",
+			"note":" Given that at least one of the dice shows a 6 the sum of the 2 dice must be at least 7.",
+			"order":2
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"1",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"Two 3-sided (!) dice with at least one 2 showing: 12 22 32 21 23 are the 5 possible equally likely results, and 3 of the 5 have a sum greater than or equal to 4.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"nDice and maxSide will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"v will be between 1 and maxSide, inclusive."
+		},
+		{
+			"order":3,
+			"val":"theSum will be between 1 and maxSide*nDice, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":172.29,
+			"constraints":[],
+			"correctRatio":87.92,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13766&rd=16464",
+			"name":"MissingLCM",
+			"notes":[],
+			"submission":265
+		},
+		{
+			"avgPts":269.09,
+			"constraints":[],
+			"correctRatio":74.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13765&rd=16464",
+			"name":"ColorfulLineGraphs",
+			"notes":[],
+			"submission":99
+		},
+		{
+			"avgPts":470.3,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13417&rd=16464",
+			"name":"BridgeBuilding",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 661 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16464"
+}

@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8471&rd=10810",
+	"statement":"<p>Once again, you are stuck in a rectangular maze, represented by a String[] <b>maze</b>. Each character in each element of <b>maze</b> represents one room. Each room, naturally, has four sides, and each side may or may not have a door. The character representing the room will denote the set of doors present in that room. There will be four types of rooms: 'A' denotes a room with all four doors present, 'B' denotes a room with no doors, 'C' denotes a room with only north and south doors, and 'D' denotes a room with only east and west doors. The directions are chosen so that each element of <b>maze</b> represents a row of rooms from west to east, and those rows are ordered from north to south in <b>maze</b>.</p> <p>You can move around the maze by walking from one room to one of the four adjacent rooms. However, you can do that only if both the room you are in and the room you are going into have the corresponding doors. For example, you can only move to the north if your room has a north door and the room to the north has a south door. The maze is surrounded by a solid wall, so you can never walk out of it, even if there's a door in a border room leading out. Every movement from one room to another takes 1 second.</p> <p>The rooms having not enough doors may seriously constrain your movement in the maze. Luckily, you've been given a remote control that can change the maze. The remote control has only one button, and pressing this button makes all the rooms in the same row as your room and all the rooms in the same column as your room rotate 90 degress clockwise. Your room itself rotates twice; notice that a double rotation has the same effect as the room not being rotated at all. When a room rotates 90 degrees clockwise, its north door (or absence of such) becomes its east door (or absence of such), east becomes south, south becomes west and west becomes north. Operating the remote control also takes 1 second.</p> <p>Return the least number of seconds required to get from the room at the northwest corner of the maze to the room at the southeast corner. If there's no way to achieve that, return -1.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TurningMaze",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minTime(String[] maze)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"AA\", \"AA\"}",
+			"note":"We can walk anywhere we like.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"{\"AAA\", \"BBA\", \"AAA\", \"ABB\", \"AAA\"}",
+			"note":"Zig-zag.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{\"AAACAAA\", \"BBBBBBA\"}",
+			"note":"Remote control comes into play.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{\"ACDCDCA\", \"BBBBBBA\"}",
+			"note":"You can apply the remote control multiple times.",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"CA\", \"BA\"}",
+			"note":"The remote control won't help if you're stuck in the initial cell.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"CAA\", \"DAA\", \"ACA\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maze will contain between 2 and 7 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of maze will contain between 2 and 7 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of maze will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in each element of maze will be one of 'A', 'B', 'C', 'D'."
+		}
+	]
+}

@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4643&rd=8093",
+	"statement":"You have a skewed random number generator that outputs the number i with percentage <b>probs</b>[i]. Given that you have generated <b>n</b> numbers, return the probability (between 0 and 1) that <b>value</b> has been generated more times than any of the other numbers.",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to 1e-9 relative or absolute."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ModeProbability",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getProb",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getProb(int[] probs, int n, int value)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{50,50}",
+			"note":"Two equally occurring numbers. For 0 to occur more than 1 it needs to be generated twice in a row. Hence, the probability is 1/4.",
+			"order":1
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"{50,50}",
+			"note":"Since we generate 9 numbers, one number will always occur more times than the other. By symmetry, 0 occurs more frequently with probability 1/2.",
+			"order":2
+		},
+		{
+			"expect":"15",
+			"id":0,
+			"input":"{5,50,20,25}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"probs will contain between 1 and 5 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of probs will be between 1 and 100 inclusive."
+		},
+		{
+			"order":3,
+			"val":"The elements of probs will sum to 100."
+		},
+		{
+			"order":4,
+			"val":"n will be between 1 and 15 inclusive."
+		},
+		{
+			"order":5,
+			"val":"value will be between 0 and N-1 inclusive, where N is the number of elements in probs."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":210.56,
+			"constraints":[],
+			"correctRatio":88.58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4766&rd=7994",
+			"name":"GridPointsOnCircle",
+			"notes":[],
+			"submission":324
+		},
+		{
+			"avgPts":259.93,
+			"constraints":[],
+			"correctRatio":46.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4765&rd=7994",
+			"name":"SlowDigitalClock",
+			"notes":[],
+			"submission":197
+		},
+		{
+			"avgPts":620.64,
+			"constraints":[],
+			"correctRatio":60,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4750&rd=7994",
+			"name":"FrogAndFly",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"Single Round Match 260 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=7994"
+}

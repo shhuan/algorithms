@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=151&rd=3025",
+	"statement":"<pre>Class name: CalcBusinessDays\nMethod name: calcBusinessDays\nParameters: String, String, String[]\nReturns: int\n\n\nYou are part of a team working on a management information system.  Management\nwould like to know how well the customer service area is doing.  One of the\nmeasures management would like to track is the request turnaround.\n\n\nThe request turnaround is a measure of how quickly a request was completed and\nis calculated by determining the number of business days between when the\nrequest was placed (start date) and when it was completed (end date).  A\nbusiness day is defined as any working day (does not include Saturday, Sunday\nor any Holidays).\n\n\nImplement a class CalcBusinessDays, which contains a method calcBusinessDays.\nThe method returns the sum of the business days between a start date\n(exclusive) and an end date (inclusive) and does not include days listed in the\nholiday schedule.\n\n\nThe method signature is (Be sure your method is public):\nint calcBusinessDays(String startDate, String endDate, String[] holidays);\n\n\n*All dates will have the format of &quot;mm/dd/yyyy&quot;\n*All dates will be between (inclusive) &quot;01/01/1990&quot; and &quot;12/31/2002&quot;\n*All dates will be valid (ie &quot;02/29/2001&quot; will not be allowed)\n*The startDate cannot fall on a Saturday, Sunday or Holiday.\n*The endDate will be greater than or equal to the startDate and may fall on a\nSaturday, Sunday or Holiday.\n*The holiday list will contain from 0 to 50 holidays, inclusive.\n\n\nNote:\n-If the endDate is equal to the startDate, the task was accomplished on the\nsame day and the turnaround is 0.\n-The endDate can be a non-business day\n-Remember the number of days within each month\n{31,28,31,30,31,30,31,31,30,31,30,31}.  February will have 29 days in leap\nyears (those years divisible by 4 within our valid range above)\n\n\nExamples:\n-If the start date is &quot;07/30/2001&quot; (Monday) and the end date is &quot;08/03/2001&quot;\n(Friday) with no intervening holidays, the turnaround is 4.\n\n\n-If the start date is &quot;07/30/2001&quot; (Monday) and the end date is &quot;08/03/2001&quot;\n(Friday) with a holiday on &quot;08/01/2001&quot;, the turnaround is 3.\n\n\n-If the start date is &quot;08/03/2001&quot; (Friday) and the end date is &quot;08/04/2001&quot;\n(Saturday), the turnaround will be 0 (holidays are irrelevant here)\n\n\n-If the start date is &quot;08/27/2001&quot; (Monday) and the end date is &quot;09/03/2001&quot;\n(Monday) with no intervening holidays, the turnaround is 5.\n\n-If the start date is &quot;12/31/1999&quot; (Friday) and the end date is &quot;01/01/2001&quot;\n(Monday) with no intervening holidays, the turnaround is 261.\n\n-If the start date is &quot; 02/28/2000&quot; (Monday) and the end date is &quot;03/01/2000&quot;\n(Wednesday) with no intervening holidays, the turnaround is 2.\n\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CalcBusinessDays",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calcBusinessDays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int calcBusinessDays(String param0, String param1, String[] param2)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

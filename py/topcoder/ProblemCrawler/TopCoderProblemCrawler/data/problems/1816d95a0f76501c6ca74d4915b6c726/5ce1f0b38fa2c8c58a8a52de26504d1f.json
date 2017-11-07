@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6062&rd=9824",
+	"statement":"<p> An earthquake took place yesterday and caused some of the passages in the cave to be obstructed by stones. There are four bears trapped in the cave and they want to reach each other. You have to determine the minimum number of passages that must be cleared to allow each bear to reach all the other bears. </p> <p> The cave is represented as a rectangular <b>field</b>. Each cell in the <b>field</b> corresponds to a passage. Obstructed passages are denoted by '.' symbols and unobstructed passages are denoted by 'X' symbols. Bears can only move in four directions: left, right, up and down; they can't leave the field and can't walk through obstructed passages. </p> <p> The first two bears are located in the first column of <b>field</b> and are denoted by 'B' symbols. All other cells in the first column are obstructed passages. You are NOT allowed to clear any obstructed passages in that column. </p> <p> The last two bears are located in the last column of <b>field</b> and are denoted by 'B' symbols. All other cells in the last column are obstructed passages. You are NOT allowed to clear any obstructed passages in that column. </p> <p> You will be given the cave as a rectangular <b>field</b>, each element of which represents a row of the cave. Your method should return the minimum number of passages that must be cleared to allow each bear to reach all the other bears. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FourBears",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"clearPassages",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int clearPassages(String[] field)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{ \"B.X...............\", \"..X..XXXXXXXXXX..B\", \"B.X..X........X...\", \".....X........X...\", \"..XXXX........X..B\" }",
+			"note":"The passages which must be cleared are marked with '#' characters. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{ \"..................\", \"B..........XXXX..B\", \"..........X.......\", \"....XXXXXX........\", \"..........XX......\", \"B............XX..B\", \"..................\" }",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{ \"B.B\", \"...\", \"B.B\" }",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{ \"..B\", \"B.B\", \"B..\" }",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 28",
+			"id":0,
+			"input":"{ \"B..................XX.................XX.XXX.....B\", \"...XXXXX.....XXXX......XXXXX.....XXXX..XXX.XXXX...\", \"............XX..................XX................\", \".......XXX........XX..X....XXX...........XXX......\", \"............XXX......X.XXX......XXX.XXX..X.XXX....\", \"....XXXX......XXX...X...XXXX......XXX.XXXX........\", \"B..XX..............XX............................B\" }",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":" field will have between 2 and 7 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":" All elements in field will have the same length between 3 and 50, inclusive."
+		},
+		{
+			"order":3,
+			"val":" The first column in field will have exactly two 'B' symbols denoting the bears, all other symbols will be '.' in that column."
+		},
+		{
+			"order":4,
+			"val":" The last column in field will have exactly two 'B' symbols denoting the bears, all other symbols will be '.' in that column."
+		},
+		{
+			"order":5,
+			"val":" All columns except the first and the last will contain only '.' and 'X' symbols."
+		}
+	]
+}

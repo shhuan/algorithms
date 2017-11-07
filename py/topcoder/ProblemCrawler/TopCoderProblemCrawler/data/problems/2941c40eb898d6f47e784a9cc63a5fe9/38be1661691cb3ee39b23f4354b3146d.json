@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12844&rd=15809",
+	"statement":"Fox Ciel's room is divided into N times M unit cells. Each cell is either empty or a wall. The cells are numbered (0, 0) through (N-1, M-1). <br /><br /> <br /><br /> You are given a String[] <b>grid</b> that describes Ciel's room. If the j-th character of the i-th element of <b>grid</b> is '#', cell (i, j) is a wall. Similarly, character '-' denotes an empty cell. <br /><br /> <br /><br /> There is an entrance in the cell (0, 0) and an exit in the cell (N-1, M-1). From any cell (i, j) Ciel has at most two options how to move: she can move to the cell (i+1, j) or to the cell (i, j+1). Of course, she cannot step outside the room and she cannot step into a cell that contains a wall. <br /><br /> <br /><br /> Cat Snuke wants to color each empty cell black or white. Additionally, the coloring must have the following property: Each of Ciel's valid paths from (0, 0) to (N-1, M-1) must contain exactly one black cell. Return the number of ways to color the cells, modulo 1,000,000,007. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OneBlack",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countColorings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countColorings(String[] grid)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{\"---\", \"---\", \"---\"}",
+			"note":"There are six valid paths Ciel may take:  Each of these paths must contain exactly one black cell. There are five ways to do so: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 64",
+			"id":0,
+			"input":"{\"--#\", \"##-\", \"---\"}",
+			"note":"There is no path, so all 2^6 colorings satisfy the condition.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 18",
+			"id":0,
+			"input":"{\"----\", \"-##-\", \"----\"} ",
+			"note":" The total number of valid colorings is 1 + 1 + 4 * 4 = 18. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 432",
+			"id":0,
+			"input":"{\"------##\", \"-##--#--\", \"---#----\", \"-----##-\", \"#-------\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 903122246",
+			"id":0,
+			"input":"{\"------------------------------\", \"------------------------------\", \"------------------------------\", \"--#####------###-------###----\", \"----#-------#---#-----#---#---\", \"----#-------#---------#---#---\", \"----#-------#---------#---#---\", \"----#-------#---#-----#---#---\", \"----#--------###-------###----\", \"------------------------------\", \"------------------------------\", \"------#####--------#####------\", \"----------#--------#---#------\", \"----------#--------#---#------\", \"------#####--------#---#------\", \"------#------------#---#------\", \"------#------------#---#------\", \"------#####--------#####------\", \"------------------------------\", \"------------------------------\", \"--------#----------#####------\", \"--------#--------------#------\", \"--------#--------------#------\", \"--------#----------#####------\", \"--------#--------------#------\", \"--------#--------------#------\", \"--------#----------#####------\", \"------------------------------\", \"------------------------------\", \"------------------------------\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain between 2 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of grid will contain between 2 and 30 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of grid will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in grid will be either '#' or '-'."
+		},
+		{
+			"order":5,
+			"val":"The first character of the first element of grid and the last character of the last element of grid will be '-'."
+		}
+	]
+}

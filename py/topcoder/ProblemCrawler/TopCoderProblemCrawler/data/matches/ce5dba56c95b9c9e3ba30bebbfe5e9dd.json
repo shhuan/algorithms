@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.91,
+			"constraints":[],
+			"correctRatio":31.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7766&rd=10673",
+			"name":"RadarFinder",
+			"notes":[],
+			"submission":533
+		},
+		{
+			"avgPts":378.49,
+			"constraints":[],
+			"correctRatio":84.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7601&rd=10673",
+			"name":"DiceGames",
+			"notes":[],
+			"submission":415
+		},
+		{
+			"avgPts":452.79,
+			"constraints":[],
+			"correctRatio":2.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6067&rd=10673",
+			"name":"LastMarble",
+			"notes":[],
+			"submission":130
+		}
+	],
+	"name":"Single Round Match 349 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10673"
+}

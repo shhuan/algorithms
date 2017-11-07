@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":209.69,
+			"constraints":[],
+			"correctRatio":94.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12790&rd=15708",
+			"name":"IncrementAndDoubling",
+			"notes":[],
+			"submission":695
+		},
+		{
+			"avgPts":248.19,
+			"constraints":[],
+			"correctRatio":61.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12792&rd=15708",
+			"name":"BitwiseAnd",
+			"notes":[],
+			"submission":316
+		},
+		{
+			"avgPts":496.47,
+			"constraints":[],
+			"correctRatio":30,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12739&rd=15708",
+			"name":"SparseFactorial",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 596 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15708"
+}

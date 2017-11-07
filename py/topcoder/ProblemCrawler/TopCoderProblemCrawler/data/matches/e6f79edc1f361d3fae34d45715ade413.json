@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":161.52,
+			"constraints":[],
+			"correctRatio":87.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1287&rd=4474",
+			"name":"Ordered",
+			"notes":[],
+			"submission":127
+		},
+		{
+			"avgPts":316.28,
+			"constraints":[],
+			"correctRatio":63.01,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1579&rd=4474",
+			"name":"GreedyChange",
+			"notes":[],
+			"submission":73
+		},
+		{
+			"avgPts":595.53,
+			"constraints":[],
+			"correctRatio":79.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=911&rd=4474",
+			"name":"SolidArea",
+			"notes":[],
+			"submission":49
+		}
+	],
+	"name":"TopCoder Collegiate Challenge > Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4474"
+}

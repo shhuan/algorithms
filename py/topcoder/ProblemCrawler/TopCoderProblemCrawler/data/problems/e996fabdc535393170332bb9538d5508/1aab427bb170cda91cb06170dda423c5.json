@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13088&rd=15848",
+	"statement":"Monte-Carlo is an amoeba. Amoebas can feed on gel: whenever an amoeba encounters a piece of gel that is exactly as big as the amoeba, the amoeba will consume the gel and thus double its size. <br /><br /><br /><br /> Initially, the size of Monte-Carlo was some unknown positive integer. During its lifetime, Monte-Carlo encountered several gels and consumed the ones it could. <br /><br /><br /><br /> You are given a int[] <b>X</b>. The elements of <b>X</b> are the sizes of gels Monte-Carlo encountered, in chronological order. <br /><br /><br /><br /> Let S be the set of all possible final sizes of Monte-Carlo. Compute and return the number of positive integers that <i>do not belong</i> into S.",
+	"notes":[{
+		"order":1,
+		"val":"It is possible to prove that the answer for any test case is finite and fits into a 32-bit signed integer type."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AmebaDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int[] X)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{3,2,1}",
+			"note":"Here are a few possibilities how Monte-Carlo's life could have looked like:  All final sizes except for 1 and 3 are possible.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{2,2,2,2,2,2,4,2,2,2}",
+			"note":"If Monte-Carlo starts with size 2, its life will look as follows: First, it will consume gel #0 and thus grow to 4. Later, after ignoring a few gels, Monte-Carlo will consume gel #6 (the one with size 4) and thus grow to 8.  It can be shown that for this  Monte-Carlo's final size can never be 2 or 4. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 11",
+			"id":0,
+			"input":"{1,2,4,8,16,32,64,128,256,1024,2048}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{854,250,934,1000,281,250,281,467,854,562,934,1000,854,500,562}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"X will contain between 1 and 200 integers, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of X will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

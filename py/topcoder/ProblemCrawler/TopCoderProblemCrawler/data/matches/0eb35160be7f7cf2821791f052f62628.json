@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":223.62,
+			"constraints":[],
+			"correctRatio":86.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12450&rd=15580",
+			"name":"EllysPairs",
+			"notes":[],
+			"submission":1716
+		},
+		{
+			"avgPts":325.28,
+			"constraints":[],
+			"correctRatio":49.65,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12447&rd=15580",
+			"name":"EllysFigurines",
+			"notes":[],
+			"submission":860
+		},
+		{
+			"avgPts":662.58,
+			"constraints":[],
+			"correctRatio":53.92,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12393&rd=15580",
+			"name":"EllysReversals",
+			"notes":[],
+			"submission":523
+		}
+	],
+	"name":"2013 TCO Algorithm > Round 1B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15580"
+}

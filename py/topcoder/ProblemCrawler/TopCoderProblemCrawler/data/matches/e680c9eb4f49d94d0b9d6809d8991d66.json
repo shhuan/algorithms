@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.11,
+			"constraints":[],
+			"correctRatio":86.7,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8464&rd=11129",
+			"name":"StreetWalking",
+			"notes":[],
+			"submission":406
+		},
+		{
+			"avgPts":316.39,
+			"constraints":[],
+			"correctRatio":70.92,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8582&rd=11129",
+			"name":"Skyscrapers",
+			"notes":[],
+			"submission":196
+		},
+		{
+			"avgPts":516.43,
+			"constraints":[],
+			"correctRatio":26.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8736&rd=11129",
+			"name":"PubTrivia",
+			"notes":[],
+			"submission":88
+		}
+	],
+	"name":"Single Round Match 395 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=11129"
+}

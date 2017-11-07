@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12025&rd=14737",
+	"statement":"For a given string S of length n an inversion is a pair of integers (i, j) such that 0 &lt;= i &lt; j &lt;= n-1 and S[i] &gt; S[j]. (That is, the character at 0-based index i is greater than the character at 0-based index j.) For example, the string &quot;abcab&quot; has 3 inversions: (1, 3), (2, 3), and (2, 4). <p></p> Given are ints <b>n</b> and <b>minInv</b>, and a String <b>minStr</b>. We will consider all strings that are permutations of the first <b>n</b> lowercase English letters. That is, these strings have length <b>n</b> and contain each of the first <b>n</b> letters exactly once. Out of these strings, return the lexicographically smallest string R with the following two properties: \n <ul> \n  <li>The number of inversions in R is at least <b>minInv</b>.</li> \n  <li>The string R is not lexicographically smaller than <b>minStr</b>.</li> \n </ul> If there is no such string, return an empty String instead. ",
+	"notes":[{
+		"order":1,
+		"val":"A String A is lexicographically smaller than a String B if A is a prefix of B or A contains a smaller character at the first position where the Strings differ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StrIIRec",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"recovstr",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String recovstr(int n, int minInv, String minStr)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"note":"You must find the lexicographically smallest String that has at least 1 inversion and is not lexicographically smaller than \"ab\".",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"9",
+			"order":2
+		},
+		{
+			"expect":"55",
+			"id":0,
+			"input":"11",
+			"note":"\"kjihgfedcba\" is the only String that has at least 55 inversions.",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"15",
+			"order":4
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"9",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 20, inclusive."
+		},
+		{
+			"order":2,
+			"val":"minInv will be between 0 and n*(n-1)/2, inclusive."
+		},
+		{
+			"order":3,
+			"val":"minStr will contain between 1 and n characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each character in minStr will be one of the first n lowercase Latin letters."
+		},
+		{
+			"order":5,
+			"val":"All characters in minStr will be unique."
+		}
+	]
+}

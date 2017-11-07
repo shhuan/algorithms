@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6163&rd=10103",
+	"statement":"Using the operators '+', '-', '/', '*', and parentheses as many times as you wish, find expressions for the smallest and largest primes that use each element of <b>values</b> exactly once. A prime is an integer greater than 1 with no divisors except 1 and itself. Return a int[] with exactly two elements, where the first element is the smallest prime you can make, and the second is the largest. If no primes can be constructed, return an empty int[].",
+	"notes":[
+		{
+			"order":1,
+			"val":"The division operator truncates its results. For example, 8/5 = 1."
+		},
+		{
+			"order":2,
+			"val":"The given numbers cannot be concatenated. For example, 8 and 5 cannot be combined to form 85."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MixedUpPrimes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findPrimes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] findPrimes(int[] values)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {2, 3 }",
+			"id":0,
+			"input":"{1,2}",
+			"note":"We get 2 using 2*1. We get 3 using 2+1.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {2, 7 }",
+			"id":0,
+			"input":"{1,2,3}",
+			"note":"Here we use 3-2+1=2 and 3*2+1 = 7.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {2, 719 }",
+			"id":0,
+			"input":"{1,2,3,4,5,6}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: {2, 15017 }",
+			"id":0,
+			"input":"{2,3,5,7,11,13}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: {2, 17 }",
+			"id":0,
+			"input":"{2,2,2,2,2,2}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"{8}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"values will contain between 1 and 6 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of values will be between 1 and 30, inclusive."
+		}
+	]
+}

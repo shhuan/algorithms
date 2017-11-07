@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":206.54,
+			"constraints":[],
+			"correctRatio":87.76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4637&rd=8024",
+			"name":"DayPlanner",
+			"notes":[],
+			"submission":343
+		},
+		{
+			"avgPts":494.02,
+			"constraints":[],
+			"correctRatio":74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4628&rd=8024",
+			"name":"TheCoderMan",
+			"notes":[],
+			"submission":300
+		}
+	],
+	"name":"2005 TCO > Qualification Set 5/10",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8024"
+}

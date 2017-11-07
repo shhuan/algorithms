@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4489&rd=7217",
+	"statement":"<p> You are given a rectangular board consisting of <b>width</b> times <b>height</b> small squares. Return the number of different ways there are to cut a <b>k</b>-polyomino out of this board, so that the remaining part remains connected. </p> <p> A <b>k</b>-polyomino is a connected set of <b>k</b> squares. The figure below shows as an example all possible pentominoes (5-polyominoes) ignoring any translations, rotations or reflections. </p> <p> <img src=\"http://www.topcoder.com/contest/problem/PolyominoCut/pentominoes.png\" /> </p> <p> Connected means side-connected here (both in the polyomino definition and in the requirement for the remaining part of the board) - i.e., you must be able to go from any square to any other by only going through squares and square-sides but not square-corners. </p> <p> <img src=\"http://www.topcoder.com/contest/problem/PolyominoCut/connected.png\" /> </p> <p> For two ways of cutting a polyomino out of the grid to be different and be counted separately it suffices if at least one grid square is included in the first polyomino but not in the other. </p> <p> The example below shows some polyomino cuts for <b>k</b>=7. The two on the left (red) are not counted, since they leave the remaining grid disconnected, while the one on the right (green) is counted. </p> <p> <img src=\"http://www.topcoder.com/contest/problem/PolyominoCut/example.png\" /> </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PolyominoCut",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int k, int width, int height)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":"There is only one 1-polyomino (called monomino), and this can be cut out anywhere on the grid.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"3",
+			"note":"  ",
+			"order":2
+		},
+		{
+			"expect":"800",
+			"id":0,
+			"input":"8",
+			"note":"The worst case fits in an int.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"k will be between 1 and 8, inclusive."
+		},
+		{
+			"order":2,
+			"val":"width and height will be between k+1 and 800, inclusive."
+		}
+	]
+}

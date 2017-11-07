@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6762&rd=10113",
+	"statement":"<p><i>This problem contains an image that can be viewed in the applet.</i></p> <p>The domino effect is a chain reaction triggered by a single tile falling down. The tile falls into another tile, which falls into the next tile, and so on (see picture below).</p> <p><img src=\"http://www.topcoder.com/contest/problem/DominoesFalling/DominoesFalling.gif\" /></p> <p>Consider an infinite line of cells, some of which are occupied by tiles. We want to arrange the tiles in such a way that pushing the leftmost tile will lead to all the tiles falling down. A tile will push down a neighboring tile to its right if there are between 1 and 4 free cells, inclusive, between them.</p> <p>You will be given a String[] <b>cells</b>. Concatenate the elements of cells to create a single string representing a segment of the infinite line. Tiles are represented by 'X' characters and free cells are represented by '.' characters. All cells to the left and right of the given segment are free. You may only move tiles into free cells. Return the minimal number of tiles you must move to achieve the desired domino effect.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DominoesFalling",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"rearrangeTiles",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int rearrangeTiles(String[] cells)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"XX\"}",
+			"note":"The tiles are too close. So, we need to move one them.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"X.....X\"}",
+			"note":"The tiles are too far apart. So, we need to move one them.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"X.X............\", \"...............\", \".....X.X.X.....\", \"...............\", \"............X.X\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"X.X....X..X...\", \".X......\"} ",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 34",
+			"id":0,
+			"input":"{\".XX.X.XXXXXX\", \"X.X.XXXXXXXXXXXX\", \".X.X.X.XXXXXXX.XXX\", \".XXXXXX.XX\", \"XX.XXXXX.XXXXX\", \"XXXXX...X...X\", \"XXXX.XXXXXXXXX.XXXXX\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\".......X.X.\", \".....X.....\", \".............X\", \"....X...X..\", \".X...X.X..\", \".XXX........X......X\", \"......X..X....\", \"....X...........\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cells will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of cells will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of cells will contain only '.' and uppercase 'X' characters."
+		},
+		{
+			"order":4,
+			"val":"cells will contain at least two 'X' characters."
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4625&rd=7226",
+	"statement":"<p>Over the years you have collected a great mass of music from various artists. These days you have very little time to listen to your whole collection. You decide to make a single compilation that contains the best hits from each artist. Your first attempt at the compilation was to place the best hits in a random order. However, this resulted in songs from the same artist being close or even next to each other. This is highly undesirable since you hate listening to the same artist over and over again.</p> <p>After some further consideration you realize that there must be some kind of an ultimate order - i.e., an order where artists are 'spread out' across the compilation as much as possible. You then come up with a distance metric (D) that measures the 'spread' of artists across the compilation:</p> <p>D(compilation) = Sum of all D(i), where D(i) is the distance of the song at position i.<br /><br /> D(i) = k-i, where k is the smallest integer greater than i, such that the songs at positions k and i are by the same artist. 0 if no such k exists.</p> <p>Each element in <b>artists</b> will be formatted as &quot;&lt;artist name&gt; &lt;number of hits&gt;&quot;. Your task is to make a String[] compilation of these <b>artists</b> such that D(compilation) is maximal. If there is more than one such compilation return the one which is lexicographically earliest.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MusicCompilation",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"makeCompilation",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] makeCompilation(String[] artists)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"Gorillaz\", \"Jamiroquai\", \"Jamiroquai\", \"Shakira\", \"Gorillaz\", \"Jamiroquai\" }",
+			"id":0,
+			"input":"{\"Shakira 1\",\"Jamiroquai 3\",\"Gorillaz 2\"}",
+			"note":"Songs 1, 2 and 3 have distances 4, 1 and 3 respectively. Songs 4, 5 and 6 have distances of 0 because they are not followed by songs from the same artist. Hence, the distance of the compilation is 4 + 1 + 3 = 8. Although there are other compilations with the same distance, this is the lexicographically earliest.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {\"LimpBizkit\", \"Radiohead\", \"Spiderbait\", \"LimpBizkit\", \"LimpBizkit\", \"Spiderbait\", \"LimpBizkit\", \"Radiohead\", \"Spiderbait\" }",
+			"id":0,
+			"input":"{\"Radiohead 2\",\"Spiderbait 3\",\"LimpBizkit 4\"}",
+			"order":2
+		},
+		{
+			"expect":"Returns: {\"Beatles\", \"ABBA\", \"Beatles\" }",
+			"id":0,
+			"input":"{\"Beatles 2\",\"ABBA 1\"}",
+			"note":"Call me old-fashioned, but I love these two bands! ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"artists will contain between 0 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in artists will be formatted as &quot;&lt;artist name&gt; &lt;number of hits&gt;&quot;."
+		},
+		{
+			"order":3,
+			"val":"&lt;artist name&gt; will contain between 1 and 10 letters ('a'-'z' and 'A'-'Z'), inclusive."
+		},
+		{
+			"order":4,
+			"val":"&lt;artist name&gt; is case-sensitive and may not appear more than once in artists."
+		},
+		{
+			"order":5,
+			"val":"&lt;number of hits&gt; will be an integer with no leading zeroes between 1 and 800 inclusive."
+		},
+		{
+			"order":6,
+			"val":"The sum of all &lt;number of hits&gt; will be between 0 and 800 inclusive."
+		}
+	]
+}

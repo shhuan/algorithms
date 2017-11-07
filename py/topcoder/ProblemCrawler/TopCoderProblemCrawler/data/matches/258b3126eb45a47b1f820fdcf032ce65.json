@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":186.06,
+			"constraints":[],
+			"correctRatio":96.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8060&rd=10778",
+			"name":"Paintball",
+			"notes":[],
+			"submission":469
+		},
+		{
+			"avgPts":365.94,
+			"constraints":[],
+			"correctRatio":81.47,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8062&rd=10778",
+			"name":"PowerPlants",
+			"notes":[],
+			"submission":340
+		},
+		{
+			"avgPts":572.52,
+			"constraints":[],
+			"correctRatio":92.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7375&rd=10778",
+			"name":"YankeeSwap",
+			"notes":[],
+			"submission":40
+		}
+	],
+	"name":"Single Round Match 364 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10778"
+}

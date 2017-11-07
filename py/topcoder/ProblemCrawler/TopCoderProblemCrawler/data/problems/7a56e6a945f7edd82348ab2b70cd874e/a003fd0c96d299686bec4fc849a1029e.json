@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13437&rd=16188",
+	"statement":"<p>You have a sufficient supply of identical planks. Each plank has the shape of an 1 times <b>H</b> rectangle.</p> <br /><br /> <p>The floor of your room is also a rectangle. Its width is <b>W</b> and its height is 2<b>H</b>-1. You want to use the planks you have to tile the floor. The entire floor must be covered and the planks must not overlap. (The width <b>W</b> is guaranteed to be a multiple of <b>H</b>, so this is always possible.)</p> <br /><br /> <p>You are given the two ints <b>H</b> and <b>W</b>. Return the number of ways to tile the floor, modulo 1,000,000,007.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PlankTiling",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sumup",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int sumup(int H, int W)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"2",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"841",
+			"id":0,
+			"input":"29",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"H will be between 2 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"W will be between 2 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"W will be a multiple of H."
+		}
+	]
+}

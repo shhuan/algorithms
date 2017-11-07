@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8774&rd=13764",
+	"statement":"A number is called a perfect power if it can be written in the form m^k, where m and k are positive integers, and k &gt; 1.<br /><br /> Given two positive integers <b>A</b> and <b>B</b>, find the two perfect powers between <b>A</b> and <b>B</b>, inclusive, that are closest to each other, and return the absolute difference between them. If less than two perfect powers exist in the interval, return -1 instead.",
+	"notes":[{
+		"order":1,
+		"val":"1 is a perfect power."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PerfectPowers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"nearestCouple",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long nearestCouple(long A, long B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"1",
+			"note":"1 and 4 are the first pair of perfect powers.",
+			"order":1
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"8",
+			"note":"8 and 9 are the closest pair of perfect powers.",
+			"order":2
+		},
+		{
+			"expect":"15",
+			"id":0,
+			"input":"10",
+			"note":"No pair of perfect powers is present in the interval.",
+			"order":3
+		},
+		{
+			"expect":"1000000000000000000",
+			"id":0,
+			"input":"1",
+			"note":"This is the largest possible range, and 8 and 9 are the closest pair of perfect powers.",
+			"order":4
+		},
+		{
+			"expect":"90000",
+			"id":0,
+			"input":"80000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will be between 1 and 10^18, inclusive."
+		},
+		{
+			"order":2,
+			"val":"B will be between A+1 and 10^18, inclusive."
+		}
+	]
+}

@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=76&rd=3004",
+	"statement":"<pre>Class Name: StringCompressor\nMethod Name: compress\nParameters: String\nReturns: String\n\nImplement a class StringCompressor, which contains a method compress.  The\nmethod takes a String as a parameter and replaces all successively duplicated\nletters in the String with a number that is the number of duplications followed\nby the repeated character.  The method returns this resulting String.\n\nThe method signature is (be sure your method is public):\nString compress(String toCompress)\n\nTopCoder will ensure the following:\n- toCompress is a String of at most 100 letters.  Each character is a lowercase\nor capital letter ('a' - 'z' or 'A' - 'Z').\n\nNote:\n-This compressor is case sensative.  'A' is a different character than 'a'.\n-Single letters (its neighbors are not duplicates of itself) are left alone.\n\nExamples:\n&quot;AAAABBBBCDDDDDD&quot; compresses to &quot;4A4BC6D&quot;\n&quot;SDFJaAAAAaaaass&quot; compresses to &quot;SDFJa4A4a2s&quot;\n&quot;AAAAAAAAAAAf&quot; compresses to &quot;11Af&quot;</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StringCompressor",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"compress",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String compress(String param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

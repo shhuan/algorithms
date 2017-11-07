@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10699&rd=13909",
+	"statement":"In <i>Japanese Chess</i>, there is a piece called <i>Silver</i>. A <i>Silver</i> piece located in cell (x,y) can move to any of the following cells in one step: (x-1,y+1), (x,y+1), (x+1,y+1), (x-1,y-1), (x+1,y-1). In other words, it can move one cell in any of the four diagonal directions, or it can move one cell vertically in the positive y direction. <br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/SilverDistance/pic11.jpg\" /> <br /><br /> <br /><br /> Initially, there's a <i>Silver</i> piece in cell (<b>sx</b>,<b>sy</b>) of an infinitely large board. Return the minimal number of steps required to move to cell (<b>gx</b>,<b>gy</b>).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SilverDistance",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minSteps",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minSteps(int sx, int sy, int gx, int gy)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1",
+			"note":"Move up vertically in the positive y direction 9 times.",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"Follow the path : (0,0) -> (-1,1) -> (-1,2) -> (-2,3) -> (-3,2) -> (-4,3)",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"Move up vertically in the postive y direction 3 times, then move diagonally up and to the right 5 times.",
+			"order":3
+		},
+		{
+			"expect":"826524",
+			"id":0,
+			"input":"-487617",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"31475",
+			"id":0,
+			"input":"-27857",
+			"note":"The  is already in the goal.",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"sx, sy, gx and gy will each be between -1,000,000 and 1,000,000 inclusive."
+	}]
+}

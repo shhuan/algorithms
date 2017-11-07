@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":194.46,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12787&rd=15808",
+			"name":"RabbitsAndCakes",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":311.38,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12612&rd=15808",
+			"name":"TheGameDAG",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":573.79,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12786&rd=15808",
+			"name":"GameWithTree",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"2013 TCO Algorithm > Semifinal 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15808"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.29,
+			"constraints":[],
+			"correctRatio":78.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10154&rd=13694",
+			"name":"LampsGrid",
+			"notes":[],
+			"submission":478
+		},
+		{
+			"avgPts":248.18,
+			"constraints":[],
+			"correctRatio":25.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10153&rd=13694",
+			"name":"GroupedWord",
+			"notes":[],
+			"submission":345
+		},
+		{
+			"avgPts":548.05,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10178&rd=13694",
+			"name":"BuildersCountry",
+			"notes":[],
+			"submission":42
+		}
+	],
+	"name":"Single Round Match 432 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13694"
+}

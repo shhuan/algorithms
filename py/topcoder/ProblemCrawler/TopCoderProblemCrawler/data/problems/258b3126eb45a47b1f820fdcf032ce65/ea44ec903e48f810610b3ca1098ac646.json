@@ -1,0 +1,114 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8060&rd=10778",
+	"statement":"<p> For his birthday, Bart received the brand new video game &quot;Paintball!&quot;. In this game, a person plays on teams over the Internet against various competitors, attempting to hit their opponents with paint balls. Each player earns a point each time that they &quot;splatter&quot; an opponent with a paintball, and lose a point for each time they get &quot;splattered&quot;. Due to the way that the game is played, it is also possible to accidentally splatter yourself or a teammate. In that case, the shooter loses a point, and the person who was splattered (if not the shooter) does not lose any points. A team's score is simply the sum of the scores of its players. </p><p> Although Bart loves the game, he is disappointed that the game does not provide a leaderboard during gameplay. However, it does provide the list of <b>players</b>, formatted as &quot;NAME TEAM&quot; (where NAME is the player's name, and TEAM is his team), and a series of <b>messages</b>, each formatted as &quot;NAME1 SPLATTERED NAME2&quot; (all quotes for clarity), where NAME1 indicates the name of the person who shot the paintball, and NAME2 indicates the name of the person who got splattered. Bart would like to have an updated scoreboard, and that is where you come in. </p><p> All teams will receive a rank number from 1 to M (the total number of teams), based on the team scores (with 1 corresponding to the highest score). If multiple teams have the same score, then the team with the name that comes first alphabetically will receive a lower rank number. For each team (in order from 1 to M), its leaderboard entry will be formatted as follows: </p>\n <ol> \n  <li>The first line will be &quot;TEAM SCORE&quot; (quotes for clarity), where TEAM is the team name, and SCORE is the team score (with no extra leading zeroes).</li> \n  <li>Let N be the number of players on the team. Assign rank numbers to the N players from 1 to N, giving a lower rank number to a higher score. If multiple players have the same score, assign the player whose name comes first alphabetically to the lower rank number.</li> \n  <li>From the player with rank 1 to rank N, output a line with 2 spaces, the player's name, a single space, and then the player's score (with no extra leading zeroes).</li> \n </ol> Thus, if player A from team RED splatters player B from team BLUE (and they are the only players in the game), the leaderboard will be: <p></p><pre>\nRED 1\n  A 1\nBLUE -1\n  B -1\n</pre><p> You are to generate the leaderboard and return it. </p>",
+	"notes":[{
+		"order":1,
+		"val":"A SCORE of 0 should be output as 0, not as -0."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Paintball",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getLeaderboard",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getLeaderboard(String[] players, String[] messages)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"A SPLATTERED B\"}",
+			"id":0,
+			"input":"{\"A RED\", \"B BLUE\"}",
+			"note":"The example from the statement.",
+			"order":1
+		},
+		{
+			"expect":"{\"MAGGIE SPLATTERED HOMER\", \"MAGGIE SPLATTERED MARGE\"}",
+			"id":0,
+			"input":"{\"LISA RED\", \"BART RED\", \"HOMER BLUE\", \"MARGE BLUE\", \"MAGGIE GREEN\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{\"BART SPLATTERED MARTIN\",\"TODD SPLATTERED MARTIN\"}",
+			"id":0,
+			"input":"{\"TODD STRIKEFORCE\", \"BART OMEGA\", \"DATA STRIKEFORCE\", \"MILHOUSE OMEGA\", \"NELSON DISCOVERYCHANNEL\", \"MARTIN DISCOVERYCHANNEL\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"DR SPLATTERED ST\", \"ST SPLATTERED PE\"}",
+			"id":0,
+			"input":"{\"DR COHO\", \"ST COHO\", \"PE COHO\"}",
+			"note":"Don't shoot your teammates!",
+			"order":4
+		},
+		{
+			"expect":"{\"A SPLATTERED AAA\", \"A SPLATTERED AAA\", \"A SPLATTERED AAA\", \"AA SPLATTERED AAA\", \"AA SPLATTERED AAA\"}",
+			"id":0,
+			"input":"{\"A B\", \"AA AA\", \"AAA AAA\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"players will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of players will contain between 3 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of players will be formatted as &quot;NAME TEAM&quot; (quotes for clarity)."
+		},
+		{
+			"order":4,
+			"val":"In each element of players, NAME will consist of uppercase characters ('A'-'Z') and will contain at least 1 character."
+		},
+		{
+			"order":5,
+			"val":"There will be no duplicate NAMEs in players."
+		},
+		{
+			"order":6,
+			"val":"In each element of players, TEAM will consist of uppercase characters ('A'-'Z') and will contain at least 1 character."
+		},
+		{
+			"order":7,
+			"val":"messages will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Each element of messages will contain between 14 and 50 characters, inclusive."
+		},
+		{
+			"order":9,
+			"val":"Each element of messages will be formatted as described in the problem statement."
+		},
+		{
+			"order":10,
+			"val":"In each element of messages, NAME1 and NAME2 will be NAMEs found in players."
+		}
+	]
+}

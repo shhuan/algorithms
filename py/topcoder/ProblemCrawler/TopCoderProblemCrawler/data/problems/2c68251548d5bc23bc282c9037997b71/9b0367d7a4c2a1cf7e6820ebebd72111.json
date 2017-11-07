@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13323&rd=16075",
+	"statement":"<p> Alice is going to host a competition in running, called the Candy Cup. Candy Cup will take place in a city that consists of <b>N</b> intersections. The intersections are numbered 0 through <b>N</b>-1. </p> <br /><br /> <p> There are M roads in the city. The roads are numbered 0 through M-1. Each road is bidirectional and connects two intersections. There are no self-loops. Each pair of intersections is directly connected by at most one road. Note that the road network is <i>not</i> guaranteed to be connected. (That is, it may be impossible to travel between some pairs of intersections.) </p> <br /><br /> <p> You are given the description of the city: the int <b>N</b> and two int[]s <b>A</b> and <b>B</b>, each with M elements. For each valid i, the road number i connects the intersections <b>A</b>[i] and <b>B</b>[i]. </p> <br /><br /> <p> As a preparation for the Candy Cup, Alice has placed some candies into the middle of each road. For each i, she placed exactly 3^i (three to the power of i) candies into the middle of road i. </p> <br /><br /> <p> The rules of Candy Cup are really simple. Each participant starts at the intersection 0 and must reach intersection <b>N</b>-1 by following some roads. Additionally, each time a participant takes a road, they must pick up a candy from that road. (Once there are no candies left on a road, participants in the race are not allowed to take that road.) Note that different participants may use a different number of roads to reach the finish. </p> <br /><br /> <p> Let F be the largest possible number of participants that can finish Candy Cup by reaching the finish in a valid way. Return the value (F modulo 1,000,000,007). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CandyCupRunningCompetition",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findMaximum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int findMaximum(int N, int[] A, int[] B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,1}",
+			"id":0,
+			"input":"3",
+			"note":"The only finisher will take the route 0-1-2. Afterwards, there are no candies left on road 0.",
+			"order":1
+		},
+		{
+			"expect":"{0,1,0,2}",
+			"id":0,
+			"input":"4",
+			"note":"One participant will take the route 0-1-3 and nine more will take the route 0-2-3.",
+			"order":2
+		},
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{1,1,2,0,4,3,0,1,4}",
+			"id":0,
+			"input":"6",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 2 and 2000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A and B will contain between 0 and 2,000 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"A and B will each contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of A and B will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"No two roads will connect the same pair of intersections."
+		},
+		{
+			"order":6,
+			"val":"For each valid i, A[i] will be different from B[i]."
+		}
+	]
+}

@@ -1,0 +1,121 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8249&rd=10936",
+	"statement":"<p> A polyline is a sequence of line segments such that each segment starts at the point where the previous segment ended. </p> <p> If two polylines have a common point, we say that they belong to the same picture. The common point does not have to be an endpoint of a line segment. </p> <p> Your method will be given a String[] <b>polylines</b>. Concatenate the elements of <b>polylines</b> to get a space-separated list of polyline descriptions. Each polyline description consists of one or more point descriptions, separated by single dashes ('<tt>-</tt>'). Each point is described by its two non-negative integer coordinates, separated by a comma ('<tt>,</tt>'). </p> <p> Return the number of pictures in the union of all the given polylines. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"The point sequence that defines a polyline may contain the same point more than once, and even consecutive points are allowed to be equal."
+		},
+		{
+			"order":2,
+			"val":"A polyline may be just a single point."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PolylineUnion",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countComponents",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countComponents(String[] polylines)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"0,0-10,10 0,10-10,0\"}",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"0,0-10,5 5,0-15,5-10,10-5,5\"}",
+			"note":" ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"1\",\"3,0-5,5 4,0-4,20\"}",
+			"note":"Note that you first have to concatenate the elements of  and only then parse the resulting string.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"10,0-10,1-9,2-9,3-8,4 \",\"8,2-9,2-10,3 \",\"12,2-11,2-9,1\"}",
+			"note":" ",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"0,0-10,0-0,0 20,0-8,0-20,0\"}",
+			"note":"The union of these two polylines is the line segment .",
+			"order":5
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"1,1 2,2 3,3 4,4 3,3-4,4\"}",
+			"note":"A single point is a special case of a polyline.",
+			"order":6
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"10,10-20,10 20,10-15,18 15,18-10,10\"}",
+			"note":"A triangle.",
+			"order":7
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"1,1 1,1\"}",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"polylines will have the format described in the problem statement."
+		},
+		{
+			"order":2,
+			"val":"polylines will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each of the elements in polylines will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each coordinate of each point specified in polylines will be between 0 and 10000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"The point coordinates in polylines will not contain unnecessary leading zeros."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":227.96,
+			"constraints":[],
+			"correctRatio":99.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8114&rd=10889",
+			"name":"ComplementaryDNAChains",
+			"notes":[],
+			"submission":447
+		},
+		{
+			"avgPts":325.07,
+			"constraints":[],
+			"correctRatio":76.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8099&rd=10889",
+			"name":"ColorApproximation",
+			"notes":[],
+			"submission":152
+		},
+		{
+			"avgPts":632.82,
+			"constraints":[],
+			"correctRatio":69.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8023&rd=10889",
+			"name":"VectorMatching",
+			"notes":[],
+			"submission":63
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Qualification Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10889"
+}

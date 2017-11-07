@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1779&rd=4575",
+	"statement":"Checking to to see if a player enters a valid cheat code in a game is not just a simple matter of checking that the keypresses exactly line up with the cheat code. It is possible that the player may hold down one key a little too long and consequently it is read as two or more key presses. Ignoring repeated key presses isn't an option either however, because a cheat code may require a key to be used repeatedly. Also, the player may press any number of keys before or after entering the cheat code. <br /><br /><br /><br /> You will be given a String <b>keyPresses</b> which will contain the keys the player pressed. Each character in <b>keyPresses</b> will correspond to one key pressed by the player. The order of characters in <b>keyPresses</b> is the order in which the keys were entered. You will also be given a String[] <b>codes</b>. Each String in <b>codes</b> will be one possible valid cheat code. You are to create a class CheatCode with a method matches which will return a sorted int[] containing the indexes of all codes in <b>codes</b> which potentially match what the player entered. A cheat code matches <b>keyPresses</b> if some substring of <b>keyPresses</b> is the same as the cheat code, except that it may have more than one of the same character, where only one was expected. So, if <b>keyPresses</b> where &quot;ABBCC&quot;, it would match the cheat codes &quot;ABC&quot;, &quot;BB&quot; and &quot;BC&quot; (and others), but not &quot;ABBB&quot; or &quot;BBCCD&quot;. <br /><br /><br /><br /> For example, if <b>keyPresses</b> is &quot;UUDDLRRLLRBASS&quot; (quotes for clarity) and <b>codes</b> is <pre>\n{ &quot;UUDDLRLRBA&quot;,\n  &quot;UUDUDLRLRABABSS&quot;,\n  &quot;DDUURLRLAB&quot;,\n  &quot;UUDDLRLRBASS&quot;,\n  &quot;UDLRRLLRBASS&quot; }</pre> The code &quot;UUDDLRLRBA&quot; matches because the player may enter extra keys after the code has been entered. Also notice that although there is an extra 'R' and 'L' in the middle of <b>keyPresses</b>, the code still matches because the computer may have accidentally detected repeated keys while the player entering a code.<br /><br /> The code &quot;UUDUDLRLRABABSS&quot; stops matching at the 4th character, 'U'. The 2nd 'D' in <b>keyPresses</b> is allowed because the player may have held it down too long. However, the 'U' does not match the 'L', which is next in <b>keyPresses</b>.<br /><br /> The code &quot;DDUURLRLAB&quot; does not match. Remember though that the beginning of <b>keyPresses</b>, &quot;UU&quot;, is ignored here because the player may have done another move before entering the code. The &quot;DD&quot; at the beginning of the code does match with the first &quot;DD&quot; in <b>keyPresses</b>, however next in <b>keyPresses</b> is an 'L' which does not match the 'U' in the code.<br /><br /> The code &quot;UUDDLRLRBASS&quot; matches.<br /><br /> The code &quot;UDLRRLLRBASS&quot; also matches.<br /><br /><br /><br /> Your program would return <pre>{ 0,  3,  4 }</pre> for the 0th, 3rd, and 4th codes in <b>codes</b> which match <b>keyPresses</b>.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CheatCode",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"matches",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] matches(String keyPresses, String[] codes)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"UUDDLRLRBA\",\"UUDUDLRLRABABSS\",\"DDUURLRLAB\",\"UUDDLRLRBASS\",\"UDLRRLLRBASS\"}",
+			"id":0,
+			"input":"\"UUDDLRRLLRBASS\"",
+			"note":"This is the example from above.",
+			"order":1
+		},
+		{
+			"expect":"{\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\"}",
+			"id":0,
+			"input":"\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\"",
+			"note":"Watch your time!",
+			"order":2
+		},
+		{
+			"expect":"{\"FHHALL\", \"FHSHH\", \"IDBEHOLDA\", \"IDBEHOLDI\", \"IDBEHOLDL\", \"IDBEHOLDR\", \"IDBEHOLDS\", \"IDBEHOLDV\", \"IDCHOPPERS\", \"IDCLEV\", \"IDCLIP\", \"IDDQD\", \"IDDT\", \"IDFA\", \"IDKFA\", \"IDMYPOS\", \"IDMUS\"}",
+			"id":0,
+			"input":"\"IDDQDDTSFHHALL\"",
+			"order":3
+		},
+		{
+			"expect":"{\"ABCDE\", \"BCDEF\", \"CDEFG\", \"DEFGH\", \"EFGHI\", \"FGHIJ\", \"GHIJK\", \"HIJKL\", \"IJKLM\", \"JKLMN\", \"KLMNO\", \"LMNOP\", \"MNOPQ\", \"NOPQR\", \"OPQRS\", \"PQRST\", \"QRSTU\", \"RSTUV\", \"STUVW\", \"TUVWX\", \"UVWXY\", \"VWXYZ\", \"WXYZA\", \"XYZAB\", \"YZABC\", \"ZABCD\"}",
+			"id":0,
+			"input":"\"AABBCCDDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTUUVVWWXXYY\"",
+			"order":4
+		},
+		{
+			"expect":"{\"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHSS\", \"LAKJDGSJKGLSDKHFKDFHDGHSDKKSJDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKDFHDHHSDKKSJDHFHJGKDKLSLSLJKASSJ\", \"AKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHSJ\", \"LAJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSLJKHHSJ\", \"LAKDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDFHJGKDKLSLSLJKAHS\", \"KJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKDFHDHHSDKKSJDHFHJGKDKLLSLJKAHS\", \"LAKGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDGJKGLSDKHFKDFHDGHHDKKSJDHFHJGKDKLSLSLJKAHS\", \"LAKJDGJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKDFHGHHSDKKSJDHFHJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSL\", \"LAKJDGSJKGLSDKHFDFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLJKAHSJ\", \"LAKJDGSJKGLSDHFKDFHDGHHSDKKSJDHFHJGKDKLSLSJKAHS\", \"KGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSL\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJHFHJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKSJHFHJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKKLSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGDKLSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKSJHFHJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJKDKLSLSLJKAHSJ\", \"LKJDGSJKGLSDKHFKDFHDGHHSDKKJDHFHJGKDKLSLSLJKAHS\", \"AKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHS\", \"LAJDGSJKGLSDKHFKDFHDGHHSDKKSJDFHJGKDKLSLSLKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFGKDKLSLSLJKAHSJ\", \"LKJDGSJKLSDKHFKDFHDGHHSDKSJDHFHJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHHJGKDKLSLSLJKAHSJ\", \"AKJDGSJKGLSDKFKDFHDGHHSSJDHFJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDFHJGKDKLSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJHFHJGKDKLSLSLJKAHSJ\", \"LAKJDSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKKJDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKDFHDHHSDKKSJDHFHJGKDKLSLSLJKAHS\", \"LAKDGSJKGLSDKHFKDFHDGHHSDKSJDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDGSJKGLSDKHFKDFHDGHHSDKSJDHFHJGKDKLSLSLJKAS\", \"KJDGSJKGLSDKHFKDFHDGHSDKKSJDHFHJGKDKLSLSLJKAH\", \"LAKJDGSJKGLSDKHFKDFHDGHHDKKSJDHFHJGKDKLSLSLJKAHS\", \"LAKDGSJKGLSDKFHDGHHSDKSJDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDGSJKGLSKHFKDFHDHHSDKKSJDHFHJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHSKKSJDHFHJGKDKLSLSLJKAHSJ\", \"LAKJDGSJGLSDKHFKDFHDGHHSDKKSJDFHJGKDKLSLSLJKAHS\", \"LAKJDGSJKGLSDKHFKDFHDGHHDKKSJDHFHJGKDKLSLSLJKAHSJ\"} ",
+			"id":0,
+			"input":"\"LAKJDGSJKGLSDKHFKDFHDGHHSDKKSJDHFHJGKDKLSLSLJKAHSJ\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"keyPresses will be between 0 and 50 characters in length, inclusive."
+		},
+		{
+			"order":2,
+			"val":"keyPresses will only contain uppercase letters ('A'-'Z')."
+		},
+		{
+			"order":3,
+			"val":"codes will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each String in codes will be between 1 and 50 characters in length, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each String in codes will only contain uppercase letters ('A'-'Z')."
+		}
+	]
+}

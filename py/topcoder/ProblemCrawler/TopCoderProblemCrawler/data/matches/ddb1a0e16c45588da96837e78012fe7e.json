@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":163.38,
+			"constraints":[],
+			"correctRatio":59.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1525&rd=4472",
+			"name":"Champagne",
+			"notes":[],
+			"submission":168
+		},
+		{
+			"avgPts":347.73,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1524&rd=4472",
+			"name":"Marketing",
+			"notes":[],
+			"submission":99
+		},
+		{
+			"avgPts":635.07,
+			"constraints":[],
+			"correctRatio":46.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1526&rd=4472",
+			"name":"Macros",
+			"notes":[],
+			"submission":39
+		}
+	],
+	"name":"TopCoder Collegiate Challenge > Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4472"
+}

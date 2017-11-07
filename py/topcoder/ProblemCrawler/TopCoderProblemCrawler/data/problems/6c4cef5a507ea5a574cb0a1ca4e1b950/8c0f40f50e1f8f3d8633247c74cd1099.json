@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=77&rd=3005",
+	"statement":"<pre>Class Name: DayAge\nMethod Name: getDaysOld\nParameters: String, String\nReturns: int\n\nImplement a class DayAge which contains a method getDaysOld.  The method is\npassed, as Strings, someone's birth date and a current date  and returns the\nnumber of days old the person is, as an int.\n\nThe input Strings will be of form mm/dd/yyyy.\nm, d, and y represent digits (0 through 9).\nmm is between 01 and 12, inclusive.\ndd is between 01 and 31, inclusive.\nyyyy is between 1901 and 2001, inclusive.\n\nKeep in mind:\nThirty days has September, April, June and November; all the rest have\nthirty-one, but February twenty-eight alone except in leap year once in four\nwhen February has one day more.\nFrom 1901 to 2001, the leap years are 1904, 1908, ... 2000 (Every 4 years, no\nexceptions).\nThere are 365 days in a non-leap year, 366 in a leap year.\n\nAssume the time the person was born is noon and the time on the current day is\nnoon.\n\nHere is the method signature:\npublic int getDaysOld(String birthdate, String currdate);\n\nNotes:\n- Both Strings are of the form given above.  TopCoder will prevent improperly\nformatted input parameters from reaching your method.\n- Both dates exist (no february 30ths or anything) and the birthday is not\nafter the current day.  TopCoder will check this too.\n- If the birth date and current date are the same, the method should return 0.\n- The string &quot;Calendar&quot; cannot occur anywhere in your code.\n\nExamples:\nIf birthdate=&quot;10/10/1999&quot; and currdate=&quot;10/10/2000&quot;, the method returns 366.\nIf birthdate=&quot;02/03/1940&quot; and currdate=&quot;12/04/1999&quot;, the method returns 21854.</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DayAge",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getDaysOld",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getDaysOld(String param0, String param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

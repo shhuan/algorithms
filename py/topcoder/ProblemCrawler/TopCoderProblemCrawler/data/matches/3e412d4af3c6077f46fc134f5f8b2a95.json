@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":198.6,
+			"constraints":[],
+			"correctRatio":74.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9921&rd=13521",
+			"name":"BitwiseEquations",
+			"notes":[],
+			"submission":653
+		},
+		{
+			"avgPts":250.93,
+			"constraints":[],
+			"correctRatio":19.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10138&rd=13521",
+			"name":"TwinTowns",
+			"notes":[],
+			"submission":320
+		},
+		{
+			"avgPts":521.94,
+			"constraints":[],
+			"correctRatio":24.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9887&rd=13521",
+			"name":"PickingUp",
+			"notes":[],
+			"submission":62
+		}
+	],
+	"name":"Single Round Match 430 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13521"
+}

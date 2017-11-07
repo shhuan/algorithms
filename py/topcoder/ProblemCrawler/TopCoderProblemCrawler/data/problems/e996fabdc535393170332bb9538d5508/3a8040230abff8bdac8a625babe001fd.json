@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13092&rd=15848",
+	"statement":"Slow loris Guts is playing with N cards, numbered 0 through N-1. Each card has one of four colors: red, green, blue, or white. You are given the card colors as the String <b>C</b>. For each i, character i of <b>C</b> is one of 'R' (red), 'G' (green), 'B' (blue), and 'W' (white). <br /><br /><br /><br /> You are also given an int <b>M</b>. <br /><br /><br /><br /> Guts wants to color each white card red, green, or blue in such a way that the number of cards <i>not</i> colored blue is exactly 2*D*<b>M</b> for some non-negative integer D. Additionally, there must be exactly <b>M</b> sequences of integers S_0 through S_{<b>M</b>-1} with the following properties: <br /><br /> \n <ul> \n  <li>For each i, the sequence S_i contains exactly 2*D integers, each of them between 0 and <b>N</b>-1, inclusive.</li> \n  <li>For each i, the sequence S_i is strictly increasing. That is, S_i[0] &lt; S_i[1] &lt; ... &lt; S_i[2*D-1].</li> \n  <li>For each i and each even j, the card S_i[j] is red.</li> \n  <li>For each i and each odd j, the card S_i[j] is green.</li> \n  <li>No two sequences share a common element. Hence, for each index x of a non-blue card there is precisely one pair (i,j) such that S_i[j]=x.</li> \n </ul> Return the number of valid ways to color all white cards, modulo 1,000,000,007.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AlternativePiles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(String C, int M)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"\"WRGWWRGW\"",
+			"note":"There are three valid colorings: \"RRGRGRGG\", \"RRGGRRGG\", and \"BRGBBRGB\".  For \"RRGRGRGG\", we have D=2 and one possibility is to select S_0 = {0,2,3,7} and S_1 = {1,4,5,6}.  For \"BRGBBRGB\", we have D=1 and to show that this is a valid coloring we let S_0 = {5,6} and S_1 = {1,2}.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"\"RRGG\"",
+			"note":"There is no valid way.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"\"BBBB\"",
+			"note":"Note that D can be zero. Also, note that even though there are no white cards in this test case, there is a valid way to color all white cards: we do nothing and keep the colors we currently have.",
+			"order":3
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"\"WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW\"",
+			"note":"Do not forget to calculate the answer modulo 10^9 + 7.",
+			"order":4
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"\"WRWRGWWGWWWRWBWRWGWWRWBWWRGWBWGRGWWGWGRWGRWBRWBW\"",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"C will contain between 1 and 5,000 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of C will be 'R', 'G', 'B' or 'W'."
+		},
+		{
+			"order":3,
+			"val":"M will be between 1 and 50, inclusive."
+		}
+	]
+}

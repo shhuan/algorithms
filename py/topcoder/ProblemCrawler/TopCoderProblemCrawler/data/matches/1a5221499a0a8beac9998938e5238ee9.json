@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":141.05,
+			"constraints":[],
+			"correctRatio":83.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3054&rd=5882",
+			"name":"Hex",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":245.32,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3038&rd=5882",
+			"name":"BioScore",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=838&rd=5882",
+			"name":"Robbery",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2004 TCO > Semifinal Room 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5882"
+}

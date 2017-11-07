@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11581&rd=14547",
+	"statement":"You are given a int[] <b>y</b> of length N. The values in <b>y</b> describe N points in the plane: for each x = 0, 1, ..., N - 1 there is a point at coordinates (x, <b>y</b>[x]). <br /><br /><br /><br /> Krolik is going to perform the following operation repeatedly: \n <ol> \n  <li>Choose two of the remaining (i.e. not yet erased) points, say A and B, with different y-coordinates. </li> \n  <li>Consider the rectangle with sides parallel to coordinate axes and points A and B in two opposite corners. </li> \n  <li>Erase all points strictly inside the rectangle. </li> \n </ol> In each iteration, Krolik must choose A and B in such a way that at least one point is erased. If no more operations can be performed, Krolik will count the number of remaining points and write it into a notebook. Return a int[] containing all possible values of the number Krolik can write down, in ascending order. ",
+	"notes":[{
+		"order":1,
+		"val":"A point is  a rectangle if it is inside the rectangle and does not lie on the border of the rectangle. "
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PointErasing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getOutcomes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getOutcomes(int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {4, 6 }",
+			"id":0,
+			"input":"{ 1, 2, 1, 1, 0, 4, 3 }",
+			"note":"Krolik will end with 4 points if Krolik takes the following steps:  If Krolik first chooses (0, 1) and (5, 4) to erase (1, 2), 6 points remain and there are no valid moves left.     ",
+			"order":1
+		},
+		{
+			"expect":"Returns: {6 }",
+			"id":0,
+			"input":"{ 0, 0, 4, 4, 8, 8, 4, 4 }",
+			"order":2
+		},
+		{
+			"expect":"Returns: {1 }",
+			"id":0,
+			"input":"{ 522 }",
+			"order":3
+		},
+		{
+			"expect":"Returns: {6 }",
+			"id":0,
+			"input":"{ 19, 19, 19, 19, 19, 19 }",
+			"order":4
+		},
+		{
+			"expect":"Returns: {2 }",
+			"id":0,
+			"input":"{ 0, 1, 2, 3, 4 }",
+			"order":5
+		},
+		{
+			"expect":"Returns: {3, 4, 5 }",
+			"id":0,
+			"input":"{ 7, 8, 8, 7, 6, 7, 9, 3, 5, 0 }",
+			"order":6
+		},
+		{
+			"expect":"Returns: {4, 5, 6, 7, 9 }",
+			"id":0,
+			"input":"{ 3, 2, 3, 3, 4, 3, 4, 3, 3, 1, 5, 3 }",
+			"order":7
+		},
+		{
+			"expect":"Returns: {6, 7, 8, 10, 11, 12, 13, 15, 16, 17 }",
+			"id":0,
+			"input":"{ 5, 5, 4, 4, 5, 8, 5, 5, 5, 5, 5, 9, 2, 0, 9, 4, 5, 5, 3, 4, 4, 4, 4, 7, 4 }",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"y will contain between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each element of y will be between 0 and 1,000,000,000, inclusive. "
+		}
+	]
+}

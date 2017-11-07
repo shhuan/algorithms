@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=210&rd=54",
+	"statement":"<pre>THIS PROBLEM WAS TAKEN FROM THE SEMIFINALS OF THE TOPCODER INVITATIONAL\nTOURNAMENT\n\nDEFINITION\nClass Name: MatchMaker\nMethod Name: getBestMatches\nParamaters: String[], String, int\nReturns: String[]\nMethod signature (be sure your method is public):  String[]\ngetBestMatches(String[] members, String currentUser, int sf);\n\nPROBLEM STATEMENT\nA new online match making company needs some software to help find the &quot;perfect\ncouples&quot;.  People who sign up answer a series of multiple-choice questions.\nThen, when a member makes a &quot;Get Best Mates&quot; request, the software returns a\nlist of users whose gender matches the requested gender and whose answers to\nthe questions were equal to or greater than a similarity factor when compared\nto the user's answers.\n\nImplement a class MatchMaker, which contains a method getBestMatches.  The\nmethod takes as parameters a String[] members, String currentUser, and an int\nsf:\n- members contains information about all the members.  Elements of members are\nof the form &quot;NAME G D X X X X X X X X X X&quot; \n   * NAME represents the member's name\n   * G represents the gender of the current user. \n   * D represents the requested gender of the potential mate. \n* Each X indicates the member's answer to one of the multiple-choice\nquestions.  The first X is the answer to the first question, the second is the\nanswer to the second question, et cetera. \n- currentUser is the name of the user who made the &quot;Get Best Mates&quot; request.  \n- sf is an integer representing the similarity factor.\n\nThe method returns a String[] consisting of members' names who have at least sf\nidentical answers to currentUser and are of the requested gender.  The names\nshould be returned in order from most identical answers to least.  If two\nmembers have the same number of identical answers as the currentUser, the names\nshould be returned in the same relative order they were inputted.\n\nTopCoder will ensure the validity of the inputs.  Inputs are valid if all of\nthe following criteria are met:\n- members will have between 1 and 50 elements, inclusive.\n- Each element of members will have a length between 7 and 44, inclusive.\n- NAME will have a length between 1 and 20, inclusive, and only contain\nuppercase letters A-Z.\n- G can be either an uppercase M or an uppercase F.\n- D can be either an uppercase M or an uppercase F.\n- Each X is a capital letter (A-D).\n- The number of Xs in each element of the members is equal.  The number of Xs\nwill be between 1 and 10, inclusive. \n- No two elements will have the same NAME.\n- Names are case sensitive.\n- currentUser consists of between 1 and 20, inclusive, uppercase letters, A-Z,\nand must be a member.\n- sf is an int between 1 and 10, inclusive.\n- sf must be less than or equal to the number of answers (Xs) of the members.\n\nNOTES\nThe currentUser should not be included in the returned list of potential mates.\n\n\nEXAMPLES\n\nFor the following examples, assume members =\n{&quot;BETTY F M A A C C&quot;,\n &quot;TOM M F A D C A&quot;,\n &quot;SUE F M D D D D&quot;,\n &quot;ELLEN F M A A C A&quot;,\n &quot;JOE M F A A C A&quot;,\n &quot;ED M F A D D A&quot;,\n &quot;SALLY F M C D A B&quot;,\n &quot;MARGE F M A A C C&quot;}\n\nIf currentUser=&quot;BETTY&quot; and sf=2, BETTY and TOM have two identical answers and\nBETTY and JOE have three identical answers, so the method should return\n{&quot;JOE&quot;,&quot;TOM&quot;}.\n\nIf currentUser=&quot;JOE&quot; and sf=1, the method should return\n{&quot;ELLEN&quot;,&quot;BETTY&quot;,&quot;MARGE&quot;}.\n\nIf currentUser=&quot;MARGE&quot; and sf=4, the method should return [].\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MatchMaker",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getBestMatches",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getBestMatches(String[] param0, String param1, int param2)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

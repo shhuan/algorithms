@@ -1,0 +1,110 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2287&rd=4710",
+	"statement":"A Randomized Finite Automaton (RFA) works as follows. The RFA maintains a variable, called its <i>state</i>, which is initially set to 0. When an input character ('a', 'b', or 'c') is fed into the RFA, it must determine which new value is to be assigned to its state. This determining process is governed by a list of rules stored in the RFA. For example, if the RFA is in state 2 and has received an 'a' as input, the RFA would consult element 2 of <b>rulesa</b>. Each element of <b>rulesa</b> is of the form &quot;st:prob st:prob ...&quot;, where st denotes a value to be assigned to the state variable, and prob denotes the percentage (out of 100) of such an assignment occurring. If the given probabilities do not add up to 100, the remaining probability is the chance of changing state to 999. If a state (not 999) is missing from a rule, then its prob is assumed to be 0. Once state is 999, regardless of future input, it remains on 999. The machine has analogously defined <b>rulesb</b>, and <b>rulesc</b> defining what to do on 'b' or 'c' accordingly.<br /><br /> <br /><br /> When processing an input string, each character is processed in order, left to right, one at a time. Assuming all input strings of length <b>maxLength</b> or fewer (including the string of length 0) are equally likely, return the probability the RFA will be on state <b>finalState</b> once the string is completely processed. The probability returned will be a double, between 0 and 1 inclusive. Results must be accurate to 1e-9.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RandomFA",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getProbability(String[] rulesa, String[] rulesb, String[] rulesc, int finalState, int maxLength)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"\"}",
+			"id":0,
+			"input":"{\"0:100\"}",
+			"note":"The 4 strings that need to be considered are (quotes for clarity) \"\", \"a\", \"b\", and \"c\". Of those 4, the first 2 will end up on state 0, while the latter 2 will end up on state 999. 2 out of 4 produces a probability of .5 .",
+			"order":1
+		},
+		{
+			"expect":"{\"1:100\",\"0:100\"}",
+			"id":0,
+			"input":"{\"1:100\",\"0:100\"}",
+			"note":"Here all even length strings will result in state 0, and odd length strings will result in state 1. Of the 40 strings considered, 1 has length 0, 3 have length 1, 9 have length 2, and 27 have length 3. Thus 30/40=.75 of them have odd length.",
+			"order":2
+		},
+		{
+			"expect":"{\"\",\"\",\"\",\"\",\"\"}",
+			"id":0,
+			"input":"{\"1:25 2:25 3:25 4:25\",\"0:100\",\"0:100\",\"0:100\",\"0:100\"}",
+			"note":"All strings that contain a 'b', or 'c' are sent to 999. The strings containing only 'a's begin on state 0, and are evenly distributed between states 1,2,3 and 4 after the first 'a'. After the second 'a' they are all returned to state 0. Examining this pattern, we see that strings that end on state 3 must contain only 'a's and have odd length. Of those, only a quarter of them actually make it to state 3. There are 3 strings consisting of only 'a's that have odd lengths less than or equal 5. This makes 3 out of the total 364 strings. The returned probability is thus 3/364*.25 = .0021 approx.",
+			"order":3
+		},
+		{
+			"expect":"{\"\",\"\",\"\",\"\",\"\"}",
+			"id":0,
+			"input":"{\"1:25 2:25 3:25 4:25\",\"0:100\",\"0:100\",\"0:100\",\"0:100\"}",
+			"note":"The same problem as before, but now we want the strings that will end on 999. This will be any string of positive length that has a 'b' or 'c'. There are 358 of these, resulting in a probability of 358/364 = .984 approx. ",
+			"order":4
+		},
+		{
+			"expect":"{\"0:10 4:7 5:1\",\"0:10 4:7 5:1\",\"0:10 4:7 5:1\", \"0:10 4:7 5:1\",\"0:10 4:7 5:1\",\"3:79 2:10\"}",
+			"id":0,
+			"input":"{\"2:9 0:7 3:4 1:2 5:35\",\"2:9 0:7 3:4 1:2 5:35\", \"2:9 0:7 3:4 1:2 5:35\",\"2:9 0:7 3:4 1:2 5:35\", \"2:9 0:7 3:4 1:2 5:35\",\"2:9 0:7 3:4 1:2 5:35\"}",
+			"note":"A more complex example.",
+			"order":5
+		},
+		{
+			"expect":"{\"0:10 4:7 5:1\",\"0:10 4:7 5:1\",\"0:10 4:7 5:1\", \"0:10 4:7 5:1\",\"0:10 4:7 5:1\",\"3:79 2:10\"}",
+			"id":0,
+			"input":"{\"2:9 0:7 3:4 1:2 5:35\",\"2:9 0:7 3:4 1:2 5:35\", \"2:9 0:7 3:4 1:2 5:35\",\"2:9 0:7 3:4 1:2 5:35\", \"2:9 0:7 3:4 1:2 5:35\",\"2:9 0:7 3:4 1:2 5:35\"}",
+			"note":"Same as before, but only the empty string is considered.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rulesa will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"rulesa, rulesb, and rulesc all contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of rulesa, rulesb, and rulesc contain between 0 and 50 characters inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of rulesa, rulesb, and rulesc is a single space delimited list of pairs. Each pair is of the form (quotes for clarity) &quot;st:prob&quot; where,st is an integer, with no extra leading zeros, between 0 and (size of rulesa-1) inclusive, andprob is a positive integer, with no leading zeros."
+		},
+		{
+			"order":5,
+			"val":"The prob values in a single element of rulesa, rulesb, or rulesc will sum up to a value between 0 and 100 inclusive."
+		},
+		{
+			"order":6,
+			"val":"No 2 pairs in a single element of rulesa, rulesb, or rulesc will have the same st value."
+		},
+		{
+			"order":7,
+			"val":"finalState will be between 0 and (size of rulesa-1) inclusive, or 999."
+		},
+		{
+			"order":8,
+			"val":"maxLength will be between 0 and 10 inclusive."
+		}
+	]
+}

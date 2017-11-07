@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=111&rd=3014",
+	"statement":"<pre>Class Name:  NucleotideShift\nMethod Name: findMinimumShifts\nParameters: String,String\nReturns: int\n\nA scientist has a strand of DNA and wants to obtain a certain sequence of acids\nby shifting as few nucleotides on the strand of DNA as possible.  The scientist\nhas discovered a method to shift individual nucleotides on a strand of DNA.\nThe nucleotides thymine (T), cytosine (C), guanine (G), and adenine (A) can be\nshifted as follows: T can shift to C, C to G, G to A, and A to T.  (Example: To\nshift from T to A takes 3 shifts.)  The scientist can also discard nucleotides\noff either or both of the ends of the original string to shorten the length of\nthe DNA strand.  Discarding nucleotides is &quot;free&quot; and does not count as a\nnucleotide shift.\n\nThe scientist wants to take the original DNA and change it to the target\nsequence of acids.  Nucleotides map to acids in a 3 to 1 ratio (3 nucleotides =\n1 acid).  Each set of 3 nucleotides (from left to right in a DNA strand)\ncorresponds to an acid.  The mapping is done by considering each set of three\nnucleotides as a three digit base-4 number with values T = 0, C = 1, A = 2, G =\n3 and referencing the universal genetic code string.  The acid (letter) at the\nindex specified by the base-4 number is the acid the three nucleotides\ncorrespond to.  \n\nHere is the universal genetic code:\nugc = FFLLSSSSYY..CC.WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG\n\nExample: TCT = 010(base 4) = 4 = ugc.charAt(4) = 'S'\n\nHere is the method signature:\nint findMinimumShifts(String original, String target)\n\nINPUT:\n\noriginal is a string containing only the characters 'T', 'C', 'G', 'A' and\ncontains between 1 and 50 letters, inclusive.\n\ntarget is a string containing only the characters 'F', 'L', 'S', 'Y', '.', 'C',\n'W', 'P', 'H', 'Q', 'R', 'I', 'M', 'T', 'N', 'K', 'V', 'A', 'D', 'E', and 'G'.\nIt is 20 or fewer letters long.\n\nThe applet will verify that the strings conform to these standards.\n\nOUTPUT:\n\nMinimum number of shifts to change the original strand of DNA to a strand of\nDNA that corresponds to the acids in the target.  If the target is not\nreachable, return -1.\n\nEXAMPLES:\n\noriginal = &quot;TTT&quot;, target = &quot;F&quot; will return 0 because the original string\nalready matches the desired acid sequence.\n\noriginal = &quot;TTTTTTTTT&quot;, target = &quot;FS&quot; will return 1 because we can, with one\nshift, get &quot;TTTTCT&quot; which is one of the possible strings which corresponds with\n&quot;FS&quot;.\n\noriginal = &quot;GA&quot;, target = &quot;.&quot; will return -1 because the target is not reachable.\n\noriginal = &quot;TTTTAT&quot;, target = &quot;L&quot; will return 0 because we can get &quot;TTA&quot; by\ndropping two characters from the front and one character from the rear of the\nstring.\n\noriginal = &quot;TAGCATGAGCATTTTCCCGGGAAA&quot;, target = &quot;WESTERN&quot; will return 19.\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NucleotideShift",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findMinimumShifts",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int findMinimumShifts(String param0, String param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

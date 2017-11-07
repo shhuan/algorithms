@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13707&rd=16432",
+	"statement":"<p>Hero is playing a game with tokens. There are N places for tokens. The places are numbered 1 through N. There are also N arrows, each pointing from some place to some place. No two arrows start at the same place. It is possible that multiple arrows point to the same place. Also, an arrow may start and end at the same place.</p> <p></p> <p>You are given the description of the game board: a int[] <b>a</b> with N elements. For each i between 1 and N, inclusive, the arrow that starts at the place i points to the place <b>a</b>[i-1].</p> <p></p> <p>At the beginning of the game, Hero will take an arbitrary number of tokens between 0 and N, inclusive, and he will place them onto distinct places. He will then play <b>K</b> rounds of the game. In each round each token moves from its current place along the arrow to the new place. After each round, Hero checks whether all tokens are still in distinct places. If two or more tokens are in the same place, Hero loses the game. Hero wins the game if he does not lose it during the <b>K</b> rounds he plays.</p> <p></p> <p>There may be multiple ways how Hero can win the game. Two ways are different if there is some i such that at the beginning of the game place i did contain a token in one case but not in the other. Count those ways and return their count modulo 1,000,000,007.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Autogame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"wayscnt",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int wayscnt(int[] a, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{1,2,3}",
+			"note":"There are 2^3 = 8 valid ways to place the tokens. In each round each token will stay in the same place. Hence, Hero will win the game for each initial placement of tokens.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{1,1,1}",
+			"note":"If Hero starts the game with two or three tokens, after the first round there will be multiple tokens in the same place (place 1) and Hero will lose the game. He will only win the game if he starts with 0 tokens (1 possibility) or with 1 token (3 possibilities).",
+			"order":2
+		},
+		{
+			"expect":"42",
+			"id":0,
+			"input":"{2,1} ",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{2,3,4,3}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{4,4,3,2,1}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a will contain exactly N elements."
+		},
+		{
+			"order":2,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element in a will be between 1 and N, inclusive."
+		},
+		{
+			"order":4,
+			"val":"K will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

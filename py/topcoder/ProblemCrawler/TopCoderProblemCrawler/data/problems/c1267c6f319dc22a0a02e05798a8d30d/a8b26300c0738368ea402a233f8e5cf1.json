@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9877&rd=13506",
+	"statement":"Some alien civilization has a quite strange language. Each word has length <b>wordLength</b> and consists of only 'A' and 'B' characters. Some sequences of A's and B's are forbidden (by ancient tradition), and do not appear as a substring of any valid word. Any word that does not contain a forbidden substring is valid. The set of forbidden substrings is given in the String[] <b>forbiddenSubstrings</b>. Each element of <b>forbiddenSubstrings</b> contains 'A', 'B' or '?' characters, where '?' means any single character. For example, if <b>forbiddenSubstrings</b> contains the element &quot;ABB?B&quot;, then both &quot;ABBAB&quot; and &quot;ABBBB&quot; are forbidden substrings. <br /><br /> The alien dictionary contains all valid alien words in alphabetical order. Each page of the dictionary contains exactly one word. Pages are numbered starting from 0. Given a int[] <b>wordNumbers</b>, return a String[] containing the same number of elements as <b>wordNumbers</b>, where the i-th element is the word written on page <b>wordNumbers</b>[i] of the dictionary or &quot;NO PAGE&quot; (quotes for clarity) if there is no such page in the dictionary.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AlienDictionary",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getWords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getWords(int wordLength, String[] forbiddenSubstrings, int[] wordNumbers)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"?AA\",\"ABB\"}",
+			"id":0,
+			"input":"5",
+			"note":"Invalid combinations are \"AAA\", \"BAA\" and \"ABB\".",
+			"order":1
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"3",
+			"note":"No invalid combinations.",
+			"order":2
+		},
+		{
+			"expect":"{\"AA\"}",
+			"id":0,
+			"input":"4",
+			"order":3
+		},
+		{
+			"expect":"{\"BABB?\",\"??A?B\",\"A?AAA\",\"A??AB\",\"?A??A\"}",
+			"id":0,
+			"input":"10",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"wordLength will be between 1 and 50, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"wordNumbers will contain between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":3,
+			"val":"Each element of wordNumbers will be between 0 and 1,000,000,000, inclusive. "
+		},
+		{
+			"order":4,
+			"val":"forbiddenSubstrings will contain between 0 and 50 elements, inclusive. "
+		},
+		{
+			"order":5,
+			"val":"Each element of forbiddenSubstrings will contain between 1 and 17 characters, inclusive. "
+		},
+		{
+			"order":6,
+			"val":"Each element of forbiddenSubstrings will contain only characters 'A', 'B' or '?'. "
+		},
+		{
+			"order":7,
+			"val":"All elements of forbiddenSubstrings will contain the same number of characters. "
+		}
+	]
+}

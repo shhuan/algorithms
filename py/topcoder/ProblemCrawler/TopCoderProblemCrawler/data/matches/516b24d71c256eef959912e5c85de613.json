@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":173.92,
+			"constraints":[],
+			"correctRatio":84.35,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11910&rd=14735",
+			"name":"EllysXors",
+			"notes":[],
+			"submission":767
+		},
+		{
+			"avgPts":278.04,
+			"constraints":[],
+			"correctRatio":44.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11912&rd=14735",
+			"name":"EllysRivers",
+			"notes":[],
+			"submission":250
+		},
+		{
+			"avgPts":521.3,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11904&rd=14735",
+			"name":"EllysDeathStars",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 543 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14735"
+}

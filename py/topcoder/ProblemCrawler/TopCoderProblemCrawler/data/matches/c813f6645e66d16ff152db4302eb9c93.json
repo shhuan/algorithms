@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":190.49,
+			"constraints":[],
+			"correctRatio":59.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=46&rd=2002",
+			"name":"Weekday",
+			"notes":[],
+			"submission":52
+		},
+		{
+			"avgPts":406.44,
+			"constraints":[],
+			"correctRatio":60.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=47&rd=2002",
+			"name":"WordFilter",
+			"notes":[],
+			"submission":53
+		},
+		{
+			"avgPts":485.6,
+			"constraints":[],
+			"correctRatio":41.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=48&rd=2002",
+			"name":"Matrix",
+			"notes":[],
+			"submission":12
+		}
+	],
+	"name":"Collegiate Challenge > Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=2002"
+}

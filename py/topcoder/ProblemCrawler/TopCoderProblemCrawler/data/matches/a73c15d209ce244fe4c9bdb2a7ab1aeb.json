@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.56,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2298&rd=5079",
+			"name":"WordPuzzle",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":403.39,
+			"constraints":[],
+			"correctRatio":60,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2258&rd=5079",
+			"name":"RussianDolls",
+			"notes":[],
+			"submission":5
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1974&rd=5079",
+			"name":"OpenBlackjack",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2004 TCCC > Wildcard Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5079"
+}

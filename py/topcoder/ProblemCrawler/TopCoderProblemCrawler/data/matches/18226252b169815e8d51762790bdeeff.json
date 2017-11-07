@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":180.4,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4709&rd=8057",
+			"name":"FloorTiling",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":284.07,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4635&rd=8057",
+			"name":"PartyGame",
+			"notes":[],
+			"submission":5
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2976&rd=8057",
+			"name":"Answer",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"2005 TCO > Sponsor Track Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8057"
+}

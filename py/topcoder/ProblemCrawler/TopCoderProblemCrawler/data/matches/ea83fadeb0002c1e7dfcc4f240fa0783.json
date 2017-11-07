@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":164.62,
+			"constraints":[],
+			"correctRatio":66.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11461&rd=14439",
+			"name":"TheAlmostLuckyNumbersDivOne",
+			"notes":[],
+			"submission":380
+		},
+		{
+			"avgPts":230.93,
+			"constraints":[],
+			"correctRatio":28.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11463&rd=14439",
+			"name":"TheLuckyGameDivOne",
+			"notes":[],
+			"submission":113
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11465&rd=14439",
+			"name":"TheLuckyBasesDivOne",
+			"notes":[],
+			"submission":7
+		}
+	],
+	"name":"Single Round Match 510 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14439"
+}

@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11120&rd=14285",
+	"statement":"<p>In a popular TV show, three teams, A, B and C, play some funny games. There are several different games that can be used for the show and for each of them we know beforehand the number of points each team will get. For the i-th game the number of points received by teams A, B and C will be <b>A</b>[i], <b>B</b>[i] and <b>C</b>[i], correspondingly.</p> <br /><br /> <p>The show consists of several games. A team's score is defined as the total number of points received in all games used for the show. The winner of the show is the team that has a strictly greater score than each of the other teams. The director wants to choose at least <b>k</b> games for the next show so that team A will be the winner. The order of the chosen games does not matter. Return the number of ways this is possible.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FunnyGames",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countWays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countWays(int[] A, int[] B, int[] C, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,1,1}",
+			"id":0,
+			"input":"{1,1,2}",
+			"note":"The set of chosen games can be {0,2}, {1,2} or {0,1,2}.",
+			"order":1
+		},
+		{
+			"expect":"{2,1,2}",
+			"id":0,
+			"input":"{1,2,2}",
+			"note":"The second and the third games should be chosen.",
+			"order":2
+		},
+		{
+			"expect":"{1,1,1,1}",
+			"id":0,
+			"input":"{1000000000,1,1,1}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{2,3,4,5}",
+			"id":0,
+			"input":"{2,3,4,5}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{2000,3000,1000,3000,1000,2000}",
+			"id":0,
+			"input":"{1000,2000,3000,1000,2000,3000}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will contain between 2 and 34 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A, B and C will all contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of A will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of B will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of C will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"k will be between 1 and min(7, number of elements in A), inclusive."
+		}
+	]
+}

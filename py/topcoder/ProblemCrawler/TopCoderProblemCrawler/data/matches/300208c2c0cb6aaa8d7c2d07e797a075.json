@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":190.88,
+			"constraints":[],
+			"correctRatio":89.02,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1360&rd=4447",
+			"name":"GoldConj",
+			"notes":[],
+			"submission":82
+		},
+		{
+			"avgPts":279.16,
+			"constraints":[],
+			"correctRatio":72.41,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1335&rd=4447",
+			"name":"Proleolytic",
+			"notes":[],
+			"submission":58
+		},
+		{
+			"avgPts":526.21,
+			"constraints":[],
+			"correctRatio":41.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1357&rd=4447",
+			"name":"GPS",
+			"notes":[],
+			"submission":17
+		}
+	],
+	"name":"Single Round Match 130 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4447"
+}

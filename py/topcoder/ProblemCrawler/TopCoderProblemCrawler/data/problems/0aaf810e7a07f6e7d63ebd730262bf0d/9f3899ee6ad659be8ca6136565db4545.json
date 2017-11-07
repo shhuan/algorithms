@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12789&rd=15712",
+	"statement":"<p><i>Note that the memory limit for all tasks in this SRM is 256 MB.</i></p> <p> You are given ints <b>A</b> and <b>B</b>. These determine a set of <b>A</b>*<b>B</b> lines in the plane: for each pair of integers (a,b) such that 0 &lt;= a &lt; <b>A</b> and 0 &lt;= b &lt; <b>B</b>, there is a line with the equation y=ax+b. </p> <p> These lines divide the plane into several regions. (Some of them are finite, some are infinite.) Compute and return the total number of regions. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Formally, the line with the equation y=ax+b is the set of all points (x,y) such that x is any real number and y=ax+b."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LotsOfLines",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countDivisions",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countDivisions(int A, int B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"There is only one line: y=0. This line divides the plane into two regions.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"There are four lines. The plane looks as follows.  ",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1200",
+			"id":0,
+			"input":"1",
+			"note":"There are 1,200 horizontal lines.",
+			"order":4
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will be between 1 and 1,200, inclusive."
+		},
+		{
+			"order":2,
+			"val":"B will be between 1 and 1,200, inclusive."
+		}
+	]
+}

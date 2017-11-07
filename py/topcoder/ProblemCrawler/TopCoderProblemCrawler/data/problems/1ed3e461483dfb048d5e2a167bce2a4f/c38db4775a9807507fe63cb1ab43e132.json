@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10927&rd=14278",
+	"statement":"<p> In this problem your goal is to convert a description of how a guitar chord is played to its name. For the purpose of this problem we will only consider major and minor chords. </p> <p> Musical notes are given the following 12 names, in ascending order: <br /><br /> C, C#, D, D#, E, F, F#, G, G#, A, A#, B. </p> <p> The difference between two succesive notes is called a half-step. The order of notes is cyclic. That is, the note one half-step higher than B is again C, and the note two half-steps lower than C is A#. Notes that are a multiple of 12 half-steps apart have the same name, and for our purposes we will consider them equivalent. </p> <p> In this problem we will consider a six-string guitar with standard tuning. The six strings of such a guitar are tuned to the following notes, in order: E, A, D, G, B, E. (Guitar players, please note that the order used starts with the lowest string.) </p> <p> If you play an open string, you will hear the corresponding note. For example, if you play the A string, you will hear the note A. <br /><br /> To change the note the string plays, you can hold it down on one of the frets. If you play a string while holding it down on the K-th fret, you will hear a note that is K half-steps higher. For example, if you play the A string while holding it down on the 4-th fret, you will hear the note C#. </p> <p> You will be given a guitar chord encoded as a int[] <b>chord</b> with six elements, each of them describing one string of the guitar in the order given above. For each string we are given the fret where to hold it down. The value 0 represents an open string that plays the original note, and the special value -1 is used for a string that is not played in the chord. </p> <p> For example, suppose that <b>chord</b> = {-1, 3, 2, 0, 1, 0}. <br /><br /> When playing this chord, you will hear the following notes: {none, C, E, G, C, E}. </p> <p> The above chord contains three distinct notes: C, E, and G. This chord is called the &quot;C Major&quot; chord. </p> <p> For any note X, the &quot;X Major&quot; chord is formed by three distinct notes. It can be obtained from the &quot;C Major&quot; chord by shifting all three notes by the same number of steps so that C becomes X. For example, if we shift the notes (C,E,G) by three steps, we get the notes (D#,G,A#). These three notes form the &quot;D# Major&quot; chord. </p> <p> Similarly, the chord &quot;C Minor&quot; is formed by the notes C, D#, and G, and all other minor chords are shifts of this chord. </p> <p> Given the int[] <b>chord</b>, decide whether it is one of the 12 major or one of the 12 minor chords, as defined above. If it is one of these chords, return its name as a String (&quot;<tt>X Major</tt>&quot; for major chords, &quot;<tt>X Minor</tt>&quot; for minor chords). If the chord represented by <b>chord</b> is not one of our chords, return an empty String. </p>",
+	"notes":[{
+		"order":1,
+		"val":"When classifying a chord the only thing that matters is the set of notes played. The number of times a note is played does not matter as long as each of the required notes is played at least once."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WhatsThisChord",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"classify",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String classify(int[] chord)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"C Major\"",
+			"id":0,
+			"input":"{-1, 3, 2, 0, 1, 0}",
+			"note":"This is the C Major chord, as described in the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"G Major\"",
+			"id":0,
+			"input":"{3,2,0,0,0,3}",
+			"note":"This is another of the basic guitar chords. The strings play the following notes: G, B, D, G, B, G. If we take the C Major chord (C,E,G) and shift it by 7, we get (G,B,D), which is precisely the set of notes in this chord. Hence the chord is G Major.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"A Minor\"",
+			"id":0,
+			"input":"{-1,0,2,2,1,0}",
+			"note":"This is the most common way of playing the A Minor chord. The three distinct notes we hear in this case are A, C, and E.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"C# Major\"",
+			"id":0,
+			"input":"{-1,4,3,1,2,1}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"C Major\"",
+			"id":0,
+			"input":"{8,10,10,9,8,8}",
+			"note":"There are multiple ways to play each chord.",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"{0,0,0,0,0,0}",
+			"note":"This is not one of our 24 simple chords.",
+			"order":6
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"{-1,-1,4,-1,-1,7}",
+			"note":"Neither is this.",
+			"order":7
+		},
+		{
+			"expect":"Returns: \"C Major\"",
+			"id":0,
+			"input":"{-1, -1, 2, 0, 1, 0}",
+			"note":"The notes played in this chord are {none, none, E, G, C, E}. The set of notes played is (C,E,G), hence this is again a C Major chord. (In music theory this chord has a more precise name C/E, but this is irrelevant. It is still a C Major chord.)",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"chord will contain exactly 6 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of chord will be between -1 and 12, inclusive."
+		}
+	]
+}

@@ -1,0 +1,59 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11110&rd=14235",
+	"statement":"<p>A hallway is filled with lockers numbered 1 through <b>N</b>, initially all closed. Out of boredom, Dave and Earl decide to open all the lockers. They make multiple passes through the hallway, each beginning at locker 1. On the first pass, they open the first unopened locker, and every second unopened locker thereafter. On the second pass, they open the first unopened locker, and every third unopened locker thereafter. In general, on the nth pass, they open the first unopened locker, and every (n+1)th unopened locker thereafter.</p> <p>For example, with 9 lockers, on the first pass they open 1, 3, 5, 7, and 9, leaving 2, 4, 6, and 8. On the second pass they open 2 and 8, leaving 4 and 6. On the third pass they open locker 4, and on the final pass locker 6.</p> <p>You will be given <b>N</b>, the number of lockers. Return the number of the locker opened last.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LockersDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"lastOpened",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int lastOpened(int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"9",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 42",
+			"id":0,
+			"input":"42",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 282",
+			"id":0,
+			"input":"314",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N will be between 1 and 2000000, inclusive."
+	}]
+}

@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6719&rd=10095",
+	"statement":"You have been given a int[] <b>vals</b> that is missing one element. Luckily, you know the mean of the entire set (with the missing element present). Using this information, reconstruct the full data set and return the median.",
+	"notes":[{
+		"order":1,
+		"val":"The mean of a list of values is their average. The median of a list of values is determined by sorting the list, and then taking the middle element."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"UsingStats",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMedian",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMedian(int[] vals, int mean)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"75",
+			"id":0,
+			"input":"{50,100}",
+			"note":"To have a 75 average, the missing value must be 75. This is also the median of the resulting set.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1,2,3,4}",
+			"note":"The missing value is 5. The resulting median is 3.",
+			"order":2
+		},
+		{
+			"expect":"61",
+			"id":0,
+			"input":"{0,0,100,100}",
+			"note":"The missing value is 105, and the resulting median is 100.",
+			"order":3
+		},
+		{
+			"expect":"539",
+			"id":0,
+			"input":"{889,820,404,-901}",
+			"order":4
+		},
+		{
+			"expect":"845",
+			"id":0,
+			"input":"{-211,-504,461,283,791,646,205,459,-186,516,-933,762,418,656,746,-368,888,270,-355,-207,-990,435,717,-338}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"vals will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"vals will contain an even number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of vals will be between -1000 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"mean will be between -1000 and 1000, inclusive."
+		}
+	]
+}

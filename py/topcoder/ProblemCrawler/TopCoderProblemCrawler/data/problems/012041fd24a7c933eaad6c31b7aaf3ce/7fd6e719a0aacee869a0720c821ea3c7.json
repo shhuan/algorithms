@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6179&rd=9983",
+	"statement":"We are looking at a rectangular map. We just studied the map and want to refold it like it was. We can see the foldlines and tell which way they were folded. It looks something like this, where each X represents a section of the map, and the letter between horizontally or vertically adjacent sections tells whether the fold between the sections was up (i.e., the two sections were folded so that the 2 visible sides went towards each other) or was down. The interior spaces are where horizontal and vertical fold lines cross each other. <pre>\n   XuXuXdX\n   u u d d\n   XdXuXuX\n</pre> Each section of the map is the same size rectangle as all the others, and when the map is refolded all the sections will be on top of each other. We want to know the minimum number of folds required. Create a class MapFolder that contains a method minFolds that is given a String[] <b>theMap</b> and returns the minimum number of folds required, or -1 if it is not possible to refold <b>theMap</b>. <p> <b>theMap</b> only contains the orientation of the folds. So for the example map, it would be {&quot;uud&quot;,&quot;uudd&quot;,&quot;duu&quot;}. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MapFolder",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minFolds",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minFolds(String[] theMap)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"uud\",\"uudd\",\"duu\"}",
+			"note":" We can fold this map in 3 folds as follows: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"uud\",\"uudu\",\"dud\"}",
+			"note":"  As shown, we can fold down on the third vertical fold line, then up on the second. Then we fold up on the one horizontal line and finally up on the remaining vertical. Notice that we could not have started by folding up on the second vertical because of the conflict between the leftmost and rightmost fold lines. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"d\"}",
+			"note":" XdX => XThis map has two sections, so a single fold is all that is needed.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 22",
+			"id":0,
+			"input":"{\"uuuuuuuuuuuuuuuuuuuuu\",\"ududududududududududud\",\"uuuuuuuuuuuuuuuuuuuuu\"}",
+			"note":" ",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"u\", \"uu\", \"u\"}",
+			"note":" Neither the vertical nor the horizontal fold is legal, so we cannot even begin to fold this map.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"The number of elements in theMap is an odd value between 1 and 49, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in each element of theMap is 'u' or 'd'."
+		},
+		{
+			"order":3,
+			"val":"Elements 0, 2, 4, .. all contain exactly k characters, a value between 1 and 49, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Elements 1, 3, ... all contain exactly k+1 characters."
+		}
+	]
+}

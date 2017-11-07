@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12033&rd=15172",
+	"statement":"<i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet.</i><br /><br /> <br /><br /> We had a rectangular grid that consisted of W x H square cells. We placed a robot on one of the cells. The robot then followed the rules given below. \n <ul> \n  <li>Initially, the robot is facing east. </li>\n  <li>The robot moves in steps. In each step it moves to the adjacent cell in the direction it currently faces. </li>\n  <li>The robot may not leave the grid. </li>\n  <li>The robot may not visit the same cell twice. (This also means that it may not reenter the starting cell.) </li>\n  <li>If a step forward does not cause the robot to break the above rules, the robot takes the step. </li>\n  <li>Otherwise, the robot rotates 90 degrees to the left (counter-clockwise) and checks whether a step forward still breaks the above rules. If not, the robot takes the step and continues executing this program (still rotated in the new direction). </li>\n  <li>If the rotation left did not help, the robot terminates the execution of this program. </li>\n  <li>We can also terminate the execution of the program manually, at any moment.</li> \n </ul> For example, the following seven images show a series of moves made by the robot in a 12 x 11 board:<br /><br /><br /><br /> <img src=\"http://www.topcoder.com/contest/problem/RotatingBot/bot.jpg\" /><br /><br /> <br /><br /> We forgot the dimensions of the grid and the original (x,y) coordinates of the cell on which the robot was originally placed, but we do remember its movement. You are given a int[] <b>moves</b>. This sequence of positive integers shall be interpreted as follows: The robot performed <b>moves</b>[0] steps eastwards, turned left, performed <b>moves</b>[1] steps northwards, turned left, and so on. After performing the last sequence of steps, the robot stopped. (Either it detected that it should terminate, or we stopped it manually.) We are not sure if the sequence of moves is valid. If the sequence of moves is impossible, return -1. Else, return the minimum area of a grid in which the sequence of moves is possible. (I.e., the return value is the smallest possible value of the product of W and H.).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RotatingBot",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minArea",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minArea(int[] moves)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 16",
+			"id":0,
+			"input":"{15}",
+			"note":"The smallest valid board is a 16x1 board, with the robot starting on the west end of the board.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 44",
+			"id":0,
+			"input":"{3,10}",
+			"note":"The smallest solution is to place the robot into the southwest corner of a 4 x 11 board.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{1,1,1,1}",
+			"note":"This sequence of moves is not possible because the robot would return to its initial location which is forbidden.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 132",
+			"id":0,
+			"input":"{9,5,11,10,11,4,10}",
+			"note":"These moves match the image from the problem statement.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 420",
+			"id":0,
+			"input":"{12,1,27,14,27,12,26,11,25,10,24,9,23,8,22,7,21,6,20,5,19,4,18,3,17,2,16,1,15}",
+			"order":5
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{8,6,6,1}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"Returns: 63",
+			"id":0,
+			"input":"{8,6,6}",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"Returns: 30",
+			"id":0,
+			"input":"{5,4,5,3,3}",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"moves will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of moves will be between 1 and 50, inclusive."
+		}
+	]
+}

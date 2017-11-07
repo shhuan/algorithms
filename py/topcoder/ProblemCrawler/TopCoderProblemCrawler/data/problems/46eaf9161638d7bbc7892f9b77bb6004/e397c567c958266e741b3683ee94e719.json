@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7243&rd=10009",
+	"statement":"<p> In a certain European country, railroad cars consist of 9 compartments, each containing 4 seats. There are two possible numeration methods for the seats: the <i>domestic numeration</i> and the <i>international numeration</i>. </p> \n <ul> \n  <li> In the domestic numeration, the seats in the first compartment are numbered 1 through 4, the seats in the second compartment are numbered 5 through 8, and so on. </li> \n  <li> In the international numeration, every seat's number consists of two digits. The first digit is the number of the compartment and the second digit is the number of the seat within that compartment. Compartments are numbered 1 through 9, and the four seats within each compartment are numbered 1, 3, 4, 6 (in the same order as in the domestic numeration). </li> \n </ul> <p> You are given a int[] <b>tickets</b> containing seat numbers in an unknown numeration. Assuming that every seat number in <b>tickets</b> is in the same numeration, convert them into the international numeration. Return the result as a String containing a single-space separated list of converted numbers in the same order that they are given in the input. If there are several possible return values, return <tt>&quot;AMBIGUOUS&quot;</tt> (quotes for clarity only). If the input cannot be interpreted as a valid list of seat numbers all in the same numeration, return <tt>&quot;BAD DATA&quot;</tt> (quotes for clarity only). </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RailroadSeatNumeration",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getInternational",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getInternational(int[] tickets)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"11\"",
+			"id":0,
+			"input":"{1}",
+			"note":"Seat number 1 exists only in the domestic numeration, and it corresponds to seat number 11 in the international numeration.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"AMBIGUOUS\"",
+			"id":0,
+			"input":"{11}",
+			"note":"Seat number 11 exists in both numerations, so we cannot figure out which numeration is used here.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"BAD DATA\"",
+			"id":0,
+			"input":"{45}",
+			"note":"No seat can be numbered 45 in any numeration.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"21 24 23\"",
+			"id":0,
+			"input":"{5, 7, 6}",
+			"note":"Remember to return tickets in the same order as in the input.",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"AMBIGUOUS\"",
+			"id":0,
+			"input":"{21, 24, 23}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"26 76\"",
+			"id":0,
+			"input":"{8, 28}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"tickets will contain between 1 and 36 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of tickets will be between 1 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"tickets will contain no duplicate elements."
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8390&rd=10798",
+	"statement":"Professor Smith teaches a logic class. One day, he writes some statements on the blackboard: <pre>Exactly <i>a</i> of these statements are true.\nExactly <i>b</i> of these statements are true.\nExactly <i>c</i> of these statements are true.\n.\n.\n.</pre> <p>Each of <i>a</i>, <i>b</i>, <i>c</i> and so on is a number. He then asks the class how many of the statements are true.</p> <p>You will be given a int[] <b>statements</b>, containing the numbers written in Professor Smith's statements. Return the number of the statements that are true. If there is more than one possible answer, return the largest one. If there are no possible answers, return -1.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TrueStatements",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numberTrue",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numberTrue(int[] statements)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{0, 1, 2, 3}",
+			"note":"The 2nd statement is true (there is one true statement) and the others are false.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{0}",
+			"note":"This is the Epimedes paradox: if the statement is true then it claims to be false, but if it is false then it must be true.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{0, 3, 1, 3, 2, 3}",
+			"note":"One solution is that the 3rd statement is the only true statement. However, it is also possible that the 2nd, 4th and 6th statements are true (all of which say that 3 statements are true), and the largest solution must be returned.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{1, 1}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"statements will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of statements will be between 0 and 50, inclusive."
+		}
+	]
+}

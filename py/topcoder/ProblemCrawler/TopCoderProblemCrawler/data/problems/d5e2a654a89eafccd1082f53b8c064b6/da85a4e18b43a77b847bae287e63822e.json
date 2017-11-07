@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12494&rd=15594",
+	"statement":"John has two strings <b>s</b> and <b>t</b> of equal length. He can choose a set of positions (possibly empty) and erase characters at these positions in both <b>s</b> and <b>t</b>. Then he writes down the concatenation of what remained of the strings: first the letters we kept from <b>s</b>, in their original order, then the letters we kept from <b>t</b>, again in their original order. <br /><br /><br /><br /> Return the lexicographically largest string John can get at the end. ",
+	"notes":[{
+		"order":1,
+		"val":"String A is lexicographically smaller than string B if either A is a proper prefix of B, or if there is an integer i such that the first i characters of A match the first i characters of B, and character i+1 of A is smaller than character i+1 of B."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheLargestString",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String find(String s, String t)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"zy\"",
+			"id":0,
+			"input":"\"ab\"",
+			"note":"There are four options here:  Among all possible results \"by\" is the lexicographically largest one. ",
+			"order":1
+		},
+		{
+			"expect":"\"zzzaaaa\"",
+			"id":0,
+			"input":"\"abacaba\"",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"\"x\"",
+			"id":0,
+			"input":"\"x\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"bababbaabbbababbbbababaab\"",
+			"id":0,
+			"input":"\"abbabbabbababaaaabbababab\"",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s will contain between 1 and 47 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"s and t will contain the same number of characters."
+		},
+		{
+			"order":3,
+			"val":"s will contain only lowercase English characters ('a'-'z')."
+		},
+		{
+			"order":4,
+			"val":"t will contain only lowercase English characters ('a'-'z')."
+		}
+	]
+}

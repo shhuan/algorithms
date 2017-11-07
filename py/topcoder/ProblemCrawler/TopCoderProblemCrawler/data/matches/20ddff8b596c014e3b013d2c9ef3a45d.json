@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":212.43,
+			"constraints":[],
+			"correctRatio":98.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10988&rd=14282",
+			"name":"BankLottery",
+			"notes":[],
+			"submission":135
+		},
+		{
+			"avgPts":212.52,
+			"constraints":[],
+			"correctRatio":35.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11015&rd=14282",
+			"name":"ProductsOfDigits",
+			"notes":[],
+			"submission":73
+		},
+		{
+			"avgPts":630.04,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10949&rd=14282",
+			"name":"LineSegments",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"2010 TCO Algorithm > Online Round 4",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14282"
+}

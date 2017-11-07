@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13298&rd=16062",
+	"statement":"<i>Please note that this problem has a non-standard time limit: 10 seconds.</i> <p> </p> <p> Cat Taro has a rooted tree with <b>N</b> nodes. Nodes are numbered from 0 to <b>N</b>-1, inclusive. Node with the index 0 is the root of the tree. Each edge has some positive integer value written on it. </p> <p> </p> <p> Taro wants to process <b>M</b> queries. Each query consists of two nodes u and v. Queries should be processed in the following way: </p> \n <ul> \n  <li> If u equals v, print -1. </li> \n  <li> Otherwise, if the node v is in the subtree of the node u, print the maximum value written on the edges that belong to the simple path from u to v. </li> \n  <li> Otherwise, remove the edge between u and its parent. Instead, add a new edge (with the same value) that makes u the child of v. (Note that the entire subtree rooted at u is now a part of the subtree rooted at v.) Do not print anything. </li> \n </ul> <p> Return the sum of all values that were printed during the process. </p> <p> </p> <p> You are given the ints <b>N</b> and <b>M</b>. You are also given ints <b>startValue</b>, <b>maxValue</b>, and <b>maxHeight</b>. These are used in the following pseudocode that generates the initial tree and the sequence of queries you should process. </p> <p> </p> <pre>\ninitialize():\n    curValue = startValue\n\ngenNextRandom():\n    curValue = (curValue * 1999 + 17) modulo 1,000,003\n    return curValue\n\ngenerateTree():\n    for i=1 to N-1:\n        value[i] = genNextRandom() modulo maxValue;\n        parent[i] = max( 0, i - 1 - (genNextRandom() modulo maxHeight) );\n        in our tree, the parent of vertex i is parent[i]\n        the edge between i and parent[i] has the label value[i]\n\ngenerateQueries():\n    for i=0 to M-1:\n        queryU[i] = genNextRandom() modulo N\n        queryV[i] = genNextRandom() modulo N\n\tif queryU[i] &gt; queryV[i]:\n\t\tswap queryU[i] and queryV[i]\n        process the query with u=queryU[i] and v=queryV[i]\n</pre> <p> </p> <p> To generate the input, call initialize(), then generateTree(), and finally generateQueries(). </p>",
+	"notes":[{
+		"order":1,
+		"val":"The intended solution should work within the given time limit for an arbitrary tree and an arbitrary sequence of queries. It does not depend on any special properties of the pseudorandom generator."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TaroTreeRequests",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getNumber(int N, int M, int startValue, int maxValue, int maxHeight)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"The explanation to the picture below:  0) The initial tree.  1) The first operation, with u = 0, v = 2. The maximum value is 4.  2) The second operation with u = 1, v = 3. The maximum value is 0.  3) The third operation with u = 2, v = 3. The structure of the tree is changed after this operation.  4) The fourth operation with u = 0, v = 2. The maximum value is 4.   ",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"10000",
+			"id":0,
+			"input":"10000",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"200000",
+			"id":0,
+			"input":"200000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 200,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"M will be between 1 and 200,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"startValue will be between 0 and 1,000,002, inclusive."
+		},
+		{
+			"order":4,
+			"val":"maxValue will be between 1 and 1,000,003, inclusive."
+		},
+		{
+			"order":5,
+			"val":"maxHeight will be between 1 and 1,000,003, inclusive."
+		}
+	]
+}

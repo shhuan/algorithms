@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6750&rd=10106",
+	"statement":"<p> We call two numbers friendly if they have the same digits, ignoring order or repetition. For example 122213 and 312 are friendly while 145 and 2544411 are not. A sequence is friendly if it contains at least two numbers, and all possible pairs of numbers within it are friendly. Two contiguous subsequences are different if they have a different start index, end index or both.</p> <p> If we are given the sequence 112, 12, 21, 354, 534345, 345, 2221 then the friendly contiguous subsequences are: {112, 12}, {112, 12, 21}, {12, 21}, {354, 534345}, {354, 534345, 345} and {534345, 345}. {112, 12, 21, 354} is not a friendly contiguous subsequence because 112 and 354 are not friendly numbers and {112, 12, 21, 2221} is not a friendly contignuous subsequence because the elements of the sequence aren't in consecutive positions in the original sequence. </p> <p> Given a int[] <b>array</b>, you must return number of different friendly contignuous subsequences of <b>array</b>. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FriendlySequences",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int[] array)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{112, 12, 21, 354, 534345, 345, 2221}",
+			"note":"The example in the problem.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 18",
+			"id":0,
+			"input":"{10, 1100, 10101, 111, 1111, 11111, 11, 1, 111}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{0, 0, 0, 0}",
+			"note":"We have a total of 6 possible different pairs of start and end indices for friendly subsequences.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{123456890, 213456890, 198654320} ",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{9}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"array will have between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of array will be between 0 and 2000000000, inclusive."
+		}
+	]
+}

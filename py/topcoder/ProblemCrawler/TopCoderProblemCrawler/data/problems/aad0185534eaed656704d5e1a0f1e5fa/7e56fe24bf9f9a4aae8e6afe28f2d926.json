@@ -1,0 +1,121 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13807&rd=16463",
+	"statement":"<p>There is a rectangular field divided into a grid of n rows by m columns of unit square cells. Each cell (i, j) has some strategic value which is an integer between 0 and 9, inclusive. You are given these values as a String[] <b>a</b> where each <b>a</b>[i][j] is a digit between '0' and '9', inclusive.</p> <p>It is possible to build stations in some cells. A station built in a cell covers some set of cells. You are given the offsets of those cells as int[]s <b>x</b> and <b>y</b>. More precisely, for each valid k, a station in the cell (i, j) covers the cell (i + <b>x</b>[k], j + <b>y</b>[k]) if a cell with those coordinates exists. Note that it may be the case that a station in (i, j) does not cover the cell (i, j).</p> <p>Your task is to place two stations into two distinct cells. The total strategic value of the two stations is the sum of strategic values of all cells that are covered by at least one of the stations. Return the largest possible total strategic value of the two stations.</p>",
+	"notes":[{
+		"order":1,
+		"val":"The two stations must be built in two distinct cells of the given rectangular array. It is not allowed to build the stations at coordinates that are outside the given array."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Coversta",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"place",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int place(String[] a, int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,0}",
+			"id":0,
+			"input":"{\"11\", \"11\"}",
+			"note":"A station at (i, j) covers the cells (i, j) and (i, j+1). The optimal solution is to place the two stations at (0, 0) and (1, 0).",
+			"order":1
+		},
+		{
+			"expect":"{0,1}",
+			"id":0,
+			"input":"{\"11\", \"11\"}",
+			"note":"Here a station at (i, j) also covers (i+1, j+1). One optimal solution is to place the two stations at (0, 0) and (0, 1). The first station also covers the cell (1, 1).",
+			"order":2
+		},
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{\"15\", \"61\"}",
+			"note":"In this test case each station only covers its own cell. The optimal solution is to build the two stations in the two most important locations.",
+			"order":3
+		},
+		{
+			"expect":"{0,0,-1}",
+			"id":0,
+			"input":"{\"151\", \"655\", \"661\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{-1,-1}",
+			"id":0,
+			"input":"{\"303\", \"333\", \"000\"}",
+			"note":"Note that in this test case the offset (0, 0) is not among the offsets ([k], [k]).",
+			"order":5
+		},
+		{
+			"expect":"{-1,-1}",
+			"id":0,
+			"input":"{\"0000000\", \"1010101\"} ",
+			"note":"The stations must be built on some cells of the given field. They cannot be built outside the field.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"m will be between 2 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"a will contain exactly n elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of a will contain exactly m characters."
+		},
+		{
+			"order":5,
+			"val":"Each character in a will be a digit ('0'-'9')."
+		},
+		{
+			"order":6,
+			"val":"x will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":8,
+			"val":"Each element in x will be between -(n-1) and (n-1), inclusive."
+		},
+		{
+			"order":9,
+			"val":"Each element in y will be between -(m-1) and (m-1), inclusive."
+		},
+		{
+			"order":10,
+			"val":"The pairs (x[k], y[k]) will be distinct."
+		}
+	]
+}

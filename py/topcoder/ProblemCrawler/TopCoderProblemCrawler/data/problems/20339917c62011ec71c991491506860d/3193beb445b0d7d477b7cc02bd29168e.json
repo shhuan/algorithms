@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10549&rd=13903",
+	"statement":"<p>You may have heard of the game &quot;Heroes of Might and Magic&quot;. Recently, battles in this game have been broadcast online, and the weekly battles between Petr and Vasyl have been very popular. Petr usually wins these battles, so Vasyl has decided to develop a new strategy.</p><br /><br /> <p>The battlefield in this game consists of equal hexagonal cells arranged in the form of a larger hexagon. The number of cells on each side of the battlefield represents the size of the field. The coordinate system is shown in the following figure, which depicts a battlefield of size 3:</p> <p></p>\n <center>\n  <img src=\"http://www.topcoder.com/contest/problem/HexagonalBattlefield/500div1-coords.png\" />\n </center><p></p> <p>This week, Petr and Vasyl are playing on a battlefield of size <b>N</b>. Some of the cells are already occupied by Petr's heroes. The locations of these cells are given in the int[]s <b>X</b> and <b>Y</b>, where (<b>X</b>[i], <b>Y</b>[i]) is the location of Petr's i-th hero. To defeat Petr, Vasyl must occupy every single free cell with his own heroes. Unfortunately, Vasyl only has equestrian heroes, each of which occupy exactly two adjacent cells. No two heroes can occupy a single cell. One possible correct arrangement is shown in the following figure:</p> <p></p>\n <center>\n  <img src=\"http://www.topcoder.com/contest/problem/HexagonalBattlefield/500div1-field.png\" />\n </center><p></p> <p>Vasyl wants to simulate a battle with every possible arrangement of his heroes so that he can determine the optimal one. Calculate the number of different possible arrangements he will consider. The answer might be very large, so return the number modulo 2000000011.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HexagonalBattlefield",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countArrangements",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countArrangements(int[] X, int[] Y, int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{-2,0,1,0,2}",
+			"id":0,
+			"input":"{-2,0,1,1,0}",
+			"note":"This is the battlefield shown in the figure above.",
+			"order":1
+		},
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{0}",
+			"order":2
+		},
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{0}",
+			"order":3
+		},
+		{
+			"expect":"{0,0,1,0,0}",
+			"id":0,
+			"input":"{-1,0,0,1,2}",
+			"order":4
+		},
+		{
+			"expect":"{0,0,-1,1,1,0,-1}",
+			"id":0,
+			"input":"{0,1,0,0,1,-1,-1}",
+			"note":"Here the entire battlefield is occupied by Petr's heroes. Therefore there exists only one possible arrangement.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 8, inclusive."
+		},
+		{
+			"order":2,
+			"val":"X will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"X and Y will each contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"All points (X[i], Y[i]) will lie inside the battlefield of size N."
+		},
+		{
+			"order":5,
+			"val":"All points (X[i], Y[i]) will be distinct."
+		}
+	]
+}

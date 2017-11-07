@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":204.98,
+			"constraints":[],
+			"correctRatio":74.51,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2975&rd=5874",
+			"name":"FileFilter",
+			"notes":[],
+			"submission":204
+		},
+		{
+			"avgPts":427.99,
+			"constraints":[],
+			"correctRatio":53.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2978&rd=5874",
+			"name":"ResultsTable",
+			"notes":[],
+			"submission":52
+		}
+	],
+	"name":"2004 TCO > Qualification Round Set 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5874"
+}

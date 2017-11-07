@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.97,
+			"constraints":[],
+			"correctRatio":91.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7692&rd=10743",
+			"name":"SquareCypher",
+			"notes":[],
+			"submission":397
+		},
+		{
+			"avgPts":329.37,
+			"constraints":[],
+			"correctRatio":51.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7670&rd=10743",
+			"name":"RaceTrack",
+			"notes":[],
+			"submission":252
+		},
+		{
+			"avgPts":482.34,
+			"constraints":[],
+			"correctRatio":52.63,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7506&rd=10743",
+			"name":"MedievalCity",
+			"notes":[],
+			"submission":19
+		}
+	],
+	"name":"2007 TopCoder Open > Online Round 1C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10743"
+}

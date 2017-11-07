@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6110&rd=9925",
+	"statement":"A tree is a connected graph with no cycles. Starting from a connected tree with positive integral edge lengths, we take a subset of the nodes of that tree. Next, we compute the lengths of the shortest paths between all pairs of nodes in the subset (in the original tree). This gives us a symmetric N*N distance matrix where N is the number of nodes in the subset.<br /><br /><br /><br /> Your task is to reverse this process. Given a N*N distance matrix, you are to reconstruct a tree, if possible. Since there may be many reconstructions, you should return the minimum number of nodes in any reconstruction that agrees with the distance matrix (this will be at least N). If no reconstruction is possible, return -1.<br /><br /><br /><br /> The distance between nodes i and j (indexed from 0) can be found by treating <b>g1</b>[i][j] and <b>g2</b>[i][j] as hexadecimal digits. Putting the two digits together gives the distance (<b>g1</b> has the more significant digits).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TreeReconstruct",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"reconstruct",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int reconstruct(String[] g1, String[] g2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"0444\", \"4044\", \"4404\", \"4440\"}",
+			"id":0,
+			"input":"{\"0000\", \"0000\", \"0000\", \"0000\"} ",
+			"note":"The original tree could have been a star: one central node, with 4 nodes connected to it, each by an edge of length 2. The subset of selected nodes are the 4 non-central nodes.",
+			"order":1
+		},
+		{
+			"expect":"{\"0233\", \"2033\", \"3302\", \"3320\"}",
+			"id":0,
+			"input":"{\"0000\", \"0000\", \"0000\", \"0000\"} ",
+			"order":2
+		},
+		{
+			"expect":"{\"066C6\", \"60CA4\", \"6C02C\", \"CA20A\", \"64CA0\"} ",
+			"id":0,
+			"input":"{\"00001\", \"00001\", \"00011\", \"00100\", \"11100\"} ",
+			"order":3
+		},
+		{
+			"expect":"{\"06839\", \"60E7B\", \"8E0B1\", \"37B0A\", \"9B1A0\"}",
+			"id":0,
+			"input":"{\"00000\", \"00000\", \"00001\", \"00000\", \"00100\"}",
+			"order":4
+		},
+		{
+			"expect":"{\"0198AA\", \"10ED9F\", \"9E0D7F\", \"8DD06E\", \"A97608\", \"AFFE80\"}",
+			"id":0,
+			"input":"{\"023825\", \"202704\", \"320633\", \"876084\", \"203805\", \"543450\"}",
+			"order":5
+		},
+		{
+			"expect":"{\"0121\", \"1012\", \"2101\", \"1210\"}",
+			"id":0,
+			"input":"{\"0000\", \"0000\", \"0000\", \"0000\"}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"g1 and g2 will each contain exactly N elements, where N is between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of g1 and g2 will contain exactly N hex digits ('0'-'9' and 'A'-'F')."
+		},
+		{
+			"order":3,
+			"val":"The distance between each pair of distinct nodes will be positive."
+		},
+		{
+			"order":4,
+			"val":"The diagonal entries of g1 and g2 will be '0'."
+		},
+		{
+			"order":5,
+			"val":"g1 and g2 will each be symmetric."
+		}
+	]
+}

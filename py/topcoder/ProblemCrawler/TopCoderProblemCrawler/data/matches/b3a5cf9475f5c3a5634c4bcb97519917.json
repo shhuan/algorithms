@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":210.41,
+			"constraints":[],
+			"correctRatio":78.61,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3003&rd=5858",
+			"name":"WinningRecord",
+			"notes":[],
+			"submission":187
+		},
+		{
+			"avgPts":363.14,
+			"constraints":[],
+			"correctRatio":91.3,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2943&rd=5858",
+			"name":"SumOfSquareRoots",
+			"notes":[],
+			"submission":161
+		},
+		{
+			"avgPts":461.66,
+			"constraints":[],
+			"correctRatio":63.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2944&rd=5858",
+			"name":"Arcs",
+			"notes":[],
+			"submission":22
+		}
+	],
+	"name":"Single Round Match 212 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5858"
+}

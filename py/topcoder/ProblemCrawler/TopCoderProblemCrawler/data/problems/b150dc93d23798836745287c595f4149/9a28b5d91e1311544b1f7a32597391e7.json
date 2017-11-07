@@ -1,0 +1,105 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7880&rd=10841",
+	"statement":"<p> The game of Inc is played by 3 players on a rectangular board, made up of an MxN grid of squares. Each square is either empty or contains a digit between 1 and 3, inclusive. The players take turns making moves on the board, in order, starting with player 1. Play continues for a pre-determined number of moves, after which the players' scores are totaled. Each player receives one point for each square containing a digit equal to their player number. The player with the highest score wins. </p> <p> A move consists of a player dividing the squares on the board into two non-empty groups, with a single straight horizontal or vertical line. The player then selects one of the two groups on either side of the line, and either adds 1 to or subtracts 1 from all the digits in that group. Whenever 1 is added to 3, the result is wrapped around to 1. Similarly, whenever 1 is subtracted from 1, the result is wrapped around to 3. </p> <p> Each player makes his or her moves according to the following set of priorities. A higher-numbered priority is only used to select among multiple moves that satisfy all lower-numbered priorities. </p> \n <ol> \n  <li>Prefer moves that will result in you having more points than the other 2 players at the end of the game.</li> \n  <li>Prefer moves that will result in neither of the other 2 players having more points than you at the end of the game.</li> \n  <li>Prefer moves that will result in you having as many points as possible at the end of the game.</li> \n  <li>Prefer dividing the board with a horizontal line over dividing the board with a vertical line.</li> \n  <li>Prefer the group to the left or the top of the dividing line over the group to the right or the bottom.</li> \n  <li>Prefer lines to the left or the top over lines to the right or the bottom.</li> \n </ol> <p> Assume that all players play optimally, and that they all expect each other to play optimally as well. </p> <p> The initial state of the board is given as a String[] <b>initial</b>. Each character in <b>initial</b> represents one square of the board. A '.' (period) represents an empty square, while a digit represents a digit in the corresponding square. Earlier elements in <b>initial</b> correspond to the top of the board and later elements correspond to the bottom, while earlier characters in each element of <b>initial</b> correspond to the left of the board and later characters correspond to the right. The number of turns in the game is given by an int <b>turns</b>. An int <b>inc</b> dictates if players add or subtract 1 to the digits they select on their turn. A value of -1 means that players must subtract 1 and a value of 1 means that players must add 1. </p> <p> Return the final state of the board as a String[], in the same format as the input. </p>",
+	"notes":[{
+		"order":1,
+		"val":" will not necessarily be divisible by 3."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Inc",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"finalBoard",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] finalBoard(String[] initialBoard, int inc, int turns)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{ \"333\", \"3.3\", \"333\" }",
+			"note":"Only player 1 makes a move, and there are 4 ways he can get 5 points. Following the given priorities, he chooses to divide the board with a horizontal line one row above the bottom, and increment the 5 digits in the 6 squares above that line.",
+			"order":1
+		},
+		{
+			"expect":"-1",
+			"id":0,
+			"input":"{ \"....\", \"3333\", \"3333\", \".33.\" }",
+			"note":"Player 1 cannot score any points and selects only the top row, which contains no digits. This leaves player 2 with the optimal move of selecting all rows but the top. Player 3 cannot score any points either and selects the top row only, leaving player 2 with all 10 available points.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{ \"111\", \"111\" }",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"-1",
+			"id":0,
+			"input":"{ \"2222\", \"2222\", \"2222\" }",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{ \"231.3\", \"3.233\", \"12.12\", \"3.231\", \"132.3\" }",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{ \"123\", \"123\" }",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"initial will contain between 2 and 5 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of initial will be between 2 and 5 characters long, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of initial will have the same length."
+		},
+		{
+			"order":4,
+			"val":"Each element of initial will be either a '.' (period), '1', '2', or '3'."
+		},
+		{
+			"order":5,
+			"val":"inc will be -1 or 1."
+		},
+		{
+			"order":6,
+			"val":"turns will be between 1 and 10, inclusive."
+		}
+	]
+}

@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4829&rd=8095",
+	"statement":"Consider a matrix with n columns, given by <b>m</b>, where <b>m<sub>i,j</sub></b> is represented by character j of element i of <b>m</b>. We would like to find some function, f, such that for all i:<br /><br /> <tt>f(<b>m<sub>i,0</sub></b>,<b>m<sub>i,1</sub></b>,...,<b>m<sub>i,n-1</sub></b>) = <b>t<sub>i</sub></b></tt>.<br /><br /><br /><br /> All elements of the matrix are binary 0's and 1's, as are the elements of <b>t</b>. Furthermore, the function must take on the form:<br /><br /> <tt>a<sub>0</sub>*<b>m<sub>i,0</sub></b> ^ a<sub>1</sub>*<b>m<sub>i,1</sub></b> ^ ... ^ a<sub>n-1</sub><b>m<sub>i,n-1</sub></b></tt>, where each a<sub>j</sub> is either 0 or 1 and '^' represents the XOR operation. In other words, the function takes a row of the matrix, and XORs some subset of the elements of that row to get the target from <b>t</b>. Your task is to return how many distinct functions (choices of a<sub>i</sub>'s) give the correct target for each i.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"XORing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findSubset",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long findSubset(String[] m, int[] t)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,1,1}",
+			"id":0,
+			"input":"{\"000\", \"001\", \"010\"}",
+			"order":1
+		},
+		{
+			"expect":"{1,1,1}",
+			"id":0,
+			"input":"{\"000\", \"001\", \"010\"}",
+			"order":2
+		},
+		{
+			"expect":"{0,0,0}",
+			"id":0,
+			"input":"{\"0000\", \"0000\", \"0000\"}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"m and t will contain the same number of elements."
+		},
+		{
+			"order":2,
+			"val":"m and t will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of m will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each element of m will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each character in m will be '0' or '1'."
+		},
+		{
+			"order":6,
+			"val":"Each element of t will be 0 or 1."
+		}
+	]
+}

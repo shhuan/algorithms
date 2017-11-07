@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":181.23,
+			"constraints":[],
+			"correctRatio":31.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8758&rd=12171",
+			"name":"AvoidingProduct",
+			"notes":[],
+			"submission":402
+		},
+		{
+			"avgPts":274.52,
+			"constraints":[],
+			"correctRatio":48.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8711&rd=12171",
+			"name":"BinarySum",
+			"notes":[],
+			"submission":214
+		},
+		{
+			"avgPts":631.82,
+			"constraints":[],
+			"correctRatio":25.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8754&rd=12171",
+			"name":"DancingParty",
+			"notes":[],
+			"submission":91
+		}
+	],
+	"name":"Single Round Match 399 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12171"
+}

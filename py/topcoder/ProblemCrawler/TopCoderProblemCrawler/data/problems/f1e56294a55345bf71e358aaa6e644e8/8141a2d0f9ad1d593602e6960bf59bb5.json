@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8519&rd=11122",
+	"statement":"A positive integer is said to be <b>k</b>-smooth if its largest prime factor is no greater than <b>k</b>. Compute how many positive integers less than or equal to <b>N</b> are <b>k</b>-smooth.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SmoothNumbers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countSmoothNumbers",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countSmoothNumbers(int N, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"10",
+			"note":"Of the first ten integers, only 5, 7 and 10 have prime factors greater than 3.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"10",
+			"note":"4 is not prime, so 4-smooth numbers are the same as 3-smooth numbers.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"15",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"20",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"100000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 100,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"k will be between 1 and 100, inclusive."
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10232&rd=13699",
+	"statement":"<p> There is nothing more beautiful than just an integer number. </p> <p> You are given integers <b>a</b>, <b>b</b> and <b>c</b>. Write each of them down in decimal notation with no leading zeros. The following operations can be performed on each of the written numbers: </p> \n <ul> \n  <li>Insert a single digit at any position of the number (possibly at the beginning or at the end).</li> \n  <li>Delete a single digit from the number.</li> \n  <li>Replace a single digit in the number with some other digit.</li> \n </ul> <p> An operation can only be performed if it results in a positive number with at least one digit and no leading zeros. </p> <p> Each operation has an associated cost - <b>insCost</b>, <b>delCost</b> and <b>repCost</b>, respectively. Return the minimal possible total cost of operations needed to satisfy the equality <b>a</b>+<b>b</b>=<b>c</b>. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheSum",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minCost(int a, int b, int c, int insCost, int delCost, int repCost)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"77",
+			"id":0,
+			"input":"44",
+			"note":"We just need to insert the digit 2 between the two 1's.",
+			"order":1
+		},
+		{
+			"expect":"77",
+			"id":0,
+			"input":"44",
+			"note":"This is the same situation as above, but with different costs. This time, the insert and delete operations are much more expensive, and it is cheaper to make two replacements instead. For example, we can turn the numbers into 44+17=61 for a total cost of 2. ",
+			"order":2
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"100",
+			"note":"Every possible way requires at least one insert or delete operation. ",
+			"order":3
+		},
+		{
+			"expect":"19876",
+			"id":0,
+			"input":"23456765",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a, b, and c will each be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"insCost, delCost and repCost will each be between 0 and 1,000,000, inclusive."
+		}
+	]
+}

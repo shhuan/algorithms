@@ -1,0 +1,105 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11493&rd=14568",
+	"statement":"The final battle between Feudalia and Banania is nearing. Before Feudalian forces reach the Bananian capital, they must cross a well-watched portion of land of dimensions <b>W</b> x <b>H</b> without getting detected by any of the Bananian radars. There are two walls at the left and right sides of the portion of land which you can consider to be infinitely long. One of those walls connects points (0,0) and (0,<b>H</b>) and the other connects points (<b>W</b>,0) and (<b>W</b>,<b>H</b>).<br /><br /> <br /><br /> The locations of the radars are given by int[]s <b>radarX</b> and <b>radarY</b>. Each radar i has a power level that is initially set to <b>radarPower</b>[i]. The power level of a radar is a non-negative integer value equal to its power consumption. If the power level of radar i is <i>P</i>, then its detection radius is <i>P</i>*<i>P</i>, which means that the radar can detect any movement within all points with a distance to (<b>radarX</b>[i], <b>radarY</b>[i]) less than or equal to <i>P</i>*<i>P</i>.<br /><br /> <br /><br /> The Feudalian force must find a path to take between the bottom and top sides of the rectangle such that none of the points in the path are within the detection radius of any radar. Formally, the path must be a curve that connects two points (x0, 0) and (x1, <b>H</b>) which does not cross either of the two walls, and for every point (x,y) in the path and a radar i, the distance between (x,y) and the radar must be strictly larger than <i>P</i>*<i>P</i> where <i>P</i> is the power level of the radar.<br /><br /> <br /><br /> You are a Feudalian spy with the ability to modify the power level of any radar to any non-negative integer value that is not larger than the radar's original power level. Set the power levels in such way that the Feudalian force can cross the rectangle without being detected. If there are multiple ways to do it, minimize the difference in total power consumption between the initial setup and the final setup so that the sabotage is more difficult to notice. Return the minimum difference in power usage that is required to make the land crossable.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RadarSabotage",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumDifference",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimumDifference(int W, int H, int[] radarX, int[] radarY, int[] radarPower)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"20",
+			"id":0,
+			"input":"8",
+			"note":"There is only one radar initially with a power level of 10. If the power level is changed to 1, the radius of the radar will become 1*1 = 1, and it will be possible to pass. If we only changed the level to 2, the radius would become 4, and it would not be possible to pass:   ",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"3",
+			"note":"If we turn the third radar off a path for the army will be possible. ",
+			"order":2
+		},
+		{
+			"expect":"16",
+			"id":0,
+			"input":"6",
+			"note":"A possible solution is to set the first radar's power level to 0 and the second radar's level to 1.   ",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"51",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"32",
+			"id":0,
+			"input":"24",
+			"note":"The army is already able to cross without being detected. No change is necessary. Note that the path does not necessarily have to be a straight line:   ",
+			"order":5
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"20",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"W and H will each be between 3 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"radarX will contain between 1 and 30 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"radarX, radarY and radarPower will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of radarX will be between 1 and W-1, inclusive. "
+		},
+		{
+			"order":5,
+			"val":"Each element of radarY will be between 1 and H-1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of radarPower will be between 1 and 200, inclusive."
+		},
+		{
+			"order":7,
+			"val":"No two radars will be located at the same point."
+		}
+	]
+}

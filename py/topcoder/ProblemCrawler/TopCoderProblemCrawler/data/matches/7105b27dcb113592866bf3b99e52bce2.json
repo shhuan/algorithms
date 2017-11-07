@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":212.04,
+			"constraints":[],
+			"correctRatio":69.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=291&rd=4021",
+			"name":"RightMargin",
+			"notes":[],
+			"submission":55
+		},
+		{
+			"avgPts":249.44,
+			"constraints":[],
+			"correctRatio":3.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=274&rd=4021",
+			"name":"Cheater",
+			"notes":[],
+			"submission":31
+		},
+		{
+			"avgPts":625.62,
+			"constraints":[],
+			"correctRatio":39.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=275&rd=4021",
+			"name":"Bullfrog",
+			"notes":[],
+			"submission":23
+		}
+	],
+	"name":"Single Round Match 50 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4021"
+}

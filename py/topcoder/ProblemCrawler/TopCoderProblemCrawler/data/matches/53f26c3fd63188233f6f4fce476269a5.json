@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":237.78,
+			"constraints":[],
+			"correctRatio":97.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13067&rd=15958",
+			"name":"Unique",
+			"notes":[],
+			"submission":1509
+		},
+		{
+			"avgPts":378.89,
+			"constraints":[],
+			"correctRatio":81.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13062&rd=15958",
+			"name":"FizzBuzzTurbo",
+			"notes":[],
+			"submission":1448
+		},
+		{
+			"avgPts":588.13,
+			"constraints":[],
+			"correctRatio":61.01,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13063&rd=15958",
+			"name":"RedPaint",
+			"notes":[],
+			"submission":377
+		}
+	],
+	"name":"2014 TCO Algorithm > Round 1C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15958"
+}

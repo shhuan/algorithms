@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13761&rd=16461",
+	"statement":"Fox Ciel is writing an AI for the game Starcraft and she needs your help. <br /><br /> <br /><br /> In Starcraft, one of the available units is a mutalisk. Mutalisks are very useful for harassing Terran bases. Fox Ciel has one mutalisk. The enemy base contains one or more Space Construction Vehicles (SCVs). Each SCV has some amount of hit points. <br /><br /> <br /><br /> When the mutalisk attacks, it can target up to three different SCVs. \n <ol> \n  <li>The first targeted SCV will lose 9 hit points.</li> \n  <li>The second targeted SCV (if any) will lose 3 hit points.</li> \n  <li>The third targeted SCV (if any) will lose 1 hit point.</li> \n </ol> If the hit points of a SCV drop to 0 or lower, the SCV is destroyed. Note that you may not target the same SCV twice in the same attack. <br /><br /> <br /><br /> You are given a int[] <b>x</b> containing the current hit points of your enemy's SCVs. Return the smallest number of attacks in which you can destroy all these SCVs.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Mutalisk",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimalAttacks",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimalAttacks(int[] x)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{12,10,4}",
+			"note":"You can destroy all SCVs in two attacks as follows: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{54,18,6}",
+			"note":"You should attack 6 times, always in the order 0, 1, 2.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{1,1,1,1,1,1,1,1,1,1}",
+			"note":"There are 10 SCVs, each with just a single hit point. Your attack can kill only three of them, therefore at least 4 attacks are needed.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 13",
+			"id":0,
+			"input":"{55,60,53}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{60}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 93",
+			"id":0,
+			"input":"{60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in x will be between 1 and 60, inclusive."
+		}
+	]
+}

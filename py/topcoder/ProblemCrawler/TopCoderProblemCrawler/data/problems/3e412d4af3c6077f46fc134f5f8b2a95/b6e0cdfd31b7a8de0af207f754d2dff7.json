@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10138&rd=13521",
+	"statement":"Twin Towns are towns which are paired together to encourage human contact and cultural links. The government of your country has decided to establish such relationships among a given set of towns. The following rules must be followed: \n <ol> \n  <li>Each town must have between 0 and <b>maxPartners</b> twins, inclusive.</li> \n  <li>The distance between each pair of twin towns must be at least <b>minDistance</b>. The distance between two towns located at (x<sub>1</sub>, y<sub>1</sub>) and (x<sub>2</sub>, y<sub>2</sub>) is defined as |x<sub>1</sub>-x<sub>2</sub>| + |y<sub>1</sub>-y<sub>2</sub>|. </li> \n </ol> The government will establish as many relationships as possible. If there are multiple ways to do this, the government will choose the one that minimizes the sum of the distances between each pair of twin towns. You are given int[]s <b>x</b> and <b>y</b>, where (<b>x</b>[i], <b>y</b>[i]) are the coordinates of the i-th town. Return a int[] containing exactly two elements, where the first element is the number of relationships the government will establish, and the second element is the sum of the distances between each pair of twin towns.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TwinTowns",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"optimalTwinTowns",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] optimalTwinTowns(int[] x, int[] y, int maxPartners, int minDistance)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,10,4}",
+			"id":0,
+			"input":"{0,0,10}",
+			"note":"We have 3 towns here at coordinates (0,0), (0,10), and (10,4). Each town can have at most one twin. Since we have only 3 towns, we can establish at most one pair of twin towns. The best solution pairs the first and second towns, where the distance is 10.",
+			"order":1
+		},
+		{
+			"expect":"{0,10,4}",
+			"id":0,
+			"input":"{0,0,10}",
+			"note":"These are the same towns from Example 0, but minDistance is now 11. The first and second towns cannot be twins. The best solution is to pair the first and third towns, where the distance is 14.",
+			"order":2
+		},
+		{
+			"expect":"{0,0,20,20}",
+			"id":0,
+			"input":"{0,10,0,10}",
+			"note":"Here we have 4 towns located at the vertices of a rectangle. Each town can have at most one twin. The best solution is to pair the first town with the second, and the third town with the fourth. The distance between each pair is 10. ",
+			"order":3
+		},
+		{
+			"expect":"{0,0,20,20}",
+			"id":0,
+			"input":"{0,10,0,10}",
+			"note":"These are the same towns from Example 2, but now, each town can have up to two twins. The best solution establishes 4 pairs of twin towns:  The sum of the distances is 60.",
+			"order":4
+		},
+		{
+			"expect":"{1,2,3,4,5,6,7,8,9}",
+			"id":0,
+			"input":"{0,0,0,0,0,0,0,0,0}",
+			"note":"We can pair the following list of towns (indexed from 1): 1-7, 1-8, 1-9, 2-8, 2-9, 3-9.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maxPartners will be between 1 and 3, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x and y will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of x and y will be between 0 and 1,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"minDistance will be between 1 and 2,000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"No two towns will have the same coordinates."
+		}
+	]
+}

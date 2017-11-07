@@ -1,0 +1,108 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8706&rd=11126",
+	"statement":"<p>You are given two Strings <b>s1</b> and <b>s2</b>. Each string contains some letters and exactly one asterisk ('*').</p> <p>You must replace each asterisk with a sequence of letters (possibly of zero length). The resulting two strings must be equal.</p> <p>Return the shortest possible resulting string. If it is impossible to make the strings equal, return &quot;impossible&quot; (quotes for clarity) instead.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TwoStringMasks",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"shortestCommon",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String shortestCommon(String s1, String s2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"T*PCODER\"",
+			"id":0,
+			"input":"\"TOPC*DER\"",
+			"note":"Each of the asterisks should be replaced with an \"O\".",
+			"order":1
+		},
+		{
+			"expect":"\"HI*\"",
+			"id":0,
+			"input":"\"HELLO*\"",
+			"note":"No matter how you replace the asterisks, the second characters of the strings will differ. So it is impossible to make the strings equal.",
+			"order":2
+		},
+		{
+			"expect":"\"*\"",
+			"id":0,
+			"input":"\"GOOD*LUCK\"",
+			"note":"The first asterisk should be replaced with an empty string.",
+			"order":3
+		},
+		{
+			"expect":"\"THIRDSAMPLE*\"",
+			"id":0,
+			"input":"\"*SAMPLETEST\"",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"*CODER\"",
+			"id":0,
+			"input":"\"*TOP\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\"A*\"",
+			"id":0,
+			"input":"\"*\"",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"\"B*\"",
+			"id":0,
+			"input":"\"*A\"",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"\"*LASTCASE\"",
+			"id":0,
+			"input":"\"LASTCASE*\"",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s1 will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"s2 will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"s1 and s2 will contain only uppercase letters ('A'-'Z') and asterisks ('*')."
+		},
+		{
+			"order":4,
+			"val":"s1 and s2 will contain exactly one asterisk each."
+		}
+	]
+}

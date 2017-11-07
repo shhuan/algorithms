@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6516&rd=9989",
+	"statement":"<p>A sequence of numbers is called strictly monotonically increasing if every term of the sequence is strictly greater than the one preceding it. Simliarly, a sequence is called strictly monotonically decreasing if every term is strictly less than the one preceding it. A strictly monotonic sequence is a sequence that is either strictly monotonically increasing or decreasing. A sequence of integers is called <i>k-monotonic</i> if it can be decomposed into <b>k</b> disjoint contiguous subsequences that are strictly monotonic.</p> <p>For example a strictly monotonically increasing sequence is <i>1-monotonic</i>---in fact it is <i>k-monotonic</i> for every k between 1 and the number of elements it contains. The sequence {1, 2, 3, 2, 1} is <i>2-monotonic</i> since it can be decomposed into {1, 2, 3} and {2, 1}.</p> <p>If a sequence is not k-monotonic, you can transform it into a k-monotonic sequence by performing the following operation one or more times: select any term in the sequence and either increase it or decrease it by one. You are allowed to perform any number of these operations on any of the terms. Given a int[] <b>sequence</b> and an int <b>k</b>, return the minimum number of operations required to transform the given sequence into a k-monotonic sequence.</p>",
+	"notes":[{
+		"order":1,
+		"val":"In the context of this problem, a subsequence of length M consists of M consecutive elements of the original sequence."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"KMonotonic",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"transform",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int transform(int[] sequence, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{1,1,1,1}",
+			"note":"You can transform this into {0,1,2,3} using 4 operations. Decrease the first term by 1 to get 0, increase the third term by 1 to get 2, and increase the fourth term by 1 twice to get 3. Other possibilities are {-1,0,1,2}, {2,1,0,-1} and {3,2,1,0}.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{1,1,1,1}",
+			"note":"Some optimal solutions: {1,2,2,1} {1,0,0,1} {1,2,1,2} {1,0,1,2}.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{1,1,1,1}",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{1,2,3,3,2,1}",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{1,3,2,3,2,4}",
+			"note":"You can transform this into {0,1,2,3,4,5}",
+			"order":5
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1,10,4,2,5,1,3,2,4,6,1}",
+			"note":"Transform this into {1,10,3,4,5,1,2,3,4,6,7} which can be decomposed into {1,10} {3,4,5} and {1,2,3,4,6,7}.",
+			"order":6
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"{-913,-4158,-146,-2625,-2926,3071,297,4049,-4566,3581,-2070,-1794,1953,4434,4351,-710,-3124,2148,1192,1802,644}",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sequence will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of sequence will be between -20,000,000 and 20,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"k will be between 1 and the number of elements in sequence, inclusive."
+		}
+	]
+}

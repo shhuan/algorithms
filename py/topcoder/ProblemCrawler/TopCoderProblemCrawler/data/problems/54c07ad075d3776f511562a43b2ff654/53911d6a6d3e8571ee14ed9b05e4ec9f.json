@@ -1,0 +1,68 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1998&rd=5878",
+	"statement":"You have recently collected a programming assignment from your class, and suspect some people have cheated. An anonymous informant has let you know that the cheaters work in groups of 3. To quickly find the cheaters, you want a program that will find the shortest common supersequence of 3 different assignments. Three assignments will be given to you in three Strings <b>a</b>, <b>b</b>, and <b>c</b>. Return the length of the shortest common supersequence of these 3 Strings.<br /><br /> <br /><br /> Given a String X, a subsequence of X is a String produced by removing some of the characters of X (possibly none). For example, (quotes for clarity) &quot;topcoder&quot;, &quot;toder&quot;, &quot;oode&quot;, and &quot;&quot; are all subsequences of &quot;topcoder&quot;. If Y is a subsequence of X then X is a supersequence of Y.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Find3Cheaters",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"shortest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int shortest(String a, String b, String c)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"ataatg\"",
+			"id":0,
+			"input":"\"aagaaa\"",
+			"note":"\"catagagaatg\" is a supersequence of all 3 strings.",
+			"order":1
+		},
+		{
+			"expect":"\"wowwowwow\"",
+			"id":0,
+			"input":"\"wowwowwow\"",
+			"note":"\"wowwowwowbadbadbad\" is a supersequence of all 3.",
+			"order":2
+		},
+		{
+			"expect":"\"aaaaaaa\"",
+			"id":0,
+			"input":"\"a\"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a will contain between 1 and 50 lowercase letters ('a'-'z') inclusive."
+		},
+		{
+			"order":2,
+			"val":"b will contain between 1 and 50 lowercase letters ('a'-'z') inclusive."
+		},
+		{
+			"order":3,
+			"val":"c will contain between 1 and 50 lowercase letters ('a'-'z') inclusive."
+		}
+	]
+}

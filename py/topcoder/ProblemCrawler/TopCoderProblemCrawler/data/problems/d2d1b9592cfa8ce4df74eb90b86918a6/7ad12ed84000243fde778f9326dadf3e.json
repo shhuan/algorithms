@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9764&rd=12177",
+	"statement":"<p>There are several cities in a country, and some pairs of those cities are connected by one-way roads (although it is possible that there are one-way roads both from A to B and from B to A). It is possible to get from any city to any other city using roads. A traveler starts from some city, and travels along one of the roads every day. A number <i>x</i> is called <i>vacation-friendly</i> if a traveler can have an <i>x</i>-day long vacation. That means he can start from some city, travel exactly <i>x</i> roads, and be back at the city where he started. </p> <p>A <i>vacation string</i> is an infinite string of '0' and '1' digits, which has a '1' in the <i>x</i>-th (1-based) position if and only if <i>x</i> is a vacation-friendly number.</p> <p>For example, consider the country shown in the following picture.<br /><br /> <img src=\"http://www.topcoder.com/contest/problem/AllCycleLengths/samplecountry.gif\" /><br /><br /> Its vacation string is &quot;0011011111111...&quot;: 0-&gt;1-&gt;3-&gt;0 is a 3-day vacation, 0-&gt;1-&gt;2-&gt;3-&gt;0 is a 4-day vacation, 0-&gt;1-&gt;3-&gt;0-&gt;1-&gt;3-&gt;0 is a 6-day vacation, 0-&gt;1-&gt;2-&gt;3-&gt;0-&gt;1-&gt;3-&gt;0 is a 7-day vacation, and so on.</p> <p>It turns out that every vacation string becomes periodic at some point. We will enclose the period in parentheses to obtain a finite representation for a vacation string. For example, the above vacation string can be represented by &quot;00110(1)&quot; or &quot;00110111(11)&quot;. We will call the shortest possible representation <i>canonical</i>.</p> <p>Given a description of a country as a String[] <b>arcs</b>, where the <i>j</i>-th character of the <i>i</i>-th element of <b>arcs</b> is 'Y' if there is a road from city <i>i</i> to city <i>j</i>, and 'N' otherwise, return the canonical representation of its vacation string.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AllCycleLengths",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findAll",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String findAll(String[] arcs)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"00110(1)\"",
+			"id":0,
+			"input":"{\"NYNN\", \"NNYY\", \"NNNY\", \"YNNN\"}",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"(01)\"",
+			"id":0,
+			"input":"{\"NY\", \"YN\"}",
+			"note":"Only even numbers are vacation-friendly here.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"0(1)\"",
+			"id":0,
+			"input":"{\"NYYYY\", \"NNYYY\", \"NNNYY\", \"NNNNY\", \"YNNNN\"}",
+			"note":"Every vacation length except 1 is possible here.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"010(1)\"",
+			"id":0,
+			"input":"{\"NYNNN\", \"NNYNN\", \"NNNYN\", \"NNNNY\", \"YNNYN\"}",
+			"note":"The vacation can start from any vertex.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"arcs will contain between 2 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of arcs will contain exactly n characters, where n is the number of elements in arcs."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of arcs will be either 'Y' or 'N'."
+		},
+		{
+			"order":4,
+			"val":"The i-th character of the i-th element of arcs will always be 'N'."
+		},
+		{
+			"order":5,
+			"val":"arcs will define a network of roads where it is possible to get from any city to any other city using the roads."
+		}
+	]
+}

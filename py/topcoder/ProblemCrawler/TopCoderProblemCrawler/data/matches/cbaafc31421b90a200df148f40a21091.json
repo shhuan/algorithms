@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":199.78,
+			"constraints":[],
+			"correctRatio":76.61,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=464&rd=4065",
+			"name":"Complex",
+			"notes":[],
+			"submission":218
+		},
+		{
+			"avgPts":301.16,
+			"constraints":[],
+			"correctRatio":49.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=467&rd=4065",
+			"name":"SpecialNum",
+			"notes":[],
+			"submission":123
+		},
+		{
+			"avgPts":453.1,
+			"constraints":[],
+			"correctRatio":45.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=424&rd=4065",
+			"name":"Parenthese",
+			"notes":[],
+			"submission":62
+		}
+	],
+	"name":"Single Round Match 67 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4065"
+}

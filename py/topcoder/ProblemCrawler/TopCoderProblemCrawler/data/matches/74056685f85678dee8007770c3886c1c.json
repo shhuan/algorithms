@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":213.27,
+			"constraints":[],
+			"correctRatio":81.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=413&rd=4050",
+			"name":"AlphDistn",
+			"notes":[],
+			"submission":85
+		},
+		{
+			"avgPts":291.77,
+			"constraints":[],
+			"correctRatio":37.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=420&rd=4050",
+			"name":"Itinerary",
+			"notes":[],
+			"submission":74
+		},
+		{
+			"avgPts":554.05,
+			"constraints":[],
+			"correctRatio":60.42,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=412&rd=4050",
+			"name":"ShuttleBus",
+			"notes":[],
+			"submission":48
+		}
+	],
+	"name":"Single Round Match 64 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4050"
+}

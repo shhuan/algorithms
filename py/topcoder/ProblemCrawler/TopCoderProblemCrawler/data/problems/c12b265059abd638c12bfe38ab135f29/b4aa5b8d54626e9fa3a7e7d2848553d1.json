@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13366&rd=16079",
+	"statement":"Rabbits are going to play a game on a board with a rectangular grid. Each cell of the board is either empty or full. You are given a String[] <b>board</b>, where the j-th character of the i-th element (0-based indices) is '.' if the cell in the i-th row and the j-th column (we call this cell (i, j)) is empty, or '#' if cell (i, j) is full. The distance between two cells is the Euclidean distance between their centers. Formally, the distance between the cells (i1, j1) and (i2, j2) is the square root of (i1 - i2)^2 + (j1 - j2)^2. (Note that the full cells do not act as obstacles.) <br /><br /><br /><br /> There are <b>r</b> rabbits, numbered 1 through <b>r</b>. In the increasing order of their numbers, each rabbit chooses an empty cell uniformly at random and moves into that cell. Note that cells chosen by previous rabbits are no longer considered to be empty. <br /><br /><br /><br /> After all rabbits chose their cells, let's define the values f(1), f(2), ..., f(<b>r</b>) as follows: For each X = 1, 2, ..., <b>r</b>, the value f(X) is the number of the rabbit that is closest to rabbit X. In case there is a tie, we prefer the rabbit with the smallest row index, and if there is still a tie, we prefer the rabbit with the smallest column index. <br /><br /><br /><br /> Let's construct an undirected graph with <b>r</b> vertices, numbered 1 through <b>r</b>. The graph has exactly <b>r</b> edges: for each X = 1, 2, ..., <b>r</b>, we add an edge connecting vertex X and vertex f(X). Calculate and return the expected number of connected components of this graph. ",
+	"notes":[
+		{
+			"order":1,
+			"val":"A connected component of a graph is a set of vertices where every pair of vertices has a path connecting them. "
+		},
+		{
+			"order":2,
+			"val":"The returned value must have an absolute or relative error less than 1e-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ClosestRabbit",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getExpected",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getExpected(String[] board, int r)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\".#.#.\"}",
+			"note":"No matter how the two rabbits choose their cells, we will always have f(1) = 2 and f(2) = 1. The graph will always contain two edges, each connecting the vertices 1 and 2. Therefore, the number of connected components is always 1. ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\"..###.\", \".###.#\"}",
+			"note":"Here are two examples of rabbits' positions (represented by 1, 2, 3, and 4):  In (a), f(1) = 3, f(2) = 4, f(3) = 1, and f(4) = 2 holds and the graph has two connected components.  In (b), f(1) = 4, f(2) = 3, f(3) = 4, and f(4) = 3 holds and the graph has one connected component. ",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{\"..###.\", \".###.#\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\".....\", \"#....\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"19",
+			"id":0,
+			"input":"{\".#####.#####..#....#\", \"#......#....#.##..##\", \".####..#####..#.##.#\", \".....#.#...#..#....#\", \"#####..#....#.#....#\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain between 1 and 20 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of board will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in board will be either '.' or '#'."
+		},
+		{
+			"order":5,
+			"val":"r will be between 2 and the number of '.'s in board, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":215.23,
+			"constraints":[],
+			"correctRatio":93.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2002&rd=4670",
+			"name":"WordForm",
+			"notes":[],
+			"submission":191
+		},
+		{
+			"avgPts":289.09,
+			"constraints":[],
+			"correctRatio":52.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1958&rd=4670",
+			"name":"TreasureHunt",
+			"notes":[],
+			"submission":146
+		},
+		{
+			"avgPts":535.57,
+			"constraints":[],
+			"correctRatio":19.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1960&rd=4670",
+			"name":"ElectronicScarecrows",
+			"notes":[],
+			"submission":26
+		}
+	],
+	"name":"Single Round Match 173 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4670"
+}

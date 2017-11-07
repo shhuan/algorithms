@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8780&rd=12015",
+	"statement":"<p>Multiplayer Battleships is a game for <b>playerCount</b> players, who take turns one after another. The game field is a rectangular grid containing one or more battleships. A battleship of size p is a 1xp or px1 rectangle, where p is between 1 and 4, inclusive. No two battleships share a cell, a side or a vertex. Each cell of a battleship is called a deck.</p> <p>In one turn, a player selects one unattacked deck of any battleship and attacks it. If this deck is the last unattacked deck of that battleship, the ship drowns and the player gets p points, where p is the original size of the ship (see example 2). Otherwise, if the ship contains more unattacked decks, the player gets 1 point instead. The game is over when all decks of all battleships have been attacked.</p> <p>All players follow the same strategy, and each player knows that all the other players are also following this strategy. Each player is trying to maximize his score at the end of the game. If there is more than one ship that the player can attack to achieve the highest possible score, he will pick the one among them whose top-left corner is the highest (i.e., in the uppermost row). If there are still multiple such ships, he will choose the one among them whose top-left corner is farthest to the left (i.e., in the leftmost column).</p> <p>You will be given the game field in a String[], where a '.' represents an empty cell and an uppercase 'X' represents a deck. Each element represents a single row, and the rows are given from top to bottom. The cells in each row are given from left to right. Return the maximal score that can be achieved by the first player.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MultiplayerBattleships",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getFirstPlayerScore",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getFirstPlayerScore(String[] field, int playerCount)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"X.\", \"X.\"}",
+			"note":"The first player attacks one deck for a total of 1 point. The second player will then attack the remaining deck and get 2 points.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\".XXXX..\"}",
+			"note":"The first player gets two turns. On the first turn, he attacks one deck for 1 point. On the second turn, he attacks the last remaining deck for 4 points. ",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\".XX\", \"...\", \"XXX\"}",
+			"note":"Hit the bottom ship first.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\"XXXX\", \"....\", \"XXXX\", \"....\", \"XXXX\", \"....\", \"XXXX\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"field will contain between 1 and 7 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of field will contain exactly m characters, where m is between 1 and 7, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in each element of field will be either uppercase 'X' or '.'."
+		},
+		{
+			"order":4,
+			"val":"playerCount will be between 1 and 16, inclusive."
+		},
+		{
+			"order":5,
+			"val":"field will contain a valid game field."
+		},
+		{
+			"order":6,
+			"val":"field will contain at least one battleship."
+		}
+	]
+}

@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6761&rd=10113",
+	"statement":"<p>Let's call a number <i>constitutive</i> if it can be expressed as a sum of three or more successive positive integers. For example, 14 is a <i>constitutive</i> number because 14 = 2+3+4+5, but 13 is not a constitutive number.</p> <p>You will be given two ints <b>A</b> and <b>B</b>. Return the number of <i>constitutive</i> numbers between <b>A</b> and <b>B</b>, inclusive.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ConstitutiveNumbers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int A, int B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"15",
+			"id":0,
+			"input":"1",
+			"note":"The first 6  numbers are: ",
+			"order":1
+		},
+		{
+			"expect":"101",
+			"id":0,
+			"input":"1",
+			"order":2
+		},
+		{
+			"expect":"1030",
+			"id":0,
+			"input":"1000",
+			"order":3
+		},
+		{
+			"expect":"7246428",
+			"id":0,
+			"input":"7245723",
+			"order":4
+		},
+		{
+			"expect":"1000001000",
+			"id":0,
+			"input":"1000000000",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"B will be between A and A + 1000, inclusive."
+		}
+	]
+}

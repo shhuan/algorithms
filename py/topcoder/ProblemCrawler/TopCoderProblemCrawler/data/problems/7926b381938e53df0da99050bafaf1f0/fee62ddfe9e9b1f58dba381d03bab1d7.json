@@ -1,0 +1,158 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9802&rd=12180",
+	"statement":"<p> The Total Conquest soccer league is about to begin its season ending tournament next week. The tournament will be a single elimination tournament, meaning that a team that loses is immediately eliminated from the tournament. To set up the tournament, each team will be assigned a unique seed prior to the start of the tournament (starting from 0); the number of teams in the tournament will be a power of 2. The following algorithm in pseudocode is then used to determine pairings: </p><pre>\nSetSeeds(String[] Teams)\n{\n\tLET N = the number of teams left\n\tIF(N==1) \n\t\tThe tournament is over\n\tELSE\n\t\tPair all teams such that their seeds sum to N-1.\n\t\tAssume the lower seeded team wins each game.\n\t\tCall SetSeeds(Winners)\n}\n</pre> <p> For example, in an 8 team tournament, the first round games would be between 0-7, 1-6, 2-5, and 3-4. In the second round, the games would be between 0-3 and 1-2, with the winners meeting in the final. </p><p> Due to the format of the tournament, it is possible for a second round game to be played before all first round games have finished; a game may be started as long as both teams have advanced to the correct round. In the above tournament, for instance, if teams 0 and 3 win their opening round games, they may play their second round game prior to the game between 2-5. </p><p> You have been given a list of the <b>teams</b> in the tournament; you should concatenate the elements of <b>teams</b> to form a single space separated list of teams in the tournament with no leading or trailing spaces. You also will be given <b>games</b>; this should be concatenated to form a single space separated list representing the games played. Each game will be represented by two words; the first will be the name of the winning team, and the second will be the team that lost that game. The games may be listed in any order, but all games that have been played in the tournament so far will be listed. </p><p> You know that all games played in the tournament will be won by the team with the lower numbered seed. Assign the seeds to teams consistent with the games played; if there is more than one way to do this, select the lexicographically first among them (see Notes). Return a String[] containing the same number of elements as <b>seeds</b>; the i-th element in the return should correspond to the team name of the team that has been assigned seed <b>seeds</b>[i]. If the games listed in <b>games</b> do not represent a valid set of games in a tournament, return an empty String[]. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"An assignment of teams A is lexicographically earlier than B if, for some seed i, A[i] < B[i], and for all seeds j < i, A[j]=B[j]."
+		},
+		{
+			"order":2,
+			"val":"When comparing two Strings, digits ('0'-'9') come before letters."
+		},
+		{
+			"order":3,
+			"val":"A String C is less than D if C is a prefix of D, or if, for some character at index i, C[i] < D[i], and for all j < i, C[j]=D[j]."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TournamentSeeding",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getSeeds",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getSeeds(String[] teams, String[] games, int[] seeds)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"CELTICS LAKERS CELTICS PISTONS LAKERS SPURS\"}",
+			"id":0,
+			"input":"{\"CELTICS \", \"LAKER\", \"S SPURS PISTONS\"}",
+			"note":"The final rounds of the 2008 NBA playoffs. The first round games were CELTICS-PISTONS and LAKERS-SPURS, and the CELTICS beat the LAKERS in the final.",
+			"order":1
+		},
+		{
+			"expect":"{\"PATRIOTS CHARGERS\"}",
+			"id":0,
+			"input":"{\"GIANTS PATRIOTS CHARGERS PACKERS\"}",
+			"note":"Here is an incomplete tournament with only one game played. There are several possible seedings, but the lexicographically earliest seeding is: ",
+			"order":2
+		},
+		{
+			"expect":"{\"METS ANGELS\", \" METS CU\", \"BS ORIO\", \"LES ANGELS\"}",
+			"id":0,
+			"input":"{\"REDSOX PHILLIES METS DODGER\", \"S ORIOLES BLUEJAYS CUBS AN\", \"GELS\"}",
+			"note":"In a single elimination tournament, it is impossible for the ANGELS to lose twice.",
+			"order":3
+		},
+		{
+			"expect":"{\"METS ANGELS\", \" METS CU\", \"BS CU\", \"BS DODGERS REDSOX PHILLIES\"}",
+			"id":0,
+			"input":"{\"REDSOX PHILLIES METS DODGER\", \"S ORIOLES BLUEJAYS CUBS AN\", \"GELS\"}",
+			"note":"In this tournament, the second round game between the METS and CUBS was played before the BLUEJAYS-ORIOLES game from the first round.",
+			"order":4
+		},
+		{
+			"expect":"{\"P A B H D C D E E N\"}",
+			"id":0,
+			"input":"{\"A B C D E F 8 H I 3 9 L 4 N O P\"}",
+			"note":"Note that the same seed may be requested multiple times.",
+			"order":5
+		},
+		{
+			"expect":"{\"A B C D A C E F\"}",
+			"id":0,
+			"input":"{\"A B C D E F G H\"}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"{\"NEWYORKISLANDERS\"}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"teams will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of teams will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"teams will contain only uppercase letters ('A'-'Z'), digits ('0'-'9') and spaces (' ')."
+		},
+		{
+			"order":4,
+			"val":"The number of teams listed in teams will be a non-negative power of 2."
+		},
+		{
+			"order":5,
+			"val":"There will be no duplicate team names in teams."
+		},
+		{
+			"order":6,
+			"val":"teams will be formatted as described in the statement."
+		},
+		{
+			"order":7,
+			"val":"Each name in teams will contain between 1 and 20 characters, inclusive."
+		},
+		{
+			"order":8,
+			"val":"games will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":9,
+			"val":"Each element of games will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":10,
+			"val":"When concatenated, games will contain a single space separated list of names from teams, with no leading or trailing spaces."
+		},
+		{
+			"order":11,
+			"val":"When concatenated, games will contain an even number of team names."
+		},
+		{
+			"order":12,
+			"val":"No team will play against itself in games."
+		},
+		{
+			"order":13,
+			"val":"There will be no repeated game listed in games."
+		},
+		{
+			"order":14,
+			"val":"seeds will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":15,
+			"val":"Each element of seeds will be between 0 and N-1, inclusive, where N is the number of teams in teams."
+		}
+	]
+}

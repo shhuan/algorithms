@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":184.2,
+			"constraints":[],
+			"correctRatio":80.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11552&rd=14544",
+			"name":"BinaryCards",
+			"notes":[],
+			"submission":579
+		},
+		{
+			"avgPts":349.67,
+			"constraints":[],
+			"correctRatio":66.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11514&rd=14544",
+			"name":"RequiredSubstrings",
+			"notes":[],
+			"submission":136
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11555&rd=14544",
+			"name":"VerySmoothDecompositions",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"Single Round Match 519 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14544"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":189.17,
+			"constraints":[],
+			"correctRatio":71.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9760&rd=12177",
+			"name":"RelativePath",
+			"notes":[],
+			"submission":627
+		},
+		{
+			"avgPts":263.68,
+			"constraints":[],
+			"correctRatio":28.47,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9764&rd=12177",
+			"name":"AllCycleLengths",
+			"notes":[],
+			"submission":288
+		},
+		{
+			"avgPts":507.73,
+			"constraints":[],
+			"correctRatio":5.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9744&rd=12177",
+			"name":"ReasonableOdds",
+			"notes":[],
+			"submission":57
+		}
+	],
+	"name":"Single Round Match 405 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12177"
+}

@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7352&rd=10749",
+	"statement":"We have a real number that we want to approximate with as few characters as possible. We require that either the absolute error or the relative error must be strictly less than 10^-<b>k</b>. The absolute error is the absolute difference between the values of the shortened version and the original. The relative error is the absolute error divided by the absolute value of the original (or is taken to be infinity if the original is 0). <p> We want the shortened version expressed as a string of digits, possibly with a decimal point. The original number is given to us in that form. Given <b>k</b> and <b>number</b>, return the number of characters in the shortest approximation. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Neaten",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"shortest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int shortest(int k, String number)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":" \"00.\"",
+			"id":0,
+			"input":"2",
+			"note":"The approximation \"0\" has 1 character and has an absolute error of 0. ",
+			"order":1
+		},
+		{
+			"expect":"\".20050\"",
+			"id":0,
+			"input":"2",
+			"note":"The approximation \".2\" has 2 characters and has an absolute error of .0005 (which is less than .01). ",
+			"order":2
+		},
+		{
+			"expect":"\"10000\"",
+			"id":0,
+			"input":"3",
+			"note":"The approximation \"9995\" has a relative error of 5/10000 (which is less than .001).",
+			"order":3
+		},
+		{
+			"expect":"\"0.90\"",
+			"id":0,
+			"input":"1",
+			"note":"Please note that the error must be strictly less than 10.",
+			"order":4
+		},
+		{
+			"expect":"\"91.909\"",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"k will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"number will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"number will contain at most one decimal point ('.')."
+		},
+		{
+			"order":4,
+			"val":"Other than '.', number will contain only digits ('0'-'9')."
+		},
+		{
+			"order":5,
+			"val":"number will contain at least one digit."
+		}
+	]
+}

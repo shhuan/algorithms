@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10316&rd=13762",
+	"statement":"<pre>\n    +---+\n    | D |\n+---+---+---+---+\n| E | A | B | F |\n+---+---+---+---+\n    | C |\n    +---+\n</pre> <p> The ASCII art above shows the net of a general 6-sided die. There is a number written on each of the six sides. In the picture, these numbers are denoted A to F. (The net is folded so that the numbers are on the outside, but this information is not necessary to solve the following problem.) </p> <p> The numbers A to F will be given to you as a int[] <b>values</b>, where A will be <b>values</b>[0], B will be <b>values</b>[1], and so on. </p> <p> You have <b>N</b>^3 identical dice, each one matching the net shown above. You want to take all the dice, rotate some of them, and assemble a <b>N</b>&times;<b>N</b>&times;<b>N</b> cube. The cube will be standing on a table, hence only 5 of its sides will be visible. </p> <p> You are given the int <b>N</b>, and the int[] <b>values</b>. Write a method that will return the smallest possible sum of the 5<b>N</b>^2 visible faces of the dice. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CubeOfDice",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumSum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long minimumSum(int N, int[] values)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2,3,4,5,6}",
+			"id":0,
+			"input":"2",
+			"note":"This input corresponds to 8 classical dice.",
+			"order":1
+		},
+		{
+			"expect":"{1,2,3,4,5,6}",
+			"id":0,
+			"input":"3",
+			"note":"Now we have 27 classical dice.",
+			"order":2
+		},
+		{
+			"expect":"{50,50,50,50,50,50}",
+			"id":0,
+			"input":"1000000",
+			"note":"The largest possible output. Note that all numbers are equal, hence in this case there is only one possible way to arrange the dice.",
+			"order":3
+		},
+		{
+			"expect":"{1,1,1,1,50,1}",
+			"id":0,
+			"input":"10",
+			"note":"It is possible to rotate and arrange the dice so that no side with the 50 will be visible.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"values will contain exactly 6 elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of values will be between 1 and 50, inclusive."
+		}
+	]
+}

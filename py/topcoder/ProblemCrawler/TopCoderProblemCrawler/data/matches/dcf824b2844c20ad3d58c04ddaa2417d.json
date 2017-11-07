@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":216.16,
+			"constraints":[],
+			"correctRatio":92.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=297&rd=4022",
+			"name":"TimeTeam",
+			"notes":[],
+			"submission":52
+		},
+		{
+			"avgPts":347.67,
+			"constraints":[],
+			"correctRatio":95.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=298&rd=4022",
+			"name":"Cheaters",
+			"notes":[],
+			"submission":42
+		},
+		{
+			"avgPts":441.39,
+			"constraints":[],
+			"correctRatio":45.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=300&rd=4022",
+			"name":"OneOnOne",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"Single Round Match 51 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4022"
+}

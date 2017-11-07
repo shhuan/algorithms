@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7312&rd=10906",
+	"statement":"A microbiologist wants us to partition a collection of strings into disjoint groups based on common prefixes. The desired partition is formed by the following process:<pre>\n \n    while there are at least 2 strings that have not been assigned to a group:\n        find the longest prefix that appears in at least 2 unassigned strings\n        form a new group consisting of all unassigned strings having that prefix\n    if there is an unassigned string, assign it to its own group\n</pre> Note that the &quot;longest prefix&quot; in the algorithm above may have length 0. <p> We want to produce a listing of the strings organized by group, with a string of '-'s following the members of each group. The '-' string should contain one '-' for each character in the common prefix of the group. So a group whose common prefix has length 0 should be followed by the string &quot;&quot;. As a special case, a group that contains just one string is considered to have a common prefix of length 0. </p><p> List the groups with the longest common prefix first. Among groups with the same length common prefix, list the groups alphabetically. Among strings within a group, list the strings alphabetically. Given a String[] <b>protein</b>, return a String[] that is the desired listing. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Prefixes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"prefixList",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] prefixList(String[] protein)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"ABCDE\", \"ABCDE\", \"-----\", \"AAAAA\", \"\" }",
+			"id":0,
+			"input":"{\"AAAAA\",\"ABCDE\",\"ABCDE\"}",
+			"note":" The 2 identical strings are in a group since they have a common prefix consisting of all 5 letters. \"AAAAA\" cannot qualify to be in the same group as the other two. Since it is in a group by itself, it is followed by a string with 0 '-'s (an empty string) indicating a common prefix of length 0. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: {\"ABCDE\", \"ABCDXY\", \"----\", \"ABC\", \"ABD\", \"--\", \"ARX\", \"\" }",
+			"id":0,
+			"input":"{\"ABCDE\", \"ABCDXY\", \"ABC\", \"ABD\", \"ARX\"}",
+			"note":" The 3 groups have common prefixes \"ABCD\", \"AB\", and \"\". The groups are listed in order of longest prefix first.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {\"A\", \"AX\", \"-\", \"XA\", \"XB\", \"-\" }",
+			"id":0,
+			"input":"{\"XA\",\"AX\",\"XB\",\"A\"}",
+			"note":" The group with common prefix \"A\" comes before the group with common prefix \"X\" because it comes first alphabetically. Similarly, within each group, the individual strings are ordered alphabetically. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: {\"A\", \"AX\", \"-\", \"XA\", \"YXB\", \"\" }",
+			"id":0,
+			"input":"{\"XA\",\"AX\",\"YXB\",\"A\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"protein will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of protein will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in each element of protein will be an uppercase letter ('A'-'Z')."
+		}
+	]
+}

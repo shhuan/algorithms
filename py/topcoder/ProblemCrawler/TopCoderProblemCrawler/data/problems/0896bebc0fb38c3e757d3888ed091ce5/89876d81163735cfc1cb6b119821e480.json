@@ -1,0 +1,77 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6539&rd=10663",
+	"statement":"<p>You are organizing a local Rock-Paper-Scissors Tournament, where the best N players in your town will compete for fame and prizes. You have already ranked the participants according to their performance in the qualifying round, so each one of them will have a seed for winning the tournament in the range from 1 to N.</p> <p>The tournament will be in a knockout format and will consist of multiple rounds. During each round the competitors still left in the competition are randomly paired up with each other. The winners from each game advance to the next round. The great champion is the winner of the final game between the last two remaining players.</p> <p>The tournament starts soon, and you are preoccupied with some pre-statistics. You estimate that a player with any seed S can win against players with greater seeds, and against ones with lower seeds, if the difference between their seeds is not greater than sqrt(<b>C</b> * S), where <b>C</b> is a constant. Assuming that the outcome of all the played games during the tournament agrees with your estimation, a player can win the tournament if there exists an assignment of games in each of the rounds such that the player can win each round.</p> <p>You will be given two ints, <b>rounds</b>, denoting the number of rounds, and the constant <b>C</b>. Return the greatest seed of a player that could win the tournament. Note that N, the number of competitors will be N = 2<sup>rounds</sup>.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RPSTournament",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"greatestSeed",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int greatestSeed(int rounds, int C)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"2",
+			"note":"There is no room for surprises here. Since nobody can win against a higher-rated opponent, the lowest seed will win the tournament.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"3",
+			"note":"Player 2 can win against player 1, so both of them can win the final if they are to meet in that phase of the competition. Since players 3 and 4 can beat player 2, they can win the tournament as long as player 2 wins against player 1 somewhere before the final. Finally, players 5 and 6 can beat player 4 in the final, as long as player 4 wins against player 2 in the semifinals and player 2 eliminates player 1 in the first round. It is impossible for players 7 and 8 to win the tournament. We return the greatest seed of those who can win, namely 6.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"4",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"7",
+			"order":4
+		},
+		{
+			"expect":"180",
+			"id":0,
+			"input":"15",
+			"note":"Watch out for timeout!",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rounds will be between 1 and 16, inclusive."
+		},
+		{
+			"order":2,
+			"val":"C will be between 0 and 1500, inclusive."
+		}
+	]
+}

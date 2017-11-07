@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=577&rd=4373",
+	"statement":"<p> TopPilot airlines is committed to customer service and convenience. Thus, it is not simply enough to have a flight from San Francisco, CA to Hartford, CT. There must be a direct flight. </p><p> You will be given a String[] representing one-way flight paths. For each element in the String[], the element index is the departure airport number (0-indexed, so the first element is airport 0) and the element is a comma-delimited list of airport numbers to which there is a direct flight from the departure airport. </p><p> Write a method that, given these one-way flight paths, adds direct one-way flights between airports that are currently connected by non-direct one-way flights. For example, if there is a direct flight from SFO to JFK and a direct flight from JFK to LAX, and not a direct flight from SFO to LAX, then add a direct flight from SFO to LAX. Do not, however, add a direct flight from an airport to itself, even if a loop exists. Once this is done, the method should return the total number of flights provided by TopPilot airlines. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"If the destination airport does not appear as an element in destinations (which is always the case when it is greater than 19), there are no departing flights from that airport."
+		},
+		{
+			"order":2,
+			"val":"Leading zeroes in the numbers are allowed."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TopPilot",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"addFlights",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int addFlights(String[] destinations)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"1\",\"2\",\"3\"}",
+			"note":"There is a flight from airport 0 to airport 1, from 1 to 2, and from 2 to 3. We add a direct flight from 0 to 2, from 1 to 3, and from 0 to 3 (note that 3 is not an element, so it has no departing flights).",
+			"order":1
+		},
+		{
+			"expect":"Returns: 14",
+			"id":0,
+			"input":"{\"1\",\"02\",\"3\",\"4,5\"}",
+			"note":"We add flights from 0 to 2, 3, 4, and 5. We add flights from 1 to 3, 4, and 5. We add flights from 2 to 4 and 5. Together with the 5 flights we already have, there are 14 total.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"1,2\",\"0,2\",\"1\"}",
+			"note":"The only added flight is from 2 to 0.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 62",
+			"id":0,
+			"input":"{\"1,5,7,8,13,15,16,23,26,35,32,41\" ,\"0,2,5,6,7,15,18,21,25,31,34,41,49,50\" ,\"5,10,15,20,25,30,35,40,45,50\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"No airport will have a direct flight to itself."
+		},
+		{
+			"order":2,
+			"val":"destinations will have between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"each element of destinations will contain only the characters '0' through '9', and commas ','."
+		},
+		{
+			"order":4,
+			"val":"each element of destinations will be a comma delimited list of integers, with no numbers repeated, and no leading, trailing, or extra commas."
+		},
+		{
+			"order":5,
+			"val":"each element of destinations will be contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":6,
+			"val":"destination airport numbers will be between 0 and 50, inclusive."
+		}
+	]
+}

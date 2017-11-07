@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6435&rd=9826",
+	"statement":"A palindrome is a sequence of letters that reads the same forwards and backwards, such as &quot;MOM&quot;. Given two Strings, <b>s</b> and <b>t</b>, you are to find the length of the longest palindrome that is a contiguous substring of some interleaving of <b>s</b> and <b>t</b>. For example, the strings &quot;AA&quot; and &quot;BB&quot; can be interleaved in six ways: <pre>\n   AABB    BBAA\n   ABAB    BABA\n   ABBA    BAAB\n</pre> Of these, the top two contain palindromes of length 2 (&quot;AA&quot; and &quot;BB&quot;), the middle two contain palindromes of length 3 (&quot;ABA&quot; and &quot;BAB&quot;), and the bottom two contain palindromes of length 4 (&quot;ABBA&quot; and &quot;BAAB&quot;), so the answer would be 4. ",
+	"notes":[
+		{
+			"order":1,
+			"val":"To interleave two strings, you intersperse their characters. For example, \"ABCDE\" is one way to interleave the strings \"ACE\" and \"BD\". However, the characters need not strictly alternate between the two strings. For example, \"BACED\" and \"ACBDE\" are also ways to interleave the strings \"ACE\" and \"BD\". Notice that the characters from the original strings maintain their order with respect to other characters from the same string (e.g., the 'B' always comes before the 'D' in the above examples)."
+		},
+		{
+			"order":2,
+			"val":"Interleaving any string with the empty string yields the original string."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"InterleavePal",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"longestPal",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int longestPal(String s, String t)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"BB\"",
+			"id":0,
+			"input":"\"AA\"",
+			"note":"The example above.",
+			"order":1
+		},
+		{
+			"expect":"\"JAVA\"",
+			"id":0,
+			"input":"\"\"",
+			"note":"The longest palindrome is \"AVA\".",
+			"order":2
+		},
+		{
+			"expect":"\"\"",
+			"id":0,
+			"input":"\"\"",
+			"note":"The empty string is a palindrome of length 0.",
+			"order":3
+		},
+		{
+			"expect":"\"TOPROGRAMJOINEDTOPCODERANDEVENTUALLYBECAMERED\"",
+			"id":0,
+			"input":"\"ONCEUPONATIMETHEREWASAYOUNGPROGRAMMERWHOLEARNED\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"t will contain between 0 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Every character in s will be an uppercase letter ('A'-'Z')."
+		},
+		{
+			"order":4,
+			"val":"Every character in t will be an uppercase letter ('A'-'Z')."
+		}
+	]
+}

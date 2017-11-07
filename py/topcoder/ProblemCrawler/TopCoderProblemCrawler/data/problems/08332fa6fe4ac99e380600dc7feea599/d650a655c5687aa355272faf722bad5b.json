@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1810&rd=4620",
+	"statement":"<p> In each round of the two-player game of Rochambo, you and your opponent simultaneously display one of three gestures: Rock, Paper, or Scissors. If both of you have made the same move, the outcome is a tie. Otherwise, Rock beats Scissors, Scissors beats Paper, and Paper beats Rock. </p> <p> An optimal strategy against an opponent who makes random moves is to play randomly yourself. However, most people are incapable of generating a truly random series of moves, and it may be possible to exploit patterns in their play. According to one theory, the human mind works in the following manner. After making two consecutive moves of the same kind, the next move is likely to be the same as the previous two. But after making two different consecutive moves, the next move is likely to be different from the previous two. </p> <p> Given a String containing a record of your opponent's moves, calculate how many rounds you would win if you believed in this theory. Each gesture is represented by its initial letter. Your first two moves are always Rock. Thereafter, taking into account your opponent's previous two moves, you must apply the psychological theory described above to predict your opponent's next move, and counter it with the move that would defeat it. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Rochambo",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"wins",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int wins(String opponent)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"\"PS\"",
+			"note":"Your first two moves are always Rock, so you lose the first round and win the second round.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"\"PSRRPS\"",
+			"note":"You lose the first round and win the second round. The theory predicts that because your opponent has played Paper and Scissors in the first two rounds, he will play something different, namely Rock, in the third round. Accordingly, you play Paper. Your opponent does, in fact, play Rock, so you win the third round. The theory predicts that your opponent will play Paper in the fourth round, so you play Scissors. He actually plays Rock, so you lose. In the fifth round, the theory predicts that because your opponent has played Rock twice in a row, he will play it yet again, so you counter with Paper. Since he also plays Paper, this round is a tie. In the sixth round, the theory predicts Scissors, so you play Rock. Your opponent plays Scissors, and you win the round. In total, you have won three rounds.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"\"PSRPSRPRSR\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 16",
+			"id":0,
+			"input":"\"SRPSRPSPRSPRPSRPSRP\"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 18",
+			"id":0,
+			"input":"\"RPPPRRPSSSRRRSRSPPSSPRRPSRRRRSPPPPSSPSSSSSRSSSRPRR\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"opponent contains between 2 and 50 characters, inclusive"
+		},
+		{
+			"order":2,
+			"val":"each character in opponent is one of 'R', 'P', or 'S'"
+		}
+	]
+}

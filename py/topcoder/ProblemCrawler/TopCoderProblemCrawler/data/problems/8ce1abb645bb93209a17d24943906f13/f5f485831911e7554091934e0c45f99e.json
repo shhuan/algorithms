@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=146&rd=3023",
+	"statement":"<pre>Class name: Hull\nMethod name: numSegmentPoints\nParameters: int[]\nReturns: int\n\nGiven a set S of points in the two-dimensional plane, return the number of\npoints of the smallest convex set containing S.  The points in this convex set\nmust be in S.  Think of the shape assumed by a rubber band that has been\nstretched around pegs at each point in S and released to conform as closely as\npossible to the pegs - and return the number of points in S required to keep\nthat shape of the elastic.  If S has no points, then the smallest convex set is\nthe empty set, so 0 should be returned.\n\nInput:  A int[] S of elements where every two numbers is an x and a y\ncoordinate of a point.  (Duplicate points are to be ignored.)\nOutput:  The number of points of the smallest convex set containing S.  (For\nexample, if the convex set is a triangle, return 3, a square, return 4, etc.)\n\nHere is the method signature (be sure your method is public):\nint numSegmentPoints(int[] S);\n\nS is guaranteed to contain no more than 25 points (50 elements).  The\ncoordinates are guaranteed to be no less than -1000 and no greater than 1000.\nS contains an even number of values.  TopCoder will check all this.\n\nExamples:\n\nIf the int[] is {-5, 0, 3, -10, 3, 10, 10, 5, 10, -5, 0, 0, 2, -2}\nThe Points:  (-5,0) (3,-10) (3,10) (10,5) (10,-5) (0,0) (2,-2)\n\nThe first 5 are vertices of a convex polygon that contains all the points of S\n(marked with a #) and the others are inside (*).  So the method should return\n5.  (Note that the above points could be entered in any order provided the\npairs are kept together - and the result would still be 5).\n\n 10               #\n  9\n  8\n  7\n  6\n  5                      #\n  4\n  3\n  2\n  1\n  0       #    *\n -1\n -2              *\n -3\n -4\n -5                      #\n -6\n -7\n -8\n -9\n-10               #\n     100000000000000000001\n     098765432101234567890\n     (negative)\n\nInput:  S = {10, 34}\nOutput:  1\n\nInput:  S = {0, 0, 10, 0, 5, 10, 5, 2}\nOutput:  3\n\nInput:  S = {0, 0, 0, 10, 10, 10, 10, 0, 5, 5}\nOutput:  4\n\nInput: S = {0, 0, 1, 1, 2, 2}\nOutput: 2\n\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Hull",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numSegmentPoints",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numSegmentPoints(int[] param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

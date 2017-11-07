@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13174&rd=15978",
+	"statement":"<p>You have 16 bricks. Each brick has the shape of a rectangular box. You are given a int[] <b>height</b>. For each i, one of your bricks has dimensions 1 x 1 x <b>height</b>[i].</p> <br /><br /> <p>You also have an opaque table. You are going to place your 16 bricks onto the table in a specific way. You are not allowed to rotate the bricks while placing them: the dimension given in <b>height</b> must always be vertical. On the table, there is a 4 x 4 grid of squares. You have to place exactly one of your bricks onto each of the squares.</p> <br /><br /> <p>After you place all the bricks, we will look at the solid formed by them. We are interested in the visible surface area of the solid. Note that the bottom sides of your bricks are not a part of the visible surface, as they stand on the table. Also, adjacent bricks always touch each other and the parts where they touch are not visible.</p> <br /><br /> <p>Different arrangements of bricks may lead to different visible surfaces. Return the largest possible visible surface area.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SixteenBricks",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maximumSurface",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maximumSurface(int[] height)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 32",
+			"id":0,
+			"input":"{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}",
+			"note":"All your bricks look the same. The only solid you can construct is a 1 x 4 x 4 box. The bottom side of the box is not visible, the other five sides are. The total visible surface area is 4*4 + 4*(1*4) = 32.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 64",
+			"id":0,
+			"input":"{1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2}",
+			"note":"In order to maximize the visible surface area, you should produce a configuration in which no two bricks with height 2 share a common face.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1798",
+			"id":0,
+			"input":"{77, 78, 58, 34, 30, 20, 8, 71, 37, 74, 21, 45, 39, 16, 4, 59} ",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"height will contain exactly 16 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of height will be between 1 and 100, inclusive."
+		}
+	]
+}

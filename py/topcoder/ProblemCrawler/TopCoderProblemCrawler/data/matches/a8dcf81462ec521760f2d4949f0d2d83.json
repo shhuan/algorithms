@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":207.16,
+			"constraints":[],
+			"correctRatio":49.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8374&rd=10793",
+			"name":"SyllableSorting",
+			"notes":[],
+			"submission":532
+		},
+		{
+			"avgPts":314.51,
+			"constraints":[],
+			"correctRatio":92.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8225&rd=10793",
+			"name":"PlayerExtraction",
+			"notes":[],
+			"submission":432
+		},
+		{
+			"avgPts":426.9,
+			"constraints":[],
+			"correctRatio":7.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8284&rd=10793",
+			"name":"CommercialPlanner",
+			"notes":[],
+			"submission":205
+		}
+	],
+	"name":"Single Round Match 374 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10793"
+}

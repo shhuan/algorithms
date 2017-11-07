@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11566&rd=14547",
+	"statement":"Alice and Bob play the following game. The game board consists of some cells in a row. Each cell is marked either 'A' or 'B'. At the beginning, there are no coins placed on the board – all the cells are empty. Alice and Bob take alternating turns. Alice plays first. In each turn, the current player chooses some contiguous empty cells and places a coin onto each of the chosen cells. The player must always choose at least one cell. The player must never choose all empty cells. In other words, after each turn there must be at least one empty cell. <br /><br /><br /><br /> The following picture shows two examples of placing coins: <br /><br /> <img src=\"http://community.topcoder.com/contest/problem/RowAndCoins/RowAndCoins.png\" /> <br /><br /><br /><br /> The game ends when there is only one cell left without a coin. If that cell is marked 'A', Alice wins. Otherwise, Bob wins. You are given a String <b>cells</b> representing the row of cells. Assuming that both players aim to win and play optimally, return a String containing the name of the winner. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RowAndCoins",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getWinner",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getWinner(String cells)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"Alice\"",
+			"id":0,
+			"input":"\"ABBB\"",
+			"note":"Alice can win by placing coins on three cells marked 'B' in her first turn. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"Bob\"",
+			"id":0,
+			"input":"\"BBBB\"",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"Alice\"",
+			"id":0,
+			"input":"\"BA\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"Bob\"",
+			"id":0,
+			"input":"\"BABBABBB\"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"Alice\"",
+			"id":0,
+			"input":"\"ABABBBABAABBAA\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"Bob\"",
+			"id":0,
+			"input":"\"BBBAAABBAAABBB\"",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cells will contain between 2 and 14 characters, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each character in cells will be either 'A' or 'B'. "
+		}
+	]
+}

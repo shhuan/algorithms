@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1786&rd=4590",
+	"statement":"<p>Often employees at a company time stamp their arrivals and departures, so when the month is over the boss can check how much each employee has worked. Given the time stamps for a single employee during a single day as well as his (or her) hourly wage, calculate how much the employee has earned that day.</p> <p>The time stamps are given in the format &quot;hh:mm:ss&quot; (quotes for clarity only) where hh is the hour (between 00 and 23 inclusive), mm is the minute (between 00 and 59 inclusive) and ss is the second (between 00 and 59 inclusive). All these numbers have exactly two digits. The arrival time stamps are inclusive, and the departure time stamps are exclusive, so an employee arriving at 09:00:00 one day and departing 17:30:00 the same day has worked exactly 8 hours 30 minutes 0 seconds during that interval.</p> <p>An employee working during evenings (between 18:00:00 and 23:59:59, inclusive) or nights (between 00:00:00 and 05:59:59, inclusive) gets paid one and a half times as much during that period.</p> <p>Create a class Salary containing the method howMuch which takes a String[], <b>arrival</b>, and a String[], <b>departure</b>, the arrival and departures times of an employee, respectively, as well an int <b>wage</b>, the hourly wage (in cents). Your method should return an int representing the total amount (in cents) the employee earned during the time he or she worked. The amount should be rounded down to the largest integer less than or equal to the actual amount. Element <i>i</i> in <b>arrival</b> corresponds to element <i>i</i> in <b>departure</b>.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Salary",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMuch",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMuch(String[] arrival, String[] departure, int wage)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"12:00:00\",\"17:00:00\",\"20:48:10\"}",
+			"id":0,
+			"input":"{\"08:00:00\",\"13:00:00\",\"19:27:32\"}",
+			"note":"This employee worked 4 hours, took a break and then worked 4 more hours. Later he got back to work and worked 1 hour, 20 minutes and 38 seconds overtime. The salary becomes (4+4)*1000 + (1+20/60+38/3600)*1000*1.5 = 10015.83333 which is rounded down to 10015. ",
+			"order":1
+		},
+		{
+			"expect":"{\"09:27:30\",\"21:17:59\"}",
+			"id":0,
+			"input":"{\"01:05:47\",\"16:48:12\"}",
+			"order":2
+		},
+		{
+			"expect":"{\"23:59:59\"}",
+			"id":0,
+			"input":"{\"00:00:00\"}",
+			"order":3
+		},
+		{
+			"expect":"{\"18:00:00\"}",
+			"id":0,
+			"input":"{\"10:00:00\"}",
+			"note":"Notice that 18:00:00 is exclusive, so the last second was not overtime. ",
+			"order":4
+		},
+		{
+			"expect":"{\"23:12:46\"}",
+			"id":0,
+			"input":"{\"22:19:46\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"arrival will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"departure will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"arrival will contain the same number of elements as departure."
+		},
+		{
+			"order":4,
+			"val":"All elements in arrival and departure will be in the form &quot;hh:mm:ss&quot; (quotes for clarity only) satisfying the constraints given above."
+		},
+		{
+			"order":5,
+			"val":"All time stamps will be strictly increasing; that is, arrival[0]&lt;departure[0]&lt;arrival[1]&lt;departure[1] and so on."
+		},
+		{
+			"order":6,
+			"val":"wage will be between 100 and 10000, inclusive."
+		}
+	]
+}

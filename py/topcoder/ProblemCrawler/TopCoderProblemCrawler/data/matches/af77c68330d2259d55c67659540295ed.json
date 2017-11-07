@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":143.25,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11077&rd=14284",
+			"name":"DistantPoints",
+			"notes":[],
+			"submission":10
+		},
+		{
+			"avgPts":288.31,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11041&rd=14284",
+			"name":"AliceInWanderland",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11042&rd=14284",
+			"name":"SemifinalAssignment",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2010 TCO Algorithm > Semifinal 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14284"
+}

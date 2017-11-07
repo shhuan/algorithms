@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1931&rd=4709",
+	"statement":"You have been given a <b>rows</b>-by-<b>cols</b> chessboard, with a list of squares cut out. The list of <b>cutouts</b> will be given in a String[] <b>cutouts</b>. Each element of <b>cutouts</b> is a comma-delimited lists of <i>coords</i>. Each coord has the form (quotes for clarity) &quot;r c&quot;. If coord &quot;r c&quot; appears in an element of <b>cutouts</b>, it means that the square at row r column c (0-based) has been removed from the chessboard. This problem will involve placing rooks on a chessboard, so that they cannot attack each other. For a rook to attack a target piece, it must share the same row or column as the target. Your method will return an int that will be the maximum number of rooks that can be placed on the chessboard, such that no pair of rooks can attack each other. Rooks cannot be placed on cut out squares. The cut out squares do not affect where the rooks can attack.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RookAttack",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int rows, int cols, String[] cutouts)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"8",
+			"id":0,
+			"input":"8",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"200",
+			"id":0,
+			"input":"200",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rows will be between 1 and 300 inclusive."
+		},
+		{
+			"order":2,
+			"val":"cols will be between 1 and 300 inclusive."
+		},
+		{
+			"order":3,
+			"val":"cutouts will contain between 0 and 50 elements inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of cutouts will contain between 3 and 50 characters inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of cutouts will be a comma delimited list of coords. Each coord will be of the form &quot;r c&quot;, where \n \n  r and c are integers, with no extra leading zeros, \n  r is between 0 and rows-1 inclusive, \n   and c is between 0 and cols-1 inclusive.\n "
+		},
+		{
+			"order":6,
+			"val":"Each element of cutouts will not contain leading or trailing spaces."
+		}
+	]
+}

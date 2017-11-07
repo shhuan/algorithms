@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":202.74,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13268&rd=16187",
+			"name":"ZooExchangeProgram",
+			"notes":[],
+			"submission":12
+		},
+		{
+			"avgPts":302.02,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13515&rd=16187",
+			"name":"AutomorphicTree",
+			"notes":[],
+			"submission":10
+		},
+		{
+			"avgPts":485,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13476&rd=16187",
+			"name":"CarrotField",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"2014 TCO Algorithm > Semifinal 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16187"
+}

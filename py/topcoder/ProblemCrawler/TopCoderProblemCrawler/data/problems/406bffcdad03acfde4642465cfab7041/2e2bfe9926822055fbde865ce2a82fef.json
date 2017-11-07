@@ -1,0 +1,117 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12143&rd=15175",
+	"statement":"In Tokyo, there is a big circular railroad called &quot;Yamanote Line.&quot; It contains <b>n</b> stations, numbered 0 through <b>n</b>-1 in clockwise direction. You are given the int <b>n</b>. <br /><br /> <br /><br /> There is a direct track segment between each pair of consecutive stations (between 0 and 1, between 1 and 2, ..., and between <b>n</b>-1 and 0). You do not know the exact lengths of these track segments, but you know for sure that the length of each track segment is a positive integer. <br /><br /> <br /><br /> You want to find the length of the entire circular railroad. Two of your friends took some rides on the Yamanote line and reported their findings to you. The first friend was trying to establish some lower bounds. Each of his reports had the form: &quot;The clockwise distance from station S to a different station T is <i>at least</i> L.&quot; The second friend was trying to establish some upper bounds. Each of her reports had the form: &quot;The clockwise distance from station S to a different station T is <i>at most</i> L.&quot; <br /><br /> <br /><br /> You are given 6 int[]s: <b>s1</b>, <b>t1</b>, <b>l1</b>, <b>s2</b>, <b>t2</b>, <b>l2</b>. For each i, the i-th entries of <b>s1</b>, <b>t1</b>, and <b>l1</b> describe one of the reports you got from your first friend: the total length of railroad tracks from the station <b>s1</b>[i] to the station <b>t1</b>[i] in clockwise direction is at least <b>l1</b>[i]. Similarly, for each i, the i-th entries of <b>s2</b>, <b>t2</b>, and <b>l2</b> describe one of the reports you got from your second friend: the total length of railroad tracks from the station <b>s2</b>[i] to the station <b>t2</b>[i] in clockwise direction is at most <b>l2</b>[i]. <br /><br /> <br /><br /> As stated before, you are interested in finding the total length of the entire circle of railroad tracks. Of course, there can be multiple values consistent with the information your friends gave you. It is also possible that your friends made a mistake and there is no set of segment lengths consistent with the information you received. <br /><br /> <br /><br /> Your task is to calculate how many different total lengths of the railway are consistent with the information you received. If the number of possibilities is finite, return it. If there are infinitely many possible total lengths, return -1 instead. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"YamanoteLine",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[], int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long howMany(int n, int[] s1, int[] t1, int[] l1, int[] s2, int[] t2, int[] l2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"3",
+			"note":"The input tells us that each of the distances \"from 0 to 1\", \"from 1 to 2\", and \"from 2 to 0\" is at most 1. But as we know, the length of each track segment is a positive integer. Therefore, each of the three segments has length exactly 1. Hence, there is only one possibility: the total length of the Yamanote line is 1+1+1 = 3. ",
+			"order":1
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"3",
+			"note":"Each direct track segment can have a length of 1 or 2, so the possible total lengths are 3, 4, 5, or 6.",
+			"order":2
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"3",
+			"note":"At most one of the three direct track segments can have a length of 2.",
+			"order":3
+		},
+		{
+			"expect":"{0,1,2,3}",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{0,2}",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{5,7,2,3,9,4,6,0,4,2}",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 3 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"s1, t1, and l1 will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"s2, t2, and l2 will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"s1 and s2 will each contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of s1, t1, s2, and t2 will be between 0 and n-1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of l1, l2 will be between 1 and 10^9, inclusive."
+		},
+		{
+			"order":7,
+			"val":"For each i, the i-th element of s1 and the i-th element of t1 will not be equal."
+		},
+		{
+			"order":8,
+			"val":"For each i, the i-th element of s2 and the i-th element of t2 will not be equal."
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2377&rd=4745",
+	"statement":"<p> An important problem in DNA analysis is finding <i>tandem repeats</i>. A tandem repeat occurs when a base sequence of nucleotides appears twice in a row. (In this problem, a base sequence is simply a contiguous substring and a nucleotide is simply a letter.) For example, in the DNA sequence &quot;GATCATCA&quot;, the base sequence &quot;ATC&quot; appears twice in a row. In contrast, &quot;ATCGATC&quot; is not a tandem repeat of the base sequence &quot;ATC&quot; because of the 'G' in between the two copies. </p> <p> Real DNA often contains errors in which one nucleotide is substituted for another. A <b>k</b>-approximate tandem repeat occurs when a base sequence of nucleotides appears twice in a row, allowing the second copy of the base sequence to differ from the first copy in at most <b>k</b> nucleotides. For example, in the DNA sequence &quot;GATCATGA&quot;, the base sequence &quot;ATC&quot; is immediately repeated with a single error as &quot;ATG&quot;. Thus, &quot;ATCATG&quot; is a 1-approximate tandem repeat. Note that both copies of the base sequence must be the same length. </p> <p> Given a DNA sequence <b>dna</b> (represented as a String) and a limit <b>k</b> on the number of errors, find the length of the longest sequence that appears in <b>dna</b> as the base sequence of a <b>k</b>-approximate tandem repeat. Note that a <b>k</b>-approximate tandem repeat contains <i>at most</i> <b>k</b> errors, but it is allowed to contain fewer errors. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TandemRepeats",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxLength",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxLength(String dna, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"\"GATCATCA\"",
+			"note":"A tandem repeat with a base sequence of length 3 is \"ATCATC\", with base sequence \"ATC\".",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"\"GATCATGA\"",
+			"note":"A 1-approximate tandem repeat is \"ATCATG\". The base sequence \"ATC\" is repeated with a single error.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"\"GATCATGA\"",
+			"note":"This example has no tandem repeats.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"AGAGAAAGAA\"",
+			"order":4
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"\"ATTAGCATTGCACACCTTGAGGACTTAGACAAACCTAGTACACAGGTGTA\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"dna contains between 2 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Every character in dna is a 'G', 'A', 'T', or 'C'."
+		},
+		{
+			"order":3,
+			"val":"k is between 0 and 5, inclusive."
+		}
+	]
+}

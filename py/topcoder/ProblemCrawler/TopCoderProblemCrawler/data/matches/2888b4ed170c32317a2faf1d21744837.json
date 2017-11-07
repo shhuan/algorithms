@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.57,
+			"constraints":[],
+			"correctRatio":95.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6498&rd=9992",
+			"name":"ParallelepipedUnion",
+			"notes":[],
+			"submission":401
+		},
+		{
+			"avgPts":255.88,
+			"constraints":[],
+			"correctRatio":28.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6501&rd=9992",
+			"name":"AntarcticaPolice",
+			"notes":[],
+			"submission":283
+		},
+		{
+			"avgPts":447.47,
+			"constraints":[],
+			"correctRatio":3.7,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6482&rd=9992",
+			"name":"CheapestIsland",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"Single Round Match 312 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9992"
+}

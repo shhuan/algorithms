@@ -1,0 +1,118 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5919&rd=8078",
+	"statement":"<p>A ball is moving diagonally on a rectangular board composed of unit squares in <b>rows</b> rows and <b>columns</b> columns. Each square is identified by its row and column number. The lowermost row is marked row 0 and the leftmost column is column 0.</p> <p>The ball is initially located in the middle of a starting square given by two integers, <b>startrow</b> and <b>startcol</b>, and is moving diagonally up-right at an angle of 45 degrees. Whenever it reaches a wall, it bounces off it at a right angle (an angle of 90 degrees) and continues moving. If the ball runs into a corner, it bounces back in the opposite direction from which it came..</p> <p><img src=\"http://www.topcoder.com/contest/problem/BallBouncing/BallBouncing.png\" /></p> <p>A number of holes have been drilled in the board and the ball will fall in upon reaching a square with a hole. Given the board size, starting location and locations of holes, return the number of times the ball will bounce off a wall before falling into a hole, or -1 if the ball will continue bouncing indefinitely.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Bouncing back from a corner counts as only one bounce."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BallBouncing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bounces",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int bounces(int rows, int columns, int startrow, int startcol, String[] holes)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"11",
+			"id":0,
+			"input":"8",
+			"note":"This example corresponds to the image in the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"6",
+			"note":"Bouncing back from a corner counts as only one bounce.",
+			"order":2
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"6",
+			"note":"With no holes, the ball is bound to bounce around for quite a while.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"order":4
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"6",
+			"order":5
+		},
+		{
+			"expect":"999999",
+			"id":0,
+			"input":"1000000",
+			"order":6
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"5",
+			"order":7
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rows and columns will be between 1 and 1000000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"startrow will be between 0 and rows-1, inclusive."
+		},
+		{
+			"order":3,
+			"val":"startcol will be between 0 and columns-1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"holes will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of holes will be formatted as &quot;row column&quot; (quotes for clarity), where row and column will be integers with no leading zeros representing a square inside the board."
+		},
+		{
+			"order":6,
+			"val":"There will be no holes at the starting position of the ball."
+		},
+		{
+			"order":7,
+			"val":"No two holes will occupy the same position on the board."
+		}
+	]
+}

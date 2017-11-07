@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":209.33,
+			"constraints":[],
+			"correctRatio":75.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10706&rd=13908",
+			"name":"DoubleXor",
+			"notes":[],
+			"submission":649
+		},
+		{
+			"avgPts":266.25,
+			"constraints":[],
+			"correctRatio":82.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10709&rd=13908",
+			"name":"NumbersAndMatches",
+			"notes":[],
+			"submission":314
+		},
+		{
+			"avgPts":470.38,
+			"constraints":[],
+			"correctRatio":18.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10710&rd=13908",
+			"name":"MegaSum",
+			"notes":[],
+			"submission":16
+		}
+	],
+	"name":"Single Round Match 454 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13908"
+}

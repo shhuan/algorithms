@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":183.99,
+			"constraints":[],
+			"correctRatio":99.68,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6477&rd=9988",
+			"name":"HuffmanDecoding",
+			"notes":[],
+			"submission":312
+		},
+		{
+			"avgPts":258.63,
+			"constraints":[],
+			"correctRatio":92.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6475&rd=9988",
+			"name":"CornersGame",
+			"notes":[],
+			"submission":154
+		},
+		{
+			"avgPts":440.77,
+			"constraints":[],
+			"correctRatio":1.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6181&rd=9988",
+			"name":"Wardrobe",
+			"notes":[],
+			"submission":59
+		}
+	],
+	"name":"Single Round Match 308 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9988"
+}

@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11899&rd=15093",
+	"statement":"Cucumberman planted N cucumbers along a straight road. Cucumbers are numbered 0 through N-1, and the position of the i-th cucumber is <b>x</b>[i]. The cucumbers are at pairwise distinct coordinates, but their coordinates are not necessarily in sorted order. He waters all cucumbers every day. He can't change the order of watering cucumbers, so he must water cucumber 0 first, water cucumber 1 next, and so on. (Note that this means he may be going back and forth along the road.) <br /><br /> <br /><br /> Watering a cucumber takes zero time. When walking, Cucumberman needs one unit of time to travel one unit of distance. Additionally, he can build at most <b>K</b> teleports at any positions (including non-integer ones). If there are teleports at both P and Q, he can move from P to Q instantly using teleports. <br /><br /> <br /><br /> He wants to minimize the duration between watering cucumber 0 and watering cucumber N-1. Return this minimum time, assuming that he builds and uses the <b>K</b> teleports optimally. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CucumberWatering",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theMin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long theMin(int[] x, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{0, 6, 8, 2}",
+			"note":"One optimal way is as follows:  It takes |0-1| + |7-6| + |6-8| + |8-7| + |1-2| = 6 unit time in total. ",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{-1000000000, 1000000000, 0}",
+			"note":"Only one teleport is useless.",
+			"order":2
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"{58, 2012}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{9, -3, 14, 6, 5, -9, 32, 7, -5, 26, 2, 11}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of x will be between -1,000,000,000 (-10^9) and 1,000,000,000 (10^9), inclusive."
+		},
+		{
+			"order":3,
+			"val":"Elements of x will be pairwise distinct."
+		},
+		{
+			"order":4,
+			"val":"K will be between 1 and 50, inclusive."
+		}
+	]
+}

@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7552&rd=10881",
+	"statement":"<p> A long straight road goes from city A to city B. There are several radio stations along the road, and their ranges are described by the int[]s <b>left</b> and <b>right</b>. The i-th radio station can be heard at any point on the road between <b>left</b>[i] and <b>right</b>[i] kilometers from city A, inclusive. </p> <p> A segment of the road is called entertaining if at least <b>k</b> radio stations can be heard at all points on the segment. Return the length of the longest entertaining segment of the road. If there is no such segment, return 0. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EntertainingSegment",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"longestEntertainingSegment",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int longestEntertainingSegment(int[] left, int[] right, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{5, 8, 7, 10}",
+			"id":0,
+			"input":"{1, 4, 3, 7}",
+			"note":"The longest entertaining segment here is from 3 to 8.",
+			"order":1
+		},
+		{
+			"expect":"{1000000000}",
+			"id":0,
+			"input":"{1}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{3, 5}",
+			"id":0,
+			"input":"{1, 3}",
+			"note":"There is no entertaining segment here.",
+			"order":3
+		},
+		{
+			"expect":"{2,2,6,6}",
+			"id":0,
+			"input":"{1,1,4,4}",
+			"note":"The ranges of radio stations can coincide.",
+			"order":4
+		},
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"{1}",
+			"note":"There are not enough radio stations to form an entertaining segment.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"left will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"left and right will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of left will be between 1 and 1000000000 (109), inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of right will be between 1 and 1000000000 (109), inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of left will be strictly less than the corresponding element of right."
+		},
+		{
+			"order":6,
+			"val":"k will be between 1 and 50, inclusive."
+		}
+	]
+}

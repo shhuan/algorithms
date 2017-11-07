@@ -1,0 +1,109 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9790&rd=12179",
+	"statement":"You are given two matrices <b>A</b> and <b>B</b>. Each matrix is represented by a String[] containing only '0' and '1' digits. The j-th character of the i-th element is the value at cell (i, j). Your goal is to transform matrix <b>A</b> into matrix <b>B</b> using a series of swaps. On each swap, you choose two adjacent (horizontally, vertically or diagonally) cells in matrix <b>A</b> and swap their values.<br /><br /> There is a limit to the number of times each cell in matrix <b>A</b> can be used. You are given a third matrix <b>count</b> as a String[] containing only digits ('0'-'9'). Cell (i, j) in matrix <b>A</b> can be used in a maximum of <b>count</b>(i, j) swaps. Return the fewest number of swaps required to achieve your goal, or return -1 if it is impossible.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TransformMatrix",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"transform",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int transform(String[] A, String[] B, String[] count)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"000\", \"110\", \"100\"}",
+			"id":0,
+			"input":"{\"110\", \"000\", \"001\"}",
+			"note":"Here is one of the ways: (0,0) - (1,1) (0,1) - (1,0) (2,2) - (2,1) (2,1) - (2,0)",
+			"order":1
+		},
+		{
+			"expect":"{\"01\"}",
+			"id":0,
+			"input":"{\"10\"}",
+			"note":"Just swap the values in the two cells of the matrix.",
+			"order":2
+		},
+		{
+			"expect":"{\"111\", \"000\", \"111\"}",
+			"id":0,
+			"input":"{\"111\", \"000\", \"111\"}",
+			"note":"Matrix A is already equal to matrix B, so no swaps are required.",
+			"order":3
+		},
+		{
+			"expect":"{\"000\", \"111\"}",
+			"id":0,
+			"input":"{\"001\", \"110\"}",
+			"note":"Here we can't use any cell from row 0.",
+			"order":4
+		},
+		{
+			"expect":"{\"000\", \"000\"}",
+			"id":0,
+			"input":"{\"100\", \"000\"}",
+			"note":"The two matrices contain a different number of '1's, so it is impossible to transform one into the other.",
+			"order":5
+		},
+		{
+			"expect":"{\"110100\", \"000011\", \"000000\", \"110001\", \"000010\"}",
+			"id":0,
+			"input":"{\"011101\", \"110000\", \"000011\", \"000000\", \"100000\"}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{\"00\", \"01\"}",
+			"id":0,
+			"input":"{\"10\", \"00\"}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A, B and count will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of A, B and count will contain between 1 and 20 digits, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of A, B and count will contain the same number of characters."
+		},
+		{
+			"order":5,
+			"val":"Each element of count will contain only digits ('0' to '9')."
+		},
+		{
+			"order":6,
+			"val":"Each element of A and B will contain only '0' (zero) and '1' (one) digits."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":211.33,
+			"constraints":[],
+			"correctRatio":69.65,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=744&rd=4190",
+			"name":"SquareFind",
+			"notes":[],
+			"submission":201
+		},
+		{
+			"avgPts":268.45,
+			"constraints":[],
+			"correctRatio":61.72,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=725&rd=4190",
+			"name":"NumberFill",
+			"notes":[],
+			"submission":128
+		},
+		{
+			"avgPts":577.61,
+			"constraints":[],
+			"correctRatio":29.41,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=756&rd=4190",
+			"name":"Counter",
+			"notes":[],
+			"submission":17
+		}
+	],
+	"name":"Single Round Match 94 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4190"
+}

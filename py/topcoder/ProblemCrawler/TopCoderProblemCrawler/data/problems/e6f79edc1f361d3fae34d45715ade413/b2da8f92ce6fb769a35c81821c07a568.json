@@ -1,0 +1,123 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1287&rd=4474",
+	"statement":"Given a int[] <b>values</b> containing positive integers return (quotes for clarity):\n <ul> \n  <li>&quot;ASCENDING <i>mean</i>&quot; if the numbers are in increasing order and there are no repeated values,</li> \n  <li>&quot;DESCENDING <i>mean</i>&quot; if the numbers are in decreasing order and there are no repeated values,</li> \n  <li>&quot;NONASCENDING <i>freq</i>&quot; if the numbers are in decreasing order and contain repeated values,</li> \n  <li>&quot;NONDESCENDING <i>freq</i>&quot; if the numbers are in increasing order and contain repeated values,</li> \n  <li>or &quot;NOTHING&quot; if the numbers are none of the above.</li> \n </ul> where <i>mean</i> is a reduced fraction representing the average of the numbers formatted as (quotes for clarity) <i>&quot;numerator/denominator&quot;</i><br /><br /> and <i>freq</i> is the number of times the most frequently occurring value occurred in the sequence.<br /><br /> Neither <i>numerator</i> nor <i>denominator</i> should have any leading zeros. For example (quotes for clarity):<pre>\n<b>values</b> = {1,2,4,11}       return &quot;ASCENDING 9/2&quot; since the average is 18/4 = 9/2\n<b>values</b> = {1,2,2,2,3,4}   return &quot;NONDESCENDING 3&quot;  since 2 occurred 3 times\n<b>values</b> = {6,5,1}         return &quot;DESCENDING 4/1&quot; since the average is 12/3 = 4/1\n<b>values</b> = {5,5,4,4,1}     return &quot;NONASCENDING 2&quot; since 5 occurred twice\n<b>values</b> = {1,2,3,4,1}     return &quot;NOTHING&quot; since no other choice is possible\n</pre>",
+	"notes":[{
+		"order":1,
+		"val":"Be sure that you spell everything correctly."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Ordered",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getType",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getType(int[] values)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"ASCENDING 9/2\"",
+			"id":0,
+			"input":"{1,2,4,11}",
+			"note":"Increasing order with no repeats",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"NONDESCENDING 3\"",
+			"id":0,
+			"input":"{1,2,2,2,3,4}",
+			"note":"Increasing order but the 2 is repeated 3 times",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"DESCENDING 4/1\"",
+			"id":0,
+			"input":"{6,5,1}",
+			"note":"Decreasing order with no repeats",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"NONASCENDING 2\"",
+			"id":0,
+			"input":"{5,5,4,4,1}",
+			"note":"Decreasing order but there are repeats",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"NOTHING\"",
+			"id":0,
+			"input":"{1,2,3,4,1}",
+			"note":"The sequence increases at first but decreases at the end",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"DESCENDING 999/1\"",
+			"id":0,
+			"input":"{1000,999,998}",
+			"note":"Decreasing with no repeats",
+			"order":6
+		},
+		{
+			"expect":"Returns: \"NONDESCENDING 5\"",
+			"id":0,
+			"input":"{999,1000,1000,1000,1000,1000}",
+			"order":7
+		},
+		{
+			"expect":"Returns: \"NOTHING\"",
+			"id":0,
+			"input":"{1,1000,1,1000,1,1000}",
+			"order":8
+		},
+		{
+			"expect":"Returns: \"ASCENDING 638/25\"",
+			"id":0,
+			"input":"{1,2,3,4,5,6,7,8,9,10, 11,12,13,14,15,16,17,18,19,20, 21,22,23,24,25,26,27,28,29,30, 31,32,33,34,35,36,37,38,39,40, 41,42,43,44,45,46,47,48,49,51}",
+			"order":9
+		},
+		{
+			"expect":"Returns: \"NONASCENDING 2\"",
+			"id":0,
+			"input":"{2,2,1}",
+			"order":10
+		},
+		{
+			"expect":"Returns: \"NONDESCENDING 2\"",
+			"id":0,
+			"input":"{1,2,2}",
+			"order":11
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"values must contain between 2 and 50 elements inclusive"
+		},
+		{
+			"order":2,
+			"val":"At least 2 elements of values must be distinct"
+		},
+		{
+			"order":3,
+			"val":"Each element of values must be between 1 and 1000 inclusive"
+		}
+	]
+}

@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11817&rd=14730",
+	"statement":"King Dengklek is the perfect king of Kingdom of Ducks, where slimes and ducks live together in peace and harmony. <br /><br /><br /><br /> Kingdom of Ducks has a pretty strange currency system. There are only two coin types: one with value <b>A</b> and one with value <b>B</b>, where <b>A</b> and <b>B</b> are different. This currency system is denoted by {<b>A</b>, <b>B</b>}. These two coin types are sufficient for daily transactions, because all prices in this kingdom are in the form of (<b>A</b>*p + <b>B</b>*q) for some non-negative integers p and q. Therefore, slimes and ducks can pay for any goods with a combination of the two coin types. <br /><br /><br /><br /> Bored with the current system, King Dengklek considered another currency system with two coin types: one with value <b>X</b> and one with value Y, where <b>X</b> and Y are different. Of course, with this new system, combinations of the two new coin types must make it possible to pay all the prices one could pay with currency system {<b>A</b>, <b>B</b>}. (Note that the new coin types may also make it possible to pay some additional prices.) <br /><br /><br /><br /> You are given ints <b>A</b>, <b>B</b>, and <b>X</b>. Return the number of different positive integers Y (other than <b>X</b>) such that the currency system {<b>X</b>, Y} can be used to replace the currency system {<b>A</b>, <b>B</b>}. If there is an infinite number of possible values for Y, return -1 instead.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"KingXNewCurrency",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int A, int B, int X)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"8",
+			"id":0,
+			"input":"5",
+			"note":"These are the 5 possible currency systems: {5, 1}, {5, 2}, {5, 3}, {5, 4}, and {5, 8}.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"8",
+			"note":"All prices are multiples of four. Since a coin type with value 2 alone can pay any price that is a multiple of four, there is an infinite number of possible values of Y.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"7",
+			"note":"The only possible currency system is {13, 1}.",
+			"order":3
+		},
+		{
+			"expect":"74",
+			"id":0,
+			"input":"47",
+			"note":"The two possible currency systems are {44, 1} and {44, 3}.",
+			"order":4
+		},
+		{
+			"expect":"96",
+			"id":0,
+			"input":"128",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A, B, and X will each be between 1 and 200, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A and B will be different."
+		}
+	]
+}

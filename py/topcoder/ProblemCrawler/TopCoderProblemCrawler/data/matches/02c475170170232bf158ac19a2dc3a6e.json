@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":228.72,
+			"constraints":[],
+			"correctRatio":97.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4483&rd=7228",
+			"name":"WordCompositionGame",
+			"notes":[],
+			"submission":242
+		},
+		{
+			"avgPts":314.39,
+			"constraints":[],
+			"correctRatio":77.97,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4473&rd=7228",
+			"name":"PluCodeGenerator",
+			"notes":[],
+			"submission":59
+		},
+		{
+			"avgPts":625.64,
+			"constraints":[],
+			"correctRatio":8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4527&rd=7228",
+			"name":"OddDigitable",
+			"notes":[],
+			"submission":125
+		}
+	],
+	"name":"Single Round Match 255 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=7228"
+}

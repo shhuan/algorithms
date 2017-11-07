@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13688&rd=16317",
+	"statement":"<p> Some people are sitting in a row. Each person came here from some country. People from the same country are all sitting together. </p> <p> A reporter has already approached some of the people and asked each of them the same question: &quot;How many people from your country (including you) are here?&quot; All the people who were asked the question gave her correct answers. </p> <p> You are given a int[] <b>a</b>. The elements of <b>a</b> correspond to the people in the row, in order. For each i, element i of <b>a</b> is either 0 if the corresponding person was not asked the question, or a positive integer: the answer given by that person. </p> <p> The reporter just realized that she might be able to reconstruct all the missing answers from the answers she already knows. Return &quot;Sufficient&quot; if she can do that, or &quot;Insufficient&quot; if she cannot. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CountryGroupHard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String solve(int[] a)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"Sufficient\"",
+			"id":0,
+			"input":"{0,2,3,0,0}",
+			"note":"The first two people must be from the same country. The last three people must also be from the same country. Thus, the only possible sequence of answers is {2,2,3,3,3}.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"Insufficient\"",
+			"id":0,
+			"input":"{0,2,0}",
+			"note":"There are still two different sequences of answers that are consistent with the reporter's information: the answers can be either {1,2,2} or {2,2,1}.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"Sufficient\"",
+			"id":0,
+			"input":"{0,3,0,0,3,0}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"Insufficient\"",
+			"id":0,
+			"input":"{0,0,3,3,0,0}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"Sufficient\"",
+			"id":0,
+			"input":"{2,2,0,2,2}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"The number of elements in a will be between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"All numbers of a will be between 0 and 100, inclusive."
+		},
+		{
+			"order":3,
+			"val":"There exist valid country assignment of people for input."
+		}
+	]
+}

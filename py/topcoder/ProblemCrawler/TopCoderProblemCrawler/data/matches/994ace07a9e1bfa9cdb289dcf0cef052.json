@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":190.91,
+			"constraints":[],
+			"correctRatio":67.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10846&rd=14541",
+			"name":"NetworkXOneTimePad",
+			"notes":[],
+			"submission":686
+		},
+		{
+			"avgPts":289.75,
+			"constraints":[],
+			"correctRatio":36.51,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11114&rd=14541",
+			"name":"RowsOrdering",
+			"notes":[],
+			"submission":315
+		},
+		{
+			"avgPts":403.91,
+			"constraints":[],
+			"correctRatio":12.77,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10837&rd=14541",
+			"name":"LexSmallestTour",
+			"notes":[],
+			"submission":47
+		}
+	],
+	"name":"Single Round Match 516 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14541"
+}

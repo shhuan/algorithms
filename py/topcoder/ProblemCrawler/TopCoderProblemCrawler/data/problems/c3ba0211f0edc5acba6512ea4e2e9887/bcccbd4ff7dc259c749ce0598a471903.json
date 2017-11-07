@@ -1,0 +1,68 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1326&rd=4494",
+	"statement":"<p> Consider a binary tree with <i>N</i> nodes, each labeled with a distinct integer between 1 and <i>N</i>, inclusive. We can convert the tree into a sequence of labels by traversing the tree in a particular order, but there are many possible orders. Two common orders are <i>in-order traversal</i> and <i>breadth-first traversal</i>, defined as follows: </p>\n <ul> \n  <li> In-Order: Begin by visiting the root. As you visit each node, first recursively visit its left child (if it has one), then output the node's label, then recursively visit its right child (if it has one).</li> \n  <li> Breadth-First: First output the label of the root, then the labels of the root's children, then the labels of the root's grandchildren, its great-grandchildren, and so on. Among nodes on the same level, output the labels from left to right. </li> \n </ul> For example, given the tree <p></p> <pre>\n                      1\n                     / \\\n                    2   4\n                   /   / \\\n                  3   5   7\n                       \\\n                        6\n</pre> an in-order traversal would produce the sequence 3,2,1,5,6,4,7 and a breadth-first traversal would produce the sequence 1,2,4,3,5,7,6. <p> Given the output of a particular traversal, we cannot always tell which of several possible trees we started with. However, given the output of both an in-order traversal and a breadth-first traversal of the same tree, we can uniquely reconstruct the tree. You are to write a method that takes the output of an in-order traversal, <b>inOrder</b>, and the output of a breadth-first traversal, <b>breadthFirst</b>, and returns the width of the tree, defined as the maximum number of nodes on any one level of the tree. For example, the tree above has width 3, achieved by the level containing the values 3, 5, and 7. </p> <p> If we start with the output of an in-order traversal from one tree and a breadth-first traversal from a <i>different</i> tree, it is not always possible to reconstruct a single tree that is compatible with both sequences. If no tree exists that could have produced both traversals, return -1. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TreeTraversals",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"width",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int width(int[] inOrder, int[] breadthFirst)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ 1,2,4,3,5,7,6 }",
+			"id":0,
+			"input":"{ 3,2,1,5,6,4,7 }",
+			"note":"The example above.",
+			"order":1
+		},
+		{
+			"expect":"{ 1,2,3 }",
+			"id":0,
+			"input":"{ 1,2,3 }",
+			"note":"The tree ",
+			"order":2
+		},
+		{
+			"expect":"{ 5,3,1,2,4 }",
+			"id":0,
+			"input":"{ 1,2,3,4,5 }",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"inOrder and breadthFirst contain the same number of elements (between 1 and 50, inclusive)."
+		},
+		{
+			"order":2,
+			"val":"Every element in inOrder and breadthFirst is between 1 and N, inclusive, where N is the number of elements in inOrder."
+		},
+		{
+			"order":3,
+			"val":"No element appears more than once in inOrder or more than once in breadthFirst."
+		}
+	]
+}

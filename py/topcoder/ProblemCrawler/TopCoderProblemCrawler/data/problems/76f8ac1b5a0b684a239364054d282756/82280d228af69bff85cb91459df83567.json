@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12817&rd=15814",
+	"statement":"<p>Fox Ciel has an unlimited supply of T-shaped tetrominoes. We will call them T-blocks. One T-block is shown in the picture below. The green cell is called the center of the T-block.</p> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/TBlocks/TBlock.png\" /><br /><br /> <br /><br /> <p>Ciel also has a rectangular board divided into square cells. The cells of the board have the same size as the cells of her T-blocks. Each cell is marked 'o', '*', or '-'. Ciel wants to place some T-blocks onto this board in a way that satisfies the following conditions:</p> \n <ul> \n  <li>Each T-block covers precisely 4 cells of the board. (Thus, each T-block must be placed completely inside the board.)</li> \n  <li>No two T-blocks overlap. (They are allowed to touch each other.)</li> \n  <li>The center of a T-block can only be placed on cells marked 'o' and '*'.</li> \n  <li>Each 'o' cell has to contain the center of some T-block.</li> \n </ul> <br /><br /> <p>You are given a String[] <b>board</b> that represents Ciel's board using the characters specified above. Return the number of valid ways in which T-blocks can be placed onto this board, modulo 1,000,000,007.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TBlocks",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"---\" ,\"-o-\" ,\"---\"}",
+			"note":"We have to place exactly one T-block. Its center has to be on the middle cell. There are 4 ways to do this: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"o\"}",
+			"note":"There isn't enough space to place a T-block here.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"**-\" ,\"-**\"}",
+			"note":"Some '*' cells may remain empty. They may also contain T-block cells other than the center. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{\"----\" ,\"-o*-\" ,\"--*-\" ,\"----\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"--\" ,\"--\" ,\"--\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 481632789",
+			"id":0,
+			"input":"{\"-----o------o-----o---o------o-----o--------------\" ,\"-o--------o---o-----------o----o-----o--o---o-o--o\" ,\"----o-o-o--o-------*-o---o--o---o--o---o--o-------\" ,\"-o-----------o-oo-------------o------o---------o--\" ,\"---o-o-o--o-------o-o--o--o------oo-----o---*--o--\" ,\"--o---------o-o-------------o--o-----o---o-------o\" ,\"o---o---oo---------o--o--o-------------o---*------\" ,\"--o---o------o---o---------*-o--o-o------o---o-oo-\" ,\"------o---o----o-----o--o------------o------------\" ,\"-o-o----o---o-----o-------o---oo---o----o--o--o---\" ,\"------o-------o-o----o--o---o----o---o----------o-\" ,\"----o----oo--------o-o----o---o----o---o----o--o--\" ,\"--o-----------o-----------o-----o---------o------o\" ,\"o-----o-----o----o-----o----o----o---o------o-o---\" ,\"---o-----o-----o----o----o----o--------o--------o-\" ,\"-o----o------o----o-----o---o---o---o----o-----o--\" ,\"--------o--o----o----o-------o--------o-----o----o\" ,\"----o-----o---o---oo---o-o-----o--o------o----o---\" ,\"-o----o-o----o--o----o-----o--------o--o---o--o-o-\" ,\"---o------------o--o--------------o---------------\" ,\"-----o-o--o---o--------o--*--o--o----o---o-o---o--\" ,\"-o-------o-------o---o--o----------o---o----o-----\" ,\"----o-o-----o--o---o-------o--o------o----o-----o-\" ,\"-o--------o---------o--o-o------o--o-----*----o---\" ,\"-----o-o-----o--o-o---------o------o---o----------\" ,\"-o-o-----o-o-------o--o--o----o------o--o---o--o-o\" ,\"------o--------o-o-----o----o---o-*---------------\" ,\"-o--o-----o---------o-----------------o---*o----o-\" ,\"----o---o---o-o---o-----o--o---oo--o----o----o----\" ,\"------*----o---------o-------o--------o----------o\" ,\"o--*-----o-----o---o---o---o--o--o--o----o--o-oo--\" ,\"--o----o---o-----o-------o-------------o-o--------\" ,\"----o----o---o-o-----o----o-----o-o--o-------o--o-\" ,\"------o---o-------------o---o-o---------o--o------\" ,\"-o--o-------o-o--o-o--o---------o--o-o-----o--o---\" ,\"------o-o--------o-------o---o---------o--------o-\" ,\"--o----------o-o-----o-----o------o-o-----o--o----\" ,\"---------o-o------o----o------o---------o--o-----o\" ,\"o--o-o----------o---o----o---o--o--o--o-------o---\" ,\"-------o---oo-o-------o----o---o--o-----o-o-----o-\" ,\"-o--o---o-------o--o----o----o------oo-------o----\" ,\"-----o----o----------*-----o-----o------o-o-------\" ,\"o-o----o----o---o--o---o-----o-o------o-----o-o-o-\" ,\"----o----o----o-------o---o-------o-o----o--o-----\" ,\"-o----o----o------o-----------o--------o------o--o\" ,\"-----o--o---o--o----o----oo-o---o-----o----o------\" ,\"o--o------o-------o----o----------*--------o----o-\" ,\"-------o-o---o-------o-------o--o---o----o----o---\" ,\"-o--oo----------oo-o----o--o-----------o----o----o\" ,\"--------o--o--o-------o-------o---o--o---o-----o--\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of board will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character of each element of board will be 'o', '*' or '-'."
+		},
+		{
+			"order":5,
+			"val":"board will contain between 0 and 500 'o's, inclusive."
+		},
+		{
+			"order":6,
+			"val":"board will contain between 0 and 12 '*'s, inclusive."
+		}
+	]
+}

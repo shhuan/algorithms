@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8711&rd=12171",
+	"statement":"<p> You are given three integers: <b>a</b>, <b>b</b> and <b>c</b>. Convert each of them into their binary representations with no leading zeroes. Let x be the number of binary digits in the longest of the three. Add leading zeroes to the others until all of them have exactly x digits. </p> <p> Transform <b>a</b>, <b>b</b> and <b>c</b> into a', b' and c', such that a'+b'=c', by optionally reordering the digits within each number. Leading zeroes are allowed. If there are several ways to do this, use the one that minimizes c'. </p> <p> For example, let <b>a</b> = 7, <b>b</b> = 6 and <b>c</b> = 9. In binary notation, <b>a</b> = 111, <b>b</b> = 110 and <b>c</b> = 1001. We add leading zeroes to <b>a</b> and <b>b</b> so that all of them have exactly four digits: <b>a</b> = 0111, <b>b</b> = 0110, <b>c</b> = 1001. Now, if we reorder the digits within each number to get a' = 0111, b' = 0011 and c' = 1010, we satisfy a' + b' = c' (7 + 3 = 10). There is another way to do this as well (7 + 5 = 12), but this is the way that minimizes c'. </p> <p> You are given ints <b>a</b>, <b>b</b> and <b>c</b>. Return the minimal possible value of c'. If there is no solution, return -1. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BinarySum",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"rearrange",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int rearrange(int a, int b, int c)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"7",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"Leading zeroes are allowed.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"204650420",
+			"id":0,
+			"input":"32517565",
+			"order":6
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"a, b and c will each be between 1 and 2^30, inclusive."
+	}]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":225.24,
+			"constraints":[],
+			"correctRatio":85.21,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7557&rd=10881",
+			"name":"AlmostPerfectNumber",
+			"notes":[],
+			"submission":710
+		},
+		{
+			"avgPts":339.1,
+			"constraints":[],
+			"correctRatio":64.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7552&rd=10881",
+			"name":"EntertainingSegment",
+			"notes":[],
+			"submission":456
+		},
+		{
+			"avgPts":530.93,
+			"constraints":[],
+			"correctRatio":62.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6381&rd=10881",
+			"name":"BlockCounter",
+			"notes":[],
+			"submission":184
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Qualification Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10881"
+}

@@ -1,0 +1,77 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1517&rd=4600",
+	"statement":"<p>In order to cook hamburgers, a chef must fry them 5 minutes on each side. However, the two 5 minute intervals do not have to happen consecutively.</p> <p><b>panSize</b> indicates how many hamburgers can fit into the given pan, while <b>hamburgers</b> represents the number of hamburgers that need to be fried. Given <b>panSize</b> and <b>hamburgers</b> return the minimum amount of time (in minutes) required to fry all the hamburgers.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FryingHamburgers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howLong",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howLong(int panSize, int hamburgers)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"We will assume that the three hamburgers given are A, B and C. The chef could fry A and B on one side, taking up 5 minutes. Then remove B and fry A on its second side together with C on its first side. After 5 minutes, remove A and fry B and C on their second sides for another 5 minutes. The total time used is 15 minutes.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"3",
+			"note":"We will assume that the four hamburgers given are A, B, C and D. The chef could fry A, B and C on one side, taking up 5 minutes. Then remove C and fry A and B on their second side together with D on its first side. So after a total of 10 minutes A and B are completely fried, while C and D are fried on one side only. Finally, the chef fries C and D on their second side, taking another 5 minutes. The total time used is 15 minutes.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"100",
+			"note":"There are no hamburgers, so we do not have to fry anything.",
+			"order":4
+		},
+		{
+			"expect":"919",
+			"id":0,
+			"input":"303",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"panSize is between 1 and 1000 inclusive."
+		},
+		{
+			"order":2,
+			"val":"hamburgers is between 0 and 1000 inclusive."
+		}
+	]
+}

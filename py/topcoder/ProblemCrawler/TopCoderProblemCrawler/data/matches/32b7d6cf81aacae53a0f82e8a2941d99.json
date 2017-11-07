@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":217.99,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=73&rd=2007",
+			"name":"Race",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":394.26,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=68&rd=2007",
+			"name":"TriTravel",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=69&rd=2007",
+			"name":"Connected",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"Collegiate Challenge > Semifinals",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=2007"
+}

@@ -1,0 +1,69 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3487&rd=7222",
+	"statement":"A group of <b>n</b> thieves needs some software to help them divide up their loot. A necklace must be divided up as evenly as possible among the gang members. The necklace is a circle of gems of different values. <p> The requirement is that the necklace be divided into <b>n</b> segments by cutting the necklace in <b>n</b> places. Every segment must contain at least one gem. The &quot;inequity&quot; of the division is the value of the most-valuable segment minus the value of the least-valuable segment. (The value of a segment is the sum of the values of the gems in that segment.) We want to minimize the inequity. </p><p> Create a class Necklaces that contains a method inequity that is given as input <b>n</b> and a int[] <b>gems</b> (the values of each gem in the necklace in order). The gems are in a circle, so the last element of <b>gems</b> is connected to the first element. The method should find the best way to divide the necklace and return the minimum possible inequity. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Necklaces",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"inequity",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int inequity(int n, int[] gems)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{5,12,2,9}",
+			"id":0,
+			"input":"1",
+			"note":" Cut it once anywhere. There is only one segment, and its value if 28. The difference between the worst and best segment is 0 (28 - 28). ",
+			"order":1
+		},
+		{
+			"expect":"{5,12,9,2}",
+			"id":0,
+			"input":"2",
+			"note":" Cut it between the 5 and 12, and also between the 12 and 9. The two resulting segments have values 12 and 9+2+5=16. ",
+			"order":2
+		},
+		{
+			"expect":"{100,92,133,201,34,34,34,94,108}",
+			"id":0,
+			"input":"4",
+			"note":" Divide it as follows: 108 100 | 92 133 | 201 | 34 34 34 94. Then the result is 225 - 196.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 50 inclusive."
+		},
+		{
+			"order":2,
+			"val":"gems will contain between n and 50 elements inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of gems will be between 1 and 100,000 inclusive."
+		}
+	]
+}

@@ -1,0 +1,122 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=590&rd=4345",
+	"statement":"<p>At most ski resorts, the runs (a run is defined as an inclined course on which one can ski downhill) are rated by their difficulty. The three classifications commonly used are Green Circle for easy, Blue Square for medium, and Black Diamond for hard. However, there can be a situation where a run is rated easy, but only feeds into hard runs (meaning that all paths from the easy run to the bottom pass through hard runs). Thus, even though the run itself is easy, it should be classified as Black Diamond, since the easiest path to the base of the mountain involves a hard run. Note that one run may feed into many other runs, and that since you are skiing downhill, once you feed into another run, there will be no way to return to any previously skied run (in other words the transitive closure of feeds is acyclic).</p> <p>For the purposes of this problem, the terms &quot;easy&quot;, &quot;medium&quot;, and &quot;hard&quot; shall refer to the actual difficulty of the given run, and &quot;Green Circle&quot;, &quot;Blue Square&quot;, and &quot;Black Diamond&quot; shall refer to the compound difficulty of the easiest path to the base of the mountain from that run (called the &quot;classification&quot;).</p> <p>Given the run configuration for a ski resort, return the classification of the requested run.</p> <p>The run configuration will be in the form of a String[], with each element formatted as (quotes added for clarity):</p> <p>&quot;&lt;name&gt;:&lt;difficulty&gt;,&lt;feed1&gt;,&lt;feed2&gt;,&lt;feed3&gt;,...&quot;</p> <p>Where &lt;name&gt; is the run's unique name, &lt;difficulty&gt; is a single character representing the difficulty ('E'asy, 'M'edium, or 'H'ard). The &lt;feedX&gt; arguments are all of the runs that &lt;name&gt; feeds into. There can be between 0 and 5 feeds, inclusive. So for example:</p> <p>&quot;BLACK STALLION:M,BLUE MOUNTAIN,FLYING TOPCODER,DOKS RUN&quot;</p> <p>is a medium run named BLACK STALLION, which feeds into BLUE MOUNTAIN, FLYING TOPCODER, and DOKS RUN. If all 3 of these were hard, then BLACK STALLION would have to be classified &quot;BLACK DIAMOND&quot;, even though it by itself would have been a &quot;BLUE SQUARE&quot;.</p> <p>For the requested run, return either &quot;BLACK DIAMOND&quot; if the easiest path to the base of the mountain must include a hard run, &quot;BLUE SQUARE&quot; if the easiest path to the base of the mountain must include a medium run, but no hard run, and &quot;GREEN CIRCLE&quot; if the easiest path to the base of the mountain is all easy runs.</p> <p> If, and only if, a run feeds into no other runs, it ends at the base of the mountain and should be treated as the easiest route from itself to the base. Thus if it is rated 'M', it is classified &quot;BLUE SQUARE&quot;. </p>",
+	"notes":[{
+		"order":1,
+		"val":"The classification of a run is not affected by the difficulty of any runs which feed into it."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Resort",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"classify",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String classify(String[] runs, String classify)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"BLACK STALLION\"",
+			"id":0,
+			"input":"{\"BLACK STALLION:M,BLUE MOUNTAIN,TOPCODER,DOKS RUN\" ,\"BLUE MOUNTAIN:H\" ,\"TOPCODER:H\" ,\"DOKS RUN:H,CHOGYS RUN\" ,\"CHOGYS RUN:M,EASY RUN,MEDIUM RUN,HARD RUN\" ,\"EASY RUN:E\" ,\"MEDIUM RUN:M\" ,\"HARD RUN:H\"}",
+			"note":"The path to the base must go through either BLUE MOUNTAIN, TOPCODER, or DOKS RUN, all of which are hards. ",
+			"order":1
+		},
+		{
+			"expect":"\"DOKS RUN\"",
+			"id":0,
+			"input":"{\"BLACK STALLION:M,BLUE MOUNTAIN,TOPCODER,DOKS RUN\" ,\"BLUE MOUNTAIN:H\" ,\"TOPCODER:H\" ,\"DOKS RUN:H,CHOGYS RUN\" ,\"CHOGYS RUN:M,EASY RUN,MEDIUM RUN,HARD RUN\" ,\"EASY RUN:E\" ,\"MEDIUM RUN:M\" ,\"HARD RUN:H\"}",
+			"note":"Since DOKS RUN itself is hard, it doesn't matter how hard the runs below it are. ",
+			"order":2
+		},
+		{
+			"expect":"\"CHOGYS RUN\"",
+			"id":0,
+			"input":"{\"BLACK STALLION:M,BLUE MOUNTAIN,TOPCODER,DOKS RUN\" ,\"BLUE MOUNTAIN:H\" ,\"TOPCODER:H\" ,\"DOKS RUN:H,CHOGYS RUN\" ,\"CHOGYS RUN:M,EASY RUN,MEDIUM RUN,HARD RUN\" ,\"EASY RUN:E\" ,\"MEDIUM RUN:M\" ,\"HARD RUN:H\"}",
+			"note":"CHOGYS RUN is a medium difficulty. Since the easiest path from CHOGYS RUN to the base of the mountain is CHOGYS RUN->EASY RUN, and a medium difficulty is the hardest run in the path, CHOGYS RUN is classified as \"BLUE SQUARE\". ",
+			"order":3
+		},
+		{
+			"expect":"\"NOOB CITY\"",
+			"id":0,
+			"input":"{\"NOOB CITY:E,GREEN BARON,RISKY RUN,LEAP OF FAITH\" ,\"GREEN BARON:E\" ,\"RISKY RUN:M\" ,\"LEAP OF FAITH:H\"}",
+			"note":"The easiest path is NOOB CITY->GREEN BARON, both of which are easy. ",
+			"order":4
+		},
+		{
+			"expect":"\"NOOB CITY\"",
+			"id":0,
+			"input":"{\"NOOB CITY:E,RISKY RUN,LEAP OF FAITH\" ,\"RISKY RUN:M\" ,\"LEAP OF FAITH:H\"}",
+			"note":"The easiest path is NOOB CITY->RISKY RUN, and RISKY RUN is a medium difficulty. ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"runs will contain between 1 and 50 elements, inclusive"
+		},
+		{
+			"order":2,
+			"val":"each element of runs will consist of only capital letters ('A'-'Z'), spaces, commas (','), and a colon (':')."
+		},
+		{
+			"order":3,
+			"val":"each element of runs will contain between 3 and 50 characters, inclusive, and will be formatted as (quotes added for clarity): &quot;&lt;name&gt;:&lt;difficulty&gt;,&lt;feed1&gt;,&lt;feed2&gt;,&lt;feed3&gt;...&quot;"
+		},
+		{
+			"order":4,
+			"val":"there may be between 0 and 5 feeds, inclusive, for each run."
+		},
+		{
+			"order":5,
+			"val":"there will be no commas except for a single comma between feeds and between the difficulty and the first feed (if there is a first feed)."
+		},
+		{
+			"order":6,
+			"val":"&lt;difficulty&gt; will be a single character capital letter, either 'E', 'M', or 'H'."
+		},
+		{
+			"order":7,
+			"val":"&lt;name&gt; will be between 1 and 48 characters in length, inclusive."
+		},
+		{
+			"order":8,
+			"val":"&lt;name&gt; will be unique and consist of only capital letters ('A'-'Z') and spaces, but will not begin or end with a space."
+		},
+		{
+			"order":9,
+			"val":"each feed will reference a run that appears as &lt;name&gt; in some element of runs (this is necessary to determine its difficulty)."
+		},
+		{
+			"order":10,
+			"val":"within each element of runs, the feeds will be unique."
+		},
+		{
+			"order":11,
+			"val":"runs will contain no loops, i.e. runs will contain no circular or self references."
+		},
+		{
+			"order":12,
+			"val":"classify will be between 1 and 48 characters in length, inclusive, and will reference a run that appears as &lt;name&gt; in some element of runs."
+		}
+	]
+}

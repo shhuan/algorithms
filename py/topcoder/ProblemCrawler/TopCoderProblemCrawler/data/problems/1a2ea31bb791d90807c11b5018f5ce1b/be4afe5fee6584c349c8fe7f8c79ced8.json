@@ -1,0 +1,120 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12299&rd=15653",
+	"statement":"You are given ints <b>n</b> and <b>m</b>: the dimensions of a matrix. A matrix M with <b>n</b> rows and <b>m</b> columns is called a <i>mountain</i> if it satisfies the following conditions: \n <ul> \n  <li>All elements of M are <i>positive</i> integers.</li> \n  <li>There are integers a and b with the following properties: \n   <ul> \n    <li>0 &lt;= a &lt;= <b>n</b>-1 and 0 &lt;= b &lt;= <b>m</b>-1.</li> \n    <li>For each row i, M[i][0] &lt; M[i][1] &lt; ... &lt; M[i][b-1] &lt; M[i][b] &gt; M[i][b+1] &gt; ... &gt; M[i][<b>m</b>-1].</li> \n    <li>For each column j, M[0][j] &lt; M[1][j] &lt; ... &lt; M[a-1][j] &lt; M[a][j] &gt; M[a+1][j] &gt; ... &gt; M[<b>n</b>-1][j].</li> \n   </ul> </li> \n </ul> In addition to <b>n</b> and <b>m</b>, you are given some elements of M. More precisely, you are given the int[]s <b>rowIndex</b>, <b>columnIndex</b> and <b>element</b>. For each valid k, M[<b>rowIndex</b>[k]][<b>columnIndex</b>[k]] has to be <b>element</b>[k]. Your task is to fill in the missing values so that M becomes a mountain. Find and return the smallest possible sum of all elements in a mountain M that matches the given constraints. If there is no mountain that matches the given constraints, return -1 instead.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheMountain",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minSum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minSum(int n, int m, int[] rowIndex, int[] columnIndex, int[] element)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"We are already given all elements of this matrix. It looks as follows:  We can easily verify that this is a mountain for a=0 and b=2. The sum of all elements is 4+6+9+1+3+6=29.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"The matrix looks as follows.  The optimal solution is as follows. The sum is 7+8+7+6+7+5=40. ",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"The matrix looks as follows:  The optimal solution is as follows. ",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"The given matrix is not a mountain. ",
+			"order":4
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"1",
+			"note":"This matrix looks as follows:  It is not possible to make a mountain out of it, because in a mountain all elements have to be positive. (Note that 0 is not positive.)",
+			"order":5
+		},
+		{
+			"expect":"45",
+			"id":0,
+			"input":"123",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"200",
+			"id":0,
+			"input":"200",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n and m will each be between 1 and 200, inclusive."
+		},
+		{
+			"order":2,
+			"val":"rowIndex will contain between 1 and min(n*m, 50) elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"columnIndex and element will contain the same number of elements as rowIndex."
+		},
+		{
+			"order":4,
+			"val":"Each element of rowIndex will be between 0 and n-1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of columnIndex will be between 0 and m-1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of element will be between 1 and 1,000, inclusive."
+		},
+		{
+			"order":7,
+			"val":"No two indices represented by rowIndex and columnIndex will be the same."
+		}
+	]
+}

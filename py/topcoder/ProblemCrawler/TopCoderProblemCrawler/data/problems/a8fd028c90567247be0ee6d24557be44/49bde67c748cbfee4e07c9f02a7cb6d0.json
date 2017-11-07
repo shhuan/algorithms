@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4648&rd=10112",
+	"statement":"A graph is called split if the vertices can be partioned into two non-empty sets A and B such that no two distinct vertices in A are adjacent, and all pairs of distinct vertices in B are adjacent. Considering all possible ways of removing 0 or more nodes from the given <b>graph</b>, return how many of the resulting subgraphs are split. Two subgraphs are considered distinct if the sets of removed nodes are distinct. Character i in element j of <b>graph</b> is '1' if nodes i and j are adjacent, and '0' if not.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SplitSubgraphs",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(String[] graph)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"011\", \"101\", \"110\" }",
+			"note":"Every subgraph with at least 2 vertices is split.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"0\"}",
+			"note":"Note that A and B must both be non-empty.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 11",
+			"id":0,
+			"input":"{\"0000\", \"0000\", \"0001\", \"0010\" }",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"{\"0100\", \"1000\", \"0001\", \"0010\" }",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 24",
+			"id":0,
+			"input":"{\"01100\", \"10110\", \"11001\", \"01001\", \"00110\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"graph will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in graph will be '0' or '1'."
+		},
+		{
+			"order":3,
+			"val":"Each element of graph will contain exactly N characters, where N is the number of elements in graph."
+		},
+		{
+			"order":4,
+			"val":"Character i of element i of graph will always be '0'."
+		},
+		{
+			"order":5,
+			"val":"Character i of element j of graph will equal character j of element i."
+		}
+	]
+}

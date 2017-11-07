@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=92&rd=3009",
+	"statement":"<pre>Class Name: Expressions\nMethod Name: evaluate\nParameters: String\nReturns: int\n\nImplement a class Expressions, which contains a method evaluate.  The method\ntakes a String as a parameter representing a mathematic expression and returns\nthe int that is is equivalent to the expression.\n\nThe expression contains non-negative integers and the operands *, +, - , /, and\nparenthesis ( ). There is no white space in the expression.  The division (/)\nis integer division (that is any remainder is truncated). Remember: Parentheses\nare highest priority, then * and / are medium priority, then + and - are the\nlowest priority.  When there are parentheses inside parentheses, the inner\nparentheses are evaluated first.  When dealing with operands of equal priority,\nevaluation occurs from left to right.\n\nHere is the method signature.\npublic int evaluate(String expression);\n\nexpression is of length between 1 and 50.  It contains digits and the symbols\n*, +, -, /, (, ) and represents a valid expression with no division by 0\n(TopCoder will check this).\n\nExample:\n&quot;6+2*(3*(1+1))-6/(2+3)&quot; -&gt; 17.\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Expressions",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"evaluate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int evaluate(String param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

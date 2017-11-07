@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4473&rd=7228",
+	"statement":"<p>You are creating a storage management system. This system should create new PLU codes for new items. The requirements state that a PLU code must be a positive integer that does not contain three consecutive equal digits. For example, PLU codes 11211, 73399, 655 and 30 are valid PLU codes, but 11111, 73339, 555 and 3000 are invalid (they contain 111, 333, 555 and 000 respectively). For statistical purposes you want to count the number of invalid PLU codes.</p> <p>You will be given an int <b>N</b>. You should return the number of invalid PLU codes that are less than <b>N</b>.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PluCodeGenerator",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countInvalidCodes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countInvalidCodes(int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"111",
+			"note":"The first invalid PLU code is 111, so there are no invalid PLU codes less than 111.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"556",
+			"note":"The invalid PLU codes less than 556 are 111, 222, 333, 444 and 555.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 13",
+			"id":0,
+			"input":"1113",
+			"note":"The invalid PLU codes less than 1113 are 111, 222, 333, 444, 555, 666, 777, 888, 999, 1000, 1110, 1111 and 1112.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 323647",
+			"id":0,
+			"input":"7346556",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N will be between 1 and 1000000000, inclusive."
+	}]
+}

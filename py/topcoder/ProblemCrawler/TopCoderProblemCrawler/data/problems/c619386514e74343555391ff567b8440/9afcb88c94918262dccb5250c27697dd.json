@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11316&rd=14427",
+	"statement":"Fox Ciel has a rectangular board separated into 1x1 cells. The board is <b>N</b> cells wide and <b>M</b> cells high. Columns are numbered 1 to <b>N</b> from left to right, and rows are numbered 1 to <b>M</b> from top to bottom. A cell in column x, row y is said to have coordinates (x, y). Each cell contains a stone, and all stones are different. Also, some cells are marked. These marked cells are given in the int[]s <b>sx</b> and <b>sy</b>, where (<b>sx</b>[i], <b>sy</b>[i]) are the coordinates of the i-th marked cell. <br /><br /><br /><br /> Ciel is interested to know how many layouts of the same stones on this board are <i>similar</i> to the current layout. Two layouts are considered to be <i>similar</i> if, for each possible pairing of a stone and a marked cell, the distance between the stone and the marked cell is the same in both layouts. The distance between cells with coordinates (xA, yA) and (xB, yB) is defined as max{|xA-xB|, |yA-yB|}, where |z| is the absolute value of z. <br /><br /><br /><br /> Return the number of layouts that are <i>similar</i> to the current layout, modulo 1,000,000,009. Note that according to the definition above, the current layout is <i>similar</i> to itself, so it should also be counted. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxStones",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getCount(int N, int M, int[] sx, int[] sy)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"6",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"34",
+			"id":0,
+			"input":"12",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N and M will each be between 1 and 200, inclusive."
+		},
+		{
+			"order":2,
+			"val":"sx and sy will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"sx and sy will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of sx will be between 1 and N, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of sy will be between 1 and M, inclusive."
+		},
+		{
+			"order":6,
+			"val":"No two cells represented by sx and sy will have the same coordinates."
+		}
+	]
+}

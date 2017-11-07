@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.58,
+			"constraints":[],
+			"correctRatio":75.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12388&rd=15489",
+			"name":"TheDevice",
+			"notes":[],
+			"submission":535
+		},
+		{
+			"avgPts":280.19,
+			"constraints":[],
+			"correctRatio":35.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12265&rd=15489",
+			"name":"TheJediTest",
+			"notes":[],
+			"submission":291
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12389&rd=15489",
+			"name":"MegaFactorial",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"Single Round Match 569 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15489"
+}

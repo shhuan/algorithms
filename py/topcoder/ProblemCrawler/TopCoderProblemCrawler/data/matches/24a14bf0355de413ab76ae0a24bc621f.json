@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":197.4,
+			"constraints":[],
+			"correctRatio":83.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8318&rd=10794",
+			"name":"DivisibleByDigits",
+			"notes":[],
+			"submission":387
+		},
+		{
+			"avgPts":265.89,
+			"constraints":[],
+			"correctRatio":56.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8267&rd=10794",
+			"name":"DateFieldCorrection",
+			"notes":[],
+			"submission":302
+		},
+		{
+			"avgPts":467.27,
+			"constraints":[],
+			"correctRatio":44.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8317&rd=10794",
+			"name":"DukeOnLargeChessBoard",
+			"notes":[],
+			"submission":18
+		}
+	],
+	"name":"Single Round Match 375 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10794"
+}

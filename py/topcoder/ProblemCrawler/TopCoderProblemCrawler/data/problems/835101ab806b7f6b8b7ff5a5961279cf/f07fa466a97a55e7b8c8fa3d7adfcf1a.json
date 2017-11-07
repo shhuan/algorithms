@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6039&rd=9820",
+	"statement":"<p> The inhabitants of a certain magical country are known to be clever wizards. Their King decided to test how clever they really were. </p> <p> He took 3 hats (2 white and 1 black) and put 2 smart wizards around a table. He put a white hat on one of the wizards and a black hat on the other. Each wizard could see what hat was on his neighbor, but could not see what hat was on his own head. The wizards knew that there were 2 white hats and 1 black hat. The King asked: &quot;Do you know what hat is on your head?&quot;, and the wizard with the white hat answered: &quot;Yes&quot;. It's clear how he knew: he had seen the black hat on his neighbor, and knowing that there was only 1 black hat, concluded that his own hat was white. </p> <p> The King then decided to complicate their task a bit, and he put white hats on both the wizards. He asked: &quot;Do you know what hat is on your head?&quot;, and both wizards answered together: &quot;No&quot;. He asked again: &quot;Do you know what hat is on your head?&quot;, and both wizards then answered: &quot;Yes, we know. We have white hats on our heads!&quot;. How did they find out? When the question was first asked, the first wizard had seen the white hat on his neighbor, but didn't know the color of his own hat, so he answered &quot;No&quot;. After hearing his neighbor's answer to the same question, he realized that his neighbor was in the same situation. Therefore, both wizards knew that they were wearing white hats when the question was asked a second time. </p> <p> Let's consider a more general scenario. You are given an int <b>wizards</b> representing the number of wizards participating in the test, and a int[] <b>hats</b> representing all the hats possessed by the King. Each element of <b>hats</b> represents a different color, and the i<sup>th</sup> element of <b>hats</b> is the number of hats of color i. You are also given a int[] <b>hatsOnWizards</b>, the i<sup>th</sup> element of which represents the number of hats of color i that are placed on wizards' heads (each wizard will receive exactly one hat). The wizards all know what hats are initially possessed by the King. Each wizard can see the hats worn by all the other wizards, but cannot see the hat on his own head. Each time the King asks his question, the wizards all answer simultaneously, and each wizard can hear the answers given by all the other wizards. Return the number of times the King must ask his question before at least one wizard will know the color of his own hat. The King will always ask the question at least once. If no wizard will ever know the color of his own hat, return -1. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Wizards",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"questions",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int questions(int wizards, int[] hats, int[] hatsOnWizards)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2}",
+			"id":0,
+			"input":"2",
+			"note":"The first example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"{1,2}",
+			"id":0,
+			"input":"2",
+			"note":"The second example from the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"{2,2}",
+			"id":0,
+			"input":"2",
+			"note":"No wizard will ever know the color of his own hat.",
+			"order":3
+		},
+		{
+			"expect":"{7,8,9}",
+			"id":0,
+			"input":"18",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"wizards will be between 1 and 75, inclusive."
+		},
+		{
+			"order":2,
+			"val":"hats will contain between 2 and 5 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of hats will be between 1 and 15, inclusive."
+		},
+		{
+			"order":4,
+			"val":"hatsOnWizards and hats will contain the same number of elements."
+		},
+		{
+			"order":5,
+			"val":"Each element of hatsOnWizards will be between 0 and the corresponding element in hats, inclusive."
+		},
+		{
+			"order":6,
+			"val":"All elements of hatsOnWizards will sum up to wizards."
+		}
+	]
+}

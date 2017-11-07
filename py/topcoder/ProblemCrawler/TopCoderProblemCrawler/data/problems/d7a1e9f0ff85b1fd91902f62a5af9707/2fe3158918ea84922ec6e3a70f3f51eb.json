@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6624&rd=10133",
+	"statement":"<p> There is a group of friends that is not as close as it should be. Not everybody inside the group likes everybody else. One of the friends has some important news that needs to be spread to every member of the group. He has information on who would be willing to call each other and has to develop a strategy to make sure all members of the group receive the news as soon as possible. </p><p> Each person can only call one friend each minute, and during that minute, he will transmit the news along with the calling strategy that the receiver should follow. Any person that has already been called is allowed to call other friends, but nobody can be on the phone (passing on or receiving the news) with more than one other person during the same minute. </p><p> You will be given a String[] <b>conn</b>, where the j<sup>th</sup> character of the i<sup>th</sup> element is 'Y' if the i<sup>th</sup> friend is willing to call the j<sup>th</sup> friend, or 'N' otherwise. The 0<sup>th</sup> person (0-based) is the one that initially learns about the news. Return the least number of minutes needed for the entire group to be aware of the news. If it is impossible for this to happen, return -1. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Note that the fact that one friend is willing to call another does not necessarily imply that the other is willing to call the first. See examples for further clarification."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FastGossip",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minTime(String[] conn)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"NYNN\",\"NNYN\",\"NNNY\",\"NNNN\"}",
+			"note":"Individual 0 must call individual 1. Individual 1 must call individual 2. Individual 2 must call individual 3. Since all these actions must happen sequentially, the total time to reach the last individual is 3 minutes.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NYYY\", \"YNYY\", \"YYNY\", \"YYYN\"}",
+			"note":"Everybody is a close friend. Individual 0 can call any one of the other individuals in the first minute, and during the second minute, both of them can call one of the remaining two.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"NN\",\"YN\"}",
+			"note":"Individual 0 can't call anybody, and therefore, it is impossible to spread the news to individual 1.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"conn will contain between 1 and 14 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of conn will contain exactly N characters, where N is the number of elements in conn."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of conn will be either 'Y' or 'N'."
+		},
+		{
+			"order":4,
+			"val":"The ith character of the ith element of conn will be 'N'."
+		}
+	]
+}

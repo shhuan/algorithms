@@ -1,0 +1,69 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1212&rd=9984",
+	"statement":"Find the least-cost 3D box that can hold two given 3D boxes. The boxes must be kept orthogonal (not tilted) although they can be rotated at any multiple of 90 degrees in 3-space. Cost is the total area of cardboard required for the enclosing box, where four sides have one layer of cardboard and two ends have two layers of cardboard. The two boxes that are enclosed may not overlap (consider them already filled). You are given the dimensions of the two boxes as int[]s, where each int[] contains exactly three elements.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ShipBoxes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int bestCost(int[] box1, int[] box2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,4,9}",
+			"id":0,
+			"input":"{1,4,9}",
+			"note":"These two boxes have the shape of the monolith from 2001, A Space Odyssey---mostly flat. The most economical way to ship them is to stack them on top of each other and put the flaps at the small ends. The top of the box then is 4x9, the sides are 2x9, and the ends are 2x4; the total area of cardboard required is thus 140.",
+			"order":1
+		},
+		{
+			"expect":"{1,1,1}",
+			"id":0,
+			"input":"{1,1,1}",
+			"order":2
+		},
+		{
+			"expect":"{40,40,40}",
+			"id":0,
+			"input":"{1,9000,9000}",
+			"order":3
+		},
+		{
+			"expect":"{7595,3,1835}",
+			"id":0,
+			"input":"{6570,6076,5880}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"box1 and box2 must each contain exactly 3 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of box1 and box2 will be between 1 and 10,000, inclusive."
+		}
+	]
+}

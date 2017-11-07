@@ -1,0 +1,116 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2891&rd=5073",
+	"statement":"<p>Checkerboards are used for many things besides playing checkers. In fact, the word &quot;checkerboard&quot; is in much wider use, and has more meanings, than the word &quot;checker&quot;. In most cases, including here, a checkerboard is a pattern consisting of a rectangular array of squares where adjacent squares (horizontally and vertically) are different colors. There are two colors of squares on our checkerboards, red and black. The squares in our checkerboard are numbered vertically, from 1 to <b>maxRank</b> inclusive, with 1 being at the bottom. The coordinate in this vertical direction is called the <b>rank</b>. The squares in our checkerboard are also numbered horizontally, from 1 to <b>maxFile</b> inclusive, with 1 on the left. The coordinate in this horizontal direction is called the <b>file</b>. The location of a square is specified by the pair of coordinates: (<b>rank</b>, <b>file</b>) </p> <p> On all of the checkerboards in this problem, the RIGHT-most square in the BOTTOM-most rank, (1, <b>maxFile</b>), IS ALWAYS BLACK. </p><p> Given the height and width (<b>maxRank</b> and <b>maxFile</b>) of our checkerboard, and the coordinates of all of the game pieces on the checkerboard, return the count of all the red squares which are empty. A square is empty if no game piece is on that square. The locations of the game pieces will be specified with two int[]s, <b>rank</b> and <b>file</b>. (rank[0], file[0]) is the location of piece 0, (rank[1], file[1]) is the location of piece 1, etc. </p><p> For example: <br /><br /> <b>maxRank</b> = 3, <b>maxFile</b> = 5, <b>rank</b> = {1, 2, 2}, <b>file</b> = {4, 1, 2} <br /><br /> Our checkerboard would look like this: </p> <pre>\nb R b R b   where &quot;b&quot; represents an empty black square,\nx x R b R         &quot;R&quot; represents an empty red square and\nb R b x b         &quot;x&quot; represents the location of a game piece\n</pre> <p>There are 5 empty red squares, so you return 5. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RedSquare",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countTheEmptyReds",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countTheEmptyReds(int maxRank, int maxFile, int[] rank, int[] file)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"5",
+			"id":0,
+			"input":"3",
+			"note":"The example from above.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"A full board, no empty squares of either color.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"5",
+			"note":"All 12 red squares are occupied, none are empty.",
+			"order":3
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"5",
+			"note":"12 black squares are occupied, but all 15 red squares are empty.",
+			"order":4
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"One black square, no red squares.",
+			"order":5
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"50",
+			"note":"One piece, which is on a red square.",
+			"order":6
+		},
+		{
+			"expect":"50",
+			"id":0,
+			"input":"50",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maxRank will be between 1 and 50 inclusive."
+		},
+		{
+			"order":2,
+			"val":"maxFile will be between 1 and 50 inclusive."
+		},
+		{
+			"order":3,
+			"val":"rank will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"rank will contain between 0 and maxRank*maxFile elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"file will contain exactly the same number of elements as rank"
+		},
+		{
+			"order":6,
+			"val":"each element of rank will be between 1 and maxRank inclusive."
+		},
+		{
+			"order":7,
+			"val":"each element of file will be between 1 and maxFile inclusive."
+		},
+		{
+			"order":8,
+			"val":"All game piece locations (rank[i], file[i]) will be distinct."
+		}
+	]
+}

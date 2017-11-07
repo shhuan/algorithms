@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2006&rd=8005",
+	"statement":"We have <b>n</b> identical processors and want to build a fixed <b>amount</b> of computers with them. Each computer is characterized by the number of processors we put into it. We want to use all the processors, and we don't mind forming many identical computers, but have decided that it would be wasteful to form two different computers that do not differ significantly. We also want all the computers that we build to be reasonably powerful. <p> Create a class Computers that contains a method choices that takes four ints as input: <b>n</b> (the number of processors), <b>minDif</b> (the smallest allowable difference between the number of processors in different computers), <b>minInComp</b> (the minimum number of processors that a computer is allowed to have), and <b>amount</b> (the number of computers we must produce). The method returns a long value that is the number of distinct ways in which we can combine all our processors to form <b>amount</b> computers. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Computers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"choices",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long choices(int n, int minDif, int minInComp, int amount)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"6",
+			"id":0,
+			"input":"20",
+			"note":" The different ways in which we can produce the 2 computers are {5,15}, {6,14}, {7,13}, and {10,10}. Note that {4,16} would not be legal since a computer is not allowed to have less than 5 processors, and that {8,12} would not be legal because these two computers are different but do not differ by at least 6 processors. ",
+			"order":1
+		},
+		{
+			"expect":"500",
+			"id":0,
+			"input":"100",
+			"note":" Since each computer must have at least 400 processors and we have only 100, it is not possible to build even 1 computer.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1000",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"minDif will be between 5 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"minInComp will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"amount will be between 1 and 1000, inclusive."
+		}
+	]
+}

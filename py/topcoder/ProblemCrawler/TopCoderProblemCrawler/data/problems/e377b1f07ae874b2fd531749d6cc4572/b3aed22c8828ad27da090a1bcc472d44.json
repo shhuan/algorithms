@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8101&rd=10888",
+	"statement":"<p><i>NOTE: This problem statement contains superscripts that may not display properly if viewed outside of the applet.</i></p> <p>There is a horizontal row of N squares, each of which either contains a counter or is empty. A set of counters in this row is called a group if it meets all of the following requirements:</p> \n <ul> \n  <li>They form a contiguous part of the row.</li> \n  <li>The square immediately to the left of the leftmost counter in the set is empty, or the leftmost counter in the set is in the leftmost square of the row.</li> \n  <li>The square immediately to the right of the rightmost counter in the set is empty, or the rightmost counter in the set is in the rightmost square of the row.</li> \n </ul> <p>In one move, we can take any group and simultaneously move all of its counters one square to the right (only if the rightmost counter in the group is not in the rightmost square of the row), or one square to the left (if the leftmost counter in the group is not in the leftmost square of the row). The cost of such a move is C<sup>2</sup>, where C is the number of counters in the group.</p> <p>You will be given a String <b>board</b> that represents the initial row from left to right. Each character of board represents the content of a single square and is either uppercase 'X' (counter) or '.' (empty). Your goal is to have all the counters in the row form exactly one group. Return the minimum possible total cost required to achieve this.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OptimalGroupMovement",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimumCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimumCost(String board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"\".XXX.XXXX.\"",
+			"note":"Initially, there are two groups of counters: a group of 3 on the left side and a group of 4 on the right side. To form a single group, we can move the group of 3 one square to the right (at a cost of 9), or move the group of 4 one square to the left (at a cost of 16). The first option is cheaper.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"\"X\"",
+			"note":"Here we already have one group of 1 counter.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 14",
+			"id":0,
+			"input":"\"XXXXX...X..X.X\"",
+			"note":"The leftmost group is large, so we don't move it. We move the other three groups to the left.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 70",
+			"id":0,
+			"input":"\".X.X.X..X.X.X.......XX..X.X..X\"",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of board will be '.' or 'X'."
+		},
+		{
+			"order":3,
+			"val":"At least one character of board will be 'X'."
+		}
+	]
+}

@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=838&rd=5882",
+	"statement":"A city is square and is laid out in nice regular blocks, except that there is one block that has a &quot;shortcut&quot;, a narrow road that goes diagonally through the block. The bank has just been robbed, and our one on-duty police car starts to chase down the robbers. The police and robbers always drive at top speed, and they have exactly the same top speed. Neither the police nor the robbers can leave the city. <p> It takes 10 seconds to drive one block. It also takes 10 seconds to drive the shortcut. The police have one advantage -- they have a &quot;bug&quot; in the robbers' car. One of the robbers tells the driver which way to turn just before they reach each intersection, so the police can choose their next turn appropriately. The robbers are apprehended when the police and robbers are at the same intersection at the same time or when a head-on collision occurs on the shortcut. (The regular roads are divided roads, so the police cannot apprehend the robbers if they pass each other going in opposite directions.) U-turns at intersections are possible, but neither the police nor the robbers may slow down or stop. </p><p> Create a class Robbery that contains the method apprehend that takes the width of the city, <b>n</b>, and a int[] <b>map</b>, giving the locations of the shortcut, robbers and police as inputs and returns the amount of time until the robbers are apprehended. If the police can never apprehend the robbers, the method should return -1. Assume that both the police and robbers behave optimally (other than robbing the bank in the first place). </p><p> <b>n</b> is the number of blocks in both directions (since the city is square). The intersections are located at x,y where x and y are between 0 and <b>n</b> inclusive. <b>map</b> contains exactly 8 values: shortcutX1,shortcutY1,shortcutX2,shortcutY2, policeX,policeY,robbersX,robbersY. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Robbery",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"apprehend",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int apprehend(int n, int[] map)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,1,1,2,1,1,3,1}",
+			"id":0,
+			"input":"3",
+			"note":" If the robbers go west, the police will go east apprehending in 1*10 seconds. If the robbers go south, the police will go east. Then the robbers will have to go north or west and will be apprehended after 2*10 = 20 seconds. If the robbers go north, they will be trapped when they get to the northeast corner of the city, and will be apprehended after 30 seconds. ",
+			"order":1
+		},
+		{
+			"expect":"{0,1,1,2,1,1,2,1}",
+			"id":0,
+			"input":"3",
+			"note":" The best strategy for the police is to go west, then northeast (using the shortcut). The robbers can do no better than to head north, then east, then south and south. Even so, they will then be trapped in the southeast corner of the city and will be apprehended 10 seconds later. ",
+			"order":2
+		},
+		{
+			"expect":"{1,2,2,1,2,2,1,2}",
+			"id":0,
+			"input":"3",
+			"note":" ",
+			"order":3
+		},
+		{
+			"expect":"{1,0,0,1,3,0,1,0}",
+			"id":0,
+			"input":"3",
+			"note":" ",
+			"order":4
+		},
+		{
+			"expect":"{1,3,2,2,1,2,0,2}",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{2,3,1,4,0,5,0,4}",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n is between 2 and 30 inclusive."
+		},
+		{
+			"order":2,
+			"val":"map contains exactly 8 elements."
+		},
+		{
+			"order":3,
+			"val":"Each element in map is between 0 and n inclusive."
+		},
+		{
+			"order":4,
+			"val":"The absolute value of (shortcutX1 - shortcutX2) is 1."
+		},
+		{
+			"order":5,
+			"val":"The absolute value of (shortcutY1 - shortcutY2) is 1."
+		},
+		{
+			"order":6,
+			"val":"map specifies distinct locations for the police and robbers."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":166.66,
+			"constraints":[],
+			"correctRatio":76.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12917&rd=15837",
+			"name":"PowerOfThree",
+			"notes":[],
+			"submission":649
+		},
+		{
+			"avgPts":258.04,
+			"constraints":[],
+			"correctRatio":11.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12919&rd=15837",
+			"name":"FoxConnection",
+			"notes":[],
+			"submission":180
+		},
+		{
+			"avgPts":561.04,
+			"constraints":[],
+			"correctRatio":21.95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12921&rd=15837",
+			"name":"FamilyCrest",
+			"notes":[],
+			"submission":41
+		}
+	],
+	"name":"Single Round Match 604 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15837"
+}

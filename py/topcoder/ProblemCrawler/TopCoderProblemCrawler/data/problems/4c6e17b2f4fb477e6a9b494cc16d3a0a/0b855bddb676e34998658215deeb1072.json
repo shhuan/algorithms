@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12113&rd=15707",
+	"statement":"<p> Little Elephant from the Zoo of Lviv likes strings that consist of characters 'R', 'G' and 'B'. You are given a String[] <b>list</b>. Concatenate all elements of <b>list</b> to get the string S of length N. The characters in S are numbered from 0 to N-1, inclusive. </p> <p> </p> <p> You are also given int <b>minGreen</b>. Little Elephant thinks that string is <i>nice</i> if and only if it contains a substring of at least <b>minGreen</b> consecutive characters 'G'. For example, if <b>minGreen</b> = 2, then strings &quot;GG&quot;, &quot;GGRGBB&quot; and &quot;RRRGRBGGG&quot; are nice, but &quot;G&quot;, &quot;GRG&quot;, &quot;BBRRGRGB&quot; are not. </p> <p> </p> <p> Little Elephant wants to know the number of quadruples of integers (a,b,c,d) such that: </p>\n <ul> \n  <li>Each of a, b, c, d is between 0 and N-1, inclusive.</li> \n  <li>a &lt;= b and c &lt;= d. (Both a..b and c..d are valid ranges of values.)</li> \n  <li>b &lt; c. (The entire range a..b lies before the range c..d.)</li> \n  <li>The string T = S[a..b] + S[c..d] is nice.</li> \n </ul> Compute and return the number of such quadruples (a,b,c,d). <p></p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LittleElephantAndRGB",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getNumber(String[] list, int minGreen)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"GRG\"}",
+			"note":"The only valid quadruple is (0,0,2,2). For this quadruple we have S[a..b]=\"G\" and S[c..d]=\"G\", thus T = \"GG\".",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\"GG\", \"GG\"}",
+			"note":"There are 3 valid quadruples such that T=\"GGGG\" and 6 quadruples such that T=\"GGG\".",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"GRBGRBBRG\"}",
+			"note":"One of the valid quadruples is (0,0,3,5). This quadruple corresponds to the nice string T=\"GGRB\".",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"RRBRBBRRR\", \"R\", \"B\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\"GRGGGRBRGG\", \"GGGGGGGG\", \"BRGRBRB\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"list will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of list will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of list will consist only of characters 'R', 'G' and 'B'."
+		},
+		{
+			"order":4,
+			"val":"minGreen will be between 1 and 2500, inclusive."
+		}
+	]
+}

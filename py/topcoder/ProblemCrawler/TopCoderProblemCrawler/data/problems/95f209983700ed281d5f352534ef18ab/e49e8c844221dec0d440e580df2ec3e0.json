@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11513&rd=14649",
+	"statement":"<p>An <i>anagram</i> of a string is a string containing precisely the same letters, possibly in different order. For example, &quot;<tt>porter</tt>&quot;, &quot;<tt>report</tt>&quot;, and &quot;<tt>eoprrt</tt>&quot; are all anagrams of the string &quot;<tt>porter</tt>&quot; (and of each other). The string &quot;<tt>potter</tt>&quot; is not their anagram, as the numbers of &quot;<tt>t</tt>&quot;s and &quot;<tt>r</tt>&quot;s differ.</p> <p>Strings S and T are <i>orthogonal</i> if they are of the same length and differ in each position. For instance, the strings &quot;<tt>card</tt>&quot; and &quot;<tt>dear</tt>&quot; are orthogonal. The strings &quot;<tt>perk</tt>&quot; and &quot;<tt>card</tt>&quot; are not orthogonal, because their third letters are the same.</p> <p>You are given a String <b>S</b>. Your method should return the lexicographically smallest anagram of <b>S</b> that is orthogonal to <b>S</b>. If no such string exists, return an empty String.</p>",
+	"notes":[{
+		"order":1,
+		"val":"Given two distinct strings of equal length, the lexicographically smaller one is the one with a smaller character in the first position where they differ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OrthogonalAnagram",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String solve(String S)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"abcd\"",
+			"id":0,
+			"input":"\"dcba\"",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"abdce\"",
+			"id":0,
+			"input":"\"edcba\"",
+			"note":"The two lexicographically smallest anagrams are \"\" and \"\". Neither of these is orthogonal to : they all share the same third letter (\"\").",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"\"aaaaa\"",
+			"note":"Here it is clearly impossible to create an orthogonal anagram.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"baab\"",
+			"id":0,
+			"input":"\"abba\"",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"S will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of S will be a lowercase letter ('a'-'z')."
+		}
+	]
+}

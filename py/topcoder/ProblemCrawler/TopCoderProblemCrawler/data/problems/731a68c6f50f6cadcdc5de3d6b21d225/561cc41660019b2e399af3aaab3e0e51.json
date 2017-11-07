@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13209&rd=15856",
+	"statement":"A square board is divided into <b>N</b> rows by <b>N</b> columns of unit square cells. Some cells of the board are empty. Each of the other cells contains either an apple or a pear. You are given the current state of the board as a String[] <b>board</b>. In <b>board</b>, the character '.' denotes an empty cell, 'A' denotes an apple, and 'P' denotes a pear. <br /><br /><br /><br /> You are allowed to perform at most <b>K</b> moves. In each move, you can pick up one fruit (an apple or a pear) and place it onto any empty cell. (The new cell doesn't have to be adjacent to the old one.) Note that you cannot remove fruit from the board, you are only allowed to move it onto different cells. <br /><br /><br /><br /> A rectangular section of the board is called uniform if each cell in the rectangle contains an apple. After you are done moving the fruit, you want to have a uniform rectangle that is as large as possible somewhere on the board. Return the largest possible area of such a rectangle. If there are no apples, return 0.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"UniformBoard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getBoard",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getBoard(String[] board, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"{\"AP\", \".A\"}",
+			"note":"You cannot move anything. The largest uniform rectangle on the board is a 1x1 rectangle that consists of a single cell with an apple.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"AP\", \".A\"}",
+			"note":"You are allowed to make one move. You can move one of the apples onto the currently empty cell, thus creating a 1x2 rectangle of apples.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"PPP\", \"APA\", \"A.P\"}",
+			"note":"In two moves you can create a 1x3 rectangle of apples.",
+			"order":3
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{\"AAA\", \"PPP\", \"AAA\"}",
+			"note":"You are allowed to make at most 10 moves. However, you cannot make any moves because there are no empty cells.",
+			"order":4
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"{\".\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{\"PPAAPA..AP\", \"PPA.APAP..\", \"..P.AA.PPP\", \"P.P..APAA.\", \"P.P..P.APA\", \"PPA..AP.AA\", \"APP..AAPAA\", \"P.P.AP...P\", \".P.A.PAPPA\", \"..PAPAP..P\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 20, inclusive."
+		},
+		{
+			"order":2,
+			"val":"board will contain exactly N elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of board will contain exactly N characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in board will be '.', 'A', or 'P'."
+		},
+		{
+			"order":5,
+			"val":"K will be between 0 and 1000, inclusive."
+		}
+	]
+}

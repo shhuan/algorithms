@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1973&rd=4690",
+	"statement":"When items are removed from the middle of a sequence, the positions of all the items further down the sequence change. We are given a sequence and a list of removals that will occur. We want to be able to determine which item ends up in a specified position. <p> We refer to the positions in our sequence starting with 1. Let the items in our sequence initially be 1, 2, ..., <b>n</b>. Let <b>k</b> be the specified final position, and let <b>remove</b> be a list of Strings that gives the removals in order. Each removal is in the form &quot;lo-hi&quot; where lo and hi are positive integers (with no leading zeros) giving the range of positions whose items are to be removed. Each removal refers to the items by current position (not original position) in the sequence and includes both lo and hi. So if <b>n</b> is 8 and removal is {&quot;3-4&quot;,&quot;4-5&quot;} the sequence after the first removal is 1, 2, 5, 6, 7, 8 and the final sequence is 1, 2, 5, 8. </p><p> Create a class Removal that contains a method finalPos that takes as input <b>n</b>, the original sequence length, <b>k</b> the final position of interest, and <b>remove</b>, a String[] of removals formatted as described above. The method returns the item that ends up in position <b>k</b>, or returns -1 if no item ends up in position <b>k</b> (i.e. if there are fewer than <b>k</b> items left after all the removals). </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Removal",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"finalPos",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int finalPos(int n, int k, String[] remove)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"8",
+			"note":" As described above, the final sequence will be 1, 2, 5, 8, so item 5 ends up in position 3 of the final sequence. ",
+			"order":1
+		},
+		{
+			"expect":"13",
+			"id":0,
+			"input":"100",
+			"note":" None of these removals affects position 13. ",
+			"order":2
+		},
+		{
+			"expect":"39",
+			"id":0,
+			"input":"100",
+			"note":" The final sequence contains less than 39 items.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 2,000,000,000 inclusive."
+		},
+		{
+			"order":2,
+			"val":"k will be between 1 and n inclusive."
+		},
+		{
+			"order":3,
+			"val":"remove will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of remove will be formatted as &quot;lo-hi&quot;."
+		},
+		{
+			"order":5,
+			"val":"In each element of remove, neither lo nor hi will have leading zeros."
+		},
+		{
+			"order":6,
+			"val":"In each element of remove, 0 &lt; lo &lt;= hi &lt;= n. "
+		},
+		{
+			"order":7,
+			"val":"In each element of remove, hi will be less than or equal to the number of items remaining after the preceding removals."
+		}
+	]
+}

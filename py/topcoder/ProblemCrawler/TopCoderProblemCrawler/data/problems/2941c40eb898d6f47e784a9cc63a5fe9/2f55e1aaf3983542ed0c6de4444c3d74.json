@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12816&rd=15809",
+	"statement":"<p>You are given int[]s <b>a</b>, <b>b</b> and an int <b>N</b>. A positive integer x is called good if it satisfies &quot;x is a multiple of <b>a[i]</b> but not a multiple of <b>b[i]</b>&quot; for at least one i. Return the count of all good numbers between 1 and <b>N</b>, inclusive.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GoodNumbers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int[] a, int[] b, int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{3}",
+			"id":0,
+			"input":"{4}",
+			"note":"4, 8, 12, 16 and 20 are multiples of 4, but 12 is a multiple of 3. Thus 4, 8, 16 and 20 are good numbers.",
+			"order":1
+		},
+		{
+			"expect":"{2,3}",
+			"id":0,
+			"input":"{3,2}",
+			"note":"  ",
+			"order":2
+		},
+		{
+			"expect":"{4,4,2,2}",
+			"id":0,
+			"input":"{5,15,5,15}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"{1}",
+			"note":"No number satisfies the condition.",
+			"order":4
+		},
+		{
+			"expect":"{809,652,204,532,420,10,640688057,55,174076738,318}",
+			"id":0,
+			"input":"{168120222,756,408,194,681,856,964,677,250,845}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"a will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"a and b will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of a and b will be between 1 and N, inclusive."
+		}
+	]
+}

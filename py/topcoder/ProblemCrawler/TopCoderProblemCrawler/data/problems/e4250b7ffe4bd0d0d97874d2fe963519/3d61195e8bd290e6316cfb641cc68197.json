@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8572&rd=12175",
+	"statement":"<p> John thinks 4 and 7 are lucky digits, and all other digits are not lucky. A lucky number is a number that contains only lucky digits in decimal notation. </p> <p> Some numbers can be represented as a sum of only lucky numbers. Given an int <b>n</b>, return a int[] whose elements sum to exactly <b>n</b>. Each element of the int[] must be a lucky number. If there are multiple solutions, only consider those that contain the minimum possible number of elements, and return the one among those that comes earliest lexicographically. A int[] a1 comes before a int[] a2 lexicographically if a1 contains a smaller number at the first position where they differ. If <b>n</b> cannot be represented as a sum of lucky numbers, return an empty int[] instead. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheLuckySum",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] sum(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {4, 7 }",
+			"id":0,
+			"input":"11",
+			"note":"It is simple: 11 = 4 + 7.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {4, 4, 4 }",
+			"id":0,
+			"input":"12",
+			"note":"Now we need three summands to get 12.",
+			"order":2
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"13",
+			"note":"And now we can not get 13 at all.",
+			"order":3
+		},
+		{
+			"expect":"Returns: {4, 4, 4, 44, 44 }",
+			"id":0,
+			"input":"100",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 1,000,000,000, inclusive."
+	}]
+}

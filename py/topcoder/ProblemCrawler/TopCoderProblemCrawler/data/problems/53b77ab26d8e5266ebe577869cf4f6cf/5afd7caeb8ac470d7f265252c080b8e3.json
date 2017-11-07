@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2243&rd=4750",
+	"statement":"<p> Some chat rooms and bulletin boards use a profanity filter to strip their user-supplied content of words that degrade the quality of discourse. This inspires a few foul-mouthed users to mask their objectionable language by replacing letters with symbols of similar shape (&quot;shoot&quot; may turn into &quot;sh00t&quot;, for example), spacing out the letters (&quot;darn&quot; to &quot;d a r n&quot;), or both (&quot;hell&quot; to &quot;h e 1 1&quot;, where lowercase L is replaced by the numeral 1). </p><p> You have been hired to make an intelligent filter that defeats these masking techniques. For the present purposes, the only forbidden words are &quot;heck&quot;, &quot;gosh&quot;, &quot;dang&quot;, &quot;shucks&quot;, &quot;fooey&quot;, &quot;snafu&quot;, and &quot;fubar&quot;. You are given a pair of Strings, <b>plain</b> and <b>code</b>, such that the <i>n</i>th character of <b>code</b> may substitute for the <i>n</i>th character of <b>plain</b>. Take into account these potential substitutions and all possible spacings of a profane word, but disregard the characters surrounding a profane word. Given a String of text, return it in a censored form where all profanities are replaced by a sequence of asterisks in such a way that the length of the String is unaltered. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"All characters are case-sensitive. For example, \"heck\" is not equivalent to \"hEcK\" unless the input parameters explicitly provide for it."
+		},
+		{
+			"order":2,
+			"val":"Overlapping profanities should all be overwritten by asterisks, so that \"dangosh\", for instance, becomes \"*******\"."
+		},
+		{
+			"order":3,
+			"val":"None of the input Strings will contain control characters;  will not contain any kind of whitespace apart from the space character; neither  nor  will contain any whitespace."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Foobar",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"censor",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String censor(String plain, String code, String text)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"08B\"",
+			"id":0,
+			"input":"\"ogg\"",
+			"note":"The same character may be substituted in different ways.",
+			"order":1
+		},
+		{
+			"expect":"\"88$$\"",
+			"id":0,
+			"input":"\"eafk\"",
+			"note":"Different characters may be substituted in the same way.",
+			"order":2
+		},
+		{
+			"expect":"\"ui\"",
+			"id":0,
+			"input":"\"au\"",
+			"note":"Substitution is not transitive.",
+			"order":3
+		},
+		{
+			"expect":"\"XXXggggABCDEFGHIJKLMNOPQRSTUVWXYZ\"",
+			"id":0,
+			"input":"\"YYYggggabcdefghijklmnopqrstuvwxyz\"",
+			"note":"Duplicate character substitutions and redundant substitutions may be specified.",
+			"order":4
+		},
+		{
+			"expect":"\"D*HNO0G&S5Rfubar%f3k<:...\"",
+			"id":0,
+			"input":"\"ddhhooggss<y}T?h:1+Wd~\\\\\\'\\\"\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"plain is between 1 and 50 characters long, inclusive"
+		},
+		{
+			"order":2,
+			"val":"code has the same length as plain"
+		},
+		{
+			"order":3,
+			"val":"text is between 1 and 50 characters long, inclusive"
+		},
+		{
+			"order":4,
+			"val":"each character in text has an ASCII value between 32 and 126, inclusive"
+		},
+		{
+			"order":5,
+			"val":"each character in plain and code has an ASCII value between 33 and 126, inclusive"
+		}
+	]
+}

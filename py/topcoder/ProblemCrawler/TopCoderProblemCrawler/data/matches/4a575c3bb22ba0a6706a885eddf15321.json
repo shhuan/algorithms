@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":180.14,
+			"constraints":[],
+			"correctRatio":94.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4518&rd=8068",
+			"name":"OneFight",
+			"notes":[],
+			"submission":216
+		},
+		{
+			"avgPts":288.29,
+			"constraints":[],
+			"correctRatio":78.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4597&rd=8068",
+			"name":"GameEnding",
+			"notes":[],
+			"submission":138
+		},
+		{
+			"avgPts":527.13,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4787&rd=8068",
+			"name":"ConvexHull",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"Single Round Match 271 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8068"
+}

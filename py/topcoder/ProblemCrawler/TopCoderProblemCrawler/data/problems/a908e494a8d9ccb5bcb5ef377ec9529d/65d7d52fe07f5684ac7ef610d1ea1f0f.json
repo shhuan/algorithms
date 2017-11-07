@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10855&rd=14235",
+	"statement":"<p>Dave has a balance with which to weigh objects, and a number of reference weights of known value. All weights are integers between 1 and 100000000 (10^8), inclusive. The balance has 2 pans, each of which can hold any number of objects. The balance will indicate which pan contains more total weight, or that the pans contain equal amounts of weight.</p> <p>Dave has a problem. His arch nemesis, Earl, has removed the labels from some of the weights, in an attempt to prevent Dave from knowing their values. Dave will attempt to recover the values of the unlabeled weights using the balance and the remaining weights. You are asked to figure out if Dave will succeed.</p> <p>You will be given a int[] <b>labeled</b> giving the values of all of the weights with their labels intact, and int[] <b>unlabeled</b>, the actual values of the unlabeled weights. Return a String[] with the same number of elements as <b>unlabeled</b>, each &quot;yes&quot; if Dave can determine the value of the corresponding unlabeled weight, or &quot;no&quot; otherwise (quotes for clarity only).</p>",
+	"notes":[{
+		"order":1,
+		"val":"Dave knows that the weights are positive integers not exceeding 100000000 (10^8). See example 2."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BalancingAct",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"recover",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] recover(int[] labeled, int[] unlabeled)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{19}",
+			"id":0,
+			"input":"{9,13,15,16}",
+			"note":"Dave places the 9 weight and the unlabeled weight in one pan, and the 13 and 15 weights in the other.",
+			"order":1
+		},
+		{
+			"expect":"{10,10}",
+			"id":0,
+			"input":"{20}",
+			"note":"Dave may make multiple weighings.",
+			"order":2
+		},
+		{
+			"expect":"{33333333,73,100000000}",
+			"id":0,
+			"input":"{33333332,33333334}",
+			"note":"Here, Dave uses the fact that all weights are integers between 1 and 100000000.",
+			"order":3
+		},
+		{
+			"expect":"{1,1,2,2}",
+			"id":0,
+			"input":"{12}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{64709384,46095505,82231725,35940812}",
+			"id":0,
+			"input":"{31415926,5358979,32384626,43383279,50288419, 71693993,75105820,9749445,92307816,40628620, 89986280,34825342,11706798,21480865,13282306}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"labeled will have between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"unlabeled will have between 1 and 4 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of labeled will be between 1 and 100000000 (10^8), inclusive."
+		},
+		{
+			"order":4,
+			"val":"All elements of unlabeled will be between 1 and 100000000 (10^8), inclusive."
+		}
+	]
+}

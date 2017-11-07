@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4439&rd=6538",
+	"statement":"A segment can be represented as a pair of four integers (x1, y1, x2, y2), where (x1, y1) are the coordinates of its starting point and (x2, y2) are the coordinates of its ending point. In this problem, you will be given a set of <b>n</b> segments, all of which are either parallel to or form a 45 degree angle with one of the axes. Your task is to count the number of unique triangles resulting from their intersection. Two triangles are considered to be different if and only if they share at most two common vertices. <br /><br /><br /><br /> You will be given a int[] <b>X1</b>, a int[] <b>Y1</b>, a int[] <b>X2</b> and a int[] <b>Y2</b> such that each 4-uple of the form (<b>X1[i]</b>, <b>Y1[i]</b>, <b>X2[i]</b>, <b>Y2[i]</b>) denotes a segment. Return an <b>int</b> representing the number of triangles resulting from the segments' intersection. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HiddenTriangles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int[] X1, int[] Y1, int[] X2, int[] Y2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0,0,0,3,3,0}",
+			"id":0,
+			"input":"{0,0,0,0,0,3}",
+			"note":"There are four triangles of area 2.25 and another four of area 4.5.  ",
+			"order":1
+		},
+		{
+			"expect":"{0,0,1,0,0,1,0,0,0,2,1,0}",
+			"id":0,
+			"input":"{0,1,0,2,1,2,0,1,2,0,0,0}",
+			"order":2
+		},
+		{
+			"expect":"{0,0,0,2,1,0}",
+			"id":0,
+			"input":"{0,1,2,0,0,0}",
+			"note":"This is a set of perpendicular lines forming a square divided into four smaller squares. No triangles can be made.  ",
+			"order":3
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"{}",
+			"order":4
+		},
+		{
+			"expect":"{0,0,0,0,0,0,0,0,0,0,0,25,75,8,8,8,0}",
+			"id":0,
+			"input":"{-50,-40,-30,-20,-10,0,10,20,30,40,50,-100,-100,5,6,7,20}",
+			"order":5
+		},
+		{
+			"expect":"{0,0,0,1,2,3,4,5,6,7,8,9}",
+			"id":0,
+			"input":"{0,0,10,9,8,7,6,5,4,3,2,1}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"X1, Y1, X2 and Y2 each contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"X1, Y1, X2 and Y2 have the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"All segments must either be parallel to or form a 45 degree angle with one of the axes."
+		},
+		{
+			"order":4,
+			"val":"Each segment has length at least 1."
+		},
+		{
+			"order":5,
+			"val":"All elements are between -100 and 100, inclusive."
+		}
+	]
+}

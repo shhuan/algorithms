@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":215.88,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6810&rd=10134",
+			"name":"CodeSet",
+			"notes":[],
+			"submission":15
+		},
+		{
+			"avgPts":351.63,
+			"constraints":[],
+			"correctRatio":23.08,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6860&rd=10134",
+			"name":"CCWTurning",
+			"notes":[],
+			"submission":13
+		},
+		{
+			"avgPts":724.36,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6844&rd=10134",
+			"name":"RepeatedAddition",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"TCCC06 > Semifinal Room 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10134"
+}

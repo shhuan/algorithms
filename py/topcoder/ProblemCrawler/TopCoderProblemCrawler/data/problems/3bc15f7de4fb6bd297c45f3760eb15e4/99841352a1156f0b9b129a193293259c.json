@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4797&rd=7996",
+	"statement":"<p>Yahtzee is a game played with 5 dice and a score card. The object of the game is to get the best score. A turn consists of the following:</p> \n <ol> \n  <li>Roll all of the dice.</li> \n  <li>Keep as many of the dice as you want.</li> \n  <li>Re-roll the dice you decide not to keep. Note that at any time if you like your hand you can stop rolling.</li> \n  <li>Repeat step two and three. Note that you can throw away some of the dice that you previously kept.</li> \n  <li>Now that you've had up to three rolls, record the resulting roll in a single place on your score card (scoring only applies to the final hand you keep).</li> \n </ol> <p>Your score card is divided up as follows:</p> \n <ul> \n  <li>4 of a kind - 4 or more dice the same, scores the face value of ALL the dice.</li> \n  <li>full house - 3 dice equal to each other with the other 2 dice equal to each other as well. Scores 25 points.</li> \n  <li>small straight - Any 4 of the dice in consecutive order, scores 30 points.</li> \n  <li>large straight - All 5 dice in consecutive order, scores 40 points.</li> \n  <li>yahtzee - All 5 dice equal to each other, scores 50 points.</li> \n </ul> <p> You are given a String <b>rolls</b> containing fifteen numbers, the first five of which are your first roll, and the next ten what you would get if you continued to roll in order. For instance, if input is &quot;123456123456123&quot; your first roll gives you &quot;12345&quot;. If you keep the 1, 2, and 5, and reroll the other two your hand would now look like &quot;12615&quot;. Now if you keep the two 1's and reroll the other three, your final hand would be &quot;12314&quot;. You are to return the best possible score you can get. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"You can choose only 1 category. That is, you can not get points for 2 categories if your hand satisfies requirements for both."
+		},
+		{
+			"order":2,
+			"val":"Straights cannot wrap around. \"12346\" would count as a small straight, but not a large straight."
+		},
+		{
+			"order":3,
+			"val":"You can reorder your dice as you want to fit into a category. That is, \"64523\" can be reordered as \"23456\" and scored as a large straight."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BestYahtzeeScore",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestScore",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int bestScore(String rolls)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 50",
+			"id":0,
+			"input":"\"354621111111111\"",
+			"note":"You get 3, 5, 4, 6 and 2 after the first roll. You should re-roll all dice and get with 1 on all five faces.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 50",
+			"id":0,
+			"input":"\"666663213214444\"",
+			"note":"Here you get Yahtzee after the first roll. You should keep all the dice.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 40",
+			"id":0,
+			"input":"\"652353235164412\"",
+			"note":"After the first roll you get \"65235\" and throw away all the dice. The second roll gives you \"32351\". You should keep \"235\" and re-roll the other two dice. You finish with \"23564\", which is a large straight.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 25",
+			"id":0,
+			"input":"\"265241155222313\"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"\"144165526421151\"",
+			"note":"You can't satisfy the requirements for any category.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"rolls will contain exactly 15 characters."
+		},
+		{
+			"order":2,
+			"val":"Each character in rolls will be between '1' and '6', inclusive."
+		}
+	]
+}

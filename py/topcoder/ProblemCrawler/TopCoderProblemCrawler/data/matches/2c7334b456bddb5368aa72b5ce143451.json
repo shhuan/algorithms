@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":127.76,
+			"constraints":[],
+			"correctRatio":77.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11342&rd=14429",
+			"name":"MafiaGame",
+			"notes":[],
+			"submission":484
+		},
+		{
+			"avgPts":257.06,
+			"constraints":[],
+			"correctRatio":47.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11344&rd=14429",
+			"name":"FractalPicture",
+			"notes":[],
+			"submission":87
+		},
+		{
+			"avgPts":631.26,
+			"constraints":[],
+			"correctRatio":38.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11345&rd=14429",
+			"name":"ProductAndSum",
+			"notes":[],
+			"submission":18
+		}
+	],
+	"name":"Single Round Match 500 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14429"
+}

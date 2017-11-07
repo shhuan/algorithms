@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":169.04,
+			"constraints":[],
+			"correctRatio":91.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13669&rd=16314",
+			"name":"TaroFillingAStringDiv1",
+			"notes":[],
+			"submission":313
+		},
+		{
+			"avgPts":200.5,
+			"constraints":[],
+			"correctRatio":24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13271&rd=16314",
+			"name":"TheKingsRoadsDiv1",
+			"notes":[],
+			"submission":50
+		},
+		{
+			"avgPts":414.05,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13579&rd=16314",
+			"name":"LegendOfAdlez",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"Single Round Match 650 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16314"
+}

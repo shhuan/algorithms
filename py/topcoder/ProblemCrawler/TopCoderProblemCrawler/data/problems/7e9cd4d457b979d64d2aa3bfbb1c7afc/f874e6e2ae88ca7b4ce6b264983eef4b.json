@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10418&rd=13935",
+	"statement":"Cantor dust is a 2-dimensional fractal constructed in the following way. Initially the fractal is a black square. At each iteration, each square of the fractal is divided into a 3x3 subgrid of equal subsquares. Any black subsquares which belong to the middle row or to the middle column of a subgrid (or to both of them) are painted white. <br /><br /> You are given a String[] <b>pattern</b> which represents a rectangular pattern of black and white squares (represented by 'X' and '.' characters, respectively). Return the number of occurrences of this pattern in Cantor dust at iteration <b>time</b>. Overlapping occurrences are allowed.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CantorDust",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"occurrencesNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int occurrencesNumber(String[] pattern, int time)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\".X\",\"..\"}",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"..\"}",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\".\"}",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"X...X\"}",
+			"order":4
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"{\"X\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"time will be between 1 and 9, inclusive."
+		},
+		{
+			"order":2,
+			"val":"pattern will contain between 1 and min(50, 3time) elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of pattern will contain between 1 and min(50, 3time) characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"All elements of pattern will contain the same number of characters."
+		},
+		{
+			"order":5,
+			"val":"Each character in each element of pattern will be '.' or 'X'."
+		}
+	]
+}

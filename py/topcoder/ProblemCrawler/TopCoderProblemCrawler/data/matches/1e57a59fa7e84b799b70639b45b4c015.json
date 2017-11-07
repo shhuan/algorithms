@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.06,
+			"constraints":[],
+			"correctRatio":35.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5943&rd=9809",
+			"name":"FindTriangle",
+			"notes":[],
+			"submission":261
+		},
+		{
+			"avgPts":342.84,
+			"constraints":[],
+			"correctRatio":82.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6033&rd=9809",
+			"name":"CannonBalls",
+			"notes":[],
+			"submission":245
+		},
+		{
+			"avgPts":522.47,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6068&rd=9809",
+			"name":"CountryWar",
+			"notes":[],
+			"submission":45
+		}
+	],
+	"name":"Single Round Match 288 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9809"
+}

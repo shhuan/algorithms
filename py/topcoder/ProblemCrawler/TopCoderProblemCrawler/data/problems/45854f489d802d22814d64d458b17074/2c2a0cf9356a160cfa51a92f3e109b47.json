@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7754&rd=10672",
+	"statement":"<p> We have an arithmetic expression made up of positive integers, the + and - operators and parentheses. All the parentheses, however, have been erased by the cleaning staff and we want to calculate the minimum value the original expression may have had. </p><p> You will be given a String <b>e</b> containing the expression without the parentheses. Return the minimum value the original expression could have had before the parentheses were erased. </p>",
+	"notes":[{
+		"order":1,
+		"val":"All operations in the original expression were addition and subtraction; there were no parentheses placed between two consecutive digits."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LostParentheses",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minResult",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minResult(String e)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: -35",
+			"id":0,
+			"input":"\"55-50+40\"",
+			"note":"The expression can only have two different values: 55-50+40=45 and 55-(50+40)=-35.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 100",
+			"id":0,
+			"input":"\"10+20+30+40\"",
+			"note":"Since the sum is associative, any parenthesization of the expression would get the same result.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"\"00009-00009\"",
+			"note":"Numbers may contain leading zeroes.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"e will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character of e will be a digit ('0'-'9'), a plus sign ('+') or a minus sign ('-')."
+		},
+		{
+			"order":3,
+			"val":"The first and last characters of e will be digits."
+		},
+		{
+			"order":4,
+			"val":"No two operators (characters '+' and '-') will appear consecutively in e."
+		},
+		{
+			"order":5,
+			"val":"There will not be a sequence of more than 5 consecutive digits in e."
+		}
+	]
+}

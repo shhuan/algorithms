@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7256&rd=10010",
+	"statement":"<p> In this problem, a left single arrow is defined as a &quot;less than&quot; character ('&lt;') immediately followed by zero or more consecutive hyphen characters ('-'). A left double arrow is a &quot;less than&quot; character ('&lt;') immediately followed by zero or more consecutive equals characters ('='). A right single arrow is zero or more hyphen characters ('-') immediately followed by a &quot;greater than&quot; character ('&gt;'). A right double arrow is zero or more equals characters ('=') immediately followed by a &quot;greater than&quot; character ('&gt;'). For example, the following are arrows (quotes for clarity only): &quot;==&gt;&quot;, &quot;&lt;-&quot;, &quot;&lt;&quot;, &quot;&lt;===&quot;, &quot;---&gt;&quot;, &quot;&gt;&quot;. The length of an arrow is the number of characters it contains. </p><p> You will be given a String <b>s</b>. Return the length of the longest arrow in <b>s</b>, or -1 if it does not contain any arrows. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Arrows may overlap. See examples for further clarifications."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Arrows",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"longestArrow",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int longestArrow(String s)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"\"<--->--==>\"",
+			"note":"The arrows contained in  in this case are, by order of appearance: \"<\", \"<-\", \"<--\", \"<---\", \"--->\", \"-->\", \"->\", \">\", \"==>\", \"=>\" and \">\". Note that many of these arrows, including some pairs with one left arrow and one right arrow, are overlapping.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"\"<<<<<<<<<<\"",
+			"note":"All arrows are of length 1. Note that \"<\" is both a left single arrow and a left double arrow according to the definition.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"\"----==-\"",
+			"note":"No arrows contained.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"\"<----=====>\"",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"s will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in s will be one of '&lt;', '&gt;', '-' or '='."
+		}
+	]
+}

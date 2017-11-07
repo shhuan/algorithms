@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":186.6,
+			"constraints":[],
+			"correctRatio":52.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13344&rd=16060",
+			"name":"RectangleCovering",
+			"notes":[],
+			"submission":604
+		},
+		{
+			"avgPts":232.5,
+			"constraints":[],
+			"correctRatio":52.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13339&rd=16060",
+			"name":"CandyCollection",
+			"notes":[],
+			"submission":92
+		},
+		{
+			"avgPts":456.42,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13338&rd=16060",
+			"name":"CandyDrawing",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"Single Round Match 629 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16060"
+}

@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12137&rd=15173",
+	"statement":"Beaver Bindu has some chocolates arranged in a row. The wrapping of each chocolate has a single color. Multiple chocolates can share the same color. In this problem, each of the possible colors is represented by an uppercase letter. You are given a String <b>chocolates</b>. For each i, the i-th chocolate (0-based index) in the row has the color <b>chocolates</b>[i]. <br /><br /><br /><br /> The <i>spread</i> of a row of chocolates is the maximum number of adjacent chocolates that all share the same color. Formally, the spread can be defined as the maximum value of (j-i+1), where i &lt;= j and all the chocolates in the positions between i and j, inclusive, have the same color. <br /><br /><br /><br /> You are also given an int <b>maxSwaps</b>. Bindu can swap any two adjacent chocolates. She has decided to make at most <b>maxSwaps</b> such swaps. <br /><br /><br /><br /> Return the maximum spread she can obtain. <br /><br /><br /><br />",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ColorfulChocolates",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maximumSpread",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maximumSpread(String chocolates, int maxSwaps)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"\"ABCDCBC\"",
+			"note":"One optimal solution is to swap chocolates at positions 2 and 3, obtaining the row \"ABDCCBC\", which has spread 2. ",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"\"ABCDCBC\"",
+			"note":"The only optimal solution is to produce the row \"ABDCCCB\". ",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"ABBABABBA\"",
+			"note":"The row \"ABBBBAABA\" can be produced with 3 swaps.",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"\"ABBABABBA\"",
+			"note":"An optimal solution is to produce the row \"AABBBBBAA\".",
+			"order":4
+		},
+		{
+			"expect":"77",
+			"id":0,
+			"input":"\"QASOKZNHWNFODOQNHGQKGLIHTPJUVGKLHFZTGPDCEKSJYIWFOO\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"chocolates will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in chocolates will be an uppercase letter ('A'-'Z')."
+		},
+		{
+			"order":3,
+			"val":"maxSwaps will be between 1 and 2500, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":200.35,
+			"constraints":[],
+			"correctRatio":76.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2415&rd=5075",
+			"name":"WindowManager",
+			"notes":[],
+			"submission":193
+		},
+		{
+			"avgPts":262.44,
+			"constraints":[],
+			"correctRatio":51.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2416&rd=5075",
+			"name":"NCMultiplication",
+			"notes":[],
+			"submission":66
+		},
+		{
+			"avgPts":593.69,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2852&rd=5075",
+			"name":"Graduation",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"Single Round Match 200 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5075"
+}

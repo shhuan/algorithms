@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7310&rd=13675",
+	"statement":"<p> There is a single king on a 8x8 chessboard. He is initially situated on the cell described by <b>startPosition</b>. This string consists of two characters: a letter followed by a digit. The letter represents the column and the digit represents the row. Columns are enumerated by the letters 'A' through 'H' (from left to right) and rows are enumerated by the digits '1' through '8' (from bottom to top). For example, the left-bottom corner of the board is A1, and the cell to its right is B1. </p> <p> The king performs a series of moves that are given in the String[] <b>moves</b>. Each element has the form: </p> \n <ul> \n  <li>'R' - one cell to the right</li> \n  <li>'L' - one cell to the left</li> \n  <li>'B' - one cell to the down</li> \n  <li>'T' - one cell to the up</li> \n  <li>'RT' - move diagonally one cell up and to the right</li> \n  <li>'LT' - move diagonally one cell up and to the left</li> \n  <li>'RB' - move diagonally one cell down and to the right</li> \n  <li>'LB' - move diagonally one cell down and to the left</li> \n </ul> <p> There is a single stone on the board. It is initially situated on the cell described by <b>stonePosition</b>. If the king makes a move and lands in the same cell as the stone (see the picture), he will shift the stone by one cell in the same direction as his move. If a move would result in either the king or the stone landing outside of the board, he will skip that move. </p> <p><img src=\"http://www.topcoder.com/contest/problem/KingMovement/chess.png\" /></p> <p> Determine the final positions of the king and the stone after the moves. The return value should be a String containing the king's position, followed by a comma, followed by the stone's position. Each position should be in the same format as <b>startPosition</b> and <b>stonePosition</b>. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"KingMovement",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"finalPosition",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String finalPosition(String startPosition, String stonePosition, String[] moves)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"H8\"",
+			"id":0,
+			"input":"\"A1\"",
+			"note":"The king moves one cell up.",
+			"order":1
+		},
+		{
+			"expect":"\"A2\"",
+			"id":0,
+			"input":"\"A1\"",
+			"note":"The king moves one cell up and lands in the same cell as the stone. He moves the stone one cell up, which is the same direction as his move.",
+			"order":2
+		},
+		{
+			"expect":"\"A2\"",
+			"id":0,
+			"input":"\"A1\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"A2\"",
+			"id":0,
+			"input":"\"A1\"",
+			"note":"All these moves are ignored.",
+			"order":4
+		},
+		{
+			"expect":"\"B7\"",
+			"id":0,
+			"input":"\"A8\"",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\"B1\"",
+			"id":0,
+			"input":"\"C1\"",
+			"note":"After the first move the king lands on cell B1 and shifts the stone to A1. The king ends the second move in cell B2, and he skips the third move because it requires moving the stone out of the board.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"startPosition and stonePosition will each be formatted as &quot;XY&quot; (quotes for clarity), where X is a letter between 'A' and 'H', inclusive, and Y is a digit between '1' and '8', inclusive."
+		},
+		{
+			"order":2,
+			"val":"startPosition and stonePosition will be different."
+		},
+		{
+			"order":3,
+			"val":"moves will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of moves will be from the set {&quot;L&quot;, &quot;R&quot;, &quot;T&quot;, &quot;B&quot;, &quot;RT&quot;, &quot;LT&quot;, &quot;RB&quot;, &quot;LB&quot;}."
+		}
+	]
+}

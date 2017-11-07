@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":177.85,
+			"constraints":[],
+			"correctRatio":58.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11476&rd=14539",
+			"name":"MagicalGirlLevelOneDivOne",
+			"notes":[],
+			"submission":443
+		},
+		{
+			"avgPts":312.79,
+			"constraints":[],
+			"correctRatio":66.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11482&rd=14539",
+			"name":"MagicalGirlLevelTwoDivOne",
+			"notes":[],
+			"submission":59
+		},
+		{
+			"avgPts":440.18,
+			"constraints":[],
+			"correctRatio":63.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11478&rd=14539",
+			"name":"MagicalGirlLevelThreeDivOne",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"Single Round Match 514 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14539"
+}

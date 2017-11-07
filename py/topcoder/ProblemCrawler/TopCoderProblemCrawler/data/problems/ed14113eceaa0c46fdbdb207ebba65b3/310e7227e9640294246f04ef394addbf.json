@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=205&rd=56",
+	"statement":"<pre>THIS PROBLEM WAS TAKEN FROM THE SEMIFINALS OF THE TOPCODER INVITATIONAL\nTOURNAMENT\n\nPROBLEM STATEMENT\nOne of the problems that TopCoder has run into is how to parse a String[] from\nthe command line. To do this, we've adopted the following convention for a\nString representation of a String[] (quotes are used for clarity only):\n&quot;{&lt;element1&gt;, &lt;element2&gt;, ... , &lt;elementN&gt;}&quot;, where the input String begins\nwith a beginning curly brace,  each String element in the input String (except\nthe last one) is followed by a comma and a space, and the last one is followed\nby an end curly brace. However, there are a couple of tricks:\n\n* each individual String element may contain commas or curly braces (or both).\nIn each case, an escape character ('\\') will precede commas and curly braces\nthat are actually *within* the String element.\n* a backslash ('\\') does not necessarily mean the following character needs to\nbe escaped. If it does not precede a comma or curly brace, it is to be\nconsidered part of the String element.\n* an empty String element is a valid parameter, and is indicated by no\ncharacter preceding a delimiting comma and a space (see examples below).\n* &quot;{}&quot; returns an array with an empty String element {&quot;&quot;}.\n\nAdditionally, there are certain cases where the input String is invalid that\nyou will need to catch. Those situations are:\n* if the input string doesn't begin with an open curly brace and end with a\nclosed curly brace\n* if any curly brace inside the opening and closing curly braces are not\nescaped.\n* if any comma that serves as a delimiter fails to have a space after it\n\nIn cases such as these, return a String[] consisting of exactly one element:\n&quot;INVALID&quot;\n\nYour task is to create a class ArgParser that includes a method parse. This\nmethod will take a String representation of a String[], and return the\ncorresponding String[].\n\nDEFINITION\nClass Name:  ArgParser\nMethod Name:  parse\nParameters:  String\nReturns:  String[]\nMethod signature (be sure your method is public):  String[] parse(String input);\n\nTopCoder will ensure that the input string will only contain characters A-Z,\na-z, 0-9, '{', '}', spaces (' '), commas (',') and backslashes ('\\').  The\nString should have a length between 0 and 50, inclusive.\n\nEXAMPLES\n&quot;{a, b, c}&quot; -&gt; {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;} (3 items)\n&quot;{a\\,b, c}&quot; -&gt; {&quot;a,b&quot;, &quot;c&quot;} (2 items)\n&quot;{, , a, }&quot; -&gt; {&quot;&quot;, &quot;&quot;, &quot;a&quot;, &quot;&quot;} (4 items)\n&quot;{\\\\, \\,\\, }&quot; -&gt; {&quot;\\, ,, &quot;} (1 item)\n&quot;{\\ , \\,, }&quot; -&gt; {&quot;\\ &quot;, &quot;,&quot;, &quot;&quot;} (3 items)\n&quot;{}&quot; -&gt; {&quot;&quot;} (1 item)\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ArgParser",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"parse",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] parse(String param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

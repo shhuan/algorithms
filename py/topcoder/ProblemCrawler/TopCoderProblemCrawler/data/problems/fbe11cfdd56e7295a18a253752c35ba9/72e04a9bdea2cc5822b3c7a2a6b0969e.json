@@ -1,0 +1,74 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3475&rd=6529",
+	"statement":"HTML is the markup language used on the World Wide Web. In HTML, the simplest type of table is formed as follows:<br /><br /><br /><br /> The table starts with &quot;&lt;table&gt;&quot; and ends with &quot;&lt;/table&gt;&quot;. These are the outermost <i>tags</i>, and within them are a number of rows. Each row starts with &quot;&lt;tr&gt;&quot; and ends with &quot;&lt;/tr&gt;&quot;. Within each row, there are a number of cells. Each cell starts with &quot;&lt;td&gt;&quot; and ends with &quot;&lt;/td&gt;&quot;. Between the &quot;td&quot; tags are the contents of the cell, which may be 0 or more characters. The rows are displayed in the same order they appear, and the cells within a row are also displayed in the same order they appear. For the purposes of this problem, every row will have the same number of cells. For example, the following HTML will render the table below: <pre>\n&lt;table&gt;\n&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;\n&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;\n&lt;/table&gt;\n</pre> <img src=\"http://www.topcoder.com/contest/problem/CalendarHTML/abc.gif\" /><br /><br /> <br /><br /> Your task is to make a calendar for a particular month in HTML. The month has <b>days</b> days in it, and starts on day <b>start</b>, where 0 is Sunday, 1 is Monday, and so on. You should make a table for this month, with a single row for each week, and a single column for each day. In addition, you should have a header row, with 7 cells, containing the letters (in order) 'S', 'M', 'T', 'W', 'T', 'F', 'S'. You should then fill in the calendar with the days of the month, starting from the appropriate day of the first week (in the second row of the table) with a &quot;1&quot;. Note that some of the cells at the beginning and end of the calendar may be empty, &quot;&lt;td&gt;&lt;/td&gt;&quot;, but must still be included in the return. Be careful not to include any completely empty rows in your return though. For example, if <b>days</b> = 30 and start = 3, you would want to generate the following table:<br /><br /> <img src=\"http://www.topcoder.com/contest/problem/CalendarHTML/30.gif\" /><br /><br /> You should return a String[], the first element of which is &quot;&lt;table&gt;&quot;, and the last element of which is &quot;&lt;/table&gt;&quot;. Each element in between should represent a single row in the table, starting with &quot;&lt;tr&gt;&quot;, and ending with &quot;&lt;/tr&gt;&quot; ",
+	"notes":[
+		{
+			"order":1,
+			"val":"All of the tags in the return should be lowercase, while the contents of the cells in the first row ('S', 'M', 'T', 'W', 'T', 'F', 'S') should be uppercase."
+		},
+		{
+			"order":2,
+			"val":"There should be no spaces or leading zeros anywhere in the return."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CalendarHTML",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"makeTable",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] makeTable(int days, int start)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"30",
+			"note":"The example from above.",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"28",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"31",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"days will be between 28 and 31, inclusive."
+		},
+		{
+			"order":2,
+			"val":"start will be between 0 and 6, inclusive."
+		}
+	]
+}

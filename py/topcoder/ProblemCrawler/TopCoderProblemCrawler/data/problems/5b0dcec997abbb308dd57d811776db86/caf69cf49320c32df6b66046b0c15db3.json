@@ -1,0 +1,122 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13539&rd=16189",
+	"statement":"Little Petya likes computer games a lot. He is currently playing the last level of a game. The level is a rectangular grid with <b>N</b> rows by <b>M</b> columns of cells. The cells have coordinates between (0,0) and (<b>N</b>-1,<b>M</b>-1), inclusive. Each cell is either empty or occupied by a wall. You will be given the layout of the level. (The precise format is specified at the end of this statement.) <br /><br /> <br /><br /> At the beginning of the game Petya's character appears in the cell (<b>r1</b>,<b>c1</b>) with <b>E</b> units of energy. His task is to find a sequence of valid actions (described below) that takes his character from the cell (<b>r1</b>,<b>c1</b>) to the cell (<b>r2</b>,<b>c2</b>). <br /><br /> <br /><br /> The rules for the actions are as follows: In each action, Petya can do one of two things: \n <ul> \n  <li>If his character's energy is still positive, he can decrease it by 1.</li> \n  <li>He can make the character jump by exactly K cells in one of the four cardinal directions, where K is the character's current energy. The target cell has to be on the board and it has to be free (not a wall). Note that the cells between the current cell and the target cell may contain walls. Also note that jumping does not decrease the character's energy.</li> \n </ul> <br /><br /> <br /><br /> Petya wins the game if he finds a finite sequence of actions that will bring his character to the desired destination cell. <br /><br /> <br /><br /> You are given the grid in the format described below, Petya's character starting position, ending position and initial level of energy. Determine whether Petya can win the game or not. Return &quot;Possible&quot; (without quotes) if Petya can do that and &quot;Impossible&quot; otherwise. <br /><br /> <br /><br /> In order to keep the input size small, the grid should be pseudo-randomly generated. You are given a int[] <b>p</b>. The following pseudocode describes how to obtain the configuration of the grid. <pre>\n64bit_integer x = N + 2 * M + 3 * r1 + 4 * c1 + 5 * r2 + 6 * c2;\n\nfor(i = 0; i &lt; N; i++){\n\tfor(j = 0; j &lt; M; j++){\n\t\tgrid[i][j] = Empty;\n\t}\n}\n\nfor(i = 0; i &lt; length(p); i += 5){\n\tfor(j = p[i]; j &lt;= p[i + 2]; j++){\n\t\tfor(k = p[i + 1]; k &lt;= p[i + 3]; k++){\n\t\t\tx = (x * 1103515245 + 12345) % (64bit_integer)2147483648;\n\t\t\tif(x &lt; p[i + 4]){\n\t\t\t\tgrid[j][k] = Wall;\n\t\t\t} else {\n\t\t\t\tgrid[j][k] = Empty;\n\t\t\t}\n\t\t}\n\t}\n}\n\ngrid[r1][c1] = Empty;\ngrid[r2][c2] = Empty;\n</pre> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EnergyGameOnGrid",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"isReachable",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[], int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String isReachable(int N, int M, int[] p, int r1, int c1, int r2, int c2, int E)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"In this case the grid looks like this ('0' stands for empty cells and '1' stands for cells occupied by walls): ",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"Here the grid looks like this: ",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"5",
+			"note":"Here is how the grid looks like in this test case: ",
+			"order":3
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"3",
+			"note":"Here is how the grid looks like in this test case:  It's impossible to reach the target cell with any initial amount of energy.",
+			"order":4
+		},
+		{
+			"expect":"2000",
+			"id":0,
+			"input":"2000",
+			"note":"Here the grid is completely free of walls.",
+			"order":5
+		},
+		{
+			"expect":"2000",
+			"id":0,
+			"input":"2000",
+			"note":"In this test case we need at least 73 units of energy to reach the target cell.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N and M will be between 1 and 2000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"p will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The number of elements in p will be divisible by 5."
+		},
+		{
+			"order":4,
+			"val":"p[i] will be between 0 and N-1, inclusive for all valid i such that i mod 5 = 0."
+		},
+		{
+			"order":5,
+			"val":"p[i] will be between 0 and M-1, inclusive for all valid i such that i mod 5 = 1."
+		},
+		{
+			"order":6,
+			"val":"p[i] will be between p[i-2] and N-1, inclusive for all valid i such that i mod 5 = 2."
+		},
+		{
+			"order":7,
+			"val":"p[i] will be between p[i-2] and M-1, inclusive for all valid i such that i mod 5 = 3."
+		},
+		{
+			"order":8,
+			"val":"p[i] will be between 0 and 2,147,483,647, inclusive for all valid i such that i mod 5 = 4."
+		},
+		{
+			"order":9,
+			"val":"r1 and r2 will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":10,
+			"val":"c1 and c2 will be between 0 and M-1, inclusive."
+		},
+		{
+			"order":11,
+			"val":"E will be between 1 and max(N, M), inclusive."
+		}
+	]
+}

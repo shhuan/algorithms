@@ -1,0 +1,96 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10929&rd=14278",
+	"statement":"<p> You have a machine that cuts glass panes using a robotic arm with a diamond point at the end. </p> <p> The input to the machine is a rectangular piece of glass with width <b>W</b> and height <b>H</b>. The machine has a coordinate system with point (0,0) in one corner of the glass pane and (<b>W</b>,<b>H</b>) in the opposite corner. In the beginning, the diamond point is positioned at (<b>startx</b>,<b>starty</b>). Then the machine executes a given program. </p> <p> The program is given as a String[] <b>program</b>. Concatenate the elements of <b>program</b> to get one long string that describes the program. Each character in the program describes one movement of the diamond point: 'L' decreases its x-coordinate, 'R' increases its x-coordinate, 'U' decreases its y-coordinate and 'D' increases its y-coordinate by 1. During all movements, the diamond point cuts the glass. </p> <p> Once the cutting is over, the glass may fall apart into multiple pieces. Compute and return their count. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CuttingGlass",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"pieces",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int pieces(int W, int H, int startx, int starty, String[] program)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"100",
+			"id":0,
+			"input":"100",
+			"note":"This program cuts out a small square piece from a large plate.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"After this program is executed, there will be a short cut on the glass pane, but it will still be in one piece.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"This program cuts a 3x3 glass pane into nine separate 1x1 squares.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"W will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"H will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"startx will be between 0 and W, inclusive."
+		},
+		{
+			"order":4,
+			"val":"starty will be between 0 and H, inclusive."
+		},
+		{
+			"order":5,
+			"val":"program will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of program will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each character in each element of program will be one of 'L', 'R', 'U', and 'D'."
+		},
+		{
+			"order":8,
+			"val":"The program will be such that the diamond point never leaves the glass pane, but it may touch the boundary and even cut along the boundary."
+		}
+	]
+}

@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11234&rd=14244",
+	"statement":"<p>Fox Jiro likes dice. He wants to make his own dice. Each die he wants to make is a cube. Each of the 6 faces has an integer between 1 and <b>N</b>, inclusive. No two faces have same number. Also the following condition must be satisfied: for all faces, the sum of the numbers on opposite faces must be equal and the sum must be greater than or equal to <b>K</b>.</p> <br /><br /> <p>He realized that there are many ways to make such dice. He wants to know how many ways there are. Please help Jiro to make a program that is given two integers <b>N</b> and <b>K</b> and returns the number of different dice satisfying the condition mentioned above.</p> <br /><br /> <p>Two dice are considered the same if you can rotate one to form the other.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"The answer will always fit in a signed 64-bit integer."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FoxMakingDice",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long theCount(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"7",
+			"id":0,
+			"input":"6",
+			"note":"You can make normal dice. There are two ways to arrange the numbers.",
+			"order":1
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"5",
+			"note":"You cannot make 6 sided dice with 5 numbers.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1000",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"123",
+			"id":0,
+			"input":"456",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1014",
+			"id":0,
+			"input":"913",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and 2,000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":185.33,
+			"constraints":[],
+			"correctRatio":90.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11559&rd=14650",
+			"name":"RGBGame",
+			"notes":[],
+			"submission":11
+		},
+		{
+			"avgPts":309.94,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11540&rd=14650",
+			"name":"TheCoins",
+			"notes":[],
+			"submission":5
+		},
+		{
+			"avgPts":383.96,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10938&rd=14650",
+			"name":"DiscreteConvexHull",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2011 TCO Algorithm > Semifinal 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14650"
+}

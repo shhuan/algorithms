@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174.3,
+			"constraints":[],
+			"correctRatio":38.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8193&rd=10785",
+			"name":"BeautifulString",
+			"notes":[],
+			"submission":552
+		},
+		{
+			"avgPts":255.08,
+			"constraints":[],
+			"correctRatio":23.21,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8178&rd=10785",
+			"name":"AbsSequence",
+			"notes":[],
+			"submission":237
+		},
+		{
+			"avgPts":468.48,
+			"constraints":[],
+			"correctRatio":14.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8041&rd=10785",
+			"name":"MountainMap",
+			"notes":[],
+			"submission":7
+		}
+	],
+	"name":"Single Round Match 369 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10785"
+}

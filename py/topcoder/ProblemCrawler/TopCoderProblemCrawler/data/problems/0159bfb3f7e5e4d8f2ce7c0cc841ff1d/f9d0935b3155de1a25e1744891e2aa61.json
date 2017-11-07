@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4616&rd=7224",
+	"statement":"Your restaurant has <b>numTables</b> tables to seat customers. The tables are all arranged in a line. If a large party of customers comes in, a group of adjacent tables will be used. Which group of tables is entirely up to the customer. Since you cannot predict this, assume all possible choices occur with equal probability. What you can predict is the size of each group of customers that arrives. Element i of <b>probs</b> gives the probability, in percent, that an entering party will need i+1 tables. Assuming nobody leaves, return the expected number of tables you will use before a party must be turned away. This only occurs if there is no place to seat them. ",
+	"notes":[{
+		"order":1,
+		"val":"Return values must be accurate to 1e-9, relative or absolute."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TableSeating",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getExpected",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getExpected(int numTables, int[] probs)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{100}",
+			"id":0,
+			"input":"4",
+			"note":"Since every party needs only 1 table, you will always fill the restaurant before turning someone away.",
+			"order":1
+		},
+		{
+			"expect":"{0,100}",
+			"id":0,
+			"input":"4",
+			"note":"Now every party wants 2 tables. One third of the time, the first party will choose the middle 2 tables blocking anyone else from being seated. Two thirds of the time, the first party will choose 2 tables on the end allowing the restaurant to become full. Thus, the returned value is (1/3)*2 + (2/3)*4 = 10/3.",
+			"order":2
+		},
+		{
+			"expect":"{0,0,0,0,0,50,50}",
+			"id":0,
+			"input":"5",
+			"note":"You have 5 tables, but every party needs 6 or 7 tables.",
+			"order":3
+		},
+		{
+			"expect":"{9,9,9,9,9,9,9,9,9,9,10}",
+			"id":0,
+			"input":"12",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"numTables will be between 1 and 12 inclusive."
+		},
+		{
+			"order":2,
+			"val":"probs will contain between 1 and 12 elements inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of probs will be between 0 and 100 inclusive."
+		},
+		{
+			"order":4,
+			"val":"The elements of probs will sum to 100."
+		}
+	]
+}

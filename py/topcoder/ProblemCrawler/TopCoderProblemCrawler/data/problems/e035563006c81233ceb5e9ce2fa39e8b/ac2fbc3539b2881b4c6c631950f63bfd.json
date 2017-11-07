@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8193&rd=10785",
+	"statement":"<p>A string composed of the letters 'A' and 'B' is called beautiful if it satisfies all of the following criteria:</p> \n <ul> \n  <li>it contains no more than <b>countA</b> occurences of 'A';</li> \n  <li>it contains no more than <b>countB</b> occurences of 'B';</li> \n  <li>each substring that contains only 'A's consists of no more than <b>maxA</b> characters;</li> \n  <li>each substring that contains only 'B's consists of no more than <b>maxB</b> characters.</li> \n </ul> <p>Given <b>countA</b>, <b>countB</b>, <b>maxA</b> and <b>maxB</b>, return the maximum possible length of a beautiful string.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BeautifulString",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maximumLength",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maximumLength(int countA, int countB, int maxA, int maxB)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"We don't have any available letters as =0 and =0, so the only beautiful string is the empty one.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"note":"Now we have available letters, but can't include them into the beautiful string as =0 and =0.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"3",
+			"note":"In this case we can't have two consecutive 'A's or 'B's, so letters in the beautiful string should alternate. If we start the string from 'A', the longest one we'll be able to get is \"ABABAB\". But if we start the string from 'B', we'll be able to get the longer one - \"BABABAB\".",
+			"order":3
+		},
+		{
+			"expect":"502524",
+			"id":0,
+			"input":"677578",
+			"note":"Here  >=  and  >= , so we can easily construct a beautiful string using all available + letters.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"countA will be between 0 and 1000000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"countB will be between 0 and 1000000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"maxA will be between 0 and 1000000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"maxB will be between 0 and 1000000, inclusive."
+		}
+	]
+}

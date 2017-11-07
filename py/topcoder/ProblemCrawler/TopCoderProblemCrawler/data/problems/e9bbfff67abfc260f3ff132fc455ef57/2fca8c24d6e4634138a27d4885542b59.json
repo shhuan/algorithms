@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8183&rd=10802",
+	"statement":"<p> A lame knight is located at the bottom-left corner of a <b>height</b> x <b>width</b> chessboard. Unlike a healthy knight, a lame knight can only make moves where he goes to the right. The only possible moves are: </p>\n <ol> \n  <li>2 cells up, 1 cell right;</li> \n  <li>1 cell up, 2 cells right;</li> \n  <li>1 cell down, 2 cells right;</li> \n  <li>2 cells down, 1 cell right.</li> \n </ol> The knight will make one trip, and he wants to maximize the number of visited cells. The knight's starting cell counts toward this number. There is also one restriction for the knight's trip: it must contain each kind of a move at least once, unless it is shorter than 4 moves. If the knight makes less than 4 moves (thus visiting less than 5 cells), his moves are not limited in any way. Return the maximal number of cells the knight can visit during one trip, including the initial cell. <p></p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LameKnight",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxCells",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxCells(int height, int width)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"50",
+			"id":0,
+			"input":"100",
+			"note":"1 move of kind 2, 1 move of kind 3, 23 moves of kind 1 and 22 moves of kind 4.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"There are no possible moves here, so the only visited cell is the starting cell. ",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"17",
+			"note":"It's possible to visit 5 cells (making 4 moves of kind 1 for example), but it's impossible to make it by 4 different moves. So, the best strategy here is to make 3 moves (thus visiting 4 cells).",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"2",
+			"order":4
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"20",
+			"note":"4 cells can be visited using 2 moves of kind 1 and 1 move of kind 4.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"height will be between 1 and 2,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"width will be between 1 and 2,000,000,000, inclusive."
+		}
+	]
+}

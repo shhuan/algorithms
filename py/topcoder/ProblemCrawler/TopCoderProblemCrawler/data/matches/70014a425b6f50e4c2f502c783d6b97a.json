@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":232.97,
+			"constraints":[],
+			"correctRatio":95.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=407&rd=60",
+			"name":"Chooser",
+			"notes":[],
+			"submission":171
+		},
+		{
+			"avgPts":294.13,
+			"constraints":[],
+			"correctRatio":47.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=358&rd=60",
+			"name":"Checker",
+			"notes":[],
+			"submission":157
+		},
+		{
+			"avgPts":497.21,
+			"constraints":[],
+			"correctRatio":60,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=389&rd=60",
+			"name":"Solver",
+			"notes":[],
+			"submission":95
+		}
+	],
+	"name":"Sun Microsystems / TopCoder Collegiate Challenge > Regional Quarterfinal NE/SE",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=60"
+}

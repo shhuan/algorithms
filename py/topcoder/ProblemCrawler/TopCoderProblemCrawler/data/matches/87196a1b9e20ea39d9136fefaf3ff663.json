@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":141.71,
+			"constraints":[],
+			"correctRatio":75.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10484&rd=13898",
+			"name":"UnfoldingTriangles",
+			"notes":[],
+			"submission":528
+		},
+		{
+			"avgPts":304.31,
+			"constraints":[],
+			"correctRatio":55.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10487&rd=13898",
+			"name":"FourBlocks",
+			"notes":[],
+			"submission":325
+		},
+		{
+			"avgPts":506.71,
+			"constraints":[],
+			"correctRatio":53.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10238&rd=13898",
+			"name":"AvoidFour",
+			"notes":[],
+			"submission":15
+		}
+	],
+	"name":"Single Round Match 444 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13898"
+}

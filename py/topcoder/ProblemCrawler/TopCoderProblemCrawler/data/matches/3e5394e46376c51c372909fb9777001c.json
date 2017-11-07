@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":192.22,
+			"constraints":[],
+			"correctRatio":85.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3932&rd=6550",
+			"name":"Buoyancy",
+			"notes":[],
+			"submission":7
+		},
+		{
+			"avgPts":396.41,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3499&rd=6550",
+			"name":"Symbolic",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":745.88,
+			"constraints":[],
+			"correctRatio":80,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3563&rd=6550",
+			"name":"Disaster",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"2005 TCCC > Semifinal Room 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6550"
+}

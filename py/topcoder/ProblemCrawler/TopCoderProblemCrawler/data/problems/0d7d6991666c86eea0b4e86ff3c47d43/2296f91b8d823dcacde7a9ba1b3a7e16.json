@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13016&rd=15846",
+	"statement":"Consider the integers between <b>low</b> and <b>high</b>, inclusive. We are going to select a sequence of <b>N</b> integers from this range. The sequence is allowed to contain repeated elements, hence there are (<b>high</b>-<b>low</b>+1)^<b>N</b> possible sequences (where '^' denotes exponentiation). <br /><br /><br /><br /> Out of those sequences, we are only interested in the ones that have one additional property: the greatest common divisor (GCD) of their elements must be exactly <b>K</b>. <br /><br /><br /><br /> You are given the ints <b>N</b>, <b>K</b>, <b>low</b>, and <b>high</b>. Let X be the number of <b>N</b>-tuples described above. Because X can be very large, compute and return the value (X modulo 1,000,000,007).",
+	"notes":[{
+		"order":1,
+		"val":"The greatest common divisor of a sequence is the largest positive integer that divides each element of the sequence."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RandomGCD",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countTuples",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countTuples(int N, int K, int low, int high)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"There are 9 possible sequences: {(2, 2), (2, 3), (2, 4), (3, 2), (3, 3), (3, 4), (4, 2), (4, 3), (4, 4)}. Out of these, 3 of them have the requested gcd of 2: {(2, 2), (2, 4), (4, 2)}. Hence, the answer is 3.",
+			"order":1
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"2",
+			"note":"Sometimes no combinations yield the requested GCD.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1",
+			"note":"Sometimes you select only one number.",
+			"order":3
+		},
+		{
+			"expect":"17347",
+			"id":0,
+			"input":"73824",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"222",
+			"id":0,
+			"input":"222",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N, K and low will each be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"high will be between low and 1,000,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"The difference high - low will be less than or equal to 100,000."
+		}
+	]
+}

@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7743&rd=10759",
+	"statement":" <p> John is going to sort a sequence of numbers using a special algorithm. First all numbers a[0], a[1], a[2], ..., a[n-1] are written on a blackboard. During the first iteration, John checks all numbers in the order of increasing indices (so, he checks a[0] first, followed by a[1], a[2],..., and ends the first iteration with a[n - 1]). At any moment, he can erase the number he is looking at from the blackboard and write it into his notebook. When looking at number a[i], John erases it from the board and writes into his notebook if and only if it is equal to the smallest unerased number on the blackboard. All other iterations are similar to the first one, but, of course, John checks only the numbers which were not erased from the blackboard. The process is over when all numbers are erased from the board and written into John's notebook in non-descending order. </p> <p> For example, if John is given a sequence of {3, 5, 1, 4, 2}, the process will go as follows. During the first iteration, John will erase 1 and 2 from the board, writing them to the notebook and changing the sequence to {3, 5, 4}. During the second iteration, 3 and 4 will be written into his notebook, so only 5 will be on the board during the third iteration. </p> <p> You will be given four ints: <b>a0</b>, <b>X</b>, <b>Y</b>, <b>M</b>, <b>n</b>. The sequence John will need to sort can be generated using the following algorithm: </p>\n <ul> \n  <li>a[0] = a0;</li> \n  <li>a[i] = (a[i - 1] * <b>X</b> + <b>Y</b>) mod <b>M</b>, for 0 &lt; i &lt; <b>n</b> (where mod is a remainder operation.).</li> \n </ul> You will be given two more ints <b>start</b> and <b>finish</b>. Return the sum of all numbers John will erase from the board during all iterations with indices (1-based) between <b>start</b> and <b>finish</b>, inclusive. If John will need less than <b>finish</b> iterations to sort the sequence, return -1. <p></p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SortingInIterations",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long sum(int a0, int X, int Y, int M, int n, int start, int finish)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"4",
+			"note":"The sequence is 4  2 4  2 4   4. The bolded elements will be erased during the first iteration.",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1",
+			"note":"The sequence is 1, 0, 0, 0, 0. We need two iterations to erase all numbers.",
+			"order":2
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"7",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"0",
+			"note":"Be careful with overflows.",
+			"order":4
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"1",
+			"note":"John needs only four iterations.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a0 will be between 0 and M-1, inclusive."
+		},
+		{
+			"order":2,
+			"val":"X will be between 0 and 4*10^5, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Y will be between 0 and 4*10^5, inclusive."
+		},
+		{
+			"order":4,
+			"val":"M will be between 1 and 4*10^5, inclusive."
+		},
+		{
+			"order":5,
+			"val":"n will be between 1 and 4*10^5, inclusive."
+		},
+		{
+			"order":6,
+			"val":"start will be between 1 and 4*10^5, inclusive."
+		},
+		{
+			"order":7,
+			"val":"finish will be between start and 4*10^5, inclusive."
+		}
+	]
+}

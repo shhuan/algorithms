@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7280&rd=10011",
+	"statement":"<p>When the Christmas dinner is over, it's time to sing carols. Unfortunately, not all the family members know the lyrics to the same carols. Everybody knows at least one, though.</p> <p> You are given a String[] <b>lyrics</b>. The j-th character of the i-th element of <b>lyrics</b> is 'Y' if the i-th person knows the j-th carol, and 'N' if he doesn't. Return the minimal number of carols that must be sung to allow everyone to sing at least once. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CarolsSinging",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"choose",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int choose(String[] lyrics)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"YN\",\"NY\"}",
+			"note":"Both carols need to be sung.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"YN\",\"YY\",\"YN\"}",
+			"note":"Everybody knows the first carol, so singing just that one is enough.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"YNN\",\"YNY\",\"YNY\",\"NYY\",\"NYY\",\"NYN\"}",
+			"note":"Singing the best known carol is not always the optimal strategy. Here, the optimal way is to pick the first two carols even though four people know the third one.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"YNNYYY\",\"YYNYYY\",\"YNNYYN\",\"NYYNNN\",\"YYYNNN\",\"YYYNNY\",\"NYYYYY\",\"NYNYYY\",\"NNNNYY\", \"YYYYYY\",\"YNNNNN\",\"YYYYNY\",\"YYNNNN\",\"NNYYYN\",\"NNNNYY\",\"YYYNNN\",\"NYNNYN\",\"YNNYYN\", \"YYNNNY\",\"NYYNNY\",\"NNYYYN\",\"YNYYYN\",\"NNNYNY\",\"YYYYNN\",\"YYNYNN\",\"NYYNYY\",\"YYNYYN\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"lyrics will contain between 1 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of lyrics will contain between 1 and 10 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of lyrics will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each element of lyrics will contain only 'Y' and 'N' characters."
+		},
+		{
+			"order":5,
+			"val":"Each element of lyrics will contain at least one 'Y' character."
+		}
+	]
+}

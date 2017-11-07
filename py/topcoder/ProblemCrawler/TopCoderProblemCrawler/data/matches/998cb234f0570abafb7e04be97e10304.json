@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174.99,
+			"constraints":[],
+			"correctRatio":70.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2977&rd=5880",
+			"name":"Boxing",
+			"notes":[],
+			"submission":97
+		},
+		{
+			"avgPts":321.72,
+			"constraints":[],
+			"correctRatio":78.08,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2959&rd=5880",
+			"name":"Volleyball",
+			"notes":[],
+			"submission":73
+		},
+		{
+			"avgPts":512.92,
+			"constraints":[],
+			"correctRatio":62.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=926&rd=5880",
+			"name":"LawnMower",
+			"notes":[],
+			"submission":16
+		}
+	],
+	"name":"2004 TCO > Online Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5880"
+}

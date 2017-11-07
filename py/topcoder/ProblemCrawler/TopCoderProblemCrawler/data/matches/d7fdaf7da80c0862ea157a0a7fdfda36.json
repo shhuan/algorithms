@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.67,
+			"constraints":[],
+			"correctRatio":79.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=882&rd=4250",
+			"name":"Auction",
+			"notes":[],
+			"submission":106
+		},
+		{
+			"avgPts":283.76,
+			"constraints":[],
+			"correctRatio":63.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=854&rd=4250",
+			"name":"Dance",
+			"notes":[],
+			"submission":52
+		},
+		{
+			"avgPts":514.6,
+			"constraints":[],
+			"correctRatio":52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=902&rd=4250",
+			"name":"FakeCoin",
+			"notes":[],
+			"submission":25
+		}
+	],
+	"name":"Single Round Match 106 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4250"
+}

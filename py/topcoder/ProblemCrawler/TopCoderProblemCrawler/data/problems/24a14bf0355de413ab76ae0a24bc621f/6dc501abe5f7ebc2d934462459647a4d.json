@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8318&rd=10794",
+	"statement":"Given an integer <b>n</b>, find the smallest integer that starts with <b>n</b> and is divisible by every non-zero digit of <b>n</b> (all in decimal notation).",
+	"notes":[{
+		"order":1,
+		"val":"An integer A starts with an integer B if the string representation of B is a prefix of the string representation of A (both in decimal notation with no leading zeroes)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DivisibleByDigits",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getContinuation",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getContinuation(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 132",
+			"id":0,
+			"input":"13",
+			"note":"We need a number that starts with 13 and is divisible by 1 (always true) and by 3. The smallest one is 132. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 648",
+			"id":0,
+			"input":"648",
+			"note":"If  is divisible by all its non-zero digits, the answer to the problem is  itself.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 56610",
+			"id":0,
+			"input":"566",
+			"note":"The resulting number must be divisible by 5, so it should end either with 0 or with 5. But a number ending with 5 is odd and can't be divisible by 6. So the last digit of the answer must be 0. In order to make the number divisible by 6, we need to put something before this 0, and the smallest appropriate digit is 1.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1000000000",
+			"id":0,
+			"input":"1000000000",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 987654321360",
+			"id":0,
+			"input":"987654321",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 8304",
+			"id":0,
+			"input":"83",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 1000000000, inclusive."
+	}]
+}

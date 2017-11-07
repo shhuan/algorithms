@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12784&rd=15705",
+	"statement":"The pony Applejack has an N by N hexagonal board. The following picture shows the hexagonal board when N = 1, 2, 3, and 4. <br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/HexagonalBoard/hex.png\" /> <br /><br /> <br /><br /> She wants to color some cells of the board. You are given a String[] <b>board</b>. If the j-th character of the i-th element of <b>board</b> is 'X', she wants to color the cell (i, j). If she colors two cells that share an edge, she must use different colors for those cells. Return the minimal number of colors she needs.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"HexagonalBoard",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minColors",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minColors(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"---\", \"---\", \"---\"} ",
+			"note":"She won't color any cells, so she won't need any colors.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"-X--\", \"---X\", \"----\", \"-X--\"}",
+			"note":"She can color all cells with the same color.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"XXXX\", \"---X\", \"---X\", \"---X\"}",
+			"note":"For example, she can color cells in the following way:  ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"XX-XX--\" ,\"-XX-XXX\" ,\"X-XX--X\" ,\"X--X-X-\" ,\"XX-X-XX\" ,\"-X-XX-X\" ,\"-XX-XX-\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain exactly N characters, where N is the number of elements in board."
+		},
+		{
+			"order":3,
+			"val":"Each character in board will be either 'X' or '-'."
+		}
+	]
+}

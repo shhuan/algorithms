@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1647&rd=4605",
+	"statement":"The Iditarod is a dogsled race from Anchorage to Nome that takes many days. We want to take a list of the times when the competitors crossed the finish line and convert that into the average number of minutes to complete the race. <p> The race starts on day 1 at 8:00 AM. We are given a list of finish times as a String[], where each finish time is formatted as </p>\n <ul>\n  <li> hh:mm xM, DAY n </li>\n </ul> where hh is exactly 2 digits giving the hour, mm is exactly 2 digits giving the minute, x is either 'A' or 'P', and n is a positive integer less than 100 with no leading zeros. So each string has exactly 15 or 16 characters (depending on whether n is less than 10). <p></p><p> Create a class Iditarod containing method avgMinutes that is given a String[], <b>times</b>, and that returns the average number of minutes taken by the competitors to complete the race. Round the returned value to the nearest minute, with .5 rounding up. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"\"12:00 AM, DAY d\" refers to midnight between DAY d-1 and DAY d"
+		},
+		{
+			"order":2,
+			"val":"\"12:00 PM, DAY d\" refers to noon on DAY d"
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Iditarod",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"avgMinutes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int avgMinutes(String[] times)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 241",
+			"id":0,
+			"input":"{\"12:00 PM, DAY 1\",\"12:01 PM, DAY 1\"}",
+			"note":"From 8:00 AM to noon is 4 hours, so we have 4 hours for one competitor, and 4 hours, 1 minute for the other. These two values average to 240.5 minutes which is rounded up.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 960",
+			"id":0,
+			"input":"{\"12:00 AM, DAY 2\"}",
+			"note":"The one competitor finished in 16 hours, just at the start of DAY 2.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 27239",
+			"id":0,
+			"input":"{\"02:00 PM, DAY 19\",\"02:00 PM, DAY 20\", \"01:58 PM, DAY 20\"}",
+			"note":"26280 minutes, 27720 minutes, 27718 minutes average to 27239.333 which rounds down. ",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"times contains between 1 and 50 elements inclusive"
+		},
+		{
+			"order":2,
+			"val":"each element of times is formatted as specified above, with hh between 01 and 12 inclusive, mm between 00 and 59 inclusive, and d between 1 and 99 inclusive"
+		},
+		{
+			"order":3,
+			"val":"each element of times represents a time later than the start of the race"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3523&rd=7223",
+	"statement":"One day, I started writing out the following patterns (The procedure for constructing the pattern is deliberately not given, you must infer the procedure through the examples): <pre></pre> Input string: &quot;HELLO&quot; (quotes for clarity only) <pre>\nPattern:      O\n             OLO\n            OLLLO\n           OLLELLO\n          OLLEHELLO\n           OLLELLO\n            OLLLO\n             OLO\n              O\n</pre> <br /><br /> Input string: &quot;TC&quot; (quotes for clarity only) <pre>\nPattern:      C\n             CTC\n              C   \n</pre> <br /><br /> Input string: &quot;ABCD&quot; (quotes for clarity only) <pre>\nPattern:      D\n             DCD\n            DCBCD\n           DCBABCD\n            DCBCD\n             DCD\n              D\n</pre> <br /><br /> After constructing the patterns, I noticed something interesting. Starting with the first letter of the input string (which appears only once in the very center of the pattern), I can trace a path outwards toward the edges, spelling out the original input string. Of course, I only move Up, Down, Left and Right from any letter. I'm now perplexed because I want to know how many ways the original input string can be spelled out in the pattern. I must always end at an edge, and I can't go over one letter more than once while spelling a word. <br /><br /> <br /><br /> Create a class WordPattern containing the method countWords which takes a String <b>word</b> as input. The method should return a long which is the number of ways the original input can be spelled out in the pattern according to my rules.",
+	"notes":[{
+		"order":1,
+		"val":"Remember, I only move Up, Down, Left and Right from any letter to the next letter and never use a letter twice."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WordPattern",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countWords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countWords(String word)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 60",
+			"id":0,
+			"input":"\"HELLO\"",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"\"TC\"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2097148",
+			"id":0,
+			"input":"\"ABCDEFGHIJKLMNOPQRST\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 137438953468",
+			"id":0,
+			"input":"\"ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJ\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"word will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"word will contain only uppercase letters ('A'-'Z')."
+		}
+	]
+}

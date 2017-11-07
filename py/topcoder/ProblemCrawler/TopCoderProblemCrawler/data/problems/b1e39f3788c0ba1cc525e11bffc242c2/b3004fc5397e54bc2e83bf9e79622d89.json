@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6005&rd=9808",
+	"statement":"<p> Two players play a simple game with a coin. </p> <p> Given is a set S. Each element of S is a sequence of heads and tails, and all the sequences have the same length. </p> <p> The first player starts the game by choosing a sequence from S. Then the second player chooses a different sequence from S. A fair coin is then thrown repeatedly until one of the chosen sequences appears as a set of consecutive throws. The player that has chosen this sequence wins. </p> <p> You are given a String[] <b>sequences</b> containing the allowed sequences encoded as strings of 'H's and 'T's ('H' represents a head, 'T' represents a tail). Return the probability that the first player will win this game, given that both players play optimally. </p>",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to 1e-9 relative or absolute."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CoinGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestProbability",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double bestProbability(String[] sequences)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0.5",
+			"id":0,
+			"input":"{\"H\", \"T\"}",
+			"note":"This game is as simple as it gets. The first player picks a head or a tail, then they flip a coin and look at the outcome. Each player has a 50% chance of winning this game.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0.5000000000000011",
+			"id":0,
+			"input":"{\"HHHHHHHHH\", \"TTTTTTTTT\"}",
+			"note":"Almost the same game, but quite a bit longer.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0.5",
+			"id":0,
+			"input":"{\"HH\", \"HT\"}",
+			"note":"This is another example of a fair game. Once a head occurs for the first time, the next throw decides which sequence will appear first.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0.875",
+			"id":0,
+			"input":"{\"TTT\", \"HTT\"}",
+			"note":"  ",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0.33333333333333337",
+			"id":0,
+			"input":"{\"HHH\", \"HHT\", \"HTH\", \"HTT\", \"THH\", \"THT\", \"TTH\", \"TTT\"}",
+			"note":"This game contains a wonderful paradox: being the first player is not always good.",
+			"order":5
+		},
+		{
+			"expect":"Returns: 0.5019379844961235",
+			"id":0,
+			"input":"{\"TTHTTHTTH\", \"HTTHTHHTT\", \"TTHHHHTHT\", \"TTTTTHTTT\", \"HHTTHTHHT\"}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sequences contains between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of sequences contains only uppercase 'H' and uppercase 'T' characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of sequences contains between 1 and 10 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of sequences contains the same number of characters."
+		},
+		{
+			"order":5,
+			"val":"No two elements in sequences are equal."
+		}
+	]
+}

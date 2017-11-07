@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2416&rd=5075",
+	"statement":"<p>The usual longhand scheme for multiplying two numbers A and B is to multiply the last digit of B by A, shift left by one digit, multiply the second-to-last digit of B by A, and so on. This process is illustrated below:</p> <pre>\n   36\nx  15\n-----\n  180\n+ 36\n-----\n  540\n</pre> <p>But let's say we didn't multiply in the usual way. Let us define a new method of multiplication called &quot;NC-Multiplication&quot;, where the &quot;NC&quot; stands for &quot;No Carry&quot;. It is called this because we do not carry when numbers exceed 9, no matter what. To multiply 36 by 15 in this manner, we would do:</p> <pre>\n     3  6\nx    1  5\n---------\n    15 30\n+ 3  6\n---------\n  3 21 30\n</pre> <p>and so the result would be {3, 21, 30}.</p> <p>You will be given a int[] <b>digits</b>, that represents the result of NC-multiplying two numbers together. You wish to factor this result by finding the two numbers that multiplied together to form the result. There may be multiple pairs of numbers that work. If we call the larger number A and the smaller B, then we want the pair such that A - B is minimized. Of this pair, your method should return a long that is equal to A. If no such A and B exist that NC-multiply to <b>digits</b>, your method should return -1.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NCMultiplication",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findFactors",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long findFactors(int[] digits)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 36",
+			"id":0,
+			"input":"{3,21,30}",
+			"note":"36 and 15 NC-Multiply together to make {3,21,30}, as seen above.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 512",
+			"id":0,
+			"input":"{15,3,6}",
+			"order":2
+		},
+		{
+			"expect":"Returns: 25",
+			"id":0,
+			"input":"{4,20,25}",
+			"note":"25 NC-Multiplied by 25.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 6773",
+			"id":0,
+			"input":"{6,61,124,129,90,27}",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{8,14,22,95,125,120,73,9,9}",
+			"order":5
+		},
+		{
+			"expect":"Returns: 65864431",
+			"id":0,
+			"input":"{6, 5, 32, 68, 113, 143, 143, 124, 100, 75, 48, 23, 7, 1}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"digits will contain between 1 and 15 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"All elements of digits will be between 0 and 2000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"At least one element in digits will be nonzero."
+		},
+		{
+			"order":4,
+			"val":"The number represented by digits will be less than 1014 = 100000000000000."
+		},
+		{
+			"order":5,
+			"val":"There will be no leading or trailing zeros in digits."
+		}
+	]
+}

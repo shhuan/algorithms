@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10735&rd=14153",
+	"statement":"<i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet.</i> <br /><br /> <br /><br /> Little John has drawn a rectangle. On the top edge, he draws <b>n</b> dots at different places and numbers them 1 through <b>n</b> from left to right. On the bottom edge, he also draws <b>n</b> dots at different places and numbers them 1 through <b>n</b> from left to right. <br /><br /> <br /><br /> John will then draw <b>n</b> straight line segments. For each segment, he will first choose a dot on the top edge that has not been chosen earlier. Then, he will choose a dot on the bottom edge that has not been chosen earlier. Finally, he will connect those two dots to form a straight line segment. <br /><br /> <br /><br /> John has drawn several of the <b>n</b> segments so far. You are given int[]s <b>startDot</b> and <b>endDot</b>. <b>startDot</b>[i] is the number of the top dot chosen for the i-th segment which has already been drawn, and <b>endDot</b>[i] is the number of the bottom dot chosen for that segment. For each remaining segment, John will randomly choose an available top dot and an available bottom dot (each available top dot has an equal probability of being chosen, and each available bottom dot has an equal probability of being chosen). Return the expected number of distinct pairs of line segments that cross each other in the final drawing.",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DrawingLines",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countLineCrossings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double countLineCrossings(int n, int[] startDot, int[] endDot)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{2}",
+			"id":0,
+			"input":"3",
+			"note":"There are four possible ways for Little John to pick the dots :    The first and the fourth ways correspond to the left picture, while the second and the third ways correspond to the right picture. The blue line is the line initially drawn by Little John.  In the left configuration, there is 1 pair of segments that cross each other. In the right configuration, there are 2 pairs of segments that cross each other. Hence, the expected number of crossed pairs is 1.5.",
+			"order":1
+		},
+		{
+			"expect":"{1,4}",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{4,1}",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{1,4,3,6,7}",
+			"id":0,
+			"input":"8",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 10000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"startDot and endDot will each contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"startDot and endDot will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"startDot and endDot will each contain less than n elements."
+		},
+		{
+			"order":5,
+			"val":"Each element of startDot will be between 1 and n, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of endDot will be between 1 and n, inclusive."
+		},
+		{
+			"order":7,
+			"val":"All elements of startDot will be distinct."
+		},
+		{
+			"order":8,
+			"val":"All elements of endDot will be distinct."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":224,
+			"constraints":[],
+			"correctRatio":83.84,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=893&rd=4704",
+			"name":"QuadraticRoots",
+			"notes":[],
+			"submission":99
+		},
+		{
+			"avgPts":287.61,
+			"constraints":[],
+			"correctRatio":71.83,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1907&rd=4704",
+			"name":"WaterPressure",
+			"notes":[],
+			"submission":71
+		},
+		{
+			"avgPts":535.72,
+			"constraints":[],
+			"correctRatio":36.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1871&rd=4704",
+			"name":"ShuffleMethod",
+			"notes":[],
+			"submission":33
+		}
+	],
+	"name":"2003 TCO > Online Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4704"
+}

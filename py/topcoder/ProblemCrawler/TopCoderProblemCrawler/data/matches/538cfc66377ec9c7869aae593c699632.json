@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":177.49,
+			"constraints":[],
+			"correctRatio":71.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11308&rd=14552",
+			"name":"P8XGraphBuilder",
+			"notes":[],
+			"submission":651
+		},
+		{
+			"avgPts":303.05,
+			"constraints":[],
+			"correctRatio":66.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11176&rd=14552",
+			"name":"P8XMatrixRecovery",
+			"notes":[],
+			"submission":310
+		},
+		{
+			"avgPts":549.28,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11155&rd=14552",
+			"name":"P8XCoinChange",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"Single Round Match 527 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14552"
+}

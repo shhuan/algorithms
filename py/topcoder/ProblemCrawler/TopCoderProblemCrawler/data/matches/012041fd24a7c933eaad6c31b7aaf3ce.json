@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":224.06,
+			"constraints":[],
+			"correctRatio":91.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6165&rd=9983",
+			"name":"TrafficMonitor",
+			"notes":[],
+			"submission":12
+		},
+		{
+			"avgPts":280.82,
+			"constraints":[],
+			"correctRatio":16.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6212&rd=9983",
+			"name":"BishopOnTheBoard",
+			"notes":[],
+			"submission":6
+		},
+		{
+			"avgPts":666.7,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6179&rd=9983",
+			"name":"MapFolder",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"TCO 06 > Wildcard Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9983"
+}

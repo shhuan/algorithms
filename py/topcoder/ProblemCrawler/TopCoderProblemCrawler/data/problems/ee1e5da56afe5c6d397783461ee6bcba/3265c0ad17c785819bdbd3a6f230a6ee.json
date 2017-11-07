@@ -1,0 +1,104 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12965&rd=15840",
+	"statement":"Andrew has an interesting contraption. There are two nails and n pulleys on his table. The nails are points with coordinates (0, 0) and ((<b>n</b>+1)*<b>d</b>, 0). Each pulley is a circle with radius <b>r</b>. The centers of the pulleys are at the points (<b>d</b>, 0), (2*<b>d</b>, 0), ..., and (<b>n</b>*<b>d</b>, 0). The constraints guarantee that no two pulleys overlap. <br /><br /> <br /><br /> Andrew wants to connect the two nails using a piece of rope. His only condition is that the rope must be perfectly taut. In other words, there must be no slack anywhere on the rope. (Assume that the width of the rope is negligible and that the length of the rope is not limited.) <br /><br /> <br /><br /> Of course, the rope cannot go directly from one nail to the other, because the pulleys are in the way. The rope has to go around them somehow: touching some of them, or even wrapping around them. The rope is even allowed to touch the same point on a pulley arbitrarily many times. <br /><br /> <br /><br /> Given these constraints it's easy to see that there are infinitely many ways how to stretch the rope between the two nails. Note that two ways are considered different if the rope follows a different curve, even if the length of the rope is exactly the same in both ways. <br /><br /> <br /><br /> Andrew ordered all possible ways according to the length of the rope used. (The order starts with the shortest ways, and ties are broken arbitrarily.) You are given the ints <b>d</b>, <b>r</b>, <b>n</b> (as described above), and a long <b>k</b>. Return the length of the rope used in the <b>k</b>-th (1-based index) way in his ordered list.",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or a relative error of less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PulleyTautLine",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getLength",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getLength(int d, int r, int n, long k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"30",
+			"id":0,
+			"input":"100",
+			"note":"Here we are looking for the shortest possible solution. There are two ways to achieve it: start at the left nail, pull the rope above or below the pulley and directly proceed to the right nail. ",
+			"order":1
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"100",
+			"note":"As there are two ways to achieve the shortest possible solution, the answer here is the same as in previous example. ",
+			"order":2
+		},
+		{
+			"expect":"499999999",
+			"id":0,
+			"input":"1000000000",
+			"note":"One of the solutions with such length is: start at the left nail, pull the rope above the pulley, wrap it 499,999,999,999,999,999 times around the pulley and finish at the right nail. ",
+			"order":3
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"100",
+			"note":"One solution with such length is shown on the picture below.  ",
+			"order":4
+		},
+		{
+			"expect":"30",
+			"id":0,
+			"input":"100",
+			"note":"One solution with such length starts as on the left picture and ends as on the right picture.     ",
+			"order":5
+		},
+		{
+			"expect":"123",
+			"id":0,
+			"input":"987564321",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"499999999",
+			"id":0,
+			"input":"1000000000",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"r will be between 1 and 499,999,999, inclusive."
+		},
+		{
+			"order":2,
+			"val":"d will be between 2*r+1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"n will be between 1 and 50, inclusive."
+		},
+		{
+			"order":4,
+			"val":"k will be between 1 and 1,000,000,000,000,000,000 (10^18), inclusive."
+		}
+	]
+}

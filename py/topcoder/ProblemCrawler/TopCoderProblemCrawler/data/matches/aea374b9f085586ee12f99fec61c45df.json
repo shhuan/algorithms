@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":189.22,
+			"constraints":[],
+			"correctRatio":92.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10463&rd=13749",
+			"name":"PerfectPermutation",
+			"notes":[],
+			"submission":447
+		},
+		{
+			"avgPts":315.07,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10375&rd=13749",
+			"name":"StrangeCountry",
+			"notes":[],
+			"submission":384
+		},
+		{
+			"avgPts":482.38,
+			"constraints":[],
+			"correctRatio":54.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10459&rd=13749",
+			"name":"PaperAndPaint",
+			"notes":[],
+			"submission":51
+		}
+	],
+	"name":"Single Round Match 441 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13749"
+}

@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7814&rd=13763",
+	"statement":"<p> A game die is a cube with the numbers 1 to 6 written on its sides: 1 - on the top, 2 - on the left, 3 - on the front, 4 - on the back, 5 - on the right, 6 - on the bottom. You have thrown n dice, and the numbers on their tops (after they've been thrown) are given in the int[] <b>dice</b>. The i-th element (1-based) of dice is equal to the number of dice that were dropped with the number i on top. </p> <p> You want to construct a single straight line using one or more of these thrown dice. Each pair of adjacent dice must have the same number on the sides where they touch each other. You may rotate dice as long as the numbers on their tops don't change. Each die may be used at most once. </p> <p> Determine the number of different ways you can construct a single straight line using the thrown dice. Return this number modulo 10007. Two lines are different if:<br /><br /> <br /><br /> 1. They have different lengths. <br /><br /> or <br /><br /> 2. Orient both lines horizontally and compare them from left to right. If two dice at the same position in each line have different orientations, the lines are different. Note that the lines 1-3-6 and 6-3-1 are considered different under this rule. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LineOfDice",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int[] dice)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 16",
+			"id":0,
+			"input":"{1,0,0,0,0,1}",
+			"note":"We have one die with a 1 on top, and one die with a 6 on top. There are 4 different ways to construct a line containing only the die with 1 on top (each of the 4 possible rotations of a single die). Similarly, there are 4 different lines that contain only the die with 6 on top. We can also put both dice into a line. There are 4 possible rotations where the two dice can touch each other (on sides 2, 3, 4 and 5). Then, for each of these, we can reverse the left-right order to create different lines, for a total of 8 different lines containing both dice. Thus there are 4 + 4 + 8 = 16 different lines.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{1,1,0,0,0,0}",
+			"note":"We have one die with a 1 on top, and one die with a 2 on top. There are 4 different lines that contain only the die with 1 on top, and 4 different lines that contain only the die with 2 on top. There are only 2 possible rotations where the dice can touch each other (on sides 3 and 4), and for each of these, we can reverse the left-right order to get different lines.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{0,0,2,0,0,0}",
+			"note":"We have 2 dice, both with 3 on top. Unlike the previous examples, where the dice had different numbers on top, there are only 4 different ways to construct a line containing only one die. There are 4 possible rotations where the dice can touch each other to form a line (on sides 1, 2, 5 and 6). Reversing left-right order doesn't produce different lines in this case because each line is horizontally symmetrical.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 384",
+			"id":0,
+			"input":"{1,1,1,1,1,1}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 8258",
+			"id":0,
+			"input":"{0,2,3,1,7,9}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"dice will contain exactly 6 elements."
+		},
+		{
+			"order":2,
+			"val":"Each element of dice will be between 0 and 1000, inclusive."
+		}
+	]
+}

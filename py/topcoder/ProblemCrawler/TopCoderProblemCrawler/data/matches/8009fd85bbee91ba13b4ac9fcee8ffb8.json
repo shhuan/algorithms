@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":186.16,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1966&rd=4706",
+			"name":"T9Input",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":344.02,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1961&rd=4706",
+			"name":"ImmutableTrees",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":424.23,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1963&rd=4706",
+			"name":"NCushion",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2003 TCO > Semifinal Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4706"
+}

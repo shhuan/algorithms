@@ -1,0 +1,74 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3477&rd=6523",
+	"statement":"Why should the alphabetic ordering of names put so much emphasis on the first letter in each name? In the spirit of fairness to all the letters in a name, let's compute the average alphabetical position of the letters in each name, and order the names accordingly. <p> We can define the &quot;value&quot; of a name to be the average position of the letters in that name, counting an 'A' as 1, 'B' as 2, and so on up to 'Z' as 26. So, for example, the value of &quot;BOB&quot; would be (2+15+2)/3 = 6.3333. When given a list of names, we will order them by putting them in order of increasing value. When 2 or more names have exactly the same value, we will break the tie by placing the names that were earlier on the original list earlier on the ordered list. </p><p> Create a class Fairness that contains a method fairSort that is given a String[] <b>names</b> and that returns a String[] containing the same names sorted according to the above method. The elements in the return should, of course, not contain any leading or trailing spaces. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Fairness",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"fairSort",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] fairSort(String[] names)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"AAAAAAA\", \"BOB\", \"TOM\" }",
+			"id":0,
+			"input":"{\"BOB\",\"AAAAAAA\",\"TOM\"}",
+			"note":" BOB = 6.333, AAAAAAA = 1.0, TOM = 16 ",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \"ABE\", \"ABE\", \"ABLE\" }",
+			"id":0,
+			"input":"{\"ABE\",\"ABLE\",\"ABE\"}",
+			"order":2
+		},
+		{
+			"expect":"Returns: { \"AAAA\", \"PANE\", \"BONE\", \"TOM\" }",
+			"id":0,
+			"input":"{\"PANE\",\"TOM\",\"BONE\",\"AAAA\"}",
+			"note":"PANE and BONE are tied, and since PANE comes before BONE in the given list, it must come before BONE in the sorted list.",
+			"order":3
+		},
+		{
+			"expect":"Returns: { \"AAAA\", \"BONE\", \"PANE\", \"TOM\" }",
+			"id":0,
+			"input":"{\"BONE\",\"TOM\",\"PANE\",\"AAAA\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"names will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of names will contain between 1 and 20 characters inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in each element of names will be an uppercase letter, 'A'-'Z'."
+		}
+	]
+}

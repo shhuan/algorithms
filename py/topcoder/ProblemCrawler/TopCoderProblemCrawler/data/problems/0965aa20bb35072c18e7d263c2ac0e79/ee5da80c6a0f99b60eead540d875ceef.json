@@ -1,0 +1,57 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8776&rd=12173",
+	"statement":"A Ferrers diagram of the partition of positive number n = a<sub>1</sub> + a<sub>2</sub> + ... + a<sub>k</sub>, for a list a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>k</sub> of k positive integers with a<sub>1</sub> ≥ a<sub>2</sub> ≥ ... ≥ a<sub>k</sub> is an arrangement of n boxes in k rows, such that the boxes are left-justified, the first row is of length a<sub>1</sub>, the second row is of length a<sub>2</sub>, and so on, with the kth row of length a<sub>k</sub>. Let's call a FIELD diagram of order <b>fieldOrder</b> a Ferrers diagram with a<sub>1</sub> ≤ <b>fieldOrder</b>, a<sub>2</sub> ≤ <b>fieldOrder</b> - 1, ..., a<sub>k</sub> ≤ <b>fieldOrder</b> - k + 1, so a FIELD diagram can have a number of rows which is less than or equal to <b>fieldOrder</b>. Your method will be given <b>fieldOrder</b>, it should return the total number of FIELD diagrams of order <b>fieldOrder</b>. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FIELDDiagrams",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countDiagrams",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countDiagrams(int fieldOrder)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"2",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 13",
+			"id":0,
+			"input":"3",
+			"order":2
+		},
+		{
+			"expect":"Returns: 131",
+			"id":0,
+			"input":"5",
+			"order":3
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"fieldOrder will be between 1 and 30, inclusive"
+	}]
+}

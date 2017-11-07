@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.19,
+			"constraints":[],
+			"correctRatio":89.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1592&rd=4482",
+			"name":"ChessMetric",
+			"notes":[],
+			"submission":47
+		},
+		{
+			"avgPts":275.78,
+			"constraints":[],
+			"correctRatio":53.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1270&rd=4482",
+			"name":"TileMatch",
+			"notes":[],
+			"submission":26
+		},
+		{
+			"avgPts":428.07,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1574&rd=4482",
+			"name":"Optimizer",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"TopCoder Collegiate Challenge > Round 4",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4482"
+}

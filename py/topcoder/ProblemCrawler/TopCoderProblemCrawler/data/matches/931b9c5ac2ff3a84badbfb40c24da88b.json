@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":193.85,
+			"constraints":[],
+			"correctRatio":95.66,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8098&rd=12058",
+			"name":"SquareConstruction",
+			"notes":[],
+			"submission":968
+		},
+		{
+			"avgPts":312.19,
+			"constraints":[],
+			"correctRatio":62.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7643&rd=12058",
+			"name":"CableDonation",
+			"notes":[],
+			"submission":539
+		},
+		{
+			"avgPts":650.07,
+			"constraints":[],
+			"correctRatio":69.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8018&rd=12058",
+			"name":"EvenOnes",
+			"notes":[],
+			"submission":176
+		}
+	],
+	"name":"2008 TopCoder Open > Qualification Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12058"
+}

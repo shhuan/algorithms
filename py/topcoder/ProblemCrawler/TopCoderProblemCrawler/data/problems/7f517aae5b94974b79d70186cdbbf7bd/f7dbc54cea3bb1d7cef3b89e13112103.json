@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13490&rd=16082",
+	"statement":"<p> Alice and Kirito just played a game. The game consisted of a finite (possibly empty) sequence of turns. You do not know the exact number of turns. The turns were numbered starting from 1. In each turn, exactly one of our two players won. The winner of turn i scored 2*i-1 points. </p> <p> You are given two longs <b>x</b> and <b>y</b>. Find out whether it is possible that at the end of the game Alice had exactly <b>x</b> points and Kirito had exactly <b>y</b> points. If it is possible, return the smallest number of turns Alice could have won. If the given final result is not possible, return -1 instead. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AliceGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findMinimumValue",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long findMinimumValue(long x, long y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"17",
+			"id":0,
+			"input":"8",
+			"note":"This final result is possible. Alice must have won at least two turns. One possibility is that Alice won turns 2 and 3 (for 3+5 = 8 points) and Kirito won turns 1, 4, and 5 (for 1+7+9 = 17 points).",
+			"order":1
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"17",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"9",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"500000",
+			"id":0,
+			"input":"500000",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"x and y are between 0 and 1,000,000,000,000, inclusive."
+	}]
+}

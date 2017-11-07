@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":202.85,
+			"constraints":[],
+			"correctRatio":73.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=77&rd=3005",
+			"name":"DayAge",
+			"notes":[],
+			"submission":23
+		},
+		{
+			"avgPts":282.98,
+			"constraints":[],
+			"correctRatio":58.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=79&rd=3005",
+			"name":"Bases",
+			"notes":[],
+			"submission":24
+		},
+		{
+			"avgPts":624.44,
+			"constraints":[],
+			"correctRatio":13.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=80&rd=3005",
+			"name":"Schedule",
+			"notes":[],
+			"submission":15
+		}
+	],
+	"name":"Single Round Match 6 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3005"
+}

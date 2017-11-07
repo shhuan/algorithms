@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4620&rd=8002",
+	"statement":"<p>There are 3*N pie pieces arranged in a circle. You and Ted are going to eat the whole pie using the following rules. You can choose any piece and eat it, but Ted will eat its left and right neighbors (once a piece is eaten its left and right neighbors become neighbors themselves). This operation is repeated until the whole pie is eaten (in other words N times). You are planning to eat as big a part of the pie as possible.</p> <p>You will be given int[] <b>pieces</b>. <b>pieces</b>[i] is the size of the i-th piece as a percentage (between 1 and 100). Return the maximum percentage of the pie that you can eat.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PieSharing",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"share",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int share(int[] pieces)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 34",
+			"id":0,
+			"input":"{33, 33, 34}",
+			"note":"You can eat the biggest piece.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 51",
+			"id":0,
+			"input":"{5, 17, 22, 34, 18, 4}",
+			"note":"You can eat pieces with sizes 34 and 17. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 96",
+			"id":0,
+			"input":"{11, 1, 1, 85, 1, 1}",
+			"note":"You will eat almost the whole pie.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 48",
+			"id":0,
+			"input":"{6, 13, 14, 4, 14, 10, 1, 20, 18}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pieces will have between 3 and 48 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"The number of elements in pieces will be divisible by 3."
+		},
+		{
+			"order":3,
+			"val":"Each element in pieces will be between 1 and 100, inclusive. "
+		},
+		{
+			"order":4,
+			"val":"The elements in pieces will sum up to 100."
+		}
+	]
+}

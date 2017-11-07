@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=105&rd=3013",
+	"statement":"<pre>Class name: Regex\nMethod name: match\nParameters: String[], String\nReturns: String[]\n\nRegular expressions are often used as patterns for matching text.  A regular\nexpression is a string that describes a regular language.  It can be used to\nmatch any string that is in this regular language.\n\nThe language that a regular expression can be written in is a very simple one.\nFor this problem we will use a special, stripped down type of regular\nexpression.\n\nThe syntax for this form of regular expression is quite simple.  Any character\nthat is not a parenthesis ('(' or ')'), not an asterisk ('*'), and not a period\n('.') matches itself.  That is, the pattern 'abc' matches the string 'abc' (and\nonly that string).  The period is a special character that matches a single\noccurrence of any character.  Thus, the pattern '.' matches all\nsingle-character strings.\n\nAn asterisk immediately following any character causes that character (or a\ngroup of characters, if the previous character is a close parenthesis - see\nbelow) to be matched zero or more times.  Thus, the pattern 'a*' matches the\nempty string, as well as the strings 'a', 'aa', 'aaa', etc and '.*' matches the\nempty string, 'ab', 'ahdj', etc.  It is a syntax error for an asterisk to occur\nat the beginning of the pattern or immediately following another asterisk.\n\nThe parentheses can be used for grouping.  All parentheses must balance\nperfectly, and all enclosed subexpressions must contain at least one character.\nAn asterisk immediately following a closing parenthesis indicates that the\nenclosed subexpression may be matched zero or more times.  Thus, the pattern\n'a(bc*d)*e' matches the strings 'ae', 'abde', 'abcde', 'abcccde',\n'abdbccdbcccdbdbde', etc.  It is a syntax error for an asterisk to immediately\nfollow an opening parenthesis.\n\nImplement a class Regex, which contains a method match.  match takes a list of\nstrings and a regular expression, and return a new list, containing only those\ngiven strings that match the given regular expression pattern.\n\nThe method signature is:\npublic String[] match(String[] text, String pattern);\n\nThe list of strings will be provided in a String[].  The pattern will be a\nregular expression, as defined above.\n\nConstraints:\n- Each element in the String[] will only contain letters, digits, and spaces\n- The length of the String[] will be at most 50 Strings\n- The length of each element in the String[] will be at most 50 characters\n- The length of the pattern will be at most 50 characters\n- The pattern will be syntactically correct, according to the rules described\nabove\n- Aside from the special characters ('*', '.', '(', and ')'), all characters in\nthe pattern must be letters, digits, or spaces\n\nThe tester will ensure that all of the above constraints are met before any\ninput is passed to your method.\nNotes:\n- For a string to match the pattern, it must match the pattern in its entirety.\n That is, the pattern 'ab' does NOT match the string 'xabx'.\n- The matching is case-sensitive (an 'a' in a regular expression never matches\nan 'A').\n- The order in which the matching strings are placed in the returned ArrayList\ndoes not matter\n- If no Strings match the pattern, an empty instance of ArrayList is returned.\n\nExample:\n\nConsider the following ArrayList of Strings:\n\n[&quot;e&quot;, &quot;abcde&quot;, &quot;ae&quot;, &quot;abdade&quot;, &quot;abcccbcbbbcccbcbdade&quot;, &quot;a&quot;]\n\nIf the pattern is '(a(bc*)*d)*e', then:\n\n- &quot;e&quot; DOES match the pattern\n- &quot;abcde&quot; DOES match the pattern\n- &quot;ae&quot; does NOT match the pattern (a 'd' must follow the 'a' before the 'e')\n- &quot;abdade&quot; DOES match the pattern\n- &quot;abcccbcbbbcccbcbdade&quot; DOES match the pattern\n- &quot;a&quot; does NOT match the pattern (the string must end with an 'e')\n\nThus, the method should return the following ArrayList:\n[&quot;e&quot;, &quot;abcde&quot;, &quot;abdade&quot;, &quot;abcccbcbbbcccbcbdade&quot;]\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Regex",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"match",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] match(String[] param0, String param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

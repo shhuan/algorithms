@@ -1,0 +1,73 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1589&rd=4535",
+	"statement":"<p>Given the <b>width</b> and <b>height</b> of a rectangular grid, return the total number of rectangles (NOT counting squares) that can be found on this grid.</p> <p>For example, <b>width</b> = 3, <b>height</b> = 3 (see diagram below):</p> <pre>\n __ __ __\n|__|__|__|\n|__|__|__|\n|__|__|__|\n</pre> <p>In this grid, there are 4 2x3 rectangles, 6 1x3 rectangles and 12 1x2 rectangles. Thus there is a total of 4 + 6 + 12 = 22 rectangles. Note we don't count 1x1, 2x2 and 3x3 rectangles because they are squares.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"rectangles with equals sides (squares) should not be counted."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RectangularGrid",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countRectangles",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countRectangles(int width, int height)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"See above",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"5",
+			"note":" ",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"10",
+			"order":3
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"order":4
+		},
+		{
+			"expect":"964",
+			"id":0,
+			"input":"592",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"width and height will be between 1 and 1000 inclusive."
+	}]
+}

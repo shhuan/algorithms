@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8228&rd=10802",
+	"statement":"<p> You are given a int[] <b>cards</b>, the i-th element of which is the number of cards you have of type i, and an int <b>jokers</b>, the number of jokers you have. You want to construct decks using these cards. There are two types of valid decks: </p>\n <ol> \n  <li>A deck containing exactly 1 card of each type, and no jokers.</li> \n  <li>A deck containing exactly 1 card of each type except one, and exactly 1 joker.</li> \n </ol> For example, if there are 3 types of cards, the following four decks would be valid: {1, 2, 3}, {J, 2, 3}, {1, J, 3}, {1, 2, J}. Return the maximum possible number of valid decks you can construct with the given cards. Each card can only be a member of a single deck. <p></p> ",
+	"notes":[{
+		"order":1,
+		"val":"The total number of types of cards is equal to the total number of elements in ."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CompilingDecksWithJokers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxCompleteDecks",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxCompleteDecks(int[] cards, int jokers)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{10, 15}",
+			"note":"10 full decks without jokers and 3 decks with jokers instead of cards of the first type can be compiled.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{1, 2, 3}",
+			"note":"Three decks with one joker each can be compiled: one with the card of the second type changed to joker and two with the card of the first type replaced by joker.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{1}",
+			"note":"Note that a deck can be composed of 1 sole joker if there is only 1 type of card.",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{2, 3, 4, 5, 6}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cards will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of cards will be between 0 and 500,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"jokers will be between 0 and 500,000,000, inclusive."
+		}
+	]
+}

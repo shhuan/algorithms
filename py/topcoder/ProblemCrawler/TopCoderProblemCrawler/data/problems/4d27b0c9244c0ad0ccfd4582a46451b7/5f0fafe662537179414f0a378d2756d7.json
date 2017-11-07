@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13460&rd=16190",
+	"statement":"The final round of Top Cat Open 2014 is over! However, we do not know the final standings yet because the scoreboard has been frozen for the last hour. <br /><br /> <br /><br /> There are <b>N</b> contestants in the final round. They are numbered 0 through <b>N</b>-1 according to the results of the previous round. According to the frozen standings, contestant i has already solved X[i] problems. After the standings have been frozen, each contestant was only allowed to solve one additional problem. Thus, for each i the actual number of problems solved by contestant i is either X[i] or X[i] + 1. <br /><br /> <br /><br /> In the final standings the contestants will be ordered by the number of problems solved (more is better). In case of a tie the contestant with a smaller number will have the better place. <br /><br /> <br /><br /> The array X is generated from given ints <b>A</b> and <b>seed</b>. Use the following pseudocode to generate X: <pre>\n64bit_integer x = <b>seed</b>;\nfor (i = 0; i &lt; <b>N</b>; i++) {\n    x = x * 20142014 % 1000000007;\n    X[i] = x % <b>A</b>;\n}\n</pre> <br /><br /> <br /><br /> How many different rankings are possible at the end of the contest? Return this value modulo 1,000,000,007. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FrozenStandings",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countStandings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countStandings(int N, int A, int seed)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"The array X will be {0, 2, 2}. If contestant 2 solved one more problem during the last hour but contestant 1 did not, the final ranking will be (2,1,0). Otherwise the final ranking will be (1,2,0).",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"The array X will be {0}.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"5",
+			"note":"The array X will be {0, 0, 0, 0, 0}.",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"8",
+			"note":"The array X will be {1, 0, 1, 1, 1, 0, 1, 1}.",
+			"order":4
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"20",
+			"note":"The array X will be {3, 3, 2, 3, 1, 0, 3, 1, 3, 0, 1, 3, 2, 1, 0, 1, 0, 3, 2, 1}.",
+			"order":5
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"500000",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 500,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A will be between 1 and 500,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"seed will be between 1 and 1,000,000,006, inclusive."
+		}
+	]
+}

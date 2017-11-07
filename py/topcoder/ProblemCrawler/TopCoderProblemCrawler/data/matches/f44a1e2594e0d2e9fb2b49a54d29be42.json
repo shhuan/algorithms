@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":187.56,
+			"constraints":[],
+			"correctRatio":38.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11894&rd=15093",
+			"name":"SwitchesAndLamps",
+			"notes":[],
+			"submission":897
+		},
+		{
+			"avgPts":223.03,
+			"constraints":[],
+			"correctRatio":58.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11899&rd=15093",
+			"name":"CucumberWatering",
+			"notes":[],
+			"submission":145
+		},
+		{
+			"avgPts":526.72,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11895&rd=15093",
+			"name":"EvenPaths",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"2012 TCO Algorithm > Round 2A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15093"
+}

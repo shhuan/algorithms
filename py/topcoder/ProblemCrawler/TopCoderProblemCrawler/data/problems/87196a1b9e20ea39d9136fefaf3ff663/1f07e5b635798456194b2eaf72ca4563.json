@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10484&rd=13898",
+	"statement":"<i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet.</i> <br /><br /> <br /><br /> You are given a white rectangular <b>grid</b> made up of square cells. Some cells contain black squares, and some contain black squares that have been folded in half to form right triangles, such that one of their sides matches the grid line to the right of the cell and another side of the triangle matches the grid line to the bottom of the cell. At most <b>unfoldLimit</b> of these triangles can be unfolded to become black squares. However, black squares cannot be folded to become triangles.<br /><br /> <br /><br /> We are interested in forming the largest possible proper black triangle in the grid using the aforementioned operations. A black triangle is considered proper within a grid configuration if no other black shape shares a line segment with it. However, black shapes may still share one or more points with the triangle. The size of a triangle is defined as the number of grid cells that are currently occupied by the triangle.<br /><br /> <br /><br /> The <b>grid</b> will be given as a String[], where the j-th character of the i-th element represents the cell at row i, column j. '.' represents an empty cell, '#' represents a cell containing a black square, and '/' represents a cell containing a black triangle. Return the largest possible size for a proper triangle that can be formed in the given grid by unfolding at most <b>unfoldLimit</b> triangles. In case it is not possible to form a proper black triangle in the grid, return -1.<br /><br /> <br /><br /> For example, consider the following input grid:<br /><br /> <br /><br /> <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/UnfoldingTriangles/tt1.png\" /> <br /><br /> <br /><br /> If <b>unfoldLimit</b> is greater than or equal to 3, the largest possible proper triangle size is 10:<br /><br /> <pre><img src=\"http://www.topcoder.com/contest/problem/UnfoldingTriangles/tt21.png\" />   <img src=\"http://www.topcoder.com/contest/problem/UnfoldingTriangles/tt22.png\" /></pre> <br /><br /> <br /><br /> <br /><br /> If <b>unfoldLimit</b> is 2, the largest possible proper triangle size is 3:<br /><br /> <pre><img src=\"http://www.topcoder.com/contest/problem/UnfoldingTriangles/tt31.png\" />   <img src=\"http://www.topcoder.com/contest/problem/UnfoldingTriangles/tt32.png\" /></pre> <br /><br />Larger black triangles are possible, but they would not be proper triangles.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"UnfoldingTriangles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int solve(String[] grid, int unfoldLimit)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\".../\", \"../#\", \"./#/\", \"/#//\"}",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\".../\", \"../#\", \"./#/\", \"/#//\"}",
+			"note":"Examples 1 and 0 were explained in the problem statement.",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"{\"////\", \"////\", \"////\", \"////\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{\".....#...\", \"....###..\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\"#//#\", \"#//#\", \"####\", \"///#\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\".../.../\", \"../#..//\", \"./.#.///\", \"/###....\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of grid will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of grid will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in grid will be '.', '#' or '/'."
+		},
+		{
+			"order":5,
+			"val":"unfoldLimit will be between 1 and 2500, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.04,
+			"constraints":[],
+			"correctRatio":71.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12706&rd=15700",
+			"name":"GUMIAndSongsDiv1",
+			"notes":[],
+			"submission":582
+		},
+		{
+			"avgPts":243.16,
+			"constraints":[],
+			"correctRatio":37.3,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12714&rd=15700",
+			"name":"KeyDungeonDiv1",
+			"notes":[],
+			"submission":378
+		},
+		{
+			"avgPts":549.8,
+			"constraints":[],
+			"correctRatio":85.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12709&rd=15700",
+			"name":"GameInDarknessDiv1",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"Single Round Match 588 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15700"
+}

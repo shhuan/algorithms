@@ -1,0 +1,4325 @@
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>TopCoder Statistics</title>
+
+
+
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'/>
+    
+    <link type="text/css" rel="stylesheet" href="/css/coders.css" />
+    <link type="text/css" rel="stylesheet" href="/css/login.css" />
+    <link type="text/css" rel="stylesheet" href="/css/reskin/myHome.css" />
+    <!--[if IE]>
+    <link type="text/css" rel="stylesheet" href="/css/ie.css" />
+    <![endif]-->
+    
+<link type="text/css" rel="stylesheet" href="/css/reskin/newStyles.css"/>
+<!--[if IE 8]>
+<link type="text/css" rel="stylesheet" href="/css/reskin/newStyles_ie8.css"/>
+<![endif]-->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/reskin/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/js/reskin/jquery-migrate-1.2.1.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/js/reskin/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/reskin/jquery.jfeed.pack.js"></script>
+<script type="text/javascript" src="/js/reskin/newTCScript.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o?o:n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(e,n){function t(e){function n(n,t,a){e&&e(n,t,a),a||(a={});for(var u=c(n),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(e,n){f[e]=c(e).concat(n)}function c(e){return f[e]||[]}function u(){return t(n)}var f={};return{on:a,emit:n,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=e("gos");n.exports=t()},{gos:"7eSDFh"}],ee:[function(e,n){n.exports=e("QJf3ax")},{}],3:[function(e,n){function t(e){return function(){r(e,[(new Date).getTime()].concat(i(arguments)))}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(e,n){window.NREUM[n]=t("api-"+n)}),n.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],"7eSDFh":[function(e,n){function t(e,n,t){if(r.call(e,n))return e[n];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[n]=o,o}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],gos:[function(e,n){n.exports=e("7eSDFh")},{}],handle:[function(e,n){n.exports=e("D5DuLP")},{}],D5DuLP:[function(e,n){function t(e,n,t){return r.listeners(e).length?r.emit(e,n,t):(o[e]||(o[e]=[]),void o[e].push(n))}var r=e("ee").create(),o={};n.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(e,n){n.exports=e("XL7HBI")},{}],XL7HBI:[function(e,n){function t(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");n.exports=t},{gos:"7eSDFh"}],G9z0Bl:[function(e,n){function t(){var e=d.info=NREUM.info,n=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){c(p,function(n,t){n in e||(e[n]=t)});var t="https"===s.split(":")[0]||e.sslForHttp;d.proto=t?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=d.proto+e.agent,n.parentNode.insertBefore(r,n)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=e("handle"),c=e(1),u=(e(2),window),f=u.document,s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},d=n.exports={offset:i(),origin:s,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",t,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,n){n.exports=e("G9z0Bl")},{}],12:[function(e,n){function t(e,n){var t=[],o="",i=0;for(o in e)r.call(e,o)&&(t[i]=n(o,e[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],13:[function(e,n){function t(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=t},{}]},{},["G9z0Bl"]);</script><script type="text/javascript">
+function submitEnter(e) {
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+if (keycode == 13) {
+document.matchListForm.submit();
+return false;
+} else return true;
+}
+function next() {
+var myForm = document.matchListForm;
+myForm.sr.value=601+parseInt(myForm.nr.value);
+myForm.sc.value='';
+myForm.sd.value='';
+myForm.submit();
+}
+function previous() {
+var myForm = document.matchListForm;
+myForm.sr.value=601-parseInt(myForm.nr.value);
+myForm.sc.value='';
+myForm.sd.value='';
+
+myForm.submit();
+}
+</script>
+
+
+</head>
+
+<body>
+
+        
+
+
+
+
+
+
+
+
+
+    
+        <header id="navigation" class="newUser">
+            <div class="container">
+                <div class="headerTopRightMenu">
+                    
+                        <div class="headerTopRightMenuLink logIn">
+                            <div class="text"><a href="http://www.topcoder.com/?action=showlogin" class="actionLogin">Log In</a></div>
+                            <div class="clear"></div>
+                        </div>
+                    
+
+                    <div class="separator"></div>
+                    <div class="headerTopRightMenuLink contact">
+                        <div class="text"><a href="http://www.topcoder.com/contact-us/">Contact</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="headerTopRightMenuLink help">
+                        <div class="text"><a href="http://help.topcoder.com">Help Center</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="separator beforeSearch"></div>
+                    <div class="headerTopRightMenuLink search last">
+                        <div class="icon"></div>
+                        <div class="text"><a href="http://www.topcoder.com/search">Search</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <h1 class="logo">
+                    <a href="http://www.topcoder.com" title="topcoder"></a>
+                </h1>
+                <nav id="mainNav" class="mainNav">
+                    <ul class="root">
+                        <li id="nav-menu-item-13018"><a href="http://www.topcoder.com/challenges/" class="13018"><i></i>Challenges</a>
+                            <ul class="child">
+                                <li id="nav-menu-item-13510"><a href="http://www.topcoder.com/challenges/"
+                                                                class="all"><i></i>All</a></li>
+                                <li id="nav-menu-item-13511"><a href="http://www.topcoder.com/active-challenges/design/"
+                                                                class="design"><i></i>Design</a></li>
+                                <li id="nav-menu-item-13512"><a
+                                        href="http://www.topcoder.com/active-challenges/develop/"
+                                        class="develop"><i></i>Development</a></li>
+                                <li id="nav-menu-item-13513"><a href="http://www.topcoder.com/active-challenges/data/"
+                                                                class="data"><i></i>Data Science</a></li>
+                                <li id="nav-menu-item-13529"><a
+                                        href="http://community.topcoder.com/contest/arena/ContestAppletProd.jnlp"
+                                        class="topcoder-arena"><i></i>topcoder Arena</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav-menu-item-13129"><a href="http://www.topcoder.com/community/" class="13129"><i></i>Community</a>
+                            <ul class="child">
+                                <li id="nav-menu-item-13509"><a href="http://www.topcoder.com/community/"
+                                                                class="welcome"><i></i>Home</a></li>
+                                <li id="nav-menu-item-13034"><a
+                                        href="http://www.topcoder.com/community/getting-started/" class="13034"><i></i>Getting
+                                    Started</a></li>
+                                <li id="nav-menu-item-12983"><a href="http://www.topcoder.com/community/how-it-works/"
+                                                                class="customer-solutions"><i></i>How It Works</a></li>
+                                <li id="nav-menu-item-13105"><a href="http://apps.topcoder.com/forums/"
+                                                                class="forums"><i></i>Forums</a></li>
+                                <li id="nav-menu-item-13036"><a href="http://www.topcoder.com/community/events/"
+                                                                class="13036"><i></i>Events</a></li>
+                                <li id="nav-menu-item-15095"><a href="http://community.topcoder.com/tco14"  
+                                    class="topcoder-open-2"><i></i>Topcoder Open 2014</a></li>
+                                <li id="nav-menu-item-15218"><a href="http://tco15.topcoder.com/"  
+                                    class="topcoder-open-2015"><i></i>Topcoder Open 2015</a></li>
+                                <li><a href="http://www.topcoder.com/community/member-programs/">
+                                                                <i></i>Member Programs</a></li>
+                                <li id="nav-menu-item-13038"><a href="http://www.topcoder.com/community/stories/"
+                                                                class="13038"><i></i>Stories</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav-menu-item-13469"><a href="/mission" class="about-us"><i></i>About topcoder</a>
+                            <ul class="child">
+                                <li id="nav-menu-item-13516"><a href="http://www.topcoder.com/mission/"
+                                                                class="13516"><i></i>Mission</a></li>
+                                <li id="nav-menu-item-13032"><a href="http://www.topcoder.com/research/"
+                                                                class="13032"><i></i>Research</a></li>
+                                <li id="nav-menu-item-13450"><a href="http://www.topcoder.com/case-studies/"
+                                                                class="case-studies"><i></i>Case Studies</a></li>
+                                <li id="nav-menu-item-13045"><a href="http://www.topcoder.com/press/"
+                                                                class="13045"><i></i>Press</a></li>
+                            </ul>
+                        </li>
+                        <li id="nav-menu-item-13379"><a href="http://www.topcoder.com/blog/"
+                                                        class="13379"><i></i>Blog</a></li>
+                        <!--
+                        <li class="noReg logoutLink 	hide"><a href="http://www.topcoder.com?auth=logout" class="actionLogout">Log Out</a></li>
+                        <li class="noReg loginLink"><a href="javascript:;" class="actionLogin">Log In</a></li>
+                        -->
+                    </ul>
+                </nav>
+                <!--
+                <a href="http://www.topcoder.com?auth=logout" class="onMobi noReg linkLogout actionLogout hide">Log Out</a>
+                  <a href="javascript:;" class="onMobi noReg linkLogin actionLogin">Log In</a>
+                -->
+                
+                    <span class="btnRegWrap noReg"><a href="http://www.topcoder.com/?action=callback" class="btn btnRegister">Register</a></span>
+                
+
+                <!-- /.userWidget -->
+            </div>
+        </header>
+    
+    
+
+
+
+
+
+
+        
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr valign="top">
+                <!-- Left Column Begins-->
+                <td width="180">
+                    
+
+
+
+
+
+
+
+    
+        
+            
+            
+        
+
+
+
+
+
+
+<div style="width: 185px;" class="leftNavWrapper">
+    
+<input type="hidden" id="nodeName" value="algo_match_archive"/>
+<script language="JavaScript" type="text/javascript" src="/js/arena.js"></script>
+
+    <section class="get-time" style="margin-bottom:15px">
+        
+        <span class="date"></span>
+        <a href="javascript:tcTime();">Get Time</a>
+    </section>
+    <!-- End .get-time -->
+
+    <section class="navigation">
+    <ul>
+        <li><a id="copilot_posting_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Copilot%20Posting">Copilot Posting</a></li>
+        <li><a href="http://www.topcoder.com/active-challenges/design/">Design</a></li>
+        <li>
+            <a href="javascript:;">Develop<i></i></a>
+            <ul class="hide">
+                <li><a id="conceptualization_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Conceptualization">Conceptualization</a></li>
+                <li><a id="specification_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Specification">Specification</a></li>
+                <li><a id="architecture_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Architecture">Architecture</a></li>
+                <li><a id="ui_prototype_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=UI%20Prototype%20Competition">UI Prototype</a></li>
+                <li><a id="assembly_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Assembly%20Competition">Assembly</a></li>
+                <li><a id="first2finish_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=First2Finish">First2Finish</a></li>
+                <li><a id="code_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Code">Code</a></li>
+                <li><a id="des_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Design">Component Design</a></li>
+                <li><a id="dev_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Development">Component Development</a></li>
+                <li><a id="test_suites_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Test%20Suites">Test Suites</a></li>
+                <li><a id="content_creation_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Content%20Creation">Content Creation</a></li>
+                <li><a id="test_scenarios_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Test%20Scenarios">Test Scenarios</a></li>
+                <li><a id="bug_hunt_compete" href="http://www.topcoder.com/challenges/develop/active/?challengeTypes=Bug%20Hunt">Bug Hunt</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">Review Opportunities<i></i></a>
+            <ul class="hide">
+                <li>
+                    <dl>
+                        <dt>Conceptualization</dt>
+                        <dd><a id="conceptualization_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=23">Review Opportunities</a></dd>
+                        <dd><a id="conceptualization_review_border" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=23">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Specification</dt>
+                        <dd><a id="specification_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=6">Review Opportunities</a></dd>
+                        <dd><a id="specification_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=6">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Architecture</dt>
+                        <dd><a id="architecture_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=7">Review Opportunities</a></dd>
+                        <dd><a id="architecture_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=7">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Component Design</dt>
+                        <dd><a id="des_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=1">Review Opportunities</a></dd>
+                        <dd><a id="des_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=1 ">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Component Development</dt>
+                        <dd><a id="dev_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=2">Review Opportunities</a></dd>
+                        <dd><a id="dev_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=2">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Assembly</dt>
+                        <dd><a id="assembly_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=14">Review Opportunities</a></dd>
+                        <dd><a id="assembly_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=14">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>First2Finish</dt>
+                        <dd><a id="first2finish_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=38">Review Opportunities</a></dd>
+                        <dd><a id="first2finish_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=38">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Code</dt>
+                        <dd><a id="code_review"href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=39">Review Opportunities</a></dd>
+                        <dd><a id="code_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=39">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Test Suites</dt>
+                        <dd><a id="test_suites_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=13">Review Opportunities</a></dd>
+                        <dd><a id="test_suites_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=13">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Report</dt>
+                        <dd><a id="reporting_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=36">Review Opportunities</a></dd>
+                        <dd><a id="reporting_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=36">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>UI prototype</dt>
+                        <dd><a id="ui_prototype_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=19">Review Opportunities</a></dd>
+                        <dd><a id="ui_prototype_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=19">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>RIA Build</dt>
+                        <dd><a id="ria_build_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=24">Review Opportunities</a></dd>
+                        <dd><a id="ria_build_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=24">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Content Creation</dt>
+                        <dd><a id="content_creation_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=35">Review Opportunities</a></dd>
+                        <dd><a id="content_creation_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=35">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Test Scenarios</dt>
+                        <dd><a id="test_scenarios_review"  href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=26">Review Opportunities</a></dd>
+                        <dd><a id="test_scenarios_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=26">Meet the review board</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="last-item">
+                        <dt>Bug Hunt</dt>
+                        <dd><a id="bug_hunt_review" href="http://www.topcoder.com/tc?module=ViewReviewAuctions&pt=9">Review Opportunities</a></dd>
+                        <dd><a id="bug_hunt_review_board" href="http://www.topcoder.com/tc?module=ReviewBoard&pt=9">Meet the review board</a></dd>
+                    </dl>
+                </li>
+
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">Algorithm (SRM)<i></i></a>
+            <ul class="hide">
+                <li><a href="http://www.topcoder.com/active-challenges/data/">Single Round Matches (SRM)</a></li>
+                <li><a id="algo_match_archive" href="http://www.topcoder.com/tc?module=MatchList">Match Archive</a></li>
+                <li><a id="algo_match_overviews" href="http://www.topcoder.com/stat?c=round_overview">Match Overviews</a></li>
+                <li><a id="algo_match_winners" href="http://www.topcoder.com/tc?module=SrmDivisionWins">Match Winners</a></li>
+                <li><a id="algo_match_results" href="http://www.topcoder.com/stat?c=last_match">Match Results</a></li>
+                <li><a href="http://apps.topcoder.com/wiki/display/tc/Algorithm+Problem+Set+Analysis">Match Editorials</a></li>
+                <li><a id="algo_problem_archive" href="http://www.topcoder.com/tc?module=ProblemArchive">Problem Archive</a></li>
+                <li><a id="algo_color_changes" href="http://www.topcoder.com/tc?module=ColorChange&ratid=1">Recent Color Changes</a></li>
+                <li><a href="http://apps.topcoder.com/wiki/display/tc/Algorithm+Data+Feeds">Data Feeds</a></li>
+                <li><a href="javascript:arena();">Launch Arena</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">Marathon Match<i></i></a>
+            <ul class="hide">
+                <li><a id="long_compete" href="http://www.topcoder.com/challenges/data/active/">Challenges</a></li>
+                <li><a id="long_match_archive" href="http://www.topcoder.com/challenges/data/past/">Match Archive</a></li>
+                <li><a id="long_match_overview" href="http://www.topcoder.com/longcontest/stats/?module=ViewOverview">Match Overview</a></li>
+                <li><a id="long_match_winners" href="http://www.topcoder.com/longcontest/stats/?module=MatchWinners">Match Winners</a></li>
+                <li><a id="long_editorials" href="http://www.topcoder.com/longcontest/?module=Static&d1=match_editorials&d2=archive">Match Editorials</a></li>
+                <li><a id="long_data_feeds" href="http://www.topcoder.com/longcontest/?module=Static&d1=support&d2=dataFeed">Data Feeds</a></li>
+                <li><a id="long_practice" href="http://www.topcoder.com/longcontest/?module=ViewPractice">Practice</a></li>
+                <li><a id="long_queue" href="http://www.topcoder.com/longcontest/?module=ViewQueue">Queue Status</a></li>
+            </ul>
+        </li>
+        <li><a href="http://www.topcoder.com/dr">The Digital Run</a></li>
+        <li><a href="http://software.topcoder.com/review">Submit &amp; Review</a></li>
+        <li>
+            <a href="javascript:;">topcoder Networks<i></i></a>
+            <ul class="hide">
+                <li><a href="http://community.topcoder.com/ntl/">NASA Tournament Lab</a></li>
+            </ul>
+        </li>
+        <li><a href="http://www.topcoder.com/community/events/">Events</a></li>
+        <li>
+            <a href="javascript:;">Statistics<i></i></a>
+            <ul class="hide">
+                <li>
+                    <dl>
+                        <dt>Top Ranked</dt>
+                        <dd><a id="top_rated_algo" href="http://www.topcoder.com/tc?module=AlgoRank">Algorithm</a></dd>
+                        <dd><a id="top_rated_hs" href="http://www.topcoder.com/tc?module=HSRank">High School</a></dd>
+                        <dd><a id="top_rated_long" href="http://www.topcoder.com/longcontest/stats/?module=CoderRank">Marathon Match</a></dd>
+                        <dd><a id="top_rated_conceptors" href="http://www.topcoder.com/stat?c=top_conceptors">Conceptualization</a></dd>
+                        <dd><a id="top_rated_specificators" href="http://www.topcoder.com/stat?c=top_specificators">Specification</a></dd>
+                        <dd><a id="top_rated_architects" href="http://www.topcoder.com/stat?c=top_architects">Architecture</a></dd>
+                        <dd><a id="top_rated_des" href="http://www.topcoder.com/stat?c=top_designers">Design</a></dd>
+                        <dd><a id="top_rated_dev" href="http://www.topcoder.com/stat?c=top_developers">Development</a></dd>
+                        <dd><a id="top_rated_assemblers" href="http://www.topcoder.com/stat?c=top_assemblers">Assembly</a></dd>
+                        <dd><a id="top_rated_testers" href="http://www.topcoder.com/stat?c=top_testers">Test Suites</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Record Book</dt>
+                        <dd><a  id="algo_recordbook" href="http://www.topcoder.com/tc?module=Static&d1=statistics&d2=recordbook_home">Algorithm</a></dd>
+                        <dd><a  id="comp_recordbook" href="http://www.topcoder.com/tc?module=Static&d1=compstats&d2=comp_recordbook_home">Component</a></dd>
+                        <dd><a  id="long_recordbook" href="http://www.topcoder.com/longcontest/?module=Static&d1=stats&d2=recordbook_home">Marathon Match</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="last-item">
+                        <dt>Coder of the Month</dt>
+                        <dd><a  id="algo_com" href="http://www.topcoder.com/tc?module=COMHistory&achtid=5">Algorithm</a></dd>
+                        <dd><a  id="des_com" href="http://www.topcoder.com/tc?module=COMHistory&achtid=6">Design</a></dd>
+                        <dd><a  id="dev_com" href="http://www.topcoder.com/tc?module=COMHistory&achtid=7">Development</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">Tutorials<i></i></a>
+            <ul class="hide">
+                <li><a  id="algo_tutorials" href="http://help.topcoder.com/data-science/competing-in-algorithm-challenges/algorithm-tutorials/">Algorithm Tutorials</a></li>
+                <li><a id="comp_tutorials" href="http://help.topcoder.com/development/competing-in-development-challenges/development-tutorials/ ">Software Tutorials</a></li>
+                <li><a id="mm_tutorials" href="http://help.topcoder.com/data-science/competing-in-algorithm-challenges/marathon-match-tutorials/">Marathon Tutorials</a></li>
+            </ul>
+        </li>
+        <li><a href="https://apps.topcoder.com/forums/" id="forums">Forums</a></li>
+        <li><a href="https://www.topcoder.com/tc?module=MyHome" id="my_topcoder">My topcoder</a></li>
+    </ul>
+</section>
+<!-- End .navigation -->
+<section class="member-search">
+    <h3>Member Search</h3>
+    <div class="form">
+        <form action="http://community.topcoder.com/tc" method="get" name="simpleSearchForm" class="noSpace" id="simpleSearchForm">
+            <input class="noSpace" type="hidden" name="module" value="SimpleSearch" />
+            <input class="noSpace" type="text" name="ha" value="Handle:" size="12" maxlength="15" onfocus="javascript: if (document.simpleSearchForm.ha.value=='Handle:') document.simpleSearchForm.ha.value = '';" onblur="javascript:if (document.simpleSearchForm.ha.value == '')document.simpleSearchForm.ha.value = 'Handle:';" />
+            <a href="javascript:javascript:void document.simpleSearchForm.submit();" class="btn btn-search-member"><i>SEARCH</i></a>
+        </form>
+    </div>
+</section>
+
+<!-- End .member-search -->
+
+</div>
+
+    
+    
+
+
+
+                </td>
+                <!-- Left Column Ends -->
+
+                <!-- Center Column Begins -->
+                <TD CLASS="statTableSpacer" WIDTH="100%" VALIGN="top">
+
+                
+
+
+
+
+
+<table cellspacing="0" cellpadding="0" class="pageTitleTable">
+    <tr>
+        <td width="100%" class="pageTitle">
+
+
+            
+                
+                    
+                    <img border="0" src="/i/header_statistics_w.gif" alt="statistics_w"/>
+                
+                
+            
+
+
+        </td>
+        <td align="right" class="pageSubtitle">&#160;Match Archive</td>
+    </tr>
+</table>
+
+
+
+                <form name="matchListForm" action='/tc' method="get">
+
+                <input type="hidden" name="module" value="MatchList" />
+                <input type="hidden" name="sc" />
+                <input type="hidden" name="sd" />
+
+                <div class="pagingBox">
+                    <a href="Javascript:previous()" class="bcLink">&lt;&lt; prev</a>
+                    | <a href="Javascript:next()" class="bcLink">next &gt;&gt;</a>
+                </div>
+* resubmissions do not increase submission totals or averages
+<table class="stat" cellpadding="0" cellspacing="0" width="100%" border="0">
+   <tr><td class="title" colspan="14">Algorithm Match Archive</td></tr>
+   <tr>
+      <td colspan="5" class="header">&#160;</td>
+      <td colspan="4" class="headerC">Division I</td>
+      <td colspan="4" class="headerC">Division II</td>
+      <td class="header">&#160;</td>
+   </tr>
+   <tr>
+      <td colspan="2" class="header">&#160;</td>
+      <td colspan="3" class="headerC">&#160;<br />Competitors</td>
+      <td colspan="2" class="headerC">Solutions<br />Submitted*</td>
+      <td colspan="2" class="headerC">Solutions<br />Challenged</td>
+      <td colspan="2" class="headerC">Solutions<br />Submitted*</td>
+      <td colspan="2" class="headerC">Solutions<br />Challenged</td>
+      <td class="header">&#160;</td>
+   </tr>
+   <tr>
+      <td class="header" width="33%"><a href="/tc?&amp;sc=0&amp;sd=asc&amp;module=MatchList&amp;nr=200">Match</a></td>
+      <td class="headerC" width="33%"><a href="/tc?&amp;sc=12&amp;sd=desc&amp;module=MatchList&amp;nr=200">Date</a></td>
+      <td class="headerC" nowrap="nowrap"><a href="/tc?&amp;sc=3&amp;sd=desc&amp;module=MatchList&amp;nr=200">Total</a></td>
+      <td class="headerC" nowrap="nowrap"><a href="/tc?&amp;sc=1&amp;sd=desc&amp;module=MatchList&amp;nr=200">DivI</a></td>
+      <td class="headerC" nowrap="nowrap"><a href="/tc?&amp;sc=2&amp;sd=desc&amp;module=MatchList&amp;nr=200">DivII</a></td>
+      <td class="headerC"><a href="/tc?&amp;sc=4&amp;sd=desc&amp;module=MatchList&amp;nr=200">Total</a></td>
+      <td class="headerC" nowrap="nowrap"><a href="/tc?&amp;sc=6&amp;sd=desc&amp;module=MatchList&amp;nr=200">Avg</a></td>
+      <td class="headerC"><a href="/tc?&amp;sc=8&amp;sd=desc&amp;module=MatchList&amp;nr=200">Total</a></td>
+      <td class="headerC" nowrap="nowrap"><a href="/tc?&amp;sc=10&amp;sd=desc&amp;module=MatchList&amp;nr=200">Avg</a></td>
+      <td class="headerC"><a href="/tc?&amp;sc=5&amp;sd=desc&amp;module=MatchList&amp;nr=200">Total</a></td>
+      <td class="headerC" nowrap="nowrap"><a href="/tc?&amp;sc=7&amp;sd=desc&amp;module=MatchList&amp;nr=200">Avg</a></td>
+      <td class="headerC"><a href="/tc?&amp;sc=9&amp;sd=desc&amp;module=MatchList&amp;nr=200">Total</a></td>
+      <td class="headerC" nowrap="nowrap"><a href="/tc?&amp;sc=11&amp;sd=desc&amp;module=MatchList&amp;nr=200">Avg</a></td>
+      <td class="headerC" width="33%">&#160;</td>
+   </tr>
+   
+   
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=8026">TCO05 Qual 7/8</a></td>
+<td class="valueC">08.16.2005</td>
+<td class="valueR">349</td>
+<td class="valueR">349</td>
+<td class="valueR"></td>
+<td class="valueR">579</td>
+<td class="valueR">1.66</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505753" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=8024">TCO05 Qual 5/10</a></td>
+<td class="valueC">08.16.2005</td>
+<td class="valueR">357</td>
+<td class="valueR">357</td>
+<td class="valueR"></td>
+<td class="valueR">643</td>
+<td class="valueR">1.80</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505752" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=8023">TCO05 Qual 4/6</a></td>
+<td class="valueC">08.16.2005</td>
+<td class="valueR">358</td>
+<td class="valueR">358</td>
+<td class="valueR"></td>
+<td class="valueR">584</td>
+<td class="valueR">1.63</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505751" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=8021">TCO05 Qual 2/9</a></td>
+<td class="valueC">08.16.2005</td>
+<td class="valueR">354</td>
+<td class="valueR">354</td>
+<td class="valueR"></td>
+<td class="valueR">532</td>
+<td class="valueR">1.50</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505750" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=8020">TCO05 Qual 1/3</a></td>
+<td class="valueC">08.16.2005</td>
+<td class="valueR">356</td>
+<td class="valueR">356</td>
+<td class="valueR"></td>
+<td class="valueR">520</td>
+<td class="valueR">1.46</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505749" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7993">SRM 258</a></td>
+<td class="valueC">08.10.2005</td>
+<td class="valueR">665</td>
+<td class="valueR">309</td>
+<td class="valueR">356</td>
+<td class="valueR">550</td>
+<td class="valueR">1.78</td>
+<td class="valueR">170</td>
+<td class="valueR">0.55</td>
+<td class="valueR">482</td>
+<td class="valueR">1.35</td>
+<td class="valueR">59</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505748" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=8005">SRM 257</a></td>
+<td class="valueC">08.08.2005</td>
+<td class="valueR">659</td>
+<td class="valueR">319</td>
+<td class="valueR">340</td>
+<td class="valueR">457</td>
+<td class="valueR">1.43</td>
+<td class="valueR">64</td>
+<td class="valueR">0.20</td>
+<td class="valueR">755</td>
+<td class="valueR">2.22</td>
+<td class="valueR">78</td>
+<td class="valueR">0.23</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505747" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7992">SRM 256</a></td>
+<td class="valueC">08.02.2005</td>
+<td class="valueR">633</td>
+<td class="valueR">256</td>
+<td class="valueR">377</td>
+<td class="valueR">486</td>
+<td class="valueR">1.90</td>
+<td class="valueR">55</td>
+<td class="valueR">0.21</td>
+<td class="valueR">581</td>
+<td class="valueR">1.54</td>
+<td class="valueR">9</td>
+<td class="valueR">0.02</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505746" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7228">SRM 255</a></td>
+<td class="valueC">07.28.2005</td>
+<td class="valueR">559</td>
+<td class="valueR">246</td>
+<td class="valueR">313</td>
+<td class="valueR">426</td>
+<td class="valueR">1.73</td>
+<td class="valueR">89</td>
+<td class="valueR">0.36</td>
+<td class="valueR">707</td>
+<td class="valueR">2.26</td>
+<td class="valueR">31</td>
+<td class="valueR">0.10</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505745" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=8006">SRM 254</a></td>
+<td class="valueC">07.26.2005</td>
+<td class="valueR">485</td>
+<td class="valueR">186</td>
+<td class="valueR">299</td>
+<td class="valueR">334</td>
+<td class="valueR">1.80</td>
+<td class="valueR">52</td>
+<td class="valueR">0.28</td>
+<td class="valueR">555</td>
+<td class="valueR">1.86</td>
+<td class="valueR">120</td>
+<td class="valueR">0.40</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505744" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7227">SRM 253</a></td>
+<td class="valueC">07.23.2005</td>
+<td class="valueR">655</td>
+<td class="valueR">282</td>
+<td class="valueR">373</td>
+<td class="valueR">549</td>
+<td class="valueR">1.95</td>
+<td class="valueR">49</td>
+<td class="valueR">0.17</td>
+<td class="valueR">644</td>
+<td class="valueR">1.73</td>
+<td class="valueR">83</td>
+<td class="valueR">0.22</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505743" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7226">SRM 251</a></td>
+<td class="valueC">07.12.2005</td>
+<td class="valueR">470</td>
+<td class="valueR">221</td>
+<td class="valueR">249</td>
+<td class="valueR">385</td>
+<td class="valueR">1.74</td>
+<td class="valueR">43</td>
+<td class="valueR">0.19</td>
+<td class="valueR">482</td>
+<td class="valueR">1.94</td>
+<td class="valueR">114</td>
+<td class="valueR">0.46</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505742" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7225">SRM 250</a></td>
+<td class="valueC">07.07.2005</td>
+<td class="valueR">506</td>
+<td class="valueR">221</td>
+<td class="valueR">285</td>
+<td class="valueR">369</td>
+<td class="valueR">1.67</td>
+<td class="valueR">86</td>
+<td class="valueR">0.39</td>
+<td class="valueR">452</td>
+<td class="valueR">1.59</td>
+<td class="valueR">35</td>
+<td class="valueR">0.12</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505741" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7224">SRM 249</a></td>
+<td class="valueC">06.29.2005</td>
+<td class="valueR">479</td>
+<td class="valueR">233</td>
+<td class="valueR">246</td>
+<td class="valueR">272</td>
+<td class="valueR">1.17</td>
+<td class="valueR">42</td>
+<td class="valueR">0.18</td>
+<td class="valueR">379</td>
+<td class="valueR">1.54</td>
+<td class="valueR">35</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505740" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7223">SRM 248</a></td>
+<td class="valueC">06.21.2005</td>
+<td class="valueR">622</td>
+<td class="valueR">311</td>
+<td class="valueR">311</td>
+<td class="valueR">584</td>
+<td class="valueR">1.88</td>
+<td class="valueR">106</td>
+<td class="valueR">0.34</td>
+<td class="valueR">557</td>
+<td class="valueR">1.79</td>
+<td class="valueR">96</td>
+<td class="valueR">0.31</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505739" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7222">SRM 247</a></td>
+<td class="valueC">06.18.2005</td>
+<td class="valueR">536</td>
+<td class="valueR">237</td>
+<td class="valueR">299</td>
+<td class="valueR">299</td>
+<td class="valueR">1.26</td>
+<td class="valueR">44</td>
+<td class="valueR">0.19</td>
+<td class="valueR">618</td>
+<td class="valueR">2.07</td>
+<td class="valueR">71</td>
+<td class="valueR">0.24</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505738" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7221">SRM 246</a></td>
+<td class="valueC">06.09.2005</td>
+<td class="valueR">499</td>
+<td class="valueR">231</td>
+<td class="valueR">268</td>
+<td class="valueR">654</td>
+<td class="valueR">2.83</td>
+<td class="valueR">137</td>
+<td class="valueR">0.59</td>
+<td class="valueR">628</td>
+<td class="valueR">2.34</td>
+<td class="valueR">156</td>
+<td class="valueR">0.58</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505737" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7220">SRM 245</a></td>
+<td class="valueC">06.01.2005</td>
+<td class="valueR">427</td>
+<td class="valueR">191</td>
+<td class="valueR">236</td>
+<td class="valueR">158</td>
+<td class="valueR">0.83</td>
+<td class="valueR">9</td>
+<td class="valueR">0.05</td>
+<td class="valueR">244</td>
+<td class="valueR">1.03</td>
+<td class="valueR">19</td>
+<td class="valueR">0.08</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505736" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7219">SRM 244</a></td>
+<td class="valueC">05.23.2005</td>
+<td class="valueR">442</td>
+<td class="valueR">207</td>
+<td class="valueR">235</td>
+<td class="valueR">331</td>
+<td class="valueR">1.60</td>
+<td class="valueR">59</td>
+<td class="valueR">0.29</td>
+<td class="valueR">490</td>
+<td class="valueR">2.09</td>
+<td class="valueR">18</td>
+<td class="valueR">0.08</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505735" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7218">SRM 243</a></td>
+<td class="valueC">05.17.2005</td>
+<td class="valueR">406</td>
+<td class="valueR">199</td>
+<td class="valueR">207</td>
+<td class="valueR">325</td>
+<td class="valueR">1.63</td>
+<td class="valueR">31</td>
+<td class="valueR">0.16</td>
+<td class="valueR">295</td>
+<td class="valueR">1.43</td>
+<td class="valueR">47</td>
+<td class="valueR">0.23</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505734" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7217">SRM 242</a></td>
+<td class="valueC">05.14.2005</td>
+<td class="valueR">495</td>
+<td class="valueR">216</td>
+<td class="valueR">279</td>
+<td class="valueR">314</td>
+<td class="valueR">1.45</td>
+<td class="valueR">34</td>
+<td class="valueR">0.16</td>
+<td class="valueR">424</td>
+<td class="valueR">1.52</td>
+<td class="valueR">32</td>
+<td class="valueR">0.11</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505733" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=7216">SRM 241</a></td>
+<td class="valueC">05.04.2005</td>
+<td class="valueR">372</td>
+<td class="valueR">186</td>
+<td class="valueR">186</td>
+<td class="valueR">326</td>
+<td class="valueR">1.75</td>
+<td class="valueR">47</td>
+<td class="valueR">0.25</td>
+<td class="valueR">356</td>
+<td class="valueR">1.91</td>
+<td class="valueR">127</td>
+<td class="valueR">0.68</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505732" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6539">SRM 240</a></td>
+<td class="valueC">04.30.2005</td>
+<td class="valueR">484</td>
+<td class="valueR">193</td>
+<td class="valueR">291</td>
+<td class="valueR">279</td>
+<td class="valueR">1.45</td>
+<td class="valueR">68</td>
+<td class="valueR">0.35</td>
+<td class="valueR">360</td>
+<td class="valueR">1.24</td>
+<td class="valueR">67</td>
+<td class="valueR">0.23</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505731" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6538">SRM 239</a></td>
+<td class="valueC">04.18.2005</td>
+<td class="valueR">455</td>
+<td class="valueR">210</td>
+<td class="valueR">245</td>
+<td class="valueR">373</td>
+<td class="valueR">1.78</td>
+<td class="valueR">57</td>
+<td class="valueR">0.27</td>
+<td class="valueR">380</td>
+<td class="valueR">1.55</td>
+<td class="valueR">20</td>
+<td class="valueR">0.08</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505730" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6537">SRM 238</a></td>
+<td class="valueC">04.14.2005</td>
+<td class="valueR">508</td>
+<td class="valueR">201</td>
+<td class="valueR">307</td>
+<td class="valueR">346</td>
+<td class="valueR">1.72</td>
+<td class="valueR">24</td>
+<td class="valueR">0.12</td>
+<td class="valueR">610</td>
+<td class="valueR">1.99</td>
+<td class="valueR">22</td>
+<td class="valueR">0.07</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505729" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6536">SRM 237</a></td>
+<td class="valueC">04.06.2005</td>
+<td class="valueR">371</td>
+<td class="valueR">164</td>
+<td class="valueR">207</td>
+<td class="valueR">227</td>
+<td class="valueR">1.38</td>
+<td class="valueR">4</td>
+<td class="valueR">0.02</td>
+<td class="valueR">279</td>
+<td class="valueR">1.35</td>
+<td class="valueR">43</td>
+<td class="valueR">0.21</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505728" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6535">SRM 236</a></td>
+<td class="valueC">04.02.2005</td>
+<td class="valueR">493</td>
+<td class="valueR">207</td>
+<td class="valueR">286</td>
+<td class="valueR">318</td>
+<td class="valueR">1.54</td>
+<td class="valueR">32</td>
+<td class="valueR">0.15</td>
+<td class="valueR">482</td>
+<td class="valueR">1.69</td>
+<td class="valueR">31</td>
+<td class="valueR">0.11</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505727" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6534">SRM 235</a></td>
+<td class="valueC">03.22.2005</td>
+<td class="valueR">513</td>
+<td class="valueR">220</td>
+<td class="valueR">293</td>
+<td class="valueR">348</td>
+<td class="valueR">1.58</td>
+<td class="valueR">73</td>
+<td class="valueR">0.33</td>
+<td class="valueR">403</td>
+<td class="valueR">1.38</td>
+<td class="valueR">72</td>
+<td class="valueR">0.25</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505726" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6533">SRM 234</a></td>
+<td class="valueC">03.16.2005</td>
+<td class="valueR">455</td>
+<td class="valueR">172</td>
+<td class="valueR">283</td>
+<td class="valueR">290</td>
+<td class="valueR">1.69</td>
+<td class="valueR">48</td>
+<td class="valueR">0.28</td>
+<td class="valueR">531</td>
+<td class="valueR">1.88</td>
+<td class="valueR">56</td>
+<td class="valueR">0.20</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505725" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6554">TCCC05 Finals</a></td>
+<td class="valueC">03.11.2005</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">3</td>
+<td class="valueR">0.75</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505724" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6553">TCCC05 Wildcard</a></td>
+<td class="valueC">03.11.2005</td>
+<td class="valueR">6</td>
+<td class="valueR">6</td>
+<td class="valueR"></td>
+<td class="valueR">10</td>
+<td class="valueR">1.67</td>
+<td class="valueR">1</td>
+<td class="valueR">0.17</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505723" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6552">TCCC05 Semi 3</a></td>
+<td class="valueC">03.10.2005</td>
+<td class="valueR">8</td>
+<td class="valueR">8</td>
+<td class="valueR"></td>
+<td class="valueR">12</td>
+<td class="valueR">1.50</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505722" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6551">TCCC05 Semi 2</a></td>
+<td class="valueC">03.10.2005</td>
+<td class="valueR">8</td>
+<td class="valueR">8</td>
+<td class="valueR"></td>
+<td class="valueR">21</td>
+<td class="valueR">2.62</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505721" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6550">TCCC05 Semi 1</a></td>
+<td class="valueC">03.10.2005</td>
+<td class="valueR">8</td>
+<td class="valueR">8</td>
+<td class="valueR"></td>
+<td class="valueR">15</td>
+<td class="valueR">1.88</td>
+<td class="valueR">1</td>
+<td class="valueR">0.12</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505720" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6532">SRM 233</a></td>
+<td class="valueC">03.03.2005</td>
+<td class="valueR">455</td>
+<td class="valueR">145</td>
+<td class="valueR">310</td>
+<td class="valueR">274</td>
+<td class="valueR">1.89</td>
+<td class="valueR">25</td>
+<td class="valueR">0.17</td>
+<td class="valueR">634</td>
+<td class="valueR">2.05</td>
+<td class="valueR">51</td>
+<td class="valueR">0.16</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505719" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6521">SRM 232</a></td>
+<td class="valueC">02.23.2005</td>
+<td class="valueR">400</td>
+<td class="valueR">172</td>
+<td class="valueR">228</td>
+<td class="valueR">261</td>
+<td class="valueR">1.52</td>
+<td class="valueR">47</td>
+<td class="valueR">0.27</td>
+<td class="valueR">379</td>
+<td class="valueR">1.66</td>
+<td class="valueR">31</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505718" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6520">SRM 231</a></td>
+<td class="valueC">02.19.2005</td>
+<td class="valueR">506</td>
+<td class="valueR">208</td>
+<td class="valueR">298</td>
+<td class="valueR">308</td>
+<td class="valueR">1.48</td>
+<td class="valueR">49</td>
+<td class="valueR">0.24</td>
+<td class="valueR">574</td>
+<td class="valueR">1.93</td>
+<td class="valueR">56</td>
+<td class="valueR">0.19</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505717" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6519">SRM 230</a></td>
+<td class="valueC">02.08.2005</td>
+<td class="valueR">407</td>
+<td class="valueR">182</td>
+<td class="valueR">225</td>
+<td class="valueR">317</td>
+<td class="valueR">1.74</td>
+<td class="valueR">62</td>
+<td class="valueR">0.34</td>
+<td class="valueR">285</td>
+<td class="valueR">1.27</td>
+<td class="valueR">16</td>
+<td class="valueR">0.07</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505716" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6531">TCCC05 Round 4</a></td>
+<td class="valueC">02.02.2005</td>
+<td class="valueR">49</td>
+<td class="valueR">49</td>
+<td class="valueR"></td>
+<td class="valueR">96</td>
+<td class="valueR">1.96</td>
+<td class="valueR">9</td>
+<td class="valueR">0.18</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505715" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6518">SRM 229</a></td>
+<td class="valueC">01.31.2005</td>
+<td class="valueR">419</td>
+<td class="valueR">217</td>
+<td class="valueR">202</td>
+<td class="valueR">403</td>
+<td class="valueR">1.86</td>
+<td class="valueR">62</td>
+<td class="valueR">0.29</td>
+<td class="valueR">264</td>
+<td class="valueR">1.31</td>
+<td class="valueR">52</td>
+<td class="valueR">0.26</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505714" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6517">SRM 228</a></td>
+<td class="valueC">01.27.2005</td>
+<td class="valueR">408</td>
+<td class="valueR">180</td>
+<td class="valueR">228</td>
+<td class="valueR">232</td>
+<td class="valueR">1.29</td>
+<td class="valueR">47</td>
+<td class="valueR">0.26</td>
+<td class="valueR">289</td>
+<td class="valueR">1.27</td>
+<td class="valueR">39</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505713" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6530">TCCC05 Round 3</a></td>
+<td class="valueC">01.26.2005</td>
+<td class="valueR">97</td>
+<td class="valueR">97</td>
+<td class="valueR"></td>
+<td class="valueR">155</td>
+<td class="valueR">1.60</td>
+<td class="valueR">26</td>
+<td class="valueR">0.27</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505712" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6516">SRM 227</a></td>
+<td class="valueC">01.22.2005</td>
+<td class="valueR">490</td>
+<td class="valueR">243</td>
+<td class="valueR">247</td>
+<td class="valueR">503</td>
+<td class="valueR">2.07</td>
+<td class="valueR">132</td>
+<td class="valueR">0.54</td>
+<td class="valueR">541</td>
+<td class="valueR">2.19</td>
+<td class="valueR">76</td>
+<td class="valueR">0.31</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505711" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6529">TCCC05 Round 2</a></td>
+<td class="valueC">01.19.2005</td>
+<td class="valueR">184</td>
+<td class="valueR">184</td>
+<td class="valueR"></td>
+<td class="valueR">338</td>
+<td class="valueR">1.84</td>
+<td class="valueR">20</td>
+<td class="valueR">0.11</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505710" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6528">TCCC05 Round 1</a></td>
+<td class="valueC">01.15.2005</td>
+<td class="valueR">429</td>
+<td class="valueR">429</td>
+<td class="valueR"></td>
+<td class="valueR">751</td>
+<td class="valueR">1.75</td>
+<td class="valueR">55</td>
+<td class="valueR">0.13</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505709" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6527">TCCC05 Qual 5</a></td>
+<td class="valueC">01.11.2005</td>
+<td class="valueR">169</td>
+<td class="valueR">169</td>
+<td class="valueR"></td>
+<td class="valueR">259</td>
+<td class="valueR">1.53</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505708" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6526">TCCC05 Qual 4</a></td>
+<td class="valueC">01.11.2005</td>
+<td class="valueR">163</td>
+<td class="valueR">163</td>
+<td class="valueR"></td>
+<td class="valueR">207</td>
+<td class="valueR">1.27</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505707" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6525">TCCC05 Qual 3</a></td>
+<td class="valueC">01.11.2005</td>
+<td class="valueR">164</td>
+<td class="valueR">164</td>
+<td class="valueR"></td>
+<td class="valueR">181</td>
+<td class="valueR">1.10</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505706" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6524">TCCC05 Qual 2</a></td>
+<td class="valueC">01.11.2005</td>
+<td class="valueR">172</td>
+<td class="valueR">172</td>
+<td class="valueR"></td>
+<td class="valueR">276</td>
+<td class="valueR">1.60</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505705" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6523">TCCC05 Qual 1</a></td>
+<td class="valueC">01.11.2005</td>
+<td class="valueR">176</td>
+<td class="valueR">176</td>
+<td class="valueR"></td>
+<td class="valueR">270</td>
+<td class="valueR">1.53</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505704" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=6515">SRM 226</a></td>
+<td class="valueC">01.05.2005</td>
+<td class="valueR">299</td>
+<td class="valueR">129</td>
+<td class="valueR">170</td>
+<td class="valueR">260</td>
+<td class="valueR">2.02</td>
+<td class="valueR">92</td>
+<td class="valueR">0.71</td>
+<td class="valueR">292</td>
+<td class="valueR">1.72</td>
+<td class="valueR">30</td>
+<td class="valueR">0.18</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505703" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5871">SRM 225</a></td>
+<td class="valueC">12.28.2004</td>
+<td class="valueR">361</td>
+<td class="valueR">172</td>
+<td class="valueR">189</td>
+<td class="valueR">299</td>
+<td class="valueR">1.74</td>
+<td class="valueR">44</td>
+<td class="valueR">0.26</td>
+<td class="valueR">306</td>
+<td class="valueR">1.62</td>
+<td class="valueR">56</td>
+<td class="valueR">0.30</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505702" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5870">SRM 224</a></td>
+<td class="valueC">12.22.2004</td>
+<td class="valueR">366</td>
+<td class="valueR">168</td>
+<td class="valueR">198</td>
+<td class="valueR">201</td>
+<td class="valueR">1.20</td>
+<td class="valueR">16</td>
+<td class="valueR">0.10</td>
+<td class="valueR">356</td>
+<td class="valueR">1.80</td>
+<td class="valueR">16</td>
+<td class="valueR">0.08</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505701" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5869">SRM 223</a></td>
+<td class="valueC">12.18.2004</td>
+<td class="valueR">381</td>
+<td class="valueR">182</td>
+<td class="valueR">199</td>
+<td class="valueR">328</td>
+<td class="valueR">1.80</td>
+<td class="valueR">36</td>
+<td class="valueR">0.20</td>
+<td class="valueR">408</td>
+<td class="valueR">2.05</td>
+<td class="valueR">27</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505700" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5868">SRM 222</a></td>
+<td class="valueC">12.07.2004</td>
+<td class="valueR">369</td>
+<td class="valueR">171</td>
+<td class="valueR">198</td>
+<td class="valueR">315</td>
+<td class="valueR">1.84</td>
+<td class="valueR">14</td>
+<td class="valueR">0.08</td>
+<td class="valueR">329</td>
+<td class="valueR">1.66</td>
+<td class="valueR">37</td>
+<td class="valueR">0.19</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505699" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5867">SRM 221</a></td>
+<td class="valueC">12.01.2004</td>
+<td class="valueR">375</td>
+<td class="valueR">194</td>
+<td class="valueR">181</td>
+<td class="valueR">394</td>
+<td class="valueR">2.03</td>
+<td class="valueR">41</td>
+<td class="valueR">0.21</td>
+<td class="valueR">167</td>
+<td class="valueR">0.92</td>
+<td class="valueR">33</td>
+<td class="valueR">0.18</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505698" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5866">SRM 220</a></td>
+<td class="valueC">11.23.2004</td>
+<td class="valueR">383</td>
+<td class="valueR">180</td>
+<td class="valueR">203</td>
+<td class="valueR">293</td>
+<td class="valueR">1.63</td>
+<td class="valueR">45</td>
+<td class="valueR">0.25</td>
+<td class="valueR">329</td>
+<td class="valueR">1.62</td>
+<td class="valueR">35</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505697" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5865">SRM 219</a></td>
+<td class="valueC">11.20.2004</td>
+<td class="valueR">445</td>
+<td class="valueR">184</td>
+<td class="valueR">261</td>
+<td class="valueR">286</td>
+<td class="valueR">1.55</td>
+<td class="valueR">26</td>
+<td class="valueR">0.14</td>
+<td class="valueR">331</td>
+<td class="valueR">1.27</td>
+<td class="valueR">36</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505696" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5886">TCO04 Finals</a></td>
+<td class="valueC">11.12.2004</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">9</td>
+<td class="valueR">2.25</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505695" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5885">TCO04 Wildcard</a></td>
+<td class="valueC">11.12.2004</td>
+<td class="valueR">6</td>
+<td class="valueR">6</td>
+<td class="valueR"></td>
+<td class="valueR">10</td>
+<td class="valueR">1.67</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505694" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5884">TCO04 Semifinal 3</a></td>
+<td class="valueC">11.11.2004</td>
+<td class="valueR">8</td>
+<td class="valueR">8</td>
+<td class="valueR"></td>
+<td class="valueR">15</td>
+<td class="valueR">1.88</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505693" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5883">TCO04 Semifinal 2</a></td>
+<td class="valueC">11.11.2004</td>
+<td class="valueR">8</td>
+<td class="valueR">8</td>
+<td class="valueR"></td>
+<td class="valueR">13</td>
+<td class="valueR">1.62</td>
+<td class="valueR">2</td>
+<td class="valueR">0.25</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505692" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5882">TCO04 Semifinal 1</a></td>
+<td class="valueC">11.11.2004</td>
+<td class="valueR">8</td>
+<td class="valueR">8</td>
+<td class="valueR"></td>
+<td class="valueR">12</td>
+<td class="valueR">1.50</td>
+<td class="valueR">3</td>
+<td class="valueR">0.38</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505691" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5864">SRM 218</a></td>
+<td class="valueC">11.04.2004</td>
+<td class="valueR">291</td>
+<td class="valueR">121</td>
+<td class="valueR">170</td>
+<td class="valueR">177</td>
+<td class="valueR">1.46</td>
+<td class="valueR">38</td>
+<td class="valueR">0.31</td>
+<td class="valueR">352</td>
+<td class="valueR">2.07</td>
+<td class="valueR">79</td>
+<td class="valueR">0.46</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505690" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5863">SRM 217</a></td>
+<td class="valueC">10.27.2004</td>
+<td class="valueR">387</td>
+<td class="valueR">186</td>
+<td class="valueR">201</td>
+<td class="valueR">359</td>
+<td class="valueR">1.93</td>
+<td class="valueR">64</td>
+<td class="valueR">0.34</td>
+<td class="valueR">378</td>
+<td class="valueR">1.88</td>
+<td class="valueR">12</td>
+<td class="valueR">0.06</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505689" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5862">SRM 216</a></td>
+<td class="valueC">10.18.2004</td>
+<td class="valueR">375</td>
+<td class="valueR">165</td>
+<td class="valueR">210</td>
+<td class="valueR">185</td>
+<td class="valueR">1.12</td>
+<td class="valueR">35</td>
+<td class="valueR">0.21</td>
+<td class="valueR">346</td>
+<td class="valueR">1.65</td>
+<td class="valueR">35</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505688" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5861">SRM 215</a></td>
+<td class="valueC">10.16.2004</td>
+<td class="valueR">395</td>
+<td class="valueR">169</td>
+<td class="valueR">226</td>
+<td class="valueR">304</td>
+<td class="valueR">1.80</td>
+<td class="valueR">24</td>
+<td class="valueR">0.14</td>
+<td class="valueR">477</td>
+<td class="valueR">2.11</td>
+<td class="valueR">17</td>
+<td class="valueR">0.08</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505687" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5860">SRM 214</a></td>
+<td class="valueC">10.06.2004</td>
+<td class="valueR">415</td>
+<td class="valueR">181</td>
+<td class="valueR">234</td>
+<td class="valueR">191</td>
+<td class="valueR">1.06</td>
+<td class="valueR">13</td>
+<td class="valueR">0.07</td>
+<td class="valueR">313</td>
+<td class="valueR">1.34</td>
+<td class="valueR">32</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505686" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5881">TCO04 Round 4</a></td>
+<td class="valueC">09.29.2004</td>
+<td class="valueR">49</td>
+<td class="valueR">49</td>
+<td class="valueR"></td>
+<td class="valueR">74</td>
+<td class="valueR">1.51</td>
+<td class="valueR">2</td>
+<td class="valueR">0.04</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505685" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5859">SRM 213</a></td>
+<td class="valueC">09.28.2004</td>
+<td class="valueR">434</td>
+<td class="valueR">183</td>
+<td class="valueR">251</td>
+<td class="valueR">294</td>
+<td class="valueR">1.61</td>
+<td class="valueR">90</td>
+<td class="valueR">0.49</td>
+<td class="valueR">373</td>
+<td class="valueR">1.49</td>
+<td class="valueR">45</td>
+<td class="valueR">0.18</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505684" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5858">SRM 212</a></td>
+<td class="valueC">09.25.2004</td>
+<td class="valueR">457</td>
+<td class="valueR">192</td>
+<td class="valueR">265</td>
+<td class="valueR">370</td>
+<td class="valueR">1.93</td>
+<td class="valueR">11</td>
+<td class="valueR">0.06</td>
+<td class="valueR">528</td>
+<td class="valueR">1.99</td>
+<td class="valueR">34</td>
+<td class="valueR">0.13</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505683" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5880">TCO04 Round 3</a></td>
+<td class="valueC">09.22.2004</td>
+<td class="valueR">100</td>
+<td class="valueR">100</td>
+<td class="valueR"></td>
+<td class="valueR">186</td>
+<td class="valueR">1.86</td>
+<td class="valueR">16</td>
+<td class="valueR">0.16</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505682" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5879">TCO04 Round 2</a></td>
+<td class="valueC">09.14.2004</td>
+<td class="valueR">184</td>
+<td class="valueR">184</td>
+<td class="valueR"></td>
+<td class="valueR">274</td>
+<td class="valueR">1.49</td>
+<td class="valueR">61</td>
+<td class="valueR">0.33</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505681" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5857">SRM 211</a></td>
+<td class="valueC">09.14.2004</td>
+<td class="valueR">377</td>
+<td class="valueR">175</td>
+<td class="valueR">202</td>
+<td class="valueR">356</td>
+<td class="valueR">2.03</td>
+<td class="valueR">26</td>
+<td class="valueR">0.15</td>
+<td class="valueR">482</td>
+<td class="valueR">2.39</td>
+<td class="valueR">28</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505680" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5878">TCO04 Round 1</a></td>
+<td class="valueC">09.11.2004</td>
+<td class="valueR">447</td>
+<td class="valueR">447</td>
+<td class="valueR"></td>
+<td class="valueR">845</td>
+<td class="valueR">1.89</td>
+<td class="valueR">113</td>
+<td class="valueR">0.25</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505679" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5877">TCO04 Qual 5</a></td>
+<td class="valueC">09.07.2004</td>
+<td class="valueR">211</td>
+<td class="valueR">211</td>
+<td class="valueR"></td>
+<td class="valueR">291</td>
+<td class="valueR">1.38</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505678" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5876">TCO04 Qual 4</a></td>
+<td class="valueC">09.07.2004</td>
+<td class="valueR">217</td>
+<td class="valueR">217</td>
+<td class="valueR"></td>
+<td class="valueR">250</td>
+<td class="valueR">1.15</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505677" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5875">TCO04 Qual 3</a></td>
+<td class="valueC">09.07.2004</td>
+<td class="valueR">202</td>
+<td class="valueR">202</td>
+<td class="valueR"></td>
+<td class="valueR">273</td>
+<td class="valueR">1.35</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505676" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5874">TCO04 Qual 2</a></td>
+<td class="valueC">09.07.2004</td>
+<td class="valueR">216</td>
+<td class="valueR">216</td>
+<td class="valueR"></td>
+<td class="valueR">280</td>
+<td class="valueR">1.30</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505675" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5873">TCO04 Qual 1</a></td>
+<td class="valueC">09.07.2004</td>
+<td class="valueR">200</td>
+<td class="valueR">200</td>
+<td class="valueR"></td>
+<td class="valueR">278</td>
+<td class="valueR">1.39</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505674" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5856">SRM 210</a></td>
+<td class="valueC">09.01.2004</td>
+<td class="valueR">451</td>
+<td class="valueR">235</td>
+<td class="valueR">216</td>
+<td class="valueR">416</td>
+<td class="valueR">1.77</td>
+<td class="valueR">56</td>
+<td class="valueR">0.24</td>
+<td class="valueR">396</td>
+<td class="valueR">1.83</td>
+<td class="valueR">29</td>
+<td class="valueR">0.13</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505673" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5855">SRM 209</a></td>
+<td class="valueC">08.28.2004</td>
+<td class="valueR">360</td>
+<td class="valueR">175</td>
+<td class="valueR">185</td>
+<td class="valueR">360</td>
+<td class="valueR">2.06</td>
+<td class="valueR">21</td>
+<td class="valueR">0.12</td>
+<td class="valueR">334</td>
+<td class="valueR">1.81</td>
+<td class="valueR">30</td>
+<td class="valueR">0.16</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505672" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5854">SRM 208</a></td>
+<td class="valueC">08.18.2004</td>
+<td class="valueR">376</td>
+<td class="valueR">177</td>
+<td class="valueR">199</td>
+<td class="valueR">319</td>
+<td class="valueR">1.80</td>
+<td class="valueR">27</td>
+<td class="valueR">0.15</td>
+<td class="valueR">301</td>
+<td class="valueR">1.51</td>
+<td class="valueR">12</td>
+<td class="valueR">0.06</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505671" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5853">SRM 207</a></td>
+<td class="valueC">08.10.2004</td>
+<td class="valueR">363</td>
+<td class="valueR">170</td>
+<td class="valueR">193</td>
+<td class="valueR">259</td>
+<td class="valueR">1.52</td>
+<td class="valueR">29</td>
+<td class="valueR">0.17</td>
+<td class="valueR">294</td>
+<td class="valueR">1.52</td>
+<td class="valueR">44</td>
+<td class="valueR">0.23</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505670" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5852">SRM 206</a></td>
+<td class="valueC">08.04.2004</td>
+<td class="valueR">357</td>
+<td class="valueR">176</td>
+<td class="valueR">181</td>
+<td class="valueR">253</td>
+<td class="valueR">1.44</td>
+<td class="valueR">26</td>
+<td class="valueR">0.15</td>
+<td class="valueR">280</td>
+<td class="valueR">1.55</td>
+<td class="valueR">31</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505669" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5851">SRM 205</a></td>
+<td class="valueC">07.31.2004</td>
+<td class="valueR">327</td>
+<td class="valueR">150</td>
+<td class="valueR">177</td>
+<td class="valueR">268</td>
+<td class="valueR">1.79</td>
+<td class="valueR">18</td>
+<td class="valueR">0.12</td>
+<td class="valueR">309</td>
+<td class="valueR">1.75</td>
+<td class="valueR">29</td>
+<td class="valueR">0.16</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505668" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5850">SRM 204</a></td>
+<td class="valueC">07.21.2004</td>
+<td class="valueR">331</td>
+<td class="valueR">173</td>
+<td class="valueR">158</td>
+<td class="valueR">202</td>
+<td class="valueR">1.17</td>
+<td class="valueR">7</td>
+<td class="valueR">0.04</td>
+<td class="valueR">288</td>
+<td class="valueR">1.82</td>
+<td class="valueR">19</td>
+<td class="valueR">0.12</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505667" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5849">SRM 203</a></td>
+<td class="valueC">07.15.2004</td>
+<td class="valueR">226</td>
+<td class="valueR">113</td>
+<td class="valueR">113</td>
+<td class="valueR">178</td>
+<td class="valueR">1.58</td>
+<td class="valueR">11</td>
+<td class="valueR">0.10</td>
+<td class="valueR">171</td>
+<td class="valueR">1.51</td>
+<td class="valueR">13</td>
+<td class="valueR">0.12</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505666" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5848">SRM 202</a></td>
+<td class="valueC">07.07.2004</td>
+<td class="valueR">331</td>
+<td class="valueR">164</td>
+<td class="valueR">167</td>
+<td class="valueR">322</td>
+<td class="valueR">1.96</td>
+<td class="valueR">10</td>
+<td class="valueR">0.06</td>
+<td class="valueR">336</td>
+<td class="valueR">2.01</td>
+<td class="valueR">17</td>
+<td class="valueR">0.10</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505665" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5872">SRM 201</a></td>
+<td class="valueC">06.29.2004</td>
+<td class="valueR">265</td>
+<td class="valueR">130</td>
+<td class="valueR">135</td>
+<td class="valueR">187</td>
+<td class="valueR">1.44</td>
+<td class="valueR">28</td>
+<td class="valueR">0.22</td>
+<td class="valueR">271</td>
+<td class="valueR">2.01</td>
+<td class="valueR">26</td>
+<td class="valueR">0.19</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505664" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5075">SRM 200</a></td>
+<td class="valueC">06.21.2004</td>
+<td class="valueR">421</td>
+<td class="valueR">204</td>
+<td class="valueR">217</td>
+<td class="valueR">265</td>
+<td class="valueR">1.30</td>
+<td class="valueR">18</td>
+<td class="valueR">0.09</td>
+<td class="valueR">385</td>
+<td class="valueR">1.77</td>
+<td class="valueR">30</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505663" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5074">SRM 199</a></td>
+<td class="valueC">06.16.2004</td>
+<td class="valueR">319</td>
+<td class="valueR">151</td>
+<td class="valueR">168</td>
+<td class="valueR">236</td>
+<td class="valueR">1.56</td>
+<td class="valueR">18</td>
+<td class="valueR">0.12</td>
+<td class="valueR">272</td>
+<td class="valueR">1.62</td>
+<td class="valueR">16</td>
+<td class="valueR">0.10</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505662" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5073">SRM 198</a></td>
+<td class="valueC">06.12.2004</td>
+<td class="valueR">271</td>
+<td class="valueR">120</td>
+<td class="valueR">151</td>
+<td class="valueR">206</td>
+<td class="valueR">1.72</td>
+<td class="valueR">13</td>
+<td class="valueR">0.11</td>
+<td class="valueR">312</td>
+<td class="valueR">2.07</td>
+<td class="valueR">34</td>
+<td class="valueR">0.23</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505661" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5072">SRM 197</a></td>
+<td class="valueC">06.02.2004</td>
+<td class="valueR">342</td>
+<td class="valueR">154</td>
+<td class="valueR">188</td>
+<td class="valueR">242</td>
+<td class="valueR">1.57</td>
+<td class="valueR">21</td>
+<td class="valueR">0.14</td>
+<td class="valueR">227</td>
+<td class="valueR">1.21</td>
+<td class="valueR">32</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505660" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5071">SRM 196</a></td>
+<td class="valueC">05.27.2004</td>
+<td class="valueR">324</td>
+<td class="valueR">139</td>
+<td class="valueR">185</td>
+<td class="valueR">243</td>
+<td class="valueR">1.75</td>
+<td class="valueR">52</td>
+<td class="valueR">0.37</td>
+<td class="valueR">346</td>
+<td class="valueR">1.87</td>
+<td class="valueR">54</td>
+<td class="valueR">0.29</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505659" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5070">SRM 195</a></td>
+<td class="valueC">05.18.2004</td>
+<td class="valueR">349</td>
+<td class="valueR">163</td>
+<td class="valueR">186</td>
+<td class="valueR">279</td>
+<td class="valueR">1.71</td>
+<td class="valueR">10</td>
+<td class="valueR">0.06</td>
+<td class="valueR">289</td>
+<td class="valueR">1.55</td>
+<td class="valueR">25</td>
+<td class="valueR">0.13</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505658" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5069">SRM 194</a></td>
+<td class="valueC">05.15.2004</td>
+<td class="valueR">359</td>
+<td class="valueR">172</td>
+<td class="valueR">187</td>
+<td class="valueR">357</td>
+<td class="valueR">2.08</td>
+<td class="valueR">25</td>
+<td class="valueR">0.15</td>
+<td class="valueR">384</td>
+<td class="valueR">2.05</td>
+<td class="valueR">28</td>
+<td class="valueR">0.15</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505657" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5068">SRM 193</a></td>
+<td class="valueC">05.05.2004</td>
+<td class="valueR">355</td>
+<td class="valueR">177</td>
+<td class="valueR">178</td>
+<td class="valueR">335</td>
+<td class="valueR">1.89</td>
+<td class="valueR">96</td>
+<td class="valueR">0.54</td>
+<td class="valueR">347</td>
+<td class="valueR">1.95</td>
+<td class="valueR">70</td>
+<td class="valueR">0.39</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505656" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4780">SRM 192</a></td>
+<td class="valueC">04.27.2004</td>
+<td class="valueR">342</td>
+<td class="valueR">170</td>
+<td class="valueR">172</td>
+<td class="valueR">253</td>
+<td class="valueR">1.49</td>
+<td class="valueR">25</td>
+<td class="valueR">0.15</td>
+<td class="valueR">222</td>
+<td class="valueR">1.29</td>
+<td class="valueR">27</td>
+<td class="valueR">0.16</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505655" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4775">SRM 191</a></td>
+<td class="valueC">04.24.2004</td>
+<td class="valueR">313</td>
+<td class="valueR">146</td>
+<td class="valueR">167</td>
+<td class="valueR">265</td>
+<td class="valueR">1.82</td>
+<td class="valueR">25</td>
+<td class="valueR">0.17</td>
+<td class="valueR">290</td>
+<td class="valueR">1.74</td>
+<td class="valueR">30</td>
+<td class="valueR">0.18</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505654" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5080">TCCC &#039;04 Finals</a></td>
+<td class="valueC">04.16.2004</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">7</td>
+<td class="valueR">1.75</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505653" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5079">TCCC &#039;04 Wildcard</a></td>
+<td class="valueC">04.15.2004</td>
+<td class="valueR">6</td>
+<td class="valueR">6</td>
+<td class="valueR"></td>
+<td class="valueR">11</td>
+<td class="valueR">1.83</td>
+<td class="valueR">1</td>
+<td class="valueR">0.17</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505652" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5078">TCCC &#039;04 Semifinals 3</a></td>
+<td class="valueC">04.15.2004</td>
+<td class="valueR">8</td>
+<td class="valueR">8</td>
+<td class="valueR"></td>
+<td class="valueR">11</td>
+<td class="valueR">1.38</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505651" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5077">TCCC &#039;04 Semifinals 2</a></td>
+<td class="valueC">04.15.2004</td>
+<td class="valueR">8</td>
+<td class="valueR">8</td>
+<td class="valueR"></td>
+<td class="valueR">14</td>
+<td class="valueR">1.75</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505650" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5076">TCCC &#039;04 Semifinals 1</a></td>
+<td class="valueC">04.15.2004</td>
+<td class="valueR">8</td>
+<td class="valueR">8</td>
+<td class="valueR"></td>
+<td class="valueR">13</td>
+<td class="valueR">1.62</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505649" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4770">SRM 190</a></td>
+<td class="valueC">04.06.2004</td>
+<td class="valueR">330</td>
+<td class="valueR">158</td>
+<td class="valueR">172</td>
+<td class="valueR">190</td>
+<td class="valueR">1.20</td>
+<td class="valueR">23</td>
+<td class="valueR">0.15</td>
+<td class="valueR">290</td>
+<td class="valueR">1.69</td>
+<td class="valueR">18</td>
+<td class="valueR">0.10</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505648" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4765">SRM 189</a></td>
+<td class="valueC">03.31.2004</td>
+<td class="valueR">351</td>
+<td class="valueR">171</td>
+<td class="valueR">180</td>
+<td class="valueR">275</td>
+<td class="valueR">1.61</td>
+<td class="valueR">40</td>
+<td class="valueR">0.23</td>
+<td class="valueR">281</td>
+<td class="valueR">1.56</td>
+<td class="valueR">31</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505647" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4760">SRM 188</a></td>
+<td class="valueC">03.25.2004</td>
+<td class="valueR">370</td>
+<td class="valueR">165</td>
+<td class="valueR">205</td>
+<td class="valueR">234</td>
+<td class="valueR">1.42</td>
+<td class="valueR">19</td>
+<td class="valueR">0.12</td>
+<td class="valueR">327</td>
+<td class="valueR">1.60</td>
+<td class="valueR">25</td>
+<td class="valueR">0.12</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505646" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5009">TCCC &#039;04 Round 4</a></td>
+<td class="valueC">03.17.2004</td>
+<td class="valueR">45</td>
+<td class="valueR">45</td>
+<td class="valueR"></td>
+<td class="valueR">96</td>
+<td class="valueR">2.13</td>
+<td class="valueR">3</td>
+<td class="valueR">0.07</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505645" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4755">SRM 187</a></td>
+<td class="valueC">03.16.2004</td>
+<td class="valueR">417</td>
+<td class="valueR">178</td>
+<td class="valueR">239</td>
+<td class="valueR">379</td>
+<td class="valueR">2.13</td>
+<td class="valueR">25</td>
+<td class="valueR">0.14</td>
+<td class="valueR">426</td>
+<td class="valueR">1.78</td>
+<td class="valueR">28</td>
+<td class="valueR">0.12</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505644" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4750">SRM 186</a></td>
+<td class="valueC">03.13.2004</td>
+<td class="valueR">362</td>
+<td class="valueR">165</td>
+<td class="valueR">197</td>
+<td class="valueR">313</td>
+<td class="valueR">1.90</td>
+<td class="valueR">26</td>
+<td class="valueR">0.16</td>
+<td class="valueR">348</td>
+<td class="valueR">1.77</td>
+<td class="valueR">28</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505643" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5008">TCCC &#039;04 Round 3</a></td>
+<td class="valueC">03.10.2004</td>
+<td class="valueR">95</td>
+<td class="valueR">95</td>
+<td class="valueR"></td>
+<td class="valueR">122</td>
+<td class="valueR">1.28</td>
+<td class="valueR">13</td>
+<td class="valueR">0.14</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505642" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5007">TCCC &#039;04 Round 2</a></td>
+<td class="valueC">03.03.2004</td>
+<td class="valueR">178</td>
+<td class="valueR">178</td>
+<td class="valueR"></td>
+<td class="valueR">340</td>
+<td class="valueR">1.91</td>
+<td class="valueR">13</td>
+<td class="valueR">0.07</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505641" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4745">SRM 185</a></td>
+<td class="valueC">03.01.2004</td>
+<td class="valueR">500</td>
+<td class="valueR">238</td>
+<td class="valueR">262</td>
+<td class="valueR">409</td>
+<td class="valueR">1.72</td>
+<td class="valueR">25</td>
+<td class="valueR">0.11</td>
+<td class="valueR">402</td>
+<td class="valueR">1.53</td>
+<td class="valueR">54</td>
+<td class="valueR">0.21</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505640" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5006">TCCC &#039;04 Round 1</a></td>
+<td class="valueC">02.28.2004</td>
+<td class="valueR">376</td>
+<td class="valueR">376</td>
+<td class="valueR"></td>
+<td class="valueR">727</td>
+<td class="valueR">1.93</td>
+<td class="valueR">40</td>
+<td class="valueR">0.11</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505639" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5004">TCCC &#039;04 Qual. 5</a></td>
+<td class="valueC">02.23.2004</td>
+<td class="valueR">141</td>
+<td class="valueR">141</td>
+<td class="valueR"></td>
+<td class="valueR">212</td>
+<td class="valueR">1.50</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505638" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5003">TCCC &#039;04 Qual. 4</a></td>
+<td class="valueC">02.23.2004</td>
+<td class="valueR">132</td>
+<td class="valueR">132</td>
+<td class="valueR"></td>
+<td class="valueR">187</td>
+<td class="valueR">1.42</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505637" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5002">TCCC &#039;04 Qual. 3</a></td>
+<td class="valueC">02.23.2004</td>
+<td class="valueR">135</td>
+<td class="valueR">135</td>
+<td class="valueR"></td>
+<td class="valueR">204</td>
+<td class="valueR">1.51</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505636" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5001">TCCC &#039;04 Qual. 2</a></td>
+<td class="valueC">02.23.2004</td>
+<td class="valueR">136</td>
+<td class="valueR">136</td>
+<td class="valueR"></td>
+<td class="valueR">177</td>
+<td class="valueR">1.30</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505635" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=5000">TCCC &#039;04 Qual. 1</a></td>
+<td class="valueC">02.23.2004</td>
+<td class="valueR">133</td>
+<td class="valueR">133</td>
+<td class="valueR"></td>
+<td class="valueR">176</td>
+<td class="valueR">1.32</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505634" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4740">SRM 184</a></td>
+<td class="valueC">02.17.2004</td>
+<td class="valueR">491</td>
+<td class="valueR">206</td>
+<td class="valueR">285</td>
+<td class="valueR">308</td>
+<td class="valueR">1.50</td>
+<td class="valueR">33</td>
+<td class="valueR">0.16</td>
+<td class="valueR">379</td>
+<td class="valueR">1.33</td>
+<td class="valueR">57</td>
+<td class="valueR">0.20</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505633" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4735">SRM 183</a></td>
+<td class="valueC">02.11.2004</td>
+<td class="valueR">421</td>
+<td class="valueR">186</td>
+<td class="valueR">235</td>
+<td class="valueR">306</td>
+<td class="valueR">1.65</td>
+<td class="valueR">75</td>
+<td class="valueR">0.40</td>
+<td class="valueR">414</td>
+<td class="valueR">1.76</td>
+<td class="valueR">50</td>
+<td class="valueR">0.21</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505632" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4730">SRM 182</a></td>
+<td class="valueC">02.07.2004</td>
+<td class="valueR">424</td>
+<td class="valueR">184</td>
+<td class="valueR">240</td>
+<td class="valueR">254</td>
+<td class="valueR">1.38</td>
+<td class="valueR">42</td>
+<td class="valueR">0.23</td>
+<td class="valueR">437</td>
+<td class="valueR">1.82</td>
+<td class="valueR">48</td>
+<td class="valueR">0.20</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505631" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4725">SRM 181</a></td>
+<td class="valueC">01.28.2004</td>
+<td class="valueR">427</td>
+<td class="valueR">185</td>
+<td class="valueR">242</td>
+<td class="valueR">362</td>
+<td class="valueR">1.96</td>
+<td class="valueR">13</td>
+<td class="valueR">0.07</td>
+<td class="valueR">444</td>
+<td class="valueR">1.83</td>
+<td class="valueR">39</td>
+<td class="valueR">0.16</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505630" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4720">SRM 180</a></td>
+<td class="valueC">01.22.2004</td>
+<td class="valueR">388</td>
+<td class="valueR">176</td>
+<td class="valueR">212</td>
+<td class="valueR">304</td>
+<td class="valueR">1.73</td>
+<td class="valueR">39</td>
+<td class="valueR">0.22</td>
+<td class="valueR">311</td>
+<td class="valueR">1.47</td>
+<td class="valueR">65</td>
+<td class="valueR">0.31</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505629" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4715">SRM 179</a></td>
+<td class="valueC">01.17.2004</td>
+<td class="valueR">364</td>
+<td class="valueR">152</td>
+<td class="valueR">212</td>
+<td class="valueR">233</td>
+<td class="valueR">1.53</td>
+<td class="valueR">36</td>
+<td class="valueR">0.24</td>
+<td class="valueR">362</td>
+<td class="valueR">1.71</td>
+<td class="valueR">73</td>
+<td class="valueR">0.34</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505628" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4710">SRM 178</a></td>
+<td class="valueC">01.07.2004</td>
+<td class="valueR">436</td>
+<td class="valueR">200</td>
+<td class="valueR">236</td>
+<td class="valueR">238</td>
+<td class="valueR">1.19</td>
+<td class="valueR">26</td>
+<td class="valueR">0.13</td>
+<td class="valueR">334</td>
+<td class="valueR">1.42</td>
+<td class="valueR">30</td>
+<td class="valueR">0.13</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505627" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4690">SRM 177</a></td>
+<td class="valueC">12.30.2003</td>
+<td class="valueR">323</td>
+<td class="valueR">135</td>
+<td class="valueR">188</td>
+<td class="valueR">173</td>
+<td class="valueR">1.28</td>
+<td class="valueR">44</td>
+<td class="valueR">0.33</td>
+<td class="valueR">356</td>
+<td class="valueR">1.89</td>
+<td class="valueR">53</td>
+<td class="valueR">0.28</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505626" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4685">SRM 176</a></td>
+<td class="valueC">12.22.2003</td>
+<td class="valueR">335</td>
+<td class="valueR">152</td>
+<td class="valueR">183</td>
+<td class="valueR">222</td>
+<td class="valueR">1.46</td>
+<td class="valueR">11</td>
+<td class="valueR">0.07</td>
+<td class="valueR">346</td>
+<td class="valueR">1.89</td>
+<td class="valueR">39</td>
+<td class="valueR">0.21</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505625" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4680">SRM 175</a></td>
+<td class="valueC">12.17.2003</td>
+<td class="valueR">356</td>
+<td class="valueR">160</td>
+<td class="valueR">196</td>
+<td class="valueR">221</td>
+<td class="valueR">1.38</td>
+<td class="valueR">17</td>
+<td class="valueR">0.11</td>
+<td class="valueR">273</td>
+<td class="valueR">1.39</td>
+<td class="valueR">48</td>
+<td class="valueR">0.24</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505624" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4675">SRM 174</a></td>
+<td class="valueC">12.13.2003</td>
+<td class="valueR">361</td>
+<td class="valueR">140</td>
+<td class="valueR">221</td>
+<td class="valueR">221</td>
+<td class="valueR">1.58</td>
+<td class="valueR">28</td>
+<td class="valueR">0.20</td>
+<td class="valueR">428</td>
+<td class="valueR">1.94</td>
+<td class="valueR">28</td>
+<td class="valueR">0.13</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505623" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4711">TCO &#039;03 Finals</a></td>
+<td class="valueC">12.05.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">9</td>
+<td class="valueR">2.25</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505622" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4709">TCO &#039;03 Semifinals 4</a></td>
+<td class="valueC">12.04.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">12</td>
+<td class="valueR">3.00</td>
+<td class="valueR">2</td>
+<td class="valueR">0.50</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505621" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4708">TCO &#039;03 Semifinals 3</a></td>
+<td class="valueC">12.04.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">7</td>
+<td class="valueR">1.75</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505620" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4707">TCO &#039;03 Semifinals 2</a></td>
+<td class="valueC">12.04.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">9</td>
+<td class="valueR">2.25</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505619" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4706">TCO &#039;03 Semifinals 1</a></td>
+<td class="valueC">12.04.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">8</td>
+<td class="valueR">2.00</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505618" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4670">SRM 173</a></td>
+<td class="valueC">11.25.2003</td>
+<td class="valueR">460</td>
+<td class="valueR">193</td>
+<td class="valueR">267</td>
+<td class="valueR">363</td>
+<td class="valueR">1.88</td>
+<td class="valueR">44</td>
+<td class="valueR">0.23</td>
+<td class="valueR">492</td>
+<td class="valueR">1.84</td>
+<td class="valueR">30</td>
+<td class="valueR">0.11</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505617" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4665">SRM 172</a></td>
+<td class="valueC">11.20.2003</td>
+<td class="valueR">447</td>
+<td class="valueR">175</td>
+<td class="valueR">272</td>
+<td class="valueR">243</td>
+<td class="valueR">1.39</td>
+<td class="valueR">23</td>
+<td class="valueR">0.13</td>
+<td class="valueR">367</td>
+<td class="valueR">1.35</td>
+<td class="valueR">53</td>
+<td class="valueR">0.19</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505616" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4664">CRPF Charity Finals</a></td>
+<td class="valueC">11.17.2003</td>
+<td class="valueR">42</td>
+<td class="valueR">42</td>
+<td class="valueR"></td>
+<td class="valueR">69</td>
+<td class="valueR">1.64</td>
+<td class="valueR">1</td>
+<td class="valueR">0.02</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505615" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4660">SRM 171</a></td>
+<td class="valueC">11.12.2003</td>
+<td class="valueR">488</td>
+<td class="valueR">219</td>
+<td class="valueR">269</td>
+<td class="valueR">340</td>
+<td class="valueR">1.55</td>
+<td class="valueR">46</td>
+<td class="valueR">0.21</td>
+<td class="valueR">390</td>
+<td class="valueR">1.45</td>
+<td class="valueR">27</td>
+<td class="valueR">0.10</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505614" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4656">CRPF Charity Round 1</a></td>
+<td class="valueC">11.11.2003</td>
+<td class="valueR">75</td>
+<td class="valueR">75</td>
+<td class="valueR"></td>
+<td class="valueR">184</td>
+<td class="valueR">2.45</td>
+<td class="valueR">11</td>
+<td class="valueR">0.15</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505613" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4655">SRM 170</a></td>
+<td class="valueC">11.08.2003</td>
+<td class="valueR">369</td>
+<td class="valueR">147</td>
+<td class="valueR">222</td>
+<td class="valueR">278</td>
+<td class="valueR">1.89</td>
+<td class="valueR">45</td>
+<td class="valueR">0.31</td>
+<td class="valueR">365</td>
+<td class="valueR">1.64</td>
+<td class="valueR">38</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505612" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4705">TCO &#039;03 Round 4</a></td>
+<td class="valueC">11.05.2003</td>
+<td class="valueR">50</td>
+<td class="valueR">50</td>
+<td class="valueR"></td>
+<td class="valueR">58</td>
+<td class="valueR">1.16</td>
+<td class="valueR">5</td>
+<td class="valueR">0.10</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505611" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4704">TCO &#039;03 Round 3</a></td>
+<td class="valueC">10.29.2003</td>
+<td class="valueR">100</td>
+<td class="valueR">100</td>
+<td class="valueR"></td>
+<td class="valueR">203</td>
+<td class="valueR">2.03</td>
+<td class="valueR">20</td>
+<td class="valueR">0.20</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505610" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4650">SRM 169</a></td>
+<td class="valueC">10.28.2003</td>
+<td class="valueR">483</td>
+<td class="valueR">184</td>
+<td class="valueR">299</td>
+<td class="valueR">384</td>
+<td class="valueR">2.09</td>
+<td class="valueR">8</td>
+<td class="valueR">0.04</td>
+<td class="valueR">389</td>
+<td class="valueR">1.30</td>
+<td class="valueR">80</td>
+<td class="valueR">0.27</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505609" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4703">TCO &#039;03 Round 2</a></td>
+<td class="valueC">10.22.2003</td>
+<td class="valueR">197</td>
+<td class="valueR">197</td>
+<td class="valueR"></td>
+<td class="valueR">373</td>
+<td class="valueR">1.89</td>
+<td class="valueR">28</td>
+<td class="valueR">0.14</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505608" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4645">SRM 168</a></td>
+<td class="valueC">10.21.2003</td>
+<td class="valueR">504</td>
+<td class="valueR">202</td>
+<td class="valueR">302</td>
+<td class="valueR">280</td>
+<td class="valueR">1.39</td>
+<td class="valueR">9</td>
+<td class="valueR">0.04</td>
+<td class="valueR">442</td>
+<td class="valueR">1.46</td>
+<td class="valueR">35</td>
+<td class="valueR">0.12</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505607" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4702">TCO &#039;03 Round 1</a></td>
+<td class="valueC">10.15.2003</td>
+<td class="valueR">460</td>
+<td class="valueR">460</td>
+<td class="valueR"></td>
+<td class="valueR">998</td>
+<td class="valueR">2.17</td>
+<td class="valueR">36</td>
+<td class="valueR">0.08</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505606" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4640">SRM 167</a></td>
+<td class="valueC">10.14.2003</td>
+<td class="valueR">517</td>
+<td class="valueR">236</td>
+<td class="valueR">281</td>
+<td class="valueR">420</td>
+<td class="valueR">1.78</td>
+<td class="valueR">42</td>
+<td class="valueR">0.18</td>
+<td class="valueR">391</td>
+<td class="valueR">1.39</td>
+<td class="valueR">56</td>
+<td class="valueR">0.20</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505605" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4701">TCO &#039;03 Qual. Round 2</a></td>
+<td class="valueC">10.09.2003</td>
+<td class="valueR">578</td>
+<td class="valueR">578</td>
+<td class="valueR"></td>
+<td class="valueR">1065</td>
+<td class="valueR">1.84</td>
+<td class="valueR">64</td>
+<td class="valueR">0.11</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505604" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4700">TCO &#039;03 Qual. Round 1</a></td>
+<td class="valueC">10.07.2003</td>
+<td class="valueR">629</td>
+<td class="valueR">629</td>
+<td class="valueR"></td>
+<td class="valueR">1308</td>
+<td class="valueR">2.08</td>
+<td class="valueR">52</td>
+<td class="valueR">0.08</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505603" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4635">SRM 166</a></td>
+<td class="valueC">10.01.2003</td>
+<td class="valueR">533</td>
+<td class="valueR">201</td>
+<td class="valueR">332</td>
+<td class="valueR">360</td>
+<td class="valueR">1.79</td>
+<td class="valueR">28</td>
+<td class="valueR">0.14</td>
+<td class="valueR">614</td>
+<td class="valueR">1.85</td>
+<td class="valueR">21</td>
+<td class="valueR">0.06</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505602" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4630">SRM 165</a></td>
+<td class="valueC">09.23.2003</td>
+<td class="valueR">386</td>
+<td class="valueR">156</td>
+<td class="valueR">230</td>
+<td class="valueR">249</td>
+<td class="valueR">1.60</td>
+<td class="valueR">12</td>
+<td class="valueR">0.08</td>
+<td class="valueR">422</td>
+<td class="valueR">1.83</td>
+<td class="valueR">53</td>
+<td class="valueR">0.23</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505601" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4625">SRM 164</a></td>
+<td class="valueC">09.20.2003</td>
+<td class="valueR">358</td>
+<td class="valueR">146</td>
+<td class="valueR">212</td>
+<td class="valueR">288</td>
+<td class="valueR">1.97</td>
+<td class="valueR">55</td>
+<td class="valueR">0.38</td>
+<td class="valueR">415</td>
+<td class="valueR">1.96</td>
+<td class="valueR">31</td>
+<td class="valueR">0.15</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505600" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4620">SRM 163</a></td>
+<td class="valueC">09.08.2003</td>
+<td class="valueR">357</td>
+<td class="valueR">150</td>
+<td class="valueR">207</td>
+<td class="valueR">316</td>
+<td class="valueR">2.11</td>
+<td class="valueR">6</td>
+<td class="valueR">0.04</td>
+<td class="valueR">389</td>
+<td class="valueR">1.88</td>
+<td class="valueR">40</td>
+<td class="valueR">0.19</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505599" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4615">SRM 162</a></td>
+<td class="valueC">09.03.2003</td>
+<td class="valueR">330</td>
+<td class="valueR">142</td>
+<td class="valueR">188</td>
+<td class="valueR">245</td>
+<td class="valueR">1.73</td>
+<td class="valueR">10</td>
+<td class="valueR">0.07</td>
+<td class="valueR">315</td>
+<td class="valueR">1.68</td>
+<td class="valueR">23</td>
+<td class="valueR">0.12</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505598" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4610">SRM 161</a></td>
+<td class="valueC">08.28.2003</td>
+<td class="valueR">287</td>
+<td class="valueR">125</td>
+<td class="valueR">162</td>
+<td class="valueR">230</td>
+<td class="valueR">1.84</td>
+<td class="valueR">5</td>
+<td class="valueR">0.04</td>
+<td class="valueR">287</td>
+<td class="valueR">1.77</td>
+<td class="valueR">22</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505597" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4605">SRM 160</a></td>
+<td class="valueC">08.23.2003</td>
+<td class="valueR">270</td>
+<td class="valueR">124</td>
+<td class="valueR">146</td>
+<td class="valueR">210</td>
+<td class="valueR">1.69</td>
+<td class="valueR">8</td>
+<td class="valueR">0.06</td>
+<td class="valueR">233</td>
+<td class="valueR">1.60</td>
+<td class="valueR">8</td>
+<td class="valueR">0.05</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505596" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4600">SRM 159</a></td>
+<td class="valueC">08.12.2003</td>
+<td class="valueR">300</td>
+<td class="valueR">117</td>
+<td class="valueR">183</td>
+<td class="valueR">243</td>
+<td class="valueR">2.08</td>
+<td class="valueR">65</td>
+<td class="valueR">0.56</td>
+<td class="valueR">337</td>
+<td class="valueR">1.84</td>
+<td class="valueR">25</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505595" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4598">SRM 158</a></td>
+<td class="valueC">08.06.2003</td>
+<td class="valueR">356</td>
+<td class="valueR">146</td>
+<td class="valueR">210</td>
+<td class="valueR">253</td>
+<td class="valueR">1.73</td>
+<td class="valueR">23</td>
+<td class="valueR">0.16</td>
+<td class="valueR">348</td>
+<td class="valueR">1.66</td>
+<td class="valueR">18</td>
+<td class="valueR">0.09</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505594" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4590">SRM 157</a></td>
+<td class="valueC">07.28.2003</td>
+<td class="valueR">316</td>
+<td class="valueR">131</td>
+<td class="valueR">185</td>
+<td class="valueR">237</td>
+<td class="valueR">1.81</td>
+<td class="valueR">12</td>
+<td class="valueR">0.09</td>
+<td class="valueR">265</td>
+<td class="valueR">1.43</td>
+<td class="valueR">25</td>
+<td class="valueR">0.14</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505593" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4585">SRM 156</a></td>
+<td class="valueC">07.23.2003</td>
+<td class="valueR">339</td>
+<td class="valueR">141</td>
+<td class="valueR">198</td>
+<td class="valueR">239</td>
+<td class="valueR">1.70</td>
+<td class="valueR">13</td>
+<td class="valueR">0.09</td>
+<td class="valueR">307</td>
+<td class="valueR">1.55</td>
+<td class="valueR">44</td>
+<td class="valueR">0.22</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505592" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4580">SRM 155</a></td>
+<td class="valueC">07.17.2003</td>
+<td class="valueR">363</td>
+<td class="valueR">136</td>
+<td class="valueR">227</td>
+<td class="valueR">241</td>
+<td class="valueR">1.77</td>
+<td class="valueR">8</td>
+<td class="valueR">0.06</td>
+<td class="valueR">397</td>
+<td class="valueR">1.75</td>
+<td class="valueR">21</td>
+<td class="valueR">0.09</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505591" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4575">SRM 154</a></td>
+<td class="valueC">07.09.2003</td>
+<td class="valueR">351</td>
+<td class="valueR">137</td>
+<td class="valueR">214</td>
+<td class="valueR">211</td>
+<td class="valueR">1.54</td>
+<td class="valueR">27</td>
+<td class="valueR">0.20</td>
+<td class="valueR">417</td>
+<td class="valueR">1.95</td>
+<td class="valueR">9</td>
+<td class="valueR">0.04</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505590" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4570">SRM 153</a></td>
+<td class="valueC">07.01.2003</td>
+<td class="valueR">338</td>
+<td class="valueR">128</td>
+<td class="valueR">210</td>
+<td class="valueR">203</td>
+<td class="valueR">1.59</td>
+<td class="valueR">16</td>
+<td class="valueR">0.12</td>
+<td class="valueR">407</td>
+<td class="valueR">1.94</td>
+<td class="valueR">33</td>
+<td class="valueR">0.16</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505589" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4565">SRM 152</a></td>
+<td class="valueC">06.25.2003</td>
+<td class="valueR">351</td>
+<td class="valueR">132</td>
+<td class="valueR">219</td>
+<td class="valueR">220</td>
+<td class="valueR">1.67</td>
+<td class="valueR">15</td>
+<td class="valueR">0.11</td>
+<td class="valueR">467</td>
+<td class="valueR">2.13</td>
+<td class="valueR">69</td>
+<td class="valueR">0.32</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505588" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4560">SRM 151</a></td>
+<td class="valueC">06.17.2003</td>
+<td class="valueR">358</td>
+<td class="valueR">145</td>
+<td class="valueR">213</td>
+<td class="valueR">341</td>
+<td class="valueR">2.35</td>
+<td class="valueR">22</td>
+<td class="valueR">0.15</td>
+<td class="valueR">413</td>
+<td class="valueR">1.94</td>
+<td class="valueR">46</td>
+<td class="valueR">0.22</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505587" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4555">SRM 150</a></td>
+<td class="valueC">06.11.2003</td>
+<td class="valueR">327</td>
+<td class="valueR">123</td>
+<td class="valueR">204</td>
+<td class="valueR">149</td>
+<td class="valueR">1.21</td>
+<td class="valueR">10</td>
+<td class="valueR">0.08</td>
+<td class="valueR">295</td>
+<td class="valueR">1.45</td>
+<td class="valueR">34</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505586" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4550">SRM 149</a></td>
+<td class="valueC">06.02.2003</td>
+<td class="valueR">328</td>
+<td class="valueR">126</td>
+<td class="valueR">202</td>
+<td class="valueR">255</td>
+<td class="valueR">2.02</td>
+<td class="valueR">75</td>
+<td class="valueR">0.60</td>
+<td class="valueR">381</td>
+<td class="valueR">1.89</td>
+<td class="valueR">25</td>
+<td class="valueR">0.12</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505585" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4545">SRM 148</a></td>
+<td class="valueC">05.28.2003</td>
+<td class="valueR">362</td>
+<td class="valueR">151</td>
+<td class="valueR">211</td>
+<td class="valueR">269</td>
+<td class="valueR">1.78</td>
+<td class="valueR">18</td>
+<td class="valueR">0.12</td>
+<td class="valueR">410</td>
+<td class="valueR">1.94</td>
+<td class="valueR">32</td>
+<td class="valueR">0.15</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505584" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4540">SRM 147</a></td>
+<td class="valueC">05.22.2003</td>
+<td class="valueR">330</td>
+<td class="valueR">110</td>
+<td class="valueR">220</td>
+<td class="valueR">173</td>
+<td class="valueR">1.57</td>
+<td class="valueR">28</td>
+<td class="valueR">0.25</td>
+<td class="valueR">361</td>
+<td class="valueR">1.64</td>
+<td class="valueR">40</td>
+<td class="valueR">0.18</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505583" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4535">SRM 146</a></td>
+<td class="valueC">05.14.2003</td>
+<td class="valueR">296</td>
+<td class="valueR">106</td>
+<td class="valueR">190</td>
+<td class="valueR">174</td>
+<td class="valueR">1.64</td>
+<td class="valueR">11</td>
+<td class="valueR">0.10</td>
+<td class="valueR">317</td>
+<td class="valueR">1.67</td>
+<td class="valueR">42</td>
+<td class="valueR">0.22</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505582" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4530">SRM 145</a></td>
+<td class="valueC">05.06.2003</td>
+<td class="valueR">361</td>
+<td class="valueR">127</td>
+<td class="valueR">234</td>
+<td class="valueR">231</td>
+<td class="valueR">1.82</td>
+<td class="valueR">14</td>
+<td class="valueR">0.11</td>
+<td class="valueR">364</td>
+<td class="valueR">1.56</td>
+<td class="valueR">16</td>
+<td class="valueR">0.07</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505581" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4515">SRM 144</a></td>
+<td class="valueC">04.30.2003</td>
+<td class="valueR">356</td>
+<td class="valueR">104</td>
+<td class="valueR">252</td>
+<td class="valueR">154</td>
+<td class="valueR">1.48</td>
+<td class="valueR">18</td>
+<td class="valueR">0.17</td>
+<td class="valueR">399</td>
+<td class="valueR">1.58</td>
+<td class="valueR">64</td>
+<td class="valueR">0.25</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505580" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4500">SRM 142</a></td>
+<td class="valueC">04.15.2003</td>
+<td class="valueR">307</td>
+<td class="valueR">125</td>
+<td class="valueR">182</td>
+<td class="valueR">243</td>
+<td class="valueR">1.94</td>
+<td class="valueR">25</td>
+<td class="valueR">0.20</td>
+<td class="valueR">353</td>
+<td class="valueR">1.94</td>
+<td class="valueR">42</td>
+<td class="valueR">0.23</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505579" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4495">SRM 141</a></td>
+<td class="valueC">04.10.2003</td>
+<td class="valueR">354</td>
+<td class="valueR">127</td>
+<td class="valueR">227</td>
+<td class="valueR">230</td>
+<td class="valueR">1.81</td>
+<td class="valueR">15</td>
+<td class="valueR">0.12</td>
+<td class="valueR">357</td>
+<td class="valueR">1.57</td>
+<td class="valueR">18</td>
+<td class="valueR">0.08</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505578" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4497">TCCC &#039;03 Finals</a></td>
+<td class="valueC">04.05.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">11</td>
+<td class="valueR">2.75</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505577" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4494">TCCC &#039;03 Semifinals 4</a></td>
+<td class="valueC">04.04.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">7</td>
+<td class="valueR">1.75</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505576" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4493">TCCC &#039;03 Semifinals 3</a></td>
+<td class="valueC">04.04.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">10</td>
+<td class="valueR">2.50</td>
+<td class="valueR">1</td>
+<td class="valueR">0.25</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505575" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4492">TCCC &#039;03 Semifinals 2</a></td>
+<td class="valueC">04.04.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">10</td>
+<td class="valueR">2.50</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505574" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4491">TCCC &#039;03 Semifinals 1</a></td>
+<td class="valueC">04.04.2003</td>
+<td class="valueR">4</td>
+<td class="valueR">4</td>
+<td class="valueR"></td>
+<td class="valueR">6</td>
+<td class="valueR">1.50</td>
+<td class="valueR">0</td>
+<td class="valueR">0.00</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505573" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4490">SRM 140</a></td>
+<td class="valueC">03.26.2003</td>
+<td class="valueR">329</td>
+<td class="valueR">134</td>
+<td class="valueR">195</td>
+<td class="valueR">228</td>
+<td class="valueR">1.70</td>
+<td class="valueR">18</td>
+<td class="valueR">0.13</td>
+<td class="valueR">372</td>
+<td class="valueR">1.91</td>
+<td class="valueR">34</td>
+<td class="valueR">0.17</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505572" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4485">SRM 139</a></td>
+<td class="valueC">03.18.2003</td>
+<td class="valueR">313</td>
+<td class="valueR">138</td>
+<td class="valueR">175</td>
+<td class="valueR">306</td>
+<td class="valueR">2.22</td>
+<td class="valueR">60</td>
+<td class="valueR">0.43</td>
+<td class="valueR">312</td>
+<td class="valueR">1.78</td>
+<td class="valueR">26</td>
+<td class="valueR">0.15</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505571" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4482">TCCC &#039;03 Round 4 </a></td>
+<td class="valueC">03.12.2003</td>
+<td class="valueR">50</td>
+<td class="valueR">50</td>
+<td class="valueR"></td>
+<td class="valueR">78</td>
+<td class="valueR">1.56</td>
+<td class="valueR">9</td>
+<td class="valueR">0.18</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505570" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4480">SRM 138</a></td>
+<td class="valueC">03.10.2003</td>
+<td class="valueR">334</td>
+<td class="valueR">138</td>
+<td class="valueR">196</td>
+<td class="valueR">204</td>
+<td class="valueR">1.48</td>
+<td class="valueR">36</td>
+<td class="valueR">0.26</td>
+<td class="valueR">356</td>
+<td class="valueR">1.82</td>
+<td class="valueR">29</td>
+<td class="valueR">0.15</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505569" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4475">SRM 137</a></td>
+<td class="valueC">03.06.2003</td>
+<td class="valueR">359</td>
+<td class="valueR">132</td>
+<td class="valueR">227</td>
+<td class="valueR">255</td>
+<td class="valueR">1.93</td>
+<td class="valueR">60</td>
+<td class="valueR">0.45</td>
+<td class="valueR">345</td>
+<td class="valueR">1.52</td>
+<td class="valueR">35</td>
+<td class="valueR">0.15</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505568" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4474">TCCC &#039;03 Round 3</a></td>
+<td class="valueC">03.05.2003</td>
+<td class="valueR">129</td>
+<td class="valueR">129</td>
+<td class="valueR"></td>
+<td class="valueR">249</td>
+<td class="valueR">1.93</td>
+<td class="valueR">23</td>
+<td class="valueR">0.18</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505567" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4472">TCCC &#039;03 Round 2</a></td>
+<td class="valueC">02.26.2003</td>
+<td class="valueR">273</td>
+<td class="valueR">273</td>
+<td class="valueR"></td>
+<td class="valueR">306</td>
+<td class="valueR">1.12</td>
+<td class="valueR">42</td>
+<td class="valueR">0.15</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505566" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4470">SRM 136</a></td>
+<td class="valueC">02.25.2003</td>
+<td class="valueR">332</td>
+<td class="valueR">149</td>
+<td class="valueR">183</td>
+<td class="valueR">252</td>
+<td class="valueR">1.69</td>
+<td class="valueR">22</td>
+<td class="valueR">0.15</td>
+<td class="valueR">375</td>
+<td class="valueR">2.05</td>
+<td class="valueR">49</td>
+<td class="valueR">0.27</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505565" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4466">TCCC &#039;03 Int&#039;l Regional</a></td>
+<td class="valueC">02.22.2003</td>
+<td class="valueR">102</td>
+<td class="valueR">102</td>
+<td class="valueR"></td>
+<td class="valueR">157</td>
+<td class="valueR">1.54</td>
+<td class="valueR">31</td>
+<td class="valueR">0.30</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505564" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4464">TCCC &#039;03 W/MW Regional</a></td>
+<td class="valueC">02.20.2003</td>
+<td class="valueR">154</td>
+<td class="valueR">154</td>
+<td class="valueR"></td>
+<td class="valueR">247</td>
+<td class="valueR">1.60</td>
+<td class="valueR">42</td>
+<td class="valueR">0.27</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505563" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4462">TCCC &#039;03 NE/SE Regional</a></td>
+<td class="valueC">02.18.2003</td>
+<td class="valueR">191</td>
+<td class="valueR">191</td>
+<td class="valueR"></td>
+<td class="valueR">269</td>
+<td class="valueR">1.41</td>
+<td class="valueR">38</td>
+<td class="valueR">0.20</td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueR"></td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505562" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4465">SRM 135</a></td>
+<td class="valueC">02.11.2003</td>
+<td class="valueR">419</td>
+<td class="valueR">172</td>
+<td class="valueR">247</td>
+<td class="valueR">312</td>
+<td class="valueR">1.81</td>
+<td class="valueR">51</td>
+<td class="valueR">0.30</td>
+<td class="valueR">345</td>
+<td class="valueR">1.40</td>
+<td class="valueR">40</td>
+<td class="valueR">0.16</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505561" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4457">SRM 134</a></td>
+<td class="valueC">02.08.2003</td>
+<td class="valueR">363</td>
+<td class="valueR">148</td>
+<td class="valueR">215</td>
+<td class="valueR">216</td>
+<td class="valueR">1.46</td>
+<td class="valueR">86</td>
+<td class="valueR">0.58</td>
+<td class="valueR">336</td>
+<td class="valueR">1.56</td>
+<td class="valueR">61</td>
+<td class="valueR">0.28</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505560" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4455">SRM 133</a></td>
+<td class="valueC">02.05.2003</td>
+<td class="valueR">380</td>
+<td class="valueR">141</td>
+<td class="valueR">239</td>
+<td class="valueR">249</td>
+<td class="valueR">1.77</td>
+<td class="valueR">16</td>
+<td class="valueR">0.11</td>
+<td class="valueR">385</td>
+<td class="valueR">1.61</td>
+<td class="valueR">26</td>
+<td class="valueR">0.11</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505559" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4456">SRM 132</a></td>
+<td class="valueC">02.01.2003</td>
+<td class="valueR">323</td>
+<td class="valueR">118</td>
+<td class="valueR">205</td>
+<td class="valueR">230</td>
+<td class="valueR">1.95</td>
+<td class="valueR">64</td>
+<td class="valueR">0.54</td>
+<td class="valueR">421</td>
+<td class="valueR">2.05</td>
+<td class="valueR">59</td>
+<td class="valueR">0.29</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505558" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4450">SRM 131</a></td>
+<td class="valueC">01.30.2003</td>
+<td class="valueR">402</td>
+<td class="valueR">136</td>
+<td class="valueR">266</td>
+<td class="valueR">271</td>
+<td class="valueR">1.99</td>
+<td class="valueR">29</td>
+<td class="valueR">0.21</td>
+<td class="valueR">573</td>
+<td class="valueR">2.15</td>
+<td class="valueR">114</td>
+<td class="valueR">0.43</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505557" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4447">SRM 130</a></td>
+<td class="valueC">01.25.2003</td>
+<td class="valueR">239</td>
+<td class="valueR">89</td>
+<td class="valueR">150</td>
+<td class="valueR">157</td>
+<td class="valueR">1.76</td>
+<td class="valueR">5</td>
+<td class="valueR">0.06</td>
+<td class="valueR">364</td>
+<td class="valueR">2.43</td>
+<td class="valueR">36</td>
+<td class="valueR">0.24</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505556" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="light">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4430">SRM 128</a></td>
+<td class="valueC">01.06.2003</td>
+<td class="valueR">338</td>
+<td class="valueR">119</td>
+<td class="valueR">219</td>
+<td class="valueR">237</td>
+<td class="valueR">1.99</td>
+<td class="valueR">22</td>
+<td class="valueR">0.18</td>
+<td class="valueR">318</td>
+<td class="valueR">1.45</td>
+<td class="valueR">36</td>
+<td class="valueR">0.16</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505555" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+   <tr class="dark">
+<td class="value" nowrap="nowrap"><a href="/stat?c=round_overview&er=5&rd=4425">SRM 127</a></td>
+<td class="valueC">01.02.2003</td>
+<td class="valueR">280</td>
+<td class="valueR">93</td>
+<td class="valueR">187</td>
+<td class="valueR">60</td>
+<td class="valueR">0.65</td>
+<td class="valueR">9</td>
+<td class="valueR">0.10</td>
+<td class="valueR">313</td>
+<td class="valueR">1.67</td>
+<td class="valueR">43</td>
+<td class="valueR">0.23</td>
+<td class="valueC"><A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=505554" CLASS="statLink">discuss</a></td>
+</TR>
+
+
+</table>
+
+                    <div class="pagingBox">
+                        <a href="Javascript:previous()" class="bcLink">&lt;&lt; prev</a>
+                        | <a href="Javascript:next()" class="bcLink">next &gt;&gt;</a>
+
+                        <br>
+
+                        View &#160;
+                        <input type="text" name="nr" size="4" maxlength="4" onkeypress="submitEnter(event)" value="200" />
+                        &#160;at a time starting with &#160;
+                        <input type="text" name="sr" size="4" maxlength="4" onkeypress="submitEnter(event)" value="601" />
+                        <a href="javascript:document.matchListForm.submit();" class="bcLink">&#160;[ submit ]</a>
+                    </div>
+
+                    </form>
+                </td>
+
+
+         <td width="170">
+            
+
+
+
+<script type="text/javascript" language="javascript">
+
+</script>
+
+
+
+
+    <div style="width:150px;">
+        &nbsp;
+    </div>
+
+
+         </td>
+
+                <!-- Gutter -->
+                <td width="10"><img src="/i/clear.gif" width="10" height="1" border="0"></td>
+                <!-- Gutter Ends -->
+            </tr>
+        </table>
+
+        
+
+
+
+
+
+    
+        <footer id="footer">
+            <div class="container">
+                <div class="footerContentSection twitter">
+                    <div class="title">Twitter</div>
+                    <div class="footerContent">
+
+
+                        
+
+                        <a class="btn btnFooter" href="http://www.twitter.com/topcoder"><span class="twFollowIcon"></span><span class="twFollowBtnText">Follow</span></a>
+                    </div>
+                </div>
+                <div class="footerContentSection recentBlogPosts">
+                    <div class="title">Recent Blog Posts Updated</div>
+                         <div class="footerContent">
+                              <span id="blogTemplate" style="display: none">
+                                 <div class="footerBlogEntry">
+                                     <a href="javascript:;"></a>
+
+                                 </div>
+                              </span>
+                             <a class="btn btnFooter" href="http://www.topcoder.com/blog">View More</a>
+                         </div>
+
+
+                </div>
+                <div class="footerContentSection aboutTopCoder">
+                    <div class="title">About topcoder</div>
+                    <div class="footerContent">
+                        The topcoder community gathers the world's experts in design, development and data science to work on interesting and challenging problems for fun and reward. We want to help topcoder members improve their skills, demonstrate and gain reward for their expertise, and provide the industry with objective insight on new and emerging technologies.
+                    </div>
+                    <a class="btn btnFooter" href="http://www.topcoder.com/mission">About Us</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="container">
+                <div class="connected">
+                    <section class="social">
+                        <h4>Get Connected</h4>
+                        <ul>
+                            <li><a class="fb" href="http://www.facebook.com/topcoder">FB</a></li>
+                            <li><a class="tw" href="http://www.twitter.com/topcoder">TW</a></li>
+                            <li><a class="gp" href="https://plus.google.com/u/0/b/104268008777050019973/104268008777050019973/posts">GP</a></li>
+                            <li><a class="in" href="https://www.linkedin.com/company/topcoder">IN</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </section>
+                    <section class="updates">
+                        <div class="row">
+                            <form id="emailForm" onsubmit="return newsletter_check(this)" name="FeedBlitz_9feab01d431311e39e69002590771423" style="display:block" method="POST" action="http://www.feedblitz.com/f/f.fbz?AddNewUserDirect">
+                                <input type="email" class="email" name="EMAIL" placeholder="Your email address" maxlength="64" />
+                                <input name="FEEDID" type="hidden" value="926643" />
+                                <input name="PUBLISHER" type="hidden" value="34610190" />
+                                <!-- <a onclick="FeedBlitz_9feab01d431311e39e69002590771423s(this.form);" class="btn">Submit</a> -->
+                                <input onclick="FeedBlitz_9feab01d431311e39e69002590771423s(this.form);" type="button" class="btn btnSubmitFooter" value="Submit"/>
+                                <input type="hidden" name="na" value="s"/>
+                                <input type="hidden" name="nr" value="widget"/>
+                            </form>
+                            <script type="text/javascript">function FeedBlitz_9feab01d431311e39e69002590771423i(){var x=document.getElementsByName('FeedBlitz_9feab01d431311e39e69002590771423');for(i=0;i<x.length;i++){x[i].EMAIL.style.display='block'; x[i].action='http://www.feedblitz.com/f/f.fbz?AddNewUserDirect';}} function FeedBlitz_9feab01d431311e39e69002590771423s(v){v.submit();}FeedBlitz_9feab01d431311e39e69002590771423i();</script>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="copyright">
+                    <section>
+                        <br />
+                        &#169; 2014 topcoder. All Rights reserved.
+                        <br />
+                        <a href="http://www.topcoder.com/community/how-it-works/privacy-policy/" class="privacyStmtLink">Privacy Policy</a> | <a href="http://www.topcoder.com/community/how-it-works/terms/" class="legalDisclaimerLink">Terms</a>
+                    </section>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </footer>
+    
+    
+
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6340959-1']);
+  _gaq.push(['_setDomainName', '.topcoder.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+    
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"5697653","applicationTime":130,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"496af5ee90","transactionName":"ZlcBbBQAChBSARIKXV8dKWs2ThcXUhYPEEZYURAXCwAQAFsuDxBGH1gQSA==","agent":"js-agent.newrelic.com\/nr-632.min.js","errorBeacon":"bam.nr-data.net"}</script></body>
+
+</html>

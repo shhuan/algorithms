@@ -1,0 +1,105 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13013&rd=15847",
+	"statement":"<p><i>This problem statement contains superscripts and/or subscripts. It may not display properly outside the applet.</i></p><br /><br /> <p>Today, Bob is trying to count the colorings of a strange graph. It looks like a cycle of cycles.</p><br /><br /> <p>The graph has two types of edges -- <i>solid</i> edges and <i>dashed</i> edges.</p><br /><br /> <p>The edges between the vertices of the original cycles are all <i>solid</i> edges.<br /><br /> The edges that connect cycles together are all <i>dashed</i> edges.</p><br /><br /> <p>More precisely, the graph consists of N cycles. The cycles are labelled, in order, as C<sub>0</sub>, C<sub>1</sub>, ..., C<sub>N-1</sub>. You are given a int[] <b>vertexCount</b> with N elements. Cycle C<sub>i</sub> has <b>vertexCount</b>[i] vertices. The vertices of cycle C<sub>i</sub> are labelled, in order, as v<sub>i, 0</sub>, v<sub>i, 1</sub>, ..., v<sub>i, <b>vertexCount</b>[i]-1</sub>. Note that the last vertex in this order is also connected to the first one. All of the edges that form these cycles are <i>solid</i> edges.</p><br /><br /> <p>You are also given two int[]s <b>fromVertex</b> and <b>toVertex</b>, with N elements each. These int[]s describe the connection between cycle C<sub>i</sub> and C<sub>i+1</sub> as follows: The vertex in cycle C<sub>i</sub> with label v<sub>i, <b>fromVertex</b>[i]</sub> and the vertex in cycle C<sub>i+1</sub> with label v<sub>i+1, <b>toVertex</b>[i]</sub> will be connected with a <i>dashed</i> edge.</p><br /><br /> <p>Bob has <b>K</b> distinct colors. He wants to know how many different ways there are to color the vertices of the graph under the following two rules:</p> \n <ul> \n  <li>Vertices connected with a <i>solid</i> edge must be colored using a different color.</li> \n  <li>Vertices connected with a <i>dashed</i> edge must be colored using the same color.</li> \n </ul> <p>Two colorings are considered different if there is a vertex v<sub>i, j</sub> which has a different color in each coloring. Let C be the number of colorings that correspond to the given rules. As C can be extremely large, you should compute and return the value (C modulo 1,000,000,007).</p>",
+	"notes":[{
+		"order":1,
+		"val":"i+1 is considered modulo N - hence, references to cycle C are referring to cycle C."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CycleColoring",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countColorings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countColorings(int[] vertexCount, int[] fromVertex, int[] toVertex, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 0}",
+			"id":0,
+			"input":"{3, 3}",
+			"note":"This graph consists of two cycles of length 3. There are two dashed edges, each connecting vertex 0 of one cycle to vertex 0 of the other cycle. These two vertices must share the same color. We have 3 possibilities for that color. Once we fix it, we have 2 possibilities how to color the rest of each cycle. Hence, the answer is 3*2*2 = 12.",
+			"order":1
+		},
+		{
+			"expect":"{4}",
+			"id":0,
+			"input":"{6}",
+			"note":"This graph only has one cycle. Note that for N=1 there is still one dashed edge and it connects two vertices on the same cycle. The 12 valid colorings of the resulting graph correspond to the 12 valid colorings of the graph from Example 0.",
+			"order":2
+		},
+		{
+			"expect":"{0, 1}",
+			"id":0,
+			"input":"{3, 3}",
+			"note":"Vertices 0 and 2 on cycle 0 must both have the same color as vertex 1 on cycle 1. However, vertices 0 and 2 on cycle 0 are adjacent and therefore must have different colors. This is a contradiction. Therefore, there are no valid colorings of this graph.",
+			"order":3
+		},
+		{
+			"expect":"{8, 3}",
+			"id":0,
+			"input":"{9, 5}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{5, 10, 4, 6}",
+			"id":0,
+			"input":"{14, 15, 16, 17}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{59283, 49782, 0, 0, 3, 2, 84791, 40017, 2263, 461}",
+			"id":0,
+			"input":"{482373, 283712, 883, 12834, 5, 5, 482734, 99912, 35881, 277590}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"vertexCount will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"vertexCount, fromVertex, and toVertex will all contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of vertexCount will be between 3 and 1,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Element fromVertex[i] will be between 0 and vertexCount[i] - 1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Element toVertex[i] will be between 0 and vertexCount[i+1] - 1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"K will be between 2 and 1,000,000,000, inclusive."
+		}
+	]
+}

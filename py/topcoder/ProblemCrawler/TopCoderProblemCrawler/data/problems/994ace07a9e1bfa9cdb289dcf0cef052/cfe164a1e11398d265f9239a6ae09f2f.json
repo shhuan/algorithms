@@ -1,0 +1,107 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10846&rd=14541",
+	"statement":"One-time pad (patented by Vernam in 1919) is one of the most widely known schemes to encrypt a binary string to achieve confidentiality. This scheme takes a binary string (a string consisting of only the digits 0 and 1) as input and outputs another binary string of the same length. The input is called the plaintext, and the output is called the ciphertext. The scheme uses a key which is another binary string of the same length as the input. The i-th bit of the ciphertext is defined as the XOR of the i-th bit of the plaintext and the key (see the notes for XOR definition). The ciphertext is sent to the receiving party. <br /><br /><br /><br /> In this problem, we will consider several messages, each of length N, encrypted using a single key of length N. <br /><br /> <br /><br /> We would like to investigate how strong this cipher is. Suppose an adversary manages to find out the content of all the original messages (i.e., the plaintexts) and some of the encrypted messages (i.e., ciphertexts). These messages are given in the String[]s <b>plaintexts</b> and <b>ciphertexts</b>, respectively. Return the number of possible keys that are consistent with this data. The constraints will guarantee that there is at least one such key. A key is consistent if for all members of <b>ciphertexts</b> C, there exists a member of <b>plaintexts</b> P such that when P is encrypted using the specified key, it becomes C.",
+	"notes":[{
+		"order":1,
+		"val":"XOR is a binary operation on bits defined as follows: 0 XOR 0 = 0, 0 XOR 1 = 1, 1 XOR 0 = 1, 1 XOR 1 = 0."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NetworkXOneTimePad",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"crack",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int crack(String[] plaintexts, String[] ciphertexts)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"101\", \"010\"}",
+			"id":0,
+			"input":"{\"110\", \"001\"}",
+			"note":"The two possible keys are \"011\" and \"100\".",
+			"order":1
+		},
+		{
+			"expect":"{\"00\", \"01\", \"10\", \"11\"}",
+			"id":0,
+			"input":"{\"00\", \"01\", \"10\", \"11\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{\"00\"}",
+			"id":0,
+			"input":"{\"01\", \"10\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"011\", \"100\"}",
+			"id":0,
+			"input":"{\"000\", \"111\", \"010\", \"101\", \"110\", \"001\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"plaintexts will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of plaintexts will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All the elements of plaintexts will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"All the characters in plaintexts will be either '0' (zero) or '1' (one)."
+		},
+		{
+			"order":5,
+			"val":"All the elements of plaintexts will be distinct."
+		},
+		{
+			"order":6,
+			"val":"ciphertexts will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"All the elements of ciphertexts will contain the same number of characters as all the elements of plaintexts."
+		},
+		{
+			"order":8,
+			"val":"All the characters in ciphertexts will be either '0' (zero) or '1' (one)."
+		},
+		{
+			"order":9,
+			"val":"All the elements of ciphertexts will be distinct."
+		},
+		{
+			"order":10,
+			"val":"There will exist at least one key that is consistent with the given plaintexts and ciphertexts."
+		}
+	]
+}

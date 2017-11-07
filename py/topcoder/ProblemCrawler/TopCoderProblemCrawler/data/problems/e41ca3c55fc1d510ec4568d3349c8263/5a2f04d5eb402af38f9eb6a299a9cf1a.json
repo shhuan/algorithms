@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10736&rd=14159",
+	"statement":"<i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet. </i> <br /><br /> <br /><br /> TopCoder Security Agency (TSA) has been hired to secure a network system. In this network, there are several client computers and server computers which for the sake of conciseness will be called clients and servers, respectively. There are several one directional data cables in the network: between clients and from clients to servers. A data path in the network is defined as a series of 2 or more computers C1, C2, C3, ..., CN such that for each i between 1 and N-1, there exists a data cable from Ci to C(i+1). To avoid infinite data loops, the network is acyclic, that is, there does not exist a data path that originates and ends at the same computer. A client C is connected to a server S if there exists a data path originating at C and ending at S. <br /><br /> <br /><br /> TSA is going to secure the network by installing data gates on some of the cables. The network is said to be secure if for every pair of connected client and server, there exists at least one data path between them which uses at least one cable on which a data gate is installed. <br /><br /> <br /><br /> There are N clients numbered 0 through N-1 and M servers numbered 0 through M-1. The data cables are given as String[] <b>clientCable</b> and String[] <b>serverCable</b>. The j-th character of the i-th element of <b>clientCable</b> is 'Y' if there exists a data cable from client i to client j, or 'N' otherwise. The j-th character of the i-th element of <b>serverCable</b> is 'Y' if there exists a data cable from client i to server j, or 'N' otherwise. <br /><br /> <br /><br /> Return the minimum number of data gates that needs to be installed to make the network secure.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NetworkSecurity",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"secureNetwork",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int secureNetwork(String[] clientCable, String[] serverCable)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"YN\" ,\"YN\" ,\"NY\"}",
+			"id":0,
+			"input":"{\"NYN\" ,\"NNN\" ,\"NYN\"}",
+			"note":"  All three clients are connected to server 0 and only client 2 is connected to server 1. If the data gates are installed on the two cables as shown in the picture above, then each of the following data paths between a client and server will contain at least one cable on which a data gate is installed: ",
+			"order":1
+		},
+		{
+			"expect":"{\"NNN\" ,\"NNN\"}",
+			"id":0,
+			"input":"{\"NN\" ,\"NN\"}",
+			"note":"No client is connected to any server and hence the network is secure.",
+			"order":2
+		},
+		{
+			"expect":"{\"YYN\" ,\"NNN\" ,\"NNY\" ,\"NNN\"}",
+			"id":0,
+			"input":"{\"NYNN\" ,\"NNNN\" ,\"NNNY\" ,\"NNNN\"}",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"clientCable will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of clientCable will contain exactly N characters, where N is the number of elements in clientCable."
+		},
+		{
+			"order":3,
+			"val":"Each character in clientCable will be 'Y' or 'N'."
+		},
+		{
+			"order":4,
+			"val":"The i-th character of the i-th element of clientCable will be 'N'."
+		},
+		{
+			"order":5,
+			"val":"serverCable will contain the same number of elements as clientCable."
+		},
+		{
+			"order":6,
+			"val":"Each element of serverCable will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":7,
+			"val":"All elements of serverCable will contain the same number of characters."
+		},
+		{
+			"order":8,
+			"val":"Each character in serverCable will be 'Y' or 'N'."
+		},
+		{
+			"order":9,
+			"val":"The network will be acyclic as described in the problem statement."
+		}
+	]
+}

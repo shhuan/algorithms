@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":179.64,
+			"constraints":[],
+			"correctRatio":72.63,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6007&rd=8082",
+			"name":"SentenceSplitting",
+			"notes":[],
+			"submission":274
+		},
+		{
+			"avgPts":319.83,
+			"constraints":[],
+			"correctRatio":72.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5953&rd=8082",
+			"name":"RobotTesting",
+			"notes":[],
+			"submission":181
+		},
+		{
+			"avgPts":629.53,
+			"constraints":[],
+			"correctRatio":73.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5951&rd=8082",
+			"name":"Distincter",
+			"notes":[],
+			"submission":30
+		}
+	],
+	"name":"Single Round Match 285 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8082"
+}

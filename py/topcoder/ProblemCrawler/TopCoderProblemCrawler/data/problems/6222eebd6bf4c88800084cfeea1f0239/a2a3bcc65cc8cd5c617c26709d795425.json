@@ -1,0 +1,74 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6158&rd=9819",
+	"statement":"A subsequence of a string is obtained by removing zero or more characters from it. You are given three Strings, and must determine the number of different non-empty subsequences they all share.",
+	"notes":[{
+		"order":1,
+		"val":"A subsequence should be counted only once even if it can be obtained in more than 1 way from any of the input Strings."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CountingCommonSubsequences",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countCommonSubsequences",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countCommonSubsequences(String a, String b, String c)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"accelerate\"",
+			"id":0,
+			"input":"\"call\"",
+			"note":"The 6 subsequences common to all of the strings are: \"c\", \"a\", \"l\", \"al\", \"ca\" and \"cl\".",
+			"order":1
+		},
+		{
+			"expect":"\"topcoder\"",
+			"id":0,
+			"input":"\"topcoder\"",
+			"note":"All possible subsequences are shared by all three strings. Note that the letter 'o' is repeated, so some of the subsequences may be formed in multiple ways. Each unique subsequence is only counted once. ",
+			"order":2
+		},
+		{
+			"expect":"\"correct\"",
+			"id":0,
+			"input":"\"no\"",
+			"note":"There are many subsequences that are shared by any two of these strings, but none that are shared by all three of them.",
+			"order":3
+		},
+		{
+			"expect":"\"abababababababababababababababababababab\"",
+			"id":0,
+			"input":"\"aabbaabbaabbaabbaabbaabbaabbaabbaabbaabbaabb\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a, b and c will have between 1 and 50 characters each, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Every character of a, b and c will be a lowercase letter ('a'-'z')."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":218.17,
+			"constraints":[],
+			"correctRatio":93.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4717&rd=8002",
+			"name":"PatternOptimizer",
+			"notes":[],
+			"submission":214
+		},
+		{
+			"avgPts":277.05,
+			"constraints":[],
+			"correctRatio":43.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4650&rd=8002",
+			"name":"SecurityBunker",
+			"notes":[],
+			"submission":146
+		},
+		{
+			"avgPts":626.06,
+			"constraints":[],
+			"correctRatio":27.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4620&rd=8002",
+			"name":"PieSharing",
+			"notes":[],
+			"submission":87
+		}
+	],
+	"name":"Single Round Match 269 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8002"
+}

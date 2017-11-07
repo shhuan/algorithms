@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":167.01,
+			"constraints":[],
+			"correctRatio":36.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13603&rd=16277",
+			"name":"JanuszTheBusinessman",
+			"notes":[],
+			"submission":378
+		},
+		{
+			"avgPts":242.34,
+			"constraints":[],
+			"correctRatio":22.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13346&rd=16277",
+			"name":"ArmyTeleportation",
+			"notes":[],
+			"submission":83
+		},
+		{
+			"avgPts":460.03,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13347&rd=16277",
+			"name":"AquaparkPuzzle",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 645 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16277"
+}

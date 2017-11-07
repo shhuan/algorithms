@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":207.73,
+			"constraints":[],
+			"correctRatio":72,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2242&rd=13674",
+			"name":"CodeRed",
+			"notes":[],
+			"submission":150
+		},
+		{
+			"avgPts":412.23,
+			"constraints":[],
+			"correctRatio":86.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2407&rd=13674",
+			"name":"MusicalChairs",
+			"notes":[],
+			"submission":130
+		},
+		{
+			"avgPts":600.79,
+			"constraints":[],
+			"correctRatio":77.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2409&rd=13674",
+			"name":"CrimeLab",
+			"notes":[],
+			"submission":61
+		}
+	],
+	"name":"2008 TopCoder China Tournament > Round 1B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13674"
+}

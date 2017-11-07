@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=132&rd=3019",
+	"statement":"<pre>Class name: GameShow\nMethod name: getWinnings\nParameters: String[]\nReturns: int[]\n\n\nA statistician wants to convince his fellow players on a Game Show that they\nwould benefit from a smarter banking strategy.\n\nThe game works as follows:  A player is asked a series of questions.  After\neach question the player answers correctly, the player has the option of\n&quot;banking&quot;.  When the player banks, a value is added to their total earnings for\nthe round.  The value is proportional to the number of correct answers the\nplayer has answered in a row; if the player has answered x correct questions in\na row when banking, award[x] is added to their total for the round (0 is\nelement 0, 1000 is element 1, etc..):\naward[] = { 0, 1000, 2500, 5000, 10000, 25000, 50000, 75000, 125000 }\nAfter banking, the number of consecutive correct questions is reset to 0.   If\nthere is an incorrect answer, or the round ends before the player banks, the\ncount is reset to 0.  \n\nThe game consists of 7 rounds, with all values in the 7th round being doubled\n(double all values in the array).\n\nThe statistician believes that more money can be made by choosing a constant\nnumber of correct answers to wait for before banking, and always banking after\nexactly that many correct answers.  To verify his reasoning, the statistician\nwants a program that inputs String[] of 7 elements representing the 7 rounds of\nthe game.  Each String consists of R's and W's.  R's represent correct answers\nand W's represent incorrect answers.  The first character in the String\nrepresents the correctness of the player's first answer in the round, the\nsecond character represents the second answer, etc...   The program returns a\nint[] of 8 elements that are the total earnings the players would earn in the\ngame if the player banked immediately after exactly 1, 2, 3, 4, 5, 6, 7, and 8\nconsecutive correct answers.  The element 0 in the int[] is the score if the\nplayer always banked immediately after getting 1 correct answer.  The element 1\nis the score if the player always banked immediately after getting 2\nconsecutive correct answers, etc...\n\n\nImplement a class GameShow, which contains a method getWinnings.\n\nHere is the method signature\nint[] getWinnings(String[] rounds)\nBe sure your method is public.\n\nINPUT:\nA String[] with exactly 7 elements, each representing a single round.  Each\nString is between 2 and 50 (inclusive) characters long and contains only the\ncharacters 'R' and 'W' (upper case).\nTopCoder will check the validity of the input.\n\nOUTPUT:\n\nA int[] with exactly 8 elements.  Element 0 in the array is the total game\nscore the player gets for banking after every correct answer.  Element 1 is the\ntotal game score for banking after every two consecutive correct answers, etc...\n\nEXAMPLES:\nInput: {&quot;RRRR&quot;, &quot;RRRR&quot;, &quot;RW&quot;, &quot;WW&quot;, &quot;RWRW&quot;, &quot;RRRRWRR&quot;, &quot;RRRRRRRRWR&quot;}\n\nIn Round 1, \nif the player always banked after 1 correct answer, they would bank 4 times:\n4*award[1] = 4000.\nif the player always banked after 2 correct answers, they would bank 2 times:\n2*award[2]  = 5000.\nif the player always banked after 3 correct answers, they would bank 1 time:\n1*award[3] = 5000.\nif the player always banked after 4 correct answers, they would bank 1 time:\n1*award[4] = 10000.\nif the player always banked after 5, 6, 7, or 8 answers, they would never get\nto bank, and earn 0.\nSo the round 1 subtotals would be:\nsubtotal: {4000, 5000, 5000, 10000, 0, 0, 0, 0}\n\nRound 2 is the same, so we have:\nSubtotal after round 2: {8000, 10000, 10000, 20000, 0, 0, 0, 0}\n\nRound 3 (RW) gives us one banking after 1 correct solution, and nothing else\nsubtotal: {9000, 10000, 10000, 20000, 0, 0, 0, 0}\n\nRound 4 (WW) gives us nothing, so the subtotal doesn't change at all.\n\n\nRound 5 (RWRW) gives us two banking after 1 correct solution and nothing else\nsubtotal: {11000, 10000, 10000, 20000, 0, 0, 0, 0}\n\nRound 6 (RRRRWRR) gives us six bankings after 1 correct, three after 2 correct,\none after 3 correct, one after 4 correct and the subtotal becomes:\n{17000, 17500, 15000, 30000, 0, 0, 0, 0}\n\n\nRound 7 (RRRRRRRRWR) gives us nine bankings after 1 correct, four after 2\ncorrect, two after 3 correct, two after 4 correct, one after 5 correct, one\nafter 6 correct, one after 7 correct, and one after 8 correct.  All these\ntotals are doubled, giving us a final total:\n{35000, 37500, 35000, 70000, 50000, 100000, 150000, 250000} and this int[]\nshould be returned.\n\n\nIf the input is:\n{&quot;RWRRRR&quot;, &quot;RWWRWR&quot;, &quot;RRRRRRWR&quot;, &quot;RRRWRWRW&quot;, &quot;RWWWRWWR&quot;, &quot;RRRRWR&quot;, &quot;RWWWWW&quot;}\ntotal: {30000, 20000, 25000, 30000, 25000, 50000, 0, 0}\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GameShow",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getWinnings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getWinnings(String[] param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

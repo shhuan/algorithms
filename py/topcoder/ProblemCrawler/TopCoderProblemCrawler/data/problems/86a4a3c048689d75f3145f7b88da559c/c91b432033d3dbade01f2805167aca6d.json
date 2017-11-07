@@ -1,0 +1,117 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11540&rd=14650",
+	"statement":"<p>John and Brus have <b>n</b> by <b>m</b> chessboard with rows numbered from 1 to <b>n</b> and columns numbered from 1 to <b>m</b>. Some cells may initially contain coins and some may be empty. In a single operation John choses an empty cell (r, c) such that cell (r+<b>dr</b>, c+<b>dc</b>) exists and is also empty, then John will place one coin on the cell (r, c) and Brus will place another one on the cell (r+<b>dr</b>, c+<b>dc</b>). They may perform this operation any number of times.</p> <p>You are given ints <b>n</b>, <b>m</b>, <b>dr</b> and <b>dc</b> and int[]s <b>row</b> and <b>column</b>. The chessboard initially contains k coins, where k is the number of elements in <b>row</b>. The i-th coin is placed on the cell (<b>row</b>[i], <b>column</b>[i]). Return the maximal number of coins John and Brus can place on the chessboard (excluding those that are initially on the board). For example, if we have an empty 3 by 3 chessboard and <b>dr</b>=<b>dc</b>=1, then John and Brus can first place two coins at (1, 1) and (2, 2), another pair at (1, 2) and (2, 3) and then two more at (2, 1) and (3, 2) for a result of 6.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheCoins",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long find(int n, int m, int dr, int dc, int[] row, int[] column)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"The example from the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"5",
+			"order":2
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"100",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"order":4
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"5",
+			"order":5
+		},
+		{
+			"expect":"71",
+			"id":0,
+			"input":"84",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"996231",
+			"id":0,
+			"input":"122677",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"m will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"dr will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"dc will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"row will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":6,
+			"val":"column will contain the same number of elements as row."
+		},
+		{
+			"order":7,
+			"val":"Each element of row will be between 1 and n, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Each element of column will be between 1 and m, inclusive."
+		},
+		{
+			"order":9,
+			"val":"All pairs (row[i], column[i]) will be distinct."
+		}
+	]
+}

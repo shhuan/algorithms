@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3507&rd=6527",
+	"statement":"In many sports, the time of possession is a much talked about statistic. This indicates the amount of time during a game that a particular team possesses the ball. In this problem, you will calculate the time of possession given the relevant events of the game. You will be given a String[], each element of which is formatted as &quot;EVENT TIME&quot;, where EVENT is either &quot;A&quot;, &quot;B&quot;, &quot;SWITCH&quot;, or &quot;END&quot;. An &quot;A&quot; indicates that team A gains possession of the ball, while a &quot;B&quot; indicates that team B gains possession of the ball. &quot;SWITCH&quot; indicates that the ball changes possession from one team to the other (there are only two teams). &quot;END&quot; indicates the end of the game. Each TIME will be formatted as &quot;minutes:seconds&quot; where seconds contains exactly two digits, and minutes contains no extra leading zeros. Your task is to return a String formatted as &quot;minutes:seconds&quot; in the same format as the input, indicating the total time of possession for team A. The input will be sorted in non-descending order by time, and the first element will be either &quot;A 0:00&quot; or &quot;B 0:00&quot;, while the last element, and only the last element, will have EVENT = &quot;END&quot;.",
+	"notes":[{
+		"order":1,
+		"val":"If multiple events occur at the same time, assume that the one that appears earlier in the input actually occurs earlier (see example 2)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TimeOfPossession",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getTime(String[] times)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"1:23\"",
+			"id":0,
+			"input":"{\"A 0:00\",\"SWITCH 1:23\",\"END 3:00\"}",
+			"note":"A possesses the ball for the first 1:23, but never gets it again.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"11:33\"",
+			"id":0,
+			"input":"{\"A 0:00\",\"SWITCH 1:23\",\"SWITCH 4:50\",\"END 15:00\"}",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"0:00\"",
+			"id":0,
+			"input":"{\"A 0:00\",\"SWITCH 0:00\",\"END 15:00\"}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"times will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of times will be formatted as &quot;EVENT TIME&quot;"
+		},
+		{
+			"order":3,
+			"val":"Each EVENT will be &quot;A&quot;, &quot;B&quot;, &quot;END&quot;, or &quot;SWITCH&quot;."
+		},
+		{
+			"order":4,
+			"val":"The first EVENT will be &quot;A&quot; or &quot;B&quot;, and the first TIME will be &quot;0:00&quot;."
+		},
+		{
+			"order":5,
+			"val":"The last EVENT will be &quot;END&quot;."
+		},
+		{
+			"order":6,
+			"val":"Each TIME will be between &quot;0:00&quot; and &quot;999:59&quot;, inclusive, and the minutes will not have any extra leading zeros, while the seconds will contain exactly 2 digits."
+		},
+		{
+			"order":7,
+			"val":"The TIMEs will be sorted in non-descending order."
+		}
+	]
+}

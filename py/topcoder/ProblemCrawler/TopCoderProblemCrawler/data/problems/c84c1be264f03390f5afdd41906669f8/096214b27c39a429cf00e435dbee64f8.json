@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1945&rd=4725",
+	"statement":"<p>Combination locks are convenient, because of their design. A combination lock consists of a small wheel to input the combination, and a latch to actually lock things together. The wheel contains consecutive numbers equally spaced around its edge, starting from zero and increasing clockwise. The outer casing of the lock has a small notch. To open the lock, you must rotate the wheel and align the numbers on the wheel with the notch in a specific order.</p> <p>TopLock, a small company manufacturing combination locks, has recently decided to change its lock setup to give more security than the competitors. Many typical combination locks have a set of three numbers which you must input in order. TopLock locks will have a variable combination length which will be no less than three. In addition, they will be changing the number of numbers on the wheel, which will be between 10 and 100, inclusive.</p> <p>To open a lock, you must follow the algorithm outlined below: </p>\n <ol>\n  <li>1. Set the current rotation direction to counterclockwise, and set N to the number of numbers in the combination.</li> \n  <li>2. Rotate the wheel N full turns in the current rotation direction, where a full turn is a 360 degree spin that leaves the notch pointing at the same number.</li> \n  <li>3. Continue to rotate the wheel in the current rotation direction until the notch is pointing at the next number in the combination, which successfully inputs that number. Note that by rotating the wheel counter-clockwise, the number that the notch points to will <i>increase</i>.</li> \n  <li>4. If there are no more numbers to input, open the lock, you're finished! Otherwise, reverse the current rotation direction, decrease N by one, and go back to step 2.</li> \n </ol> <p></p> <p>It is guaranteed that no two adjacent numbers in <b>combo</b> will be the same, so as to avoid ambiguity in step 3. Also, the starting position of the lock, <b>start</b>, will not be the same as the first number in <b>combo</b>.</p> <p>Given a int[] <b>combo</b>, indicating the combination of the lock, an int <b>size</b>, the number of numbers on the wheel, and an int <b>start</b>, indicating the number that the notch starts off pointing at, your method should return a double indicating the total number of degrees turned to open the lock.</p> <p>For example, if <b>combo</b> = {10,20,30}, <b>size</b> = 40, and <b>start</b> = 6, you would first rotate the wheel three times counterclockwise and then 4 units to the 10, for a total of 3 * 360 + 4 * (360 / 40) = 1116 degrees, and then you would rotate twice clockwise and 30 units to the 20, and then once counterclockwise and 10 units to the 30. Your method would in this case return 1116 + 990 + 450 = 2556.</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"The numbers on the combination wheel start at 0 and go to ( - 1), increasing clockwise."
+		},
+		{
+			"order":2,
+			"val":"Double return values must be correct to within an absolute or relative difference of 1e-9."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CombinationLock",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"degreesTurned",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double degreesTurned(int[] combo, int size, int start)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"40",
+			"id":0,
+			"input":"{10,20,30}",
+			"note":"Explained above.",
+			"order":1
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"{0,50,99}",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"{0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9}",
+			"order":3
+		},
+		{
+			"expect":"97",
+			"id":0,
+			"input":"{64,93,87,3,22,53,64,53,11,90,11,59,30,6,11,17,72,0,38,55}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"combo will have between 3 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of combo will be between 0 and (size - 1), inclusive, and no two consecutive elements will be the same."
+		},
+		{
+			"order":3,
+			"val":"size will be between 10 and 100, inclusive."
+		},
+		{
+			"order":4,
+			"val":"start will be between 0 and (size - 1), inclusive, and will not be the same as the first element in combo (i.e., the one with index 0)"
+		}
+	]
+}

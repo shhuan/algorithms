@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.39,
+			"constraints":[],
+			"correctRatio":59.38,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11809&rd=15091",
+			"name":"FoxAndKgram",
+			"notes":[],
+			"submission":1605
+		},
+		{
+			"avgPts":304.88,
+			"constraints":[],
+			"correctRatio":78.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11860&rd=15091",
+			"name":"FoxAndDoraemon",
+			"notes":[],
+			"submission":639
+		},
+		{
+			"avgPts":671.42,
+			"constraints":[],
+			"correctRatio":62.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11849&rd=15091",
+			"name":"FoxAndPhotography",
+			"notes":[],
+			"submission":158
+		}
+	],
+	"name":"2012 TCO Algorithm > Round 1B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15091"
+}

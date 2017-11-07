@@ -1,0 +1,69 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13063&rd=15958",
+	"statement":"<p> We have an infinite strip of paper divided into a sequence of cells. All of the cells are initially white. We place a robot onto one of the cells. Each time the robot stands on a cell, it paints the cell red. </p> <p> You are given an int <b>N</b>. The robot will now make <b>N</b> steps. In each step, the robot will move either one cell to the left or one cell to the right, with equal probability. All random choices made by the robot are mutually independent. </p> <p> Compute and return the expected number of red cells at the end. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or a relative error at most 10^(-9)."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RedPaint",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expectedCells",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expectedCells(int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1.0",
+			"id":0,
+			"input":"0",
+			"note":"No movement. At the end there is a single red cell: the one with the robot.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2.0",
+			"id":0,
+			"input":"1",
+			"note":"One step. The robot will choose a random direction and move. There will be exactly two red cells: the one where it started and the one where it ended. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2.5",
+			"id":0,
+			"input":"2",
+			"note":"In the third step the robot will color a third cell red with probability 1/2. Hence, the expected number of red cells is 0.5*2 + 0.5*3 = 2.5. ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 3.375",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N will be between 0 and 500, inclusive."
+	}]
+}

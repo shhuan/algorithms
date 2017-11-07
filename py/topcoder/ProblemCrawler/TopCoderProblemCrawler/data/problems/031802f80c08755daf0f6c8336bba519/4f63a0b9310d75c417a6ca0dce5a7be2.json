@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2003&rd=5076",
+	"statement":"<p> On a stack machine, operations such as addition and multiplication take their arguments from the top of the stack and push their results back onto the top of the stack. For example, the expression <tt>(5+6)*(8-2)</tt> would be evaluated by the commands: </p> <pre>\n    Push 5\n    Push 6\n    Add         // pops 5 and 6, pushes 11\n    Push 8\n    Push 2\n    Subtract    // pops 8 and 2, pushes 6\n    Multiply    // pops 11 and 6, pushes 66\n</pre> <p> The <i>cost</i> of a sequence of commands is the maximum number of stack slots that are occupied at some point during the execution of the commands. For example, the cost of the above sequence of commands is 3, achieved immediately after pushing the 2, at which point the stack contains the values 11, 8, and 2. Our goal will be to minimize the cost of a sequence of commands. </p> <p> The only tool at our disposal is the swap command, which swaps the top two values on the stack. Consider, for example, the following commands for evaluating the expression <tt>9-2*3</tt>: </p> <pre>\n    Push 9\n    Push 2\n    Push 3\n    Multiply   // pops 2 and 3, pushes 6\n    Subtract   // pops 9 and 6, pushes 3\n</pre> The cost of this sequence is 3. Alternatively, we can achieve a cost of 2 by using the swap command: <pre>\n    Push 2\n    Push 3\n    Multiply   // pops 2 and 3, pushes 6\n    Push 9\n    Swap       // swaps 6 and 9\n    Subtract   // pops 9 and 6, pushes 3\n</pre> In essence, the swap command allows us to evaluate the right-hand argument of a binary operation before the left-hand argument, whenever it is advantageous to do so. The values of the arguments are then on the stack in the wrong order, so the swap command is used to put them in the correct order. (For commutative operations, such as addition, the order of the arguments does not matter, but we will never use this fact.) <p> Notice that it is never advantageous to use a swap command to exchange arguments of <i>different</i> binary operations. For example, it would be pointless to rewrite the above commands as </p> <pre>\n    Push 2\n    Push 9\n    Swap       // swaps 2 and 9\n    Push 3\n    Multiply   // pops 2 and 3, pushes 6\n    Subtract   // pops 9 and 6, pushes 3\n</pre> <p> You will be given a String <b>commands</b> summarizing a sequence of commands with a '<tt>.</tt>' for each push command, and a '<tt>B</tt>' for each binary operation. For example, the commands for evaluating <tt>(5+6)*(8-2)</tt> (shown at the beginning of the problem) would be represented as &quot;<tt>..B..BB</tt>&quot;. The input is guaranteed to satisfy the following grammar: </p> <pre>\n    &lt;cmds&gt; = '.' | &lt;cmds&gt; &lt;cmds&gt; 'B'\n</pre> You must determine the minimum cost that could be achieved for the input sequence of commands through judicious use of swaps. You will return a int[] containing two elements: first the minimum cost and then the minimum number of swap commands needed to achieve that cost.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StackMachine",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimize",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] minimize(String commands)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { 2, 1 }",
+			"id":0,
+			"input":"\"...BB\"",
+			"note":"The  example above. By using one swap command, we can reduce the cost from 3 to 2.",
+			"order":1
+		},
+		{
+			"expect":"Returns: { 3, 0 }",
+			"id":0,
+			"input":"\"..B..BB\"",
+			"note":"The  example at the beginning of the problem. The cost is 3, and swaps do not help.",
+			"order":2
+		},
+		{
+			"expect":"Returns: { 4, 1 }",
+			"id":0,
+			"input":"\"..B..BB..B..BBB....BBBB\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: { 5, 2 }",
+			"id":0,
+			"input":"\"....B..BB..B..BBB..B..BB..B..BBBBBB\"",
+			"order":4
+		},
+		{
+			"expect":"Returns: { 4, 3 }",
+			"id":0,
+			"input":"\"..B.B..B...BB...BBB.B.B.BB...B.BBB...B.B..BB.BBBB\"",
+			"order":5
+		},
+		{
+			"expect":"Returns: { 5, 1 }",
+			"id":0,
+			"input":"\"..B..BB..B..BB..B..BBB..B..BB..B..BBBB..B..BBBB\"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"commands contains between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"commands contains only the characters '.' and 'B'."
+		},
+		{
+			"order":3,
+			"val":"commands satisfies the grammar   &lt;cmds&gt; = '.' | &lt;cmds&gt; &lt;cmds&gt; 'B'"
+		}
+	]
+}

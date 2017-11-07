@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2425&rd=5076",
+	"statement":"<p> Many places like to have the ability to determine the value of coins simply by weighing them - places like highway toll booths, vending machines, and even banks. However, coins do not have exact weights, as much as we'd like them to for problems like this. Due to variances in types of metals, corrosion, and general wear and tear on coins, each denomination of coin has a minimum and a maximum weight. Of course, each coin also has an associated value. You will be given the value and the minimum and maximum weights for each denomination, as well as the weight of a number of coins. You must determine what possible values the coins could possess. </p> <p> For instance, let's say that a penny (worth one unit) has a minimum weight of 19 and a maximum weight of 21. Let's also say that a nickel (worth five units) has a minimum weight of 40 and a maximum of 43. Now let's assume we're given a number of coins whose weight is 105. There could be two nickels weighing 43 each, and a penny weighing 19, for a total value of 11 units. Another possibility is to have 5 pennies weighing 21 each, for a value of 5 units. </p> <p> Each denomination of coin will be represented by three integers in a String as follows (angle brackets are for clarification only): </p> <pre>\n&quot;&lt;<i>value</i>&gt; &lt;<i>minimum weight</i>&gt; &lt;<i>maximum weight</i>&gt;&quot;\n</pre> <p> The return value should be the number of distinct possible values. For instance, if the coins could be worth 1, 2, or 4, the return value would be 3. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CoinWeight",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"possibleValues",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int possibleValues(int weight, String[] coins)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"001 10 10\"}",
+			"id":0,
+			"input":"30",
+			"note":"There is only one possible value - 3.",
+			"order":1
+		},
+		{
+			"expect":"{\"25 20 22\"}",
+			"id":0,
+			"input":"11",
+			"note":"There are no values possible.",
+			"order":2
+		},
+		{
+			"expect":"{\"1 15 20\", \"3 30 30\"}",
+			"id":0,
+			"input":"50",
+			"note":"We can have 3 coins of value 1, or one coin of value 3 and one coin of value 1.",
+			"order":3
+		},
+		{
+			"expect":"{\"1 15 20\", \"2 30 30\"}",
+			"id":0,
+			"input":"50",
+			"note":"Similar to example 3, except while there are two combinations, there is only one value.",
+			"order":4
+		},
+		{
+			"expect":"{\"1 2 31\",\"2 16 46\",\"4 31 61\",\"8 46 76\",\"16 61 91\",\"32 76 100\",\"50 2 31\"}",
+			"id":0,
+			"input":"100",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"weight will be between 10 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of coins will be formatted exactly as described above, with exactly one space between the integers. There may be leading zeros for the integers."
+		},
+		{
+			"order":3,
+			"val":"coins will have between 1 and 7 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Within each element of coins, value will be between 1 and 50, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Within each element of coins, minimum weight will be between 2 and 100, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Within each element of coins, maximum weight will be between 2 and 100, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Within each element of coins, maximum weight will be between minimum weight and minimum weight + 30, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Each element of coins will have between 5 and 10 characters, inclusive."
+		}
+	]
+}

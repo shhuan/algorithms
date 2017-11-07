@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":174.78,
+			"constraints":[],
+			"correctRatio":91.98,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8745&rd=12169",
+			"name":"SortingGame",
+			"notes":[],
+			"submission":474
+		},
+		{
+			"avgPts":288.51,
+			"constraints":[],
+			"correctRatio":62.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8725&rd=12169",
+			"name":"SumOfPowers",
+			"notes":[],
+			"submission":158
+		},
+		{
+			"avgPts":628.48,
+			"constraints":[],
+			"correctRatio":55.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8762&rd=12169",
+			"name":"HouseProtection",
+			"notes":[],
+			"submission":92
+		}
+	],
+	"name":"Single Round Match 397 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12169"
+}

@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8467&rd=12180",
+	"statement":"<p> To celebrate the upcoming Thought Challenge Olympics, you are going to follow tradition and light candles. On the first night of the event, you will light one candle. At the end of the night, you will extinguish the candle. On each subsequent night, you will light one more candle than you did on the previous night, so that on the <i>n</i>-th night (indexed from 1) you will light <i>n</i> candles (and extinguish them all in the morning). Each night that you light a candle, its height will decrease by 1 inch; once its height reaches 0 inches, you cannot use it anymore. </p><p> You are given a int[] <b>candles</b>, the i-th element of which is the height of the i-th candle that you own. Return the maximum number of nights you can celebrate the event without going to the store to get more candles. For example, if you have three candles of height 2, you can light one the first night, the other two on the second night, and then all three candles on the third night. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OlympicCandles",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numberOfNights",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numberOfNights(int[] candles)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{2, 2, 2}",
+			"note":"The example from the statement.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{2, 2, 2, 4}",
+			"note":"With an extra candle we are able to use the candles for four nights.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{5, 2, 2, 1}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{1, 2, 3, 4, 5, 6}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"candles will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of candles will be between 1 and 100, inclusive."
+		}
+	]
+}

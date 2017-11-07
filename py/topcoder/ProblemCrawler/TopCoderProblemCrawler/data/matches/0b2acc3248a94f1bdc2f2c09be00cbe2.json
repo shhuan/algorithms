@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":211.21,
+			"constraints":[],
+			"correctRatio":78.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10979&rd=14155",
+			"name":"SequenceOfCommands",
+			"notes":[],
+			"submission":467
+		},
+		{
+			"avgPts":315.03,
+			"constraints":[],
+			"correctRatio":51.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10976&rd=14155",
+			"name":"RightTriangle",
+			"notes":[],
+			"submission":382
+		},
+		{
+			"avgPts":498.73,
+			"constraints":[],
+			"correctRatio":40.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10980&rd=14155",
+			"name":"RooksParty",
+			"notes":[],
+			"submission":49
+		}
+	],
+	"name":"Single Round Match 473 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14155"
+}

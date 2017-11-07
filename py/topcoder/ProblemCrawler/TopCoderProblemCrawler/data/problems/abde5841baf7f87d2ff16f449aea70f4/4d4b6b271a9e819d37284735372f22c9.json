@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=93&rd=3009",
+	"statement":"<pre>Class Name: FlightConnections\nMethod Name: getMinimum\nParameters: String[], String, String\nReturns: int\n\nImplement a class FlightConnections, which contains a method getMinimum.\ngetMinimum takes a String[] representing a list of available flights, a String\nrepresenting the departure city, and a String representing the intended\ndestination.  It returns the minimum number of flights needed to arrive from\nthe departure city to the destination city.\n\nNote:\n*If the departure city and the intended destination are the same, no flights\nare needed, so return 0.  \n*If there is no possible connection from the departure city to the destination\ncity, return 0.\n*If either the departure or arrival city is not mentioned in the String[],\nreturn 0.\n*City names are case sensitive.\n*Departure and arrival times don't play any roll.\n*Flights are directional.  That is if there is a flight from city A to city B\nthere isn't necessarily a flight in the reverse direction.\n*Duplications in the String[] are ignored.\nString[] elements are of the form:\n&quot;FROM, TO&quot; (There is a comma followed by exactly one space between FROM and TO).\nrepresenting a flight from FROM to TO.  FROM and TO contain letters and dashes\n('-'). \n\nHere is the method signature:\nint getMinimum(String[] flights, String strDeparture, String strDestination);\nBe sure your method is public.\n\n* flights will be a String[] of the form above.  It has between 1 and 20\nelements. Each element is at most 50 characters long.\n* strDeparture and strDestination will be Strings consisting only of characters\nfrom the set A-Z, a-z, and &quot;-&quot; (dash).\n\n* TopCoder will check the validity of the inputs.\nExamples(quotes are for clarity, but not included in the Strings):\n   Flights: [&quot;T, B&quot;, &quot;O, F&quot;, &quot;D, Y&quot;, &quot;F, K&quot;, &quot;K, C&quot;, &quot;V, N&quot;, &quot;B, O&quot;]\n   Departure From: T\n   Destination: C\n   Minimum flights: 5 (T to B; B to O; O to F; F to K; K to C)\n\n   Flights: [&quot;Y, C&quot;, &quot;O, F&quot;, &quot;Y, O&quot;, &quot;M, O&quot;, &quot;C, K&quot;, &quot;O, K&quot;, &quot;K, S&quot;, &quot;K, M&quot;]\n   Departure From: Y\n   Destination: Y\nMinimum flights: 0 (the intended destination is the same as the departure\ncity)\n\n   Flights: [&quot;Here, Ba&quot;, &quot;Ba, Ya&quot;, &quot;Fa, Qa&quot;]\n   Departure From: Here\n   Destination: Qa\n   Minimum flights: 0 (no possible way to get from Here to Qa)\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FlightConnections",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(String[] param0, String param1, String param2)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

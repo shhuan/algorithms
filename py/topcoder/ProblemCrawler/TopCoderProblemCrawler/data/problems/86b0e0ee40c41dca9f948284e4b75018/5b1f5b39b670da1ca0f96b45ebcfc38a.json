@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13669&rd=16314",
+	"statement":"<p> Cat Taro likes strings. He is currently constructing a string S of length <b>N</b>. Each character of S will be either 'A' or 'B'. Taro has already chosen some of the characters. You are given these choices as a int[] <b>position</b> and a String <b>value</b>. For each valid i, the character at the 1-based index <b>position</b>[i] in S is the character <b>value</b>[i]. </p> <p> </p> <p> To Taro, the ugliness of a string is the number of pairs of equal consecutive characters. For example, the ugliness of &quot;ABABAABBB&quot; is 3: there is one pair &quot;AA&quot; and two (overlapping) pairs &quot;BB&quot;. </p> <p> </p> <p> Taro now wants to finish S by filling in the remaining characters. His goal is to create a string with the smallest possible ugliness. Let X be the number of possible strings Taro may produce. Return the value (X modulo 1,000,000,007). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TaroFillingAStringDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getNumber(int N, int[] position, String value)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1, 3}",
+			"id":0,
+			"input":"3",
+			"note":"Currently, Taro's string looks as follows: A_B. He can either produce the string AAB or the string ABB. Both have the same ugliness.",
+			"order":1
+		},
+		{
+			"expect":"{2, 1, 3, 4}",
+			"id":0,
+			"input":"4",
+			"note":"All characters of S have already been chosen.",
+			"order":2
+		},
+		{
+			"expect":"{23, 4, 8, 1, 24, 9, 16, 17, 6, 2, 25, 15, 14, 7, 13}",
+			"id":0,
+			"input":"25",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{183, 115, 250, 1, 188, 193, 163, 221, 144, 191, 92, 192, 58, 215, 157, 187, 227, 177, 206, 15, 272, 232, 49, 11, 178, 59, 189, 246}",
+			"id":0,
+			"input":"305",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"position will contian between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"value and position will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of position will be between 1 and N, inclusive."
+		},
+		{
+			"order":5,
+			"val":"All elements of position will be distinct."
+		},
+		{
+			"order":6,
+			"val":"value will consist only of characters 'A' and 'B'."
+		}
+	]
+}

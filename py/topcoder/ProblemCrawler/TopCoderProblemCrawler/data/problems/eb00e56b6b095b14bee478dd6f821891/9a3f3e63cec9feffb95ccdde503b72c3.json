@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4013&rd=8016",
+	"statement":"<p> A city has several different tax schemes. In each scheme, the taxpayer pays a percentage of his income plus a fixed base amount every year. Each citizen is free to choose an optimal tax scheme for his income after the end of each year. </p> <p> You will be given two int[]s, <b>fixedBase</b> and <b>percent</b> (elements with equal indices describe the same tax scheme). Given an <b>index</b> of a tax scheme, return the minimal non-negative income this scheme is optimal for (choosing any other tax scheme results in a tax which is strictly greater). If this scheme is not optimal for any income, return -1. </p>",
+	"notes":[{
+		"order":1,
+		"val":"The return value must be within 1e-9 absolute or relative error of the actual result"
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OptimalTax",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"optimalIncome",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double optimalIncome(int[] fixedBase, int[] percent, int index)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 10, 20}",
+			"id":0,
+			"input":"{10, 5, 3}",
+			"note":"The first scheme forces a taxpayer to pay 10 units of tax regardless of income. The second scheme leads to the same tax for an income of 50. The first scheme is optimal for any income greater than that.",
+			"order":1
+		},
+		{
+			"expect":"{ 0, 45, 33, 13, 100}",
+			"id":0,
+			"input":"{6000, 435, 3325, 2345, 0}",
+			"order":2
+		},
+		{
+			"expect":"{9, 6, 7, 8}",
+			"id":0,
+			"input":"{1, 0, 0, 0}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"fixedBase and percent will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"fixedBase and percent will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of fixedBase will be between 0 and 10000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of percent will be between 0 and 100, inclusive."
+		},
+		{
+			"order":5,
+			"val":"index will be between 0 and number of elements in fixedBase - 1, inclusive."
+		}
+	]
+}

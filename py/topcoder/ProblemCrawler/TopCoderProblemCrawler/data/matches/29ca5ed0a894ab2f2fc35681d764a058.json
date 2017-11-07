@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":218.54,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=699&rd=65",
+			"name":"QuickBrownFox",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":350.87,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=527&rd=65",
+			"name":"HiddenSeq",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":502.32,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=572&rd=65",
+			"name":"Cubes",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"Sun Microsystems / TopCoder Collegiate Challenge > Semifinals Room B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=65"
+}

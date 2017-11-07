@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13455&rd=16077",
+	"statement":"<p> A store sells M different items, conveniently numbered 0 through M-1. For a shopping survey you interviewed <b>N</b> customers. Each customer responded to the survey with a list of items they've bought. Each customer bought at most one of each item. It is possible that some customers did not buy anything at all. </p> <p> After collecting the responses, you've summed up the results and found that <b>s</b>[i] people have bought item i. Due to an unfortunate accident, you've then lost the actual survey responses. All you have left are the values <b>s</b>[i] you computed. </p> <p> You are now supposed to report the number of big shoppers among the survey respondents. A big shopper is defined as a customer who has bought <b>K</b> or more items. Of course, having lost the detailed responses, you might be unable to determine the actual number of big shoppers. </p> <p> You are given the ints <b>N</b> and <b>K</b>, and the int[] <b>s</b> with M elements. Compute and return the smallest possible number of big shoppers. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ShoppingSurveyDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minValue",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minValue(int N, int K, int[] s)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"10",
+			"note":"There are 10 customers. Item 0 was bought by 1 customer, item 1 by 2 customers, and item 2 by 3 of the customers. A big shopper is a customer who bought at least 2 items. Given this data it is possible that there are no big shoppers at all. (There could have been six customers who bought one item each, and four other customers who didn't buy anything at all.)",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"5",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"20",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 500, inclusive."
+		},
+		{
+			"order":2,
+			"val":"s will contain between 1 and 500 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element in s will be between 0 and N, inclusive."
+		},
+		{
+			"order":4,
+			"val":"K will be between 1 and the length of s, inclusive."
+		}
+	]
+}

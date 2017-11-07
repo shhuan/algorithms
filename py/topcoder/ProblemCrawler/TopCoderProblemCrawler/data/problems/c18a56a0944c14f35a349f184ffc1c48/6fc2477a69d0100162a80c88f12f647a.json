@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13239&rd=15859",
+	"statement":"<p> Alice and Bob are playing a game. Alice rolls <b>a</b> identical <b>b</b>-sided dice. Bob rolls <b>c</b> identical <b>d</b>-sided dice. The sides of an n-sided die have numbers 1 through n written on them. </p> <p> A player's score is the sum of the numbers they rolled on their dice. The player with a strictly higher score wins. It is possible that neither player wins. </p> <p> You are given the ints <b>a</b>, <b>b</b>, <b>c</b>, and <b>d</b>. The players already rolled their dice. If it's not possible for Alice to win, return -1. Otherwise, assume that you don't know what numbers Alice and Bob rolled, but that you know that Alice won the game. Return the expected value of Alice's score (given the above assumption). </p>",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error smaller than 1e-3. "
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FixedDiceGameDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getExpectation",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double getExpectation(int a, int b, int c, int d)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":"The only way Alice can win is if she rolls a 2. Thus, if we know Alice wins, we know she rolled a 2. ",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"3",
+			"note":"Alice will always roll a 3. ",
+			"order":2
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"1",
+			"note":"Alice will not win if she rolls a 1. Thus, if we know she wins, her expected score is (2+3+4+5)/4=7/2.",
+			"order":3
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"2",
+			"note":"No matter what Alice rolls, she will lose. ",
+			"order":4
+		},
+		{
+			"expect":"11",
+			"id":0,
+			"input":"50",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"a, b, c, d will each be between 1 and 50, inclusive."
+	}]
+}

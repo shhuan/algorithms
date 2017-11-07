@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":181.7,
+			"constraints":[],
+			"correctRatio":89.81,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5891&rd=8083",
+			"name":"ExtraBall",
+			"notes":[],
+			"submission":314
+		},
+		{
+			"avgPts":333.45,
+			"constraints":[],
+			"correctRatio":38.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5908&rd=8083",
+			"name":"BallGift",
+			"notes":[],
+			"submission":115
+		},
+		{
+			"avgPts":617.61,
+			"constraints":[],
+			"correctRatio":7.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6017&rd=8083",
+			"name":"InfiniteSoup",
+			"notes":[],
+			"submission":85
+		}
+	],
+	"name":"Single Round Match 286 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8083"
+}

@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12295&rd=15182",
+	"statement":"<i>This problem statement contains images. It may not display properly outside the applet.</i> <br /><br /> <br /><br /> <p> Once upon a time, Little Wojtek had drawn a number of points with integer coordinates onto a sheet of paper. Then he made zero or more steps. Each step looked as follows: Let's call all the points on Wojtek's paper <i>old points</i>. For every four old points that formed the vertices of a 1x1 square, Wojtek would draw a point in the middle of that square. Once he had drawn all such new points, he took an eraser and erased all the old points. </p> <br /><br /> <p> An example is shown in the picture below. On the left is Wojtek's original paper. In the middle is the same paper with the new points filled in. (For clarity, the old points are black and the new ones are red.) On the right is the paper after the old points were erased. </p> <br /><br /> <p> <img src=\"http://www.topcoder.com/contest/problem/DrawingPointsDivOne/DrawingPoints1.png\" />&nbsp; <img src=\"http://www.topcoder.com/contest/problem/DrawingPointsDivOne/DrawingPoints22.png\" />&nbsp; <img src=\"http://www.topcoder.com/contest/problem/DrawingPointsDivOne/DrawingPoints3.png\" /> </p> <br /><br /> <p> He has been playing for a while when he was called downstairs to dinner. He looked at the paper with a surprised face and wondered how many steps he had made. </p> <br /><br /> <p> You are given two int[]s <b>x</b>, <b>y</b> of some equal length n. They describe all of the points that were drawn by Wojtek in the last step of his play. More precisely, you may assume that there are real numbers (not necessarily integers) dy and dx such that the following holds: </p>\n <ul> \n  <li>For each i between 0 and n-1, there is a point at coordinates (dx+<b>x</b>[i], dy+<b>y</b>[i]).</li> \n  <li>There are no other points anywhere on the paper, only those that follow from the previous statement.</li> \n </ul> <p></p> <br /><br /> <p> Return the maximum number of steps Wojtek could have made. If there is no maximum (that is, if the number of steps can be arbitrarily large), return -1 instead. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"Note that the points drawn by Wojtek in the last step of his play could have non-integer coordinates."
+		},
+		{
+			"order":2,
+			"val":"The paper used by Wojtek could have been arbitrarily large. In other words, ignore the paper size, it does not limit the number of steps in any way."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DrawingPointsDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxSteps",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxSteps(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 0}",
+			"id":0,
+			"input":"{0, 3}",
+			"note":"An example scenario:  ",
+			"order":1
+		},
+		{
+			"expect":"{0,0}",
+			"id":0,
+			"input":"{0,2}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{3}",
+			"id":0,
+			"input":"{-70}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{5,-24,-2,-4,23,14,1,70,-26,45,15,48,32,-41,54,-47,-67,-46,-9,-53,54,28,-61,11,53,68, -33,62,37,-8,-17,-17,48,19,-49,56,-41,16,17,-50,28,59,10,50,23,-16,56,31,-70,-44}",
+			"id":0,
+			"input":"{-41,-40,1,-11,-32,-7,24,-11,49,-15,-22,20,-8,54,54,69,16,-30,36,-6,-30,40,64,20,-66, -37,-33,-18,-35,36,9,61,-43,45,5,60,-8,-58,65,-66,41,12,34,-11,-57,-38,46,63,-55,3}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of x will be between -70 and 70, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of y will be between -70 and 70, inclusive."
+		},
+		{
+			"order":5,
+			"val":"No two points described by x and y will be the same."
+		}
+	]
+}

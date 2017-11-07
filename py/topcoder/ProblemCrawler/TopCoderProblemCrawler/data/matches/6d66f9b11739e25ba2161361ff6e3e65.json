@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":147.81,
+			"constraints":[],
+			"correctRatio":61.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10724&rd=14149",
+			"name":"ColorfulStrings",
+			"notes":[],
+			"submission":589
+		},
+		{
+			"avgPts":320.04,
+			"constraints":[],
+			"correctRatio":68.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10739&rd=14149",
+			"name":"ColorfulDecoration",
+			"notes":[],
+			"submission":163
+		},
+		{
+			"avgPts":368.17,
+			"constraints":[],
+			"correctRatio":12.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10741&rd=14149",
+			"name":"ColorfulMaze",
+			"notes":[],
+			"submission":16
+		}
+	],
+	"name":"Single Round Match 464 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14149"
+}

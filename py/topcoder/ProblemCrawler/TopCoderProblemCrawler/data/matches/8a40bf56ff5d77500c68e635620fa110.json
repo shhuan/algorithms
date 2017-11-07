@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":228.16,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=64&rd=2005",
+			"name":"Series",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":343.59,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=65&rd=2005",
+			"name":"IntSplit",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":541.76,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=66&rd=2005",
+			"name":"Nails",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"Collegiate Challenge > Semifinals",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=2005"
+}

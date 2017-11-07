@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.07,
+			"constraints":[],
+			"correctRatio":75.04,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12386&rd=15492",
+			"name":"NewArenaPassword",
+			"notes":[],
+			"submission":617
+		},
+		{
+			"avgPts":254.15,
+			"constraints":[],
+			"correctRatio":28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12420&rd=15492",
+			"name":"EllysBulls",
+			"notes":[],
+			"submission":225
+		},
+		{
+			"avgPts":589.46,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12374&rd=15492",
+			"name":"NextAndPrev",
+			"notes":[],
+			"submission":6
+		}
+	],
+	"name":"Single Round Match 572 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15492"
+}

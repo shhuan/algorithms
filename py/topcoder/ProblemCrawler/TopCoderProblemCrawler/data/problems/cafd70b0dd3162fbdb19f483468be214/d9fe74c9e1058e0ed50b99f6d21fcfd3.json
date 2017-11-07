@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4517&rd=9898",
+	"statement":"Our mile-long airport runway needs to be inspected. We have made patches on it over the last year. The patches that have been completely covered by later patches so that no area is left exposed don't have to be inspected, but all the other patches do. <p> Create a class Runway that contains a method inspect that is given int[]s <b>x0</b> and <b>x1</b> indicating the locations of the patches and that returns the number of patches that must be inspected. </p><p> The ith elements of <b>x0</b> and <b>x1</b> refer to the end positions of a single patch. The elements are given in chronological order with earlier patches before later patches. A patch includes its endpoints and all the area between them. A patch whose endpoints are both the same has NO area and never needs to be inspected. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Runway",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"inspect",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int inspect(int[] x0, int[] x1)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{7,2,6,50,500,0}",
+			"id":0,
+			"input":"{3,4,0,2,100,5280}",
+			"note":" That last patch covered the entire runway. The earlier patches do not have to be inspected since they are entirely hidden. ",
+			"order":1
+		},
+		{
+			"expect":"{6,3,3}",
+			"id":0,
+			"input":"{2,6,2}",
+			"note":" The patches between 6 and 3, and between 2 and 3 are visible, and completely cover the earlier patch from 2 to 6.",
+			"order":2
+		},
+		{
+			"expect":"{1,2,3,4,5,6}",
+			"id":0,
+			"input":"{1,2,3,4,5,6}",
+			"note":"These are six separate patches, but none of them have any area so no patches are visible.",
+			"order":3
+		},
+		{
+			"expect":"{6,7,6,5,4}",
+			"id":0,
+			"input":"{4,7,6,5,4}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x0 and x1 will have the same number of elements, between 1 and 50 inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of x0 and of x1 will be between 0 and 5280 inclusive."
+		}
+	]
+}

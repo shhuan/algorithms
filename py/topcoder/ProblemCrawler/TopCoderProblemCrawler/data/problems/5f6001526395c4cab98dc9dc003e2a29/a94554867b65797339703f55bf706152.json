@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4571&rd=7225",
+	"statement":"<p> I really love watching television. If it were possible, I would watch for 24 hours per day! I'm particularly fond of programs that are broadcast at the same time every day (such as the news, sports and series). Going through the TV guide I selected all the <b>programs</b> that are worth watching. </p> <p> Each element of <b>programs</b> describes a TV program I'd like to watch. An element is formatted as follows: &quot;begintime - endtime&quot; (quotes for clarity), where begintime and endtime are times in 12 hour notation. A valid time in 12 hour notation looks like &quot;hh:mmXX&quot;, where hh contains exactly two digits and 01&lt;=hh&lt;=12, mm contains exactly two digits and 00&lt;=mm&lt;=59, and XX is either AM or PM. Programs with a later begintime than endtime wrap around the clock to the next day. If begintime and endtime are equal, the program lasts for 24 hours. </p> <p> I don't want to see parts of TV programs; I either want to see the whole program or none of it. What is the maximum number of minutes that I can spend per day watching my favorite programs? </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TVWatching",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"mostMinutes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int mostMinutes(String[] programs)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 780",
+			"id":0,
+			"input":"{\"09:00AM - 12:00PM\", \"02:00PM - 07:00PM\", \"09:00PM - 02:00AM\"}",
+			"note":"Since the three programs don't overlap, you can watch each of them.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 605",
+			"id":0,
+			"input":"{\"01:15PM - 11:20PM\", \"08:00AM - 04:13PM\", \"03:12PM - 12:06AM\", \"02:00PM - 02:01PM\" }",
+			"note":"Watch the first program. The others have some overlap with it.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1440",
+			"id":0,
+			"input":"{\"12:34PM - 12:34PM\"}",
+			"note":"Same times indicate a 24 hour TV show.",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"programs has between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of programs is formatted as described in the problem statement."
+		}
+	]
+}

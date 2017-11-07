@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":210.02,
+			"constraints":[],
+			"correctRatio":39.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=103&rd=3013",
+			"name":"Hands",
+			"notes":[],
+			"submission":28
+		},
+		{
+			"avgPts":355.81,
+			"constraints":[],
+			"correctRatio":80,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=104&rd=3013",
+			"name":"Inheritance",
+			"notes":[],
+			"submission":30
+		},
+		{
+			"avgPts":435.79,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=105&rd=3013",
+			"name":"Regex",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"Single Round Match 14 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=3013"
+}

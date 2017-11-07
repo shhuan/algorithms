@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/huash/git/Algorithm_Private/py/codechef/challenge2015/F_DevuAndHisThreeHands.py", line 36, in <module>
+    for b in range(a+1, N+1):
+KeyboardInterrupt

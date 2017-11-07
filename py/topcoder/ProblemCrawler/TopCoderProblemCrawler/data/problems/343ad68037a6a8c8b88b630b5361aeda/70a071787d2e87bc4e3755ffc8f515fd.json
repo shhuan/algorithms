@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12158&rd=15180",
+	"statement":"Surrounding Game is a single-player game played on a rectangular grid of cells. Cells are considered adjacent if they share a common side. (Hence, each cell has at most four adjacent cells. The cells on the sides and in the corners of the grid have fewer adjacent cells than the ones inside the grid.) <br /><br /><br /><br /> The game is played by placing stones into some of the cells. Each cell may only contain at most one stone. A cell is called dominated if at least one of the following two conditions holds: \n <ul> \n  <li>The cell contains a stone.</li> \n  <li>All cells adjacent to the cell contain stones.</li> \n </ul> <br /><br /> Each cell of the grid contains two numbers, each from 0 to 61, inclusive: the cost of placing a stone into the cell, and the benefit from dominating the cell. At the end of the game, the overall score of the player is the sum of all benefits minus the sum of all costs. <br /><br /><br /><br /> You are given the String[]s <b>cost</b> and <b>benefit</b>. The characters <b>cost</b>[i][j] and <b>benefit</b>[i][j] represent the two numbers written in the cell (i,j), using the following encoding: \n <ul> \n  <li>Characters '0'-'9' represent numbers 0-9.</li> \n  <li>Characters 'a'-'z' represent numbers 10-35.</li> \n  <li>Characters 'A'-'Z' represent numbers 36-61.</li> \n </ul> <br /><br /> For example, if character 7 of element 4 of <b>cost</b> is 'B', the cost of placing a stone into the cell (4,7) is 37. <br /><br /><br /><br /> Calculate and return the maximal possible score for the given grid.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SurroundingGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxScore",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxScore(String[] cost, String[] benefit)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"21\",\"12\"}",
+			"id":0,
+			"input":"{\"21\",\"12\"}",
+			"note":"The optimal solution is to put stones into (0,1) and (1,0). All the cells will be dominated and the overall score will be 6 - 2 = 4.",
+			"order":1
+		},
+		{
+			"expect":"{\"11\",\"11\"}",
+			"id":0,
+			"input":"{\"ZZ\",\"ZZ\"}",
+			"note":"The optimal solution is to put no stones. It is impossible to get a positive score. ",
+			"order":2
+		},
+		{
+			"expect":"{\"aaa\",\"aZa\",\"aaa\"}",
+			"id":0,
+			"input":"{\"XXX\",\"XXX\",\"XXX\"}",
+			"note":"The optimal solution is to put a stone into (1,1). ",
+			"order":3
+		},
+		{
+			"expect":"{\"123A\",\"45BC\"}",
+			"id":0,
+			"input":"{\"asam\",\"atik\"}",
+			"order":4
+		},
+		{
+			"expect":"{\"IIIIIIII\", \"II0000II\", \"II0II0II\", \"II0II0II\", \"II0000II\", \"II0II0II\", \"II0II0II\", \"II0000II\", \"IIIIIIII\"} ",
+			"id":0,
+			"input":"{\"IIIIIIII\", \"IIWWWWII\", \"IIWIIIII\", \"IIWIIIII\", \"IIWWWWII\", \"IIIIIWII\", \"IIIIIWII\", \"IIWWWWII\", \"IIIIIIII\"} ",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cost will contain between 2 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"cost and benefit will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of cost will contain between 2 and 20 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of cost will contain the same number of characters."
+		},
+		{
+			"order":5,
+			"val":"Each element of benefit will contain the same number of characters as element 0 of cost."
+		},
+		{
+			"order":6,
+			"val":"Each character in cost and benefit will be a character from '0'-'9','a'-'z', or 'A'-'Z'."
+		}
+	]
+}

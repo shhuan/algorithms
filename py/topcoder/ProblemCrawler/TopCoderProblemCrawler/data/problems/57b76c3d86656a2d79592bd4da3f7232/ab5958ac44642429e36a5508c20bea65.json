@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6191&rd=9817",
+	"statement":"You are given several colored bricks. Every face of each brick has some color. Only seven colors are used. Two bricks are equal if they have the same colors on corresponding faces, permitting arbitrary rotations in space. Return the minimum number of faces that must be repainted for all the bricks to be equal. You are given a String[] <b>bricks</b>, each element of which represents a single brick. Each brick is represented as a 6 character string containing the colors of the 6 faces in the following order: front, right, back, left, top and bottom. The digits '0' through '6' are used to denote the seven colors. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ColoredBricks",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minRepaints",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minRepaints(String[] bricks)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"012345\", \"012354\"}",
+			"note":"These bricks are not the same.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"012345\", \"301245\"}",
+			"note":"These bricks are the same.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"012012\", \"345345\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 18",
+			"id":0,
+			"input":"{\"000000\", \"111111\", \"222222\", \"333333\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"062413\", \"041246\", \"043134\", \"125611\"}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"bricks will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of bricks will contain exactly six characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of bricks will contain only the digits '0'-'6'."
+		}
+	]
+}

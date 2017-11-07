@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":246.12,
+			"constraints":[],
+			"correctRatio":81.41,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=310&rd=4095",
+			"name":"Tree",
+			"notes":[],
+			"submission":199
+		},
+		{
+			"avgPts":314.47,
+			"constraints":[],
+			"correctRatio":35.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=430&rd=4095",
+			"name":"StringPack",
+			"notes":[],
+			"submission":136
+		},
+		{
+			"avgPts":553.12,
+			"constraints":[],
+			"correctRatio":26.47,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=382&rd=4095",
+			"name":"GasStation",
+			"notes":[],
+			"submission":34
+		}
+	],
+	"name":"Motorola Single Round Match 73 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4095"
+}

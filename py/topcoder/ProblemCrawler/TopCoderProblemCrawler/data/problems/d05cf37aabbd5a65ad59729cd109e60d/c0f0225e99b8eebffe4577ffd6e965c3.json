@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13355&rd=16081",
+	"statement":"A shadow sculpture is a 3D object that seems amorphous but casts a beautiful shadow. <br /><br /> <br /><br /> <br /><br /> You want to create a simple shadow sculpture that will consist of unit cubes. More precisely, imagine an n*n*n cube that is aligned with the coordinate axes and divided into unit cubes. Your sculpture will consist of some of those unit cubes (possibly none or all of them). The unit cubes have coordinates (x,y,z) where 0 &lt;= x,y,z &lt; n. <br /><br /> <br /><br /> <br /><br /> You have already determined three shadows your sculpture should cast: its orthogonal projections onto the XY, YZ, and ZX plane. You are given their description in three String[]s: <b>XY</b>, <b>YZ</b>, and <b>ZX</b>. <br /><br /> <br /><br /> <br /><br /> Their meaning is as follows: For each i and j, the character <b>XY</b>[i][j] is either 'Y' or 'N'. The character 'Y' means that the unit square (i,j) of the projection is dark. In other words, if <b>XY</b>[i][j] is 'Y', at least one of the cubes with coordinates (i,j,k) has to be a part of your sculpture. On the other hand, if <b>XY</b>[i][j] is 'N', none of the cubes with coordinates (i,j,k) may belong into your sculpture. <b>YZ</b> and <b>ZX</b> describe the other two projections in the same way. E.g., if <b>ZX</b>[i][j] is 'Y', you have to use at least one of the cubes (j,k,i). <br /><br /> <br /><br /> <br /><br /> Finally, there is one last constraint: Your entire sculpture has to be 6-connected. (Formally: Your sculpture must form one connected component, given that two cubes are adjacent iff they share a common face.) <br /><br /> <br /><br /> <br /><br /> Return &quot;Possible&quot; if it is possible to construct a sculpture that matches all the given constraints. Otherwise, return &quot;Impossible&quot;.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ShadowSculpture",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"possible",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String possible(String[] XY, String[] YZ, String[] ZX)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"YN\",\"NN\"}",
+			"id":0,
+			"input":"{\"YN\",\"NN\"}",
+			"note":"It is possible: we only have one solid cell at (0, 0, 0).",
+			"order":1
+		},
+		{
+			"expect":"{\"YN\",\"NY\"}",
+			"id":0,
+			"input":"{\"YN\",\"NY\"}",
+			"note":"Here it is impossible to make a valid sculpture. Note that you can make all three projections look right by using exactly two cubes: (0,0,0) and (1,1,1). However, this sculpture is not 6-connected.",
+			"order":2
+		},
+		{
+			"expect":"{\"YYY\",\"YNY\",\"YYY\"}",
+			"id":0,
+			"input":"{\"YYY\",\"YNY\",\"YYY\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{\"NYY\",\"YNY\",\"YYY\"}",
+			"id":0,
+			"input":"{\"YYY\",\"YNY\",\"YYY\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{\"N\"}",
+			"id":0,
+			"input":"{\"N\"}",
+			"note":"A sculpture that consists of no cubes is connected.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 10, inclusive."
+		},
+		{
+			"order":2,
+			"val":"XY, YZ and ZX will contain exactly n elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of XY, YZ and ZX will contain exactly n characters."
+		},
+		{
+			"order":4,
+			"val":"Each element of XY, YZ and ZX will contain only 'Y' and 'N'."
+		}
+	]
+}

@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3051&rd=5885",
+	"statement":"In a Context-Free Grammar, strings are transformed into other strings during a process called a derivation. In our notation, one step of a derivation occurs when an uppercase letter ('A'-'Z') is turned into a string (possibly empty) of uppercase and lowercase letters ('A'-'Z', 'a'-'z'). For example, <pre>\n     ZaBcD -&gt; ZagHgcD -&gt; ZagHgcF -&gt; ZaggcF -&gt; Zaggcq \n</pre> is a derivation transforming ZaBcD into Zaggcq. A derivation is called <i>leftmost</i> if every derivation step replaces the leftmost uppercase letter. Assuming all valid derivation steps are at your disposal, return the leftmost derivation with the smallest number of steps transforming <b>start</b> into <b>finish</b>. Since all possible derivation rules can be used, during each step, choose the leftmost capital letter, and change it to whichever string you want. If there are multiple possible smallest leftmost derivations, return one that comes first lexicographically. Here smallest is measured by the number of steps. To compare two derivations lexicographically, concatenate all of their intermediate strings, and then compare them. As in ASCII, uppercase letters occur lexicographically before lowercase letters. The returned value should be a String[] containing the sequence of intermediate strings, in the order they are created. Element 0 must be <b>start</b>, and the last element must be <b>finish</b> (see the examples for further clarification). If no leftmost derivation is possible, return an empty String[].",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LeftmostDerivation",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getDeriv",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getDeriv(String start, String finish)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"Zaggcq\"",
+			"id":0,
+			"input":"\"ZaBcD\"",
+			"note":"Although a derivation was shown in the problem statement, there is no leftmost derivation that works.",
+			"order":1
+		},
+		{
+			"expect":"\"ABCDEFGH\"",
+			"id":0,
+			"input":"\"AH\"",
+			"note":"Here we replace A with ABCDEFG.",
+			"order":2
+		},
+		{
+			"expect":"\"abc\"",
+			"id":0,
+			"input":"\"ABC\"",
+			"note":"There are numerous leftmost derivations that take 3 steps, so return the one that occurs first lexicographically.",
+			"order":3
+		},
+		{
+			"expect":"\"aAaa\"",
+			"id":0,
+			"input":"\"AaA\"",
+			"note":"Firstly, we delete the leftmost A by replacing it with the empty string. Next we replace the remaining A with Aaa.",
+			"order":4
+		},
+		{
+			"expect":"\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+			"id":0,
+			"input":"\"AaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAa\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"start will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in start will be an uppercase or lowercase letter ('A'-'Z','a'-'z')."
+		},
+		{
+			"order":3,
+			"val":"finish will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each character in finish will be an uppercase or lowercase letter ('A'-'Z','a'-'z')."
+		},
+		{
+			"order":5,
+			"val":"start and finish will be distinct."
+		}
+	]
+}

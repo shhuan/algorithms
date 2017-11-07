@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2971&rd=5878",
+	"statement":"You will be given a String[] <b>maze</b> containing blank spots ('.' characters), walls ('X' characters), your character (a single 'Y' character), and the destination (a single 'D' character). You have implemented the following naive maze traversal strategy: \n <ul> \n  <li> 1) Initially, set the <i>current direction</i> to Right.</li> \n  <li> 2) If you are on the destination spot, exit this process.</li> \n  <li> 3a) If taking 1 step in the current direction will lead to a blank spot or the destination take the step. </li> \n  <li> 3b) If taking 1 step in the current direction will lead to a wall or will leave the bounds of the maze, change the current direction by turning 45 degrees clockwise. For example, if the current direction is set to Right then turning 45 degrees clockwise will set the current direction to Down-Right.</li> \n  <li> 4) Go to step 2. </li> \n </ul> Character 0 is the leftmost spot in any element of <b>maze</b>. Furthermore, element 0 is the highest element of <b>maze</b>. Return the number of steps required to reach the destination, or -1 if this will never occur. A step is counted when you physically change spots but not when you simply change direction.",
+	"notes":[
+		{
+			"order":1,
+			"val":"If your character is at (element E, character C) of , and the current direction is Down-Right, then taking one step would leave you at (element E+1, character C+1) of . The other diagonal directions are treated analogously."
+		},
+		{
+			"order":2,
+			"val":"The following sequence of directions are formed by consecutively turning 45 degrees clockwise:Right, Down-Right, Down, Down-Left, Left, Up-Left, Up, Up-Right, Right."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BadMazeStrategy",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numSteps",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numSteps(String[] maze)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"XXXXXXX\" ,\"X.....X\" ,\"X.....X\" ,\"XY...DX\" ,\"X.....X\" ,\"XXXXXXX\"}",
+			"note":"After taking 4 steps to the right, we reach the destination.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 7",
+			"id":0,
+			"input":"{\"XXXXXXX\" ,\"XY....X\" ,\"X.....X\" ,\"X.....X\" ,\"X....DX\" ,\"XXXXXXX\"}",
+			"note":"After taking 4 steps to the right, continuing would lead into a wall. After changing direction to Down-Right we are still facing a wall, so we change directions again. Now facing downward we take 3 more steps and reach the destination.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"XXXXXXX\" ,\"XY....X\" ,\"X.....X\" ,\"X..D..X\" ,\"X.....X\" ,\"XXXXXXX\"}",
+			"note":"We keep running around the perimeter while the destination lies in the center.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 27",
+			"id":0,
+			"input":"{\"DY.............\"}",
+			"note":"Don't run off the .",
+			"order":4
+		},
+		{
+			"expect":"Returns: 39",
+			"id":0,
+			"input":"{\"Y..X..............\" ,\"XXX.XXXXXXXXXXXX.X\" ,\".X.X.XX.......D...\" ,\".XX.XXX...........\"} ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maze will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of maze will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of maze will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in maze will be (quotes for clarity) '.', 'X', 'Y', or 'D'."
+		},
+		{
+			"order":5,
+			"val":"maze will contain exactly one 'Y' and one 'D'."
+		}
+	]
+}

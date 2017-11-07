@@ -1,0 +1,118 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13360&rd=16076",
+	"statement":"Your task is to find <b>n</b> positive integers. We will label them x[0] through x[<b>n</b>-1]. <br /><br /> <br /><br /> <br /><br /> We will give you some information about these integers. Namely, for some pairs of integers we will tell you their greatest common divisor (GCD), and for some pairs we will tell you their least common multiple (LCM). <br /><br /> <br /><br /> <br /><br /> You are given the int <b>n</b>. You are also given a String <b>type</b> and three int[]s: <b>A</b>, <b>B</b>, and <b>C</b>. These int[]s will all have the same number of elements, and <b>type</b> will contain the corresponding number of characters. Their meaning is as follows: For each valid i, we have some information about the integers x[ <b>A</b>[i] ] and x[ <b>B</b>[i] ]. If <b>type</b>[i] is 'G', the greatest common divisor of these two integers must be <b>C</b>[i]. If <b>type</b>[i] is 'L', the least common multiple of these two integers must be <b>C</b>[i]. <br /><br /> <br /><br /> <br /><br /> Return &quot;Solution exists&quot; (quotes for clarity) if there is at least one way to choose x[0] through x[<b>n</b>-1] so that all requirements are satisfied. Otherwise, return &quot;Solution does not exist&quot;.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GCDLCM",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"possible",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String, int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String possible(int n, String type, int[] A, int[] B, int[] C)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"GLGLGLGL\"",
+			"id":0,
+			"input":"4",
+			"note":"We have 4 unknown integers: x[0], x[1], x[2], and x[3]. The given , , , and  encode the following information:  There are two valid solutions. In one of them, x[0] = x[2] = 6 and x[1] = x[3] = 12.",
+			"order":1
+		},
+		{
+			"expect":"\"GLGLGLGLGL\"",
+			"id":0,
+			"input":"5",
+			"note":"This time we have no solution.",
+			"order":2
+		},
+		{
+			"expect":"\"GGGGGGGGGG\"",
+			"id":0,
+			"input":"11",
+			"note":"One possible solution is: {6469693230,2,3,5,7,11,13,17,19,23,29}. Note that the numbers in our solution can be very large.",
+			"order":3
+		},
+		{
+			"expect":"\"GLLGGGLGLLGL\"",
+			"id":0,
+			"input":"12",
+			"note":"One possible solution: each x[i] is equal to 1000000000.",
+			"order":4
+		},
+		{
+			"expect":"\"GLLGGGLGLLGL\"",
+			"id":0,
+			"input":"12",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"\"G\"",
+			"id":0,
+			"input":"200",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 200, inclusive."
+		},
+		{
+			"order":2,
+			"val":"A will contain between 1 and 200 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"A and B will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"A and C will contain the same number of elements."
+		},
+		{
+			"order":5,
+			"val":"The number of elements in A will be the same as the number of characters in type"
+		},
+		{
+			"order":6,
+			"val":"Each character in type will be 'G' or 'L'."
+		},
+		{
+			"order":7,
+			"val":"Each element in A will be between 0 and n-1, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Each element in B will be between 0 and n-1, inclusive."
+		},
+		{
+			"order":9,
+			"val":"For each i, A[i] and B[i] will be different."
+		},
+		{
+			"order":10,
+			"val":"Each element in C will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12434&rd=15704",
+	"statement":"Once again, Fox Ciel is practicing splitting. This time there are N cells arranged into a circle. The cells are numbered 0 through N-1 around the circle (with cell N-1 being adjacent to cell 0).<br /><br /> <br /><br /> <br /><br /> At the beginning, there was exactly 1 fox in cell 0, and all the remaining cells were empty. Then there were two rounds of splitting, as described below.<br /><br /> <br /><br /> <br /><br /> There is some unknown splitting pattern P: a sequence of N non-negative integers. The pattern should also be considered cyclic: P[N-1] is adjacent to P[0]. The pattern is known to be symmetric around 0. Formally, for each i, P[i mod N] = P[(-i) mod N].<br /><br /> <br /><br /> <br /><br /> For example, for N=5 one valid pattern is P=(3,1,4,4,1). Note that for N=5 we must have P[1]=P[4] and P[2]=P[3].<br /><br /> <br /><br /> <br /><br /> We will now describe what happens when a fox splits. Assume that the fox is currently in the cell x. The fox that splits disappears. In its place, new foxes appear according to the pattern P. For each i from 0 to N-1, inclusive, P[i] new foxes appear in the cell (x+i) mod N.<br /><br /> <br /><br /> <br /><br /> In each round of splitting, all of the currently present foxes split at the same time, independent from each other. All the foxes use the same splitting pattern P.<br /><br /> <br /><br /> <br /><br /> You are given a int[] <b>amount</b> with N elements. For each i, <b>amount</b>[i] is the number of foxes in cell i after the second round of splitting. Your goal is to recover and return the pattern P. If there are multiple possibilities, return the lexicographically smallest one. If there is no pattern P that can produce <b>amount</b>, return {-1}. (I.e., the return value should be a int[] with 1 element, and the value of the element should be -1.)",
+	"notes":[
+		{
+			"order":1,
+			"val":"Given two different N-element sequences of non-negative integers, the lexicographically smaller one is the one with the smaller element on the smallest index where they differ."
+		},
+		{
+			"order":2,
+			"val":"The 'mod N' operator used in the problem statement is the mathematical 'modulo N' operator that always returns an integer between 0 and N-1, inclusive. For example, (-3) mod 10 = 7."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SplittingFoxes2",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getPattern",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] getPattern(int[] amount)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {0, 1, 0, 0, 1 }",
+			"id":0,
+			"input":"{2,0,1,1,0}",
+			"note":"In each step each fox splits into two new ones: one in the cell to its left and one in the cell to its right.",
+			"order":1
+		},
+		{
+			"expect":"Returns: {0, 0, 0, 1, 0, 0 }",
+			"id":0,
+			"input":"{1,0,0,0,0,0}",
+			"note":"Note that P = {1, 0, 0, 0, 0, 0} would also produce the final state given in . The correct return value is lexicographically smaller than this one.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {-1 }",
+			"id":0,
+			"input":"{2,0,0,0,0,0}",
+			"note":"There is no solution in this case.",
+			"order":3
+		},
+		{
+			"expect":"Returns: {1, 0, 2, 0, 1, 0, 2, 0 }",
+			"id":0,
+			"input":"{10,0,8,0,10,0,8,0}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: {0, 59, 90, 76, 22, 76, 90, 59 }",
+			"id":0,
+			"input":"{35198,27644,22185,26896,34136,26896,22185,27644}",
+			"note":"This time we have 8 solutions: ",
+			"order":5
+		},
+		{
+			"expect":"Returns: {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }",
+			"id":0,
+			"input":"{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"amount will contain between 1 and 25 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"For each i, amount[i mod N] will be equal to amount[(-i) mod N], where N is the number of elements in amount."
+		},
+		{
+			"order":3,
+			"val":"Each element in amount will be between 0 and 1,000,000, inclusive."
+		}
+	]
+}

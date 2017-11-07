@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":189.97,
+			"constraints":[],
+			"correctRatio":97.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13119&rd=15950",
+			"name":"SpamChecker",
+			"notes":[],
+			"submission":1961
+		},
+		{
+			"avgPts":305.93,
+			"constraints":[],
+			"correctRatio":58.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13118&rd=15950",
+			"name":"WolvesAndSheep",
+			"notes":[],
+			"submission":519
+		},
+		{
+			"avgPts":540.77,
+			"constraints":[],
+			"correctRatio":65.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13117&rd=15950",
+			"name":"EagleInZoo",
+			"notes":[],
+			"submission":83
+		}
+	],
+	"name":"2014 TCO Algorithm > Round 1B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15950"
+}

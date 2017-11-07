@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":213.2,
+			"constraints":[],
+			"correctRatio":84.31,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2343&rd=4770",
+			"name":"Hangman",
+			"notes":[],
+			"submission":153
+		},
+		{
+			"avgPts":286.54,
+			"constraints":[],
+			"correctRatio":40,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2344&rd=4770",
+			"name":"AlienMultiplication",
+			"notes":[],
+			"submission":20
+		},
+		{
+			"avgPts":620.46,
+			"constraints":[],
+			"correctRatio":37.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2342&rd=4770",
+			"name":"SquareFree",
+			"notes":[],
+			"submission":16
+		}
+	],
+	"name":"Single Round Match 190 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4770"
+}

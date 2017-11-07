@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":210.47,
+			"constraints":[],
+			"correctRatio":98.96,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6136&rd=9925",
+			"name":"DrawTree",
+			"notes":[],
+			"submission":96
+		},
+		{
+			"avgPts":268.24,
+			"constraints":[],
+			"correctRatio":67.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6142&rd=9925",
+			"name":"MonotoneSEMin",
+			"notes":[],
+			"submission":56
+		},
+		{
+			"avgPts":585.95,
+			"constraints":[],
+			"correctRatio":36.36,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6110&rd=9925",
+			"name":"TreeReconstruct",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"TCO 06 > Online Round 4",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9925"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":191.74,
+			"constraints":[],
+			"correctRatio":97.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5950&rd=8076",
+			"name":"DancingSentence",
+			"notes":[],
+			"submission":381
+		},
+		{
+			"avgPts":385.83,
+			"constraints":[],
+			"correctRatio":72.92,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4838&rd=8076",
+			"name":"DivisiblePermutations",
+			"notes":[],
+			"submission":144
+		},
+		{
+			"avgPts":472.07,
+			"constraints":[],
+			"correctRatio":12.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5874&rd=8076",
+			"name":"SwapSorter",
+			"notes":[],
+			"submission":98
+		}
+	],
+	"name":"Single Round Match 279 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8076"
+}

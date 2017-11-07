@@ -1,0 +1,60 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10548&rd=13903",
+	"statement":"A triangle with positive area has been positioned on the plane in such a way that all of its vertices are located at integer coordinates. The lengths of two sides of this triangle are equal to sqrt(<b>A</b>) and sqrt(<b>B</b>), where sqrt(X) denotes the square root of X. Return the maximum area this triangle can have. If there is no such triangle, return -1 instead.",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to within a relative or absolute value of 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MaxTriangle",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calculateArea",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double calculateArea(int A, int B)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"order":1
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"3",
+			"order":2
+		},
+		{
+			"expect":"85",
+			"id":0,
+			"input":"41",
+			"note":"One possible triangle has vertices at (-1, 1), (6, -5) and (10, 0).",
+			"order":3
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"A and B will each be between 1 and 2000000000, inclusive."
+	}]
+}

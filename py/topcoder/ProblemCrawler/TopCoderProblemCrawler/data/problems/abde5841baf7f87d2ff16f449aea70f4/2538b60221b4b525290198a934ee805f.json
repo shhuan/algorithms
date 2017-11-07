@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=91&rd=3009",
+	"statement":"<pre>Class Name: MetricClock\nMethod Name: convertToMetric\nParameters: String\nReturns: String\n\nImplement a class MetricClock, which contains a method convertToMetric.\nconvertToMetric takes a String in the form &quot;HH:MM:SS&quot; (where HH is between 00\nand 23, MM is between 00 and 59 and SS is between 00 and 59) representing the\ncurrent time of day according to standard clocks (in military time), and\nreturns a String in the form &quot;H:MM:SS&quot; (where H is between 0 and 9, MM is\nbetween 00 and 99, and SS is between 00 and 99) representing the current time\nof day according to the metric clock.\n\nAccording to the metric clock, there are 10 metric hours in a day, 100 metric\nminutes in a metric hour, and 100 metric seconds in a metric minute.  There are\n86400 standard seconds in a day, thus 86400 standard seconds make up 1 metric\nday (100000 metric seconds).  The metric clock day starts at 0:00:00 and ends\nat 9:99:99.\n\nWhen converting to the metric clock, partial seconds are always truncated, not\nrounded.  (9:20:38.833... returns 9:20:38.)\n\nHere is the method signature:\npublic String convertToMetric(String strStandardTime);\n\nstrStandardTime is of the form above.\n\nExamples:\nGiven the String &quot;01:45:17&quot;, the method returns &quot;0:73:11&quot;\nGiven the String &quot;03:17:45&quot;, the method returns &quot;1:37:32&quot;\nGiven the String &quot;08:12:22&quot;, the method returns &quot;3:41:92&quot;\nGiven the String &quot;12:00:00&quot;, the method returns &quot;5:00:00&quot;\nGiven the String &quot;12:15:21&quot;, the method returns &quot;5:10:65&quot;\nGiven the String &quot;19:58:59&quot;, the method returns &quot;8:32:62&quot;\nGiven the String &quot;23:59:59&quot;, the method returns &quot;9:99:98&quot;\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MetricClock",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"convertToMetric",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String convertToMetric(String param0)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

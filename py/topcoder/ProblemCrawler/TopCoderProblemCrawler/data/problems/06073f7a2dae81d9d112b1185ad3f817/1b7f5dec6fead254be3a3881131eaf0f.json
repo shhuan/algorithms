@@ -1,0 +1,69 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1140&rd=4690",
+	"statement":"Our warehouse is square, 200 feet on each side, with solid north and south walls. The east and west walls have sliding doors which allow trucks free entry and exit. Trucks come in a variety of sizes, but the width of each truck is an integer number of feet. Unfortunately the roof is supported by posts (of negligible size). <p> We want to drive big trucks in a straight line into the warehouse through the west wall and (after unloading and without changing direction) out through the east wall. Create a class Warehouse that contains the method feetWide that takes the positions of the posts as inputs and returns the width of the widest truck (of integral width) that can drive straight through without touching any posts (or the north or south wall). The positions of the posts are given by int[] <b>x</b> and int[] <b>y</b>: the i-th element of <b>x</b> and <b>y</b> gives the distance in feet east and north respectively from the southwest corner of the building to the i-th post. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Warehouse",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"feetWide",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int feetWide(int[] x, int[] y)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{200}",
+			"id":0,
+			"input":"{0}",
+			"note":"The only post is at one of the corners of the building. ",
+			"order":1
+		},
+		{
+			"expect":"{60,140,180}",
+			"id":0,
+			"input":"{100,100,120}",
+			"note":"The best path is due east, but the first and second posts are only 80 feet apart so the truck must be less than 80 feet wide.",
+			"order":2
+		},
+		{
+			"expect":"{60,140}",
+			"id":0,
+			"input":"{100,120}",
+			"note":"The best path is a little south of east, going between the two posts. The distance between the posts is sqrt(6800) = 82.xxx",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x has between 1 and 50 elements inclusive"
+		},
+		{
+			"order":2,
+			"val":"y has the same number of elements as x"
+		},
+		{
+			"order":3,
+			"val":"each element of x and y is between 0 and 200 inclusive"
+		}
+	]
+}

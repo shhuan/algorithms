@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":235.26,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=232&rd=4013",
+			"name":"CenterString",
+			"notes":[],
+			"submission":39
+		},
+		{
+			"avgPts":372.14,
+			"constraints":[],
+			"correctRatio":85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=233&rd=4013",
+			"name":"EncodeMIME",
+			"notes":[],
+			"submission":40
+		},
+		{
+			"avgPts":526.97,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=234&rd=4013",
+			"name":"Structure",
+			"notes":[],
+			"submission":28
+		}
+	],
+	"name":"Single Round Match 42 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4013"
+}

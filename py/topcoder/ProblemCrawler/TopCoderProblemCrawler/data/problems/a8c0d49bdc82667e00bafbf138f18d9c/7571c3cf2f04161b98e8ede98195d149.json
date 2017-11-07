@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6790&rd=10120",
+	"statement":"<p> Given a rectangular grid consisting of the characters '#' and '.', find two non-overlapping diamond shapes among the '#' characters such that the sum of their radii is maximized. There is a diamond with radius <i>r</i> centered at <i>x<sub>C</sub></i>, <i>y<sub>C</sub></i> if all characters at position <i>x</i>, <i>y</i> (where |<i>x</i> - <i>x<sub>C</sub></i>| + |<i>y</i> - <i>y<sub>C</sub></i>| + 1 &lt;= <i>r</i>) in the grid are '#'. The left grid below contains a diamond with radius 3. All the '#' characters in the grid are part of this diamond. The right grid contains a diamond with radius 2. It is centered at (2, 1) and contains five '#' characters (coordinates are zero-based). </p> <pre>\n{ &quot;..#..&quot;,     { &quot;###.&quot;,\n  &quot;.###.&quot;,       &quot;####&quot;,\n  &quot;#####&quot;,       &quot;..##&quot;}\n  &quot;.###.&quot;,\n  &quot;..#..&quot;}\n</pre> <p>Create a class Diamonds that contains the method maxRadiusSum that takes a String[] <b>grid</b> and returns an int, the maximum sum of the radii of two non-overlapping diamonds.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"A diamond can have radius 0. See example 4."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Diamonds",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxRadiusSum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxRadiusSum(String[] grid)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{ \"..#..\", \".###.\", \"#####\", \".###.\", \"..#..\"}",
+			"note":"Here we have one diamond with radius 3. We can either pick that diamond and an empty diamond,  a diamond with radius 2 (there are 5 of them) and another with radius 1 (a single '#'). In both cases, we end up with a sum of 3. Note that all radius 2 diamonds overlap with each other. ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{ \"..#..\", \".###.\", \"#####\", \".####\", \"..#..\"}",
+			"note":"This is the grid from the previous example with one extra '#'. We should now choose the diamond with radius 3 and use the extra '#' as our second diamond (radius 1).",
+			"order":2
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"...###..\", \"..#####.\", \".#######\", \"#######.\", \"######..\", \"#####...\", \".###....\", \"..#.....\"}",
+			"note":"The largest diamond has radius 4, but we should instead take two diamonds of radius 3 to get the maximum sum.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 14",
+			"id":0,
+			"input":"{\"##################################################\", \"#########.########################################\", \"#####..######################.####################\", \".###.#######.#######.######################.###.##\", \"####.#.#####################.#####################\", \"##############.########.#########.################\", \"###################################.##############\", \"#################################..###############\", \"##########.#####################.#########.#######\", \"######.####.############.#########################\", \"##################.##############.################\", \"#############################.##.##.##############\", \"###########..###########.#.########.##############\", \"#.################.######.########################\", \"######.##########.##################.###########.#\", \"###################.########.#####################\", \"##################################################\", \"###############################.##.#######.#######\", \"######.###########################.##############.\", \"######################################.#.#########\", \"###########.#.####################.###########.###\", \"########.#################.#######################\", \"#######.#.####################.###################\", \"###.######################.#####################.#\", \"###################..####.#######.######.#########\", \"#.#################.##############################\", \"###################.#########.####################\", \"########.#########################################\", \"##################################.#############.#\", \"####.##############.###########################.##\", \"##################################.###.#####.#####\", \"###########.##.###########################.#######\", \"################.################.#######.######.#\", \"##################################################\", \"#######.##########################.###############\", \"#################################################.\", \"#########.##############..########################\", \"###.#########################################.####\", \"#####################################.###########.\", \"########################.###############.#.#######\", \"#################################################.\", \"##########################.#######.######.########\", \"##################.########.#.################.###\", \"######.######.###################.#.#.############\", \"####.#########.#########################.#########\", \"##################..#################.############\", \"#####.#.#######################.##.#############.#\", \"####.#############################.###############\", \"##########.########.##############.###.###########\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\".#\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in grid will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements in grid will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in the elements in grid will be either a '#' or a '.'."
+		}
+	]
+}

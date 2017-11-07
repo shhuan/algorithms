@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":151.52,
+			"constraints":[],
+			"correctRatio":85.02,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11934&rd=14734",
+			"name":"PatrolRoute",
+			"notes":[],
+			"submission":327
+		},
+		{
+			"avgPts":306.68,
+			"constraints":[],
+			"correctRatio":48.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11935&rd=14734",
+			"name":"StrangeDictionary2",
+			"notes":[],
+			"submission":79
+		},
+		{
+			"avgPts":631.55,
+			"constraints":[],
+			"correctRatio":10,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11054&rd=14734",
+			"name":"RabbitWorking",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 542 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14734"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.14,
+			"constraints":[],
+			"correctRatio":42.94,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11292&rd=14422",
+			"name":"StonesGame",
+			"notes":[],
+			"submission":354
+		},
+		{
+			"avgPts":250.06,
+			"constraints":[],
+			"correctRatio":35.87,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10801&rd=14422",
+			"name":"AmoebaCode",
+			"notes":[],
+			"submission":184
+		},
+		{
+			"avgPts":550.71,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11179&rd=14422",
+			"name":"AmoebaDivOne",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"Single Round Match 493 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14422"
+}

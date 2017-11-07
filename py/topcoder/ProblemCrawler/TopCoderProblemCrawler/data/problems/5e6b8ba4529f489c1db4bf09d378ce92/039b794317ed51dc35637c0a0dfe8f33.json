@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10761&rd=14240",
+	"statement":"Bunnies like programming and they sometimes make useless devices. <br /><br /> <br /><br /> One group of bunnies made a simple computer that calculates the following function f: <br /><br /> For a positive integer x, \n <ul> \n  <li>f(x) = x / <b>m</b> if x is a multiple of <b>m</b>. </li> \n  <li>f(x) = x + 1 otherwise. </li> \n </ul> where <b>m</b> is a fixed positive integer greater than 1. <br /><br /> <br /><br /> For a positive integer x, we define a sequence {B<sub>k</sub>} by B<sub>0</sub> = x and B<sub>k+1</sub> = f(B<sub>k</sub>). Let g(x) be the smallest index k of this sequence such that B<sub>k</sub> = 1. Calculate the number of positive integers x satisfying g(x) = <b>n</b>, and return the answer modulo 1,000,000,009. ",
+	"notes":[{
+		"order":1,
+		"val":"For any positive integer x, there always exists k such that B = 1. "
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BunnySequence",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getNumber(int m, int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"note":"There are four positive integers x such that f(f(f(x))) = 1. The sequences {B} for them are as follows:  ",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"487",
+			"note":"B = 1 means x = 1. ",
+			"order":2
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"19",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"3",
+			"order":4
+		},
+		{
+			"expect":"487",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"m will be between 2 and 1,000,000, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"n will be between 0 and 1,000,000, inclusive. "
+		}
+	]
+}

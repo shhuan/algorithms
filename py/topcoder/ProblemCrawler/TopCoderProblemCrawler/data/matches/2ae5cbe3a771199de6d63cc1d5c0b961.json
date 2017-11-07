@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":179.6,
+			"constraints":[],
+			"correctRatio":82.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=443&rd=61",
+			"name":"LetterRange",
+			"notes":[],
+			"submission":162
+		},
+		{
+			"avgPts":300.36,
+			"constraints":[],
+			"correctRatio":31.58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=444&rd=61",
+			"name":"Intervals",
+			"notes":[],
+			"submission":76
+		},
+		{
+			"avgPts":593.46,
+			"constraints":[],
+			"correctRatio":63.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=445&rd=61",
+			"name":"AlephNull",
+			"notes":[],
+			"submission":63
+		}
+	],
+	"name":"Sun Microsystems / TopCoder Collegiate Challenge > Regional Quarterfinal W/MW",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=61"
+}

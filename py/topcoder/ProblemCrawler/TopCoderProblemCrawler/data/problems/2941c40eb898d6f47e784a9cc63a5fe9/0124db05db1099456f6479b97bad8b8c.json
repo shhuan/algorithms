@@ -1,0 +1,113 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12828&rd=15809",
+	"statement":"<p>Little Petya likes computer games a lot. Recently he has received one as a gift from his mother. He has reached the final level of this game which can be represented as a rectangular grid described by String[] <b>grid</b>. Every cell of this grid is described by one of the following characters:</p> \n <ul> \n  <li>'#' - represents a cell that contains a wall.</li> \n  <li>'.'(period) - represents an empty cell.</li> \n  <li>'1'..'9', 'a'..'z', 'A'..'Z' - represent a cell that contains a charging station with a given power. Digits '1'..'9' represent numbers from 1 to 9, characters 'a'..'z' represent numbers from 10 to 35, characters 'A'..'Z' represent numbers from 36 to 61.</li> \n  <li>'*' - represents the starting cell.</li> \n  <li>'$' - represents the target cell.</li> \n </ul> <p>There is exactly one starting cell and exactly one target cell. Both of these cells are empty.</p> <p>Petya's character is initially located in the starting cell. Every second he can either perform a move or stay in the same cell. If he decides to make a move, he chooses one of the four directions (up, right, down, left) and a positive integer <i>k</i>. After that the character jumps by <i>k</i> cells in the chosen direction. Note that he can't jump over the walls and the destination cell must not contain a wall as well. This action costs <i>k^2</i> units of energy. For each second Petya's character spends on a cell with a charging station without movement, his energy increases by the power of this charging station.</p> <p>You are also given ints <b>E</b> and <b>T</b>. At the beginning Petya's character has <b>E</b> units of energy. If the level of energy becomes strictly less than 0 the character dies. Petya's goal is to reach the target cell in not more than <b>T</b> seconds. Return the maximal amount of energy Petya can have at the end, or -1 if he can't reach the destination within <b>T</b> seconds while keeping his character alive. Note that the game ends after exactly <b>T</b> seconds from the beginning, not when the character steps on the target cell. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"JumpingOnTheGrid",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxEnergy",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long maxEnergy(String[] grid, int E, int T)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"*$.\", \"#1.\", \"...\"}",
+			"note":"Petya moves his character directly to the target cell. Note that with power 0 the character is still alive.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"*$.\", \"#.1\", \"...\"}",
+			"note":"Even though  is large now, after the first step Petya has no more power, so he cannot reach the charging station.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"*$.\", \"#2.\", \"...\"}",
+			"note":"The optimal strategy is to move one step to the right, then one step down, then to wait for 7 seconds on the charging station, and finally to move one step up.",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"*$.\", \"#aA\", \"...\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"{\"*..Z\", \"##..\", \"#...\", \"...$\"}",
+			"note":"One of the possible optimal strategies is to jump by 2 cells to the right, then jump 1 more cell to the right to reach the charging station. After that we can wait for 1 second there and then jump by 3 cells directly to the target cell.",
+			"order":5
+		},
+		{
+			"expect":"1000000000",
+			"id":0,
+			"input":"{\"#*#..\", \"####.\", \"ZZZZZ\", \"...$.\"}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\"#*#..\", \"#.##.\", \"ZZZZZ\", \"...$.\"}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"grid will contain between 1 and 25 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"All elements of grid will contain the same number of characters."
+		},
+		{
+			"order":3,
+			"val":"Each element of grid will contain between 1 and 25 characters, inclusive."
+		},
+		{
+			"order":4,
+			"val":"grid will contain only characters '.', '#', '*', '$', '1'..'9', 'a'..'z', 'A'..'Z'."
+		},
+		{
+			"order":5,
+			"val":"There will be exactly one character '*' and exactly one character '$' in the grid."
+		},
+		{
+			"order":6,
+			"val":"T will be between 1 and 1 000 000 000, inclusive."
+		},
+		{
+			"order":7,
+			"val":"E will be between 1 and 1 000 000 000, inclusive."
+		}
+	]
+}

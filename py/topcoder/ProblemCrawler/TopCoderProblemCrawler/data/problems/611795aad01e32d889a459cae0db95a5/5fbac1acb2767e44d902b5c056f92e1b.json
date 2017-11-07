@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8545&rd=11123",
+	"statement":"<p> Musical notes are are given the following 12 names, in ascending order: </p> <pre>\n\n    A, A#, B, C, C#, D, D#, E, F, F#, G, G#\n</pre> <p> The names repeat for higher and lower notes, so the note one step higher than &quot;G#&quot; is &quot;A&quot; and the note 5 steps lower than &quot;B&quot; is &quot;F#&quot;. Notes that are a multiple of 12 steps apart have the same name, and for our purposes we will consider them equivalent. </p> <p> Guitars have a number of strings, and each string is tuned to sound one of the 12 notes. The note each string sounds is called its &quot;open&quot; note. Underneath the strings are <i>frets</i>, numbered starting at 1, which are used to change the note a string sounds. If you press a string against the i-th fret with your finger, the note will be i steps higher than the string's open note. (i.e., if you press a string tuned to &quot;C#&quot; against the 3rd fret, it will sound the note &quot;E&quot;). </p> <p> <i>Chords</i> are sets of notes played at the same time. To play a chord on a guitar, each string must sound one of the notes in the chord, and each note in the chord must be played on at least one string. </p> <p> There can be many ways to play the same chord. We measure the difficulty of one way to play a chord as the amount you must stretch your fingers to reach the required frets. Calculate this as the lowest fret used subtracted from the highest fret used, plus 1. Only consider the strings which are pressed against frets -- the strings that are not pressed against frets (and, thus, sound their open note) do not affect the difficultly of a chord. If a chord can be played without using any frets at all, its difficulty is zero. </p> <p> You are given a String[] strings, each element of which is the open note of one string on the guitar, and a String[] chord, each element of which is one note in a chord. Return the lowest possible difficulty value necessary to play that chord. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GuitarChords",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"stretch",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int stretch(String[] strings, String[] chord)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ \"C#\", \"F#\", \"A#\" }",
+			"id":0,
+			"input":"{ \"A\", \"C\", \"F\" }",
+			"note":"The three notes in the chord are each one step higher than the notes played by the three strings. So, you can play this chord by putting your finger on the 1st fret on all three strings. The answer is therefore: (1-1)+1.",
+			"order":1
+		},
+		{
+			"expect":"{ \"E\", \"G#\", \"B\" }",
+			"id":0,
+			"input":"{ \"E\", \"A\", \"D\", \"G\", \"B\", \"E\" }",
+			"note":"The best way to play this chord is with your fingers on the following frets:  All strings are playing a note in the chord, and each note in the chord is played on at least one string. The largest-numbered fret is 2, and the smallest is 1. Therefore the answer is (2-1)+1.",
+			"order":2
+		},
+		{
+			"expect":"{ \"D#\" }",
+			"id":0,
+			"input":"{ \"D#\" }",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{ \"F#\", \"D#\" }",
+			"id":0,
+			"input":"{ \"E\", \"F\" }",
+			"note":"You can play this chord with the 11th fret of the \"E\" string (playing the note \"D#\") and the 13th fret of the \"F\" string (playing the note \"F#\"). (13-11)+1 = 3. ",
+			"order":4
+		},
+		{
+			"expect":"{ \"C\", \"E\", \"G\" }",
+			"id":0,
+			"input":"{ \"C\", \"C\", \"C\" }",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"strings and chord will each contain between 1 and 6 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"chord will not contain more elements than strings."
+		},
+		{
+			"order":3,
+			"val":"Each element of strings and chord will be one of the 12 note names given in the problem statement."
+		},
+		{
+			"order":4,
+			"val":"chord will not contain any duplicate elements."
+		}
+	]
+}

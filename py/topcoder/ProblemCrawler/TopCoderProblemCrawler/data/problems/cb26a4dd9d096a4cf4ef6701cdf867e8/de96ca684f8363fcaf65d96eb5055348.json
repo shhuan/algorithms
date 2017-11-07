@@ -1,0 +1,76 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6598&rd=10001",
+	"statement":"You have a rectangular chocolate bar that consists of <b>width</b> x <b>height</b> square tiles. You can split it into two rectangular pieces by creating a single vertical or horizontal break along tile edges. For example, a 2 x 2 chocolate bar can be divided into two 2 x 1 pieces, but it cannot be divided into two pieces, where one of them is 1 x 1. You can repeat the split operation as many times as you want, each time splitting a single rectangular piece into two rectangular pieces. Your goal is to create a piece consisting of exactly <b>nTiles</b> tiles. Return the minimal number of split operations necessary to reach this goal. If it is impossible, return -1. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Chocolate",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minSplitNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minSplitNumber(int width, int height, int nTiles)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"5",
+			"note":"You can split the chocolate bar into two rectangular pieces 3 x 4 and 2 x 4 by creating a single vertical break. Only one break is necessary.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"12",
+			"note":"The chocolate bar consists of exactly 120 tiles.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"19",
+			"id":0,
+			"input":"17",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"width will be between 1 and 10^9, inclusive."
+		},
+		{
+			"order":2,
+			"val":"height will be between 1 and 10^9, inclusive."
+		},
+		{
+			"order":3,
+			"val":"nTiles will be between 1 and 10^9, inclusive."
+		}
+	]
+}

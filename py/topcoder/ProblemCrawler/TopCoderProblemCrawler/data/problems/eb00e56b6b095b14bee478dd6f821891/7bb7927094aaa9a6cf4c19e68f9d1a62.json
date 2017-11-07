@@ -1,0 +1,77 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4731&rd=8016",
+	"statement":"<p> Children are used to playing with special cubes with letters written on the cubes' faces. The goal of the game is to compose words using such cubes. If you want to compose the word &quot;DOG&quot;, you must find 3 cubes, one containing the letter 'D', one containing the letter 'O', and one containing the letter 'G', and orient them so the proper letters are facing upward. </p> <p> You are also given a String[] <b>words</b>, each element of which contains a word that you would like to spell out using the cubes. Return a int[] containing the 0-based indices of each of the words in <b>words</b> that can be composed using the given cubes. Indices in the return value must be sorted in ascending order. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PlayingCubes",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"composeWords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] composeWords(String[] cubes, String[] words)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"CAT\", \"DOG\", \"PIZZA\"}",
+			"id":0,
+			"input":"{\"ABCDEF\", \"DEFGHI\", \"OPQRST\", \"ZZZZZZ\", \"YYYYYY\"}",
+			"note":"We can form the word \"DOG\" using 'D' from the first cube, 'O' from the third and 'G' from the second. Note that if we had used the second cube to get 'D' instead, we would be missing a 'G'.",
+			"order":1
+		},
+		{
+			"expect":"{\"DOG\", \"CAT\", \"MOUSE\", \"BIRD\", \"CHICKEN\", \"PIG\", \"ANIMAL\"}",
+			"id":0,
+			"input":"{\"ABCDEF\", \"DEFGHI\", \"OPQRST\", \"MNZLSA\", \"QEIOGH\", \"IARJGS\"}",
+			"order":2
+		},
+		{
+			"expect":"{\"AA\", \"AAA\", \"AAAA\", \"AAAAA\", \"AAAAAA\"}",
+			"id":0,
+			"input":"{\"AAAAAA\", \"AAAAAA\", \"AAAAAA\", \"AAAAAA\"}",
+			"order":3
+		},
+		{
+			"expect":"{\"CAT\", \"DOG\", \"PIZZA\"}",
+			"id":0,
+			"input":"{\"ABCDEF\", \"DEFGHI\", \"OPQRST\", \"ZZZZZZ\", \"ZZZZZZ\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cubes will contain between 2 and 8 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of cubes will contain exactly 6 uppercase letters ('A' - 'Z')."
+		},
+		{
+			"order":3,
+			"val":"words will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of words will contain between 2 and 8 uppercase letters ('A' - 'Z'), inclusive."
+		}
+	]
+}

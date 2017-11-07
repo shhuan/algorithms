@@ -1,0 +1,78 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10190&rd=13904",
+	"statement":"Nim is a game in which two players take turns removing stones from heaps. On each turn, a player must choose a single heap and remove one or more stones from that heap. The player who takes the last stone wins.<br /><br /><br /><br /> Alice and Bob are bored with playing Nim over and over again, so they've decided to create a new variation called Ordered Nim. Ordered Nim differs from regular Nim in the following way. The heaps are numbered 0 through n-1 (where n is the number of heaps), and a player can only remove stones from a heap if all the lower-numbered heaps are empty.<br /><br /><br /><br /> You are given a int[] <b>layout</b>, where the i-th element (0-indexed) is the number of stones in heap i at the beginning of the game. Alice will take the first turn. Determine who will win the game, assuming both players play optimally. Return &quot;Alice&quot; if Alice will win, or &quot;Bob&quot; if Bob will win (all quotes for clarity).",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OrderedNim",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winner",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String winner(int[] layout)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"Alice\"",
+			"id":0,
+			"input":"{5}",
+			"note":"Alice takes all 5 stones and wins.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"Bob\"",
+			"id":0,
+			"input":"{1,2}",
+			"note":"According to the rules of the game, Alice is not allowed to take stones from heap 1 because heap 0 is not empty. Her only option is to take the one stone from heap 0. Heap 0 will then be empty, so Bob can take both stones from heap 1 to win the game.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"Alice\"",
+			"id":0,
+			"input":"{2,1}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"Alice\"",
+			"id":0,
+			"input":"{10,9,8,7,6,5,4,3,2,1}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"Bob\"",
+			"id":0,
+			"input":"{1,1,1,1}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"layout will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of layout will be between 1 and 1000000000, inclusive."
+		}
+	]
+}

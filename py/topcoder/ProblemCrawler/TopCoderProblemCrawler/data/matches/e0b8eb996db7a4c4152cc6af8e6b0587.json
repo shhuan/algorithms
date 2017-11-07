@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":203.97,
+			"constraints":[],
+			"correctRatio":86.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2323&rd=5003",
+			"name":"TurretDefense",
+			"notes":[],
+			"submission":124
+		},
+		{
+			"avgPts":302.29,
+			"constraints":[],
+			"correctRatio":44.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2322&rd=5003",
+			"name":"BorelSets",
+			"notes":[],
+			"submission":52
+		}
+	],
+	"name":"2004 TCCC > Qualification Problem Set 4",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5003"
+}

@@ -1,0 +1,108 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12304&rd=15184",
+	"statement":"<p> Given an undirected graph G and a subset of its vertices S, the <i>subgraph of G induced by S</i> (denoted G/S) is defined as the subgraph of the graph G such that the following two conditions are satisfied: </p>\n <ul> \n  <li>The set of vertices of the subgraph G/S is exactly S.</li> \n  <li>For any two vertices x, y in S, there is an edge {x,y} in G/S if and only if there is such an edge in G.</li> \n </ul> In other words, the induced subgraph always contains all the edges of G it may contain, given its vertices. <p></p> <p> In this problem, you are given a tree G containing n vertices and a positive integer <b>k</b>. Initially, the vertices of G are numbered from 0 to n-1, inclusive. The objective is to change this numbering so that all induced subgraphs over {i, i+1, .., i+<b>k</b>-1} are connected, for all 0 &lt;= i &lt;= n-<b>k</b>. How many ways of renumbering are there? </p> <p> The initial tree G is given as two int[]s <b>edge1</b> and <b>edge2</b>, each containing n-1 elements. These two int[]s describe the endpoints of edges. For each i, there is an edge between the vertices <b>edge1</b>[i] and <b>edge2</b>[i]. Let C be the number of ways to renumber the vertices that satisfy the condition above. Your method must return (C modulo 1,000,000,009). </p> ",
+	"notes":[{
+		"order":1,
+		"val":"A tree is a connected graph with no cycles."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"InducedSubgraphs",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getCount(int[] edge1, int[] edge2, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1, 2}",
+			"id":0,
+			"input":"{0, 1}",
+			"note":"Initially, the graph looks as follows:  There are two correct ways to assign the new numbers to its vertices:  and  ",
+			"order":1
+		},
+		{
+			"expect":"{2, 2, 2}",
+			"id":0,
+			"input":"{0, 1, 3}",
+			"note":"The given graph:  Possible numberings are as follows. ",
+			"order":2
+		},
+		{
+			"expect":"{0, 1, 2, 4, 3}",
+			"id":0,
+			"input":"{5, 0, 1, 2, 2}",
+			"note":"The given graph:  Possible ways: ",
+			"order":3
+		},
+		{
+			"expect":"{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}",
+			"id":0,
+			"input":"{0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{0, 0, 10, 3, 0, 6, 1, 1, 12, 12, 7, 11} ",
+			"id":0,
+			"input":"{5, 9, 4, 10, 10, 0, 7, 6, 2, 1, 11, 8} ",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{4, 7, 0, 6, 7, 5, 0} ",
+			"id":0,
+			"input":"{0, 5, 1, 0, 2, 3, 5} ",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}",
+			"id":0,
+			"input":"{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}",
+			"note":"",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"edge1 will contain between 1 and 40 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"edge2 will contain the same number of elements as edge1."
+		},
+		{
+			"order":3,
+			"val":"Each element of edge1 and edge2 will be between 0 and n-1, inclusive, where n is (the number of elements in edge1) + 1."
+		},
+		{
+			"order":4,
+			"val":"A graph represented by edge1 and edge2 will be a tree."
+		},
+		{
+			"order":5,
+			"val":"k will be between 1 and n, inclusive."
+		}
+	]
+}

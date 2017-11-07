@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":182.1,
+			"constraints":[],
+			"correctRatio":68.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13274&rd=16008",
+			"name":"HappyLetterDiv1",
+			"notes":[],
+			"submission":656
+		},
+		{
+			"avgPts":285.87,
+			"constraints":[],
+			"correctRatio":67.13,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13275&rd=16008",
+			"name":"GraphInversions",
+			"notes":[],
+			"submission":286
+		},
+		{
+			"avgPts":487,
+			"constraints":[],
+			"correctRatio":87.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13213&rd=16008",
+			"name":"LaserTowersDiv1",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 627 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16008"
+}

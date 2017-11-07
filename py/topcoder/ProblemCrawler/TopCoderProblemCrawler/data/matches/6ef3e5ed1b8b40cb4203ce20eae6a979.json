@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.58,
+			"constraints":[],
+			"correctRatio":75.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13113&rd=15852",
+			"name":"SplitStoneGame",
+			"notes":[],
+			"submission":667
+		},
+		{
+			"avgPts":284.54,
+			"constraints":[],
+			"correctRatio":34.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13114&rd=15852",
+			"name":"GoodCompanyDivOne",
+			"notes":[],
+			"submission":165
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12742&rd=15852",
+			"name":"SimilarSequencesAnother",
+			"notes":[],
+			"submission":2
+		}
+	],
+	"name":"Single Round Match 619 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15852"
+}

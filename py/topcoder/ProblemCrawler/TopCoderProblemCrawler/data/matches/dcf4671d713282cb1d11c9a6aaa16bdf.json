@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":217.09,
+			"constraints":[],
+			"correctRatio":93.65,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3043&rd=7218",
+			"name":"Generators",
+			"notes":[],
+			"submission":189
+		},
+		{
+			"avgPts":301.18,
+			"constraints":[],
+			"correctRatio":73.68,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4453&rd=7218",
+			"name":"TopFive",
+			"notes":[],
+			"submission":114
+		},
+		{
+			"avgPts":505.08,
+			"constraints":[],
+			"correctRatio":31.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4582&rd=7218",
+			"name":"TwoKings",
+			"notes":[],
+			"submission":22
+		}
+	],
+	"name":"Single Round Match 243 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=7218"
+}

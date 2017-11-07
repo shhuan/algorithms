@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1924&rd=5867",
+	"statement":"You and your friends have decided to create your own encryption scheme (bad idea). An encrypted message consists of 3 parts: \n <ul> \n  <li> 1) A String called the <b>pool</b> </li> \n  <li> 2) A int[] called the <b>data</b> </li> \n  <li> 3) A int[] called the <b>keys</b> </li> \n </ul> To decrypt character i of the message, first find the smallest positive integer k such that<pre>\n          (<b>data</b>[i] * k) % <b>keys</b>[i] = 1   </pre> Above % denotes the modulus operator. Character i of the message will be character j in <b>pool</b>, where j is given by <pre>\n          j = k % (length of <b>pool</b>)</pre> Return the decrypted String. Constraints will ensure that the ith element of <b>data</b> is relatively prime to the ith element of <b>keys</b>. In other words, the largest positive integer that divides <b>data</b>[i] and <b>keys</b>[i] will be 1, for all i. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TerribleEncryption",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"decrypt",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String decrypt(String pool, int[] data, int[] keys)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}",
+			"id":0,
+			"input":"\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"",
+			"order":1
+		},
+		{
+			"expect":"{1,2,3,4,5,6,7,8,9,10,1,2,3,4,5}",
+			"id":0,
+			"input":"\"AEIOUAEIOUaeiouaeiou\"",
+			"order":2
+		},
+		{
+			"expect":"{10,10,10,10,10,10,10,10,10,10,10}",
+			"id":0,
+			"input":"\"abcdeffedcbaABCDEFFEDCBA\"",
+			"order":3
+		},
+		{
+			"expect":"{11,11,11,11,11,11,11,11,11,11,11,11,11,11,11}",
+			"id":0,
+			"input":"\"abcdefghijklmnopqrstuvwxyz\"",
+			"order":4
+		},
+		{
+			"expect":"{1,1,1,1,1,1,1}",
+			"id":0,
+			"input":"\"HmmBlahHmmBlah\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pool will contain between 2 and 50 characters inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in pool will be a letter ('A'-'Z', 'a'-'z')."
+		},
+		{
+			"order":3,
+			"val":"data will contain between 1 and 50 elements inclusive."
+		},
+		{
+			"order":4,
+			"val":"keys will contain the same number of elements as data."
+		},
+		{
+			"order":5,
+			"val":"Each element of data will be between 1 and 100000 inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of keys will be between 2 and 5000 inclusive."
+		},
+		{
+			"order":7,
+			"val":"Element i of keys will be relatively prime to element i of data."
+		}
+	]
+}

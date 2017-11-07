@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12416&rd=15491",
+	"statement":"Fox Ciel is playing the &quot;DJ Box&quot; set of levels in the &quot;Cut the Rope&quot; game on her smartphone. In the current level, she is facing the following problem: <br /><br /> <br /><br /> <br /><br /> The level can be seen as a two-dimensional plane that contains a single candy and some disks. You are given the description of the level: int[]s <b>x</b>, <b>y</b>, and <b>r</b>; and ints <b>sx</b>, <b>sy</b>, <b>tx</b>, and <b>ty</b>. <br /><br /> <br /><br /> <br /><br /> The int[]s <b>x</b>, <b>y</b>, and <b>r</b> describe the disks: For each i, there is a disk centered at (<b>x</b>[i], <b>y</b>[i]) with radius <b>r</b>[i]. Some of the disks may overlap. The candy is initially located at (<b>sx</b>, <b>sy</b>), and the goal of the game is to move it to (<b>tx</b>, <b>ty</b>). <br /><br /> <br /><br /> <br /><br /> The game is played by rotating some of the disks, one after another. More precisely, in each step, Ciel may choose any disk that currently contains the candy, and rotate the disk by any desired angle around its center. The candy rotates with the chosen disk. Other disks are ignored during the rotation. (If the candy is located exactly on the border of a disk, we still consider it to be on the disk.) <br /><br /> <br /><br /> <br /><br /> Return &quot;YES&quot; if she can solve the level in finitely many steps, and &quot;NO&quot; otherwise.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CandyOnDisk",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"ableToAchieve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String ableToAchieve(int[] x, int[] y, int[] r, int sx, int sy, int tx, int ty)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 0}",
+			"id":0,
+			"input":"{0, 4}",
+			"note":"  You have two disks. You can win the level by first rotating the yellow disk to move the candy from S to A = (2,1), and then rotating the green disk to move the candy from A to T.",
+			"order":1
+		},
+		{
+			"expect":"{0, 0}",
+			"id":0,
+			"input":"{0, 3}",
+			"note":"  This time you need 3 steps: S->A->B->T.",
+			"order":2
+		},
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{0}",
+			"note":"The target point is outside of the only disk, so we clearly cannot reach it.",
+			"order":3
+		},
+		{
+			"expect":"{0}",
+			"id":0,
+			"input":"{0}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}",
+			"id":0,
+			"input":"{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}",
+			"id":0,
+			"input":"{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x, y, and r will each contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element in x, y will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element in r will be between 1 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":5,
+			"val":"sx, sy, tx and ty will be between -1,000,000,000 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":6,
+			"val":"The answer will not change if we increase the radii of all disks by 1e-3. Neither will it change if we decrease the radii of all disks by 1e-3."
+		}
+	]
+}

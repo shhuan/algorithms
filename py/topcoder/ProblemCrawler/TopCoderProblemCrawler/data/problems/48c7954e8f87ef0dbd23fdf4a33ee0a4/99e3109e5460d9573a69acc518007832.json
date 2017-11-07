@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3049&rd=9913",
+	"statement":"Consider the following set (see notes for clarification):<pre>\n  S = {  p/q  |   <b>w</b> &lt;= p &lt;= <b>x</b>,  <b>y</b> &lt;= q &lt;= <b>z</b>  }\n</pre> Given <b>w</b>, <b>x</b>, <b>y</b>, and <b>z</b> return the number of distinct elements in S.",
+	"notes":[{
+		"order":1,
+		"val":"S is the set of all rational numbers whose numerators are between  and  inclusive, and whose denominators are between  and  inclusive."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FractionCounting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int w, int x, int y, int z)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"Only the value 1/1 is being considered.",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":"Here S contains the values 1,...,10.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":"Here the values are 1/1, 1/2, 2/1, and 2/2. Since 2/2 = 1/1 the answer is 3.",
+			"order":3
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"2",
+			"order":4
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"1",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x and z will be between 1 and 100, inclusive."
+		},
+		{
+			"order":2,
+			"val":"w will be between 1 and x, inclusive."
+		},
+		{
+			"order":3,
+			"val":"y will be between 1 and z, inclusive."
+		}
+	]
+}

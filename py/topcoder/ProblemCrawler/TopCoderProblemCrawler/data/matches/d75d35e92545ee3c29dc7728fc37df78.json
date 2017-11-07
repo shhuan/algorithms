@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.75,
+			"constraints":[],
+			"correctRatio":73.08,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8599&rd=12012",
+			"name":"OneWayStreets",
+			"notes":[],
+			"submission":702
+		},
+		{
+			"avgPts":314.35,
+			"constraints":[],
+			"correctRatio":61.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8570&rd=12012",
+			"name":"CreatureTraining",
+			"notes":[],
+			"submission":590
+		},
+		{
+			"avgPts":618.7,
+			"constraints":[],
+			"correctRatio":51.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8605&rd=12012",
+			"name":"PreciousStones",
+			"notes":[],
+			"submission":235
+		}
+	],
+	"name":"2008 TopCoder Open > Online Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12012"
+}

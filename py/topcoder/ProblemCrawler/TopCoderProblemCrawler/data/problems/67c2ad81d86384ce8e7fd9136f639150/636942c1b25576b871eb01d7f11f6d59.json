@@ -1,0 +1,100 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1778&rd=4585",
+	"statement":"<p>The game of BombSweeper is a single-player game played on a rectangular grid. Each square in the grid is either a bomb (represented by 'B') or empty space (represented by '.'). The true identity of each square is hidden when the game begins. The object of the game is to correctly determine both the number of bombs on the board and their positions.</p> <p>You are trying to write a program which predicts the percent likelihood that you will win a given game of BombSweeper. You've recently become so good at the game that your success or failure depends only on your first few moves. To start, you pick a random square on the gameboard and uncover it. If the square you uncover is a bomb, you lose the game. If the square is not a bomb, but one or more of its horizontal, vertical, and diagonal neighbors is, you are no better off than when you started and you must take another turn. If the square is not a bomb, and none of its (up to) eight neighbors are bombs either, then you win the game.</p> <p>Given a String[] <b>board</b>, representing the game board, return a number between 0.0 and 100.0, inclusive, representing the percent likelihood of you winning the game.</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"In calculating the probability, let  be the number of non-bomb squares which have no bomb neighbors, and let  be the number of bombs on the board. The odds of winning are then , which returns a number between 0.0 and 1.0, inclusive."
+		},
+		{
+			"order":2,
+			"val":"As long as you calculate  and  correctly, you need not worry about minor double imprecisions."
+		},
+		{
+			"order":3,
+			"val":"Your solution need only be accurate to 1e-9 (relative or absolute). Thus, if your result is within 1e-9 (relative or absolute) of the result shown, your result will be judged correct."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BombSweeper",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winPercentage",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double winPercentage(String[] board)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 94.11764705882354",
+			"id":0,
+			"input":"{\".....\", \".....\", \"..B..\", \".....\", \".....\"}",
+			"note":"",
+			"order":1
+		},
+		{
+			"expect":"Returns: 5.882352941176471",
+			"id":0,
+			"input":"{\"BBBBB\", \"B...B\", \"B...B\", \"B...B\", \"BBBBB\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0.0",
+			"id":0,
+			"input":"{\".........\", \".B..B..B.\", \".........\", \".........\", \".B..B..B.\", \".........\", \".........\", \".B..B..B.\", \".........\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 100.0",
+			"id":0,
+			"input":"{\".........................\", \".........................\", \".........................\", \".........................\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: 77.67558528428094",
+			"id":0,
+			"input":"{\"......B.......B..B...........................B....\", \"..............B..................BB..B............\", \"B.B.B.............B.....B..............B..........\", \"...................B...B....................BB....\", \"...B.....B.........................B.......B.....B\", \"B.B.........B.....B.......B..B......B.B...B.BB....\", \"..B...................BB...............B..........\", \".........B...B................B..B................\", \".......BB.......B....B................B.....BBB...\", \".......BB..........B..............B......BB.......\", \"...................BB.....................B.......\", \"...B.B.B......B..............B...B......B.........\", \"B................B................................\", \"....B..........B.....B..BB....B...............BB..\", \"..B....B.....B.............B.....B............B...\", \"...................B.B........B..B.........B.B....\", \".....B.....B......................................\", \"...........BB......BB...B.B........B...B..........\", \".....BBB..........................................\", \".B...........B....B...BB......B......B...B.B......\", \"..................B........BB................B....\", \"...............................B..B....BBB.B....B.\", \"..........B.......................................\", \".....B..........B....BB......B.B......B......B....\", \".....B..................B........B................\", \"............B.....B..B....BB...B....BB........B...\", \"..B.................B.........B...................\", \".BB..............B................................\", \"...B....B..................B.................B....\", \"......B...B......B......................B.B.......\", \"..............B..................B.......B........\", \".....B........BB...B.....B........................\", \".......B......B.B..B..........B...........B....B..\", \"B...B...........B...B...B......B.B...B..B......B..\", \"....B..B.....B.B.......BB..B............B.B....B..\", \"B.......B..........B.........B...B.BB......B......\", \"....B...............................B.............\", \".....B.B..........................................\", \"..........B............B......B.B..B....B.........\", \"....B...B.......................B.................\", \"B.................B...........B..B....B...........\", \"...B.....B........................................\", \"...B..B......................................BBB..\", \".B...B....................................B....B..\", \"...B...B..........B...B.B.........................\", \".....B.............B...BB..........B..BBB.BB......\", \"....................B.....B.......................\", \"........B..BB..........B.B....B...........B......B\", \".........B.....BB..B.............B....BB..........\", \"....B..B..............B...B..B..........B.........\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of board will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in board will be either '.' or 'B'."
+		}
+	]
+}

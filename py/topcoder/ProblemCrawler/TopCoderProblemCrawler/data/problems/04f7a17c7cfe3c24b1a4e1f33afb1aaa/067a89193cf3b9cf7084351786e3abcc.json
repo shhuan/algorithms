@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=178&rd=51",
+	"statement":"<pre>Class Name: EndOfContest\nMethod Name: calcEarnings\nParameters: String[], int[]\nReturns: String[]\n\nImplement a class EndOfContest, which contains a method calcEarnings:\n\nThe method signature is (be sure your method is public):\nString[] calcEarnings(String[] scores, int[] money)\n\nTopCoder will check the following to be sure input is valid:\n* scores - a String[] of between 1 and 20 (inclusive) elements of the form\n&quot;NAME: SCORE&quot;.  NAME has length between 1 and 20 (inclusive) and may only\ncontain letters (a-z and A-Z, inclusive).  No duplicate NAMEs can appear in the\nString[] scores. SCORE is a floating point value with 2 places after the\ndecimal point.  NOTE: SCORE must always have 2 places after the decimal point.\nSCORE is between -1000.00 and 10000.00 (inclusive).\n* money - an int[] of between 1 and 20 (inclusive) elements.  The 0th element\nis the earnings of the first place (highest score) winner, the 1st element is\nthe earnings of the second place winner.  The elements of money[] are between 1\nand 100000 (inclusive).\n\nThe return value is a String[] of the form &quot;NAME: PLACE, EARNINGS&quot; where PLACE\nis an int representing the place (final standing) the person came in and\nEARNINGS is a floating point value truncated to an int.\n\nThe PLACE rules are:\n*The person with the highest score comes in 1st place, second highest score\ncomes in 2nd, et cetera.\n*If p people have the same score and there are x scores higher than that score,\nall p people come in (x+1)th place.  The person(s) with the next score less\nthan the p peoples score, comes in (x+1+p)th place.\n\nThe money winning rules are:\n*If there are no ties, the person with the highest score gets the first place\nprize (element 0 of the money int[]), the person with the second highest score\ngets the second place prize (element 1 of the money int[]), et cetera.\n*If p people are tied for xth place, they equally split the sum of the prize\nmoney of places x through p+x-1, inclusive.\n*All winnings are truncated to ints. NOTE: The cents are removed, they are not\nadded to any other winnings.\n*No one with a score less than or equal to zero can earn any money at all.\nThis rule has first precedence, so even if someone with 0 points comes in first\nplace, they can earn no money.\n\nThe order of names in the returned String[] should be the same as the order of\nthe names in the scores String[].\nIf there are more elements in scores than in money, it should be assumed the\nearnings are 0 for places that do not have elements in money.\n\nExamples:\nIf scores=\n   {&quot;ads: 550.34&quot;,\n    &quot;talub: 2102.98&quot;,\n    &quot;romana: 1123.21&quot;,\n    &quot;mike: -1000.00&quot;,\n    &quot;td: 1123.21&quot;,\n    &quot;dok: 1123.21&quot;,\n    &quot;dwarfsleepy: 812.12&quot;}\nand\n  money=\n  {300,\n   150,\n   75}\nThen talub came in first place alone and won 300 dollars\nromana, td, and dok tied for second so they equally split the sum of 2nd, 3rd,\nand 4th places (150 + 75 + 0 = 225) so they win 225/3 = 75 dollars.\nno one else won any money.\n\nThe returned String[] should be:\n{&quot;ads: 6, 0&quot;,\n &quot;talub: 1, 300&quot;,\n &quot;romana: 2, 75&quot;,\n &quot;mike: 7, 0&quot;,\n &quot;td: 2, 75&quot;,\n &quot;dok: 2, 75&quot;,\n &quot;dwarfsleepy: 5, 0&quot;\n}\nIf scores=\n   {&quot;buddy: 100.00&quot;,\n    &quot;carl: 0.00&quot;,\n   }\nand\n   money=\n   {10,20,30}\n\nThen buddy came in first place and won 10 dollars and no one else got a\npositive score so no one else won money and the returned String[] should be:\n  {&quot;buddy: 1, 10&quot;,\n   &quot;carl: 2, 0&quot;}\n---------------------------------------------------------\nIf scores=\n   {&quot;a: 100.00&quot;,\n    &quot;b: 100.00&quot;,\n    &quot;c: 100.00&quot;,\n    &quot;d: 100.00&quot;,\n    &quot;e: 100.00&quot;,\n    &quot;f: 100.00&quot;,\n    &quot;g: 100.00&quot;}\nand\n   money=\n   {1000,500}\nThen everyone tied for first place, so they all win (1000+500)/7= 214 dollars\n(remember to truncate to an int) and the returned String[] should be:\n  {&quot;a: 1, 214&quot;,\n   &quot;b: 1, 214&quot;,\n   &quot;c: 1, 214&quot;,\n   &quot;d: 1, 214&quot;,\n   &quot;e: 1, 214&quot;,\n   &quot;f: 1, 214&quot;,\n   &quot;g: 1, 214&quot;}\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"EndOfContest",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"calcEarnings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] calcEarnings(String[] param0, int[] param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

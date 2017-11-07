@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8205&rd=10934",
+	"statement":"<p> You have several recipes for sausages, each of which use the same two ingredients, but possibly in different ratios. Each recipe contains a lower and upper bound for the percentage of each ingredient. This means you can use any percentages for the two ingredients as long as they add up to 100% and fall within the specified inclusive bounds. </p> <p> The recipes are given as two String[]s <b>lowerPercentage</b> and <b>upperPercentage</b>. Each element in <b>lowerPercentage</b> and <b>upperPercentage</b> contains exactly two integers separated by a single space. The j-th integer in the i-th element of <b>lowerPercentage</b> is the lower percentage bound of ingredient j in the i-th recipe. The j-th integer in the i-th element of <b>upperPercentage</b> is the upper percentage bound of ingredient j in the i-th recipe. </p> <p> You are given a int[] <b>limits</b>, the i-th element of which is the number of grams you have of ingredient i. Your goal is to make as many sausages as possible. Each sausage must weigh exactly 100 grams, and you may use each recipe at most once. Return the maximum number of sausages you can make. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SausagesProductionScheduler",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxCount(String[] lowerPercentage, String[] upperPercentage, int[] limits)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"50 50\"}",
+			"id":0,
+			"input":"{\"50 50\"}",
+			"note":"Only one sausage per recipe.",
+			"order":1
+		},
+		{
+			"expect":"{\"57 40\"}",
+			"id":0,
+			"input":"{\"41 33\"}",
+			"note":"You can't make a sausage using this recipe.",
+			"order":2
+		},
+		{
+			"expect":"{\"89 71\", \"87 62\"}",
+			"id":0,
+			"input":"{\"40 21\", \"6 10\"}",
+			"note":"You can make one sausage using either recipe, but not both.",
+			"order":3
+		},
+		{
+			"expect":"{\"85 70\", \"28 41\", \"29 88\"}",
+			"id":0,
+			"input":"{\"66 11\", \"9 11\", \"13 4\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{\"64 78\", \"41 86\", \"72 98\"}",
+			"id":0,
+			"input":"{\"39 19\", \"6 68\", \"62 28\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"lowerPercentage will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"upperPercentage will contain the same number of elements as lowerPercentage."
+		},
+		{
+			"order":3,
+			"val":"Each element of lowerPercentage and upperPercentage will consist of exactly two integers separated by a single space."
+		},
+		{
+			"order":4,
+			"val":"Each integer in lowerPercentage and upperPercentage will be between 1 and 100, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each integer in lowerPercentage will be less than or equal to the corresponding integer in upperPercentage."
+		},
+		{
+			"order":6,
+			"val":"Each integer in lowerPercentage and upperPercentage will contain no leading zeroes."
+		},
+		{
+			"order":7,
+			"val":"limits will contain exactly two elements."
+		},
+		{
+			"order":8,
+			"val":"Each element of limits will be between 0 and 5000, inclusive."
+		}
+	]
+}

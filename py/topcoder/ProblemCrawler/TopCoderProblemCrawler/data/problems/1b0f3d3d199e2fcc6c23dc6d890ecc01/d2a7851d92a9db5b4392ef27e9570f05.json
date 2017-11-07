@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=184&rd=4005",
+	"statement":"<pre>PROBLEM STATEMENT:\n\nClass name: BillOfMaterials\nMethod name: explode\nParameters: String, int, String[]\nReturns: String[]\n\nBill of Materials (BOM) is an important aspect of Material Requirements\nPlanning (MRP).  The BOM describes the components that make up a product.\nConsider your PC - it has one monitor, one keyboard, one mouse and one system.\nThe keyboard is then made up of (probably) 104 keys, one plastic cover, etc.\nWhat was just described is the BOM for a PC.  If we wanted to make 100 PCs, the\nBOM would tell us we need 100 monitors, 100 keyboards (and since we are\nbuilding the keyboard - we need 10400 keys), etc.  The process of calculating\nthe quantity of components is called the MRP Explosion.  The PC is called the\nfinal product - all of its individual components are called work-in-progress\n(WIP).  Sometimes a WIP can also be a final product - we might not only build\nPCs but sell keyboards as well.  The keyboard is considered to be a WIP if we\nare building a PC or considered a final product if we are building it to sell.\nFor this reason, you can 'explode' the requirement for any component anywhere\nwithin the BOM.\n\nImplement a class BillOfMaterials, which contains a method explode.  The method\nexplodes the requirements for a specific product and returns a list of the\nfinal (lowest-level) components and their quantities.\n\nThe method signature is:\nString[] explode(String calcProduct, int quantity, String[] BOM);\nBe sure your method is public.\n\nInputs:\ncalcProduct - name of the product (within the BOM) for which you will calculate\nrequirements.\nquantity - the number of (calcProduct) products that will be built.\nBOM - the Bill of Material elements will be formatted as follows:\n\t&quot;product component:quantity,component:quantity...&quot;\n\t\n\tproduct is a String containing the name of the product\n\tFollowed by a single space\n\tFollowed by a String representing a component of the product\n\tFollowed by a single colon\nFollowed by a int representing the quantity of the component required to make\none unit of the product\n\nIf the product has more than one component, a single comma will separate each\ncomponent:quantity.\nSpaces are NOT allowed anywhere except for the single space following the\nproduct name.\n\nReturns:\nThe elements in the return String[] will be formatted as follows:\n   &quot;component:total quantity&quot; (colon seperates the two sub-elements)\nYour return should be ordered alphabetically by component.\n      \nTopCoder will ensure the validity of the inputs. Inputs are valid if all of the\nfollowing criteria are met:\n*calcProduct will be a String with a length of 1 to 50 characters (inclusive)\n*calcProduct will consist only of letters (a-z, A-Z).\n*Every product within the BOM will consist only of letters (a-z, A-Z).\n*Every component within the BOM will consist only of letters (a-z, A-Z).\n*Every quantity within the BOM will be an int whose value is 1 to 1000\n(inclusive)\n*The BOM will have from 1 to 50 elements (inclusive)\n*Each element of BOM will have length less than or equal to 50 characters.\n*Each product in the BOM will have at least one component\n*The calcProduct will be a product within the BOM\n*No duplicate products will be allowed in the BOM (not allowed: {&quot;A B:100&quot;,&quot;A\nC:100&quot;}, product &quot;A&quot; would be duplicated)\n*A product may be a component of any other product (allowed: &quot;A B:100&quot;, &quot;B\nC:100&quot;)\n*There will be no circular references.  If &quot;A&quot; requires &quot;B&quot;, then &quot;B&quot; cannot\nrequire &quot;A&quot;.\n*A component can appear multiple times within the BOM.  If &quot;A&quot; requires some\nquantity of &quot;B&quot; and &quot;C&quot;, it is valid for &quot;B&quot; to require some quantity of &quot;D&quot;\nand &quot;C&quot; to require another quantity of &quot;D&quot;.\n*If a component appears multiple times within the BOM - you should return the\nsum of the requirements for the component.  In other words, the returned\nString[] should contain only one entry for each final component with its\nsummed, total requirements.\n*A component will not appear more than one time within a specific product.\nExample: you cannot specify &quot;A B:10,B:100&quot;\n*The inputs will be checked to prevent int overflow (&gt;2147483647) when\ncalculating the solution\n\nExamples:\nAn input of (&quot;A&quot;, 10, {&quot;A B:100,C:10&quot;}) would be calculated as follows:\n\nWe are calculating requirements for &quot;A&quot; (calcProduct). &quot;B&quot; and &quot;C&quot; are\ncomponents of the product. &quot;B&quot; and &quot;C&quot; are the final (lowest-level) componenets\nof &quot;A&quot; because &quot;B&quot; and &quot;C&quot; do not have components of their own. Therefore, we\nmust calculate the amount of &quot;B&quot; and &quot;C&quot; components. Since we need a quantity\nof ten &quot;A&quot;'s and for one &quot;A&quot; we need one hundred &quot;B&quot;'s, we will need a total of\n10 * 100 = 1000, &quot;B&quot;'s. Similarly, we need ten &quot;C&quot;'s for every &quot;A&quot;, so we will\nneed a total of 10 * 10 = 100, &quot;C&quot;'s.\nThe method returns {&quot;B:1000&quot;,&quot;C:100&quot;}\n\nAn input of (&quot;A&quot;, 10, {&quot;A B:100,C:10&quot;, &quot;B D:5&quot;}) returns {&quot;C:100&quot;,&quot;D:5000&quot;}\nAn input of (&quot;B&quot;, 10, {&quot;A B:100&quot;,&quot;B C:10&quot;}) returns {&quot;C:100&quot;}\nAn input of (&quot;A&quot;, 10, {&quot;A B:100,C:10&quot;,&quot;B D:10,E:5&quot;, &quot;C D:20,F:10&quot;}) returns\n{&quot;D:12000&quot;,&quot;E:5000&quot;,&quot;F:1000&quot;}\nAn input of (&quot;WoW&quot;, 10, {&quot;A B:100,WoW:10&quot;,&quot;B D:10,E:5&quot;, &quot;WoW D:20,F:10&quot;})\nreturns {&quot;D:200&quot;,&quot;F:100&quot;}\nAn input of (&quot;T&quot;, 10, {&quot;A B:100,C:10&quot;,&quot;T B:10,C:5&quot;, &quot;C D:20,F:10&quot;}) returns\n{&quot;B:100&quot;,&quot;D:1000&quot;,&quot;F:500&quot;}\n\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BillOfMaterials",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"explode",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] explode(String param0, int param1, String[] param2)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12608&rd=15503",
+	"statement":"<p>Bob recently went to Mars.</p> <p>There are N cities on Mars. The cities all lie on a circular railroad and they are numbered 0 through N-1 along the railroad. More precisely, there is a railroad segment that connects cities N-1 and 0, and for each i (0 &lt;= i &lt;= N-2) there is a railroad segment that connects cities i and i+1. Trains travel along the railroad in both directions.</p> <p>You are given a int[] <b>range</b> with N elements. For each i: the set of cities that are reachable from city i by a direct train is precisely the set of cities that are within the distance <b>range</b>[i] of city i. (The distance between two cities is the smallest number of railroad segments one needs to travel in order to get from one city to the other. For example, if N=17 and <b>range</b>[2]=3, the cities directly reachable from city 2 are the cities {16,0,1,2,3,4,5}.)</p> <p>You are also given ints <b>startCity</b> and <b>endCity</b>. Bob starts his tour in the city <b>startCity</b> and wants to end it in the city <b>endCity</b>. Calculate and return the minimum number of succesive direct trains he needs to take.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TravelOnMars",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minTimes",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minTimes(int[] range, int startCity, int endCity)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{2,1,1,1,1,1}",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{2,1,1,1,1,1}",
+			"note":"This is the same test case as Example 0, only  and  have been swapped. Note that the answer is now 3 instead of 2.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{2,1,1,2,1,2,1,1}",
+			"note":"Bob starts in city 2. There are two optimal routes: (2->3->5->6) and (2->1->0->6).",
+			"order":3
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"{3,2,1,1,3,1,2,2,1,1,2,2,2,2,3}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"range will contain N elements, where N is between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of range will be between 1 and 50, inclusive."
+		},
+		{
+			"order":3,
+			"val":"startCity will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"endCity will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"startCity and endCity will be different."
+		}
+	]
+}

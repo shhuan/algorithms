@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":179.12,
+			"constraints":[],
+			"correctRatio":65.25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12055&rd=14739",
+			"name":"Pillars",
+			"notes":[],
+			"submission":446
+		},
+		{
+			"avgPts":256.58,
+			"constraints":[],
+			"correctRatio":34.87,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12077&rd=14739",
+			"name":"RectangularSum",
+			"notes":[],
+			"submission":152
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12054&rd=14739",
+			"name":"MaximalTriangle",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"Single Round Match 547 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14739"
+}

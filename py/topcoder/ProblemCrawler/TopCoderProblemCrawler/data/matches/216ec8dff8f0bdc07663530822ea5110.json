@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":131.38,
+			"constraints":[],
+			"correctRatio":85.99,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12514&rd=15497",
+			"name":"EllysRoomAssignmentsDiv1",
+			"notes":[],
+			"submission":464
+		},
+		{
+			"avgPts":297.62,
+			"constraints":[],
+			"correctRatio":53.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12527&rd=15497",
+			"name":"EllysChessboard",
+			"notes":[],
+			"submission":26
+		},
+		{
+			"avgPts":609.42,
+			"constraints":[],
+			"correctRatio":57.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12418&rd=15497",
+			"name":"BoardPainting",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"Single Round Match 577 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15497"
+}

@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2274&rd=5009",
+	"statement":"<p> Bomb Man is trapped inside a maze shaped like a grid. You must help him find the exit as fast as possible. The maze will be given as a String[] where each element corresponds to a row in the grid and each character in an element corresponds to a cell in that row. '#' marks a wall, '.' an empty cell, 'B' the start position of Bomb Man and 'E' the exit. Below is an example of a maze in this format, given as a String[]: </p> <pre>\n{&quot;.....B.&quot;,\n &quot;.#####.&quot;,\n &quot;.#...#.&quot;,\n &quot;.#E#.#.&quot;,\n &quot;.###.#.&quot;,\n &quot;.......&quot;}\n</pre> <p> In each time unit, Bomb Man can move one cell up, down, left or right. Thus, in the maze above, he can reach the exit in 14 time units by just walking. </p> <p> To be able to reach the exit quicker, Bomb Man is in possession of a number of bombs, each of which can blow a hole in a wall and thus open up new passages. Instead of moving in any of the four cardinal directions, Bomb Man can (if he has bombs left) blow a hole in a wall located in any of the four neighboring squares. The bomb will go off in the time unit after he has placed the bomb, creating an empty cell that Bomb Man can enter in the time unit after that. That is, if he places a bomb in time unit <i>t</i>, he can enter the cell earliest in time unit <i>t+2</i>. In the maze above, Bomb Man can then reach the exit in 8 time units by first walking left, placing a bomb, waiting for the bomb to explode, and then walking down, down, left, left and down. </p> <p> Create a class BombMan containing the method shortestPath which takes a String[] <b>maze</b>, containing the maze in the format described above, and an int <b>bombs</b>, the number of bombs in Bomb Man's possession. The method should return an int, the least number of time units required for Bomb Man to reach the exit. If it's not possible for Bomb Man to reach the exit, return -1 (see example 1). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BombMan",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"shortestPath",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int shortestPath(String[] maze, int bombs)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\".....B.\", \".#####.\", \".#...#.\", \".#E#.#.\", \".###.#.\", \".......\"} ",
+			"note":"This is the example mentioned in the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{\"B.#.#.#...E\"}",
+			"note":"Bomb Man can only blow through the first two walls, but not the third. Hence the method returns -1.",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"{\"..#####\", \"B.#####\", \"..#####\", \"#######\", \"####...\", \"####.E.\"} ",
+			"note":"Here Bomb Man has just enough bombs to reach the exit. One way to do this is to walk down, right, down (bomb), down (bomb), right (bomb), right (bomb), right, right, down. This takes 1+1+3+3+3+3+1+1+1 = 17 time units.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\".#.#.#.#B#...#.#...#.#...#.#...#.#...#.#.#.......\", \".#.#.#.#.#.###.###.#.###.#.#.###.###.#.#.#.###.##\", \".#.#.#...#.#.#.#.#.#...#.....#.#.#...#...#.#.#...\", \".#.#.###.#.#.#.#.#.###.#.#####.#.###.###.#.#.###.\", \".............#.#...#...#.....#.#.#...#.#.#.....#.\", \"##.#######.###.#.#####.#.#####.#.###.#.#.#.#.####\", \".#.#.....#...#...#.#...#...#.#.#...#...#...#.....\", \".#######.#.#####.#.#.#.#.###.#.###.#.#####.#.####\", \".#.#.#.#...#.#.#.#.#.#.......#...#.#...#.#.#.....\", \".#.#.#.###.#.#.#.#.#####.#####.###.###.#.#.######\", \".....#...#.#...#...#...#...#...#...#.#.#.........\", \"####.###.#.###.###.#.###.#.#.###.###.#.#.########\", \".......#.........#.#.#.#.#.#.#.#.........#...#...\", \".#.###.#########.#.#.#.#.###.#.#####.#.#.#.###.##\", \".#.#.........#.#.#.#.#.....#.#.#.....#.#.........\", \"############.#.#.#.#.#.#####.#.#.################\", \".#...........#...#.#.#.#...#.#.#...#.#.#.....#...\", \".#####.#####.###.#.#.#.#.###.#.#.###.#.#.#####.##\", \".......#...#.#.#.....#...#...#.#.#.#.#...........\", \"##########.#.#.#####.#.###.###.#.#.#.#.##########\", \".....#...#.....#.#...#.......#.#...#.......#.....\", \"##.#.###.#.###.#.#.#.#.#####.#.#.###.#######.####\", \"...#...#...#.......#.....#.#...#...#.......#.....\", \"####.#.#.#########.#.###.#.#####.###.#.#######.##\", \".#...#...#.........#.#.....#.........#.#.#.#.....\", \".#####.#.#.###.#######.#.###.#.#########.#.#.####\", \".......#.#.#...#.......#.....#.#.#.......#.#.#.#.\", \"########.#.#.#.#####.#.###.#.###.#.#######.#.#.#.\", \".........#.#.#.#.....#...#.#.........#.#.........\", \"################.#.#.#.#.#.#.#.#######.#.########\", \".................#.#.#.#.#.#.#...........#.......\", \"########.#####.#.###.#.#.#####.###.#.#####.###.##\", \".........#...#.#...#.#.#...#.....#.#.........#...\", \".#####.#####.#.###.#.###.#.#.#.#.#.#####.#.###.#.\", \".#.....#.........#.#.#...#.#.#.#.#.#.....#...#.#.\", \"####.#####.###.#.#.#.#.#.#.###.###.#.#.#.#.#####.\", \".....#.....#.#.#.#.#.#.#.#.#...#...#.#.#.#...#...\", \"####.#.#.###.#.#.###.#.###.#.#.#####.#.#.#.######\", \".....#.#.#.#...#...#.#...#.#.#...#...#.#.#.......\", \"##########.#.#.#.#####.###.#.#.###.#.###.#####.##\", \"...#.#...#...#.#.....#.#...#.#...#.#.#.......#...\", \".#.#.#.#.#.#.#.#.#.#.###.#.#########.###.#.#.#.#.\", \".#.#...#...#.#.#.#.#...#.#...#.......#...#.#.#.#.\", \"##.###.#.#.###.#.#.#.#.#####.#.#.#.###.#.########\", \".......#.#...#.#.#.#.#.#.....#.#.#...#.#.........\", \"####.#######.#.#####.#.###.#.#.###.#.#.#.########\", \"E..#.......#.#.....#.#.#.#.#.#.#...#.#.#.........\", \"##.#.#.#.###.###.###.###.#.#.###.#.#.#.#.#######.\", \".....#.#...#.#.....#.#.....#...#.#.#.#.#.....#...\"}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"maze will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in maze will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element in maze will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"maze will only contain the characters '#', '.', 'B' and 'E'."
+		},
+		{
+			"order":5,
+			"val":"Exactly one character in maze will be a 'B'."
+		},
+		{
+			"order":6,
+			"val":"Exactly one character in maze will be a 'E'."
+		},
+		{
+			"order":7,
+			"val":"bombs will be between 0 and 100, inclusive."
+		}
+	]
+}

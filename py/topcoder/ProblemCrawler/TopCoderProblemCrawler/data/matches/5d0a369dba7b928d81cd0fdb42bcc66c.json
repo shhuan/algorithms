@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":194.08,
+			"constraints":[],
+			"correctRatio":85.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6107&rd=9901",
+			"name":"PScores",
+			"notes":[],
+			"submission":320
+		},
+		{
+			"avgPts":424.52,
+			"constraints":[],
+			"correctRatio":43.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6077&rd=9901",
+			"name":"BigFibonacci",
+			"notes":[],
+			"submission":209
+		}
+	],
+	"name":"TCO 06 > Qualification Set 5/6/12",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9901"
+}

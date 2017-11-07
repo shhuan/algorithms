@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":197.37,
+			"constraints":[],
+			"correctRatio":88.72,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7754&rd=10672",
+			"name":"LostParentheses",
+			"notes":[],
+			"submission":390
+		},
+		{
+			"avgPts":313.73,
+			"constraints":[],
+			"correctRatio":49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7760&rd=10672",
+			"name":"RailwayTickets",
+			"notes":[],
+			"submission":249
+		},
+		{
+			"avgPts":549.84,
+			"constraints":[],
+			"correctRatio":21.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7751&rd=10672",
+			"name":"NormalizingTrees",
+			"notes":[],
+			"submission":55
+		}
+	],
+	"name":"Single Round Match 348 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10672"
+}

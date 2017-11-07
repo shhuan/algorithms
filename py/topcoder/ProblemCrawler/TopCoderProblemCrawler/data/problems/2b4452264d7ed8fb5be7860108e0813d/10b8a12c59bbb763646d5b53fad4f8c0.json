@@ -1,0 +1,77 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6007&rd=8082",
+	"statement":"<p>You have a <b>sentence</b> written entirely in a single row. You would like to split it into several rows by replacing some of the spaces with &quot;new row&quot; indicators. Your goal is to minimize the width of the longest row in the resulting text (&quot;new row&quot; indicators do not count towards the width of a row). You may replace at most <b>K</b> spaces.</p> <p>You will be given a String <b>sentence</b> and an int <b>K</b>. Split the sentence using the procedure described above and return the width of the longest row.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SentenceSplitting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"split",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int split(String sentence, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"\"This is a test sentence\"",
+			"note":"You should split the sentence between the words \"a\" and \"test\".",
+			"order":1
+		},
+		{
+			"expect":"37",
+			"id":0,
+			"input":"\"TheOnlyWord\"",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"\"One veeeeeeeeeeeeeeeeeeery long word\"",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"\"Each tournament round is an elimination round\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sentence will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"sentence will consist of only letters ('a'-'z', 'A'-'Z') and spaces (' ')."
+		},
+		{
+			"order":3,
+			"val":"Each space character in sentence will be between two letters."
+		},
+		{
+			"order":4,
+			"val":"K will be between 1 and 50, inclusive."
+		}
+	]
+}

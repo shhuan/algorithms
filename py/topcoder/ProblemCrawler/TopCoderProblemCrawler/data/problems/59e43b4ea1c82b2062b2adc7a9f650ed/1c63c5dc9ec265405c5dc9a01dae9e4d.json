@@ -1,0 +1,59 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10759&rd=14154",
+	"statement":"Taro and Hanako like potatoes very much. Today they decided to play <i>Potato Game</i>. <br /><br /> <br /><br /> Initially there is a box containing <b>n</b> potatoes. Taro and Hanako alternate turns, and Taro goes first. In each turn, the player must eat some potatoes from the box. The number of eaten potatoes must be a power of four, i.e., 1, 4, 16, 64 and so on. The first player who cannot eat a valid number of potatoes loses. Return the name of the winner assuming that they both play optimally. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PotatoGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theWinner",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String theWinner(int n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"Taro\"",
+			"id":0,
+			"input":"1",
+			"note":"Taro will win if he eats 1 potato in the first turn.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"Hanako\"",
+			"id":0,
+			"input":"2",
+			"note":"Taro must eat exactly 1 potato in the first turn. In the second turn, Hanako will eat 1 potato and she will win.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"Taro\"",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 1,000,000,000 (10^9), inclusive."
+	}]
+}

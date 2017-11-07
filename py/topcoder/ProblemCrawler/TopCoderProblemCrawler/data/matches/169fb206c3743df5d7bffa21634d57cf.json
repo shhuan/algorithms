@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":197.93,
+			"constraints":[],
+			"correctRatio":79.47,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10054&rd=13510",
+			"name":"Undo",
+			"notes":[],
+			"submission":414
+		},
+		{
+			"avgPts":242.76,
+			"constraints":[],
+			"correctRatio":23.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10085&rd=13510",
+			"name":"NimForK",
+			"notes":[],
+			"submission":187
+		},
+		{
+			"avgPts":383.93,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10055&rd=13510",
+			"name":"CactusAutomorphisms",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"Single Round Match 419 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13510"
+}

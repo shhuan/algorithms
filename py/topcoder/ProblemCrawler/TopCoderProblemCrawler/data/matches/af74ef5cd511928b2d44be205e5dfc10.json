@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":159.2,
+			"constraints":[],
+			"correctRatio":73,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13694&rd=16318",
+			"name":"SquareScores",
+			"notes":[],
+			"submission":237
+		},
+		{
+			"avgPts":259.4,
+			"constraints":[],
+			"correctRatio":78.79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13699&rd=16318",
+			"name":"SuccessiveSubtraction2",
+			"notes":[],
+			"submission":99
+		},
+		{
+			"avgPts":464.84,
+			"constraints":[],
+			"correctRatio":63.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13692&rd=16318",
+			"name":"TwoEntrances",
+			"notes":[],
+			"submission":11
+		}
+	],
+	"name":"Single Round Match 654 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16318"
+}

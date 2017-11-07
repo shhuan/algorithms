@@ -1,0 +1,68 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6184&rd=9823",
+	"statement":"<p>A positive integer is called a palindrome if it reads the same forward and backward. Integers containing leading zeros are not valid. For example, 12321 is a palindrome, but 123210 is not. You are given an int <b>K</b>. Return the <b>K</b>-th palindrome, where the 0th palindrome is 1, the 1st palindrome is 2, etc.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"IntegerPalindrome",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findByIndex",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long findByIndex(int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"8",
+			"order":1
+		},
+		{
+			"expect":"Returns: 11",
+			"id":0,
+			"input":"9",
+			"order":2
+		},
+		{
+			"expect":"Returns: 111",
+			"id":0,
+			"input":"19",
+			"order":3
+		},
+		{
+			"expect":"Returns: 13731",
+			"id":0,
+			"input":"235",
+			"order":4
+		},
+		{
+			"expect":"Returns: 137484731",
+			"id":0,
+			"input":"23746",
+			"order":5
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"K will be between 0 and 1000000000 (109), inclusive"
+	}]
+}

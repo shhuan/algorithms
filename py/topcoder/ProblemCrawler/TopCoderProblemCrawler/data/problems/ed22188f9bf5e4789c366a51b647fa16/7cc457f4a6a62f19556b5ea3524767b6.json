@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8607&rd=11127",
+	"statement":"<p>Instant run-off voting is a system for selecting the most preferred candidate in an election. At the beginning of the process, each voter ranks the candidates from most preferred to least preferred. A series of automated voting rounds are then held to determine the overall winner.</p> <p>In each round, each voter casts a single vote for his most preferred remaining candidate. If a candidate receives strictly more than 50% of the votes cast in that round, that candidate is declared the winner of the election. Otherwise, the candidate with the fewest votes in that round is eliminated, and another round is held. If multiple candidates are tied for the least number of votes, they are all eliminated. If all the candidates are eliminated, the election ends without a winner.</p> <p>You are given the preferences of the voters in an election, and you must determine the outcome. There are N candidates numbered 0 to N-1, inclusive. The preferences are given in a String[] <b>voters</b>, where each element describes the preferences of a single voter. This is a permutation of the digits 0 to N-1 in decreasing order of preference. In other words, the first digit is the voter's most preferred candidate, the second digit is his second most preferred candidate, and so on. Return the number of the candidate who wins the election, or -1 if the election ends without a winner.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"InstantRunoffVoting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"winner",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int winner(String[] voters)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"01\",\"10\",\"01\",\"01\",\"10\"}",
+			"note":"In the first round, candidate 0 gets 3 votes and candidate 1 gets 2 votes, so candidate 0 wins.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"120\",\"102\",\"210\",\"021\",\"012\"}",
+			"note":"Nobody gets an absolute majority in the first round and candidate 2 is eliminated. Candidate 1 then receives 3 votes in the next round, giving an absolute majority.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"10\",\"01\"}",
+			"note":"Each candidate gets 1 vote, so nobody can be declared winner.",
+			"order":3
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"3120\",\"3012\",\"1032\" ,\"3120\",\"2031\",\"2103\" ,\"1230\",\"1230\"}",
+			"note":"Candidate 0 is eliminated in the first round of voting. Candidate 2 is eliminated in the second round. In the third round, candidates 1 and 3 get 4 votes each. Neither candidate receives an absolute majority, and they are both eliminated for having the least number of votes, so the election ends without a winner.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"24103\",\"30412\",\"32014\",\"21043\",\"30412\" ,\"32401\",\"14203\",\"04123\",\"30241\",\"02413\" ,\"13042\",\"01432\",\"01342\",\"32401\",\"24301\" ,\"12430\",\"41023\",\"02413\",\"42310\",\"12043\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"0649853172\",\"2146875039\",\"2671548309\" ,\"5897216403\",\"4719823056\",\"7945213860\" ,\"9021538647\",\"9286145307\",\"9176403528\" ,\"3709486152\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"voters will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of voters will contain between 1 and 10 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of voters will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each element of voters will be a permutation of the digits between 0 and N-1, where N is the number of characters in each element of voters."
+		}
+	]
+}

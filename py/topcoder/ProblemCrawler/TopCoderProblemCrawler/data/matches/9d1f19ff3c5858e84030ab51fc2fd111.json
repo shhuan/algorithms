@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":196.81,
+			"constraints":[],
+			"correctRatio":60.35,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12331&rd=15185",
+			"name":"FoxAndHandle",
+			"notes":[],
+			"submission":454
+		},
+		{
+			"avgPts":322.16,
+			"constraints":[],
+			"correctRatio":76.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12329&rd=15185",
+			"name":"SpellCards",
+			"notes":[],
+			"submission":218
+		},
+		{
+			"avgPts":487.78,
+			"constraints":[],
+			"correctRatio":30,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12330&rd=15185",
+			"name":"CoinsGame",
+			"notes":[],
+			"submission":30
+		}
+	],
+	"name":"Single Round Match 563 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15185"
+}

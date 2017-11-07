@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":193.76,
+			"constraints":[],
+			"correctRatio":72.6,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3477&rd=6523",
+			"name":"Fairness",
+			"notes":[],
+			"submission":146
+		},
+		{
+			"avgPts":631.54,
+			"constraints":[],
+			"correctRatio":81.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3473&rd=6523",
+			"name":"LandMines",
+			"notes":[],
+			"submission":116
+		}
+	],
+	"name":"2005 TCCC > Qualification Set 1 & 6",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6523"
+}

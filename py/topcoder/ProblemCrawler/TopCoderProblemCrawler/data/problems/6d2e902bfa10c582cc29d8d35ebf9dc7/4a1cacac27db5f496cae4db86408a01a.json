@@ -1,0 +1,94 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10508&rd=13900",
+	"statement":"<p>You are given a 3x3x3 cube. Each face of the cube contains a 3x3 grid of nine squares. Some of the squares are painted and the rest are unpainted. Your task is to calculate the number of ways you can cover all the unpainted squares with &quot;cube-cycles&quot;.</p> <p>A cube-cycle is a sequence of 3 or more squares, where each square is &quot;cube-adjacent&quot; to the next square, and the last square is &quot;cube-adjacent&quot; to the first square. All squares in a cube-cycle must be distinct. Two squares are cube-adjacent if they share a common edge. That common edge can be on a face or on an edge of the cube. Each square in the cube has exactly four cube-adjacent squares.</p> <p>Note that two cube-cycles might be distinct even if they contain the same set of squares. See example 0.</p> <p>You are given the <b>cube</b> as a String[] containing 54 characters, where each character represents a single square. The String[] will be formatted as a net of the cube, as shown below:</p> <pre>+---+\n|   |\n+---+---+---+---+\n|   |   |   |   |\n+---+---+---+---+\n|   |\n+---+</pre> <p>Painted squares are represented by '<tt>*</tt>' characters and unpainted squares are represented by '<tt>.</tt>' characters. You are only allowed to cover unpainted squares with cube-cycles. You are not allowed to cover painted squares. All unpainted squares must be covered, and no two cube-cycles can overlap each other. Return the number of ways you can cover the cube modulo 1,000,000,007.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CubePainting",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(String[] cube)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"***\", \"***\", \"***\", \"**....******\", \"**....******\", \"**....******\", \"***\", \"***\", \"***\"}",
+			"note":"There are two ways to cover it with one cycle and one way with two cycles.   ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"***\", \"***\", \"***\", \"************\", \"............\", \"************\", \"***\", \"***\", \"***\"}",
+			"note":"There is only one way to cover a strip.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\".*.\", \"***\", \".*.\", \".*..*..*..*.\", \"************\", \".*..*..*..*.\", \".*.\", \"***\", \".*.\"}",
+			"note":"All squares in the corners should be covered. There are eight independent cycles.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"***\", \"***\", \"***\", \"************\", \"************\", \"************\", \"***\", \"***\", \"***\"}",
+			"note":"All squares are painted in this case.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"*.*\", \"...\", \"*.*\", \"*.**.**.**.*\", \"............\", \"*.**.**.**.*\", \"*.*\", \"...\", \"*.*\"}",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: 40661",
+			"id":0,
+			"input":"{\"***\", \"***\", \"***\", \"............\", \"............\", \"............\", \"***\", \"***\", \"***\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"cube will contain exactly 9 elements."
+		},
+		{
+			"order":2,
+			"val":"Elements 0, 1, 2, 6, 7 and 8 of cube will each contain exactly 3 characters."
+		},
+		{
+			"order":3,
+			"val":"Elements 3, 4 and 5 of cube will each contain exactly 12 characters."
+		},
+		{
+			"order":4,
+			"val":"All characters in cube will be either '*' or '.'."
+		}
+	]
+}

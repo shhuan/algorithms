@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4811&rd=8081",
+	"statement":"We are interested in triangles that have integer length sides, all of which are between <b>minLength</b> and <b>maxLength</b>, inclusive. How many such triangles are there? <p> Two triangles differ if they have a different collection of side lengths, ignoring order. Triangles with side lengths {2,3,4} and {4,3,5} differ, but {2,3,4} and {4,2,3} do not. We are only interested in proper triangles; the sum of the two smallest sides of a proper triangle must be strictly greater than the length of the biggest side. </p><p> Create a class TriCount that contains a method count that is given ints <b>minLength</b> and <b>maxLength</b> and returns the number of different proper triangles whose sides all have lengths between <b>minLength</b> and <b>maxLength</b>, inclusive. If there are more than 1,000,000,000 return -1. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TriCount",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int minLength, int maxLength)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"1",
+			"note":" The proper triangles with side lengths between 1 and 2 inclusive are {1,1,1} and {2,2,2} and {1,2,2}. ",
+			"order":1
+		},
+		{
+			"expect":"10",
+			"id":0,
+			"input":"9",
+			"note":" 9,9,9 and 10,10,10 and 9,9,10 and 9,10,10",
+			"order":2
+		},
+		{
+			"expect":"1000000",
+			"id":0,
+			"input":"1",
+			"note":" There are VERY many triangles with lengths in this range.",
+			"order":3
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"19",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"minLength is between 1 and 1,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"maxLength is between minLength and 1,000,000, inclusive."
+		}
+	]
+}

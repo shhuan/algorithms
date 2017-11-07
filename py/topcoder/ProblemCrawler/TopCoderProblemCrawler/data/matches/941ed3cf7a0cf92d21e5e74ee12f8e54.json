@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":257.81,
+			"constraints":[],
+			"correctRatio":89.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2396&rd=4755",
+			"name":"Cyberline",
+			"notes":[],
+			"submission":175
+		},
+		{
+			"avgPts":381.09,
+			"constraints":[],
+			"correctRatio":83.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2375&rd=4755",
+			"name":"NumericalIntegral",
+			"notes":[],
+			"submission":154
+		},
+		{
+			"avgPts":477.8,
+			"constraints":[],
+			"correctRatio":44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2224&rd=4755",
+			"name":"DNAMultiMatcher",
+			"notes":[],
+			"submission":50
+		}
+	],
+	"name":"Single Round Match 187 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4755"
+}

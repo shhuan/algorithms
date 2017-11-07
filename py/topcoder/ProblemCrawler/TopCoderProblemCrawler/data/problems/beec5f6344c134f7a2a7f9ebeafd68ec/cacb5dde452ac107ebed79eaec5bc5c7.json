@@ -1,0 +1,67 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10863&rd=14150",
+	"statement":"Alice likes lotteries. Her favorite lottery is Pyaterochka, which is very popular in Belarus. Each ticket in this lottery is a rectangular grid with <b>N</b> rows and 5 columns, where each cell contains an integer between 1 and 5*<b>N</b>, inclusive. All integers within a single ticket are distinct. <br /><br /> <br /><br /> After the tickets are distributed, the lottery organizers randomly choose 5 distinct integers, each between 1 and 5*<b>N</b>, inclusive. Each possible subset of 5 integers has the same probability of being chosen. These integers are called the <i>winning numbers</i>. A ticket is considered a winner if and only if it has a row which contains at least 3 winning numbers. <br /><br /> <br /><br /> Alice will buy a single ticket. Each possible ticket has the same probability of being sold. Return the probability that she will buy a winning ticket.",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LotteryPyaterochka",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"chanceToWin",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double chanceToWin(int N)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1.0",
+			"id":0,
+			"input":"1",
+			"note":"Any ticket contains just one line with some permutation of numbers 1, 2, 3, 4, 5. Ony one set of winning numbers is possible - {1, 2, 3, 4, 5}. So the only line of any ticket contains all 5 winning numbers, and therefore each ticket is a winner.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1.0",
+			"id":0,
+			"input":"2",
+			"note":"For any set of winning numbers chosen, there's exactly one line in any ticket that contains at least 3 winning numbers.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0.5004995004995004",
+			"id":0,
+			"input":"3",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0.13161551092585574",
+			"id":0,
+			"input":"6",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"N will be between 1 and 100, inclusive."
+	}]
+}

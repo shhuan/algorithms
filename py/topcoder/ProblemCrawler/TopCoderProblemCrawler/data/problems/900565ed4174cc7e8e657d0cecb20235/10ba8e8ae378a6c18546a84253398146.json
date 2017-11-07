@@ -1,0 +1,70 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4848&rd=9821",
+	"statement":"A jumpy number is a positive integer, all of whose adjacent digits differ by at least 2. For example, <pre>        \n        NOT JUMPY: 28459, 28549, 1091919, 97753, 111111\n            JUMPY: 290464, 13131313, 97539753, 5\n</pre> Create a class JumpyNum that contains a method howMany that is given <b>low</b> and <b>high</b> and returns the number of jumpy numbers that are between <b>low</b> and <b>high</b>, inclusive. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"JumpyNum",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(int low, int high)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":" All the single digit numbers are jumpy, but 10 isn't since 1 and 0 differ by only 1. ",
+			"order":1
+		},
+		{
+			"expect":"23",
+			"id":0,
+			"input":"9",
+			"note":" The jumpy ones are 9,13,14,15,16,17,18,19,20",
+			"order":2
+		},
+		{
+			"expect":"2000000000",
+			"id":0,
+			"input":"2000000000",
+			"order":3
+		},
+		{
+			"expect":"20934",
+			"id":0,
+			"input":"8000",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"low is between 1 and 2,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"high is between low and 2,000,000,000, inclusive."
+		}
+	]
+}

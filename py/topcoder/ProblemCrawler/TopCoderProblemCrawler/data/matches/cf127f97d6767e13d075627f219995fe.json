@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":202.83,
+			"constraints":[],
+			"correctRatio":89.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4698&rd=7992",
+			"name":"MagicCube",
+			"notes":[],
+			"submission":232
+		},
+		{
+			"avgPts":296.27,
+			"constraints":[],
+			"correctRatio":73.29,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4687&rd=7992",
+			"name":"CliqueCount",
+			"notes":[],
+			"submission":146
+		},
+		{
+			"avgPts":606.01,
+			"constraints":[],
+			"correctRatio":38.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4692&rd=7992",
+			"name":"ImageRepeat",
+			"notes":[],
+			"submission":108
+		}
+	],
+	"name":"Single Round Match 256 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=7992"
+}

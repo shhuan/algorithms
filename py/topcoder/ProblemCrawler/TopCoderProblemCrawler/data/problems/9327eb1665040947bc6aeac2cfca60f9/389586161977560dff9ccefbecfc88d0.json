@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7554&rd=10917",
+	"statement":"<p> A number y is said to be the k-th power of a number x if y = x^k, i.e., y is the product of k copies of x. </p> <p> You are given two Strings <b>left</b> and <b>right</b>. Return the greatest k such that there is an integer y (<b>left</b> &lt;= y &lt;= <b>right</b>) such that y is the k-th power of some integer x. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PowerOfInteger",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"greatestPower",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int greatestPower(String left, String right)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"20\"",
+			"id":0,
+			"input":"\"5\"",
+			"note":"The greatest power between 5 and 20 is 16=2^4.",
+			"order":1
+		},
+		{
+			"expect":"\"12\"",
+			"id":0,
+			"input":"\"10\"",
+			"note":"No nontrivial power of integer between 10 and 12, so return 1.",
+			"order":2
+		},
+		{
+			"expect":"\"100\"",
+			"id":0,
+			"input":"\"2\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"\"1000000000000\"",
+			"id":0,
+			"input":"\"1000000000000\"",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"left will be an integer between 2 and 10^12, inclusive, without extra leading zeroes."
+		},
+		{
+			"order":2,
+			"val":"right will be an integer between left and 10^12, inclusive, without extra leading zeroes."
+		}
+	]
+}

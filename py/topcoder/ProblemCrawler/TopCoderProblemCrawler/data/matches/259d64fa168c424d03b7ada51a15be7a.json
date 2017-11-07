@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":175.9,
+			"constraints":[],
+			"correctRatio":83.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8774&rd=13764",
+			"name":"PerfectPowers",
+			"notes":[],
+			"submission":18
+		},
+		{
+			"avgPts":282.53,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10401&rd=13764",
+			"name":"Automaton",
+			"notes":[],
+			"submission":16
+		},
+		{
+			"avgPts":571.02,
+			"constraints":[],
+			"correctRatio":33.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10413&rd=13764",
+			"name":"SequenceSum",
+			"notes":[],
+			"submission":3
+		}
+	],
+	"name":"2009 TCO Algorithm > Semifinal",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13764"
+}

@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7751&rd=10672",
+	"statement":"<p> Trees are important data structures in programming. In this problem, you will be given a tree that was constructed from a fully connected undirected acyclic graph with exactly N nodes. First, a distinct number between 0 and N-1, inclusive, was assigned to each node. Then, one of the nodes was selected to be the root of the tree. Finally, each non-root node was assigned its neighbor closest to the root as its parent. </p><p> You will be given the <b>tree</b> as a int[], where the i-th element is the parent of the i-th node, or -1 if the i-th node is the root (indices are 0-based). A tree is considered equivalent to this tree if it can be constructed from the same original graph using the method described above. This means you can renumber the nodes and select a different node as the root (see examples for clarification). Return a int[] containing the equivalent tree that comes first lexicographically. A int[] <i>a<sub>1</sub></i> comes before int[] <i>a<sub>2</sub></i> lexicographically if <i>a<sub>1</sub></i> has a smaller value at the first element where they differ. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"NormalizingTrees",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"normalize",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] normalize(int[] tree)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {-1, 0, 0, 0, 1, 4 }",
+			"id":0,
+			"input":"{2,0,-1,4,2,4}",
+			"note":"This is the original drawing (with 2 as the root):  The renumbering gives this:  and taking the new 0 as the root gives the answer: ",
+			"order":1
+		},
+		{
+			"expect":"Returns: {-1, 0, 0, 1, 2 }",
+			"id":0,
+			"input":"{-1,0,1,2,3}",
+			"note":"This is a simple path of length 5. Selecting the middle node as root and renumbering gives the lexicographically first representation.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {-1, 0, 0, 0, 0, 0 }",
+			"id":0,
+			"input":"{3,3,3,4,-1,3}",
+			"note":"This tree has the shape of a star (one center node with 5 nodes connected to it).",
+			"order":3
+		},
+		{
+			"expect":"Returns: {-1, 0, 0, 0, 0, 1, 1, 5, 5, 5, 6, 6, 6 }",
+			"id":0,
+			"input":"{10,9,6,10,6,9,7,-1,9,7,7,10,6}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: {-1, 0, 0, 0, 0, 1, 1, 5, 5, 5, 6, 6, 6 }",
+			"id":0,
+			"input":"{-1, 0, 0, 0, 0, 1, 1, 5, 5, 5, 6, 6, 6}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"tree will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of tree will be between -1 and N-1, inclusive, where N is the number of elements in tree."
+		},
+		{
+			"order":3,
+			"val":"Exactly one element of tree will be -1."
+		},
+		{
+			"order":4,
+			"val":"tree will represent a connected acyclic graph."
+		}
+	]
+}

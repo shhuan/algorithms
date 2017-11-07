@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":157.59,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6668&rd=10840",
+			"name":"Curvy",
+			"notes":[],
+			"submission":14
+		},
+		{
+			"avgPts":312.69,
+			"constraints":[],
+			"correctRatio":41.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7828&rd=10840",
+			"name":"BigWheels",
+			"notes":[],
+			"submission":12
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6874&rd=10840",
+			"name":"NextBetter",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"2007 TopCoder Open > Semifinal Room 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10840"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":167.16,
+			"constraints":[],
+			"correctRatio":93.8,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4811&rd=8081",
+			"name":"TriCount",
+			"notes":[],
+			"submission":258
+		},
+		{
+			"avgPts":320.28,
+			"constraints":[],
+			"correctRatio":48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4847&rd=8081",
+			"name":"Smooshing",
+			"notes":[],
+			"submission":200
+		},
+		{
+			"avgPts":563.26,
+			"constraints":[],
+			"correctRatio":64.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2355&rd=8081",
+			"name":"CantorSet",
+			"notes":[],
+			"submission":128
+		}
+	],
+	"name":"Single Round Match 284 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8081"
+}

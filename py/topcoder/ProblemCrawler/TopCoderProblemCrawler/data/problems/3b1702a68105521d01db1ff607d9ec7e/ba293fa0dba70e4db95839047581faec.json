@@ -1,0 +1,104 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3115&rd=5865",
+	"statement":"<p>You and several friends go out to dinner for Chinese food. The waiter advises that you should share entrees, since each is large enough to feed many people. Each of you has certain favorite entrees that you like best.</p> <p>To make sure that everyone enjoys the meal, you decide each person should have two of his favorite entrees to choose from. However, to ensure that nobody gets too greedy, you also decide that nobody should have more than two of his favorite entrees.</p> <p>You are given a int[] <b>entrees</b>, indicating the cost of each entree on the menu. You are also given a String[] <b>favorites</b>, each element of which is a space delimited list of integers. Each integer is a 0-based index into <b>entrees</b>, where the integers in element i of <b>favorites</b> correspond to the favorite entrees of person i. You are to return an int, indicating the least expensive way to order entrees such that each person has exactly two of his favorite entrees to choose from. If it is not possible to order entrees in such a way that everyone gets exactly two of his favorite items, the method should return -1.</p> ",
+	"notes":[{
+		"order":1,
+		"val":"You may assume that each entree will be enough to feed an arbitrary number of people."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"OrderFood",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"selectEntrees",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int selectEntrees(int[] entrees, String[] favorites)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"0 1 3\", \"0 2 3 4\", \"0 3 4\"}",
+			"id":0,
+			"input":"{100, 150, 300, 425, 200}",
+			"note":"Clearly, we want to order item 0, since it's cheapest, and everyone likes it. Now, we could order item 3, also one that everybody likes, but it costs 425. It would be cheaper to buy items 1 and 4 (for 350 total) to give everyone a second favorite entree.",
+			"order":1
+		},
+		{
+			"expect":"{\"0 1\", \"1 2\", \"0 1 2\"}",
+			"id":0,
+			"input":"{100, 200, 300, 400}",
+			"note":"Since the first two people are picky, and only have two favorites, we have to buy items 0, 1, and 2. But this gives the last person three favorites, which isn't allowed, so there's no solution.",
+			"order":2
+		},
+		{
+			"expect":"{\"0 2 5\", \"0 2 6\", \"0 3 5\", \"1 3 6\", \"1 4\", \"1 4\"}",
+			"id":0,
+			"input":"{10, 20, 40, 80, 160, 320, 640}",
+			"note":"Clearly, we're must purchase items 1 and 4. We can satisfy everyone else by then selecting 0, 2, 3 or 0, 5, 6. We choose the cheaper option.",
+			"order":3
+		},
+		{
+			"expect":"{\"1 1\"}",
+			"id":0,
+			"input":"{100, 200, 300, 400}",
+			"note":"Even though we have listed it twice, this person only has a single favorite, so there's no way to pick two favorites.",
+			"order":4
+		},
+		{
+			"expect":"{\"0 1 2\", \"0 00 000 3 4\", \"0 5 6\", \"0 1 4\", \"0 2 5\", \"0 3 6\"}",
+			"id":0,
+			"input":"{1000, 90, 80, 70, 60, 50, 40}",
+			"note":"Even though entree 0 is listed multiple times in element 1 of , it only counts once. Note also that leading zeros are permitted.",
+			"order":5
+		},
+		{
+			"expect":"{\"4 16 16 2 18 10 13 14 4 18\", \"12 4 19 1 1 12 18 7 18\", \"6 15 19 13\", \"5 10 5 16 15 14 15 8\", \"13 2 15 8 5\", \"8 2 15 3 1\", \"9 18 2\"}",
+			"id":0,
+			"input":"{ 10124, 540045, 236111, 977928, 199927, 379085, 743650, 631339, 961617, 178242, 343492, 89869, 61858, 700029, 560602, 341127, 850320, 957934, 167013, 631513}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"entrees will contain between 1 and 30 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of entrees will be between 1 and 1000000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"favorites will contain between 1 and 15 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of favorites will be a list of integers, each separated by a single space, with no additional leading or trailing spaces."
+		},
+		{
+			"order":5,
+			"val":"Each element of favorites will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each number represented in each element of favorites will be between 0 and n - 1, inclusive, where n is the number of elements in entrees (leading zeros are permitted)."
+		}
+	]
+}

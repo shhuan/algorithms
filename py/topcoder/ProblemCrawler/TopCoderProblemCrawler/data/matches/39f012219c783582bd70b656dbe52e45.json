@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":198.44,
+			"constraints":[],
+			"correctRatio":79.06,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8576&rd=13507",
+			"name":"NextNumber",
+			"notes":[],
+			"submission":573
+		},
+		{
+			"avgPts":270.84,
+			"constraints":[],
+			"correctRatio":80.95,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9904&rd=13507",
+			"name":"CustomDice",
+			"notes":[],
+			"submission":147
+		},
+		{
+			"avgPts":556.71,
+			"constraints":[],
+			"correctRatio":20,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=9857&rd=13507",
+			"name":"RussianCheckers",
+			"notes":[],
+			"submission":10
+		}
+	],
+	"name":"Single Round Match 416 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13507"
+}

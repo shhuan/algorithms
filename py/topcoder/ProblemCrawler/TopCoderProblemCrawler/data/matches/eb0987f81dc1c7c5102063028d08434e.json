@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":225.19,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=690&rd=68",
+			"name":"MuseumGuard",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":274.2,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=565&rd=68",
+			"name":"NumList",
+			"notes":[],
+			"submission":1
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=663&rd=68",
+			"name":"PlanetX",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"Sun Microsystems / TopCoder Collegiate Challenge > Final",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=68"
+}

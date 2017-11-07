@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10387&rd=13751",
+	"statement":"You are playing a game where you initially have <b>A</b> zeros and <b>B</b> ones. Your goal is to end up with all ones. In each move, you must choose exactly <b>K</b> of the numbers and flip their values (zeros change to ones, and vice-versa). You can choose any <b>K</b> numbers each time, regardless of their current values or whether you have flipped them before. Return the minimal number of moves required to win the game, or -1 if it is impossible. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BinaryFlips",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minimalMoves",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int minimalMoves(int A, int B, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"3",
+			"note":"You initially have 3 zeros and 0 ones, and you must flip 3 numbers in each move. Your only possible move is to flip every number. After the first move, you end up with all ones and win the game. ",
+			"order":1
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"4",
+			"note":"This is similar to the previous example, but this time, you have 4 zeros. Here's one minimal sequence of moves that will lead to a win:  0. 0000 (the initial state) 1. 1110 (first three numbers flipped) 2. 1001 (last three numbers flipped) 3. 0100 (first, second and fourth numbers flipped) 4. 1111 (first, third and fourth numbers flipped) ",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"4",
+			"order":3
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"3",
+			"order":4
+		},
+		{
+			"expect":"100000",
+			"id":0,
+			"input":"100000",
+			"order":5
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"0",
+			"order":6
+		},
+		{
+			"expect":"44",
+			"id":0,
+			"input":"4",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"A will be between 0 and 100,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"B will be between 0 and 100,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"K will be between 1 and 100,000, inclusive."
+		}
+	]
+}

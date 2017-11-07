@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6172&rd=9822",
+	"statement":"<p>The first thing you have to do is to concatenate all elements of <b>actions</b> into one long string, and that will be your input string.</p> <p>In this problem, you will write a program that controls the actions of a progress indicator. The indicator is a single bar character in the middle of the screen with one of 4 states: '|', '/', '-', and '\\'. From now on, we will refer to '\\' as 'N', for programming convenience. The program is a sequence of instructions in the form:<br /><br /> <i>&lt;instr&gt;</i> <i>&lt;secs&gt;</i><br /><br /> where <i>&lt;instr&gt;</i> represents one of 4 possible actions, and <i>&lt;secs&gt;</i> is the action's duration in seconds. The action is performed once each second. The 4 possible actions are:</p>\n <ul> \n  <li>'L': Spin left. If the bar is in state '|', it goes to 'N'. State 'N' goes to '-', '-' goes to '/', and '/' goes to '|'.</li> \n  <li>'R': Spin right. This is the exact opposite of 'L': 'N' goes to '|', '|' goes to '/', '/' goes to '-', and '-' goes to 'N'.</li> \n  <li>'S': Stay. The bar remains in its current state.</li> \n  <li>'F': Flip. The bar is rotated 90 degrees: '|' becomes '-', '-' becomes '|', '/' becomes 'N', and 'N' becomes '/'.</li>\n </ul><p></p> <p>So, the sequence &quot;F03L02&quot; and the starting state of '-' leads to the following sequence: &quot;-|-|N-&quot;.</p> <p>Given a String[] <b>actions</b> representing a sequence of actions, return the shortest program that leads to that sequence. The first character of the sequence is the starting state, so your program should run for K-1 seconds where K is the length of the given sequence. If there are multiple shortest programs that produce the given sequence, return the lexicographically first among them. If the return string has more than 100 characters, return only the first 97 followed by &quot;...&quot; (see last example for clarification).</p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"You can't make an action last more than 99 seconds with a single instruction, but you can use the same instruction multiple times consecutively (see example 2 for further clarification)."
+		},
+		{
+			"order":2,
+			"val":"If two programs have the same size, the one that comes earlier lexicographically is the one with the lower ASCII value in the first position at which they differ."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"IndicatorMotionReverse",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinProgram",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String getMinProgram(String[] actions)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"F03R02L02R01S05R01L01\"",
+			"id":0,
+			"input":"{\"-|-|/-/|//////-/\"}",
+			"note":"The actions needed after the first '-', which is the starting state, are:  which can be optimally represented using the syntax above.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"\"",
+			"id":0,
+			"input":"{\"N\"}",
+			"note":"Sometimes you need an empty program.",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"S50S99\"",
+			"id":0,
+			"input":"{\"||||||||||||||||||||||||||||||||||||||||||||||||||\", \"||||||||||||||||||||||||||||||||||||||||||||||||||\", \"||||||||||||||||||||||||||||||||||||||||||||||||||\"}",
+			"note":"Here you need 149 stays and it is necessary to break them into 2 'S' instructions. The lexicographically first way to do this is S50S99.",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"L01R01L01R01L01R01L01R01L01R01L01R01L01R01L01R01L01R01L01R01L01R01L01R01L01R01L01R01L01R01L01R01L...\"",
+			"id":0,
+			"input":"{\"N\", \"-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N\", \"-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N\", \"-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N\", \"-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N\", \"-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N\", \"-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N\", \"-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N\", \"-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N\"}",
+			"note":"In this case the output program has 400 instructions, which is 3x400=1200 characters. Remember to return only the first 97 followed by \"...\".",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"actions will have between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in actions will have between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of actions will be one of '|', 'N', '-' or '/'."
+		}
+	]
+}

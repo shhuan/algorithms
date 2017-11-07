@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":242.26,
+			"constraints":[],
+			"correctRatio":69.72,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13110&rd=15996",
+			"name":"SwitchingGame",
+			"notes":[],
+			"submission":1070
+		},
+		{
+			"avgPts":236.8,
+			"constraints":[],
+			"correctRatio":59.46,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13205&rd=15996",
+			"name":"SumAndProductPuzzle",
+			"notes":[],
+			"submission":148
+		},
+		{
+			"avgPts":446.32,
+			"constraints":[],
+			"correctRatio":47.83,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13060&rd=15996",
+			"name":"AlwaysDefined",
+			"notes":[],
+			"submission":23
+		}
+	],
+	"name":"2014 TCO Algorithm > Round 2B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15996"
+}

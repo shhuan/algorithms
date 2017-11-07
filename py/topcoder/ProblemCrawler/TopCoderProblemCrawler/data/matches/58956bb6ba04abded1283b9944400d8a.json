@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.66,
+			"constraints":[],
+			"correctRatio":93.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2358&rd=5006",
+			"name":"Hawaiian",
+			"notes":[],
+			"submission":363
+		},
+		{
+			"avgPts":311.32,
+			"constraints":[],
+			"correctRatio":47.39,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1918&rd=5006",
+			"name":"FlowerGarden",
+			"notes":[],
+			"submission":230
+		},
+		{
+			"avgPts":731.11,
+			"constraints":[],
+			"correctRatio":88.81,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1954&rd=5006",
+			"name":"RockSkipping",
+			"notes":[],
+			"submission":134
+		}
+	],
+	"name":"2004 TCCC > Online Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5006"
+}

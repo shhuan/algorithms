@@ -1,0 +1,93 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2974&rd=5875",
+	"statement":"In genetics, most large animals have two copies of every gene - one from each parent. In the simplest genetic model, each of the genes takes on one of two forms, <i>dominant</i> or <i>recessive</i>, usually represented by an uppercase and lowercase letter of the same value, respectively ('A' and 'a', for example). The pair of genes typically contributes to the external qualities of the animal in one of two ways. If one or two genes are uppercase, the dominant gene is said to be <i>expressed</i>. If both genes are lowercase, then the recessive gene is said to be expressed.<br /><br /><br /><br /> Additionally, there may be some gene dependencies. If one pair of genes is dependent on another pair of genes, then the first gene may only be expressed dominantly if the gene it depends on is also expressed dominantly. These dependencies are indicated by a int[], <b>dependencies</b>. If element i of <b>dependencies</b> is j, it means that gene i can only be expressed dominantly if gene j also is (both i and j are indexed from 0). If gene j is expressed recessively, then gene i must be also, regardless of the actual genes at position i. If an element of <b>dependencies</b> is -1, it means that the gene is not dependent on any other gene, and is expressed as described in the first paragraph. Chains may exist within <b>dependencies</b> where i depends on j, which in turn depends on k. However, a gene may not depend on itself, and there will be no looping dependencies. <br /><br /><br /><br /> In this problem you are to predict a certain quality about an animal, given N pairs of genes from each of its parents, and some information about those N genes. The first parent's two copies of the genes are given by <b>p1a</b> and <b>p1b</b>, while the second parent's are given by <b>p2a</b> and <b>p2b</b>. For each of the N genes, each parent contributes one of its two genes to its children (characters with the same indices in <b>p1a</b>, <b>p1b</b>, <b>p2a</b>, and <b>p2b</b> correspond to the same gene). For example, if <b>p1a</b> = &quot;ABC&quot; and <b>p1b</b> = &quot;abc&quot;, the first parent would contribute an 'A' or an 'a' to its child's first pair of genes, a 'B' or a 'b' to its child's second pair and so on. Similarly, the second parent would also contribute a single gene to its child's first pair of genes, one to its second pair and so on.<br /><br /><br /><br /> Thus, the offspring end up with N genes from each parent. Each pair of corresponding genes contributes in some way to a certain quality we are interested in. If the i<sup>th</sup> pair of genes is expressed dominantly, we add <b>dom[i]</b> to a running sum (which is initialized to 0), otherwise we add <b>rec[i]</b>. Given that each parent contributes one of its two genes entirely at random (with a 50% chance of either), you are to determine the expected value the offspring will have for the quality we are interested in (the running sum), and return that value. ",
+	"notes":[{
+		"order":1,
+		"val":"Your return must have a relative or absolute error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GeneticCrossover",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"cross",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, String, String, int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double cross(String p1a, String p1b, String p2a, String p2b, int[] dom, int[] rec, int[] dependencies)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"AaaAA\"",
+			"id":0,
+			"input":"\"AaaAA\"",
+			"note":"Since every copy is the same, the animal is guaranteed to have two pairs of \"AaaAA\". This means that the first and fourth genes will be dominantly expressed, while the others will be recessively expressed. Note that the last gene is dependent on gene 1, which is recessively expressed.",
+			"order":1
+		},
+		{
+			"expect":"\"ABEgG\"",
+			"id":0,
+			"input":"\"AbegG\"",
+			"note":"Here, we have a chain of dependencies, where gene 1 depends on gene 0, 2 depends on 1, and so on. For the first gene, the animal is guaranteed to get an 'A' from its first parent, and an 'a' from its second parent. This means that gene 0 will be expressed dominantly, contributing 5 to the sum. The next gene has a 75% chance of being expressed dominantly (it will only be expressed recessively if a 'b' comes from each parent). The third gene also has a 75% chance of being expressed dominantly, assuming that the second gene was expressed dominantly. The fourth gene is guaranteed to be expressed recessively, and hence so is the final gene. This gives us 3 possible scenarios, denoted below, where a 'D' indicates a gene is expressed dominantly, and an 'R' means recessively:  The expected value is thus 17*0.5625+13*0.1875+9*.25 = 14.25",
+			"order":2
+		},
+		{
+			"expect":"\"xYmpdnVsBINdvQBPCwgDlFSmQTzpEIrVtmoRmbaSfqQRfS\"",
+			"id":0,
+			"input":"\"XyMpdnVsbinDvqBpcWGDLfsmQtZpeirvTmoRmBASfqqrFS\"",
+			"order":3
+		},
+		{
+			"expect":"\"Foai\"",
+			"id":0,
+			"input":"\"fOai\"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"Let N be the number of genes, where N is between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"p1a, p1b, p2a and p2b will each contain exactly N characters."
+		},
+		{
+			"order":3,
+			"val":"dom, rec, and dependencies will each contain exactly N elements."
+		},
+		{
+			"order":4,
+			"val":"Corresponding characters of p1a, p1b, p2a and p2b will have the same value (but may be uppercase or lowercase)."
+		},
+		{
+			"order":5,
+			"val":"Each element of dependencies will be between -1 and N-1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"dependencies will not contain any cycles."
+		},
+		{
+			"order":7,
+			"val":"Each element of dom and rec will be between -100 and 100, inclusive."
+		}
+	]
+}

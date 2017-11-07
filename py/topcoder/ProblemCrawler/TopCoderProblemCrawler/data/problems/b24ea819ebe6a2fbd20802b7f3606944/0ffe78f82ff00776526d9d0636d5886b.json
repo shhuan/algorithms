@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12163&rd=15176",
+	"statement":"<p> John and Brus are building towers using toy bricks. They have an unlimited supply of bricks of <b>C</b> different colors. Each brick is a 1x1x1 cube. A tower of height X is a 2x2xX rectangular prism, built using 4X bricks. </p> <p> John and Brus want their towers to look nice. A tower is nice if it has the following two properties: </p>\n <ul> \n  <li>There are at most <b>K</b> pairs of neighboring bricks with the same color. (Two bricks are neighboring if they share a common side.)</li> \n  <li>The height of the tower is between 1 and <b>H</b>, inclusive.</li> \n </ul> <p></p> <p> You are given the ints <b>C</b> and <b>K</b> and the long <b>H</b>. Return the number of nice towers, modulo 1,234,567,891. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheBrickTowerHardDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int find(int C, int K, long H)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"2",
+			"note":"No two neighboring bricks may share the same color. As we only have two colors, the entire tower must be colored like a chessboard. There are two such towers of height 1, and two of height 2. ",
+			"order":1
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"1",
+			"note":"Only one tower of height 1 is acceptable here. ",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"2",
+			"note":"There are 16 possible towers of height 1. If all bricks share the same color, the tower is not nice. There are two such towers. Each of the remaining 14 towers is nice. ",
+			"order":3
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"4",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"C will be between 1 and 4747, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 0 and 7, inclusive."
+		},
+		{
+			"order":3,
+			"val":"H will be between 1 and 474,747,474,747,474,747, inclusive."
+		}
+	]
+}

@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12495&rd=15594",
+	"statement":"A magic matrix is a square matrix filled with digits (0 to 9) such that its row sums and column sums all have the same last digit. John has <b>n</b> by <b>n</b> matrix. Its rows and columns are numbered from 0 to <b>n</b>-1. Some cells of the matrix already contain digits and some are empty. John wants to assign a value to each empty cell to get a magic matrix. <br /><br /><br /><br /> You are given an int <b>n</b> and int[]s <b>rows</b>, <b>columns</b>, <b>values</b>. The number <b>values</b>[i] is the digit in John's matrix at row <b>rows</b>[i] and at column <b>columns</b>[i]. Return the number of different matrices John can get modulo 1,234,567,891. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheMagicMatrix",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int find(int n, int[] rows, int[] columns, int[] values)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{0, 1}",
+			"id":0,
+			"input":"2",
+			"note":"John will get a magic matrix only if he assigns equal values to both empty cells. ",
+			"order":1
+		},
+		{
+			"expect":"{0, 1}",
+			"id":0,
+			"input":"2",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"{0, 0, 0, 1, 2, 2, 2, 3, 3, 3}",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{44, 77}",
+			"id":0,
+			"input":"474",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"rows will contain between 1 and 10 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"rows, columns and values will all contains the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of rows will be between 0 and n-1, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of columns will be between 0 and n-1, inclusive."
+		},
+		{
+			"order":6,
+			"val":"Each element of values will be between 0 and 9, inclusive."
+		},
+		{
+			"order":7,
+			"val":"All pairs (rows[i], columns[i]) will be distinct."
+		}
+	]
+}

@@ -1,0 +1,95 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7411&rd=10666",
+	"statement":"<p> In the first half of the 20th century, around the time that Tagalog became the national language of the Philippines, a standardized alphabet was introduced to be used in Tagalog school books (since then, the national language has changed to a hybrid &quot;Pilipino&quot; language, as Tagalog is only one of several major languages spoken in the Philippines). </p> <p> Tagalog's 20-letter alphabet is as follows: </p> <pre>a b k d e g h i l m n ng o p r s t u w y</pre> <p> Note that not all letters used in English are present, 'k' is the third letter, and 'ng' is a single letter that comes between 'n' and 'o'. </p> <p> You are compiling a Tagalog dictionary, and for people to be able to find words in it, the words need to be sorted in alphabetical order with reference to the Tagalog alphabet. Given a list of Tagalog <b>words</b> as a String[], return the same list in Tagalog alphabetical order. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Any 'n' followed followed by a 'g' should be considered a single 'ng' letter (the one that comes between 'n' and 'o')."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TagalogDictionary",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"sortWords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] sortWords(String[] words)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: {\"abakada\", \"ako\", \"alpabet\", \"tagalog\" }",
+			"id":0,
+			"input":"{\"abakada\",\"alpabet\",\"tagalog\",\"ako\"}",
+			"note":"The tagalog word for \"alphabet\", a Tagalogization of the English word \"alphabet\", the name of the language, and the word for \"I\".",
+			"order":1
+		},
+		{
+			"expect":"Returns: {\"alab\", \"alak\", \"alam\", \"anim\", \"ano\", \"ang\" }",
+			"id":0,
+			"input":"{\"ang\",\"ano\",\"anim\",\"alak\",\"alam\",\"alab\"}",
+			"note":"A few \"A\" words that are alphabetically close together.",
+			"order":2
+		},
+		{
+			"expect":"Returns: {\"kaniya\", \"ikaw\", \"ito\", \"iyon\", \"niya\", \"siya\" }",
+			"id":0,
+			"input":"{\"siya\",\"niya\",\"kaniya\",\"ikaw\",\"ito\",\"iyon\"}",
+			"note":"Common Tagalog pronouns.",
+			"order":3
+		},
+		{
+			"expect":"Returns: {\"baka\", \"kaba\", \"naba\", \"nipin\", \"ngipin\" }",
+			"id":0,
+			"input":"{\"kaba\",\"baka\",\"naba\",\"ngipin\",\"nipin\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: {\"kingkong\", \"knilngiggnngginggn\", \"dindong\", \"dingdont\", \"dingdong\", \"ingkblot\", \"ingkigningg\" }",
+			"id":0,
+			"input":"{\"knilngiggnngginggn\",\"ingkigningg\",\"kingkong\",\"dingdong\",\"dindong\",\"dingdont\",\"ingkblot\"}",
+			"order":5
+		},
+		{
+			"expect":"Returns: {\"baka\", \"bada\", \"silang\", \"silangang\" }",
+			"id":0,
+			"input":"{\"silangang\", \"baka\", \"bada\", \"silang\"}",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"words will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of words will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of words will be a valid lowercase letter that appears in the Tagalog alphabet."
+		},
+		{
+			"order":4,
+			"val":"Each element of words will be distinct."
+		}
+	]
+}

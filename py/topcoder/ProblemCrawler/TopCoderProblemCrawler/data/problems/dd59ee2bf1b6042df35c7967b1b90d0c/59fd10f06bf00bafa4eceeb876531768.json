@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10685&rd=13907",
+	"statement":"<p> John and Brus have an interest in team sports tournaments. They are currently investigating the intermediate standings of a tournament. They don't know which games have been played so far. They only know that the tournament is played using the following rules: </p> <p> Each game is played between two teams and results in either a victory for one team or a draw. If a team wins a game, it gains <b>w</b> points and its opponent gains no points. In case of a draw, each team gains <b>d</b> points. The score of a team is the sum of all the points it has gained from all its games. There are no restrictions on which teams can play against each other, and each pair of teams can play against each other any number of times (possibly zero). </p> <p> You are given a int[] <b>points</b> representing the intermediate standings of the tournament. The i-th element of <b>points</b> is the score of the i-th team. Return the minimum number of games that could have been played to achieve those standings. If <b>points</b> doesn't represent a valid state, return -1 instead. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheTournamentDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int find(int[] points, int w, int d)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{10, 1, 1}",
+			"note":"The first team has five wins or four wins and two draws. The second and the third teams each has one draw. ",
+			"order":1
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"{1, 1, 1}",
+			"note":"These standings are impossible. For each of the three teams to have one point, each one must have played in a game that resulted in a draw. There is no way for three teams to have each played in exactly one game. ",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{1, 4, 0, 2}",
+			"note":"The only win goes to the second team.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{8, 3, 8, 5, 9, 2, 7, 11}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"points will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of points will be between 0 and 10,000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"w will be between 1 and 10,000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"d will be between 1 and w, inclusive."
+		}
+	]
+}

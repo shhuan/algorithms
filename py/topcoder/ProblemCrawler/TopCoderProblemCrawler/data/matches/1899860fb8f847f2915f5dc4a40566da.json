@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.34,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=996&rd=4372",
+			"name":"Travel",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":292.28,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=964&rd=4372",
+			"name":"Hexagons",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=648&rd=4372",
+			"name":"TopCraft",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2002 TopCoder Invitational Semifinal > Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4372"
+}

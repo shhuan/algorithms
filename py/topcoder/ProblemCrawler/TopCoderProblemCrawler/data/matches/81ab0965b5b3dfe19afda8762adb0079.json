@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":221.79,
+			"constraints":[],
+			"correctRatio":91.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1610&rd=4700",
+			"name":"MissingLetters",
+			"notes":[],
+			"submission":589
+		},
+		{
+			"avgPts":316.96,
+			"constraints":[],
+			"correctRatio":79.3,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=927&rd=4700",
+			"name":"Inserter",
+			"notes":[],
+			"submission":488
+		},
+		{
+			"avgPts":560.26,
+			"constraints":[],
+			"correctRatio":69.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1095&rd=4700",
+			"name":"Rooms",
+			"notes":[],
+			"submission":231
+		}
+	],
+	"name":"2003 TCO > Qualification Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4700"
+}

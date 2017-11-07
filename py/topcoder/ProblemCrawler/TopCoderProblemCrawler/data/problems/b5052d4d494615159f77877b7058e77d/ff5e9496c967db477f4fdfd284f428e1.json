@@ -1,0 +1,99 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5984&rd=8078",
+	"statement":"<p>As part of a larger scale project, you need to write a component which generates consecutive positive integers. Only certain digits may appear in the input and in the integers generated, and leading zeros aren't allowed.</p> <p>You are given a int[] <b>allowed</b> containing the list of allowed digits, and a String <b>current</b> representing the current integer. Return a String representing the first integer larger than <b>current</b> composed only of digits in <b>allowed</b>.</p> <p>If <b>current</b> represents an invalid integer according to the first paragraph, return &quot;<tt>INVALID INPUT</tt>&quot; (quotes for clarity).</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"IntegerGenerator",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"nextInteger",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String nextInteger(int[] allowed, String current)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"16\"",
+			"id":0,
+			"input":"{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }",
+			"note":"With all digits available, the next number is 17. ",
+			"order":1
+		},
+		{
+			"expect":"\"16\"",
+			"id":0,
+			"input":"{ 0, 1, 2, 3, 4, 5, 6, 8, 9 }",
+			"note":"The digit 7 is no longer allowed, so the next smallest valid integer is 18.",
+			"order":2
+		},
+		{
+			"expect":"\"548\"",
+			"id":0,
+			"input":"{ 3, 5, 8 }",
+			"note":"The current number may not contain disallowed digits.",
+			"order":3
+		},
+		{
+			"expect":"\"033\"",
+			"id":0,
+			"input":"{ 5, 3, 4 }",
+			"note":"Leading zeros aren't allowed either.",
+			"order":4
+		},
+		{
+			"expect":"\"999\"",
+			"id":0,
+			"input":"{ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }",
+			"order":5
+		},
+		{
+			"expect":"\"0\"",
+			"id":0,
+			"input":"{ 0, 1, 2, 3, 4, 5 }",
+			"note":"The generator only works with positive integers.",
+			"order":6
+		},
+		{
+			"expect":"\"1\"",
+			"id":0,
+			"input":"{ 1 }",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"allowed will contain between 0 and 10 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in allowed will be between 0 and 9, inclusive."
+		},
+		{
+			"order":3,
+			"val":"allowed will contain no duplicates."
+		},
+		{
+			"order":4,
+			"val":"current will contain between 1 and 10 digits ('0'-'9'), inclusive."
+		}
+	]
+}

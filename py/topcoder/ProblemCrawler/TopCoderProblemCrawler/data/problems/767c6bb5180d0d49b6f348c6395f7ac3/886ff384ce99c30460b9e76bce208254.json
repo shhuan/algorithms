@@ -1,0 +1,90 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11213&rd=14242",
+	"statement":"Rabbit Hanako likes apples. She decided to plant apple trees along a straight road. <br /><br /> <br /><br /> The road has <b>D</b> candidate positions for planting apple trees. These positions are numbered 0 through <b>D</b>-1, from left to right. The distance between position x and position y is |x-y| meters (|x-y| denotes the absolute value of x-y). She wants to plant N apple trees numbered from 0 to N-1 in different positions. The trees may be planted in any order. The i-th tree won't grow if there are other trees which are closer than <b>r</b>[i] meters. In other words, if i and j are distinct, the distance between the i-th tree and the j-th tree must be at least max(<b>r</b>[i],<b>r</b>[j]) meters. <br /><br /> <br /><br /> Return the number of ways to plant all apple trees modulo 1,000,000,007. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AppleTrees",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"theCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int theCount(int D, int[] r)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{40}",
+			"id":0,
+			"input":"10",
+			"note":"There are 10 candidate positions for the only tree.",
+			"order":1
+		},
+		{
+			"expect":"{1, 1, 1, 1}",
+			"id":0,
+			"input":"4",
+			"note":"Trees must be planted in different positions, so the number of ways to plant all trees is 4! = 24.",
+			"order":2
+		},
+		{
+			"expect":"{1, 1, 2}",
+			"id":0,
+			"input":"4",
+			"note":"The following 4 ways are possible:  ",
+			"order":3
+		},
+		{
+			"expect":"{5, 8}",
+			"id":0,
+			"input":"58",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{4, 8, 9}",
+			"id":0,
+			"input":"47",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{21, 37, 23, 13, 32, 22, 9, 39}",
+			"id":0,
+			"input":"100000",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"D will be between 1 and 100,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"r will contain between 1 and 40 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of r will be between 1 and 40, inclusive."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.54,
+			"constraints":[],
+			"correctRatio":64.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10512&rd=13899",
+			"name":"TheNewHouseDivOne",
+			"notes":[],
+			"submission":509
+		},
+		{
+			"avgPts":288.48,
+			"constraints":[],
+			"correctRatio":57.26,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10514&rd=13899",
+			"name":"TheLockDivOne",
+			"notes":[],
+			"submission":124
+		},
+		{
+			"avgPts":504.53,
+			"constraints":[],
+			"correctRatio":35.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10510&rd=13899",
+			"name":"TheEncryptionDivOne",
+			"notes":[],
+			"submission":31
+		}
+	],
+	"name":"Single Round Match 445 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13899"
+}

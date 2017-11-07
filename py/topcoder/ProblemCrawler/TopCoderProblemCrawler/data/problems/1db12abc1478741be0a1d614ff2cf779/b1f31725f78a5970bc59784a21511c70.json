@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4798&rd=10110",
+	"statement":"The digit d will appear in element i of <b>ability</b> if person i can perform task d. You are required to assign each of the given people to exactly one of the 6 tasks (numbered '0' through '5'). Two people cannot be assigned to the same task. Return the number of assignments possible. Two assignments differ if there is a person who is assigned a different task in each assignment.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MatchCounts",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howMany",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howMany(String[] ability)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 3",
+			"id":0,
+			"input":"{\"045\"}",
+			"note":"Person 0 can perform 3 different tasks.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"01\",\"23\"}",
+			"note":"Two choices for person 0 and two choices for person 1.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"01\",\"01\"}",
+			"note":"Both people have two choices, but not all 2*2 possibilities are feasible.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"0\",\"0\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 720",
+			"id":0,
+			"input":"{\"012345\",\"012345\",\"012345\",\"012345\",\"012345\",\"012345\"} ",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"ability will contain between 1 and 6 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of ability will contain between 1 and 6 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in ability will be a digit between '0' and '5', inclusive."
+		},
+		{
+			"order":4,
+			"val":"No character will appear more than once in a single element of ability."
+		}
+	]
+}

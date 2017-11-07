@@ -1,0 +1,103 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6621&rd=9996",
+	"statement":"<p>You are playing a game with a friend involving two robots on a rectangular board. Each cell of the board is either empty, an obstacle, a starting point for a robot, or the destination. You win the game only if your robot is the first to reach the destination cell. Note that if both robots reach the destination cell at the same time or if neither reaches the destination at all, you lose.</p> <p>Both robots listen to the following movement commands: <br /><br /> - 'S' -- move south (the current row increases by one) <br /><br /> - 'N' -- move north (the current row decreases by one) <br /><br /> - 'E' -- move east (the current column increases by one) <br /><br /> - 'W' -- move west (the current column decreases by one) <br /><br /> </p> <p>During one time unit, the same movement command is given to both robots. A robot may choose to follow the command given or ignore it. Note that if the command makes the robot leave the board, or enter a cell occupied by an obstacle, it is automatically ignored and that both robots can be in the same cell at the same time. The robots will always make an optimal decision so that they reach the destination cell as soon as possible.</p> <p>You will be given a String[] <b>board</b>. Each character in <b>board</b> will represent a single cell on the game board and will be either '.' denoting an empty space, '#' denoting an obstacle, 'Y' denoting the starting point for your robot, 'F' denoting the starting point for your friend's robot, or 'X' denoting the destination cell. You will also be given a String[] <b>commands</b>. You should concatenate all elements of <b>commands</b> and make a long String of commands. The ith character of this string will represent the command given during the ith time unit. Starting the game at time 0 (in other words, from the first character of the string of commands) may not guarantee that your robot wins the race. Return the earliest starting time that will guarantee your robot will win. Starting the race at time T means that only the commands starting at index T in the input string are given, the ones with lower indexes will be ignored by both robots. If there is no starting time that can make your robot win, return -1.</p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RoboRace",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"startTime",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int startTime(String[] board, String[] commands)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"NES\"}",
+			"id":0,
+			"input":"{\"#F\", \"YX\"}",
+			"note":"Your robot needs to move east to reach the destination, while your friend's robot needs to move south. You have three options: start the race at times 0, 1, or 2. If you start the race at time 2, your friend will win. If the race starts at time 0, both robots will have no choice but to ignore the first command, and your robot will win by following the second command. From the two options that guarantee your robot wins, choose the first one, at time 0.",
+			"order":1
+		},
+		{
+			"expect":"{\"SSEEESSW\"}",
+			"id":0,
+			"input":"{\"########\", \"#......#\", \"#.Y....#\", \"#.F.#..#\", \"#...X..#\", \"#...#..#\", \"#......#\", \"########\"}",
+			"note":"Start the race at time 2 and your robot will follow the last 6 commands and reach the destination. Your friend's robot needs one of the first two 'S' commands, so you can not start the race sooner than time 2.",
+			"order":2
+		},
+		{
+			"expect":"{\"ESSEESSW\"}",
+			"id":0,
+			"input":"{\"########\", \"#......#\", \"#.Y....#\", \"#.F.#..#\", \"#...X..#\", \"#...#..#\", \"#......#\", \"########\"}",
+			"note":"The only way for your robot to reach the destination is to start the race at time 0. However, the other robot will reach the destination sooner in this case.",
+			"order":3
+		},
+		{
+			"expect":"{\"SSSNWSSSEWNSENENENNNNENWNEWESE\"}",
+			"id":0,
+			"input":"{\"##.#.#.\", \"..##...\", \"..#...X\", \"Y...##.\", \"#...#.#\", \"..#..F.\"}",
+			"note":"If the race starts at time 5, the destination is reached at time 26. The commands followed by your robot are EEENEEE (the others are ignored). Note that starting the race at time 4 would result in both robots reaching the destination cell at the same time.",
+			"order":4
+		},
+		{
+			"expect":"{\"NWWSEWSSNWESSWES\", \"ESEEENSNWNNWSNSNWWNWWNNNWE\", \"NSNENENNSEENWWNSNNNNWWSSN\", \"EENEWNWESESEEESNNNSEENNEWNNESNEESSEESEEENENNNWSSW\", \"NWNNWSNWSWSSSSEEWSSWSESWWNNWWENSNNWWSSWWNNE\", \"NWEWNEWSNEN\", \"NNNEWNSWSNWESWNNNSWWNNNWWWNNEWNEEWSSWNSSWWNNWESEWS\", \"WSSSEESSEEEEENNSWEWWWENSENWNSEENES\", \"NNSNESESWNESNENSEESESWSENNESESNESNESEEW\", \"ESNENEENWSNS\"}",
+			"id":0,
+			"input":"{\"#..#.........#...X##....\", \"#........#..........##.#\", \".#.#........#.....#.#...\", \"..###...#..##.##...#....\", \"..#.#.....#....#.#.####.\", \"#...##.##.##..#.....##..\", \".##...#.#....#.......#.#\", \"....##.#..#....#....#...\", \"....###.##.....###...#..\", \"#.#.......#.#......#..#.\", \".##....##.#.##.......#.#\", \"......###...####......#.\", \"..#.##.#..#.#...#...#...\", \".....#.#..........#...#.\", \"##.#....##F#.....#.##.#.\", \".##....#.......##.##.##.\", \"..#...#..##....#..#...Y.\", \"#...........#...###..###\", \".....#...#..#.........#.\", \".#...##..#.#...#..#.##..\", \"#..#...######....###.#..\", \"#.#.....#.......#.##....\", \"#..#....###....#.#..#...\", \"..#...#.##.##.#.##.##..#\", \"#....##.##..........#..#\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"board will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of board will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of board will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character of each element of board will be either '.', '#', 'Y', 'F' or 'X'."
+		},
+		{
+			"order":5,
+			"val":"The characters 'Y', 'F' and 'X' will each appear exactly once in board."
+		},
+		{
+			"order":6,
+			"val":"commands will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":7,
+			"val":"Each element of commands will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":8,
+			"val":"Each character of each element of commands will be either 'S', 'N', 'E' or 'W'."
+		}
+	]
+}

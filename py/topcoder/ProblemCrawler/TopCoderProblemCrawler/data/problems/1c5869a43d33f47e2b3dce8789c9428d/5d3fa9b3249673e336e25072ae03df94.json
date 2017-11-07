@@ -1,0 +1,91 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12946&rd=15836",
+	"statement":"MaxMinTreeGame is a game for two players. The game is played on a tree. The tree has N nodes, labeled 0 through N-1. Each node of the tree also has an integer cost. <br /><br /><br /><br /> The players take alternating turns. In her turn, the current player starts by choosing one edge of the tree and erasing it. This necessarily divides the tree into two components. The current player then decides which of the components to keep, and erases the other component completely. <br /><br /><br /><br /> The game ends when there is only one node left. The cost of that node is the result of the game. The first player (i.e., the one that starts the game) wants to maximize the result. Naturally, the second player's goal is to minimize the result. <br /><br /><br /><br /> You are given a int[] <b>edges</b> that describes the structure of the tree. For each i between 0 and N-2, inclusive, the tree contains an edge between the vertices i+1 and <b>edges</b>[i]. You are also given a int[] <b>costs</b>. For each i between 0 and N-1, inclusive, the cost of vertex i is <b>costs</b>[i]. <br /><br /><br /><br /> Return the result of the game, assuming that both players play optimally.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MaxMinTreeGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findend",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int findend(int[] edges, int[] costs)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{4,6}",
+			"id":0,
+			"input":"{0}",
+			"note":"There is only one edge in this tree and the first player will choose it. After that she will keep the component containing the node with cost 6. ",
+			"order":1
+		},
+		{
+			"expect":"{4,6,5}",
+			"id":0,
+			"input":"{0,1}",
+			"note":"One of the optimal moves for the first player is to remove the edge between nodes 0 and 1 and to keep the component containing nodes 1 and 2. The second player will then remove the remaining edge and keep the node with cost 5. ",
+			"order":2
+		},
+		{
+			"expect":"{0,1,0,1,0}",
+			"id":0,
+			"input":"{0,1,2,3}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{5,1,2,3}",
+			"id":0,
+			"input":"{0,0,0}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"{3,2,5}",
+			"id":0,
+			"input":"{0,0}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"The number of nodes in the tree N will be between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"edges will contain exactly N-1 elements."
+		},
+		{
+			"order":3,
+			"val":"For each i, edges[i] will be between 0 and i, inclusive."
+		},
+		{
+			"order":4,
+			"val":"costs will contain exactly N elements."
+		},
+		{
+			"order":5,
+			"val":"Each element of costs will be between 0 and 1,000,000,000, inclusive."
+		}
+	]
+}

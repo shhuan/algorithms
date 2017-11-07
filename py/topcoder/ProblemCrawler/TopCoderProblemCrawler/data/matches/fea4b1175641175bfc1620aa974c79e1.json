@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":158.18,
+			"constraints":[],
+			"correctRatio":90.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11706&rd=14762",
+			"name":"MagicCandy",
+			"notes":[],
+			"submission":532
+		},
+		{
+			"avgPts":300.5,
+			"constraints":[],
+			"correctRatio":84.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11690&rd=14762",
+			"name":"MagicBlizzard",
+			"notes":[],
+			"submission":53
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11676&rd=14762",
+			"name":"MagicMatchesGame",
+			"notes":[],
+			"submission":5
+		}
+	],
+	"name":"Single Round Match 526.5 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14762"
+}

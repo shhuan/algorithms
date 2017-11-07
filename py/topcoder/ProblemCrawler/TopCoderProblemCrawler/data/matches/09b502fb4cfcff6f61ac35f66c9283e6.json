@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.23,
+			"constraints":[],
+			"correctRatio":36.6,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6190&rd=9825",
+			"name":"PolyMove",
+			"notes":[],
+			"submission":265
+		},
+		{
+			"avgPts":275.81,
+			"constraints":[],
+			"correctRatio":70.92,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6412&rd=9825",
+			"name":"Conditional",
+			"notes":[],
+			"submission":196
+		},
+		{
+			"avgPts":532.77,
+			"constraints":[],
+			"correctRatio":53.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6137&rd=9825",
+			"name":"TheXGame",
+			"notes":[],
+			"submission":15
+		}
+	],
+	"name":"Single Round Match 304 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9825"
+}

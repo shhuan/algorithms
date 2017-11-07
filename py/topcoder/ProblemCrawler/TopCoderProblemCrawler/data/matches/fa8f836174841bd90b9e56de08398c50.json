@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":227.14,
+			"constraints":[],
+			"correctRatio":55.88,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1758&rd=5001",
+			"name":"ASeries",
+			"notes":[],
+			"submission":102
+		},
+		{
+			"avgPts":359.45,
+			"constraints":[],
+			"correctRatio":25.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1107&rd=5001",
+			"name":"NoZero",
+			"notes":[],
+			"submission":63
+		}
+	],
+	"name":"2004 TCCC > Qualification Problem Set 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5001"
+}

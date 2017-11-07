@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2299&rd=4740",
+	"statement":"You are in possesion of a special bag of devouring. You can put anything you like into the bag and it never becomes bulkier or heavier. Whenever you want to retrieve something from the bag, just reach in and pull it out, if it's there. The catch is that every time you take an item out of the bag there is a chance that the bag will devour one of the remaining items. The chances that a particular item is devoured depends on the weight of that item, in pounds, and all the other items still in the bag. To find the probability that an item will be devoured, divide the weight of that item by the total weight of all the items in the bag + 100. The only time an item might be devoured is immediately after removing an item from the bag, and at most one item is devoured at each of these opportunities.<br /><br /><br /><br /> You've already put quite a few items of value in the bag and want to know the expected value of the items remaining after all of the items have either been removed from the bag or devoured. Create a class BagOfDevouring that has a method expectedYield that takes a int[] <b>values</b> and a int[] <b>weights</b> and returns a double that is the expected value of the items removed from the bag. You will always remove the item that maximizes the expected value of items removed.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BagOfDevouring",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"expectedYield",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double expectedYield(int[] values, int[] weights)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{100,100}",
+			"id":0,
+			"input":"{100,100}",
+			"note":"Both items are the same, so you are guaranteed to get a value of 100 from the bag. After removing one item there is a 100/(100+100)=50% chance that the other item will be devoured, so the expected yield is 100+.50*100=150.",
+			"order":1
+		},
+		{
+			"expect":"{100,200,300}",
+			"id":0,
+			"input":"{100,200,300}",
+			"note":"Here the heavier items are also the most valuable, and in a case like this it is intuitive that the optimal strategy is to take the most valuable item at every opportunity. This means we are guaranteed to get item 2. Afterwards item 0 has a 1/4 chance of being devoured, and item 1 has a 1/2 chance of being devoured. If neither item is devoured (1/4 chance) we take item 1, and item 0 has a 1/2 chance of being devoured. So the expected yield is 300+(1/4)*200+(1/2)*100+(1/4)*(200+(1/2)*100)=462.5.",
+			"order":2
+		},
+		{
+			"expect":"{300,200,100}",
+			"id":0,
+			"input":"{100,200,300}",
+			"order":3
+		},
+		{
+			"expect":"{}",
+			"id":0,
+			"input":"{}",
+			"order":4
+		},
+		{
+			"expect":"{100,200,300,400,500,1000,2000,1500,3000,6000,4000}",
+			"id":0,
+			"input":"{10,100,150,250,500,750,1000,2500,5000,7500,10000}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"values and weights will both contain between 0 and 15 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"values and weights will both contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of values and weights will be between 1 and 10000, inclusive."
+		}
+	]
+}

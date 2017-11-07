@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":163.49,
+			"constraints":[],
+			"correctRatio":34.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6398&rd=10000",
+			"name":"ExtraordinarilyLarge",
+			"notes":[],
+			"submission":468
+		},
+		{
+			"avgPts":386.26,
+			"constraints":[],
+			"correctRatio":90.53,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6708&rd=10000",
+			"name":"ContestSchedule",
+			"notes":[],
+			"submission":433
+		},
+		{
+			"avgPts":523.76,
+			"constraints":[],
+			"correctRatio":72.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6400&rd=10000",
+			"name":"SeatingPlan",
+			"notes":[],
+			"submission":102
+		}
+	],
+	"name":"Single Round Match 320 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10000"
+}

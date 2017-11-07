@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3483&rd=6530",
+	"statement":"Most image editing programs have the ability to adjust an image's brightness and contrast. When adjusting the brightness of an image, an integer value is either added or subtracted from the color value of each pixel. When adjusting the contrast of an image, the color value of grey is first subtracted from the color value of each pixel, then the color value is multiplied by an integer and divided by 100, and finally the value of grey is added back to the color value. When adjusting both brightness and contrast, the brightness is adjusted first, and then the contrast is adjusted. If, after applying either adjustment, the color value of a pixel is below the minimum color value or above the maximum color value, then the color value for that pixel is set at the minimum or maximum, respectively (32 and 95 in this problem).<br /><br /><br /><br /> In this problem, we will consider a greyscale image, where each pixel is represented by an ASCII character between 32 and 95, inclusive. Grey is indicated by 63.5 (hence no pixel is exactly grey). Your task is to adjust the brightness and contrast of an image so that the darkest pixels in the image are black (32), and the brightest pixels in the image are white (95). To do this, you may adjust the brightness by any integer value between -100 and 100, inclusive, and you may adjust the contrast by any integer value between 100 and 20,000, inclusive. When a pixel's value is not an integer after the adjustment, round its value to the nearest integer (0.5 rounds up). To prevent loss of detail, you should adjust the brightness and contrast in such a way that the contrast is adjusted as little as possible. If there are multiple ways to do this with the minimum contrast adjustment, you should pick the one with the smallest absolute brightness adjustment. You should return a String[] representing the adjusted image.",
+	"notes":[{
+		"order":1,
+		"val":"There will always be a way to perform the adjustment."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AutoAdjust",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"adjust",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] adjust(String[] image)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \" \", \" ___ CCC \", \" _ C \", \" _ CCC \", \" \" }",
+			"id":0,
+			"input":"{\"------------\", \"--TTT--CCC--\", \"---T---C----\", \"---T---CCC--\", \"------------\"}",
+			"note":", , and  have ASCII values of 45, 67, and 84, respectively. By decreasing the brightness by 1, and then adjusting the contrast by 159, these three values are transformed as follows:  Rounding these values, we get 32, 67 and 95.",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \" \", \" ___ CCC \", \" _ C \", \" _ CCC \", \" \" }",
+			"id":0,
+			"input":"{\" \", \" ___ CCC \", \" _ C \", \" _ CCC \", \" \"}",
+			"note":"The minimum and maximum values are already 32 and 95, so nothing needs to be done (brightness = 0, contrast = 100).",
+			"order":2
+		},
+		{
+			"expect":"Returns: { \" _\" }",
+			"id":0,
+			"input":"{\"AB\"}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"image will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of image will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of image will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"There will be at least two different color values in image."
+		},
+		{
+			"order":5,
+			"val":"Each character in image will have ASCII value between 32 and 95, inclusive."
+		}
+	]
+}

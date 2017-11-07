@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":238.49,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4723&rd=8031",
+			"name":"VariableAddition",
+			"notes":[],
+			"submission":1
+		},
+		{
+			"avgPts":568.75,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4753&rd=8031",
+			"name":"CheapestFlights",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2005 TCO > Sponsor Track Set 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=8031"
+}

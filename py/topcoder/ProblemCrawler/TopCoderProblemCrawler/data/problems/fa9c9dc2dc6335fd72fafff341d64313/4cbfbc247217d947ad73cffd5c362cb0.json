@@ -1,0 +1,92 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5969&rd=8080",
+	"statement":"<p> You have discovered a region in need of power, and as an enterprising businessperson, you have decided to build a power line there. The region is a cartesian plane, and consumers are represented as points on the plane. Your power line will be a single straight line that is horizontal, vertical, or parallel to any of two diagonals. Each potential consumer will purchase power from your line if and only if the distance between him and your line is less than or equal to <b>D</b>. This distance is measured as the Euclidean distance (the length of the shortest line segment between the point and the line). You would like to maximize your profit by maximizing the number of consumers using your power line. </p> <p> You are given int[]s <b>x</b> and <b>y</b> containing the coordinates of the consumers. The i<sup>th</sup> elements of <b>x</b> and <b>y</b> represent the x and y coordinates of the i<sup>th</sup> consumer. Your are also given an int <b>D</b>, the value described above. Build your power line to maximize the number of consumers that will use it, and return this maximum number. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"More than one consumer may be located at the same point."
+		},
+		{
+			"order":2,
+			"val":"The power line may cross consumer points, in which case those consumers are at a distance of zero from the power line (see example 1)."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PowerSupply",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxProfit",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxProfit(int[] x, int[] y, int D)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1,2,6,-4,1}",
+			"id":0,
+			"input":"{0,3,0,0,0}",
+			"order":1
+		},
+		{
+			"expect":"{0,0,0}",
+			"id":0,
+			"input":"{-1000000,13,1000000}",
+			"note":"All points are crossed by the line, so all three consumers can connect to the power line even with D equal to 0.",
+			"order":2
+		},
+		{
+			"expect":"{1,2,1,2,8}",
+			"id":0,
+			"input":"{-5,-2,2,8,-1}",
+			"order":3
+		},
+		{
+			"expect":"{-2,-3,4,6,9}",
+			"id":0,
+			"input":"{-5,-5,-2,-2,3}",
+			"order":4
+		},
+		{
+			"expect":"{-500859, -840607, -792296, -379621, -890856, 362559, -98535, 617148, -128203, 802475}",
+			"id":0,
+			"input":"{511590, -60297, 337900, -322958, -806739, 358447, 685932, 663609, 276080, -213586}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"x and y will contain between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"x and y will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of x and y will be between -1000000 and 1000000, inclusive."
+		},
+		{
+			"order":4,
+			"val":"D will be between 0 and 1000000, inclusive."
+		}
+	]
+}

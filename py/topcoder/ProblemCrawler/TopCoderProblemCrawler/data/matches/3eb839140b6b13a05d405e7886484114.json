@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":175.8,
+			"constraints":[],
+			"correctRatio":93.28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7250&rd=10008",
+			"name":"LightsCube",
+			"notes":[],
+			"submission":387
+		},
+		{
+			"avgPts":287.43,
+			"constraints":[],
+			"correctRatio":70.59,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6852&rd=10008",
+			"name":"BlockEnemy",
+			"notes":[],
+			"submission":187
+		},
+		{
+			"avgPts":445.69,
+			"constraints":[],
+			"correctRatio":29.41,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6620&rd=10008",
+			"name":"BackyardTrees",
+			"notes":[],
+			"submission":17
+		}
+	],
+	"name":"Single Round Match 328 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10008"
+}

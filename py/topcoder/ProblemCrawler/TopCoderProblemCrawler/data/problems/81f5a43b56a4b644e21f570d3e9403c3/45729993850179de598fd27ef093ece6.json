@@ -1,0 +1,88 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2842&rd=5850",
+	"statement":"<p> <i>Sortitaire</i> is a solitaire card game in which you try to arrange a sequence of cards in non-decreasing order. You start by dealing a sequence of cards face up. This sequence is called the <b>tableau</b>. The remaining cards are placed in a pile called the <b>stock</b>. On each turn, you draw the top card from the stock. You can then either discard the card, or play it face up over one of the cards in the tableau, completely covering the existing card. You win when the cards showing in the tableau are arranged in non-decreasing order. For simplicity, the cards will be represented as integers between 1 and 99, inclusive. </p> <p> For example, suppose you began with the tableau </p> <pre>\n   25  19  41  36  28  40\n</pre> and the stock contained the cards 27, 36, 24, 39, and 30, in that order. You could win in five turns by playing the 27 on the 19, playing the 36 on the 28, discarding the 24, discarding the 39, and playing the 30 on the 41, yielding the tableau <pre>\n   25  27  30  36  36  40\n</pre> Alternatively, you could win in four turns by playing the 27 on the 19, playing the 36 on the 41, discarding the 24, and playing the 39 on the 28, yielding the tableau <pre>\n   25  27  36  36  39  40\n</pre> <p> Given the <b>tableau</b> and the <b>stock</b>, your task is to calculate and return the minimum number of turns needed to win. If it is impossible to win, return -1. </p> ",
+	"notes":[{
+		"order":1,
+		"val":" is the same as  order, except that adjacent cards are allowed to be equal."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Sortitaire",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"turns",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int turns(int[] tableau, int[] stock)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ 27, 36, 24, 39, 30 }",
+			"id":0,
+			"input":"{ 25, 19, 41, 36, 28, 40 }",
+			"note":"The example above.",
+			"order":1
+		},
+		{
+			"expect":"{ 2, 3, 4 }",
+			"id":0,
+			"input":"{ 1, 1, 1, 1, 1 }",
+			"note":"The tableau is already in non-decreasing order.",
+			"order":2
+		},
+		{
+			"expect":"{ 20, 40 }",
+			"id":0,
+			"input":"{ 5, 4, 3, 2, 1 }",
+			"note":"This game cannot be won.",
+			"order":3
+		},
+		{
+			"expect":"{ 7, 6, 5, 4, 3, 2 }",
+			"id":0,
+			"input":"{ 40, 50, 60, 70, 1 }",
+			"order":4
+		},
+		{
+			"expect":"{ 24, 89, 70, 35, 55, 43, 92, 10, 33, 18, 8, 40, 14, 22, 56, 4, 98, 57, 89, 31, 30, 14 }",
+			"id":0,
+			"input":"{ 19, 7, 23, 38, 23, 90, 81, 22, 71, 30, 87, 32, 99, 5, 80, 17, 19, 43, 67, 50, 88, 11 }",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"tableau contains between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of tableau is between 1 and 99, inclusive."
+		},
+		{
+			"order":3,
+			"val":"stock contains between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":4,
+			"val":"Each element of stock is between 1 and 99, inclusive."
+		}
+	]
+}

@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2969&rd=5877",
+	"statement":"<p> If I asked you to read the following lines aloud </p> <pre>\n    It was the best of times, it was the worst of times, it was the\n    the age of wisdom, it was the age of foolishness, it was the \n    epoch of belief, it was the epoch of incredulity, ...\n</pre> there is a very good chance that you would say &quot;it was <i>the</i> age of wisdom&quot; instead of &quot;it was <i>the</i> <i>the</i> age of wisdom&quot;. This is a common typing error that can be fiendishly difficult to spot. <p> After making this error one too many times, you have decided to build a tool to detect such errors automatically. Given a String[] <b>lines</b>, you are to return the zero-based index of the first line whose last word is the same as the first word on the next line, or -1 if there is no such line. Each line contains one or more words separated by spaces. Words are composed of uppercase and lowercase letters ('A'-'Z' and 'a'-'z'). Two words are considered the same if they are exactly equal, including capitalization. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheThe",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"check",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int check(String[] lines)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{ \"It was the best of times it was\", \"the worst of times it was the\", \"the age of wisdom it was the age\", \"of foolishness it was the epoch\", \"epoch of belief it was the epoch\", \"of incredulity\" }",
+			"note":"The error appears twice, once with the word \"the\" between lines 1 and 2, and once with the word \"epoch\" between lines 3 and 4. You are looking for the first such error, so you return 1.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"I like you\", \"You like me\", \"Lets have dinner\" }",
+			"note":"Capitalization matters.",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"Sometimes I call my father Pops\", \"PopsEdit is a feature rich editor\", \"Just once I would like to beat SnapDragon\", \"Dragon stew is tasty but the ingredients\", \"are difficult to come by\" }",
+			"note":"Only whole words count as matches, not prefixes or suffixes.",
+			"order":3
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{ \"A line might contain a\", \"single\", \"word\" }",
+			"order":4
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{ \"I know that\", \"that kind of food\", \"is bad for me but\", \"I like it anyway\" }",
+			"note":"Sometimes you actually intend to repeat a word, but such instances should be flagged as errors anyway.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"lines contains between 2 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of lines contains between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of lines contains only letters ('A'-'Z' and 'a'-'z') and spaces (' ')."
+		},
+		{
+			"order":4,
+			"val":"No element of lines begins with a space, ends with a space, or contains two adjacent spaces."
+		}
+	]
+}

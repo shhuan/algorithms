@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7621&rd=10841",
+	"statement":"The least common multiple (lcm) of a set of positive integers is the smallest integer that is divisible by each member of the set. It is frequently desirable to have a collection of numbers whose lcm is large. <p> We want to manufacture parts in a greater variety of sizes -- specifically our goal is to offer sizes whose lcm is greater than or equal to <b>targetLcm</b>. But every new size s that we manufacture costs us s dollars to tool up to produce. </p><p> The int[] <b>sizes</b> contains all the sizes we are currently producing. The String <b>targetLcm</b> represents an integer with no leading zeroes. Return the minimum cost of offering additional sizes that will let us achieve our goal. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ToolingUp",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"cost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int cost(String targetLcm, int[] sizes)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{82,13,100}",
+			"id":0,
+			"input":"\"193\"",
+			"note":"Our existing sizes already have a big enough lcm. ",
+			"order":1
+		},
+		{
+			"expect":"{100,92,77}",
+			"id":0,
+			"input":"\"1000000\"",
+			"note":"We can produce a single new size of 9 to get an lcm greater than 1,000,000. (We could also achieve our goal by adding the two sizes 3 and 8, but that would cost 11.) ",
+			"order":2
+		},
+		{
+			"expect":"{124,600,7,8}",
+			"id":0,
+			"input":"\"999999\"",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"{31,1,1,6}",
+			"id":0,
+			"input":"\"123456789123\"",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"targetLcm will contain only digits ('0' - '9')."
+		},
+		{
+			"order":2,
+			"val":"targetLcm will represent an integer between 1 and 1015, inclusive."
+		},
+		{
+			"order":3,
+			"val":"targetLcm will not contain leading zeroes."
+		},
+		{
+			"order":4,
+			"val":"sizes will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each element of sizes will be between 1 and 1000, inclusive."
+		}
+	]
+}

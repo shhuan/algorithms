@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8005&rd=10789",
+	"statement":"<p> The government of a neighboring country is running a game show called &quot;Let's Make Some Money!&quot;. During the final round (the &quot;Round of Eleven&quot;), the contestant is given a number <b>n</b> and some <b>money</b>. The goal is to change the number into a multiple of 11. Contestants are allowed to spend 1 dollar to either increment a digit of <b>n</b> (to a maximum of 9) or decrement a digit of <b>n</b> (to a minimum of 0). Upon reaching a multiple of 11 that has not been selected this week, the contestant can either leave with the money that they have not spent or choose to keep going. For example, if <b>n</b> is 31 and the contestant has 4 dollars, he can change <b>n</b> to 11 (by decrementing the 3 twice), 22 (by decrementing 3 and incrementing 1) or 33 (by incrementing 1 twice). For each one, he would receive 2 dollars. </p><p> As ruler of Rainban, you have decided that you will allow each of your subjects to attend the show and collect all of their winnings; fortunately for you, you have so many subjects that you can win every prize on the show. This week, all subjects will get to start with the same values of <b>n</b> and <b>money</b>. Once one subject selects a multiple of 11, that multiple cannot be used by any future subject. In addition, you cannot add any digits to the number (so you cannot change 9 into 19), but you can create leading zeroes (for example, changing 19 into 09). Return the total amount of money that can be won, if your subjects play optimally. See the examples for clarification. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RoundOfEleven",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxIncome",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long maxIncome(int n, int money)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"31",
+			"note":"The example from the statement.",
+			"order":1
+		},
+		{
+			"expect":"5",
+			"id":0,
+			"input":"31",
+			"note":"With 1 more dollar in the pot, you reach 33, 22 and 11 for 3 dollars each, as well as 00 and 44 for 1 dollar each.",
+			"order":2
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"110",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"435",
+			"id":0,
+			"input":"19759",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 1 and 2^31-1, inclusive, with no leading zeroes."
+		},
+		{
+			"order":2,
+			"val":"money will be between 1 and 500, inclusive."
+		}
+	]
+}

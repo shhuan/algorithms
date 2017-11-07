@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.05,
+			"constraints":[],
+			"correctRatio":54.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13241&rd=16009",
+			"name":"DivisorsPower",
+			"notes":[],
+			"submission":567
+		},
+		{
+			"avgPts":348.5,
+			"constraints":[],
+			"correctRatio":85.42,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13237&rd=16009",
+			"name":"CircuitsConstruction",
+			"notes":[],
+			"submission":343
+		},
+		{
+			"avgPts":605.99,
+			"constraints":[],
+			"correctRatio":72.73,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13283&rd=16009",
+			"name":"DoraemonPuzzleGame",
+			"notes":[],
+			"submission":44
+		}
+	],
+	"name":"Single Round Match 628 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16009"
+}

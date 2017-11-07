@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":233.23,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8256&rd=10956",
+			"name":"CardsAndSlots",
+			"notes":[],
+			"submission":16
+		},
+		{
+			"avgPts":297.65,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8246&rd=10956",
+			"name":"UnfriendlyMultiPermutation",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":683.21,
+			"constraints":[],
+			"correctRatio":37.5,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8248&rd=10956",
+			"name":"AncientLanguage",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Semifinal Room 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10956"
+}

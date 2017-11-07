@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10375&rd=13749",
+	"statement":"There is a country with N cities, some of which are connected with bidirectional roads. Your task is to reconfigure the roads so that it is possible to get from each city to every other city. You must do this using the minimum possible number of transformations, where each transformation consists of the following steps: \n <ol> \n  <li>Choose four different cities A, B, C and D, where roads (A, B) and (C, D) exist, but (A, C), (A, D), (B, C) and (B, D) do not exist.</li> \n  <li>Destroy roads (A, B) and (C, D).</li> \n  <li>Build two new roads - either (A, C) and (B, D), or (A, D) and (B, C).</li> \n </ol> The following images show an example of this transformation. From the first situation you can get the second one or the third one:<br /><br /> <img src=\"http://www.topcoder.com/contest/problem/StrangeCountry/before.png\" />&nbsp;<img src=\"http://www.topcoder.com/contest/problem/StrangeCountry/after.png\" />&nbsp;<img src=\"http://www.topcoder.com/contest/problem/StrangeCountry/after2.png\" /><br /><br /><br /><br /> You are given a String[] <b>g</b>, where the j-th character of the i-th element is 'Y' if there is a road between cities i and j, and 'N' otherwise. Return minimal number of transformations required to accomplish your task, or return -1 if it is impossible.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"StrangeCountry",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"transform",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int transform(String[] g)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{\"NY\", \"YN\"}",
+			"note":"This country is already connected.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"NYYNN\", \"YNYNN\", \"YYNNN\", \"NNNNY\", \"NNNYN\"}",
+			"note":" ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"NYYNNNN\", \"YNYNNNN\", \"YYNNNNN\", \"NNNNYYN\", \"NNNYNYY\", \"NNNYYNY\", \"NNNNYYN\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"NYNYNNNNNNNN\", \"YNYNNNNNNNNN\", \"NYNYYNNNNNNN\", \"YNYNNNNNNNNN\", \"NNYNNYYNNNNN\", \"NNNNYNYNNNNN\", \"NNNNYYNNNNNN\", \"NNNNNNNNYYNN\", \"NNNNNNNYNYNN\", \"NNNNNNNYYNNN\", \"NNNNNNNNNNNY\", \"NNNNNNNNNNYN\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"NYNNNN\", \"YNYNNN\", \"NYNYNN\", \"NNYNNN\", \"NNNNNY\", \"NNNNYN\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"g will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of g will contain exactly N characters 'Y' or 'N', where N is the number of elements in g."
+		},
+		{
+			"order":3,
+			"val":"For each i and j, g[i][j] will be equal to g[j][i]."
+		},
+		{
+			"order":4,
+			"val":"For each i, g[i][i] will be equal to 'N'."
+		}
+	]
+}

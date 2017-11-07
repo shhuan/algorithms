@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":219.25,
+			"constraints":[],
+			"correctRatio":74.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=319&rd=4027",
+			"name":"Compare",
+			"notes":[],
+			"submission":58
+		},
+		{
+			"avgPts":444.97,
+			"constraints":[],
+			"correctRatio":64.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=320&rd=4027",
+			"name":"Subsequences",
+			"notes":[],
+			"submission":57
+		},
+		{
+			"avgPts":485.23,
+			"constraints":[],
+			"correctRatio":9.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=321&rd=4027",
+			"name":"Fencing",
+			"notes":[],
+			"submission":21
+		}
+	],
+	"name":"Single Round Match 56 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4027"
+}

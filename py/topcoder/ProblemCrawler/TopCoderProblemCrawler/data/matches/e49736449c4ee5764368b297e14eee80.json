@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":189.26,
+			"constraints":[],
+			"correctRatio":55.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7787&rd=10780",
+			"name":"PointsOnCircle",
+			"notes":[],
+			"submission":329
+		},
+		{
+			"avgPts":300.58,
+			"constraints":[],
+			"correctRatio":47.37,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7856&rd=10780",
+			"name":"ArithmeticProgressions",
+			"notes":[],
+			"submission":228
+		},
+		{
+			"avgPts":666.61,
+			"constraints":[],
+			"correctRatio":13.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7860&rd=10780",
+			"name":"RelabelingOfGraph",
+			"notes":[],
+			"submission":295
+		}
+	],
+	"name":"Single Round Match 365 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10780"
+}

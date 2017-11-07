@@ -1,0 +1,83 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6810&rd=10134",
+	"statement":"A codeset is a set of n binary strings (the codes) that could be used to encode messages based on an alphabet of size n. In order to be able to decode the result, a codeset must have the property that no code is a prefix of any other code. A codeset is &quot;maximal&quot; if it is not possible to add any additional code to the codeset without violating the prefix requirement. <p> We are interested in how many different codesets of size n exist. For example, when n=4 there are 5 different maximal codesets:</p><pre>\n\n         {&quot;000&quot;,&quot;001&quot;,&quot;01&quot;,&quot;1&quot;}, {&quot;010&quot;,&quot;011&quot;,&quot;00&quot;,&quot;1&quot;}, {&quot;111&quot;,&quot;110&quot;,&quot;10&quot;,&quot;0&quot;},\n         {&quot;101&quot;,&quot;100&quot;,&quot;11&quot;,&quot;0&quot;}, {&quot;00&quot;,&quot;11&quot;,&quot;01&quot;,&quot;10&quot;}\n</pre><p> Oh yes, we have a favorite code and we are only interested in codesets that include that code. You are given <b>n</b>, the size of each codeset, and a binary String <b>favorite</b>. Return the number of maximal codesets of size <b>n</b> that contain <b>favorite</b>. If there are more than 1,000,000,000, return -1 instead. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CodeSet",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"numSets",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int numSets(int n, String favorite)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"01\"",
+			"id":0,
+			"input":"4",
+			"note":" This is the example shown above. Only the first and last codeset listed contain \"01\". ",
+			"order":1
+		},
+		{
+			"expect":"\"0110\"",
+			"id":0,
+			"input":"4",
+			"note":" None of the possible codesets contains \"0110\".",
+			"order":2
+		},
+		{
+			"expect":"\"0\"",
+			"id":0,
+			"input":"2",
+			"note":" The only maximal codeset of size 2 is {0,1}. ",
+			"order":3
+		},
+		{
+			"expect":"\"011001\"",
+			"id":0,
+			"input":"20",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"\"100001\"",
+			"id":0,
+			"input":"15",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"n will be between 2 and 20, inclusive."
+		},
+		{
+			"order":2,
+			"val":"favorite will contain between 1 and 20 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character in favorite will be '0' or '1' (zero or one)."
+		}
+	]
+}

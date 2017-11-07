@@ -1,0 +1,75 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2402&rd=5009",
+	"statement":"<p> The old song declares &quot;Go ahead and hate your neighbor&quot;, and the residents of Onetinville have taken those words to heart. Every resident hates his next-door neighbors on both sides. Nobody is willing to live farther away from the town's well than his neighbors, so the town has been arranged in a big circle around the well. Unfortunately, the town's well is in disrepair and needs to be restored. You have been hired to collect donations for the Save Our Well fund. </p> <p> Each of the town's residents is willing to donate a certain amount, as specified in the int[] <b>donations</b>, which is listed in clockwise order around the well. However, nobody is willing to contribute to a fund to which his neighbor has also contributed. Next-door neighbors are always listed consecutively in <b>donations</b>, except that the first and last entries in <b>donations</b> are also for next-door neighbors. You must calculate and return the maximum amount of donations that can be collected. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BadNeighbors",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxDonations",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxDonations(int[] donations)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 19",
+			"id":0,
+			"input":" { 10, 3, 2, 5, 7, 8 }",
+			"note":"The maximum donation is 19, achieved by 10+2+7. It would be better to take 10+5+8 except that the 10 and 8 donations are from neighbors.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{ 11, 15 }",
+			"order":2
+		},
+		{
+			"expect":"Returns: 21",
+			"id":0,
+			"input":"{ 7, 7, 7, 7, 7, 7, 7 }",
+			"order":3
+		},
+		{
+			"expect":"Returns: 16",
+			"id":0,
+			"input":"{ 1, 2, 3, 4, 5, 1, 2, 3, 4, 5 }",
+			"order":4
+		},
+		{
+			"expect":"Returns: 2926",
+			"id":0,
+			"input":"{ 94, 40, 49, 65, 21, 21, 106, 80, 92, 81, 679, 4, 61, 6, 237, 12, 72, 74, 29, 95, 265, 35, 47, 1, 61, 397, 52, 72, 37, 51, 1, 81, 45, 435, 7, 36, 57, 86, 81, 72 }",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"donations contains between 2 and 40 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element in donations is between 1 and 1000, inclusive."
+		}
+	]
+}

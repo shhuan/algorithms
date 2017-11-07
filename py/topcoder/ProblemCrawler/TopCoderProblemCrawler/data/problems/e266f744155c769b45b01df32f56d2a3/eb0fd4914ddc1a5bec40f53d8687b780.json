@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10738&rd=14145",
+	"statement":"A contest is held between two teams of fighters. The first team is comprised of <b>N</b> persons and the second is comprised of <b>M</b> persons. In the course of the contest, each fighter of the first team will confront each fighter of the second team once. To make the contest more entertaining and less protracted, the organizers divided it into several rounds. In each of the rounds, several fights occur simultaneously. Therefore, a fighter may only participate in one fight per round.<br /><br /> <br /><br /> The contest must be divided into the least number of rounds. One can easily see that this number is the maximum between <b>N</b> and <b>M</b>. Now the exact schedule of fights must be determined. Return a String[] containing exactly <b>N</b> elements. Each element of the return must contain exactly <b>M</b> characters from the set {'1'-'9', 'A'-'Z', 'a'-'o'}. Letters 'A'-'Z' stand for numbers 10-35 and 'a'-'o' stand for numbers 36-50. The j-th character of element i corresponds to the number of the round in which fighter i of the first team encounters fighter j of the second team. If there are several possible schedules, return the one with the lexicographically least first element. If there still are multiple choices, choose the schedule with the lexicographically least second element, and so on.",
+	"notes":[{
+		"order":1,
+		"val":"A string A is lexicographically less than another string B of the same length if there exists a position i such that each character of A before the i-th position is equal to the character at the corresponding position in B, and A[i] is less than B[i]. When comparing the characters, refer to the following list of characters in ascending order: '1', '2', ..., '9', 'A', 'B', ..., 'Z', 'a', 'b', ..., 'o'."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheContest",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getSchedule",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getSchedule(int N, int M)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"There are three persons on each team, so the whole contest is divided into three rounds. If we denote the i-th person of the first team as Ai and the j-th person of the second team as Bj, the fights schedule for each of the rounds is: Round 1: A1-B1, A2-B3, A3-B2 Round 2: A1-B2, A2-B1, A3-B3 Round 3: A1-B3, A2-B2, A3-B1 ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"This time, both teams comprise of four persons, so the contest takes 4 rounds to finish. Round 1: A1-B1, A2-B2, A3-B3, A4-B4 Round 2: A1-B2, A2-B1, A3-B4, A4-B3 Round 3: A1-B3, A2-B4, A3-B1, A4-B2 Round 4: A1-B4, A2-B3, A3-B2, A4-B1 ",
+			"order":2
+		},
+		{
+			"expect":"6",
+			"id":0,
+			"input":"4",
+			"note":"The competition now is held in 6 rounds. Note that since the teams are of unequal size, two of the second team's fighters are taking rest in each of the rounds. Round 1: A1-B1, A2-B2, A3-B5, A4-B6 Round 2: A1-B2, A2-B1, A3-B6, A4-B5 Round 3: A1-B3, A2-B4, A3-B1, A4-B2 Round 4: A1-B4, A2-B3, A3-B2, A4-B1 Round 5: A1-B5, A2-B6, A3-B3, A4-B4 Round 6: A1-B6, A2-B5, A3-B4, A4-B3",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"5",
+			"order":4
+		},
+		{
+			"expect":"40",
+			"id":0,
+			"input":"28",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"M will be between 1 and 50, inclusive."
+		}
+	]
+}

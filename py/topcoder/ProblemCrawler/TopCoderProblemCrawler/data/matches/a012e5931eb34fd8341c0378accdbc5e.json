@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":162.24,
+			"constraints":[],
+			"correctRatio":32.88,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8595&rd=12007",
+			"name":"MonstersAndBunnies",
+			"notes":[],
+			"submission":815
+		},
+		{
+			"avgPts":390.08,
+			"constraints":[],
+			"correctRatio":42.18,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8596&rd=12007",
+			"name":"PrimeSums",
+			"notes":[],
+			"submission":339
+		},
+		{
+			"avgPts":500.91,
+			"constraints":[],
+			"correctRatio":49.28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8600&rd=12007",
+			"name":"MagicFingerprint",
+			"notes":[],
+			"submission":69
+		}
+	],
+	"name":"2008 TopCoder Open > Qualification Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12007"
+}

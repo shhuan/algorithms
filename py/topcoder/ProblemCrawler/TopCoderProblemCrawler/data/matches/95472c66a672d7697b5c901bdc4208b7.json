@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":206.03,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7721&rd=10843",
+			"name":"DayTrader",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7848&rd=10843",
+			"name":"Rafting",
+			"notes":[],
+			"submission":2
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7849&rd=10843",
+			"name":"RepeatingFreeStrings",
+			"notes":[],
+			"submission":1
+		}
+	],
+	"name":"2007 TopCoder Open > Championship Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10843"
+}

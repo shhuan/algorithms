@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6569&rd=9993",
+	"statement":"<p> A prefix-free set is a set of words such that no element in the set is a prefix of another element of the set. For example {&quot;hello&quot;} , {&quot;hello&quot;, &quot;goodbye&quot;, &quot;giant&quot;, &quot;hi&quot;} and the empty set are examples of prefix-free sets. On the other hand, {&quot;hello&quot;,&quot;hell&quot;} and {&quot;great&quot;,&quot;gig&quot;,&quot;g&quot;} are not prefix-free. </p><p> You will be given a String[] <b>words</b> containing a set of words, and you must return the number of elements in the largest prefix-free subset of <b>words</b>. </p>",
+	"notes":[{
+		"order":1,
+		"val":"A prefix of a string is the result of erasing zero or more characters from the right end of that string."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PrefixFreeSets",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"maxElements",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int maxElements(String[] words)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{\"hello\",\"hi\",\"h\",\"run\",\"rerun\",\"running\"}",
+			"note":"{\"hello\",\"hi\",\"run\",\"rerun\"} is a possible subset with 4 elements. Each subset having at least 5 elements will always contain one of these forbidden pairs: \"run\" and \"running\", or \"h\" and \"hi\".",
+			"order":1
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"a\",\"b\",\"cba\",\"cbc\",\"cbb\",\"ccc\"}",
+			"note":"This set is already prefix-free, so the best subset is itself, with 6 elements.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{\"a\",\"ab\",\"abc\",\"abcd\",\"abcde\",\"abcdef\"}",
+			"note":"Any pair of words is forbidden, so the best subset has only 1 element.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{\"topcoder\",\"topcoder\",\"topcoding\"}",
+			"note":"\"topcoder\" is a prefix of \"topcoder\", so we can only have one of them in the subset.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"words will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of words will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each character of each element of words will be a lowercase letter ('a'-'z')."
+		}
+	]
+}

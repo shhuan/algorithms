@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":221.85,
+			"constraints":[],
+			"correctRatio":52.2,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1147&rd=4325",
+			"name":"Whisper",
+			"notes":[],
+			"submission":295
+		},
+		{
+			"avgPts":317.76,
+			"constraints":[],
+			"correctRatio":58.47,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1053&rd=4325",
+			"name":"Execution",
+			"notes":[],
+			"submission":183
+		},
+		{
+			"avgPts":622.13,
+			"constraints":[],
+			"correctRatio":61.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1016&rd=4325",
+			"name":"Decimal",
+			"notes":[],
+			"submission":54
+		}
+	],
+	"name":"2002 TopCoder Invitational > Round 1 B",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4325"
+}

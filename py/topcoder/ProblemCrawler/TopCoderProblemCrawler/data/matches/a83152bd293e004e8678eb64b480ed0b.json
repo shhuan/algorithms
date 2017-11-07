@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":198.58,
+			"constraints":[],
+			"correctRatio":96.28,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8215&rd=12176",
+			"name":"RevealTriangle",
+			"notes":[],
+			"submission":618
+		},
+		{
+			"avgPts":301.47,
+			"constraints":[],
+			"correctRatio":36.24,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8154&rd=12176",
+			"name":"KSubstring",
+			"notes":[],
+			"submission":287
+		},
+		{
+			"avgPts":520.3,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8155&rd=12176",
+			"name":"SoftwareCompanies",
+			"notes":[],
+			"submission":86
+		}
+	],
+	"name":"Single Round Match 404 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12176"
+}

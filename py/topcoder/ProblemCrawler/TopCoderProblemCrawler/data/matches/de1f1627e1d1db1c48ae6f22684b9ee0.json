@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":180.95,
+			"constraints":[],
+			"correctRatio":54.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12730&rd=15701",
+			"name":"GooseTattarrattatDiv1",
+			"notes":[],
+			"submission":613
+		},
+		{
+			"avgPts":278.5,
+			"constraints":[],
+			"correctRatio":56.27,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12729&rd=15701",
+			"name":"GearsDiv1",
+			"notes":[],
+			"submission":279
+		},
+		{
+			"avgPts":480.58,
+			"constraints":[],
+			"correctRatio":53.85,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12728&rd=15701",
+			"name":"FlippingBitsDiv1",
+			"notes":[],
+			"submission":39
+		}
+	],
+	"name":"Single Round Match 589 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15701"
+}

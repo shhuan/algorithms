@@ -1,0 +1,89 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1221&rd=4494",
+	"statement":"<p> Consider a simple encryption algorithm based on the move-to-front heuristic. Both the unencrypted (plaintext) and encrypted (ciphertext) messages are Strings composed of uppercase letters ('A'-'Z') and spaces (' '). The encryption algorithm maintains a state which is a permutation of the 27 possible characters. The key used to encrypt and decrypt messages is the initial permutation. </p> <p> Encryption processes the plaintext from left to right, outputting one character of the ciphertext for each character of the plaintext. At each position of the plaintext, the encryption algorithm performs the following steps: </p>\n <ul> \n  <li> Find the (zero-based) position of the plaintext character in the current permutation. </li> \n  <li> If the position is 0-25, output 'A'-'Z', respectively. If the position is 26, output a space. </li> \n  <li> Move the plaintext character to the front of the permutation (ie, delete it from its current position in the permutation and re-insert it at the front). </li> \n </ul> For example, starting with a key <tt>&quot;ZYXWVUTSRQPON MLKJIHGFEDCBA&quot;</tt> and a plaintext <tt>&quot;TPCDR&quot;</tt> (all quotes for clarity only), encryption would proceed as follows: \n <ol> \n  <li> State = <tt>&quot;ZYXWVU<b>T</b>SRQPON MLKJIHGFEDCBA&quot;</tt>. 'T' is in position 6, output 'G'.</li> \n  <li> State = <tt>&quot;TZYXWVUSRQ<b>P</b>ON MLKJIHGFEDCBA&quot;</tt>. 'P' is in position 10, output 'K'.</li> \n  <li> State = <tt>&quot;PTZYXWVUSRQON MLKJIHGFED<b>C</b>BA&quot;</tt>. 'C' is in position 24, output 'Y'.</li> \n  <li> State = <tt>&quot;CPTZYXWVUSRQON MLKJIHGFE<b>D</b>BA&quot;</tt>. 'D' is in position 24, output 'Y'.</li> \n  <li> State = <tt>&quot;DCPTZYXWVUS<b>R</b>QON MLKJIHGFEBA&quot;</tt>. 'R' is in position 11, output 'L'.</li> \n </ol> The final ciphertext is <tt>&quot;GKYYL&quot;</tt>. (The final state is <tt>&quot;RDCPTZYXWVUSQON MLKJIHGFEBA&quot;</tt>, but that is discarded by the algorithm.) <p></p> <p> You will be given both the <b>plaintexts</b> and the <b>ciphertexts</b> of several messages, where the <i>i</i>-th ciphertext is believed to be the encrypted form of the <i>i</i>-th plaintext, and all the messages are believed to have been encrypted using the same key. Your task is to recover and return that key (as a String). If the messages do not contain enough information to fully determine the key, the output of your method should summarize the set of possible keys by placing a <tt>'-'</tt> character at any position of the permutation that has not been narrowed down to a single possible character. If no key exists that could have been used to encrypt all the messages, output <tt>&quot;ERROR&quot;</tt>. </p> <p> Notice that, when encrypting multiple messages, the state is <i>not</i> carried over from one message to the next, but rather is re-initialized for each message. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DecodeMoveToFront",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"findKey",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String findKey(String[] plaintexts, String[] ciphertexts)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"GKYYL\"}",
+			"id":0,
+			"input":"{\"TPCDR\"}",
+			"note":"The example above, but the characters that were not used could have been anywhere in the initial permutation.",
+			"order":1
+		},
+		{
+			"expect":"{\"X\",\"X\"}",
+			"id":0,
+			"input":"{\"A\",\"B\"}",
+			"note":"A and B cannot both be in position 23 of the key.",
+			"order":2
+		},
+		{
+			"expect":"{\"HOWDY\"}",
+			"id":0,
+			"input":"{\"HELLO\"}",
+			"note":"The second 'L' should be encoded as an 'A'. ",
+			"order":3
+		},
+		{
+			"expect":"{\"ABCDEFGFEHFIJK\",\"FHLBKIMDLKHFDNK\",\"BCDEEEDHDIOPEFJ\"}",
+			"id":0,
+			"input":"{\"FOUR SCORE AND\",\"SEVEN YEARS AGO\",\"OUR FOREFATHERS\"}",
+			"note":" ",
+			"order":4
+		},
+		{
+			"expect":"{\"LG GLM\",\"ZEQWCO\",\"GFNMFLGRGLVGS\",\"UMGOTJML\",\"LQJY\",\"OGKGSAG\",\"WNNFCMG\",\"XNFHN\"}",
+			"id":0,
+			"input":"{\"LIZARD\",\"JACKAL\",\"HOWLER MONKEY\",\"BLOWFISH\",\"LYNX\",\"GIRAFFE\",\"VULTURE\",\"QUAIL\"}",
+			"order":5
+		},
+		{
+			"expect":"{\"AA\"}",
+			"id":0,
+			"input":"{\"HI\"}",
+			"note":"The 'I' cannot be encoded as 'A' because 'H' is guaranteed to be in that position.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"plaintexts and ciphertexts contain the same number of elements (between 1 and 20, inclusive)."
+		},
+		{
+			"order":2,
+			"val":"Element i of plaintexts has the same length as element i of ciphertexts (between 1 and 50 characters, inclusive)."
+		},
+		{
+			"order":3,
+			"val":"Elements of plaintexts and ciphertexts contain uppercase letters ('A'-'Z') and spaces only."
+		}
+	]
+}

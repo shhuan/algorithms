@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12735&rd=15704",
+	"statement":"<p> <i>This problem statement contains superscripts and/or subscripts. These may not display properly outside the applet.</i> </p> <p> </p> <p> Little Elephant from the Zoo of Lviv likes permutations. A permutation of size <b>N</b> is a sequence (a<sub>1</sub>, ..., a<sub><b>N</b></sub>) that contains each of the numbers from 1 to <b>N</b> exactly once. For example, (3,1,4,5,2) is a permutation of size 5. </p> <p> </p> <p> Given two permutations A = (a<sub>1</sub>, ..., a<sub><b>N</b></sub>) and B = (b<sub>1</sub>, ..., b<sub><b>N</b></sub>), the value magic(A,B) is defined as follows: magic(A,B) = max(a<sub>1</sub>,b<sub>1</sub>) + max(a<sub>2</sub>,b<sub>2</sub>) + ... + max(a<sub><b>N</b></sub>,b<sub><b>N</b></sub>). </p> <p> </p> <p> You are given the int <b>N</b>. You are also given another int <b>K</b>. Let X be the number of pairs (A,B) such that both A and B are permutations of size <b>N</b>, and magic(A,B) is greater than or equal to <b>K</b>. (Note that A and B are not required to be distinct.) Return the value (X modulo 1,000,000,007). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LittleElephantAndPermutationDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getNumber(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"1",
+			"note":"For =1 the only pair of permutations is ( (1), (1) ). The magic of this pair of permutations is 1, so we count it.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"note":"Now there are four possible pairs of permutations. They are shown below, along with their magic value.  In all four cases the magic value is greater than or equal to .",
+			"order":2
+		},
+		{
+			"expect":"8",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"74",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"50",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and 2500, inclusive."
+		}
+	]
+}

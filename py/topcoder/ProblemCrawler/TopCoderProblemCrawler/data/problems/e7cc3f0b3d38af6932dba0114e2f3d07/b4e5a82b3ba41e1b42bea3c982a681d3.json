@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6784&rd=10667",
+	"statement":"A refactorable number is defined to be a number that is divisble by the number of distinct factors that it has. Examples of refactorable numbers include 1 (1 factor), 12 (6 factors), and 9 (3 factors), but not 7 (2 factors) or 16 (5 factors). <p> You will be given two ints, <b>low</b> and <b>high</b>. Return the number of refactorable numbers between <b>low</b> and <b>high</b>, inclusive.</p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RefactorableNumber",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"count",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int count(int low, int high)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":"There are 4 refactorable numbers between 1 and 10, namely: 1, 2, 8, and 9.",
+			"order":1
+		},
+		{
+			"expect":"100",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"35",
+			"id":0,
+			"input":"25",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"4567",
+			"id":0,
+			"input":"123",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"low will be between 1 and 2,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"high will be between low and 2,000,000, inclusive."
+		}
+	]
+}

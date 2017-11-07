@@ -1,0 +1,84 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11505&rd=14569",
+	"statement":"Recently, Philip bought a new audio player. After toying with it a bit, he noticed that the player was pretty strange. It is only capable of playing <b>N</b> different songs that were pre-loaded by the manufacturer. These songs are arranged in a playlist which contains <b>N</b> positions, numbered 0 to <b>N</b>-1. Each song is in a distinct position of the playlist.<br /><br /><br /><br /> The player has a &quot;Shuffle&quot; button which changes the order of songs in the playlist as follows: \n <ol> \n  <li>The user is asked to enter an integer K, which must be between <b>K1</b> and <b>K2</b>, inclusive.</li> \n  <li>The player generates a random permutation P = (p[0], p[1], ..., p[<b>N</b>-1]) of integers between 0 and <b>N</b>-1, inclusive. All possible permutations have the same probability of being generated.</li> \n  <li>The generated permutation P is applied to the playlist exactly K times. Each application works as follows: for each i, 0 &lt;= i &lt; <b>N</b>, the song at position i of the playlist is moved to position p[i] (these movements occur simultaneously for all <b>N</b> songs).</li> \n </ol> Philip considers a shuffle to be <i>successful</i> if the song at position <b>X</b> of the playlist before the shuffle appears at position <b>Y</b> after the shuffle. He discovered that the probability of a shuffle being successful may depend on the number K that he enters in the first step of the shuffle process. Return the value of K he must enter to achieve the maximum probability of a successful shuffle. If there are several such values, return the smallest one among them.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"PlaylistShuffler",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"bestShuffle",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int, long, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long bestShuffle(int N, int X, int Y, long K1, long K2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"2",
+			"note":"Suppose that the songs are called A and B and the initial order is A, B. If the generated permutation is {0, 1}, then the list is just left intact no matter what the value of K is. If the permutation is {1, 0}, the list keeps changing between A, B and B, A consecutively. We want to maximize the probability that the final list is B, A. For K = 2 and K = 4 this probability is 0, and for K = 3 the probability is 0.5.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"2",
+			"note":"This time we want the final list to be A, B. This happens with probability 1 for every even value of K. The smallest one among them is 2.",
+			"order":2
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1",
+			"note":"Since there is just 1 song, all values of K lead to the same final result.",
+			"order":3
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"X will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Y will be between 0 and N-1, inclusive."
+		},
+		{
+			"order":4,
+			"val":"K1 will be between 1 and 10,000,000,000 (10^10), inclusive."
+		},
+		{
+			"order":5,
+			"val":"K2 will be between K1 and 10,000,000,000 (10^10), inclusive."
+		}
+	]
+}

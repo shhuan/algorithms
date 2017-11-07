@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":189.96,
+			"constraints":[],
+			"correctRatio":64.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7243&rd=10009",
+			"name":"RailroadSeatNumeration",
+			"notes":[],
+			"submission":480
+		},
+		{
+			"avgPts":292.04,
+			"constraints":[],
+			"correctRatio":63.64,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5955&rd=10009",
+			"name":"LogCutter",
+			"notes":[],
+			"submission":198
+		},
+		{
+			"avgPts":567.34,
+			"constraints":[],
+			"correctRatio":89.55,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6845&rd=10009",
+			"name":"RPSChamps",
+			"notes":[],
+			"submission":67
+		}
+	],
+	"name":"Single Round Match 329 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10009"
+}

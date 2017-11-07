@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":153.15,
+			"constraints":[],
+			"correctRatio":11.15,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6013&rd=9808",
+			"name":"TwoEquations",
+			"notes":[],
+			"submission":296
+		},
+		{
+			"avgPts":318.15,
+			"constraints":[],
+			"correctRatio":46.96,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5973&rd=9808",
+			"name":"MooresLaw",
+			"notes":[],
+			"submission":247
+		},
+		{
+			"avgPts":633.95,
+			"constraints":[],
+			"correctRatio":44.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6005&rd=9808",
+			"name":"CoinGame",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"Single Round Match 287 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9808"
+}

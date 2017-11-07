@@ -1,0 +1,80 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1632&rd=4492",
+	"statement":"<p> <i>Reverse Polish Notation</i> (RPN) is a notation for writing arithmetic expressions that is famous for not needing parentheses. Perhaps best known for its use in certain calculators, RPN is also commonly used in virtual machines such as the JVM. The distinguishing feature of RPN is that arithmetic operators are written <i>after</i> their arguments. For example, the infix expression <tt>&quot;3 - 4&quot;</tt> would be written in RPN as <tt>&quot;3 4 -&quot;</tt> (all quotes for clarity only). Similarly, the infix expression <tt>&quot;(3 - 4) * 5&quot;</tt> would be written in RPN as <tt>&quot;3 4 - 5 *&quot;</tt>. Notice how no parentheses were necessary in the RPN expression. No confusion is possible, because the infix expression <tt>&quot;3 - (4 * 5)&quot;</tt> would be written in RPN as <tt>&quot;3 4 5 * -&quot;</tt>. </p> <p> An RPN expression is evaluated using a stack. The expression is processed from left to right. Each number is pushed onto the stack as it is encountered. When an operator is encountered, the appropriate number of arguments are popped off the stack, the operation is performed, and the result is pushed back onto the stack. The final answer is the value on the top of the stack when the end of the expression is reached. The supported arithmetic operators are addition ('+'), subtraction ('-'), multiplication ('*'), and unary negation ('~') </p> <p> For example, the RPN expression <tt>&quot;2 3 + 6 ~ 7 * -&quot;</tt> would be evaluated as shown in the following table: </p> <pre>\n    Remaining Expression   Stack     New Stack\n      2 3 + 6 ~ 7 * -      []        [2]\n        3 + 6 ~ 7 * -      [2]       [2 3]      &lt;---- Stacks grow to the right\n          + 6 ~ 7 * -      [2 3]     [5]\n            6 ~ 7 * -      [5]       [5 6] \n              ~ 7 * -      [5 6]     [5 -6]\n                7 * -      [5 -6]    [5 -6 7]\n                  * -      [5 -6 7]  [5 -42]\n                    -      [5 -42]   [47]       &lt;---- Final answer is 47\n</pre> <p> You will write a method that takes an RPN expression <b>expr</b> as a String, evaluates it, and returns its final value. The expression will contain only digits ('0'-'9'), arithmetic operators ('+', '-', '*', '~'), and spaces (' '). Only single-digit numbers will be allowed, and all numbers and operators will be separated by single spaces, with no leading or trailing spaces. </p> <p> An RPN expression is malformed if evaluating it would leave more than one value on the stack, or if evaluating it would cause some operator to try to pop an empty stack. Your method should return -999 if <b>expr</b> is malformed. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RPN",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"evaluate",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int evaluate(String expr)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 47",
+			"id":0,
+			"input":"\"2 3 + 6 ~ 7 * -\"",
+			"note":"The example above.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -5",
+			"id":0,
+			"input":"\"5 ~ ~ ~\"",
+			"note":"Multiple negations are allowed.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 505",
+			"id":0,
+			"input":"\"9 8 7 * * 4 5 - -\"",
+			"order":3
+		},
+		{
+			"expect":"Returns: -999",
+			"id":0,
+			"input":"\"1 + 2 + 3\"",
+			"order":4
+		},
+		{
+			"expect":"Returns: -999",
+			"id":0,
+			"input":"\"1 9 ~ 2 8 * +\"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"expr contains an odd number of characters between 1 and 33, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Every character in a (zero-based) odd position in expr is a space (' ')."
+		},
+		{
+			"order":3,
+			"val":"Every character in a (zero-based) even position in expr is either a digit ('0'-'9') or one of the characters '+', '-', '*', or '~'."
+		}
+	]
+}

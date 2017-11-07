@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1705&rd=4560",
+	"statement":"MergeSort is a classical sorting algorithm following the divide-and-conquer paradigm. Sorting n elements, it has a worst-case complexity of O(n*log(n)), which is optimal for sorting algorithms based on comparisons.<br /><br /> <br /><br /> Basically, it sorts a list with more than one element the following way (a list containing only one element is always sorted): \n <ul> \n  <li>1. divide the list into two sublists of about equal size (divide)</li> \n  <li>2. sort each of the two sublists (conquer)</li> \n  <li>3. merge the two sorted sublists into one sorted list (combine)</li> \n </ul> <br /><br /> A pro of MergeSort is that it is stable, i.e. elements with the same key value keep their relative order during sorting. A con is that it is not in-place since it needs additional space for temporarily storing elements.<br /><br /> <br /><br /> Given a int[] <b>numbers</b>, return the number of comparisons the MergeSort algorithm (as described in pseudocode below) makes in order to sort that list. In this context, a single comparison takes two numbers x, y (from the list to be sorted) and determines which of x &lt; y, x = y and x &gt; y holds.<br /><br /> <br /><br /> <pre>List mergeSort(List a)</pre> \n <ul> \n  <li><pre>1. if size(a) &lt;= 1, return a</pre></li> \n  <li><pre>2. split a into two sublists b and c</pre></li> \n  <li><pre>   if size(a) = 2*k, b contains the first k elements of a, c the last k elements</pre></li> \n  <li><pre>   if size(a) = 2*k+1, b contains the first k elements of a, c the last k+1 elements</pre></li> \n  <li><pre>3. List sb = mergeSort(b)</pre></li> \n  <li><pre>   List sc = mergeSort(c)</pre></li> \n  <li><pre>4. return merge(sb, sc)</pre></li> \n </ul> <br /><br /> <pre>List merge(List b, List c)</pre> \n <ul> \n  <li><pre>1. create an empty list a</pre></li> \n  <li><pre>2. while both b and c are not empty, compare the first elements of b and c</pre></li> \n  <li><pre>   first(b) &lt; first(c): remove the first element of b and append it to the end of a</pre></li> \n  <li><pre>   first(b) &gt; first(c): remove the first element of c and append it to the end of a</pre></li> \n  <li><pre>   first(b) = first(c): remove the first elements of b and c and append them to the end of a</pre></li> \n  <li><pre>3. if either b or c is not empty, append that non-empty list to the end of a</pre></li> \n  <li><pre>4. return a</pre></li> \n </ul>",
+	"notes":[{
+		"order":1,
+		"val":"Be sure to exactly follow the algorithm as described, as a different implementation of MergeSort might lead to a different number of comparisons."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"MergeSort",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howManyComparisons",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int howManyComparisons(int[] numbers)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 4",
+			"id":0,
+			"input":"{1, 2, 3, 4}",
+			"note":"{1, 2, 3, 4} is first split to {1, 2} and {3, 4}. {1, 2} is split to {1} and {2} and merging to {1, 2} takes one comparison. {3, 4} is split to {3} and {4} and merging to {3, 4} also takes one comparison. Merging {1, 2} and {3, 4} to {1, 2, 3, 4} takes two comparisons (first 1 is compared to 3 and then 2 is compared to 3). This makes a total of four comparisons.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"{2, 3, 2}",
+			"note":"{2, 3, 2} is split to {2} and {3, 2}. {3, 2} is split and then merged to {2, 3} making one comparison. {2} and {2, 3} are merged to {2, 2, 3} also making one comparison, which totals to two comparisons made.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{-17}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"{}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 19",
+			"id":0,
+			"input":"{-2000000000,2000000000,0,0,0,-2000000000,2000000000,0,0,0}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"numbers contains between 0 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of numbers is an int in its 'natural' (signed 32-bit) range from -(2^31) to (2^31)-1."
+		}
+	]
+}

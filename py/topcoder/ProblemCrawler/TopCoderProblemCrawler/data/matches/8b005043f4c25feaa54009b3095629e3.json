@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":176.67,
+			"constraints":[],
+			"correctRatio":100,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10815&rd=14286",
+			"name":"SequencePermutation",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":241.55,
+			"constraints":[],
+			"correctRatio":50,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11040&rd=14286",
+			"name":"CalculationCards",
+			"notes":[],
+			"submission":4
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11072&rd=14286",
+			"name":"ShrooksOnTheBoard",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2010 TCO Algorithm > Wildcard Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14286"
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":190.61,
+			"constraints":[],
+			"correctRatio":88.52,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8414&rd=10804",
+			"name":"TheDiceGame",
+			"notes":[],
+			"submission":366
+		},
+		{
+			"avgPts":304.85,
+			"constraints":[],
+			"correctRatio":30.33,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8415&rd=10804",
+			"name":"TheHomework",
+			"notes":[],
+			"submission":366
+		},
+		{
+			"avgPts":444.23,
+			"constraints":[],
+			"correctRatio":3.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8418&rd=10804",
+			"name":"TheSquares",
+			"notes":[],
+			"submission":80
+		}
+	],
+	"name":"Single Round Match 381 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10804"
+}

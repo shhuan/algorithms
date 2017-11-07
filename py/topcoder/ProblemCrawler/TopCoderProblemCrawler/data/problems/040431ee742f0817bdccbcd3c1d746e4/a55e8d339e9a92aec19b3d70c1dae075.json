@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=914&rd=9912",
+	"statement":"The banking method is sometimes used to calculate the amortized cost of a process. In our system, every time a value is written to memory, it will cost 1 dollar. We are going to use this system to study the behavior of a dynamic array. The array starts empty with some initial capacity. If an item is added to the array, a memory write occurs, and the cost is 1 dollar. If the item added doesn't fit in the array, a new array is allocated which is twice the size of the previous array. All of the elements from the old array must be copied over, costing 1 dollar for each element copied. Then the new item must be added, costing another dollar. For example, if 3 adds occur to an array with initial capacity 1: <pre>\nAction     Capacity      Size      Cost Incurred\n-------------------------------------------------\nStart      capacity = 1  size = 0  (empty)\nAdd        capacity = 1  size = 1  (cost = 1)\nAdd        Doesn't fit\n -allocate capacity = 2  size = 0  (empty)\n -copy     capacity = 2  size = 1  (cost = 1)\n -add      capacity = 2  size = 2  (cost = 1)\nAdd        Doesn't fit\n -allocate capacity = 4  size = 0  (empty)\n -copy     capacity = 4  size = 2  (cost = 2)\n -add      capacity = 4  size = 3  (cost = 1)\n</pre> So the total cost is 1+1+1+2+1 = 6. Given the initial capacity of the empty array, and the number of adds that occur, return the cost. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BankingArray",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"addCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int addCost(int initialCapacity, int numAdds)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"1",
+			"note":"From the problem statement.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"3",
+			"note":"All of the items fit in the array.",
+			"order":2
+		},
+		{
+			"expect":"500000000",
+			"id":0,
+			"input":"1",
+			"note":"Many adds.",
+			"order":3
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1",
+			"note":"No adds.",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"initialCapacity is between 1 and 1000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"numAdds is between 0 and 500000000, inclusive."
+		}
+	]
+}

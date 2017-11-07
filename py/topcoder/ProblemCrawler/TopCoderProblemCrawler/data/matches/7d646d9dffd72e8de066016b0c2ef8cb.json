@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":219.37,
+			"constraints":[],
+			"correctRatio":58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=250&rd=4017",
+			"name":"TimerCallback",
+			"notes":[],
+			"submission":50
+		},
+		{
+			"avgPts":378.22,
+			"constraints":[],
+			"correctRatio":60.42,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=251&rd=4017",
+			"name":"TransactionalDb",
+			"notes":[],
+			"submission":48
+		},
+		{
+			"avgPts":583.35,
+			"constraints":[],
+			"correctRatio":65.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=252&rd=4017",
+			"name":"MapDelta",
+			"notes":[],
+			"submission":43
+		}
+	],
+	"name":"Single Round Match 46 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4017"
+}

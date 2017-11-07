@@ -1,0 +1,82 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6136&rd=9925",
+	"statement":"Given a tree, you are to return a representation of that tree as a String[]. The tree will be specified by a int[], where element i gives the index of the parent of node i (indexed from 0). Exactly one element of this int[] will be -1, corresponding to the root of the tree. Element i of the int[] corresponds to element i of <b>names</b>, which gives the name of node i. <br /><br /><br /><br /> The String[] you return should have the root on the first line. Following the root, add elements to the return one subtree at a time. The subtrees should be sorted by the indices of their roots and drawn in the same way as the whole tree. However, the root of each subtree should be indented two more characters than its parent. After indenting, each node should be indicated by a plus '+', a minus '-', and then the name of the node from <b>names</b>. The plusses of siblings should be connected by vertical pipes '|' as shown in the examples. For example, the tree given by the input:<br /><br /> <b>parents</b> = {-1,0,1,1,0,0,5,5}<br /><br /> <b>names</b> = {&quot;Root&quot;,&quot;SubB&quot;,&quot;LEAF1&quot;,&quot;LEAF2&quot;,&quot;LEAF3&quot;,&quot;SubA&quot;,&quot;LEAF4&quot;,&quot;LEAF5&quot;}<br /><br /> would result in the following return. <pre>\n+-Root\n  +-SubB\n  | +-LEAF1\n  | +-LEAF2\n  +-LEAF3\n  +-SubA\n    +-LEAF4\n    +-LEAF5\n</pre> See the examples for more illustrations of exactly how this works.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DrawTree",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"draw",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] draw(int[] parents, String[] names)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"Root\",\"SubB\",\"LEAF1\",\"LEAF2\",\"LEAF3\",\"SubA\",\"LEAF4\",\"LEAF5\"}",
+			"id":0,
+			"input":"{-1,0,1,1,0,0,5,5}",
+			"order":1
+		},
+		{
+			"expect":"{\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\"}",
+			"id":0,
+			"input":"{1,2,3,4,5,6,-1}",
+			"order":2
+		},
+		{
+			"expect":"{\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\"}",
+			"id":0,
+			"input":"{1,2,3,4,6,6,-1}",
+			"order":3
+		},
+		{
+			"expect":"{\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\"}",
+			"id":0,
+			"input":"{6,2,3,4,5,6,-1}",
+			"order":4
+		},
+		{
+			"expect":"{\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\",\"H\",\"I\",\"J\",\"K\",\"L\",\"M\",\"N\",\"O\"}",
+			"id":0,
+			"input":"{-1,0,1,1,2,2,3,3,0,8,8,9,9,10,10}",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"parents will represent a tree: exactly one element will be -1, there will be no cycles, and all but one of the entries will refer to other elements of parents."
+		},
+		{
+			"order":2,
+			"val":"parents will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"parents and names will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of names will contain between 1 and 50 letters ('a'-'z' and 'A'-'Z'), and digits ('0'-'9')."
+		}
+	]
+}

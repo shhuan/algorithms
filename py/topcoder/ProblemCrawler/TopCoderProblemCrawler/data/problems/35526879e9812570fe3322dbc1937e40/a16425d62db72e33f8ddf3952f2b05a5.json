@@ -1,0 +1,66 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11459&rd=14567",
+	"statement":"George has a grid of <b>w</b> columns and <b>h</b> rows. He plans to color each cell of the grid using one of <b>k</b> different available colors. There are some rules he plans to follow: \n <ul>\n  <li>The top-most row must contain at least one cell of each of the <b>k</b> colors.</li> \n  <li>Every pair of cells of the same color must be connected. Two cells are connected if there is a path between them that consists of cells that share a common edge and are of the same color.</li> \n </ul> Find the number of different valid ways to color the top-most row. Two ways to color the top-most row are different if and only if at least one of the cells in the top-most row has a different color. For each different coloring of the top-most row, there may be many valid ways to color the rest of the grid, but we will only count that coloring exactly once. Since the result may be very big, return the number of ways modulo 1000000007. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RowOfColors",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countWays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int countWays(int w, int h, int k)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"4",
+			"note":"There is only one row in the grid. The 6 different ways to color the grid with 2 different colors such that the cells of each color are connected are: \"AAAB\", \"AABB\", \"ABBB\", \"BBBA\", \"BBAA\" and \"BAAA\". ",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"4",
+			"note":"This time \"ABAA\", \"AABA\", \"ABBA\", \"BABB\", \"BBAB\" and \"BAAB\" are new valid ways to color the top-most row in the grid. The following are some of the grid colorings that allow those top rows: ",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"4",
+			"note":"It is impossible to use each of the 10 different colors on the 4 cells in the top row.",
+			"order":3
+		},
+		{
+			"expect":"28",
+			"id":0,
+			"input":"14",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"w, h and k will each be between 1 and 300, inclusive."
+	}]
+}

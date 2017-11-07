@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11327&rd=14428",
+	"statement":"Cat Pochi visited a town of rabbits and asked some of the rabbits the following question: &quot;How many rabbits in this town other than yourself have the same color as you?&quot;. The rabbits all replied truthfully, and no rabbit was asked the question more than once. You are given the rabbits' replies in the int[] <b>replies</b>. Return the minimum possible number of rabbits in this town. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"ColorfulRabbits",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getMinimum",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getMinimum(int[] replies)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"{ 1, 1, 2, 2 } ",
+			"note":"If there are 2 rabbits with a color and 3 rabbits with another color, Pochi can get this set of replies.   ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 1",
+			"id":0,
+			"input":"{ 0 } ",
+			"note":"A poor lonely rabbit. ",
+			"order":2
+		},
+		{
+			"expect":"Returns: 499",
+			"id":0,
+			"input":"{ 2, 2, 44, 2, 2, 2, 444, 2, 2 } ",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"replies will contain between 1 and 50 elements, inclusive. "
+		},
+		{
+			"order":2,
+			"val":"Each element of replies will be between 0 and 1,000,000, inclusive. "
+		}
+	]
+}

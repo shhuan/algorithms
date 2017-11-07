@@ -1,0 +1,71 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2358&rd=5006",
+	"statement":"<p> Many languages, including English, French, Spanish, and German use Latin characters (a-z). Hawaiian, as well, uses these characters. However, only a small subset of these characters are used in the Hawaiian alphabet - the five vowels: 'a', 'e', 'i', 'o', 'u', and seven consonants: 'h', 'k', 'l', 'm', 'n', 'p', 'w'. Given a sentence of words, you are to determine which could possibly be Hawaiian words. Anything which contains a letter not in the Hawaiian alphabet cannot be Hawaiian; every other word can be. </p> <p> A word is defined as a contiguous sequence of letters. You will be given a sentence of words. You must tokenize them using a space (' ') as a delimiter, remove the words which cannot be Hawaiian, and return the rest in a String[], in the order in which they occur in the sentence, in the same case in which they appear in the sentence. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Hawaiian",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getWords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] getWords(String sentence)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { \"Hawaii\", \"an\" }",
+			"id":0,
+			"input":"\"Hawaii is an island\"",
+			"note":"'s' is not a valid letter in Hawaiian, so \"is\" and \"island\" cannot be Hawaiian words.",
+			"order":1
+		},
+		{
+			"expect":"Returns: { \"Mauna\", \"Kea\", \"Mauna\", \"Koa\" }",
+			"id":0,
+			"input":"\"Mauna Kea and Mauna Koa are two mountains\"",
+			"order":2
+		},
+		{
+			"expect":"Returns: { \"Pineapple\", \"in\", \"Hawaii\" }",
+			"id":0,
+			"input":"\"Pineapple grows in Hawaii\"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"sentence will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each character in sentence will be an uppercase or lowercase letter (A-Z, a-z), or a space."
+		},
+		{
+			"order":3,
+			"val":"sentence will not contain two consecutive spaces; that is, there will be exactly one space between words."
+		},
+		{
+			"order":4,
+			"val":"sentence will not begin or end with a space."
+		}
+	]
+}

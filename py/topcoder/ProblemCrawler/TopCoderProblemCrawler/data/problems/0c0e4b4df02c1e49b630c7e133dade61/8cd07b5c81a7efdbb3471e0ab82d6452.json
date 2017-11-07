@@ -1,0 +1,107 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13716&rd=16433",
+	"statement":"<p>The &quot;Tips&quot; game is played by a single player in a room full of stuff. Before the game, the game master has hidden N clues somewhere in the room. The clues are numbered 0 through N-1. Your task is to find as many of these clues as possible. </p> <p> The probability that you'll find clue i without any information is <b>probability</b>[i] percent. Each clue you'll find will tell you the locations of some clues. If you already know the location of a clue you are certain to find it. </p> <p> You are given a String[] <b>clues</b> with the information on the content of the clues. For each valid i and j, <b>clues</b>[i][j] will be either 'Y' or 'N'. Here, 'Y' means that clue i contains the location of clue j, and 'N' means that it does not. You are also given the int[] <b>probability</b>. </p> <p> Compute and return the expected number of clues you will find during the game. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"The return value is correct if the relative error or the absolute error is at most 1e-9."
+		},
+		{
+			"order":2,
+			"val":"You can follow the link http://en.wikipedia.org/wiki/Expected_value for extra information about expected value."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheTips",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double solve(String[] clues, int[] probability)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{50}",
+			"id":0,
+			"input":"{\"Y\"}",
+			"note":"There is only one clue. You will find it with probability 0.5. Hence, the expected number of clues you'll find is 0.5.",
+			"order":1
+		},
+		{
+			"expect":"{100,50}",
+			"id":0,
+			"input":"{\"YN\",\"NY\"}",
+			"note":"Here, each clue only contains the (useless) information about its own location. You are certain to find clue 0 and you will only find clue 1 with probability 0.5.",
+			"order":2
+		},
+		{
+			"expect":"{100,0,0}",
+			"id":0,
+			"input":"{\"YYY\",\"NYY\",\"NNY\"}",
+			"note":"You are certain to find clue 0. This clue will tell you the locations of the two remaining clues and thus you will be able to find those too.",
+			"order":3
+		},
+		{
+			"expect":"{0,0,0}",
+			"id":0,
+			"input":"{\"NNN\",\"NNN\",\"NNN\"}",
+			"note":"You will not find any clue.",
+			"order":4
+		},
+		{
+			"expect":"{11,66,99,37,64,45,21,67,71,62} ",
+			"id":0,
+			"input":"{\"NYYNYYNNNN\",\"NNNNYNNNYN\",\"YNNYYYYYNN\",\"YYNYNNNNYN\",\"NYNNNNNNNY\",\"YNYYNNYNNY\",\"NYNNYYYYYY\",\"NYYYYNNNNN\",\"YYNYNNYYYN\",\"NNYYNYNYYY\"} ",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{50, 50, 1}",
+			"id":0,
+			"input":"{\"NNY\",\"NNY\",\"NNN\"}",
+			"note":"In order to find clue 2 you need to find at least one of the clues 0 and 1, or you need to be really lucky.",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"clues and probability will contain exactly N elements each."
+		},
+		{
+			"order":3,
+			"val":"Each element of clues will contain exactly N characters."
+		},
+		{
+			"order":4,
+			"val":"Each character of each element of clues will be 'Y' or 'N'."
+		},
+		{
+			"order":5,
+			"val":"Each element of probability will be between 0 and 100, inclusive."
+		}
+	]
+}

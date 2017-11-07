@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":204.89,
+			"constraints":[],
+			"correctRatio":75.9,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=960&rd=4220",
+			"name":"BadCoding",
+			"notes":[],
+			"submission":278
+		},
+		{
+			"avgPts":302.45,
+			"constraints":[],
+			"correctRatio":33.93,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=959&rd=4220",
+			"name":"RangeSort",
+			"notes":[],
+			"submission":224
+		},
+		{
+			"avgPts":569.97,
+			"constraints":[],
+			"correctRatio":34.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=958&rd=4220",
+			"name":"OneWayRoad",
+			"notes":[],
+			"submission":75
+		}
+	],
+	"name":"SRM 100 - Motorola Single Round Match 100 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4220"
+}

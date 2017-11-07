@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12834&rd=15828",
+			"name":"CoinsOfByteland",
+			"notes":[],
+			"submission":31
+		},
+		{
+			"avgPts":821.11,
+			"constraints":[],
+			"correctRatio":15.79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12832&rd=15828",
+			"name":"HugeGraph",
+			"notes":[],
+			"submission":19
+		},
+		{
+			"avgPts":854.62,
+			"constraints":[],
+			"correctRatio":13.21,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12826&rd=15828",
+			"name":"JumpingOnPoints",
+			"notes":[],
+			"submission":53
+		}
+	],
+	"name":"Special Round Match 600.5 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15828"
+}

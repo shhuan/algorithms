@@ -1,0 +1,104 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10946&rd=14280",
+	"statement":"<p> Even though it is June, the city of SnowVille is facing some serious trouble: last night, lots of snow covered all the roads in the city. </p> <p> The road network looks as follows: There are N important places in the city. The places are labeled 0 through N-1. Each road in the city connects two of these places. Each pair of places is connected by at most one road. Each road can contain one or more car lanes. Each road is bidirectional and the number of lanes is the same for both directions. </p> <p> Sadly, all the snow plows except for one were already decommissioned for the summer. The one snow plow that is still available is in a depot at place 0. </p> <p> Whenever the snow plow drives along a road, it is able to clean a single lane going in the direction in which it travels. Hence if you want to clean an entire road with K lanes going in each direction, the snow plow must drive along this road at least K times in each direction. </p> <p> You are given a String[] <b>roads</b> that describes the road network: If there is no road between places i and j, character j of element i of <b>roads</b> is '<tt>0</tt>'. The maximum number of lanes a road can have in each direction is 9. If there is a road with k lanes in each direction, character j of element i of <b>roads</b> is '<tt>k</tt>' (that is, '<tt>1</tt>' if there is one lane, '<tt>2</tt>' if there are two lanes, etc.) </p> <p> Traversing a single lane of any single road takes the snow plow exactly one minute. Return the least number of minutes in which the snow plow can clean all lanes on all roads. If cleaning all lanes on all roads is impossible, return -1 instead. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"The snow plow is allowed to drive along a lane it already cleared."
+		},
+		{
+			"order":2,
+			"val":"The road network does not have to be planar."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SnowPlow",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"solve",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int solve(String[] roads)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 10",
+			"id":0,
+			"input":"{\"010000\", \"101000\", \"010100\", \"001010\", \"000101\", \"000010\"}",
+			"note":"The important places are connected as follows: 0-1-2-3-4-5. The only optimal solution is for the snow plow to travel from 0 to 5 and back.",
+			"order":1
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{\"010000\", \"101000\", \"010100\", \"001020\", \"000201\", \"000010\"}",
+			"note":"This time the road between places 3 and 4 has two lanes in each direction. One possible optimal schedule for the snow plow is to visit the places in the order 0,1,2,3,4,5,4,3,4,3,2,1,0, each time using a new lane.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 28",
+			"id":0,
+			"input":"{\"031415\", \"300000\", \"100000\", \"400000\", \"100000\", \"500000\"}",
+			"note":"This time the snow plow can clean all lanes simply by going back and forth between 0 and each of the neighboring places a suitable number of times.",
+			"order":3
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"0100\", \"1000\", \"0001\", \"0010\"}",
+			"note":"There is no way to reach the road 2-3, so clearly there is no solution.",
+			"order":4
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"0101\", \"1001\", \"0000\", \"1100\"}",
+			"note":"In this case the road network consists of the roads 0-1, 0-3, and 1-3. It can be cleared for example by doing a circle in one direction (0-1-3-0) followed by a circle in the other direction. Note that place 2 remains unvisited.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"The number of places N will be between 2 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"roads will contain exactly N elements."
+		},
+		{
+			"order":3,
+			"val":"Each element of roads will contain exactly N characters."
+		},
+		{
+			"order":4,
+			"val":"Each character of each element of roads will be between '0' and '9', inclusive."
+		},
+		{
+			"order":5,
+			"val":"roads will be symmetric, i.e., for each i and j: character i of element j of roads will be equal to character j of element i of roads."
+		},
+		{
+			"order":6,
+			"val":"For each i, character i of element i of roads will be '0'."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":183.81,
+			"constraints":[],
+			"correctRatio":55.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7417&rd=10661",
+			"name":"CardStraights",
+			"notes":[],
+			"submission":478
+		},
+		{
+			"avgPts":315.97,
+			"constraints":[],
+			"correctRatio":60.62,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7473&rd=10661",
+			"name":"BuildingAdvertise",
+			"notes":[],
+			"submission":292
+		},
+		{
+			"avgPts":483.25,
+			"constraints":[],
+			"correctRatio":40.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7418&rd=10661",
+			"name":"CountPalindromes",
+			"notes":[],
+			"submission":27
+		}
+	],
+	"name":"Single Round Match 337 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10661"
+}

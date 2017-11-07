@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":197.64,
+			"constraints":[],
+			"correctRatio":90.32,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1647&rd=4605",
+			"name":"Iditarod",
+			"notes":[],
+			"submission":124
+		},
+		{
+			"avgPts":273.33,
+			"constraints":[],
+			"correctRatio":75.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1608&rd=4605",
+			"name":"Quilting",
+			"notes":[],
+			"submission":70
+		},
+		{
+			"avgPts":551.75,
+			"constraints":[],
+			"correctRatio":43.75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1135&rd=4605",
+			"name":"Permutation",
+			"notes":[],
+			"submission":16
+		}
+	],
+	"name":"Single Round Match 160 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4605"
+}

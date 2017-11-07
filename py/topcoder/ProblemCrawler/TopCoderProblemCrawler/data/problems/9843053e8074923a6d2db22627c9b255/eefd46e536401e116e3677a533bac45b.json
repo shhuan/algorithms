@@ -1,0 +1,85 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6215&rd=9823",
+	"statement":"You are given a String[] <b>words</b>. Return the shortest String that contains all the <b>words</b> as substrings. If there are several possible answers, return the one that comes first lexicographically. ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"JoinedString",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"joinWords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String joinWords(String[] words)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"ABAB\"",
+			"id":0,
+			"input":"{\"BAB\", \"ABA\"}",
+			"note":"There are two strings of length 4 that contain both given words: \"ABAB\" and \"BABA\". \"ABAB\" comes earlier lexicographically.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"ABABAKAKABAS\"",
+			"id":0,
+			"input":"{\"ABABA\", \"AKAKA\", \"AKABAS\", \"ABAKA\"}",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"AAABBBCABCCC\"",
+			"id":0,
+			"input":"{\"AAA\",\"BBB\", \"CCC\", \"ABC\", \"BCA\", \"CAB\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"KBWNFSDOFGJTILMVSEAWXYAAPO\"",
+			"id":0,
+			"input":"{\"OFG\", \"SDOFGJTILM\", \"KBWNF\", \"YAAPO\", \"AWX\", \"VSEAWX\", \"DOFGJTIL\", \"YAA\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"AIHUFSPMRINVCSKFLNVSQORPJKMQD\"",
+			"id":0,
+			"input":"{\"NVCSKFLNVS\", \"HUFSPMRI\", \"FLNV\", \"KMQD\", \"RPJK\", \"NVSQORP\", \"UFSPMR\", \"AIHUFSPMRI\"}",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"STRING\"",
+			"id":0,
+			"input":"{\"STRING\", \"RING\"}",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"words will contain between 1 and 12 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of words will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of words will consist of only uppercase letters ('A'-'Z')."
+		}
+	]
+}

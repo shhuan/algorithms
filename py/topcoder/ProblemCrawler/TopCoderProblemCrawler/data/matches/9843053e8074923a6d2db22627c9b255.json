@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":194.19,
+			"constraints":[],
+			"correctRatio":90.4,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6186&rd=9823",
+			"name":"DivisorInc",
+			"notes":[],
+			"submission":198
+		},
+		{
+			"avgPts":331.32,
+			"constraints":[],
+			"correctRatio":79.44,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6184&rd=9823",
+			"name":"IntegerPalindrome",
+			"notes":[],
+			"submission":180
+		},
+		{
+			"avgPts":525.92,
+			"constraints":[],
+			"correctRatio":26.09,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6215&rd=9823",
+			"name":"JoinedString",
+			"notes":[],
+			"submission":46
+		}
+	],
+	"name":"Single Round Match 302 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9823"
+}

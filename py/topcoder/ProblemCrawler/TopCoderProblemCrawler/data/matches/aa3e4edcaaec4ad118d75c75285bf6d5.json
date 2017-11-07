@@ -1,0 +1,32 @@
+{
+	"problems":[
+		{
+			"avgPts":173.2,
+			"constraints":[],
+			"correctRatio":97.12,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2973&rd=5876",
+			"name":"Genetics",
+			"notes":[],
+			"submission":208
+		},
+		{
+			"avgPts":502.68,
+			"constraints":[],
+			"correctRatio":24.14,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2994&rd=5876",
+			"name":"PhoneSearch",
+			"notes":[],
+			"submission":29
+		}
+	],
+	"name":"2004 TCO > Qualification Round Set 4",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=5876"
+}

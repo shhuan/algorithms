@@ -1,0 +1,79 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7708&rd=10980",
+	"statement":"A second degree polynomial <b>a</b>x^2 + <b>b</b>x + <b>c</b> can sometimes be factored into two first degree polynomials with integer coefficients. We want to produce the factorization as a string in the following format:<pre>\n    (&lt;coef&gt;x&lt;sign&gt;&lt;num&gt;)(&lt;opneg&gt;&lt;coef&gt;x&lt;sign&gt;&lt;num&gt;) \nwhere \n    '(' ')' and 'x' are literal \n    &lt;coef&gt; is either empty or is a positive integer greater than 1. \n    &lt;num&gt; is a positive integer\n    &lt;sign&gt; is a sign character, either '+' or '-'\n    &lt;opneg&gt; is an optional '-' character</pre> Neither &lt;coef&gt; nor &lt;num&gt; can be expressed with leading zeroes. <p> Given <b>a</b>, <b>b</b>, and <b>c</b>, return the factorization as a String. If no factorization is possible, return the 4 uppercase letters &quot;NONE&quot;. If more than one factorization is possible, choose the one with the largest coefficient of x in the first factor. If more than one is still possible, choose the one whose first factor is bigger when evaluated at x=0. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Factorer",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"factor",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String factor(int a, int b, int c)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"0",
+			"id":0,
+			"input":"1",
+			"note":" This factorization of x^2-1 is preferred to \"(x-1)(x+1)\" by the second tie breaker. ",
+			"order":1
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"-4",
+			"note":" -4x^2 + 4x -1 = (2x-1)(-2x+1)",
+			"order":2
+		},
+		{
+			"expect":"4",
+			"id":0,
+			"input":"-4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"-3",
+			"id":0,
+			"input":"1",
+			"note":"\"(x-1)(x-2)\" is preferred to \"(x-2)(x-1)\" by the second tie-breaking rule (since -1 is greater than -2).",
+			"order":4
+		},
+		{
+			"expect":"0",
+			"id":0,
+			"input":"-20",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"a, b, and c will each be between -1,000,000,000 and 1,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Neither a nor c will be 0."
+		}
+	]
+}

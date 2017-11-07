@@ -1,0 +1,119 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12709&rd=15700",
+	"statement":"Alice and Bob are playing a game on a rectangular board. Rows and columns are both numbered starting from 0. We will use (i, j) to denote the cell in row i, column j. The cell (0, 0) is in the top left corner of the board. <br /><br /> Some cells contain walls, others are empty. The game is played on empty cells only. The empty cells form a tree. A more formal specification: We say that two cells are adjacent when they share an edge. A path from cell X to cell Y is a sequence of distinct cells such that the first cell in the sequence is cell X, the last cell is Y, and each pair of consecutive cells in the sequence is adjacent. The test data for this task has the following property: For each pair X, Y of empty cells in the grid, there is exactly one path from X to Y that consists of empty cells only. <br /><br /> The game is played as follows: Each player has one piece on the board. Initially, each piece occupies a different cell. The players take alternating turns, Alice starts. In each turn, the player moves his/her piece onto one of the adjacent empty cells. (Note that moving the piece is mandatory, it is not allowed to keep it in its current cell.) <br /><br /> If at any moment the two tokens occupy the same cell, Alice wins. If Bob is able to make 100,000 moves, Bob wins. <br /><br /> You are given a String[] <b>field</b> that describes the game board. Character j of element i of <b>field</b> describes the initial content of the cell (i, j). The character '.' represents an empty cell, '#' represents a wall, 'A' is an empty cell where Alice's piece starts, and 'B' is an empty cell where Bob's piece starts. <br /><br /> Here is the twist: The game board is completely in the dark. Alice and Bob each know the initial location of both pieces. During the game, Alice has no idea how Bob moves his piece. However, Bob has an extraordinary ability: Even before the game starts, he can predict the sequence of Alice's moves with perfect reliability. (Note that this is actually possible: as Alice does not gain any information during the game, she may as well determine her entire strategy in advance.) He can then use this knowledge when planning his own moves. <br /><br /> Determine whether Alice has a winning strategy. If she does, return &quot;Alice wins&quot; (quotes for clarity). Otherwise, return &quot;Bob wins&quot;.",
+	"notes":[{
+		"order":1,
+		"val":"Note that the return value is case sensitive."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GameInDarknessDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"check",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String check(String[] field)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: \"Alice wins\"",
+			"id":0,
+			"input":"{\"A.B..\", \"##.##\", \"##.##\"}",
+			"note":"Initially Alice's piece starts in the cell (0, 0) and Bob's piece in the cell (0, 2).  One possible strategy for Alice is as follows:  With this strategy, Alice can always win regardless of how Bob moves.",
+			"order":1
+		},
+		{
+			"expect":"Returns: \"Bob wins\"",
+			"id":0,
+			"input":"{\"A.B..\", \".#.#.\", \"#..##\"}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: \"Alice wins\"",
+			"id":0,
+			"input":"{\"#...#\", \".#A#.\", \"..B..\", \".#.#.\", \"#...#\"}",
+			"note":"Alice can win, just by moving her piece to cell (2, 2).",
+			"order":3
+		},
+		{
+			"expect":"Returns: \"Alice wins\"",
+			"id":0,
+			"input":"{\"##..#\", \"A.#..\", \"#B..#\", \"#.##.\", \".....\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"Returns: \"Bob wins\"",
+			"id":0,
+			"input":"{\"##################################################\", \"###..................#................#........###\", \"###.################.########.#######.########.###\", \"###.################.########.#######.########.###\", \"###.################.########.#######.########.###\", \"###.################.########.#######.########.###\", \"###.################.########.#######.########.###\", \"###.################.########.#######.########.###\", \"###.################.########.#######.########.###\", \"###.################.########.#######.########.###\", \"###..........#######........#.#######........#.###\", \"############.#######.########.#######.########.###\", \"############.#######.########.#######.########.###\", \"############.#######.########.#######.########.###\", \"############.#######.########.#######.########.###\", \"############.#######.########.#######.########.###\", \"############.#######.########.#######.########.###\", \"############.#######.########.#######.########.###\", \"############.#######.########.#######.########.###\", \"###B.........#######..........#######..A.......###\", \"##################################################\"} ",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"Returns: \"Alice wins\"",
+			"id":0,
+			"input":"{\"###.#\", \"###..\", \"A..B#\", \"###..\", \"###.#\"}",
+			"note":"",
+			"order":6
+		},
+		{
+			"expect":"Returns: \"Alice wins\"",
+			"id":0,
+			"input":"{\".....#.##.##.#.#\", \".###.#.##.##....\", \"#......B#...#.#.\", \"#.#A#.#.#.#..##.\", \"...#..#....#....\"}",
+			"note":"",
+			"order":7
+		},
+		{
+			"expect":"Returns: \"Bob wins\"",
+			"id":0,
+			"input":"{\"...#.....###....#.....#...#.#.\", \".#..#.##..#..#.#..###...#.....\", \"..#..#..#...#.#..#....##.#.###\", \".#.#...###.#..#.#..###....#...\", \"...##.###..#.#..#.#...#.##..#.\", \".#..#..#..#...#.#.#.#.#..#.#..\", \"..#..#.#.#..#..##.#.#..#.##..#\", \".#.###.#.##..#.....A##......#.\", \"#.........#.#..#.###..###.#...\", \"..###.#.#.#..#.#....#.....#.#.\", \".#..#.#.####.#..#.#..#.#.###..\", \"..#...#...#..#.#...#.#..#.#..#\", \"#..#.#..#.#.#..###.#.#.#....#.\", \"..#..##.##...#....#..#.#.####.\", \"#..#...#...#..#.#..###.#......\", \"#.#.##...#..#..#.#....#..#.#.#\", \"....#..##.#..#....#.#.#.#...#.\", \".#.#..#....#.#.##..#..##..#.#.\", \"..##.#..##.#..#..#..#...#.#...\", \"#.#..##..#..#..#..#..##.#.#.#.\", \"..#.#.#.#.#..#...##.#...#..#..\", \".##.....#..#.#.#.#..#.##.#..#.\", \"...#.#.#..#..#.###.#..#...#.#.\", \".#..#....#..#.#...###.#.#..#..\", \".#.#.#####.#....#..#..#.##.#.#\", \".#...#......#.#..###B#....#...\", \"..###..####.#..#.#...#.#.#..#.\", \"#.#..#.#..#.#.#..#.#..#....#..\", \"..#.##..#.#.#.####..#.#####..#\", \"#.....#...#.#......#.......#..\"} ",
+			"note":"",
+			"order":8
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"field will contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of field will contain between 2 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of field will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character of each element of field will be either '.', '#', 'A' or 'B' (quotes for clarity)."
+		},
+		{
+			"order":5,
+			"val":"field will contain exactly one 'A' and 'B' each."
+		},
+		{
+			"order":6,
+			"val":"All empty cells in field (including A and B) will form a tree. See the statement for a formal definition."
+		}
+	]
+}

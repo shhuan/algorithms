@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":198.07,
+			"constraints":[],
+			"correctRatio":73.76,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7476&rd=10667",
+			"name":"CDPlayer",
+			"notes":[],
+			"submission":442
+		},
+		{
+			"avgPts":273.41,
+			"constraints":[],
+			"correctRatio":68.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6802&rd=10667",
+			"name":"MoneyGame",
+			"notes":[],
+			"submission":146
+		},
+		{
+			"avgPts":772.19,
+			"constraints":[],
+			"correctRatio":82.88,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6784&rd=10667",
+			"name":"RefactorableNumber",
+			"notes":[],
+			"submission":222
+		}
+	],
+	"name":"Single Round Match 343 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10667"
+}

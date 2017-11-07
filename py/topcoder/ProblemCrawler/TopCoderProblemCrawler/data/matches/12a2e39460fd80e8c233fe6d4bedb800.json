@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":206.27,
+			"constraints":[],
+			"correctRatio":75.56,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=165&rd=4000",
+			"name":"TwoBoxes",
+			"notes":[],
+			"submission":45
+		},
+		{
+			"avgPts":365.39,
+			"constraints":[],
+			"correctRatio":85.11,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=166&rd=4000",
+			"name":"Spiral",
+			"notes":[],
+			"submission":47
+		},
+		{
+			"avgPts":841.33,
+			"constraints":[],
+			"correctRatio":46.34,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=167&rd=4000",
+			"name":"MuseumTour",
+			"notes":[],
+			"submission":41
+		}
+	],
+	"name":"Single Round Match 30 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=4000"
+}

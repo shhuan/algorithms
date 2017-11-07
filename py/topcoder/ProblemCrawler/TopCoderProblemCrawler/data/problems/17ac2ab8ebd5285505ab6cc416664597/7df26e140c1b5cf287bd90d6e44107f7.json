@@ -1,0 +1,87 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11886&rd=14733",
+	"statement":"Magical Girl Madoka just learned about Conway's Game of Life. She is now thinking about new rules for this game.<br /><br /><br /><br /> In the Game of Life, an infinite plane is divided into a grid of unit square cells. At any moment, each cell is either alive or dead. Every second the state of each cell changes according to a fixed rule. In Madoka's version of the game the following rule is used: <br /><br /> \n <ul> \n  <li> Consider any cell C. Look at the current states of the cell C and all four cells that share a side with C. </li> \n  <li> If an odd number of these cells is alive (i.e., 1 cell, 3 cells, or 5 cells), cell C will be alive in the next second. Otherwise, cell C will be dead in the next second. </li> \n  <li> Note that each second the rule is applied on all cells at the same time. </li> \n </ul> Madoka wants to know how many cells are alive after <b>K</b> seconds.<br /><br /><br /><br /> You are given the int <b>K</b> and a String[] <b>field</b> that describes the initial state of the plane. <b>field</b> describes only some rectangular area of the plane. More precisely, character j of element i of <b>field</b> is 'o' if the cell in the i-th row of the j-th column of the rectangular area is alive, and it is '.' otherwise. Cells which aren't described in <b>field</b> is initially all dead. <br /><br /> Return the number of alive cells after <b>K</b> seconds. ",
+	"notes":[{
+		"order":1,
+		"val":"You can assume that the result will fit into a signed 64-bit integer."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"XorLife",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"countAliveCells",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long countAliveCells(String[] field, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"3",
+			"id":0,
+			"input":"{\"oo\" ,\"o.\"}",
+			"note":"The status after 3 seconds is below. ",
+			"order":1
+		},
+		{
+			"expect":"23",
+			"id":0,
+			"input":"{\"..\" ,\"..\"}",
+			"note":"All cells of the plane can be dead.",
+			"order":2
+		},
+		{
+			"expect":"1234567",
+			"id":0,
+			"input":"{\"o\"}",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"987654321",
+			"id":0,
+			"input":"{\"o.oo.ooo\" ,\"o.o.o.oo\" ,\"ooo.oooo\" ,\"o.o..o.o\" ,\"o.o..o.o\" ,\"o..oooo.\" ,\"..o.o.oo\" ,\"oo.ooo.o\"}",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"field will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each elements of field will contain between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of field will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in each element of field will be either 'o' or '.'."
+		},
+		{
+			"order":5,
+			"val":"K will be between 1 and 1,000,000,000, inclusive."
+		}
+	]
+}

@@ -1,0 +1,68 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=964&rd=4372",
+	"statement":"<p> You are given a puzzle with 7 pieces, each one of them a perfect hexagon. On each side of each hexagon there is a number, 1-6, and each hexagon has exactly one of each number. </p><p> You are supposed to assemble the pieces such that there is a center piece with the 6 other pieces surrounding it, and everywhere that two pieces touch, their touching sides must have the same number. </p><p> So for example, the following configuration is a solution to the puzzle, given the 7 pieces </p><pre>\n  ___     ___     ___     ___     ___     ___     ___\n / 5 \\   / 1 \\   / 4 \\   / 4 \\   / 1 \\   / 5 \\   / 1 \\\n/2   4\\ /6   3\\ /3   1\\ /2   5\\ /6   5\\ /4   3\\ /6   2\\\n\\3   6/ \\2   5/ \\5   2/ \\6   1/ \\4   2/ \\2   6/ \\5   3/\n \\_1_/   \\_4_/   \\_6_/   \\_3_/   \\_3_/   \\_1_/   \\_4_/\n\n       ___\n      / 5 \\\n  ___/2   4\\___\n / 5 \\3   6/ 1 \\\n/4   3\\_1_/6   3\\\n\\2   6/ 1 \\2   5/\n \\_1_/6   2\\_4_/\n / 1 \\5   3/ 4 \\\n/6   5\\_4_/3   1\\\n\\4   2/ 4 \\5   2/\n \\_3_/2   5\\_6_/\n     \\6   1/\n      \\_3_/\n</pre><p> In this configuaration, the last piece is in the middle and the first through sixth pieces are placed in clockwise order from the top. </p><p> Note that even though in this case no rotation of the pieces was necessary, pieces may be rotated. So the middle piece could have been presented as </p><pre>\n  ___\n / 6 \\\n/5   1\\\n\\4   2/\n \\_3_/\n</pre><p> and the above configuration would still be legal. All that was necessary was to rotate the middle piece 1/6th of a turn counter-clockwise. </p><p> Given a String[] representing the 7 pieces, figure out all of the legal configurations and return a int[], sorted in ascending order, of the distinct indices (1-indexed) which appeared as the middle piece in one or more of these legal configurations. </p><p> Each element of the input will be 6 characters in length and will contain each of the characters '1' to '6', inclusive, exactly once. This is the order of the numbers on the piece, in clockwise order (as mentioned above, the starting point doesn't matter). You cannot flip the order, so 123456 cannot be considered as 654321 (it can, however, be considered as 234561, 345612, etc.) </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Hexagons",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"centers",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int[] centers(String[] pieces)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: { 7 }",
+			"id":0,
+			"input":"{\"546132\",\"135426\",\"412653\",\"451362\",\"152346\",\"536124\",\"123456\"} ",
+			"note":"This is the above example, where the last (7th) piece is the only legal center.",
+			"order":1
+		},
+		{
+			"expect":"Returns: { 1, 2, 4, 6 }",
+			"id":0,
+			"input":"{\"123654\",\"123654\",\"513624\",\"654123\",\"625314\",\"541236\",\"324615\"}",
+			"note":"Notice that pieces 1, 2, 4 and 6 are in fact all the same piece. The puzzle has a solution with this piece at its center, for example the following configuration of pieces (1-indexed): ",
+			"order":2
+		},
+		{
+			"expect":"Returns: { }",
+			"id":0,
+			"input":"{\"512634\",\"152364\",\"243516\",\"612345\",\"152643\",\"342165\",\"321456\"}",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"pieces has exactly 7 elements"
+		},
+		{
+			"order":2,
+			"val":"each element of pieces has length 6"
+		},
+		{
+			"order":3,
+			"val":"each element of pieces contains each of the characters '1' to '6', inclusive, exactly once."
+		}
+	]
+}

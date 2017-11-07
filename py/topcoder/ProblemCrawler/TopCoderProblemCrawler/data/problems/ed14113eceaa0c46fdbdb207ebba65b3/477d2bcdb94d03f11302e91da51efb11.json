@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=212&rd=56",
+	"statement":"<pre>THIS PROBLEM WAS TAKEN FROM THE SEMIFINALS OF THE TOPCODER INVITATIONAL\nTOURNAMENT\n\nPROBLEM STATEMENT \nCreate a class LongCalc that will perform arithmetic operations on two whole\nnumbers, represented by Strings. The operation to be performed is indicated by\nop, which will be 1 for addition, 2 for subtraction, 3 for multiplication, and\n4 for integer division. The value returned from this operation will be a\nnumeric value held in a String (which may begin with a negative sign if\nnecessary).\n\nDEFINITION\nClass Name: LongCalc\nMethod Name: process\nParameters: String, String, int\nReturns: String\nMethod signature (be sure your method is public): String process(String a,\nString b, int op);  \n\nThe operation that will be performed is &lt;a op b&gt;.\n\nTopCoder will ensure the validity of the inputs.  Inputs are valid if all of\nthe following criteria are met:\n- Both a and b will consist of only digits, and that the first digit of each\nnumber is greater than 0.\n- Both a and b will have length between 1 and 50, inclusive.\n- op will be either 1, 2, 3, or 4\n\nJAVA NOTE\njava.math.* will not be allowed\n\nEXAMPLES\nprocess(&quot;100&quot;, &quot;50&quot;, 1) -&gt; &quot;150&quot;\nprocess(&quot;100000000000000000000000000000000&quot;,\n&quot;400000000000000000000000000000000&quot;, 1) -&gt; &quot;500000000000000000000000000000000&quot;\nprocess(&quot;3&quot;, &quot;4&quot;, 2) -&gt; &quot;-1&quot;\nprocess(&quot;29&quot;, &quot;465&quot;, 3) -&gt; &quot;13485&quot;\nprocess(&quot;15&quot;, &quot;2&quot;, 4) -&gt; &quot;7&quot;\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"LongCalc",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"process",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String process(String param0, String param1, int param2)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

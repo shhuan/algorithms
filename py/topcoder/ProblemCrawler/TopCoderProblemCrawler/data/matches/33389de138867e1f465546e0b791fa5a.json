@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":188.73,
+			"constraints":[],
+			"correctRatio":91.03,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11361&rd=15697",
+			"name":"TrafficCongestion",
+			"notes":[],
+			"submission":736
+		},
+		{
+			"avgPts":234.96,
+			"constraints":[],
+			"correctRatio":82.41,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12419&rd=15697",
+			"name":"LISNumber",
+			"notes":[],
+			"submission":108
+		},
+		{
+			"avgPts":442.77,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12693&rd=15697",
+			"name":"EnclosingTriangle",
+			"notes":[],
+			"submission":8
+		}
+	],
+	"name":"Single Round Match 585 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15697"
+}

@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10804&rd=14185",
+	"statement":" Little Dazdraperma likes to travel a lot. One day she made a route in an <b>N</b>-dimensional space. In this space each point is represented by <b>N</b> coordinates. The coordinates are indexed from 1 to <b>N</b>, inclusive. She started from the origin, i.e., a point where each coordinate is 0. Then she did several moves of the following type: \n <ul> \n  <li> First she chose a coordinate index, i.e., a number between 1 and <b>N</b>, inclusive.</li> \n  <li> Then she jumped to a point where the coordinate with the chosen index is either increased or decreased by 1 and all other coordinates remain the same.</li> \n </ul> Now Dazdraperma wonders whether she has ever visited the same point twice. You will be given a int[] <b>coords</b> and a String <b>moves</b> representing her route. The i-th element of <b>coords</b> is the coordinate index she has chosen during her i-th move. If the coordinate with this index was increased during the i-th move, the i-th character of <b>moves</b> will be '+', and it will be '-' if this coordinate was decreased. <br /><br /> <br /><br /> Return &quot;VALID&quot; if all points of her route were unique, including the first and the last points, and return &quot;NOT VALID&quot; otherwise. Two points A and B in <b>N</b>-dimensional space are different if there's an index i such that A's coordinate with index i and B's coordinate with index i are different.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"RouteIntersection",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"isValid",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int[], String",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String isValid(int N, int[] coords, String moves)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{1}",
+			"id":0,
+			"input":"1",
+			"note":"Dazdraperma starts at (0) and then jumps to (1). The answer is \"VALID\".",
+			"order":1
+		},
+		{
+			"expect":"{1,2,1,2}",
+			"id":0,
+			"input":"2",
+			"note":"The route goes through 5 points: (0,0) -> (1,0) -> (1,1) -> (0,1) -> (0,0). The point (0,0) was visited twice.",
+			"order":2
+		},
+		{
+			"expect":"{1,2,3,1,2}",
+			"id":0,
+			"input":"3",
+			"note":"(0,0,0) -> (1,0,0) -> (1,1,0) -> (1,1,1) -> (0,1,1) -> (0,0,1).",
+			"order":3
+		},
+		{
+			"expect":"{132,51717,628,344447,628,51717,344447,2}",
+			"id":0,
+			"input":"344447",
+			"note":"The repeated point doesn't have to be the first or the last point in the route.",
+			"order":4
+		},
+		{
+			"expect":"{1,1}",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":5
+		},
+		{
+			"expect":"{833196,524568,361663,108056,28026,824639,269315,440977,440977,765458, 988451,242440,948414,130873,773990,765458,130873,28026,853121,553636, 581069,82254,735536,833196,898562,898562,940783,988451,540613,317306, 623194,940783,571384,988451,108056,514374,97664}",
+			"id":0,
+			"input":"990630",
+			"note":"",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 1000000000 (109), inclusive."
+		},
+		{
+			"order":2,
+			"val":"coords will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":3,
+			"val":"Each element of coords will be between 1 and N, inclusive."
+		},
+		{
+			"order":4,
+			"val":"moves will contain the same number of characters as the number of elements in coords."
+		},
+		{
+			"order":5,
+			"val":"Each character in moves will be either '+' or '-'."
+		}
+	]
+}

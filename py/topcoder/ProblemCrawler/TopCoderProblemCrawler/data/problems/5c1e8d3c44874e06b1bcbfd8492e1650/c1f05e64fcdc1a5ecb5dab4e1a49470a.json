@@ -1,0 +1,97 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5886&rd=8069",
+	"statement":"<p> You will be given some decimal digits in a int[] <b>digits</b>. Build an integer with the minimum possible number of factors, using each of the <b>digits</b> exactly once (be sure to count all factors, not only the prime factors). If more than one number has the same (minimum) number of factors, return the smallest one among them. </p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"A factor of an integer n is an integer k, such that n % k = 0 (% being the modulo operator)."
+		},
+		{
+			"order":2,
+			"val":"The digit 0 can also be used as a leading zero, see example 1."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"FewestFactors",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"number",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int number(int[] digits)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 21",
+			"id":0,
+			"input":"{1, 2}",
+			"note":" ",
+			"order":1
+		},
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{6, 0}",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"Returns: 447",
+			"id":0,
+			"input":"{4, 7, 4}",
+			"note":" ",
+			"order":3
+		},
+		{
+			"expect":"Returns: 1973",
+			"id":0,
+			"input":"{1, 3, 7, 9}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 36457",
+			"id":0,
+			"input":"{7, 5, 4, 3, 6}",
+			"order":5
+		},
+		{
+			"expect":"Returns: 241",
+			"id":0,
+			"input":"{1,2,4}",
+			"note":"Both 241 and 421 are prime numbers, and thus have exactly 2 factors (241 has the factors 1 and 241, while 421 has the factors 1 and 421). All other numbers that we can build from these digits (124, 142, 214 and 412) have more than 2 factors. We have to use the tie-breaker here and return the smaller of (241, 421).",
+			"order":6
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"digits will have between 1 and 5 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of digits will be between 0 and 9, inclusive."
+		},
+		{
+			"order":3,
+			"val":"At least one element of digits will be non-zero."
+		}
+	]
+}

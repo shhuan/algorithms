@@ -1,0 +1,102 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7721&rd=10843",
+	"statement":"<p> The New York Stock Exchange is open for 390 minutes a day, from 9:30am until 4:00pm. During this time, you can buy and sell shares of companies listed on the exchange. Given a graph of how the share prices of two companies fluctuate in one day, calculate the highest amount of money you could possibly earn. </p> <p> You begin the day with $1000. At any time, you can buy shares of either company at a cost of the number of shares you are buying times the current share price. Similarly, at any time you can sell shares you own of either company for a price of the number of shares you are selling times the current share price. You are not limited to buying or selling whole numbers of shares. You may never spend more money than you have, nor may you sell more shares than you own. Assume you pay no fees or commission on any purchase or sale. </p> <p> The share price for a company will be given as a pair of int[]s, the first giving a list of times, and the second giving the corresponding share price at each of those times. The times will always be in ascending order, the first time will always be 0, and the last time will always be 390. To compute the stock price between two adjacent times in the arrays, linearly interpolate between the two prices. The times and prices of the first stock (&quot;stock A&quot;) are given by <b>timeA</b> and <b>priceA</b>, and the times and prices of the second stock (&quot;stock B&quot;) are given by <b>timeB</b> and <b>priceB</b>. </p> <p> For example, given the following input arrays: </p> <pre>\n    timeA  = { 0,  60, 150, 270, 390 }\n    priceA = { 60, 80, 40,  40,  60 }\n    timeB  = { 0,  180, 300, 390 }\n    priceB = { 40, 20,  70,  80 }\n</pre> <p> stock A is shown in red and stock B is shown in blue in the figure below. </p> <br /><br /> \n <center> \n  <img src=\"http://172.16.100.40/contest/problem/DayTrader/daytrader.gif\" /> \n </center> <p> In this example, you would make the most money by spending your entire $1000 to buy 16 2/3 shares of stock A for $60 each at time 0. One hour later at time 60, you should sell all your shares at $80 each, receiving 1333 1/3 dollars. You would hold on to your money until time 180, and then spend it all on 66 2/3 shares of stock B. At time 300, you would sell these shares for $70 each (4666 2/3 dollars) and immediately buy as many shares of stock A as you can afford. The price of stock A at time 300 is $45 (1/4 of the way between $40 and $60), so you can afford 103 19/27 shares. You would then sell these at the end of the day for $60, for a total of 6222 2/9 dollars, giving you earnings of about $5222.22 over your initial $1000. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Your return value must have an absolute or relative error less than 1e-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DayTrader",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"earnings",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], int[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double earnings(int[] timeA, int[] priceA, int[] timeB, int[] priceB)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{ 25, 50 }",
+			"id":0,
+			"input":"{ 0, 390 }",
+			"note":"Stock A doubles in value throughout the day, while stock B triples. If you buy stock B at time 0 and sell at time 390, you can earn $2000.",
+			"order":1
+		},
+		{
+			"expect":"{ 80, 65, 20 }",
+			"id":0,
+			"input":"{ 0, 50, 390 }",
+			"note":"Neither stock ever goes up in value, so you cannot earn any money today.",
+			"order":2
+		},
+		{
+			"expect":"{ 60, 80, 40, 40, 60 }",
+			"id":0,
+			"input":"{ 0, 60, 150, 270, 390 }",
+			"note":"This is the example from the problem statement.",
+			"order":3
+		},
+		{
+			"expect":"{ 10, 20 }",
+			"id":0,
+			"input":"{ 0, 390 } ",
+			"note":" ",
+			"order":4
+		},
+		{
+			"expect":"{ 10, 11, 14, 19, 26 }",
+			"id":0,
+			"input":"{0, 100, 200, 300, 390 } ",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"timeA, priceA, timeB, and priceB will each contain between 2 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"timeA and priceA will contain the same number of elements."
+		},
+		{
+			"order":3,
+			"val":"timeB and priceB will contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"The first element of timeA and timeB will be 0."
+		},
+		{
+			"order":5,
+			"val":"The last element of timeA and timeB will be 390."
+		},
+		{
+			"order":6,
+			"val":"The elements of timeA and timeB will be strictly ascending."
+		},
+		{
+			"order":7,
+			"val":"Each element of priceA and priceB will be between 10 and 100, inclusive."
+		}
+	]
+}

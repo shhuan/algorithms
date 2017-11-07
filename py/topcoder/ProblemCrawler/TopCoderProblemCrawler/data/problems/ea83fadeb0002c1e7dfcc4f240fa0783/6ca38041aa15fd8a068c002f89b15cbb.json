@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11465&rd=14439",
+	"statement":"<p> John and Brus believe that the digits 4 and 7 are lucky and all others are not. According to them, a lucky number is a number that contains only lucky digits in its decimal representation. </p> <p> Recently, they became interested in numeral systems with different bases. Normally, people use the numeral system with base 10 to represent numbers, however, there exist numeral systems with other bases. More exactly, for each integer B, B &gt;= 2, there exists a numeral system with base B. In this system, there are B different digits, used to represent numbers from 0 to B-1, inclusive. In order to represent a positive integer A in such system, it's necessary to find such digits a[n], a[n-1], ..., a[0], that A = a[n] * B^n + a[n-1] * B^(n-1) + ... + a[0] * B^0 (here ^ denotes the power operator), and then write these digits from left to right, in this exact order. For example, 255 = 4 * 52 + 47, therefore representation of number 255 in the numeral system with base 52 consists of two digits, the leftmost digit is 4 and the rightmost digit is 47. </p> <p> The base of numeral system B is called lucky for some integer number A if all digits of the number A represented in numeral system with base B are the lucky numbers (i.e. 4, 7, 44, 47, ...). For example, base 52 is lucky for the number 255. </p> <p> You are given a long <b>n</b>. Return the total number of lucky bases for the number <b>n</b>. If there are infinitely many such lucky bases, return -1 instead. </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"TheLuckyBasesDivOne",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"find",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long find(long n)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 2",
+			"id":0,
+			"input":"255",
+			"note":"There are two lucky bases for the number 255: 52 and 62.",
+			"order":1
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"474",
+			"note":"All bases greater than 474 are lucky.",
+			"order":2
+		},
+		{
+			"expect":"Returns: 0",
+			"id":0,
+			"input":"13",
+			"note":"No lucky bases here.",
+			"order":3
+		},
+		{
+			"expect":"Returns: 5",
+			"id":0,
+			"input":"4748",
+			"order":4
+		}
+	],
+	"constraints":[{
+		"order":1,
+		"val":"n will be between 1 and 10^16, inclusive."
+	}]
+}

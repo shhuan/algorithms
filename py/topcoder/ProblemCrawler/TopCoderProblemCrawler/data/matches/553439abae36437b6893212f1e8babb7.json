@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":178.55,
+			"constraints":[],
+			"correctRatio":85.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12377&rd=15487",
+			"name":"TheSquareRootDilemma",
+			"notes":[],
+			"submission":537
+		},
+		{
+			"avgPts":302.01,
+			"constraints":[],
+			"correctRatio":49.42,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12378&rd=15487",
+			"name":"StringGame",
+			"notes":[],
+			"submission":346
+		},
+		{
+			"avgPts":498.88,
+			"constraints":[],
+			"correctRatio":38.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12379&rd=15487",
+			"name":"Mountains",
+			"notes":[],
+			"submission":21
+		}
+	],
+	"name":"Single Round Match 567 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15487"
+}

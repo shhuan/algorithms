@@ -1,0 +1,98 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6501&rd=9992",
+	"statement":"<p>Year 2100. Humanity is starting to inhabit Antarctica. So far there are N towns, some of them connected with narrow one-way roads.</p> <p>The president of Antarctica has decided to establish police in his country. The cost of building a police station in each town is given. However, there may not be a need to build a police station in every town. The only requirement is that every town must be reachable from some police station using roads.</p> <p>As the next elections are approaching, the president doesn't want to expose large police expenses. Thus he wants the average cost of a built station to be as low as possible.</p> <p>You are given a int[] <b>costs</b>, the i-th element of which represents the cost of building a police station in town i, and a String[] <b>roads</b> representing the layout of the one-way roads. The j-th character of the i-th element of <b>roads</b> is 'Y' if there is a road from town i to town j, or 'N' if there is not. Make the average cost of a built station to be as low as possible and return this cost.</p>",
+	"notes":[{
+		"order":1,
+		"val":"The returned value must be accurate to within a relative or absolute error of 1E-9."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AntarcticaPolice",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"minAverageCost",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double minAverageCost(int[] costs, String[] roads)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"NYNN\",\"NNYN\",\"NNNY\",\"YNNN\"}",
+			"id":0,
+			"input":"{1,2,3,4}",
+			"note":"It is possible to get everywhere from anywhere (the towns form a big circle), so we need only the cheapest station.",
+			"order":1
+		},
+		{
+			"expect":"{\"NYNN\",\"NNYN\",\"NNNY\",\"NYNN\"}",
+			"id":0,
+			"input":"{1,2,3,4}",
+			"note":"Once again, the cheapest station is enough.",
+			"order":2
+		},
+		{
+			"expect":"{\"NYNN\",\"YNNN\",\"NNNY\", \"NNYN\"}",
+			"id":0,
+			"input":"{5,6,7,8}",
+			"note":"We have two separate parts, so we build one cheapest station in each part : (5+7)/2=6.",
+			"order":3
+		},
+		{
+			"expect":"{\"NY\",\"NN\"}",
+			"id":0,
+			"input":"{10,5}",
+			"note":"We have three choices here: build a police station in town 0, in town 1, or in both towns. The second choice doesn't satisfy the requirements since it's impossible to get from town 1 to town 0. Of the two remaining choices, building both is better because it minimizes the average cost.",
+			"order":4
+		},
+		{
+			"expect":"{\"NYNNY\",\"YNNYN\",\"NNNYY\",\"NNNNN\",\"NNNNN\"}",
+			"id":0,
+			"input":"{34,22,25,43,12}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"costs will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of costs will be between 1 and 1000, inclusive."
+		},
+		{
+			"order":3,
+			"val":"roads will contain exactly N elements, where N is the number of elements in costs."
+		},
+		{
+			"order":4,
+			"val":"Each element of roads will contain exactly N characters."
+		},
+		{
+			"order":5,
+			"val":"Each character of each element of roads will be 'Y' or 'N'."
+		},
+		{
+			"order":6,
+			"val":"The ith character of the ith element of roads will be 'N'."
+		}
+	]
+}

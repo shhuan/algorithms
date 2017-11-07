@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.28,
+			"constraints":[],
+			"correctRatio":97.58,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7296&rd=10899",
+			"name":"DifDif",
+			"notes":[],
+			"submission":495
+		},
+		{
+			"avgPts":324.82,
+			"constraints":[],
+			"correctRatio":82.51,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7312&rd=10899",
+			"name":"Prefixes",
+			"notes":[],
+			"submission":366
+		},
+		{
+			"avgPts":496.32,
+			"constraints":[],
+			"correctRatio":23.91,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4432&rd=10899",
+			"name":"CircleCount",
+			"notes":[],
+			"submission":46
+		}
+	],
+	"name":"2007 TopCoder Collegiate Challenge > Online Round 1C",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10899"
+}

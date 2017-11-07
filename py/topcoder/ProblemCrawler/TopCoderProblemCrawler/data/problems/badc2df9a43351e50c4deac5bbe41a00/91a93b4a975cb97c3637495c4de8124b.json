@@ -1,0 +1,34 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=204&rd=55",
+	"statement":"<pre>THIS PROBLEM WAS TAKEN FROM THE SEMIFINALS OF THE TOPCODER INVITATIONAL\nTOURNAMENT\n\nPROBLEM STATEMENT\n\nCheckers is a board game played with two players on an 8 by 8 board.  Player 1\nis represented by red game pieces and player 2 is represented by black game\npieces.  \n\nThere are two types of moves for a game piece.  The first will be referred to\nas a simple move.  It involves moving a game piece diagonally 1 space. This\nmeans that the piece would be moved either up 1 space and right 1 space or up 1\nspace and left 1 space.  Here are examples of a simple move.  ('-' is an\nunoccupied space, 'R' is a red piece, 'B' is a black piece, complete board may\nnot be shown in diagram)\n\n\n- - - - - - - -        - - - - - - - -  \n- - - - - - - -  ---&gt;  - - R - - - - -  \n- R - - - - - -        - - - - - - - -  \n                  or\n- - - - - - - -        - - - - - - - -  \n- - - - - - - -  ---&gt;  R - - - - - - -  \n- R - - - - - -        - - - - - - - -  \n\nThe second type of move is referred to as a jump.  A jump involves moving over\n*one* of the opponents pieces and landing in an empty space.  A jump to the\nright would involve a piece moving diagonally two spaces to the right(right two\nand up two). Similarly, a jump to the left would involve a piece moving\ndiagonally two spaces to the left(left two and up two).  See the following\ndiagrams.\n\n- - - - - - - -        - - - - - - - -  \n- - - - - - - -  ---&gt;  - - - - R - - -  \n- B - B - - - -        - B - B - - - -  \n- - R - - - - -        - - - - - - - -  \n                  or\n- - - - - - - -        - - - - - - - -  \n- - - - - - - -  ---&gt;  R - - - - - - -  \n- B - B - - - -        - B - B - - - -  \n- - R - - - - -        - - - - - - - -  \n\nImplement a class Checkers containing a method compute.  compute should return\nan int representing the fewest number of moves it will take for player 1 to\nmove his red piece to the opposite end of the board.  If player 1 cannot get to\nthe opposite end of the board using the moves described above, compute should\nreturn -1.\n\nDEFINITION\nClass Name: Checkers\nMethod Name: compute\nParameters: String, String[]\nReturns: int\nMethod signature (be sure your method is public): int compute (String startPos,\nString[] pieces);\n\nTopCoder will ensure the validity of the inputs.  Inputs are valid if all of\nthe following criteria are met:\n- pieces will contain between 0 and 50, inclusive, elements.\n- Each element of pieces will be in the form &quot;column,row&quot; (quotation marks are\nfor clarity only) where column and row are integers between 0 and 7, inclusive.\n- startPos will be in the form &quot;column,row&quot; (quotation marks are for clarity\nonly) where column and row are integers between 0 and 7, inclusive.\n- No two elements of pieces or startPos can have the same &quot;column,row&quot; value\n(that is, no two pieces may be placed on the same square of the board).\n\nNOTES\n- Consecutive jumps count as 1 move.\n- A game piece's location is not restricted the way it is in &quot;real&quot; checkers\n(pieces can be placed at or moved to any unoccupied location on the board).\n- To successfully perform either type of move, the destination square must be\non the board and not occupied by another piece. \n- Input will be in coordinate format &quot;x,y&quot; (quotation marks are for clarity\nonly) where the bottom left spot on the board is &quot;0,0&quot;, the bottom right spot\non the board is &quot;7,0&quot;, the top left is &quot;0,7&quot; and the top right is &quot;7,7&quot;.\n- The opposite end of the board is defined as the top row of the board,\nspecifically, any location on the board where the y (row) coordinate is 7.\n-  The red piece can only move or jump in the direction of the opposite end of\nthe board.  For example, each move or jump (including subsequent jumps in the\ncase of multiple jumps) must have a row value that is greater than that of the\nprevious position of that piece.\n\nEXAMPLES\n1.\n        Fig. 1               Fig. 2              Fig. 3              Fig. 4\n  7 - - - - - - - -    7 - - - - - - - -   7 - - - - - - - -   7 - - - - - - R -\n  6 - - - - - B - -    6 - - - - - B - -   6 - - - - - B - -   6 - - - - - B - -\n  5 - - - - - - - -    5 - - - - - - - -   5 - - - - R - - -   5 - - - - - - - -\n  4 - - - - - - - -    4 - - - - - R - -   4 - - - - - - - -   4 - - - - - - - -\n  3 B - - - B - - -    3 B - - - B - - -   3 B - - - B - - -   3 B - - - B - - -\n  2 - - - - B - - -    2 - - - - B - - -   2 - - - - B - - -   2 - - - - B - - -\n  1 - - B - - - - -    1 - - B - - - - -   1 - - B - - - - -   1 - - B - - - - -\n  0 - R - - - - - -    0 - - - - - - - -   0 - - - - - - - -   0 - - - - - - - -\n    0 1 2 3 4 5 6 7      0 1 2 3 4 5 6 7     0 1 2 3 4 5 6 7     0 1 2 3 4 5 6 7\n\n  startPos = &quot;1,0&quot;\n  pieces = {&quot;2,1&quot;, &quot;0,3&quot;, &quot;4,3&quot;, &quot;5,6&quot;, &quot;4,2&quot;}\n  \n  Fig. 1: The initial setup of the board.  Move count = 0; \nFig. 2: The red piece has made a jump from 1,0 to 3,2 and then from 3,2 to\n5,4.  Remember, this only counts as a single move.  Move count = 1; \nFig. 3: The red piece has made a simple move from 5,4 to 4,5.  Move count =\n2; \n  Fig. 4: The red piece has jumped from 4,5 to 6,7.  Move count = 3;\n\n  So the output is: 3\nBecause the fewest number of moves from startPos to the opposite end of the\nboard is 3. \n\n2.\n  startPos = &quot;4,4&quot;\n  pieces = {}\n  return: 3  \n \n3.\n  startPos = &quot;4,4&quot;\n  pieces = {&quot;6,6&quot;, &quot;5,5&quot;, &quot;3,5&quot;, &quot;2,6&quot;}\n  return: -1 \n\n4.\n  startPos = &quot;4,1&quot;\n  pieces = {&quot;2,4&quot;, &quot;3,4&quot;, &quot;4,4&quot;, &quot;5,4&quot;, &quot;2,6&quot;, &quot;3,6&quot;, &quot;4,6&quot;, &quot;5,6&quot;}\n  return: 3 \n\n</pre>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"Checkers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"compute",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String, String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int compute(String param0, String[] param1)",
+			"order":5
+		}
+	],
+	"examples":[],
+	"constraints":[]
+}

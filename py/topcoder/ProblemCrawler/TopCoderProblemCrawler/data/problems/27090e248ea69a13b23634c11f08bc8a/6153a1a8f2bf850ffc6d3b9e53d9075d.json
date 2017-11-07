@@ -1,0 +1,101 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1017&rd=4373",
+	"statement":"<p> Dr. Ford of TC Laboratories has discovered a new way of synthesizing DNA sequences from shorter DNA sequences. DNA sequences are composed of nucleotides, A, G, C, and T </p><p> He's discovered a miracle catalyst that enables certain sequences of DNA to append to other certain sequences of nucleotides. A catalyzation represented by the notation &quot;&lt;SEQ1&gt;:&lt;SEQ2&gt;&quot; means that any sequence starting in &lt;SEQ2&gt; may be appended to any sequence ending in &lt;SEQ1&gt;. </p><p> For example, &quot;GCT:AGG&quot; means that any sequence starting with AGG may be appended to any sequence ending in GCT. Thus, by this rule, AGGCGACG may be appended to CATGCT to produce the sequence CATGCTAGGCGACG. </p><p> Also, since a DNA sequence is identical to its reverse, &quot;&lt;SEQ1&gt;:&lt;SEQ2&gt;&quot; implies &quot;&lt;reverse(SEQ2)&gt;:&lt;reverse(SEQ1)&gt;&quot;. For example, &quot;GCT:AGG&quot; is the same as &quot;GGA:TCG&quot;. Note, however, &quot;GCT:AGG&quot; is NOT the same as &quot;AGG:GCT&quot;. </p><p> Given a set of possible catalyzations determine the length of the longest DNA sequence which can be constructed, starting with an unlimited supply of the sequences &lt;SEQ1&gt; and &lt;SEQ2&gt; in the list of catalyzations. If sequences of unlimited length are possible, return -1. </p>",
+	"notes":[{
+		"order":1,
+		"val":"Assume that Dr. Ford has an unlimited starting supply of all the strands represented by SEQ1 and SEQ2 in each element of reactivity."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"DNAsynth",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"longest",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int longest(String[] reactivity)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"Returns: 6",
+			"id":0,
+			"input":"{\"TTA:AGG\"}",
+			"note":"The longest possible strand is \"TTAAGG\" (or \"GGAATT\", which is the same thing backwards--these will no longer be mentioned).",
+			"order":1
+		},
+		{
+			"expect":"Returns: 15",
+			"id":0,
+			"input":"{\"TTA:AGG\",\"AGG:CCC\"}",
+			"note":"The longest possible strand is \"TTAAGGCCCGGAATT\"",
+			"order":2
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"CCC:AAA\",\"AAA:CCC\"}",
+			"order":3
+		},
+		{
+			"expect":"Returns: 8",
+			"id":0,
+			"input":"{\"AG:AC\",\"AT:GC\",\"GC:AG\"}",
+			"order":4
+		},
+		{
+			"expect":"Returns: 9",
+			"id":0,
+			"input":"{\"TAG:ATC\",\"GCA:CCCT\",\"GAT:AC\"}",
+			"note":"Notice that since he has \"ACG\" (\"GCA\" backwards) in supply, and it begins with \"AC\", it can be added to \"GAT\". This gives the sequence \"GATACG\". Adding \"ATC\" on the front end gives the longest possible strand, which is \"CTAGATACG\".",
+			"order":5
+		},
+		{
+			"expect":"Returns: 12",
+			"id":0,
+			"input":"{\"TG:GA\",\"CGGG:TGG\",\"GGA:AAAC\"}",
+			"note":"The longest sequence here is CGGGTGGAAAAC. First, we form TGGA from the first rule. Since this starts with TGG, we can append it to CGGG to get CGGGTGGA, which ends with GGA. So we can append AAAC to the end and get CGGGTGGAAAAC",
+			"order":6
+		},
+		{
+			"expect":"Returns: -1",
+			"id":0,
+			"input":"{\"CCCA:TGGG\",\"TGG:GGA\",\"GGGA:CCCA\"}",
+			"order":7
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"reactivity will contain between 1 and 50 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"each element of reactivity will contain between 5 and 9 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"each element of reactivity will be formatted as (quotes added for clarity) &quot;SEQ1:SEQ2&quot; with SEQ1 and SEQ2 both being of length between 2 and 4 characters, inclusive, and separated by a single colon (':')."
+		},
+		{
+			"order":4,
+			"val":"SEQ1 and SEQ2 may only contain the capital letters 'A', 'G', 'C', and 'T'."
+		}
+	]
+}

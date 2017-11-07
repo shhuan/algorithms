@@ -1,0 +1,110 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11231&rd=14243",
+	"statement":"There is an infinite labyrinth somewhere on Earth. It has an infinite number of rows, a fixed number W of columns and consists of 1x1 cells. Each cell can be in one of three states: free cell with a teleport, free cell without a teleport and blocked cell. It is known that each row in the labyrinth contains either 0 or 2 cells with teleports.<br /><br /><br /><br /> The rows and columns of the labyrinth are numbered using integers. The rows are infinite in both directions, so for every integer i (including negative integers) there's a row numbered i. The columns are numbered 0 to W-1, inclusive. A cell in row <i>i</i> and column <i>j</i> is denoted as <i>(i,j)</i>.<br /><br /><br /><br /> If you are located in a free cell <i>(i,j)</i>, you can perform one of the following actions: \n <ul> \n  <li>Walk to another free cell <i>(x,y)</i> adjacent by side to <i>(i,j)</i>. In other words, <i>(x,y)</i> must be such that |i-x| + |j-y| = 1. It is impossible to walk outside of the labyrinth.</li> \n  <li>If cell <i>(i,j)</i> contains a teleport, you can use it to be transferred to another free cell from the same row that contains a teleport (there's always exactly one such cell). Note that when you are located in a cell with a teleport, it isn't necessary to use the teleport.</li> \n </ul> Each of the described two actions, that is, walking to an adjacent cell and using a teleport, counts as one move.<br /><br /><br /><br /> You are given a String[] <b>map</b> containing H rows, with each element consisting of W characters. The character <i>j</i> in element <i>i</i> of <b>map</b> represents the state of cell <i>(i,j)</i>, where '#' means a blocked cell, '.' means a free cell and 'T' means a free cell with a teleport. Both indices <i>i</i> and <i>j</i> are 0-based, so <b>map</b> describes the states of all cells in rows 0 to H-1, inclusive. For all other cells the following rule applies: the state of cell <i>(i,j)</i> is exactly the same as the state of cell <i>(x,j)</i> if |i-x| is divisible by H. In other words, the given pattern of H rows is repeated an infinite number of times.<br /><br /><br /><br /> Return the minimum number of moves needed to get from cell (<b>r1</b>,<b>c1</b>) to cell (<b>r2</b>,<b>c2</b>). If it is impossible, return -1. ",
+	"notes":[{
+		"order":1,
+		"val":"The start and finish cells (,) and (,) are guaranteed to be distinct free cells."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"InfiniteLab",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getDistance",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], long, int, long, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"long",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"long getDistance(String[] map, long r1, int c1, long r2, int c2)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"#...##\", \".##...\", \"..#.##\", \"#.#.##\"}",
+			"note":"The optimal path is drawn below. Here 'S' means the start cell, 'F' means the finish cell and 'P' means an intermediate cell.  Note that the labyrinth is infinite, so only its part with rows 0 to 7, inclusive, is shown here and in subsequent examples.",
+			"order":1
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"{\"##.#.\", \".#T#T\", \"...#.\", \"##.#.\"}",
+			"note":" Here we need to use a teleport once.",
+			"order":2
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"{\"..######.#\", \".###T###.T\", \"..T#.##T##\", \".######..#\"}",
+			"note":" Here we need to use a teleport twice.",
+			"order":3
+		},
+		{
+			"expect":"-29",
+			"id":0,
+			"input":"{\"..#..\", \".#.#.\", \".....\"}",
+			"note":"",
+			"order":4
+		},
+		{
+			"expect":"-999",
+			"id":0,
+			"input":"{\".#.#.\", \"..#..\", \".....\", \".....\", \"..#..\"}",
+			"note":"",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"map will contain between 1 and 20 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"Each element of map will contain between 1 and 20 characters, inclusive."
+		},
+		{
+			"order":3,
+			"val":"All elements of map will contain the same number of characters."
+		},
+		{
+			"order":4,
+			"val":"Each character in map will be either '#', '.' or 'T'."
+		},
+		{
+			"order":5,
+			"val":"Each element of map will contain either 0 or 2 'T' characters."
+		},
+		{
+			"order":6,
+			"val":"r1 and r2 will each be between -10^15 and 10^15, inclusive. "
+		},
+		{
+			"order":7,
+			"val":"c1 and c2 will each be between 0 and W-1, inclusive, where W is the number of characters in each element of map. "
+		},
+		{
+			"order":8,
+			"val":"Cells (r1,c1) and (r2,c2) will both be free cells."
+		},
+		{
+			"order":9,
+			"val":"Cells (r1,c1) and (r2,c2) will be distinct."
+		}
+	]
+}

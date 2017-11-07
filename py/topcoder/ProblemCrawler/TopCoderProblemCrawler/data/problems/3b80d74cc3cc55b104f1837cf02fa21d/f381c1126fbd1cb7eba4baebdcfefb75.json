@@ -1,0 +1,72 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12980&rd=15838",
+	"statement":"<p> Alien Fred wants to destroy the Earth. But before he does that, he wants to solve the following problem. </p> <p> </p> <p> He has the set {1, 2, 3, ..., 2<b>N</b>}. He wants to split this set into two new sets A and B. The following conditions must all be satisfied: </p>\n <ul> \n  <li>Each element of the original set must belong to exactly one of the sets A and B.</li> \n  <li>The two new sets must have the same size. (I.e., each of them must contain exactly <b>N</b> numbers.)</li> \n  <li>For each i from 1 to <b>N</b>, inclusive: Let A[i] be the i-th smallest element of A, and let B[i] be the i-th smallest element of B. The difference |A[i] - B[i]| must be greater than or equal to <b>K</b>.</li> \n </ul> <p></p> <p> </p> <p> You are given the two ints <b>N</b> and <b>K</b>. Let X be the total number of ways in which Fred can choose the sets A and B. Return the value (X modulo 1,000,000,007). </p>",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"AlienAndSetDiv1",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getNumber",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getNumber(int N, int K)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"The initial set is {1, 2, 3, 4}. The following 6 pairs of subsets are possible in this case:  The first option and the last option are both valid. The other 4 options are invalid.  Note that order of the two sets matters: the option A={1,2} and B={3,4} differs from the option A={3,4} and B={1,2}.",
+			"order":1
+		},
+		{
+			"expect":"1",
+			"id":0,
+			"input":"3",
+			"note":"",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"4",
+			"note":"",
+			"order":3
+		},
+		{
+			"expect":"7",
+			"id":0,
+			"input":"10",
+			"note":"",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"N will be between 1 and 50, inclusive."
+		},
+		{
+			"order":2,
+			"val":"K will be between 1 and 10, inclusive."
+		}
+	]
+}

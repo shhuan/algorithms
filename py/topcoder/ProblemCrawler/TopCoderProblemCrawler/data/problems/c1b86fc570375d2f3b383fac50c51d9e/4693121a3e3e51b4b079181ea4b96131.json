@@ -1,0 +1,105 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2958&rd=6517",
+	"statement":"A pursuit race is run on a circular track. The participants each start at the same start line, but each at a different time based upon their performance in earlier races. Whenever a rider is passed by another rider, he is eliminated from the race. If a previous rider circled the track and reached the start line at or before the time when a contestant is scheduled to start, then that contestant is eliminated at the time the rider reached the start line. <p> Suppose that the racers each go at a constant speed. Create a class BikeRace that contains a method eliminated that is given <b>track</b>, the length of the track, String[] <b>name</b>, the names of the contestants, a int[] <b>start</b>, the start times of the contestants, and a int[] <b>speed</b>, the speeds of the contestants. It returns a String[] giving the names of the eliminated contestants in the order in which they were eliminated. In case of simultaneous eliminations, list the simultaneously eliminated riders in alphabetical order. </p><p> <b>track</b> is in feet, <b>speed</b> is in feet per second, and <b>start</b> is in seconds. Element i of <b>speed</b>, <b>start</b>, and <b>name</b> applies to contestant i. </p> ",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"BikeRace",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"eliminated",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, String[], int[], int[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] eliminated(int track, String[] name, int[] start, int[] speed)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"A\",\"B\",\"C\"}",
+			"id":0,
+			"input":"4800",
+			"note":" Rider A starts at time 0 and goes 3000 feet before B starts at time 100. A passes the start line at time 160, before C can start, thereby eliminating C. But B and A can never catch each other since they are going the same speed so they are never eliminated. ",
+			"order":1
+		},
+		{
+			"expect":"{\"BO\",\"JO\", \"AL\"}",
+			"id":0,
+			"input":"3000",
+			"note":" JO goes 20 feet (10 seconds at 2 feet/sec) before BO starts at time 10. JO is eliminated at time 12 since both JO and BO have gone 24 feet. AL starts at time 15 but is eventually caught by BO since BO is going at a higher speed. ",
+			"order":2
+		},
+		{
+			"expect":"{\"BOBO\",\"JOHNNY\",\"ANNA\"}",
+			"id":0,
+			"input":"3000",
+			"order":3
+		},
+		{
+			"expect":"{\"B\",\"J\",\"A\"}",
+			"id":0,
+			"input":"3000",
+			"order":4
+		},
+		{
+			"expect":"{\"TOM\",\"TOMMY\",\"BILL\",\"SPEEDY\",\"JIMMY\"}",
+			"id":0,
+			"input":"5000",
+			"note":"SPEEDY just manages to circle the track before any of the others can start. So the other four are all eliminated at the same time, and are listed in alphabetical order.",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"track will be between 1000 and 5000 inclusive."
+		},
+		{
+			"order":2,
+			"val":"name will contain between 2 and 50 elements inclusive."
+		},
+		{
+			"order":3,
+			"val":"name, start, and speed will all contain the same number of elements."
+		},
+		{
+			"order":4,
+			"val":"Each element of name will contain between 1 and 50 characters inclusive."
+		},
+		{
+			"order":5,
+			"val":"Each character in each element of name will be an uppercase letter 'A'-'Z'."
+		},
+		{
+			"order":6,
+			"val":"The elements of name will be distinct."
+		},
+		{
+			"order":7,
+			"val":"Each element of start will be between 0 and 1000 inclusive."
+		},
+		{
+			"order":8,
+			"val":"The elements of start will be distinct."
+		},
+		{
+			"order":9,
+			"val":"Each element of speed will be between 1 and 50 inclusive."
+		}
+	]
+}

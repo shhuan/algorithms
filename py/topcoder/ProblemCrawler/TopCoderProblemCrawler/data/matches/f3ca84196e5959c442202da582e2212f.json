@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":219.9,
+			"constraints":[],
+			"correctRatio":95.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6116&rd=9814",
+			"name":"ScrabbleBet",
+			"notes":[],
+			"submission":283
+		},
+		{
+			"avgPts":247.27,
+			"constraints":[],
+			"correctRatio":50.48,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4499&rd=9814",
+			"name":"Bingo",
+			"notes":[],
+			"submission":210
+		},
+		{
+			"avgPts":581.25,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=5877&rd=9814",
+			"name":"CirclesOfDestruction",
+			"notes":[],
+			"submission":21
+		}
+	],
+	"name":"Single Round Match 293 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=9814"
+}

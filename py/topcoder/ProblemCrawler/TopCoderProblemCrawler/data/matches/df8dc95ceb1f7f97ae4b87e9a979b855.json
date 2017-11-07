@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":215.51,
+			"constraints":[],
+			"correctRatio":96.05,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13343&rd=16050",
+			"name":"BrightLamps",
+			"notes":[],
+			"submission":76
+		},
+		{
+			"avgPts":245.4,
+			"constraints":[],
+			"correctRatio":87.1,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=13342&rd=16050",
+			"name":"RandomFlights",
+			"notes":[],
+			"submission":31
+		},
+		{
+			"avgPts":448.03,
+			"constraints":[],
+			"correctRatio":21.43,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11897&rd=16050",
+			"name":"PlumbersCoins",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"2014 TCO Algorithm > Round 3A",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=16050"
+}

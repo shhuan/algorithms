@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":208.93,
+			"constraints":[],
+			"correctRatio":87.79,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10241&rd=13759",
+			"name":"SequenceSums",
+			"notes":[],
+			"submission":1466
+		},
+		{
+			"avgPts":303.98,
+			"constraints":[],
+			"correctRatio":89.97,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10335&rd=13759",
+			"name":"KthProbableElement",
+			"notes":[],
+			"submission":608
+		},
+		{
+			"avgPts":554.07,
+			"constraints":[],
+			"correctRatio":45.19,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10317&rd=13759",
+			"name":"Unicorn",
+			"notes":[],
+			"submission":270
+		}
+	],
+	"name":"2009 TCO Algorithm > Elimination Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13759"
+}

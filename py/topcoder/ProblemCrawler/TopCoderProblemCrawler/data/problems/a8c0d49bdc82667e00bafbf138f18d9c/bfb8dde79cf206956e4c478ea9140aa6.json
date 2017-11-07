@@ -1,0 +1,86 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6718&rd=10120",
+	"statement":"<p>Consider the following two player word game, which slightly resembles Mastermind:</p> <p>The first player secretly picks a word and tells its length to the second player. The second player then guesses a word, and the first player responds by telling whether the number of correct letters in correct positions is even or odd. This is repeated until the second player can figure out what the first player's picked word is (see the examples for clarifications).</p> <p>Create a class WordGuessingGame containing the method possibleWords which takes a String[] <b>even</b> containing all the guessed words so far where the correct number of letters in the correct position were even, and a String[] <b>odd</b> containing all the guessed words so far where the correct number of letters in the correct position were odd. The method should return a String[] containing all possible words that the first player could have picked. The String[] should be sorted in alphabetical order.</p> ",
+	"notes":[
+		{
+			"order":1,
+			"val":"Note that in this problem, \"word\" means any possible combination of uppercase letters ('A'-'Z')."
+		},
+		{
+			"order":2,
+			"val":"If no words match the information given, return an empty String[] (see example 3)."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"WordGuessingGame",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"possibleWords",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String[]",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"String[]",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"String[] possibleWords(String[] even, String[] odd)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"{\"SAY\",\"DUE\",\"TEN\"}",
+			"id":0,
+			"input":"{\"DAY\",\"MAY\",\"BUY\"}",
+			"note":"  ",
+			"order":1
+		},
+		{
+			"expect":"{\"HUIF\",\"QMZB\",\"QEHJ\",\"LBJL\"}",
+			"id":0,
+			"input":"{\"QMNA\",\"UQJE\"}",
+			"order":2
+		},
+		{
+			"expect":"{\"MOOTN\",\"CRXXU\",\"SREQR\",\"DEREX\",\"HOYGF\",\"CDLCP\",\"ZTDOC\",\"STEEB\"}",
+			"id":0,
+			"input":"{\"NODSN\"}",
+			"order":3
+		},
+		{
+			"expect":"{\"AB\",\"BC\",\"CA\"}",
+			"id":0,
+			"input":"{}",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"even and odd will together contain between 1 and 18 elements, inclusive."
+		},
+		{
+			"order":2,
+			"val":"All elements in even and odd will be of the same length (between 1 and 9 characters, inclusive)."
+		},
+		{
+			"order":3,
+			"val":"All characters in even and odd will be uppercase letters ('A'-'Z')."
+		},
+		{
+			"order":4,
+			"val":"The number of words matching the given information will be at most 100."
+		}
+	]
+}

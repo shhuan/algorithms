@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":162.61,
+			"constraints":[],
+			"correctRatio":56.82,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6674&rd=10003",
+			"name":"RoadsAndFools",
+			"notes":[],
+			"submission":403
+		},
+		{
+			"avgPts":306.92,
+			"constraints":[],
+			"correctRatio":18.6,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6782&rd=10003",
+			"name":"Survived",
+			"notes":[],
+			"submission":215
+		},
+		{
+			"avgPts":605.78,
+			"constraints":[],
+			"correctRatio":20.83,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6580&rd=10003",
+			"name":"RestoreExpression",
+			"notes":[],
+			"submission":48
+		}
+	],
+	"name":"Single Round Match 323 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10003"
+}

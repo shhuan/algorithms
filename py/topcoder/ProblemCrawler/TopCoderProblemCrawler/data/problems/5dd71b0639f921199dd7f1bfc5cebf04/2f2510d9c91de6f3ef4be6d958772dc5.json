@@ -1,0 +1,74 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=1706&rd=5855",
+	"statement":"<i>This problem contains images</i> <br /><br /><br /><br /> Elwood has a little sister named Casey. Although being quite young, Casey not only likes Modern Art, but also creates little pieces of art by herself. Her latest favorites are drawings on squared paper. She wants her new creations to be composed of only one basic shape that is used in all orientations:<br /><br /> <img src=\"http://www.topcoder.com/contest/problem/CaseysArt/CaseysArt.gif\" /><br /><br /> [Image showing Casey's basic shape in all orientations.]<br /><br /> <br /><br /> She draws her shapes into rectangles on her paper. For a rectangle of a given size, she wants to fill the entire rectangle in all different ways. Elwood immediately recognizes that even for small rectangles there might be many different fillings. But Casey, like little sisters sometimes do, doesn't believe him, so she asks you to exactly calculate how many drawings she has to do for a rectangle of a given size. <br /><br /> <img src=\"http://www.topcoder.com/contest/problem/CaseysArt/CaseysArt2.gif\" /><br /><br /> [Image showing all four possible fillings of a 3x4 rectangle.]<br /><br /> <br /><br /> Given an int <b>length</b> and an int <b>width</b> describing the size of Casey's rectangle, return the number of different ways this rectangle can be filled using Casey's basic shape. The rectangle is oriented, so count symmetrical fillings multiple times as done in the example above.",
+	"notes":[{
+		"order":1,
+		"val":"Reminder:If your result is within 10 of the expected result, your solution will be evaluated as correct.If your result is between (1+10)*expected and (1-10)*expected, it will be evaluated as correct."
+	}],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"CaseysArt",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"howManyWays",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"int, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"double",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"double howManyWays(int length, int width)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"4",
+			"id":0,
+			"input":"3",
+			"note":"This is the rectangle shown in the problem description.",
+			"order":1
+		},
+		{
+			"expect":"3",
+			"id":0,
+			"input":"4",
+			"note":"This is the rectangle shown in the problem description rotated.",
+			"order":2
+		},
+		{
+			"expect":"2",
+			"id":0,
+			"input":"2",
+			"note":"A rectangle of size 2x2 can't be filled.",
+			"order":3
+		},
+		{
+			"expect":"9",
+			"id":0,
+			"input":"5",
+			"order":4
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"length will be between 1 and 18, inclusive."
+		},
+		{
+			"order":2,
+			"val":"width will be between 1 and 15, inclusive."
+		}
+	]
+}

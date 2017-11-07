@@ -1,0 +1,65 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8004&rd=13742",
+	"statement":"A number is called <i>square-free</i> if it is not divisible by a perfect square which is greater than one. A perfect square is the square of an integer. Return the number of square-free numbers between <b>min</b> and <b>max</b>, inclusive.",
+	"notes":[],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"SquareFreeNumbers",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"getCount",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"long, long",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int getCount(long min, long max)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"10",
+			"id":0,
+			"input":"1",
+			"note":"Numbers 4, 8 and 9 are not square-free.",
+			"order":1
+		},
+		{
+			"expect":"15",
+			"id":0,
+			"input":"15",
+			"note":" and  can be equal.",
+			"order":2
+		},
+		{
+			"expect":"1000",
+			"id":0,
+			"input":"1",
+			"note":"",
+			"order":3
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"min will be between 1 and 1,000,000,000,000, inclusive."
+		},
+		{
+			"order":2,
+			"val":"max will be between min and (min + 1,000,000), inclusive."
+		}
+	]
+}

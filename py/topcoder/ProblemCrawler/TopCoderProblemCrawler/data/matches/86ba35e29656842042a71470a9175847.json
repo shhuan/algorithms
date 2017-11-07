@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":171.06,
+			"constraints":[],
+			"correctRatio":88.35,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7642&rd=10735",
+			"name":"PacketRepack",
+			"notes":[],
+			"submission":532
+		},
+		{
+			"avgPts":262.09,
+			"constraints":[],
+			"correctRatio":44.78,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6641&rd=10735",
+			"name":"MemorizingPi",
+			"notes":[],
+			"submission":134
+		},
+		{
+			"avgPts":606.41,
+			"constraints":[],
+			"correctRatio":38.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7636&rd=10735",
+			"name":"BalancingGame",
+			"notes":[],
+			"submission":36
+		}
+	],
+	"name":"2007 TopCoder Open > Qualification Round 3",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10735"
+}

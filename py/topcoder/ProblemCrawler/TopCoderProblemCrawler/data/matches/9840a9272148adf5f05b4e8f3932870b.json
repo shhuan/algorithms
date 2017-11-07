@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":205.45,
+			"constraints":[],
+			"correctRatio":82.49,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8608&rd=12008",
+			"name":"BusAwaiting",
+			"notes":[],
+			"submission":1336
+		},
+		{
+			"avgPts":285.82,
+			"constraints":[],
+			"correctRatio":62.69,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8609&rd=12008",
+			"name":"PhoneNumbers",
+			"notes":[],
+			"submission":855
+		},
+		{
+			"avgPts":457.68,
+			"constraints":[],
+			"correctRatio":41.89,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=8142&rd=12008",
+			"name":"BlackWhiteRectangles",
+			"notes":[],
+			"submission":148
+		}
+	],
+	"name":"2008 TopCoder Open > Qualification Round 2",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=12008"
+}

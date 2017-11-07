@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":194.77,
+			"constraints":[],
+			"correctRatio":97.71,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11566&rd=14547",
+			"name":"RowAndCoins",
+			"notes":[],
+			"submission":524
+		},
+		{
+			"avgPts":274.55,
+			"constraints":[],
+			"correctRatio":43.45,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11604&rd=14547",
+			"name":"CorrectMultiplication",
+			"notes":[],
+			"submission":313
+		},
+		{
+			"avgPts":517.1,
+			"constraints":[],
+			"correctRatio":28.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11581&rd=14547",
+			"name":"PointErasing",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"Single Round Match 522 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14547"
+}

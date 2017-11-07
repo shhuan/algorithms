@@ -1,0 +1,104 @@
+{
+	"link":"http://community.topcoder.com/stat?c=problem_statement&pm=939&rd=4355",
+	"statement":"<p> In 1970 John Conway published a paper outlining how very simple rules could lead to very interesting, complicated behavior. His game was based (very roughly) on how biological organisms work. In his game, Conway put a number of &quot;living&quot; organisms on a two dimensional grid. He then applied four rules to all locations on the grid a number of times. As these rules were repeatedly applied, complex behaviors emerged from these four simple rules. </p><p> The four rules were based on the number of &quot;living&quot; organisms that were adjacent to each space in the grid. In his game, he defined two grid spaces to be adjacent if they were immediately next to each other, or diagonal to each other. Thus every space in the grid has 8 other spaces in the grid which are adjacent to it. </p><p> The original four rules were as follows. <br /><br /> 1) If a grid space is adjacent to less than 2 living organisms, any living organism there dies due to its isolation. <br /><br /> 2) If a grid space is adjacent to exactly 2 living organisms, any living organism there stays alive if it was alive. <br /><br /> 3) If a grid space is adjacent to exactly 3 living organisms, any living organism there stays alive if it was alive, and if there is no living organism, one is &quot;born&quot; there. <br /><br /> 4) If a grid space is adjacent to more than 3 living organisms, any living organism there dies due to over crowding. </p><p> For this problem, we would like to be able to specify these rules, rather than hard coding them. Thus, part of the input will be a String which specifies the rules. Each character in the String will be one of three characters: 'D', 'S', 'B'. Each character will indicate the effect of the number of adjacent living organisms equal to its index in the String. Thus, the first character in the String (index = 0) will indicate what should happen to organisms on a grid space with 0 adjacent living organisms. In the String, 'D' indicates that organisms on grid spaces adjacent to the number of living organisms equal to the index of the character will die. 'S' indicates that organisms should remain alive, but not be born. 'B' indicates that an organism should be born if it is not already alive, and continue to live if it was already alive. Thus, the input String corresponding to the above 4 rules would be: &quot;DDSBDDDDD&quot; because organisms die whenever they are adjacent to 0, 1, 4, 5, 6, 7, or 8 other living organisms, remain alive when adjacent to exactly 2 other organisms, and are born when adjacent to exactly 3 other organisms. </p><p> Your task is, given an input String[], <b>start</b>, showing the initial locations of living organisms, and a String of rules determine how many living organisms there are after the rules have been applied <b>generations</b> times. </p>",
+	"notes":[
+		{
+			"order":1,
+			"val":"In the input String[], , 'X' represents a live organism, and '.' represents an empty space or dead organism."
+		},
+		{
+			"order":2,
+			"val":"In calculating the number of living organisms adjacent to a grid location, you should \"wrap around\". Thus organisms on the far left are adjacent to organisms on the far right, and all four corners are adjacent to each other."
+		},
+		{
+			"order":3,
+			"val":"Each time the rules are applied, they are applied simultaneously to all grid spaces. Thus, we count how many adjacent organisms there are for every grid space before applying the rules."
+		}
+	],
+	"definition":[
+		{
+			"definitionKey":"Class:",
+			"definitionVal":"GameOfLife",
+			"order":1
+		},
+		{
+			"definitionKey":"Method:",
+			"definitionVal":"alive",
+			"order":2
+		},
+		{
+			"definitionKey":"Parameters:",
+			"definitionVal":"String[], String, int",
+			"order":3
+		},
+		{
+			"definitionKey":"Returns:",
+			"definitionVal":"int",
+			"order":4
+		},
+		{
+			"definitionKey":"Method signature:",
+			"definitionVal":"int alive(String[] start, String rules, int generations)",
+			"order":5
+		}
+	],
+	"examples":[
+		{
+			"expect":"\"DDSBDDDDD\"",
+			"id":0,
+			"input":"{\"......\" ,\"......\" ,\".XXXX.\" ,\"......\" ,\"......\"}",
+			"note":"after 1 application of the rules we have:   after 2 application of the rules we have:  Since there are 6 'X's, there are 6 living organisms, thus we return 6.",
+			"order":1
+		},
+		{
+			"expect":"\"DDSBDDDDD\"",
+			"id":0,
+			"input":"{\"XX\",\"XX\"}",
+			"note":"Because we wrap around edges, every space in the grid is adjacent to 8 living organisms, thus they all die after the first application of the rules.",
+			"order":2
+		},
+		{
+			"expect":"\"DDSBDDDDD\"",
+			"id":0,
+			"input":"{\"........XXX\" ,\"..........X\" ,\".........X.\" ,\"...........\" ,\"...........\" ,\"...........\" ,\"...........\" ,\"...........\" ,\"...........\" ,\"...........\" ,\"...........\"}",
+			"note":"The well known glider moves up 1 sqaure and 1 sqaure to the right every 4 generations.",
+			"order":3
+		},
+		{
+			"expect":"\"DBDBDBDBD\"",
+			"id":0,
+			"input":"{\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"......................XXX.XX......................\" ,\".......................X..X.......................\" ,\".......................X..XX......................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\" ,\"..................................................\"}",
+			"note":"The famous replicator rule. If the grid extended infinitely, this rule would make an infinite number of copies of the original pattern! However, because our grid wraps around, the replicator no longer replicates the original pattern after about 16 generations.",
+			"order":4
+		},
+		{
+			"expect":"\"BDDDDDDDD\"",
+			"id":0,
+			"input":"{\"X\"}",
+			"note":"Note that the 8 squares adjacent to (0,0) are all (0,0)",
+			"order":5
+		}
+	],
+	"constraints":[
+		{
+			"order":1,
+			"val":"start contains between 1 and 50 elements inclusive, each of which contains between 1 and 50 characters, inclusive."
+		},
+		{
+			"order":2,
+			"val":"start contains only the characters 'X' and '.'"
+		},
+		{
+			"order":3,
+			"val":"rules contains exactly 9 characters, each of which is 'D', 'S', or 'B'"
+		},
+		{
+			"order":4,
+			"val":"generations is between 0 and 1000, inclusive"
+		},
+		{
+			"order":5,
+			"val":"each element of start contains the same number of characters as each other element of start"
+		}
+	]
+}

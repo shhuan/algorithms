@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":201.52,
+			"constraints":[],
+			"correctRatio":92.86,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12888&rd=15712",
+			"name":"ORSolitaire",
+			"notes":[],
+			"submission":952
+		},
+		{
+			"avgPts":278.1,
+			"constraints":[],
+			"correctRatio":75.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12875&rd=15712",
+			"name":"PalindromeMatrix",
+			"notes":[],
+			"submission":145
+		},
+		{
+			"avgPts":405.18,
+			"constraints":[],
+			"correctRatio":69.23,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=12789&rd=15712",
+			"name":"LotsOfLines",
+			"notes":[],
+			"submission":13
+		}
+	],
+	"name":"Single Round Match 600 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=15712"
+}

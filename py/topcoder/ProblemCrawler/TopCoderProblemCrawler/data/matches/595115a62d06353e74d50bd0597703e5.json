@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":179.8,
+			"constraints":[],
+			"correctRatio":81.17,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11227&rd=14243",
+			"name":"Starport",
+			"notes":[],
+			"submission":579
+		},
+		{
+			"avgPts":254.27,
+			"constraints":[],
+			"correctRatio":37.74,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11228&rd=14243",
+			"name":"QuickT9",
+			"notes":[],
+			"submission":106
+		},
+		{
+			"avgPts":456.49,
+			"constraints":[],
+			"correctRatio":22.22,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=11231&rd=14243",
+			"name":"InfiniteLab",
+			"notes":[],
+			"submission":18
+		}
+	],
+	"name":"Single Round Match 490 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=14243"
+}

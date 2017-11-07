@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":218.62,
+			"constraints":[],
+			"correctRatio":91.3,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10180&rd=13519",
+			"name":"TheLuckyString",
+			"notes":[],
+			"submission":586
+		},
+		{
+			"avgPts":253.18,
+			"constraints":[],
+			"correctRatio":69.16,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10184&rd=13519",
+			"name":"TheLongPalindrome",
+			"notes":[],
+			"submission":107
+		},
+		{
+			"avgPts":522.75,
+			"constraints":[],
+			"correctRatio":28.57,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=10185&rd=13519",
+			"name":"TheStringGame",
+			"notes":[],
+			"submission":14
+		}
+	],
+	"name":"Single Round Match 428 > Round 1",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=13519"
+}

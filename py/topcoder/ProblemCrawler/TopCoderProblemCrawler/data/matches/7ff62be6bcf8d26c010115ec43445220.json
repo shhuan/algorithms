@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":204.14,
+			"constraints":[],
+			"correctRatio":75,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=6778&rd=10842",
+			"name":"CauchyProduct",
+			"notes":[],
+			"submission":12
+		},
+		{
+			"avgPts":337.36,
+			"constraints":[],
+			"correctRatio":25,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=2942&rd=10842",
+			"name":"PaperThickness",
+			"notes":[],
+			"submission":8
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=7883&rd=10842",
+			"name":"SkipList",
+			"notes":[],
+			"submission":4
+		}
+	],
+	"name":"2007 TopCoder Open > WildCard Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=10842"
+}

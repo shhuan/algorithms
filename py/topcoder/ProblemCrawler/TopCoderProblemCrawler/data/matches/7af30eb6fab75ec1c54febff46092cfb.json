@@ -1,0 +1,45 @@
+{
+	"problems":[
+		{
+			"avgPts":219.76,
+			"constraints":[],
+			"correctRatio":66.67,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":1,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4018&rd=6554",
+			"name":"BadSubstrings",
+			"notes":[],
+			"submission":3
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":2,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=4005&rd=6554",
+			"name":"BasicSorting",
+			"notes":[],
+			"submission":0
+		},
+		{
+			"avgPts":0,
+			"constraints":[],
+			"correctRatio":0,
+			"definition":[],
+			"div":0,
+			"examples":[],
+			"level":3,
+			"link":"http://community.topcoder.com/stat?c=problem_statement&pm=3565&rd=6554",
+			"name":"LocalMax",
+			"notes":[],
+			"submission":0
+		}
+	],
+	"name":"2005 TCCC > Final Round",
+	"link":"http://community.topcoder.com/stat?c=round_overview&er=5&rd=6554"
+}
